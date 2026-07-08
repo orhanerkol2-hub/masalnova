@@ -31,20 +31,24 @@
   #stcm-wrapper {
     --boxShadow: 0 18px 40px rgba(8, 30, 80, 0.35);
     --fontFamily: 'Nunito', 'Segoe UI', Arial, sans-serif;
-    --primaryColor: #2f74e8;
-    --backgroundColor: #FFFFFF;
-    --textColor: #102a66;
+    --primaryColor: #ffb01f;
+    --backgroundColor: #2f74e8;
+    --textColor: #FFFFFF;
     --backdropBackgroundColor: rgba(16, 42, 102, 0.40);
     --backdropBackgroundBlur: 2px;
     --iconColor: #2f74e8;
-    --iconBackgroundColor: #FFFFFF;
+    --iconBackgroundColor: #ffb01f;
   }
+  /* Dunkelblauer Text auf den Gold-Buttons für ausreichenden Kontrast (WCAG) */
+  #stcm-wrapper .stcm-button-primary { color: #102a66; }
+  /* "Tercihler"-Link weiß statt gold — bessere Lesbarkeit auf Blau */
+  #stcm-wrapper .stcm-preferences-button { color: #ffffff; }
   </style>
   <script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js" integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq" crossorigin="anonymous"></script>
   <script>
   window.silktideConsentManager.init({
     backdrop: { show: true },
-    icon: { position: "bottomLeft" },
+    icon: { position: "bottomRight" },
     prompt: { position: "bottomRight" },
     consentTypes: [
       {
