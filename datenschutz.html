@@ -1,18 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Secure Privacy consent banner (CMP) - must load before tracking scripts -->
-  <script src="https://app.secureprivacy.ai/script/6a4e45466b710326c717e91f.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZYEN24W6J"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Consent Mode v2 — Standard: alles verweigert, bis der Nutzer zustimmt -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZYEN24W6J"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-YZYEN24W6J');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Silktide Consent Manager — Cookie-Banner im MasalNova-Design -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.css" integrity="sha384-EdMq+R+YOnsbelo08wPenoTlnxbAyxI11NMIxzugx/qAsbh64KcOkqxYqq6pfvO/" crossorigin="anonymous">
+  <style id="silktide-consent-manager-overrides">
+  #stcm-wrapper {
+    --boxShadow: 0 18px 40px rgba(8, 30, 80, 0.35);
+    --fontFamily: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    --primaryColor: #2f74e8;
+    --backgroundColor: #FFFFFF;
+    --textColor: #102a66;
+    --backdropBackgroundColor: rgba(16, 42, 102, 0.40);
+    --backdropBackgroundBlur: 2px;
+    --iconColor: #2f74e8;
+    --iconBackgroundColor: #FFFFFF;
+  }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js" integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq" crossorigin="anonymous"></script>
+  <script>
+  window.silktideConsentManager.init({
+    backdrop: { show: true },
+    icon: { position: "bottomLeft" },
+    prompt: { position: "bottomRight" },
+    consentTypes: [
+      {
+        id: "essential",
+        label: "Zorunlu",
+        description: "<p>Bu çerezler web sitesinin düzgün çalışması için gereklidir ve kapatılamaz.</p>",
+        required: true
+      },
+      {
+        id: "analytics",
+        label: "Analitik",
+        description: "<p>Bu çerezler, hangi sayfaların popüler olduğunu ve ziyaretçilerin sitede nasıl gezindiğini ölçerek siteyi geliştirmemize yardımcı olur.</p>",
+        gtag: "analytics_storage"
+      }
+    ],
+    text: {
+      prompt: {
+        description: "<p>Deneyiminizi iyileştirmek ve trafiğimizi analiz etmek için sitemizde çerezler kullanıyoruz.</p>",
+        acceptAllButtonText: "Tümünü kabul et",
+        acceptAllButtonAccessibleLabel: "Tüm çerezleri kabul et",
+        rejectNonEssentialButtonText: "Zorunlu olmayanları reddet",
+        rejectNonEssentialButtonAccessibleLabel: "Zorunlu olmayan tüm çerezleri reddet",
+        preferencesButtonText: "Tercihler",
+        preferencesButtonAccessibleLabel: "Tercihleri aç veya kapat"
+      },
+      preferences: {
+        title: "Çerez tercihlerinizi özelleştirin",
+        description: "<p>Gizlilik hakkınıza saygı duyuyoruz. Bazı çerez türlerine izin vermemeyi seçebilirsiniz. Tercihleriniz tüm sitede geçerli olur.</p>",
+        saveButtonText: "Kaydet ve kapat",
+        saveButtonAccessibleLabel: "Çerez tercihlerini kaydet",
+        creditLinkText: "",
+        creditLinkAccessibleLabel: ""
+      }
+    }
+  });
+  </script>
   <title>Privacy Policy — MasalNova</title>
   <meta name="robots" content="noindex, noarchive, nosnippet" />
   <link rel="icon" type="image/png" href="logo.png" />
