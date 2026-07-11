@@ -1,0 +1,28 @@
+---
+interface Props {
+  emoji?: string;
+  color?: string;
+  image?: string;
+  alt?: string;
+  ratio?: string;
+  big?: boolean;
+}
+const { emoji = '📖', color = '#2f74e8', image, alt = '', ratio = '16 / 10', big = false } = Astro.props;
+---
+{image ? (
+  <img class="cover" src={image} alt={alt} loading="lazy" style={`aspect-ratio:${ratio}`} />
+) : (
+  <div
+    class="cover cover-ph"
+    style={`aspect-ratio:${ratio}; background: radial-gradient(120% 120% at 18% 8%, rgba(255,255,255,.4), transparent 55%), ${color};`}
+    aria-hidden="true"
+  >
+    <span class={big ? 'emoji big' : 'emoji'}>{emoji}</span>
+  </div>
+)}
+<style>
+  .cover { width: 100%; object-fit: cover; display: block; }
+  .cover-ph { display: grid; place-items: center; }
+  .emoji { font-size: 3rem; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25)); }
+  .emoji.big { font-size: 4.6rem; }
+</style>

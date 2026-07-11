@@ -1,0 +1,143 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CoverThumb from '../../components/CoverThumb.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import { getStories } from '../../data/stories';
+import { videoById } from '../../data/videos';
+import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
+
+export async function getStaticPaths() {
+  const stories = await getStories();
+  return stories.map((story) => ({ params: { slug: story.id }, props: { story } }));
+}
+
+const { story } = Astro.props;
+const d = story.data;
+const { Content } = await render(story);
+
+const allStories = await getStories();
+const related = d.relatedVideoIds.map((id) => videoById(id)).filter(Boolean);
+const moreStories = allStories
+  .filter((s) => s.id !== story.id && s.data.categories.some((c) => d.categories.includes(c)))
+  .slice(0, 3);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.shortDescription,
+  inLanguage: 'tr-TR',
+  datePublished: d.publishedAt,
+  author: { '@type': 'Organization', name: 'MasalNova Çocuk' },
+  publisher: { '@type': 'Organization', name: 'MasalNova Çocuk', logo: { '@type': 'ImageObject', url: 'https://masalnova.com/logo.png' } },
+  mainEntityOfPage: `https://masalnova.com/masallar/${story.id}/`,
+};
+---
+<BaseLayout
+  title={`${d.title} — MasalNova Çocuk Masalları`}
+  description={d.shortDescription}
+  path={`/masallar/${story.id}/`}
+  jsonLd={jsonLd}
+  activeNav="masallar"
+>
+  <article class="story-page">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Ana Sayfa</a> <span>›</span> <a href="/masallar/">Masallar</a> <span>›</span> <span>{d.title}</span>
+      </nav>
+
+      <div class="story-hero">
+        <div class="cover">
+          <CoverThumb emoji={d.coverEmoji} color={d.coverColor} image={d.coverImage} alt={d.altText ?? d.title} ratio="4 / 3" big />
+        </div>
+        <div class="head">
+          <span class="badge-type badge-story">📖 Masal</span>
+          <h1>{d.title}</h1>
+          <p class="lede">{d.shortDescription}</p>
+          <div class="meta">
+            {d.ageGroups.map((a) => <span class="tag">{ageLabel(a)}</span>)}
+            <span class="tag">⏱️ {d.readingTime} dk okuma</span>
+            {d.categories.map((c) => <span class="tag">{storyCategoryLabel(c)}</span>)}
+          </div>
+          {d.audioUrl && (
+            <div class="audio">
+              <p>🎧 Sesli masal</p>
+              <audio controls preload="none" src={d.audioUrl}></audio>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      {d.themes.length > 0 && (
+        <div class="themes">
+          {d.themes.map((t) => <span class="tag tag-ghost">#{t}</span>)}
+        </div>
+      )}
+
+      {related.length > 0 && (
+        <section class="watch">
+          <h2>İzlemek ister misiniz?</h2>
+          <p>Bu masalı sevdiyseniz, ilgili videoyu da izleyebilirsiniz.</p>
+          <div class="grid grid-3">
+            {related.map((v) => <VideoCard video={v!} />)}
+          </div>
+        </section>
+      )}
+
+      {moreStories.length > 0 && (
+        <section class="more">
+          <h2>Başka Masallar</h2>
+          <div class="grid grid-3">
+            {moreStories.map((s) => <StoryCard story={s} />)}
+          </div>
+        </section>
+      )}
+
+      <div class="back"><a class="btn btn-ghost" href="/masallar/">← Tüm Masallar</a></div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .story-page { padding: 26px 0 10px; }
+  .crumbs { color: var(--soft); font-weight: 600; font-size: .9rem; margin-bottom: 18px; }
+  .crumbs a { color: #fff; }
+  .crumbs a:hover { text-decoration: underline; }
+  .crumbs span { opacity: .7; margin: 0 4px; }
+
+  .story-hero { display: grid; grid-template-columns: 320px 1fr; gap: 26px; align-items: start; margin-bottom: 26px; }
+  .cover { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); }
+  .head { color: #fff; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .head h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); }
+  .head .lede { color: var(--soft); font-size: 1.08rem; }
+  .head .meta { display: flex; gap: 8px; flex-wrap: wrap; }
+  .audio { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); border-radius: 14px; padding: 12px 14px; width: 100%; }
+  .audio p { font-weight: 700; margin-bottom: 8px; }
+  .audio audio { width: 100%; }
+
+  .prose {
+    background: #fff; color: var(--ink); border-radius: var(--radius-lg);
+    padding: 34px clamp(20px, 5vw, 48px); box-shadow: var(--shadow-lg); border: 1px solid var(--line);
+    font-size: 1.12rem; line-height: 1.85; max-width: 760px; margin: 0 auto;
+  }
+  .prose :global(p) { margin-bottom: 16px; }
+  .prose :global(strong) { color: var(--gold-2); }
+
+  .themes { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin: 20px auto 0; max-width: 760px; }
+
+  .watch, .more { margin-top: 40px; }
+  .watch h2, .more h2 { color: #fff; font-size: 1.5rem; margin-bottom: 6px; }
+  .watch p { color: var(--soft); margin-bottom: 16px; }
+  .more h2 { margin-bottom: 16px; }
+  .back { text-align: center; margin: 34px 0 10px; }
+
+  @media (max-width: 760px) {
+    .story-hero { grid-template-columns: 1fr; }
+  }
+</style>

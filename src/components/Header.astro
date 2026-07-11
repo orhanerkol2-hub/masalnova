@@ -1,0 +1,81 @@
+---
+interface Props { active?: string }
+const { active = '' } = Astro.props;
+const links = [
+  { href: '/', label: 'Ana Sayfa', key: 'home' },
+  { href: '/masallar/', label: 'Masallar', key: 'masallar' },
+  { href: '/videolar/', label: 'Videolar', key: 'videolar' },
+  { href: '/masal-bul/', label: 'Masal Bul', key: 'masal-bul' },
+];
+---
+<header class="site-header">
+  <div class="container bar">
+    <a href="/" class="brand" aria-label="MasalNova ana sayfa">
+      <img src="/logo.png" alt="MasalNova Çocuk" width="150" height="46" />
+    </a>
+
+    <input type="checkbox" id="navToggle" class="nav-toggle" hidden />
+    <label for="navToggle" class="burger" aria-label="Menüyü aç/kapat">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="nav" aria-label="Ana menü">
+      {links.map((l) => (
+        <a href={l.href} class={`nav-link${active === l.key ? ' is-active' : ''}`}>{l.label}</a>
+      ))}
+      <a href="/ara/" class="nav-search" aria-label="Ara" title="Ara">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@masalnovacocuk?sub_confirmation=1" target="_blank" rel="noopener" class="nav-sub">▶ Abone Ol</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header { position: sticky; top: 0; z-index: 100; background: rgba(15, 43, 99, 0.82); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,.12); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 20px; }
+  .brand img { height: 42px; width: auto; }
+
+  .nav { display: flex; align-items: center; gap: 6px; }
+  .nav-link {
+    color: #fff; font-family: 'Baloo 2', cursive; font-weight: 700; font-size: 1rem;
+    padding: 9px 14px; border-radius: 999px; transition: background .15s ease;
+  }
+  .nav-link:hover { background: rgba(255,255,255,.14); }
+  .nav-link.is-active { background: rgba(255,176,31,.22); color: #ffd98a; }
+  .nav-search {
+    color: #fff; width: 40px; height: 40px; display: grid; place-items: center;
+    border-radius: 999px; border: 1px solid rgba(255,255,255,.3); margin-left: 4px; transition: background .15s ease;
+  }
+  .nav-search:hover { background: rgba(255,255,255,.14); }
+  .nav-sub {
+    color: #fff; background: var(--red); font-family: 'Baloo 2', cursive; font-weight: 700;
+    padding: 9px 16px; border-radius: 999px; margin-left: 6px; box-shadow: 0 8px 18px rgba(255,47,47,.32);
+    transition: transform .15s ease;
+  }
+  .nav-sub:hover { transform: translateY(-2px); }
+
+  .burger { display: none; flex-direction: column; gap: 5px; padding: 8px; border-radius: 10px; cursor: pointer; }
+  .burger span { width: 26px; height: 3px; background: #fff; border-radius: 3px; transition: transform .2s ease, opacity .2s ease; }
+
+  @media (max-width: 860px) {
+    .burger { display: flex; }
+    .nav {
+      position: absolute; left: 0; right: 0; top: 100%;
+      flex-direction: column; align-items: stretch; gap: 4px;
+      background: rgba(15, 43, 99, 0.98); border-bottom: 1px solid rgba(255,255,255,.14);
+      padding: 12px 16px 18px; transform: translateY(-8px); opacity: 0; pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+    .nav-toggle:checked ~ .nav { opacity: 1; transform: none; pointer-events: auto; }
+    .nav-link, .nav-sub, .nav-search { width: 100%; }
+    .nav-search { justify-content: flex-start; padding: 10px 14px; gap: 10px; }
+    .nav-search::after { content: 'Ara'; font-family: 'Baloo 2', cursive; font-weight: 700; }
+    .nav-sub { text-align: center; margin: 6px 0 0; }
+    .nav-toggle:checked ~ .burger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-toggle:checked ~ .burger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .burger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  }
+</style>

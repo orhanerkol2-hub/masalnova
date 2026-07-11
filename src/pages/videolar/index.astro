@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import { videos } from '../../data/videos';
+import { videoCategories } from '../../data/taxonomy';
+
+// only show categories that actually have videos (keep it simple, max ~5)
+const activeCats = videoCategories.filter((c) => videos.some((v) => v.categories.includes(c.key))).slice(0, 5);
+---
+<BaseLayout
+  title="Çocuk Videoları | Şarkılar, Masal Videoları — MasalNova"
+  description="MasalNova Çocuk videoları: çocuk şarkıları, animasyonlu masallar, Keloğlan ve eğitici videolar. Küçük resme dokun, video güvenle açılsın."
+  path="/videolar/"
+  activeNav="videolar"
+>
+  <section class="section">
+    <div class="container">
+      <header class="page-head">
+        <h1>Çocuk Videoları ▶</h1>
+        <p>Çocuk şarkıları, animasyonlu masallar ve eğlenceli videolar. Videolar yalnızca dokunduğunuzda açılır — otomatik oynatma yoktur.</p>
+      </header>
+
+      <div class="catbar" role="tablist" aria-label="Video kategorileri">
+        <button class="chip is-active" data-cat="" role="tab">Tümü</button>
+        {activeCats.map((c) => (
+          <button class="chip" data-cat={c.key} role="tab">{c.emoji} {c.label}</button>
+        ))}
+      </div>
+
+      <p class="result-count" id="vcount" aria-live="polite"></p>
+
+      <div class="grid grid-4" id="video-grid">
+        {videos.map((v) => <VideoCard video={v} />)}
+      </div>
+      <p class="empty" id="vempty" hidden>Bu kategoride henüz video yok.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head { color: #fff; margin-bottom: 20px; }
+  .page-head h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+  .page-head p { color: var(--soft); max-width: 66ch; margin-top: 8px; }
+
+  .catbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .chip { border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.12); color: #fff; font-family: 'Baloo 2', cursive; font-weight: 700; padding: 9px 16px; border-radius: 999px; transition: background .15s ease, color .15s ease; }
+  .chip:hover { background: rgba(255,255,255,.22); }
+  .chip.is-active { background: #fff; color: var(--ink); }
+  .result-count { color: var(--soft); margin-bottom: 14px; font-weight: 600; }
+  .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 22px; text-align: center; }
+</style>
+
+<script>
+  const grid = document.getElementById('video-grid')!;
+  const cards = Array.from(grid.querySelectorAll<HTMLElement>('.video-card'));
+  const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.catbar .chip'));
+  const countEl = document.getElementById('vcount')!;
+  const emptyEl = document.getElementById('vempty') as HTMLElement;
+
+  function filter(cat: string) {
+    let shown = 0;
+    cards.forEach((c) => {
+      const ok = !cat || c.dataset.cats!.split(' ').includes(cat);
+      c.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    countEl.textContent = `${shown} video`;
+    emptyEl.hidden = shown !== 0;
+  }
+  chips.forEach((chip) => chip.addEventListener('click', () => {
+    chips.forEach((c) => c.classList.toggle('is-active', c === chip));
+    filter(chip.dataset.cat || '');
+  }));
+
+  // preset from ?kategori=
+  const cat = new URLSearchParams(location.search).get('kategori') || '';
+  const start = chips.find((c) => (c.dataset.cat || '') === cat) || chips[0];
+  chips.forEach((c) => c.classList.toggle('is-active', c === start));
+  filter(start.dataset.cat || '');
+</script>

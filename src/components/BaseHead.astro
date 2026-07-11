@@ -1,0 +1,86 @@
+---
+import Consent from './Consent.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  /** path only, e.g. "/masallar/" — combined with site for canonical/OG */
+  path?: string;
+  image?: string;
+  noindex?: boolean;
+  /** extra JSON-LD object(s) for this page */
+  jsonLd?: Record<string, any> | Record<string, any>[];
+}
+
+const {
+  title,
+  description,
+  path = '/',
+  image = '/logo.png',
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://masalnova.com');
+const canonical = new URL(path, site).href;
+const imageUrl = new URL(image, site).href;
+
+const orgGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://masalnova.com/#organization',
+      name: 'MasalNova Çocuk',
+      url: 'https://masalnova.com/',
+      logo: 'https://masalnova.com/logo.png',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://masalnova.com/#website',
+      url: 'https://masalnova.com/',
+      name: 'MasalNova Çocuk',
+      inLanguage: 'tr-TR',
+      publisher: { '@id': 'https://masalnova.com/#organization' },
+    },
+  ],
+};
+
+const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+---
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<Consent />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+<link rel="canonical" href={canonical} />
+<link rel="alternate" hreflang="tr" href={canonical} />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content="MasalNova Çocuk" />
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:image" content={imageUrl} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+
+<link rel="icon" type="image/png" href="/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+  rel="stylesheet"
+/>
+
+<script type="application/ld+json" set:html={JSON.stringify(orgGraph)} />
+{extra.map((obj) => (
+  <script type="application/ld+json" set:html={JSON.stringify(obj)} />
+))}

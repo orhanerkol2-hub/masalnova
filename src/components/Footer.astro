@@ -1,0 +1,90 @@
+---
+const cols = [
+  {
+    title: 'Masallar',
+    links: [
+      { label: 'Uyku Masalları', href: '/masallar/?tur=uyku' },
+      { label: 'Kısa Masallar', href: '/masallar/?tur=kisa' },
+      { label: 'Eğitici Masallar', href: '/masallar/?tur=egitici' },
+      { label: 'Yaşa Göre Masallar', href: '/masallar/?yas=hepsi' },
+    ],
+  },
+  {
+    title: 'Videolar',
+    links: [
+      { label: 'Çocuk Şarkıları', href: '/videolar/?kategori=sarkilar' },
+      { label: 'Masal Videoları', href: '/videolar/?kategori=masal' },
+      { label: 'Eğitici Videolar', href: '/videolar/?kategori=egitici' },
+      { label: 'Tüm Videolar', href: '/videolar/' },
+    ],
+  },
+  {
+    title: 'Keşfet',
+    links: [
+      { label: 'Masal Bul', href: '/masal-bul/' },
+      { label: 'Yeni Masallar', href: '/masallar/?siralama=yeni' },
+      { label: 'Popüler Masallar', href: '/masallar/?siralama=populer' },
+    ],
+  },
+  {
+    title: 'Bilgi',
+    links: [
+      { label: 'Hakkımızda', href: '/hakkimizda/' },
+      { label: 'İletişim', href: '/iletisim/' },
+      { label: 'Gizlilik Politikası', href: '/datenschutz/' },
+      { label: 'Çerez Politikası', href: '/datenschutz/#cerezler' },
+    ],
+  },
+];
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      {cols.map((c) => (
+        <div class="col">
+          <h3>{c.title}</h3>
+          <ul>
+            {c.links.map((l) => (<li><a href={l.href}>{l.label}</a></li>))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="foot-bottom">
+      <div class="socials">
+        <a href="https://www.youtube.com/@masalnovacocuk" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      </div>
+      <p class="brand-tag">MasalNova Çocuk — bir <span>Sunbeam Media</span> markasıdır</p>
+      <nav class="legal" aria-label="Yasal">
+        <a href="/impressum/">Imprint</a>
+        <span aria-hidden="true">·</span>
+        <a href="/datenschutz/">Privacy Policy</a>
+      </nav>
+      <p class="copyright">© {year} MasalNova. Tüm hakları saklıdır.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: rgba(9, 26, 66, 0.55); border-top: 1px solid rgba(255,255,255,.12); margin-top: 30px; padding: 44px 0 40px; color: var(--soft); }
+  .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+  .col h3 { color: #fff; font-size: 1.05rem; margin-bottom: 12px; }
+  .col ul { list-style: none; display: grid; gap: 8px; }
+  .col a { color: var(--soft); font-weight: 600; font-size: .95rem; }
+  .col a:hover { color: #fff; text-decoration: underline; }
+
+  .foot-bottom { text-align: center; margin-top: 34px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); }
+  .socials { display: flex; justify-content: center; margin-bottom: 14px; }
+  .socials a { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); color: #fff; font-size: 1.3rem; transition: transform .15s ease, background .15s ease; }
+  .socials a:hover { transform: translateY(-3px) scale(1.05); background: rgba(255,255,255,.28); }
+  .brand-tag { font-family: 'Baloo 2', cursive; font-weight: 600; color: #fff; }
+  .brand-tag span { color: var(--gold); }
+  .legal { margin-top: 10px; display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .legal a { color: var(--soft); font-weight: 600; }
+  .legal a:hover { color: #fff; text-decoration: underline; }
+  .copyright { margin-top: 10px; font-size: .88rem; }
+
+  @media (max-width: 760px) { .cols { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 420px) { .cols { grid-template-columns: 1fr; } }
+</style>

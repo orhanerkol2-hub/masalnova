@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import YouTubePlayer from '../../components/YouTubePlayer.astro';
+import RelatedVideos from '../../components/RelatedVideos.astro';
+import { videos, videoBySlug } from '../../data/videos';
+import { getStories, storyById } from '../../data/stories';
+import { videoCategoryLabel } from '../../data/taxonomy';
+
+export async function getStaticPaths() {
+  return videos.map((video) => ({ params: { slug: video.slug }, props: { video } }));
+}
+
+const { video } = Astro.props;
+const allStories = await getStories();
+
+const relatedVideos = videos
+  .filter((v) => v.slug !== video.slug && v.categories.some((c) => video.categories.includes(c)))
+  .slice(0, 3);
+
+const relatedStories = (video.relatedStoryIds ?? [])
+  .map((id) => storyById(allStories, id))
+  .filter(Boolean);
+
+const watchUrl = `https://www.youtube.com/watch?v=${video.youtubeVideoId}`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: video.title,
+  description: video.shortDescription ?? `${video.title} — MasalNova Çocuk`,
+  thumbnailUrl: [video.thumbnailUrl],
+  uploadDate: video.publishedAt,
+  contentUrl: watchUrl,
+  embedUrl: `https://www.youtube-nocookie.com/embed/${video.youtubeVideoId}`,
+  inLanguage: 'tr-TR',
+  publisher: { '@type': 'Organization', name: 'MasalNova Çocuk', logo: { '@type': 'ImageObject', url: 'https://masalnova.com/logo.png' } },
+};
+---
+<BaseLayout
+  title={`${video.title} — MasalNova Çocuk Videosu`}
+  description={video.shortDescription ?? `${video.title} — çocuklar için güvenli video, MasalNova Çocuk.`}
+  path={`/videolar/${video.slug}/`}
+  image={video.thumbnailUrl}
+  jsonLd={jsonLd}
+  activeNav="videolar"
+>
+  <article class="video-page">
+    <div class="container narrow">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Ana Sayfa</a> <span>›</span> <a href="/videolar/">Videolar</a> <span>›</span> <span>{video.title}</span>
+      </nav>
+
+      <YouTubePlayer videoId={video.youtubeVideoId} title={video.title} />
+
+      <div class="info">
+        <span class="badge-type badge-video">▶ Video</span>
+        <h1>{video.title}</h1>
+        <div class="meta">
+          {video.categories.map((c) => <a class="tag" href={`/videolar/?kategori=${c}`}>{videoCategoryLabel(c)}</a>)}
+          {video.duration && <span class="tag">⏱️ {video.duration}</span>}
+        </div>
+        {video.shortDescription && <p class="desc">{video.shortDescription}</p>}
+        <a class="btn btn-yt" href={watchUrl} target="_blank" rel="noopener">▶ YouTube'da aç</a>
+      </div>
+
+      {relatedStories.length > 0 && (
+        <aside class="story-cta">
+          <div class="cta-cover">{relatedStories[0]!.data.coverEmoji}</div>
+          <div class="cta-body">
+            <p class="cta-kicker">Bu videoyu sevdiniz mi?</p>
+            <p class="cta-title">{relatedStories[0]!.data.title} masalını da okuyun.</p>
+          </div>
+          <a class="btn btn-primary" href={`/masallar/${relatedStories[0]!.id}/`}>Masalı Oku →</a>
+        </aside>
+      )}
+    </div>
+
+    <div class="container">
+      <RelatedVideos videos={relatedVideos} />
+      <div class="back"><a class="btn btn-ghost" href="/videolar/">← Tüm Videolar</a></div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .video-page { padding: 26px 0 10px; }
+  .narrow { max-width: 900px; }
+  .crumbs { color: var(--soft); font-weight: 600; font-size: .9rem; margin-bottom: 16px; }
+  .crumbs a { color: #fff; }
+  .crumbs a:hover { text-decoration: underline; }
+  .crumbs span { opacity: .7; margin: 0 4px; }
+
+  .info { color: #fff; margin-top: 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .info h1 { font-size: clamp(1.5rem, 3.6vw, 2.2rem); }
+  .info .meta { display: flex; gap: 8px; flex-wrap: wrap; }
+  .info .desc { color: var(--soft); max-width: 70ch; }
+
+  .story-cta {
+    margin-top: 26px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    background: #fff; color: var(--ink); border-radius: var(--radius); padding: 16px 18px;
+    box-shadow: var(--shadow); border: 1px solid var(--line);
+  }
+  .cta-cover { font-size: 2rem; width: 56px; height: 56px; display: grid; place-items: center; background: #fff1d6; border-radius: 14px; }
+  .cta-body { flex: 1; min-width: 180px; }
+  .cta-kicker { color: var(--ink-soft); font-weight: 700; font-size: .9rem; }
+  .cta-title { font-family: 'Baloo 2', cursive; font-weight: 800; font-size: 1.1rem; }
+  .back { text-align: center; margin: 30px 0 10px; }
+</style>

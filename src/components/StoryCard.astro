@@ -1,0 +1,48 @@
+---
+import type { Story } from '../data/stories';
+import CoverThumb from './CoverThumb.astro';
+import { ageLabel, durationBucketForMinutes } from '../data/taxonomy';
+
+interface Props { story: Story }
+const { story } = Astro.props;
+const d = story.data;
+const href = `/masallar/${story.id}/`;
+---
+<a
+  class="story-card"
+  href={href}
+  data-title={d.title.toLowerCase()}
+  data-desc={d.shortDescription.toLowerCase()}
+  data-cats={d.categories.join(' ')}
+  data-ages={d.ageGroups.join(' ')}
+  data-dur={durationBucketForMinutes(d.readingTime)}
+>
+  <div class="thumb">
+    <CoverThumb emoji={d.coverEmoji} color={d.coverColor} image={d.coverImage} alt={d.altText ?? d.title} />
+    <span class="badge-type badge-story">📖 Masal</span>
+    {d.audioUrl && <span class="audio" title="Sesli masal">🎧</span>}
+  </div>
+  <div class="body">
+    <h3>{d.title}</h3>
+    <p class="desc">{d.shortDescription}</p>
+    <div class="meta">
+      {d.ageGroups[0] && <span class="tag">{ageLabel(d.ageGroups[0])}</span>}
+      <span class="tag">⏱️ {d.readingTime} dk okuma</span>
+    </div>
+  </div>
+</a>
+<style>
+  .story-card {
+    display: flex; flex-direction: column; background: var(--paper); color: var(--ink);
+    border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow); transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .story-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+  .thumb { position: relative; }
+  .badge-type { position: absolute; left: 10px; top: 10px; }
+  .audio { position: absolute; right: 10px; top: 10px; background: rgba(16,42,102,.85); color:#fff; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; font-size: 1rem; }
+  .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .body h3 { font-size: 1.12rem; color: var(--ink); }
+  .desc { color: var(--ink-soft); font-size: .92rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+</style>

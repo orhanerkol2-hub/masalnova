@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Imprint / Legal Notice — MasalNova"
+  description="MasalNova Çocuk yasal bilgiler / Impressum."
+  path="/impressum/"
+  noindex={true}
+>
+  <section class="section">
+    <div class="container">
+      <article class="legal">
+        <h1>Imprint / Legal Notice</h1>
+        <p class="sub">Information pursuant to § 5 DDG (German Digital Services Act).</p>
+        <img class="legal-img" src="/Imprint.png" alt="Imprint / Legal Notice" loading="lazy" />
+        <a class="btn btn-ghost" href="/">← Ana Sayfa</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal { background: #fff; color: var(--ink); border-radius: var(--radius-lg); padding: 32px clamp(20px, 5vw, 46px); box-shadow: var(--shadow-lg); border: 1px solid var(--line); max-width: 900px; margin: 0 auto; }
+  .legal h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin-bottom: 6px; }
+  .legal .sub { color: var(--ink-soft); margin-bottom: 18px; }
+  .legal-img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
+  .legal .btn { margin-top: 24px; border-color: var(--blue); color: var(--blue-d); }
+</style>

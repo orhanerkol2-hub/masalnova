@@ -1,10 +1,13 @@
-// Holt den YouTube-RSS-Feed und schreibt eine statische videos.json.
-// Läuft in GitHub Actions (server-seitig, kein CORS-Proxy nötig).
+// Fetches the YouTube RSS feed and writes public/videos.json.
+// Runs server-side (GitHub Actions), so no CORS proxy is needed.
+// After this runs, the Astro site must be rebuilt for changes to appear.
 import { writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 
 const CHANNEL_ID = 'UCNPq9m9ctBeaGXZeSUVRiLA';
-const MAX = 6;
+const MAX = 12;
 const FEED = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+const OUT = fileURLToPath(new URL('../public/videos.json', import.meta.url));
 
 function decode(s) {
   return (s || '')
@@ -28,5 +31,5 @@ for (const chunk of xml.split('<entry>').slice(1)) {
 
 if (!videos.length) throw new Error('Keine Video-Einträge im Feed gefunden');
 
-await writeFile('videos.json', JSON.stringify(videos, null, 2) + '\n');
-console.log('videos.json geschrieben:', videos.length, 'Videos');
+await writeFile(OUT, JSON.stringify(videos, null, 2) + '\n');
+console.log('public/videos.json geschrieben:', videos.length, 'Videos');

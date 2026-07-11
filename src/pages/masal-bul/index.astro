@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import { getStories } from '../../data/stories';
+import { videos } from '../../data/videos';
+import { ageGroups, durationBuckets, storyCategories } from '../../data/taxonomy';
+
+const stories = await getStories();
+
+const questions = [
+  { group: 'yas', label: 'Çocuğunuzun yaşı?', options: [{ v: '', l: 'Farketmez' }, ...ageGroups.map((a) => ({ v: a.key, l: a.label }))] },
+  { group: 'sure', label: 'Ne kadar zamanınız var?', options: [{ v: '', l: 'Farketmez' }, ...durationBuckets.map((d) => ({ v: d.key, l: d.label }))] },
+  { group: 'tur', label: 'Nasıl bir masal?', options: [{ v: '', l: 'Farketmez' }, ...storyCategories.map((c) => ({ v: c.key, l: `${c.emoji} ${c.label}` }))] },
+];
+---
+<BaseLayout
+  title="Masal Bul | Çocuğunuza Uygun Masalı Bulun — MasalNova"
+  description="Çocuğunuzun yaşına, elinizdeki zamana ve ilgisine göre en uygun masalı saniyeler içinde bulun. MasalNova Masal Bul asistanı."
+  path="/masal-bul/"
+  activeNav="masal-bul"
+>
+  <section class="section">
+    <div class="container">
+      <header class="page-head">
+        <h1>Çocuğunuza Uygun Masalı Bulun 🔮</h1>
+        <p>Birkaç soruyu yanıtlayın, size en uygun masalları önerelim. Bu asistan yalnızca yazılı masallar içindir.</p>
+      </header>
+
+      <div class="wizard card">
+        {questions.map((q) => (
+          <div class="q" data-group={q.group}>
+            <p class="q-label">{q.label}</p>
+            <div class="chips">
+              {q.options.map((o, i) => (
+                <button type="button" class={`chip${i === 0 ? ' is-active' : ''}`} data-value={o.v}>{o.l}</button>
+              ))}
+            </div>
+          </div>
+        ))}
+        <button type="button" id="findBtn" class="btn btn-primary find">Masalı Bul ✨</button>
+      </div>
+
+      <section id="results" class="results" hidden>
+        <h2 id="results-title">Size uygun masallar</h2>
+        <div class="grid grid-3" id="story-results"></div>
+        <p class="empty" id="no-story" hidden>Bu kriterlere tam uyan masal bulunamadı — filtreleri biraz gevşetmeyi deneyin.</p>
+
+        <div id="watch" hidden>
+          <h3>İzlemek ister misiniz?</h3>
+          <div class="grid grid-3" id="video-results"></div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- hidden pools (source nodes cloned into results) -->
+  <div hidden id="story-pool">
+    {stories.map((s) => <StoryCard story={s} />)}
+  </div>
+  <div hidden id="video-pool">
+    {videos.map((v) => <VideoCard video={v} />)}
+  </div>
+</BaseLayout>
+
+<style>
+  .page-head { color: #fff; margin-bottom: 20px; }
+  .page-head h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+  .page-head p { color: var(--soft); max-width: 66ch; margin-top: 8px; }
+
+  .wizard { background: #fff; padding: 24px; display: flex; flex-direction: column; gap: 20px; }
+  .q-label { font-family: 'Baloo 2', cursive; font-weight: 800; color: var(--ink); margin-bottom: 10px; font-size: 1.1rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { border: 1px solid var(--line); background: var(--paper-2); color: var(--ink); font-family: 'Baloo 2', cursive; font-weight: 700; padding: 9px 16px; border-radius: 999px; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+  .chip:hover { border-color: var(--blue); }
+  .chip.is-active { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .find { align-self: flex-start; margin-top: 4px; }
+
+  .results { margin-top: 34px; }
+  .results h2 { color: #fff; font-size: 1.5rem; margin-bottom: 16px; }
+  #watch { margin-top: 34px; }
+  #watch h3 { color: #fff; font-size: 1.25rem; margin-bottom: 14px; }
+  .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 22px; text-align: center; }
+</style>
+
+<script>
+  const sel: Record<string, string> = { yas: '', sure: '', tur: '' };
+  document.querySelectorAll<HTMLElement>('.q').forEach((q) => {
+    const group = q.dataset.group!;
+    q.querySelectorAll<HTMLButtonElement>('.chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        q.querySelectorAll('.chip').forEach((c) => c.classList.toggle('is-active', c === chip));
+        sel[group] = chip.dataset.value || '';
+      });
+    });
+  });
+
+  const turToVideoCat: Record<string, string> = { uyku: 'sarkilar', kisa: 'sarkilar', egitici: 'egitici', hayvan: 'hayvan' };
+
+  document.getElementById('findBtn')!.addEventListener('click', () => {
+    const storyPool = Array.from(document.querySelectorAll<HTMLElement>('#story-pool .story-card'));
+    const matches = storyPool.filter((c) => {
+      const okTur = !sel.tur || c.dataset.cats!.split(' ').includes(sel.tur);
+      const okYas = !sel.yas || c.dataset.ages!.split(' ').includes(sel.yas);
+      const okSure = !sel.sure || c.dataset.dur === sel.sure;
+      return okTur && okYas && okSure;
+    });
+
+    const out = document.getElementById('story-results')!;
+    out.innerHTML = '';
+    matches.forEach((m) => out.appendChild(m.cloneNode(true)));
+    (document.getElementById('no-story') as HTMLElement).hidden = matches.length !== 0;
+    document.getElementById('results-title')!.textContent =
+      matches.length ? `Size uygun ${matches.length} masal` : 'Sonuç';
+
+    // İzlemek ister misiniz? — max 2 matching videos
+    const vcat = turToVideoCat[sel.tur] || '';
+    const vPool = Array.from(document.querySelectorAll<HTMLElement>('#video-pool .video-card'));
+    const vMatches = (vcat ? vPool.filter((c) => c.dataset.cats!.split(' ').includes(vcat)) : vPool).slice(0, 2);
+    const vout = document.getElementById('video-results')!;
+    vout.innerHTML = '';
+    vMatches.forEach((m) => vout.appendChild(m.cloneNode(true)));
+    (document.getElementById('watch') as HTMLElement).hidden = vMatches.length === 0;
+
+    const results = document.getElementById('results') as HTMLElement;
+    results.hidden = false;
+    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>

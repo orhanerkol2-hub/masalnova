@@ -1,0 +1,19 @@
+---
+import type { Video } from '../data/videos';
+import VideoCard from './VideoCard.astro';
+
+interface Props { videos: Video[]; title?: string }
+const { videos, title = 'Benzer Videolar' } = Astro.props;
+---
+{videos.length > 0 && (
+  <section class="related">
+    <h2>{title}</h2>
+    <div class="grid grid-3">
+      {videos.map((v) => <VideoCard video={v} />)}
+    </div>
+  </section>
+)}
+<style>
+  .related { margin-top: 40px; }
+  .related h2 { color: #fff; font-size: 1.4rem; margin-bottom: 16px; }
+</style>

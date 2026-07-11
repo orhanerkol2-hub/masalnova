@@ -1,0 +1,35 @@
+---
+import type { Video } from '../data/videos';
+import VideoGrid from './VideoGrid.astro';
+
+interface Props {
+  videos: Video[];
+  title?: string;
+  subtitle?: string;
+  moreHref?: string;
+  moreLabel?: string;
+  cols?: 3 | 4;
+}
+const {
+  videos,
+  title = 'Öne Çıkan Videolar',
+  subtitle,
+  moreHref = '/videolar/',
+  moreLabel = 'Tüm Videoları Gör',
+  cols = 3,
+} = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <h2>{title}</h2>
+      <a class="sec-link" href={moreHref}>{moreLabel} →</a>
+    </div>
+    {subtitle && <p class="sec-sub">{subtitle}</p>}
+    <VideoGrid videos={videos} cols={cols} />
+    <div class="more-row"><a class="btn btn-secondary" href={moreHref}>{moreLabel}</a></div>
+  </div>
+</section>
+<style>
+  .more-row { text-align: center; margin-top: 26px; }
+</style>

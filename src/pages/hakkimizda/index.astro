@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Hakkımızda — MasalNova Çocuk"
+  description="MasalNova Çocuk; çocuklar için güvenli, sevgi dolu masallar, şarkılar ve eğlenceli videolar hazırlayan bir Sunbeam Media markasıdır."
+  path="/hakkimizda/"
+  activeNav=""
+>
+  <section class="section">
+    <div class="container">
+      <article class="content">
+        <h1>Hakkımızda</h1>
+        <p>
+          <strong>MasalNova Çocuk</strong>, çocuklar için sevgiyle hazırlanan kısa masallar,
+          neşeli şarkılar ve eğlenceli videoların bir arada bulunduğu güvenli bir dünyadır.
+          Amacımız; çocukların hayal gücünü besleyen, güzel değerler kazandıran ve ailelerin
+          gönül rahatlığıyla açabileceği içerikler sunmaktır.
+        </p>
+        <p>
+          Masallarımız kısa ve anlaşılır bir dille yazılır; her masalın sonunda çocuğun
+          hatırlayacağı sevimli bir öğüt bulunur. Videolarımızda ise Keloğlan şarkıları,
+          animasyonlu masallar ve eğitici içerikler yer alır.
+        </p>
+        <p>
+          İçeriklerimiz reklam odaklı değil, çocuk odaklıdır. Yeni masallar ve videolar
+          düzenli olarak eklenir.
+        </p>
+        <p class="brand">MasalNova Çocuk, bir <strong>Sunbeam Media</strong> markasıdır.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="/masallar/">📖 Masalları Keşfet</a>
+          <a class="btn btn-secondary" href="/videolar/">▶ Videoları İzle</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .content { background: #fff; color: var(--ink); border-radius: var(--radius-lg); padding: 34px clamp(20px, 5vw, 48px); box-shadow: var(--shadow-lg); border: 1px solid var(--line); max-width: 800px; margin: 0 auto; line-height: 1.8; }
+  .content h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 16px; }
+  .content p { margin-bottom: 14px; color: var(--ink-soft); }
+  .content .brand { color: var(--ink); font-weight: 700; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+</style>

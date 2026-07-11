@@ -1,0 +1,37 @@
+---
+// Tab bar to filter between all / stories / videos. Toggles elements marked
+// with [data-pane-content="stories|videos"]. Works client-side, no reloads.
+interface Props { counts?: { all: number; stories: number; videos: number } }
+const { counts } = Astro.props;
+---
+<div class="tabs" role="tablist" aria-label="İçerik türü">
+  <button class="tab is-active" data-pane="all" role="tab" aria-selected="true">
+    Tümü{counts ? ` (${counts.all})` : ''}
+  </button>
+  <button class="tab" data-pane="stories" role="tab" aria-selected="false">
+    📖 Masallar{counts ? ` (${counts.stories})` : ''}
+  </button>
+  <button class="tab" data-pane="videos" role="tab" aria-selected="false">
+    ▶ Videolar{counts ? ` (${counts.videos})` : ''}
+  </button>
+</div>
+<style>
+  .tabs { display: inline-flex; gap: 6px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.24); padding: 6px; border-radius: 999px; }
+  .tab { border: 0; background: transparent; color: #fff; font-family: 'Baloo 2', cursive; font-weight: 700; font-size: .98rem; padding: 8px 16px; border-radius: 999px; transition: background .15s ease, color .15s ease; }
+  .tab.is-active { background: #fff; color: var(--ink); }
+</style>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.tabs .tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const pane = tab.dataset.pane;
+      document.querySelectorAll('.tabs .tab').forEach((t) => {
+        const active = t === tab;
+        t.classList.toggle('is-active', active);
+        t.setAttribute('aria-selected', String(active));
+      });
+      document.querySelectorAll<HTMLElement>('[data-pane-content]').forEach((sec) => {
+        sec.hidden = !(pane === 'all' || sec.dataset.paneContent === pane);
+      });
+    });
+  });
+</script>

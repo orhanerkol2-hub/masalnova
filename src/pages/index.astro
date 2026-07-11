@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchBox from '../components/SearchBox.astro';
+import ChoiceCard from '../components/ChoiceCard.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import StoryCard from '../components/StoryCard.astro';
+import FeaturedVideos from '../components/FeaturedVideos.astro';
+import CoverThumb from '../components/CoverThumb.astro';
+import { getStories, popularStories, newStories, todayStory, storyCount } from '../data/stories';
+import { featuredVideos, newestVideos } from '../data/videos';
+import { ageLabel } from '../data/taxonomy';
+
+const stories = await getStories();
+const today = todayStory(stories);
+const popular = popularStories(stories, 6);
+const featuredVids = featuredVideos(6);
+const newVids = newestVideos(4);
+
+const homeCats = [
+  { emoji: '🌙', label: 'Uyku Masalları', desc: 'Uyku öncesi sakin masallar', href: '/masallar/?tur=uyku', count: storyCount(stories, 'uyku'), color: '#7b5cff' },
+  { emoji: '⏱️', label: 'Kısa Masallar', desc: 'Birkaç dakikada biten masallar', href: '/masallar/?tur=kisa', count: storyCount(stories, 'kisa'), color: '#2f74e8' },
+  { emoji: '🎓', label: 'Eğitici Masallar', desc: 'Güzel bir ders veren masallar', href: '/masallar/?tur=egitici', count: storyCount(stories, 'egitici'), color: '#3bb98b' },
+  { emoji: '🧒', label: 'Yaşa Göre Masallar', desc: 'Çocuğunuzun yaşına uygun', href: '/masallar/', count: stories.length, color: '#ff8a00' },
+];
+---
+<BaseLayout
+  title="MasalNova Çocuk | Masallar ve Çocuk Videoları"
+  description="MasalNova Çocuk'ta kısa Türkçe masallar okuyun, çocuk şarkıları ve eğlenceli videoları izleyin. Çocuğunuza uygun içeriği kolayca keşfedin."
+  path="/"
+  activeNav="home"
+>
+  <!-- 1) HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Bu Akşam Ne İzleyelim, Hangi Masalı Okuyalım?</h1>
+      <p class="lead">Çocuğunuza uygun masalları ve eğlenceli videoları kolayca keşfedin.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/masallar/">📖 Masal Oku</a>
+        <a class="btn btn-secondary" href="/videolar/">▶ Video İzle</a>
+      </div>
+      <SearchBox big />
+    </div>
+  </section>
+
+  <!-- 2) CHOICE CARDS -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid grid-2">
+        <ChoiceCard kind="story" icon="📖" title="Masallar" subtitle="Kısa, eğitici ve uyku öncesi masalları keşfedin" href="/masallar/" />
+        <ChoiceCard kind="video" icon="🎬" title="Videolar" subtitle="Çocuk şarkıları, masallar ve eğlenceli videolar izleyin" href="/videolar/" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) STORY CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-head"><h2>Masal Kategorileri</h2><a class="sec-link" href="/masallar/">Tüm Masallar →</a></div>
+      <div class="grid grid-4">
+        {homeCats.map((c) => (
+          <CategoryCard href={c.href} emoji={c.emoji} label={c.label} desc={c.desc} count={c.count} color={c.color} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) ÖNE ÇIKAN VIDEOLAR -->
+  <FeaturedVideos
+    videos={featuredVids}
+    title="Öne Çıkan Videolar"
+    subtitle="Çocuk şarkıları ve eğlenceli videolar — küçük resme dokun, video açılsın."
+    cols={3}
+  />
+
+  <!-- 5) BUGÜNÜN MASALI -->
+  {today && (
+    <section class="section">
+      <div class="container">
+        <div class="sec-head"><h2>Bugünün Masalı ✨</h2></div>
+        <a class="today card" href={`/masallar/${today.id}/`}>
+          <div class="today-cover">
+            <CoverThumb emoji={today.data.coverEmoji} color={today.data.coverColor} image={today.data.coverImage} alt={today.data.altText ?? today.data.title} ratio="4 / 3" big />
+          </div>
+          <div class="today-body">
+            <div class="meta">
+              <span class="badge-type badge-story">📖 Masal</span>
+              {today.data.ageGroups[0] && <span class="tag">{ageLabel(today.data.ageGroups[0])}</span>}
+              <span class="tag">⏱️ {today.data.readingTime} dk okuma</span>
+            </div>
+            <h3>{today.data.title}</h3>
+            <p>{today.data.shortDescription}</p>
+            <span class="btn btn-primary">Masalı Oku →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- 6) POPÜLER MASALLAR -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-head"><h2>Popüler Masallar</h2><a class="sec-link" href="/masallar/?siralama=populer">Tümü →</a></div>
+      <div class="grid grid-3">
+        {popular.map((s) => <StoryCard story={s} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- 7) YENİ VIDEOLAR -->
+  <FeaturedVideos
+    videos={newVids}
+    title="Yeni Videolar"
+    moreHref="/videolar/"
+    moreLabel="Tüm Videoları Gör"
+    cols={4}
+  />
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative; color: #fff; text-align: center;
+    background:
+      linear-gradient(180deg, rgba(15, 43, 99, 0.5), rgba(15, 43, 99, 0.82)),
+      url('/background.jpg') center / cover no-repeat;
+  }
+  .hero-inner { padding: 54px 20px 44px; }
+  .hero h1 { font-size: clamp(1.7rem, 4.6vw, 2.9rem); text-shadow: 0 2px 16px rgba(8, 24, 70, 0.55); max-width: 18ch; margin: 0 auto 14px; }
+  .hero .lead { font-size: clamp(1.02rem, 2.4vw, 1.28rem); font-weight: 600; max-width: 46ch; margin: 0 auto 22px; color: #eaf1ff; }
+  .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 22px; }
+
+  .today {
+    display: grid; grid-template-columns: 300px 1fr; gap: 0; text-decoration: none;
+    color: var(--ink); overflow: hidden;
+  }
+  .today-cover { height: 100%; }
+  .today-cover :global(.cover) { height: 100%; }
+  .today-body { padding: 26px 28px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .today-body .meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .today-body h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--ink); }
+  .today-body p { color: var(--ink-soft); }
+  .today-body .btn { margin-top: 6px; }
+  @media (max-width: 700px) {
+    .today { grid-template-columns: 1fr; }
+    .today-cover { max-height: 220px; }
+  }
+</style>

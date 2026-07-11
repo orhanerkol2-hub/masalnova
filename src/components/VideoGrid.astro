@@ -1,0 +1,10 @@
+---
+import type { Video } from '../data/videos';
+import VideoCard from './VideoCard.astro';
+
+interface Props { videos: Video[]; cols?: 3 | 4 }
+const { videos, cols = 4 } = Astro.props;
+---
+<div class={`grid grid-${cols}`}>
+  {videos.map((v) => <VideoCard video={v} />)}
+</div>

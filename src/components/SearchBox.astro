@@ -1,0 +1,33 @@
+---
+interface Props { action?: string; value?: string; big?: boolean }
+const { action = '/ara/', value = '', big = false } = Astro.props;
+---
+<form class={`searchbox${big ? ' big' : ''}`} action={action} method="get" role="search">
+  <span class="ic" aria-hidden="true">🔍</span>
+  <input
+    type="search"
+    name="q"
+    value={value}
+    placeholder="Masal veya video ara..."
+    aria-label="Masal veya video ara"
+    autocomplete="off"
+  />
+  <button type="submit" class="btn btn-primary">Ara</button>
+</form>
+<style>
+  .searchbox {
+    display: flex; align-items: center; gap: 8px; background: #fff;
+    border-radius: 999px; padding: 6px 6px 6px 16px; box-shadow: var(--shadow);
+    max-width: 560px; margin: 0 auto; border: 1px solid var(--line);
+  }
+  .searchbox.big { max-width: 620px; }
+  .ic { font-size: 1.05rem; }
+  .searchbox input {
+    flex: 1; border: 0; outline: none; font: inherit; font-size: 1rem;
+    color: var(--ink); background: transparent; padding: 10px 4px;
+  }
+  .searchbox .btn { padding: 10px 22px; font-size: 1rem; }
+  @media (max-width: 420px) {
+    .searchbox .btn { padding: 10px 16px; }
+  }
+</style>

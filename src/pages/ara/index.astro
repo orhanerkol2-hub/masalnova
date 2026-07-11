@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import ContentTypeTabs from '../../components/ContentTypeTabs.astro';
+import { getStories } from '../../data/stories';
+import { videos } from '../../data/videos';
+
+const stories = await getStories();
+---
+<BaseLayout
+  title="Ara | Masal ve Video Arama — MasalNova"
+  description="MasalNova'da masal ve video arayın. Sonuçlar masallar ve videolar olarak ayrı ayrı gösterilir."
+  path="/ara/"
+  noindex={true}
+>
+  <section class="section">
+    <div class="container">
+      <header class="page-head">
+        <h1>Ara 🔍</h1>
+        <form class="searchbox big" role="search" onsubmit="return false;">
+          <span class="ic" aria-hidden="true">🔍</span>
+          <input type="search" id="q" name="q" placeholder="Masal veya video ara..." aria-label="Masal veya video ara" autocomplete="off" />
+        </form>
+        <div class="tabs-wrap"><ContentTypeTabs /></div>
+      </header>
+
+      <section data-pane-content="stories" class="pane">
+        <h2>Masallar <span class="count" id="c-stories"></span></h2>
+        <div class="grid grid-3" id="story-results">
+          {stories.map((s) => <StoryCard story={s} />)}
+        </div>
+        <p class="empty" id="no-stories" hidden>Eşleşen masal yok.</p>
+      </section>
+
+      <section data-pane-content="videos" class="pane">
+        <h2>Videolar <span class="count" id="c-videos"></span></h2>
+        <div class="grid grid-4" id="video-results">
+          {videos.map((v) => <VideoCard video={v} />)}
+        </div>
+        <p class="empty" id="no-videos" hidden>Eşleşen video yok.</p>
+      </section>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head { color: #fff; margin-bottom: 20px; }
+  .page-head h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin-bottom: 16px; }
+  .searchbox { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 8px 16px; box-shadow: var(--shadow); max-width: 620px; }
+  .searchbox input { flex: 1; border: 0; outline: none; font: inherit; font-size: 1.05rem; color: var(--ink); background: transparent; padding: 8px 4px; }
+  .tabs-wrap { margin-top: 16px; }
+  .pane { margin-top: 30px; }
+  .pane h2 { color: #fff; font-size: 1.4rem; margin-bottom: 16px; }
+  .count { color: var(--gold); }
+  .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 20px; text-align: center; }
+</style>
+
+<script>
+  const q = document.getElementById('q') as HTMLInputElement;
+  const storyCards = Array.from(document.querySelectorAll<HTMLElement>('#story-results .story-card'));
+  const videoCards = Array.from(document.querySelectorAll<HTMLElement>('#video-results .video-card'));
+
+  function match(el: HTMLElement, term: string) {
+    if (!term) return true;
+    const hay = `${el.dataset.title || ''} ${el.dataset.desc || ''} ${el.dataset.cats || ''}`;
+    return hay.includes(term);
+  }
+
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let s = 0, v = 0;
+    storyCards.forEach((c) => { const ok = match(c, term); c.style.display = ok ? '' : 'none'; if (ok) s++; });
+    videoCards.forEach((c) => { const ok = match(c, term); c.style.display = ok ? '' : 'none'; if (ok) v++; });
+    document.getElementById('c-stories')!.textContent = `(${s})`;
+    document.getElementById('c-videos')!.textContent = `(${v})`;
+    (document.getElementById('no-stories') as HTMLElement).hidden = s !== 0;
+    (document.getElementById('no-videos') as HTMLElement).hidden = v !== 0;
+  }
+
+  const initial = new URLSearchParams(location.search).get('q');
+  if (initial) q.value = initial;
+  q.addEventListener('input', apply);
+  apply();
+</script>

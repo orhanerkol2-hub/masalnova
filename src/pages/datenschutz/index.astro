@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Gizlilik Politikası — MasalNova"
+  description="MasalNova Çocuk gizlilik politikası ve çerez bilgileri."
+  path="/datenschutz/"
+  noindex={true}
+>
+  <section class="section">
+    <div class="container">
+      <article class="legal">
+        <h1>Privacy Policy</h1>
+        <img class="legal-img" src="/privacy.png" alt="Privacy Policy" loading="lazy" />
+
+        <div id="cerezler" class="cerez">
+          <h2>Çerezler</h2>
+          <p>
+            Sitemizde trafiği ölçmek için Google Analytics kullanıyoruz. Analitik çerezler
+            yalnızca siz onay verdikten sonra çalışır (Google Consent Mode v2). Çerez
+            tercihlerinizi istediğiniz zaman sağ alttaki çerez simgesinden değiştirebilirsiniz.
+          </p>
+        </div>
+
+        <a class="btn btn-ghost" href="/">← Ana Sayfa</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal { background: #fff; color: var(--ink); border-radius: var(--radius-lg); padding: 32px clamp(20px, 5vw, 46px); box-shadow: var(--shadow-lg); border: 1px solid var(--line); max-width: 900px; margin: 0 auto; }
+  .legal h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin-bottom: 18px; }
+  .legal-img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
+  .cerez { margin-top: 26px; }
+  .cerez h2 { font-size: 1.3rem; margin-bottom: 10px; color: var(--ink); }
+  .cerez p { color: var(--ink-soft); line-height: 1.7; }
+  .legal .btn { margin-top: 24px; border-color: var(--blue); color: var(--blue-d); }
+</style>

@@ -1,0 +1,57 @@
+---
+import type { Video } from '../data/videos';
+import { videoCategoryLabel } from '../data/taxonomy';
+
+interface Props { video: Video }
+const { video } = Astro.props;
+const href = `/videolar/${video.slug}/`;
+const cat = video.categories[0];
+const cats = video.categories.join(' ');
+---
+<a
+  class="video-card"
+  href={href}
+  data-title={video.title.toLowerCase()}
+  data-cats={cats}
+>
+  <div class="thumb">
+    <img
+      src={video.thumbnailUrl}
+      alt={`${video.title} — video küçük resmi`}
+      loading="lazy"
+      width="480"
+      height="270"
+    />
+    <span class="play" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    </span>
+    <span class="badge-type badge-video">▶ Video</span>
+    {video.duration && <span class="dur">{video.duration}</span>}
+  </div>
+  <div class="body">
+    <h3>{video.title}</h3>
+    {cat && <span class="cat">{videoCategoryLabel(cat)}</span>}
+  </div>
+</a>
+<style>
+  .video-card {
+    display: flex; flex-direction: column; background: var(--paper); color: var(--ink);
+    border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow); transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .video-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+  .thumb { position: relative; aspect-ratio: 16 / 9; background: #0a225e; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .play {
+    position: absolute; inset: 0; margin: auto; width: 58px; height: 58px;
+    display: grid; place-items: center; border-radius: 50%;
+    background: rgba(255, 0, 0, 0.92); color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); transition: transform .15s ease;
+  }
+  .video-card:hover .play { transform: scale(1.12); }
+  .badge-type { position: absolute; left: 10px; top: 10px; }
+  .dur { position: absolute; right: 8px; bottom: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: .78rem; font-weight: 700; padding: 2px 7px; border-radius: 6px; }
+  .body { padding: 12px 14px 15px; display: flex; flex-direction: column; gap: 6px; }
+  .body h3 { font-size: 1.02rem; line-height: 1.3; color: var(--ink); font-family: 'Nunito', sans-serif; font-weight: 800; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .cat { color: var(--blue-d); font-weight: 700; font-size: .85rem; }
+</style>

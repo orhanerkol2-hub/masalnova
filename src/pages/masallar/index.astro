@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import { getStories } from '../../data/stories';
+import { storyCategories, ageGroups, durationBuckets } from '../../data/taxonomy';
+
+const stories = await getStories();
+---
+<BaseLayout
+  title="Çocuk Masalları | Kısa Türkçe Masallar — MasalNova"
+  description="Çocuklar için kısa Türkçe masallar: uyku masalları, kısa masallar, eğitici ve hayvan masalları. Yaşa ve süreye göre filtreleyin, birlikte okuyun."
+  path="/masallar/"
+  activeNav="masallar"
+>
+  <section class="section">
+    <div class="container">
+      <header class="page-head">
+        <h1>Çocuk Masalları 📖</h1>
+        <p>Çocuğunuzla birlikte okuyabileceğiniz kısa Türkçe masallar. Yaşa, süreye ve türe göre filtreleyin; başlığa dokununca masal açılır.</p>
+      </header>
+
+      <div class="filters">
+        <div class="search-wrap">
+          <span aria-hidden="true">🔍</span>
+          <input type="search" id="q" placeholder="Masal ara..." aria-label="Masal ara" autocomplete="off" />
+        </div>
+        <label>Yaş
+          <select id="f-yas">
+            <option value="">Tümü</option>
+            {ageGroups.map((a) => <option value={a.key}>{a.label}</option>)}
+          </select>
+        </label>
+        <label>Süre
+          <select id="f-sure">
+            <option value="">Tümü</option>
+            {durationBuckets.map((d) => <option value={d.key}>{d.label}</option>)}
+          </select>
+        </label>
+        <label>Tür
+          <select id="f-tur">
+            <option value="">Tümü</option>
+            {storyCategories.map((c) => <option value={c.key}>{c.label}</option>)}
+          </select>
+        </label>
+        <button type="button" id="reset" class="reset">Temizle</button>
+      </div>
+
+      <p class="result-count" id="count" aria-live="polite"></p>
+
+      <div class="grid grid-3" id="story-grid">
+        {stories.map((s) => <StoryCard story={s} />)}
+      </div>
+      <p class="empty" id="empty" hidden>Aradığınız kriterlere uygun masal bulunamadı. Filtreleri temizleyip tekrar deneyin.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head { color: #fff; margin-bottom: 22px; }
+  .page-head h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+  .page-head p { color: var(--soft); max-width: 66ch; margin-top: 8px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 16px; }
+  .search-wrap { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 8px 14px; flex: 1 1 220px; }
+  .search-wrap input { border: 0; outline: none; font: inherit; flex: 1; color: var(--ink); background: transparent; }
+  .filters label { color: #fff; font-weight: 700; font-family: 'Baloo 2', cursive; display: flex; flex-direction: column; gap: 4px; font-size: .85rem; }
+  .filters select { font: inherit; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: #fff; color: var(--ink); font-weight: 600; }
+  .reset { align-self: flex-end; background: rgba(255,255,255,.18); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 9px 16px; font-family: 'Baloo 2', cursive; font-weight: 700; }
+  .reset:hover { background: rgba(255,255,255,.28); }
+  .result-count { color: var(--soft); margin-bottom: 14px; font-weight: 600; }
+  .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 22px; text-align: center; margin-top: 16px; }
+</style>
+
+<script>
+  const grid = document.getElementById('story-grid')!;
+  const cards = Array.from(grid.querySelectorAll<HTMLElement>('.story-card'));
+  const q = document.getElementById('q') as HTMLInputElement;
+  const fYas = document.getElementById('f-yas') as HTMLSelectElement;
+  const fSure = document.getElementById('f-sure') as HTMLSelectElement;
+  const fTur = document.getElementById('f-tur') as HTMLSelectElement;
+  const countEl = document.getElementById('count')!;
+  const emptyEl = document.getElementById('empty') as HTMLElement;
+
+  // preset from URL (?tur=, ?yas=, ?sure=, ?q=)
+  const params = new URLSearchParams(location.search);
+  if (params.get('tur')) fTur.value = params.get('tur')!;
+  if (params.get('yas') && params.get('yas') !== 'hepsi') fYas.value = params.get('yas')!;
+  if (params.get('sure')) fSure.value = params.get('sure')!;
+  if (params.get('q')) q.value = params.get('q')!;
+
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let shown = 0;
+    cards.forEach((c) => {
+      const matchesText = !term || (c.dataset.title! + ' ' + c.dataset.desc!).includes(term);
+      const matchesTur = !fTur.value || c.dataset.cats!.split(' ').includes(fTur.value);
+      const matchesYas = !fYas.value || c.dataset.ages!.split(' ').includes(fYas.value);
+      const matchesSure = !fSure.value || c.dataset.dur === fSure.value;
+      const ok = matchesText && matchesTur && matchesYas && matchesSure;
+      c.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    countEl.textContent = `${shown} masal gösteriliyor`;
+    emptyEl.hidden = shown !== 0;
+  }
+  [q, fYas, fSure, fTur].forEach((el) => el.addEventListener('input', apply));
+  document.getElementById('reset')!.addEventListener('click', () => {
+    q.value = ''; fYas.value = ''; fSure.value = ''; fTur.value = ''; apply();
+  });
+  apply();
+</script>
