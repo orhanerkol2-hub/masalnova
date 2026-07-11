@@ -291,6 +291,45 @@
     .seo-copy p { color: #fff; margin-bottom: 10px; }
     .seo-copy p:last-child { margin-bottom: 0; }
 
+    /* ---------- Masallar (kısa masal metinleri) ---------- */
+    .masallar { margin: 56px 0; }
+    .masallar-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px; margin-bottom: 10px;
+    }
+    .masallar-head h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); color: #fff; }
+    .masallar-intro { color: var(--soft); margin-bottom: 22px; max-width: 62ch; }
+    .masal-list { display: grid; gap: 16px; }
+    .masal {
+      background: var(--card); backdrop-filter: blur(10px);
+      border: 1px solid var(--card-border); border-radius: 20px;
+      box-shadow: var(--shadow); overflow: hidden;
+      transition: background .2s ease;
+    }
+    .masal[open] { background: rgba(255,255,255,.16); }
+    .masal > summary {
+      cursor: pointer; list-style: none; padding: 20px 24px;
+      display: flex; align-items: center; gap: 14px;
+      font-family: 'Baloo 2', cursive; font-weight: 700; color: var(--gold);
+      font-size: 1.15rem;
+    }
+    .masal > summary::-webkit-details-marker { display: none; }
+    .masal > summary .m-emoji { font-size: 1.7rem; line-height: 1; }
+    .masal > summary .m-title { flex: 1; }
+    .masal > summary .m-meta {
+      color: var(--soft); font-weight: 600; font-size: .82rem;
+      font-family: 'Nunito', sans-serif; white-space: nowrap;
+    }
+    .masal > summary .m-toggle {
+      color: var(--soft); font-size: 1.5rem; line-height: 1;
+      transition: transform .2s ease;
+    }
+    .masal[open] > summary .m-toggle { transform: rotate(45deg); }
+    .masal-body { padding: 0 24px 22px; color: #fff; }
+    .masal-body p { margin-bottom: 12px; line-height: 1.75; }
+    .masal-body p:last-child { margin-bottom: 0; }
+    .masal-moral { margin-top: 12px; font-style: italic; color: var(--gold); font-weight: 600; }
+
     /* ---------- Videos ---------- */
     .videos { margin: 56px 0; }
     .videos-head {
@@ -380,8 +419,8 @@
       <p class="sub">Çocuklar için sevgiyle hazırlanan masallar, neşeli şarkılar ve birbirinden eğlenceli videolar — hepsi MasalNova'da! 🌙✨</p>
       <div class="btn-row">
         <a class="btn btn-yt" href="https://www.youtube.com/@masalnovacocuk" target="_blank" rel="noopener">▶ YouTube'da İzle</a>
-        <a class="btn btn-gold" href="#videolar">🎬 Videoları Gör</a>
-        <a class="btn btn-gold" href="#keloglan-sarkilari">🧒 Keloğlan Şarkıları</a>
+        <a class="btn btn-gold" href="#sarkilar">🎵 Çocuk Şarkıları</a>
+        <a class="btn btn-gold" href="#masallar">📖 Masallar</a>
       </div>
     </section>
 
@@ -416,12 +455,13 @@
       <p>Keloğlan (keloglan) temalı şarkı içeriklerimizi düzenli olarak güncelliyor, yeni videoları YouTube kanalımızda yayınlıyoruz.</p>
     </section>
 
-    <!-- VIDEOS (dinamik) -->
-    <section class="videos" id="videolar">
+    <!-- ÇOCUK ŞARKILARI (dinamik YouTube videoları) -->
+    <section class="videos" id="sarkilar">
       <div class="videos-head">
-        <h2>Son Videolar 🎬</h2>
+        <h2>Çocuk Şarkıları 🎵</h2>
         <a class="videos-all" href="https://www.youtube.com/@masalnovacocuk/videos" target="_blank" rel="noopener">Tüm videolar →</a>
       </div>
+      <p class="masallar-intro">Keloğlan şarkıları ve neşeli çocuk şarkılarımızın en yenileri — hepsi tek tıkla YouTube'da.</p>
 
       <!-- JS buraya thumbnail grid'i doldurur -->
       <div class="video-grid" id="videoGrid" aria-live="polite">
@@ -436,6 +476,62 @@
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- MASALLAR (kısa okuma masalları) -->
+    <section class="masallar" id="masallar">
+      <div class="masallar-head">
+        <h2>Masallar 📖</h2>
+        <a class="videos-all" href="https://www.youtube.com/@masalnovacocuk" target="_blank" rel="noopener">Masal videoları →</a>
+      </div>
+      <p class="masallar-intro">Çocuklarınızla birlikte okuyabileceğiniz kısa Türkçe masallar. Her masalın sonunda sevimli bir de öğüt var. Başlığa dokun, masal açılsın.</p>
+
+      <div class="masal-list">
+        <details class="masal">
+          <summary>
+            <span class="m-emoji" aria-hidden="true">🌾</span>
+            <span class="m-title">Keloğlan ile Konuşan Değirmen</span>
+            <span class="m-meta">1 dk okuma</span>
+            <span class="m-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="masal-body">
+            <p>Bir varmış bir yokmuş, evvel zaman içinde Keloğlan annesiyle küçük bir köyde yaşarmış. Bir gün annesi ona son avuç buğdayı vererek, "Git yavrum, şunu değirmende öğüt de ekmek yapalım" demiş.</p>
+            <p>Keloğlan yola koyulmuş. Değirmene vardığında değirmen taşı birden konuşmuş: "Keloğlan, beni sabırla ve nazikçe çevirirsen sana bir sır veririm." Keloğlan gülümsemiş, taşı hiç acele etmeden yavaşça çevirmiş. O da ne! Buğday, altın sarısı mis kokulu una dönüşmüş.</p>
+            <p>Keloğlan koşa koşa eve dönmüş. Ama unu yalnız kendilerine saklamamış; komşularına da birer somun ekmek dağıtmış. Ertesi sabah kapılarının önünde kocaman bir sepet dolusu taze buğday bulmuşlar. Meğer paylaşan el, hep dolu kalırmış.</p>
+            <p class="masal-moral">Kıssadan hisse: Paylaşmak, sahip olduğumuzu azaltmaz; çoğaltır.</p>
+          </div>
+        </details>
+
+        <details class="masal">
+          <summary>
+            <span class="m-emoji" aria-hidden="true">🦁</span>
+            <span class="m-title">Akıllı Tavşan ile Aslan</span>
+            <span class="m-meta">1 dk okuma</span>
+            <span class="m-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="masal-body">
+            <p>Ormanın kralı koca bir aslanmış. Her gün bir hayvanı avlar, bütün ormana korku salarmış. Hayvanlar toplanıp, "Sana her gün sırayla bir gönüllü gönderelim, ama boş yere kimseyi kovalama" demişler. Aslan kabul etmiş.</p>
+            <p>Günlerden bir gün sıra minik bir tavşana gelmiş. Tavşan hiç telaşlanmadan, ağır ağır ve geç vakit aslanın huzuruna çıkmış. Aslan kükremiş: "Neden geç kaldın?" Tavşan sakince, "Yolda başka bir aslan beni durdurdu; kendini ormanın asıl kralı sanıyor" demiş.</p>
+            <p>Öfkeden kabaran aslan, "Göster onu bana!" diye gürlemiş. Tavşan onu derin bir kuyunun başına götürmüş. Aslan suya eğilip bakınca kendi yansımasını rakibi sanmış, var gücüyle kükreyip kuyuya atlamış. Böylece minik tavşan, aklıyla koca ormanı kurtarmış.</p>
+            <p class="masal-moral">Kıssadan hisse: Kuvvet her zaman kazanmaz; en büyük güç akıldır.</p>
+          </div>
+        </details>
+
+        <details class="masal">
+          <summary>
+            <span class="m-emoji" aria-hidden="true">🌟</span>
+            <span class="m-title">Keloğlan'ın Sihirli Tohumu</span>
+            <span class="m-meta">1 dk okuma</span>
+            <span class="m-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="masal-body">
+            <p>Keloğlan bir gün pazarda, elindeki ağır sepeti taşımakta zorlanan yaşlı bir kadına yardım etmiş. Kadın ona teşekkür etmiş ve avucuna küçük, parlak bir tohum koyup, "Bunu ek, sabırla sula ve sakın aceleyle toprağı eşeleme" demiş.</p>
+            <p>Keloğlan tohumu bahçesine ekmiş. Her sabah su vermiş, ama günlerce hiçbir şey çıkmamış. Bir ara merak edip toprağı kazmak istemiş; tam o anda yaşlı kadının sözünü hatırlamış ve sabretmiş.</p>
+            <p>Bir sabah bahçede ışıl ışıl, kocaman bir ağaç bitmiş. Dallarında meyve yerine gülen çocuk sesleri sallanıyormuş. Ağacın serin gölgesinde bütün köy çocukları toplanır, masallar dinlermiş. Keloğlan anlamış ki en güzel meyveler, sabırla beklenenlermiş.</p>
+            <p class="masal-moral">Kıssadan hisse: Sabreden, sonunda muradına erer.</p>
+          </div>
+        </details>
       </div>
     </section>
 
