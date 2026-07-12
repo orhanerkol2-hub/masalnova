@@ -3,6 +3,8 @@ title: "Akıllı Tavşan ile Aslan"
 shortDescription: "Ormana korku salan koca aslana, minik bir tavşan kaba kuvvetle değil zekâsıyla ders verir."
 coverEmoji: "🦁"
 coverColor: "#ff8a00"
+coverImage: "/covers/stories/akilli-tavsan.webp"
+altText: "Kapak görseli: Akıllı Tavşan ile Aslan"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan", "kisa"]

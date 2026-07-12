@@ -3,6 +3,8 @@ title: "Keloğlan ve Sevimli Dev"
 shortDescription: "Herkesin korktuğu koca dev, aslında bir arkadaş arıyordur. Keloğlan korkmadan onunla konuşur."
 coverEmoji: "🫧"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/keloglan-dev.webp"
+altText: "Kapak görseli: Keloğlan ve Sevimli Dev"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan", "kisa", "hayvan"]

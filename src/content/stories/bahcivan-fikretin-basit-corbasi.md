@@ -3,6 +3,8 @@ title: "Bahçıvan Fikret'in Basit Çorbası"
 shortDescription: "Işıl ışıl bir sarayda, gösteriş yerine alçakgönüllülüğü seçen bir bahçıvanın hikayesi."
 coverEmoji: "🌻"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/bahcivan-fikretin-basit-corbasi.webp"
+altText: "Kapak görseli: Bahçıvan Fikret'in Basit Çorbası"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

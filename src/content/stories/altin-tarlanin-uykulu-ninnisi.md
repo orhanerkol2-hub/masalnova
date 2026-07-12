@@ -3,6 +3,8 @@ title: "Altın Tarlanın Uykulu Ninnisi"
 shortDescription: "Ay ışığında altın başaklı bir tarlada, yardımsever bir komşunun paylaşma dolu sıcacık gecesini anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/altin-tarlanin-uykulu-ninnisi.webp"
+altText: "Kapak görseli: Altın Tarlanın Uykulu Ninnisi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

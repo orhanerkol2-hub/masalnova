@@ -3,6 +3,8 @@ title: "Bahçıvan Dede'nin Sakin Gölü"
 shortDescription: "Güler yüzlü bir bahçıvanın, sakin bir gölün ve saygılı hayvanların huzurlu iyi geceler öyküsü."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-dedenin-sakin-golu.webp"
+altText: "Kapak görseli: Bahçıvan Dede'nin Sakin Gölü"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

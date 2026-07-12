@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build
@@ -9,5 +9,6 @@ export default defineConfig({
   outDir: './docs',
   // clean URLs: /masallar/ -> masallar/index.html, /videolar/slug -> videolar/slug/index.html
   build: { format: 'directory' },
+  image: { service: passthroughImageService() },
   integrations: [sitemap()],
 });

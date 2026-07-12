@@ -3,6 +3,8 @@ title: "Alice ve Harikalar Bahçesi"
 shortDescription: "Meraklı Alice, konuşan bir tavşanın peşinden rengârenk bir bahçeye girer ve merakın en güzel yol gösterici olduğunu keşfeder."
 coverEmoji: "🌸"
 coverColor: "#ff7aa2"
+coverImage: "/covers/stories/alice.webp"
+altText: "Kapak görseli: Alice ve Harikalar Bahçesi"
 ageGroups: ["7-9"]
 readingTime: 4
 categories: ["egitici"]

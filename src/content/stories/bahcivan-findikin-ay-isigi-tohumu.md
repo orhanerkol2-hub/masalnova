@@ -3,6 +3,8 @@ title: "Bahçıvan Fındık'ın Ay Işığı Tohumu"
 shortDescription: "Güler yüzlü bir bahçıvanın son tohumunu tutumlu kullanarak ay ışığında bir patikada küçük bir mucize yaratmasının hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/bahcivan-findikin-ay-isigi-tohumu.webp"
+altText: "Kapak görseli: Bahçıvan Fındık'ın Ay Işığı Tohumu"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

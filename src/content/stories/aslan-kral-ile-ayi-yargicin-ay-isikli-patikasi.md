@@ -3,6 +3,8 @@ title: "Aslan Kral ile Ayı Yargıcın Ay Işıklı Patikası"
 shortDescription: "Bir aslan ile bir ayının, ay ışığında bir patikada paylaşamadıkları elma ağacı yüzünden öğrendiği adalet dersi."
 coverEmoji: "🦁"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/aslan-kral-ile-ayi-yargicin-ay-isikli-patikasi.webp"
+altText: "Kapak görseli: Aslan Kral ile Ayı Yargıcın Ay Işıklı Patikası"
 ageGroups: ["3-5"]
 readingTime: 3
 categories: ["hayvan"]

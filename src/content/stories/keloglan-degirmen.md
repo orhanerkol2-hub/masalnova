@@ -3,6 +3,8 @@ title: "Keloğlan ile Konuşan Değirmen"
 shortDescription: "Keloğlan son avuç buğdayını öğütmeye giderken sihirli bir değirmenle tanışır ve paylaşmanın sırrını öğrenir."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-degirmen.webp"
+altText: "Kapak görseli: Keloğlan ile Konuşan Değirmen"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["keloglan", "kisa", "egitici"]

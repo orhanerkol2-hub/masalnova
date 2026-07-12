@@ -3,6 +3,8 @@ title: "Bahçıvan Cemal ve Yankılı Mağara"
 shortDescription: "Güler yüzlü bir bahçıvanın, gizemli bir mağarada azmini sınayan büyülü bir tohumu büyütme çabasını anlatan sevimli bir masal."
 coverEmoji: "🌱"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/bahcivan-cemal-ve-yankili-magara.webp"
+altText: "Kapak görseli: Bahçıvan Cemal ve Yankılı Mağara"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]
