@@ -3,6 +3,8 @@ title: "Bahçıvan Kâmil ile Paylaşılan Sepet"
 shortDescription: "Dağ başındaki kulübesinde yaşayan güler yüzlü bir bahçıvanın, hasadını komşularıyla paylaşarak öğrendiği güzel dersi anlatan bir masal."
 coverEmoji: "🧺"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/bahcivan-kamil-ile-paylasilan-sepet.webp"
+altText: "Kapak görseli: Bahçıvan Kâmil ile Paylaşılan Sepet"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Keloğlan ile Bin Sorulu Çayır"
 shortDescription: "Meraklı Keloğlan, geniş bir çayırda karşılaştığı tuhaf bir tavşan ve unutkan bir devle birlikte, sorularının cevabını ararken herkese yardımcı olur."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ile-bin-sorulu-cayir.webp"
+altText: "Kapak görseli: Keloğlan ile Bin Sorulu Çayır"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

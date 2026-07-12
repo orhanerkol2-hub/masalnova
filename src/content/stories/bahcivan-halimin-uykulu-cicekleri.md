@@ -3,6 +3,8 @@ title: "Bahçıvan Halim'in Uykulu Çiçekleri"
 shortDescription: "Yardımsever komşu Halim Amca, çiçekli bahçesinde her akşam sabırla çalışırken küçük Elif'e de uykuya dalmanın huzurunu öğretir."
 coverEmoji: "🌷"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-halimin-uykulu-cicekleri.webp"
+altText: "Kapak görseli: Bahçıvan Halim'in Uykulu Çiçekleri"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

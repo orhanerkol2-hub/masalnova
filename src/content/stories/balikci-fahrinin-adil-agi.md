@@ -3,6 +3,8 @@ title: "Balıkçı Fahri'nin Adil Ağı"
 shortDescription: "Ay ışığında balık tutan sabırlı bir balıkçının, yakaladığını doğru paylaşarak küçük bir yengeci nasıl mutlu ettiğinin öyküsü."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-fahrinin-adil-agi.webp"
+altText: "Kapak görseli: Balıkçı Fahri'nin Adil Ağı"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

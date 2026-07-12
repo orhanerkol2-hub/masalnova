@@ -3,6 +3,8 @@ title: "Ayı Bruno ile Köpek Minnoş'un Ay Işığı Yolculuğu"
 shortDescription: "Farklı huylara sahip bir ayı ile bir köpeğin, ay ışığında yürüdükleri patikada birbirlerini anlayarak dost olmalarını anlatan sıcacık bir masal."
 coverEmoji: "🐻"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/ayi-bruno-ile-kopek-minnosun-ay-isigi-yolculugu.webp"
+altText: "Kapak görseli: Ayı Bruno ile Köpek Minnoş'un Ay Işığı Yolculuğu"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

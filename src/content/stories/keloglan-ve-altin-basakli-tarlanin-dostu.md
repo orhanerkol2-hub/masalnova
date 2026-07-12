@@ -3,6 +3,8 @@ title: "Keloğlan ve Altın Başaklı Tarlanın Dostu"
 shortDescription: "Keloğlan'ın küçük bir serçeyle kurduğu dostluğun, altın başaklı bir tarlanın sırrını nasıl çözdüğünü anlatan sıcacık bir masal."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-altin-basakli-tarlanin-dostu.webp"
+altText: "Kapak görseli: Keloğlan ve Altın Başaklı Tarlanın Dostu"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

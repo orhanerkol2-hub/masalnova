@@ -3,6 +3,8 @@ title: "Aslan Sultan'ın Şükür Şarkısı"
 shortDescription: "Her şeye kızan bir aslanın, geniş bir çayırda dostlarından şükretmeyi öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🦁"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/aslan-sultanin-sukur-sarkisi.webp"
+altText: "Kapak görseli: Aslan Sultan'ın Şükür Şarkısı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

@@ -2,8 +2,8 @@
 
 - Stories in repository: 491
 - Stories in this prompt pack: 491
-- Already have coverImage in frontmatter: 10
-- Matching image files already in public/covers/stories: 10
+- Already have coverImage in frontmatter: 20
+- Matching image files already in public/covers/stories: 20
 - Target image format: /covers/stories/<slug>.webp
 
 ## By Category

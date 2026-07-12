@@ -3,6 +3,8 @@ title: "Keloğlan'ın Sihirli Tohumu"
 shortDescription: "Yaşlı bir kadına yardım eden Keloğlan, bir tohum ve sabrın en güzel meyveyi verdiğini öğrenir."
 coverEmoji: "🌱"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/keloglan-tohum.webp"
+altText: "Kapak görseli: Keloğlan'ın Sihirli Tohumu"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["keloglan", "kisa", "egitici"]

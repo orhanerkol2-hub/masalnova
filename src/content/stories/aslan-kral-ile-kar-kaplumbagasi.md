@@ -3,6 +3,8 @@ title: "Aslan Kral ile Kar Kaplumbağası"
 shortDescription: "Kendini ormanın en güçlüsü sanan bir aslanın, kar altında kalan minik bir kaplumbağadan alçakgönüllülük dersi aldığı sıcacık bir kış masalı."
 coverEmoji: "🐢"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/aslan-kral-ile-kar-kaplumbagasi.webp"
+altText: "Kapak görseli: Aslan Kral ile Kar Kaplumbağası"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

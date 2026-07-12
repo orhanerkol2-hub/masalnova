@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T16:17:03.573Z",
+  "generatedAt": "2026-07-12T17:07:26.977Z",
   "totalStories": 491,
   "promptCount": 491,
   "targetDirectory": "public/covers/stories",
@@ -126,9 +126,9 @@
         "7-9"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/aslan-kral-ile-kar-kaplumbagasi.webp",
       "targetCoverImage": "/covers/stories/aslan-kral-ile-kar-kaplumbagasi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Aslan Kral ile Kar Kaplumbağası"
     },
     {
@@ -152,9 +152,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/aslan-sultanin-sukur-sarkisi.webp",
       "targetCoverImage": "/covers/stories/aslan-sultanin-sukur-sarkisi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Aslan Sultan'ın Şükür Şarkısı"
     },
     {
@@ -177,9 +177,9 @@
         "7-9"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/ayi-baldiran-ile-tavsan-findikin-bal-kupu.webp",
       "targetCoverImage": "/covers/stories/ayi-baldiran-ile-tavsan-findikin-bal-kupu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Ayı Baldıran ile Tavşan Fındık'ın Bal Küpü"
     },
     {
@@ -202,9 +202,9 @@
         "5-7"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/ayi-bruno-ile-kopek-minnosun-ay-isigi-yolculugu.webp",
       "targetCoverImage": "/covers/stories/ayi-bruno-ile-kopek-minnosun-ay-isigi-yolculugu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Ayı Bruno ile Köpek Minnoş'un Ay Işığı Yolculuğu"
     },
     {
@@ -377,9 +377,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-halimin-uykulu-cicekleri.webp",
       "targetCoverImage": "/covers/stories/bahcivan-halimin-uykulu-cicekleri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Halim'in Uykulu Çiçekleri"
     },
     {
@@ -403,9 +403,9 @@
         "7-9"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-kamil-ile-paylasilan-sepet.webp",
       "targetCoverImage": "/covers/stories/bahcivan-kamil-ile-paylasilan-sepet.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Kâmil ile Paylaşılan Sepet"
     },
     {
@@ -1073,9 +1073,9 @@
         "3-5"
       ],
       "readingTime": 1,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-fahrinin-adil-agi.webp",
       "targetCoverImage": "/covers/stories/balikci-fahrinin-adil-agi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Fahri'nin Adil Ağı"
     },
     {
@@ -6312,9 +6312,9 @@
         "7-9"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/keloglan-ile-bin-sorulu-cayir.webp",
       "targetCoverImage": "/covers/stories/keloglan-ile-bin-sorulu-cayir.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Keloğlan ile Bin Sorulu Çayır"
     },
     {
@@ -6363,9 +6363,9 @@
         "5-7"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/keloglan-tohum.webp",
       "targetCoverImage": "/covers/stories/keloglan-tohum.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Keloğlan'ın Sihirli Tohumu"
     },
     {
@@ -6389,9 +6389,9 @@
         "5-7"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/keloglan-ve-altin-basakli-tarlanin-dostu.webp",
       "targetCoverImage": "/covers/stories/keloglan-ve-altin-basakli-tarlanin-dostu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Keloğlan ve Altın Başaklı Tarlanın Dostu"
     },
     {

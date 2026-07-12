@@ -3,6 +3,8 @@ title: "Ayı Baldıran ile Tavşan Fındık'ın Bal Küpü"
 shortDescription: "Tutumlu bir tavşan ile savurgan bir ayının ay ışığında yürüdükleri patikada biriktirmenin değerini öğrenmesi."
 coverEmoji: "🐻"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/ayi-baldiran-ile-tavsan-findikin-bal-kupu.webp"
+altText: "Kapak görseli: Ayı Baldıran ile Tavşan Fındık'ın Bal Küpü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]
