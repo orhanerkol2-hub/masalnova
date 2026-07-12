@@ -3,6 +3,8 @@ title: "Balıkçı Nasır'ın Terazisi"
 shortDescription: "Kalabalık bir çarşıda sabırlı bir balıkçının, herkese eşit davranarak adaleti nasıl kazandığını anlatan kısa bir masal."
 coverEmoji: "🐟"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-nasirin-terazisi.webp"
+altText: "Kapak görseli: Balıkçı Nasır'ın Terazisi"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

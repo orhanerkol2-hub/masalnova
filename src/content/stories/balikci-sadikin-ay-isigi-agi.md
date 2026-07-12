@@ -3,6 +3,8 @@ title: "Balıkçı Sadık'ın Ay Işığı Ağı"
 shortDescription: "Küçük bir köyde yaşayan sabırlı bir balıkçının, her akşam az ama yeterince balık tutup mutlu olmasını anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/balikci-sadikin-ay-isigi-agi.webp"
+altText: "Kapak görseli: Balıkçı Sadık'ın Ay Işığı Ağı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

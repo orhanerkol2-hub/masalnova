@@ -3,6 +3,8 @@ title: "Bahçıvan Rasim ve Kırılan Testi"
 shortDescription: "Güler yüzlü bir bahçıvanın, kendi testisini kıran küçük kızı affetmesiyle geniş bir çayırda dostluğun yeniden çiçek açtığı öğretici bir masal."
 coverEmoji: "🌼"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/bahcivan-rasim-ve-kirilan-testi.webp"
+altText: "Kapak görseli: Bahçıvan Rasim ve Kırılan Testi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

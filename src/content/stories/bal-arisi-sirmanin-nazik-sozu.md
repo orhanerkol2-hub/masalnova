@@ -3,6 +3,8 @@ title: "Bal Arısı Sırma'nın Nazik Sözü"
 shortDescription: "Serin bir pınarın başında yorgun hayvanlara nazik davranan küçük bir arının, tüm ormana örnek olmasını anlatan sevimli bir masal."
 coverEmoji: "🐝"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/bal-arisi-sirmanin-nazik-sozu.webp"
+altText: "Kapak görseli: Bal Arısı Sırma'nın Nazik Sözü"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

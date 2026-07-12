@@ -3,6 +3,8 @@ title: "Bahçıvan Rifat'ın Yağmur Duası"
 shortDescription: "Yağmurlu bir akşamda güler yüzlü bir bahçıvanın, bahçesindeki tüm çiçeklere adaletle davranarak onları huzurla uyutmasının sıcak öyküsü."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-rifatin-yagmur-duasi.webp"
+altText: "Kapak görseli: Bahçıvan Rifat'ın Yağmur Duası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

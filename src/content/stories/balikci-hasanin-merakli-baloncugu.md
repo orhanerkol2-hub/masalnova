@@ -3,6 +3,8 @@ title: "Balıkçı Hasan'ın Meraklı Baloncuğu"
 shortDescription: "Sabırlı bir balıkçının, denizden çıkan garip bir baloncuğun sırrını merakla çözmesini anlatan kısa bir masal."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-hasanin-merakli-baloncugu.webp"
+altText: "Kapak görseli: Balıkçı Hasan'ın Meraklı Baloncuğu"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

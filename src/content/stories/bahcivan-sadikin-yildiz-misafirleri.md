@@ -3,6 +3,8 @@ title: "Bahçıvan Sadık'ın Yıldız Misafirleri"
 shortDescription: "Güler yüzlü bir bahçıvanın, yıldızlı gökyüzü altında farklı hayvan misafirlerini bahçesinde hoşgörüyle ağırlamasını anlatan sakin bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-sadikin-yildiz-misafirleri.webp"
+altText: "Kapak görseli: Bahçıvan Sadık'ın Yıldız Misafirleri"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

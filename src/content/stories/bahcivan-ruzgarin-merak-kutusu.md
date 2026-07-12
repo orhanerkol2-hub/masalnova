@@ -3,6 +3,8 @@ title: "Bahçıvan Rüzgâr'ın Merak Kutusu"
 shortDescription: "Dağ başındaki küçük kulübesinde yaşayan güler yüzlü bir bahçıvanın, merakla açtığı gizemli kutudan çıkan yıldız tozlarıyla tüm bahçeyi uykuya hazırladığı huzurlu bir masal."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-ruzgarin-merak-kutusu.webp"
+altText: "Kapak görseli: Bahçıvan Rüzgâr'ın Merak Kutusu"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

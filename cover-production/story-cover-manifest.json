@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T17:07:26.977Z",
+  "generatedAt": "2026-07-12T22:05:56.703Z",
   "totalStories": 491,
   "promptCount": 491,
   "targetDirectory": "public/covers/stories",
@@ -226,9 +226,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/ayi-homur-ile-kedi-pamukun-bal-kavanozu.webp",
       "targetCoverImage": "/covers/stories/ayi-homur-ile-kedi-pamukun-bal-kavanozu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Ayı Homur ile Kedi Pamuk'un Bal Kavanozu"
     },
     {
@@ -252,9 +252,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/ayi-homurun-altin-tarlasi.webp",
       "targetCoverImage": "/covers/stories/ayi-homurun-altin-tarlasi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Ayı Homur'un Altın Tarlası"
     },
     {
@@ -429,9 +429,9 @@
         "5-7"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rasim-ve-kirilan-testi.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rasim-ve-kirilan-testi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rasim ve Kırılan Testi"
     },
     {
@@ -455,9 +455,9 @@
         "5-7"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rifat-ve-yagmurun-ninnisi.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rifat-ve-yagmurun-ninnisi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rıfat ve Yağmurun Ninnisi"
     },
     {
@@ -481,9 +481,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rifatin-ay-isigi-sozu.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rifatin-ay-isigi-sozu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rıfat'ın Ay Işığı Sözü"
     },
     {
@@ -507,9 +507,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rifatin-ay-isigindaki-patikasi.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rifatin-ay-isigindaki-patikasi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rıfat'ın Ay Işığındaki Patikası"
     },
     {
@@ -533,9 +533,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rifatin-kar-ortulu-tohumlari.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rifatin-kar-ortulu-tohumlari.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rifat'ın Kar Örtülü Tohumları"
     },
     {
@@ -557,9 +557,9 @@
         "3-5"
       ],
       "readingTime": 1,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rifatin-minnet-sepeti.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rifatin-minnet-sepeti.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rıfat'ın Minnet Sepeti"
     },
     {
@@ -583,9 +583,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rifatin-uyuyan-cicekleri.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rifatin-uyuyan-cicekleri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rıfat'ın Uyuyan Çiçekleri"
     },
     {
@@ -609,9 +609,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rifatin-yagmur-duasi.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rifatin-yagmur-duasi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rifat'ın Yağmur Duası"
     },
     {
@@ -634,9 +634,9 @@
         "7-9"
       ],
       "readingTime": 1,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-rustunun-sozu.webp",
       "targetCoverImage": "/covers/stories/bahcivan-rustunun-sozu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rüştü'nün Sözü"
     },
     {
@@ -659,9 +659,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-ruzgarin-merak-kutusu.webp",
       "targetCoverImage": "/covers/stories/bahcivan-ruzgarin-merak-kutusu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Rüzgâr'ın Merak Kutusu"
     },
     {
@@ -685,9 +685,9 @@
         "7-9"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-sadik-ve-unutkan-degirmen-tasi.webp",
       "targetCoverImage": "/covers/stories/bahcivan-sadik-ve-unutkan-degirmen-tasi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Sadık ve Unutkan Değirmen Taşı"
     },
     {
@@ -711,9 +711,9 @@
         "5-7"
       ],
       "readingTime": 1,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-sadikin-paylasilan-elmasi.webp",
       "targetCoverImage": "/covers/stories/bahcivan-sadikin-paylasilan-elmasi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Sadık'ın Paylaşılan Elması"
     },
     {
@@ -737,9 +737,9 @@
         "5-7"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-sadikin-uykulu-magarasi.webp",
       "targetCoverImage": "/covers/stories/bahcivan-sadikin-uykulu-magarasi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Sadık'ın Uykulu Mağarası"
     },
     {
@@ -763,9 +763,9 @@
         "5-7"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-sadikin-uyuyan-cayiri.webp",
       "targetCoverImage": "/covers/stories/bahcivan-sadikin-uyuyan-cayiri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Sadık'ın Uyuyan Çayırı"
     },
     {
@@ -789,9 +789,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-sadikin-yildiz-misafirleri.webp",
       "targetCoverImage": "/covers/stories/bahcivan-sadikin-yildiz-misafirleri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Sadık'ın Yıldız Misafirleri"
     },
     {
@@ -815,9 +815,9 @@
         "5-7"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-salih-ve-odul-toreni.webp",
       "targetCoverImage": "/covers/stories/bahcivan-salih-ve-odul-toreni.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Salih ve Ödül Töreni"
     },
     {
@@ -841,9 +841,9 @@
         "5-7"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bahcivan-tomrisin-verdigi-soz.webp",
       "targetCoverImage": "/covers/stories/bahcivan-tomrisin-verdigi-soz.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bahçıvan Tomris'in Verdiği Söz"
     },
     {
@@ -867,9 +867,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bal-arisi-balanin-ay-isikli-patikasi.webp",
       "targetCoverImage": "/covers/stories/bal-arisi-balanin-ay-isikli-patikasi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bal Arısı Bala'nın Ay Işıklı Patikası"
     },
     {
@@ -893,9 +893,9 @@
         "3-5"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bal-arisi-bibi-ile-kedi-pamukun-adil-payi.webp",
       "targetCoverImage": "/covers/stories/bal-arisi-bibi-ile-kedi-pamukun-adil-payi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bal Arısı Bibi ile Kedi Pamuk'un Adil Payı"
     },
     {
@@ -919,9 +919,9 @@
         "5-7"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bal-arisi-sarinin-uzun-bekleyisi.webp",
       "targetCoverImage": "/covers/stories/bal-arisi-sarinin-uzun-bekleyisi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bal Arısı Sarı'nın Uzun Bekleyişi"
     },
     {
@@ -945,9 +945,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bal-arisi-sirmanin-durust-sirri.webp",
       "targetCoverImage": "/covers/stories/bal-arisi-sirmanin-durust-sirri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bal Arısı Sırma'nın Dürüst Sırrı"
     },
     {
@@ -971,9 +971,9 @@
         "5-7"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bal-arisi-sirmanin-nazik-sozu.webp",
       "targetCoverImage": "/covers/stories/bal-arisi-sirmanin-nazik-sozu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bal Arısı Sırma'nın Nazik Sözü"
     },
     {
@@ -996,9 +996,9 @@
         "7-9"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/bal-ayisi-homur-ile-findik-sincabi-zipzip.webp",
       "targetCoverImage": "/covers/stories/bal-ayisi-homur-ile-findik-sincabi-zipzip.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Bal Ayısı Homur ile Fındık Sincabı Zipzip"
     },
     {
@@ -1022,9 +1022,9 @@
         "7-9"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balci-ayi-toprakin-yildiz-sozu.webp",
       "targetCoverImage": "/covers/stories/balci-ayi-toprakin-yildiz-sozu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balcı Ayı Toprak'ın Yıldız Sözü"
     },
     {
@@ -1048,9 +1048,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balci-sirmanin-yildiz-nobeti.webp",
       "targetCoverImage": "/covers/stories/balci-sirmanin-yildiz-nobeti.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balcı Sırma'nın Yıldız Nöbeti"
     },
     {
@@ -1097,9 +1097,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-fikret-ile-minik-su-perisi.webp",
       "targetCoverImage": "/covers/stories/balikci-fikret-ile-minik-su-perisi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Fikret ile Minik Su Perisi"
     },
     {
@@ -1123,9 +1123,9 @@
         "5-7"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-fikretin-karli-sabri.webp",
       "targetCoverImage": "/covers/stories/balikci-fikretin-karli-sabri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Fikret'in Karlı Sabrı"
     },
     {
@@ -1147,9 +1147,9 @@
         "7-9"
       ],
       "readingTime": 1,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-hasanin-firin-kokulu-sirri.webp",
       "targetCoverImage": "/covers/stories/balikci-hasanin-firin-kokulu-sirri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Hasan'ın Fırın Kokulu Sırrı"
     },
     {
@@ -1171,9 +1171,9 @@
         "3-5"
       ],
       "readingTime": 1,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-hasanin-merakli-baloncugu.webp",
       "targetCoverImage": "/covers/stories/balikci-hasanin-merakli-baloncugu.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Hasan'ın Meraklı Baloncuğu"
     },
     {
@@ -1197,9 +1197,9 @@
         "5-7"
       ],
       "readingTime": 1,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-nasirin-terazisi.webp",
       "targetCoverImage": "/covers/stories/balikci-nasirin-terazisi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Nasır'ın Terazisi"
     },
     {
@@ -1223,9 +1223,9 @@
         "7-9"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rahmi-ve-pinarin-armagani.webp",
       "targetCoverImage": "/covers/stories/balikci-rahmi-ve-pinarin-armagani.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rahmi ve Pınarın Armağanı"
     },
     {
@@ -1249,9 +1249,9 @@
         "5-7"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rasimin-buzlu-sepeti.webp",
       "targetCoverImage": "/covers/stories/balikci-rasimin-buzlu-sepeti.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rasim'in Buzlu Sepeti"
     },
     {
@@ -1274,9 +1274,9 @@
         "3-5"
       ],
       "readingTime": 1,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rasimin-dagdaki-misafiri.webp",
       "targetCoverImage": "/covers/stories/balikci-rasimin-dagdaki-misafiri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rasim'in Dağdaki Misafiri"
     },
     {
@@ -1300,9 +1300,9 @@
         "7-9"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rasimin-degirmen-dostlari.webp",
       "targetCoverImage": "/covers/stories/balikci-rasimin-degirmen-dostlari.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rasim'in Değirmen Dostları"
     },
     {
@@ -1325,9 +1325,9 @@
         "7-9"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rasimin-kirik-agi.webp",
       "targetCoverImage": "/covers/stories/balikci-rasimin-kirik-agi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rasim'in Kırık Ağı"
     },
     {
@@ -1348,9 +1348,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rustemin-buyuk-baligi.webp",
       "targetCoverImage": "/covers/stories/balikci-rustemin-buyuk-baligi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rüstem'in Büyük Balığı"
     },
     {
@@ -1374,9 +1374,9 @@
         "5-7"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rustemin-renkli-misafirleri.webp",
       "targetCoverImage": "/covers/stories/balikci-rustemin-renkli-misafirleri.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rüstem'in Renkli Misafirleri"
     },
     {
@@ -1400,9 +1400,9 @@
         "7-9"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rustemin-sabirli-agi.webp",
       "targetCoverImage": "/covers/stories/balikci-rustemin-sabirli-agi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rüstem'in Sabırlı Ağı"
     },
     {
@@ -1426,9 +1426,9 @@
         "7-9"
       ],
       "readingTime": 3,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-rustunun-bereketli-beklemesi.webp",
       "targetCoverImage": "/covers/stories/balikci-rustunun-bereketli-beklemesi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rüştü'nün Bereketli Beklemesi"
     },
     {
@@ -1451,9 +1451,9 @@
         "5-7"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-ruzgarin-sabirli-gecesi.webp",
       "targetCoverImage": "/covers/stories/balikci-ruzgarin-sabirli-gecesi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Rüzgar'ın Sabırlı Gecesi"
     },
     {
@@ -1476,9 +1476,9 @@
         "5-7"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-sadik-ve-ay-isigi-agi.webp",
       "targetCoverImage": "/covers/stories/balikci-sadik-ve-ay-isigi-agi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Sadık ve Ay Işığı Ağı"
     },
     {
@@ -1502,9 +1502,9 @@
         "3-5"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-sadikin-ay-isigi-agi.webp",
       "targetCoverImage": "/covers/stories/balikci-sadikin-ay-isigi-agi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Sadık'ın Ay Işığı Ağı"
     },
     {
@@ -1528,9 +1528,9 @@
         "7-9"
       ],
       "readingTime": 2,
-      "currentCoverImage": "",
+      "currentCoverImage": "/covers/stories/balikci-sadikin-ay-isikli-agi.webp",
       "targetCoverImage": "/covers/stories/balikci-sadikin-ay-isikli-agi.webp",
-      "assetExists": false,
+      "assetExists": true,
       "altText": "Kapak görseli: Balıkçı Sadık'ın Ay Işıklı Ağı"
     },
     {

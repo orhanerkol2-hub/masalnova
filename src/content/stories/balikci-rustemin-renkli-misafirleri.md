@@ -3,6 +3,8 @@ title: "Balıkçı Rüstem'in Renkli Misafirleri"
 shortDescription: "Sabırlı bir balıkçının, birbirinden çok farklı hayvanları sakin göl kıyısında bir araya getirip hoşgörüyü öğrettiği sıcak bir masal."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-rustemin-renkli-misafirleri.webp"
+altText: "Kapak görseli: Balıkçı Rüstem'in Renkli Misafirleri"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

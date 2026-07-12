@@ -3,6 +3,8 @@ title: "Balıkçı Rasim'in Buzlu Sepeti"
 shortDescription: "Karlı bir kış gününde sabırla balık tutan yaşlı bir balıkçının, elindeki azıcık nimeti tutumlu kullanarak köy halkına örnek olmasını anlatan öğretici bir masal."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-rasimin-buzlu-sepeti.webp"
+altText: "Kapak görseli: Balıkçı Rasim'in Buzlu Sepeti"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

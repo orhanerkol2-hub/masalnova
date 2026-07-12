@@ -3,6 +3,8 @@ title: "Bahçıvan Rıfat'ın Minnet Sepeti"
 shortDescription: "Kalabalık bir çarşıda güler yüzlü bir bahçıvanın küçük bir jestle şükrü öğrettiği tatlı bir öykü."
 coverEmoji: "🧺"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/bahcivan-rifatin-minnet-sepeti.webp"
+altText: "Kapak görseli: Bahçıvan Rıfat'ın Minnet Sepeti"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

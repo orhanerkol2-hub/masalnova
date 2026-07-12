@@ -3,6 +3,8 @@ title: "Bahçıvan Rifat'ın Kar Örtülü Tohumları"
 shortDescription: "Karlı bir kış gününde güler yüzlü bahçıvan Rifat, biriktirdiği tohumları özenle sarıp sarmalayarak baharı beklerken minik bir dinginlik masalı sunuyor."
 coverEmoji: "❄️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-rifatin-kar-ortulu-tohumlari.webp"
+altText: "Kapak görseli: Bahçıvan Rifat'ın Kar Örtülü Tohumları"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

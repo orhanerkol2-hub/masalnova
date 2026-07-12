@@ -3,6 +3,8 @@ title: "Balıkçı Rüstem'in Sabırlı Ağı"
 shortDescription: "Sabırlı balıkçı Rüstem'in orman ruhlarına gösterdiği saygının, ona umulmadık bir dostluk kazandırdığı öğretici bir masal."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-rustemin-sabirli-agi.webp"
+altText: "Kapak görseli: Balıkçı Rüstem'in Sabırlı Ağı"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

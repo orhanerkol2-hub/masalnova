@@ -3,6 +3,8 @@ title: "Bal Arısı Sırma'nın Dürüst Sırrı"
 shortDescription: "Deniz kıyısındaki çiçeklerde bal toplayan küçük bir arının, hata yaptığında dürüstlükle her şeyi düzeltmesini anlatan sevimli bir masal."
 coverEmoji: "🐝"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/bal-arisi-sirmanin-durust-sirri.webp"
+altText: "Kapak görseli: Bal Arısı Sırma'nın Dürüst Sırrı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

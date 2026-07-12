@@ -3,6 +3,8 @@ title: "Balıkçı Sadık'ın Ay Işıklı Ağı"
 shortDescription: "Küçük bir köyde yaşayan sabırlı bir balıkçının, ay ışığında yürüdüğü patikada azimle öğrendiği değerli dersi anlatan eğitici bir masal."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-sadikin-ay-isikli-agi.webp"
+altText: "Kapak görseli: Balıkçı Sadık'ın Ay Işıklı Ağı"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

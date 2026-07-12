@@ -3,6 +3,8 @@ title: "Bahçıvan Rıfat'ın Ay Işığı Sözü"
 shortDescription: "Güler yüzlü bir bahçıvanın yemyeşil ormanda verdiği küçük bir sözü tutmasının, huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-rifatin-ay-isigi-sozu.webp"
+altText: "Kapak görseli: Bahçıvan Rıfat'ın Ay Işığı Sözü"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

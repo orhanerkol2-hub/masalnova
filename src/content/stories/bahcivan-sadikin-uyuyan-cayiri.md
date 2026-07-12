@@ -3,6 +3,8 @@ title: "Bahçıvan Sadık'ın Uyuyan Çayırı"
 shortDescription: "Güler yüzlü bir bahçıvanın, geniş çayırdaki tüm canlıları merhametle uykuya hazırladığı huzurlu bir gute-nacht masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-sadikin-uyuyan-cayiri.webp"
+altText: "Kapak görseli: Bahçıvan Sadık'ın Uyuyan Çayırı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

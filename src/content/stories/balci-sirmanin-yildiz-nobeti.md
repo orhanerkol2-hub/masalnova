@@ -3,6 +3,8 @@ title: "Balcı Sırma'nın Yıldız Nöbeti"
 shortDescription: "Kovanındaki bal işini bitirmeden gökyüzüne bakmaya giden küçük bir arının, sorumluluğunu üstlenmeyi öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🐝"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/balci-sirmanin-yildiz-nobeti.webp"
+altText: "Kapak görseli: Balcı Sırma'nın Yıldız Nöbeti"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

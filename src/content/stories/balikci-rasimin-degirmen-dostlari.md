@@ -3,6 +3,8 @@ title: "Balıkçı Rasim'in Değirmen Dostları"
 shortDescription: "Sabırlı bir balıkçının, eski bir değirmende yaşayan aç kuşlara gösterdiği merhametin ona geri dönüşünü anlatan öğretici bir masal."
 coverEmoji: "🐟"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-rasimin-degirmen-dostlari.webp"
+altText: "Kapak görseli: Balıkçı Rasim'in Değirmen Dostları"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

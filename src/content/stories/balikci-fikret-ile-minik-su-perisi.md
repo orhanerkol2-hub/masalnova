@@ -3,6 +3,8 @@ title: "Balıkçı Fikret ile Minik Su Perisi"
 shortDescription: "Sabırlı bir balıkçının küçük bir yaratığa gösterdiği nezaketin ona güzel bir armağanla dönmesini anlatan tatlı bir masal."
 coverEmoji: "🐟"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-fikret-ile-minik-su-perisi.webp"
+altText: "Kapak görseli: Balıkçı Fikret ile Minik Su Perisi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

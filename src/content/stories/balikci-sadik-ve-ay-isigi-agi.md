@@ -3,6 +3,8 @@ title: "Balıkçı Sadık ve Ay Işığı Ağı"
 shortDescription: "Sabırlı bir balıkçının küçük köyde ay ışığında ağını yavaşça örmesini anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/balikci-sadik-ve-ay-isigi-agi.webp"
+altText: "Kapak görseli: Balıkçı Sadık ve Ay Işığı Ağı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

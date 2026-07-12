@@ -3,6 +3,8 @@ title: "Bahçıvan Sadık'ın Paylaşılan Elması"
 shortDescription: "Ay ışığında bir patikada karşılaşan tavşan ve kirpiye tek bir elmayı adil biçimde paylaştırmayı öğreten güler yüzlü bir bahçıvanın hikayesi."
 coverEmoji: "🍎"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/bahcivan-sadikin-paylasilan-elmasi.webp"
+altText: "Kapak görseli: Bahçıvan Sadık'ın Paylaşılan Elması"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

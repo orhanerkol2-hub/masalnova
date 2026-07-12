@@ -3,6 +3,8 @@ title: "Bal Arısı Sarı'nın Uzun Bekleyişi"
 shortDescription: "Aceleci bir arının, sabırla çalışmayı öğrenerek köyün en tatlı balını yapma öyküsü."
 coverEmoji: "🐝"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/bal-arisi-sarinin-uzun-bekleyisi.webp"
+altText: "Kapak görseli: Bal Arısı Sarı'nın Uzun Bekleyişi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

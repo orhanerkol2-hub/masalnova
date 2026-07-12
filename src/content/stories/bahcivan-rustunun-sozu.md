@@ -3,6 +3,8 @@ title: "Bahçıvan Rüştü'nün Sözü"
 shortDescription: "Güler yüzlü bir bahçıvanın, altın başaklı tarlada verdiği sözü tutması ve bunun herkese ilham vermesi."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/bahcivan-rustunun-sozu.webp"
+altText: "Kapak görseli: Bahçıvan Rüştü'nün Sözü"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

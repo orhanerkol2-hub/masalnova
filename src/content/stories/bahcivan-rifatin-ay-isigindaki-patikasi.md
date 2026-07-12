@@ -3,6 +3,8 @@ title: "Bahçıvan Rıfat'ın Ay Işığındaki Patikası"
 shortDescription: "Güler yüzlü bahçıvan Rıfat, ay ışığında yürüdüğü sakin patikada sabırla tohumların uyumasını bekler ve minik dostlarına huzurlu bir gece diler."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-rifatin-ay-isigindaki-patikasi.webp"
+altText: "Kapak görseli: Bahçıvan Rıfat'ın Ay Işığındaki Patikası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

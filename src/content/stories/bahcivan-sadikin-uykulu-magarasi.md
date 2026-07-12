@@ -3,6 +3,8 @@ title: "Bahçıvan Sadık'ın Uykulu Mağarası"
 shortDescription: "Güler yüzlü bir bahçıvanın, gizemli bir mağaradaki uykucu çiçeklere her gece nazikçe göz kulak olma öyküsü."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-sadikin-uykulu-magarasi.webp"
+altText: "Kapak görseli: Bahçıvan Sadık'ın Uykulu Mağarası"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

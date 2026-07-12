@@ -3,6 +3,8 @@ title: "Balcı Ayı Toprak'ın Yıldız Sözü"
 shortDescription: "Bal küpünü kimin devirdiğini gizlemek istemeyen dürüst bir ayının, gece ormanındaki arkadaşlarına verdiği ders üzerine sıcak bir masal."
 coverEmoji: "🐻"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/balci-ayi-toprakin-yildiz-sozu.webp"
+altText: "Kapak görseli: Balcı Ayı Toprak'ın Yıldız Sözü"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

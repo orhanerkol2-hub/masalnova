@@ -3,6 +3,8 @@ title: "Balıkçı Hasan'ın Fırın Kokulu Sırrı"
 shortDescription: "Sabırlı balıkçı Hasan'ın, mis kokulu bir fırının sırrını merakla çözmesini anlatan tatlı bir masal."
 coverEmoji: "🐟"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-hasanin-firin-kokulu-sirri.webp"
+altText: "Kapak görseli: Balıkçı Hasan'ın Fırın Kokulu Sırrı"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

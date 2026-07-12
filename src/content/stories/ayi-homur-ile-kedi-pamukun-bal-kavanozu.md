@@ -3,6 +3,8 @@ title: "Ayı Homur ile Kedi Pamuk'un Bal Kavanozu"
 shortDescription: "Dağ başındaki kulübede yaşayan bir ayı ile bir kedinin, tek kavanoz balı paylaşarak dostluğu büyütmesinin sıcak öyküsü."
 coverEmoji: "🍯"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/ayi-homur-ile-kedi-pamukun-bal-kavanozu.webp"
+altText: "Kapak görseli: Ayı Homur ile Kedi Pamuk'un Bal Kavanozu"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

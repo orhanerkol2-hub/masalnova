@@ -3,6 +3,8 @@ title: "Bal Ayısı Homur ile Fındık Sincabı Zipzip"
 shortDescription: "Bir ayı ile bir sincabın gizemli bir mağarada paylaşmayı ve sahip olduklarına şükretmeyi öğrendiği sıcacık bir dostluk hikâyesi."
 coverEmoji: "🐻"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/bal-ayisi-homur-ile-findik-sincabi-zipzip.webp"
+altText: "Kapak görseli: Bal Ayısı Homur ile Fındık Sincabı Zipzip"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

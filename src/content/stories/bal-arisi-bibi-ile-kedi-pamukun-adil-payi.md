@@ -3,6 +3,8 @@ title: "Bal Arısı Bibi ile Kedi Pamuk'un Adil Payı"
 shortDescription: "Deniz kıyısında bulunan bir bal küpünü paylaşmaya çalışan arı ile kedinin adaleti öğrendiği sıcak bir dostluk öyküsü."
 coverEmoji: "🐝"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/bal-arisi-bibi-ile-kedi-pamukun-adil-payi.webp"
+altText: "Kapak görseli: Bal Arısı Bibi ile Kedi Pamuk'un Adil Payı"
 ageGroups: ["3-5"]
 readingTime: 3
 categories: ["hayvan"]

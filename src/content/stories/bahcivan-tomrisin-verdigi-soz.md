@@ -3,6 +3,8 @@ title: "Bahçıvan Tomris'in Verdiği Söz"
 shortDescription: "Güler yüzlü bir bahçıvanın, serin bir pınarın başında verdiği sözü tutmasını anlatan sevimli bir masal."
 coverEmoji: "🌱"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/bahcivan-tomrisin-verdigi-soz.webp"
+altText: "Kapak görseli: Bahçıvan Tomris'in Verdiği Söz"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

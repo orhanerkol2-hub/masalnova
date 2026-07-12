@@ -3,6 +3,8 @@ title: "Balıkçı Rahmi ve Pınarın Armağanı"
 shortDescription: "Sabırlı bir balıkçının, susuz kalan bir tavşan ailesine yardım ederken yardımlaşmanın gücünü keşfettiği sıcacık bir masal."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-rahmi-ve-pinarin-armagani.webp"
+altText: "Kapak görseli: Balıkçı Rahmi ve Pınarın Armağanı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

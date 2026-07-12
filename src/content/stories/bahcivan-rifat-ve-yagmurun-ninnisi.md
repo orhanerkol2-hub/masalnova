@@ -3,6 +3,8 @@ title: "Bahçıvan Rıfat ve Yağmurun Ninnisi"
 shortDescription: "Yağmurlu bir akşam, güler yüzlü bahçıvan Rıfat'ın küçük hayvanlara kucak açmasını anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-rifat-ve-yagmurun-ninnisi.webp"
+altText: "Kapak görseli: Bahçıvan Rıfat ve Yağmurun Ninnisi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

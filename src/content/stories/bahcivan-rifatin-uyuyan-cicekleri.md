@@ -3,6 +3,8 @@ title: "Bahçıvan Rıfat'ın Uyuyan Çiçekleri"
 shortDescription: "Güler yüzlü bahçıvan Rıfat, çiçekli bahçesindeki her çiçeği sabırla ve azimle uyutarak huzurlu bir geceye hazırlar."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/bahcivan-rifatin-uyuyan-cicekleri.webp"
+altText: "Kapak görseli: Bahçıvan Rıfat'ın Uyuyan Çiçekleri"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

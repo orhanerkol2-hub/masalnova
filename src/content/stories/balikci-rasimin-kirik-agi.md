@@ -3,6 +3,8 @@ title: "Balıkçı Rasim'in Kırık Ağı"
 shortDescription: "Sabırlı bir balıkçı, ağını yırtan küçük su perisini affederek beklenmedik bir dostluk kazanır."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-rasimin-kirik-agi.webp"
+altText: "Kapak görseli: Balıkçı Rasim'in Kırık Ağı"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["kisa"]

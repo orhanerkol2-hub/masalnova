@@ -3,6 +3,8 @@ title: "Balıkçı Fikret'in Karlı Sabrı"
 shortDescription: "Karlı bir kış gününde çalışkanlığı ve sabrıyla küçük bir köyün karnını doyuran yaşlı balıkçının öyküsü."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-fikretin-karli-sabri.webp"
+altText: "Kapak görseli: Balıkçı Fikret'in Karlı Sabrı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

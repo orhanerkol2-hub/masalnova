@@ -3,6 +3,8 @@ title: "Balıkçı Rüştü'nün Bereketli Beklemesi"
 shortDescription: "Sabırla balık tutmayı öğrenen bir balıkçının, altın başaklı bir tarlanın kenarında hayata dair değerli bir ders alışını anlatan sıcak bir masal."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-rustunun-bereketli-beklemesi.webp"
+altText: "Kapak görseli: Balıkçı Rüştü'nün Bereketli Beklemesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

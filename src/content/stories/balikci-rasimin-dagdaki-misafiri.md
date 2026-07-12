@@ -3,6 +3,8 @@ title: "Balıkçı Rasim'in Dağdaki Misafiri"
 shortDescription: "Sabırlı bir balıkçının, kendisine kızgın bir komşuyu dağ başındaki kulübesinde affetmesini anlatan sıcacık bir masal."
 coverEmoji: "🐟"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-rasimin-dagdaki-misafiri.webp"
+altText: "Kapak görseli: Balıkçı Rasim'in Dağdaki Misafiri"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

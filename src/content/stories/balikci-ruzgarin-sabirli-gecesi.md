@@ -3,6 +3,8 @@ title: "Balıkçı Rüzgar'ın Sabırlı Gecesi"
 shortDescription: "Serin bir pınar başında sabırla oturan bir balıkçının, ay ışığında yaşadığı huzurlu ve nazik bir gece."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/balikci-ruzgarin-sabirli-gecesi.webp"
+altText: "Kapak görseli: Balıkçı Rüzgar'ın Sabırlı Gecesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

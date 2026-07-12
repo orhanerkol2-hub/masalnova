@@ -3,6 +3,8 @@ title: "Bahçıvan Sadık ve Unutkan Değirmen Taşı"
 shortDescription: "Güler yüzlü bir bahçıvanın, eski bir değirmeni onararak sorumluluk almanın değerini öğrendiği sıcacık bir hikaye."
 coverEmoji: "🌻"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/bahcivan-sadik-ve-unutkan-degirmen-tasi.webp"
+altText: "Kapak görseli: Bahçıvan Sadık ve Unutkan Değirmen Taşı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Bahçıvan Salih ve Ödül Töreni"
 shortDescription: "Güler yüzlü bir bahçıvanın, en güzel bahçe ödülünü kazanınca alçakgönüllülüğü sayesinde tüm köyü birleştiren sıcacık hikâyesi."
 coverEmoji: "🌻"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/bahcivan-salih-ve-odul-toreni.webp"
+altText: "Kapak görseli: Bahçıvan Salih ve Ödül Töreni"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

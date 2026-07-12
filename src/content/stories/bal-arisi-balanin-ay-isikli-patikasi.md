@@ -3,6 +3,8 @@ title: "Bal Arısı Bala'nın Ay Işıklı Patikası"
 shortDescription: "Kendini herkesten üstün gören küçük bir arının, mütevazı bir ateş böceğinden alçakgönüllülüğü öğrenmesini anlatan tatlı bir masal."
 coverEmoji: "🐝"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/bal-arisi-balanin-ay-isikli-patikasi.webp"
+altText: "Kapak görseli: Bal Arısı Bala'nın Ay Işıklı Patikası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

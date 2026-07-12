@@ -3,6 +3,8 @@ title: "Ayı Homur'un Altın Tarlası"
 shortDescription: "Tembel bir ayının, arkadaşlarının yardımıyla çalışkanlığın tatlı meyvesini keşfetmesini anlatan sıcak bir masal."
 coverEmoji: "🐻"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/ayi-homurun-altin-tarlasi.webp"
+altText: "Kapak görseli: Ayı Homur'un Altın Tarlası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

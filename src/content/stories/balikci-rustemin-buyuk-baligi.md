@@ -3,6 +3,8 @@ title: "Balıkçı Rüstem'in Büyük Balığı"
 shortDescription: "Sabırlı bir balıkçının yemyeşil orman ırmağında cesaretle karşılaştığı büyük balığı anlatan kısa bir masal."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-rustemin-buyuk-baligi.webp"
+altText: "Kapak görseli: Balıkçı Rüstem'in Büyük Balığı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]
