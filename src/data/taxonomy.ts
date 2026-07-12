@@ -1,6 +1,7 @@
 // Shared labels for stories & videos (kept simple & flat on purpose).
 
 export const storyCategories = [
+  { key: 'keloglan', label: 'Keloğlan Masalları', emoji: '🧒', desc: "Keloğlan'ın sevimli maceraları" },
   { key: 'uyku', label: 'Uyku Masalları', emoji: '🌙', desc: 'Uyku öncesi sakin masallar' },
   { key: 'kisa', label: 'Kısa Masallar', emoji: '⏱️', desc: 'Birkaç dakikada biten masallar' },
   { key: 'egitici', label: 'Eğitici Masallar', emoji: '🎓', desc: 'Güzel bir ders veren masallar' },

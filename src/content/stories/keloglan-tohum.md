@@ -5,7 +5,7 @@ coverEmoji: "🌱"
 coverColor: "#3bb98b"
 ageGroups: ["5-7"]
 readingTime: 2
-categories: ["kisa", "egitici"]
+categories: ["keloglan", "kisa", "egitici"]
 themes: ["sabır", "iyilik"]
 characters: ["Keloğlan"]
 relatedVideoIds: ["Yrt45W_743A"]

@@ -5,7 +5,7 @@ coverEmoji: "🫧"
 coverColor: "#21b6c9"
 ageGroups: ["5-7"]
 readingTime: 3
-categories: ["kisa", "hayvan"]
+categories: ["keloglan", "kisa", "hayvan"]
 themes: ["cesaret", "dostluk", "önyargı"]
 characters: ["Keloğlan", "Dev"]
 relatedVideoIds: ["_BCOsqAVfIU"]

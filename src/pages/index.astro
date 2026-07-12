@@ -17,10 +17,12 @@ const featuredVids = featuredVideos(6);
 const newVids = newestVideos(4);
 
 const homeCats = [
+  { emoji: '🧒', label: 'Keloğlan Masalları', desc: "Keloğlan'ın sevimli maceraları", href: '/masallar/?tur=keloglan', count: storyCount(stories, 'keloglan'), color: '#ffb01f' },
   { emoji: '🌙', label: 'Uyku Masalları', desc: 'Uyku öncesi sakin masallar', href: '/masallar/?tur=uyku', count: storyCount(stories, 'uyku'), color: '#7b5cff' },
   { emoji: '⏱️', label: 'Kısa Masallar', desc: 'Birkaç dakikada biten masallar', href: '/masallar/?tur=kisa', count: storyCount(stories, 'kisa'), color: '#2f74e8' },
   { emoji: '🎓', label: 'Eğitici Masallar', desc: 'Güzel bir ders veren masallar', href: '/masallar/?tur=egitici', count: storyCount(stories, 'egitici'), color: '#3bb98b' },
-  { emoji: '🧒', label: 'Yaşa Göre Masallar', desc: 'Çocuğunuzun yaşına uygun', href: '/masallar/', count: stories.length, color: '#ff8a00' },
+  { emoji: '🦊', label: 'Hayvan Masalları', desc: 'Sevimli hayvan kahramanlar', href: '/masallar/?tur=hayvan', count: storyCount(stories, 'hayvan'), color: '#21b6c9' },
+  { emoji: '🎈', label: 'Yaşa Göre Masallar', desc: 'Çocuğunuzun yaşına uygun', href: '/masallar/', count: stories.length, color: '#ff8a00' },
 ];
 ---
 <BaseLayout
@@ -56,7 +58,7 @@ const homeCats = [
   <section class="section">
     <div class="container">
       <div class="sec-head"><h2>Masal Kategorileri</h2><a class="sec-link" href="/masallar/">Tüm Masallar →</a></div>
-      <div class="grid grid-4">
+      <div class="grid grid-3">
         {homeCats.map((c) => (
           <CategoryCard href={c.href} emoji={c.emoji} label={c.label} desc={c.desc} count={c.count} color={c.color} />
         ))}
