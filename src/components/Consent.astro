@@ -1,0 +1,93 @@
+---
+// Google Consent Mode v2 + GA4 + Silktide cookie banner.
+// Ported 1:1 from the previous static site (Mess-ID G-YZYEN24W6J).
+---
+{/* Google Consent Mode v2 — default: everything denied until the user consents */}
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    wait_for_update: 500
+  });
+</script>
+
+{/* Google tag (gtag.js) */}
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-YZYEN24W6J"></script>
+<script is:inline>
+  gtag('js', new Date());
+  gtag('config', 'G-YZYEN24W6J');
+</script>
+
+{/* Silktide Consent Manager — cookie banner in MasalNova colors */}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link
+  rel="stylesheet"
+  id="silktide-consent-manager-css"
+  href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.css"
+  integrity="sha384-EdMq+R+YOnsbelo08wPenoTlnxbAyxI11NMIxzugx/qAsbh64KcOkqxYqq6pfvO/"
+  crossorigin="anonymous"
+/>
+<style is:inline>
+  #stcm-wrapper {
+    --boxShadow: 0 18px 40px rgba(8, 30, 80, 0.35);
+    --fontFamily: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    --primaryColor: #ffb01f;
+    --backgroundColor: #2f74e8;
+    --textColor: #ffffff;
+    --backdropBackgroundColor: rgba(16, 42, 102, 0.4);
+    --backdropBackgroundBlur: 2px;
+    --iconColor: #2f74e8;
+    --iconBackgroundColor: #ffb01f;
+  }
+  #stcm-wrapper .stcm-button-primary { color: #102a66; }
+  #stcm-wrapper .stcm-preferences-button { color: #ffffff; }
+</style>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js"
+  integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq"
+  crossorigin="anonymous"></script>
+<script is:inline>
+  window.silktideConsentManager.init({
+    backdrop: { show: true },
+    icon: { position: "bottomRight" },
+    prompt: { position: "bottomRight" },
+    consentTypes: [
+      {
+        id: "essential",
+        label: "Zorunlu",
+        description: "<p>Bu çerezler web sitesinin düzgün çalışması için gereklidir ve kapatılamaz.</p>",
+        required: true
+      },
+      {
+        id: "analytics",
+        label: "Analitik",
+        description: "<p>Bu çerezler, hangi sayfaların popüler olduğunu ve ziyaretçilerin sitede nasıl gezindiğini ölçerek siteyi geliştirmemize yardımcı olur.</p>",
+        gtag: "analytics_storage"
+      }
+    ],
+    text: {
+      prompt: {
+        description: "<p>Deneyiminizi iyileştirmek ve trafiğimizi analiz etmek için sitemizde çerezler kullanıyoruz.</p>",
+        acceptAllButtonText: "Tümünü kabul et",
+        acceptAllButtonAccessibleLabel: "Tüm çerezleri kabul et",
+        rejectNonEssentialButtonText: "Zorunlu olmayanları reddet",
+        rejectNonEssentialButtonAccessibleLabel: "Zorunlu olmayan tüm çerezleri reddet",
+        preferencesButtonText: "Tercihler",
+        preferencesButtonAccessibleLabel: "Tercihleri aç veya kapat"
+      },
+      preferences: {
+        title: "Çerez tercihlerinizi özelleştirin",
+        description: "<p>Gizlilik hakkınıza saygı duyuyoruz. Bazı çerez türlerine izin vermemeyi seçebilirsiniz. Tercihleriniz tüm sitede geçerli olur.</p>",
+        saveButtonText: "Kaydet ve kapat",
+        saveButtonAccessibleLabel: "Çerez tercihlerini kaydet",
+        creditLinkText: "",
+        creditLinkAccessibleLabel: ""
+      }
+    }
+  });
+</script>
