@@ -1,0 +1,259 @@
+---
+const sizeOptions = [
+  { value: 's', label: 'A-', name: 'Küçük yazı' },
+  { value: 'm', label: 'A', name: 'Normal yazı' },
+  { value: 'l', label: 'A+', name: 'Büyük yazı' },
+  { value: 'xl', label: 'AA+', name: 'Çok büyük yazı' },
+] as const;
+
+const themeOptions = [
+  { value: 'system', name: 'Sistem' },
+  { value: 'light', name: 'Aydınlık' },
+  { value: 'sepia', name: 'Sepya' },
+  { value: 'dark', name: 'Gece' },
+] as const;
+
+const fontOptions = [
+  { value: 'sans', name: 'Modern' },
+  { value: 'serif', name: 'Klasik' },
+] as const;
+
+const leadingOptions = [
+  { value: 'compact', name: 'Sıkı' },
+  { value: 'comfortable', name: 'Rahat' },
+  { value: 'spacious', name: 'Ferah' },
+] as const;
+---
+
+<dialog class="reading-settings" data-reading-settings aria-labelledby="reading-settings-title">
+  <div class="reading-settings__head">
+    <h2 class="reading-settings__title" id="reading-settings-title">Okuma ayarları</h2>
+    <button class="reading-settings__close" type="button" data-settings-close aria-label="Kapat">
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="m3 3 10 10M13 3 3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+
+  <form method="dialog" class="reading-settings__form">
+    <fieldset class="reading-settings__group">
+      <legend>Yazı boyutu</legend>
+      <div class="reading-settings__options reading-settings__options--size">
+        {
+          sizeOptions.map((o) => (
+            <label class="reading-settings__option">
+              <input type="radio" name="size" value={o.value} />
+              <span class="reading-settings__chip" aria-hidden="true">{o.label}</span>
+              <span class="sr-only">{o.name}</span>
+            </label>
+          ))
+        }
+      </div>
+    </fieldset>
+
+    <fieldset class="reading-settings__group">
+      <legend>Tema</legend>
+      <div class="reading-settings__options">
+        {
+          themeOptions.map((o) => (
+            <label class="reading-settings__option">
+              <input type="radio" name="theme" value={o.value} />
+              <span class="reading-settings__chip">
+                <span class:list={['reading-settings__swatch', `reading-settings__swatch--${o.value}`]} aria-hidden="true" />
+                {o.name}
+              </span>
+            </label>
+          ))
+        }
+      </div>
+    </fieldset>
+
+    <fieldset class="reading-settings__group">
+      <legend>Yazı tipi</legend>
+      <div class="reading-settings__options">
+        {
+          fontOptions.map((o) => (
+            <label class="reading-settings__option">
+              <input type="radio" name="font" value={o.value} />
+              <span class:list={['reading-settings__chip', `reading-settings__chip--font-${o.value}`]}>{o.name}</span>
+            </label>
+          ))
+        }
+      </div>
+    </fieldset>
+
+    <fieldset class="reading-settings__group">
+      <legend>Satır aralığı</legend>
+      <div class="reading-settings__options">
+        {
+          leadingOptions.map((o) => (
+            <label class="reading-settings__option">
+              <input type="radio" name="leading" value={o.value} />
+              <span class="reading-settings__chip">{o.name}</span>
+            </label>
+          ))
+        }
+      </div>
+    </fieldset>
+  </form>
+</dialog>
+
+<style>
+  .reading-settings {
+    position: fixed;
+    inset: auto 0 0 0;
+    width: min(100%, 30rem);
+    margin: 0 auto;
+    border: 1px solid var(--reader-border);
+    border-bottom: none;
+    border-radius: 22px 22px 0 0;
+    padding: 1rem clamp(18px, 5vw, 24px) calc(1.25rem + env(safe-area-inset-bottom));
+    background: var(--reader-surface);
+    color: var(--reader-text-color);
+    font-family: var(--font-body);
+    box-shadow: 0 -18px 40px rgba(10, 20, 40, 0.24);
+  }
+
+  .reading-settings::backdrop {
+    background: rgba(9, 18, 40, 0.48);
+  }
+
+  .reading-settings__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .reading-settings__title {
+    font-size: 1.06rem;
+    font-weight: 800;
+  }
+
+  .reading-settings__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--reader-text-soft);
+  }
+
+  .reading-settings__close:hover {
+    background: var(--reader-surface-raised);
+    color: var(--reader-text-color);
+  }
+
+  .reading-settings__group {
+    border: 0;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+
+  .reading-settings__group legend {
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--reader-text-soft);
+  }
+
+  .reading-settings__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .reading-settings__option {
+    position: relative;
+  }
+
+  .reading-settings__option input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .reading-settings__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 44px;
+    padding: 0 0.88rem;
+    border: 1.5px solid var(--reader-border);
+    border-radius: 999px;
+    font-size: 0.94rem;
+    font-weight: 800;
+    background: var(--reader-surface);
+    color: var(--reader-text-color);
+  }
+
+  .reading-settings__option:has(input:checked) .reading-settings__chip {
+    border-color: var(--reader-accent);
+    background: var(--reader-surface-raised);
+    box-shadow: inset 0 0 0 1px var(--reader-accent);
+  }
+
+  .reading-settings__option:has(input:focus-visible) .reading-settings__chip {
+    outline: 2px solid var(--reader-focus);
+    outline-offset: 2px;
+  }
+
+  .reading-settings__options--size .reading-settings__option:nth-child(1) .reading-settings__chip { font-size: 0.82rem; }
+  .reading-settings__options--size .reading-settings__option:nth-child(3) .reading-settings__chip { font-size: 1.06rem; }
+  .reading-settings__options--size .reading-settings__option:nth-child(4) .reading-settings__chip { font-size: 1.18rem; }
+
+  .reading-settings__chip--font-serif {
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .reading-settings__swatch {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+  }
+
+  .reading-settings__swatch--system { background: linear-gradient(90deg, #fff7ea 50%, #0d214c 50%); }
+  .reading-settings__swatch--light { background: #fff7ea; }
+  .reading-settings__swatch--sepia { background: #f4ead6; }
+  .reading-settings__swatch--dark { background: #0d214c; }
+</style>
+
+<script>
+  import { loadPrefs, updatePref, type ReaderPrefs } from '../lib/reader-prefs';
+
+  const dialog = document.querySelector<HTMLDialogElement>('[data-reading-settings]');
+  const openBtn = document.querySelector<HTMLButtonElement>('[data-settings-open]');
+
+  if (dialog && openBtn) {
+    const syncRadios = () => {
+      const prefs = loadPrefs();
+      for (const input of dialog.querySelectorAll<HTMLInputElement>('input[type="radio"]')) {
+        input.checked = prefs[input.name as keyof ReaderPrefs] === input.value;
+      }
+    };
+
+    openBtn.addEventListener('click', () => {
+      syncRadios();
+      dialog.showModal();
+    });
+
+    dialog.querySelector('[data-settings-close]')?.addEventListener('click', () => dialog.close());
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener('change', (event) => {
+      const input = event.target as HTMLInputElement;
+      if (input.type === 'radio') {
+        updatePref(input.name as keyof ReaderPrefs, input.value as never);
+      }
+    });
+  }
+</script>

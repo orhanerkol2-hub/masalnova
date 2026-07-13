@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/reader.css';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -12,12 +13,39 @@ interface Props {
   noindex?: boolean;
   jsonLd?: Record<string, any> | Record<string, any>[];
   activeNav?: string;
+  readerPage?: boolean;
 }
-const { title, description, path, image, noindex, jsonLd, activeNav } = Astro.props;
+const { title, description, path, image, noindex, jsonLd, activeNav, readerPage = false } = Astro.props;
 ---
 <!doctype html>
-<html lang="tr">
+<html lang="tr" class:list={[{ 'is-reader-page': readerPage }]}>
   <head>
+    {
+      readerPage && (
+        <script is:inline>
+          {`
+            (function () {
+              var d = document.documentElement.dataset;
+              var p = {};
+              try {
+                p = JSON.parse(localStorage.getItem('masalnova:reader') || '{}') || {};
+              } catch (e) {}
+              var valid = {
+                theme: ['system', 'light', 'sepia', 'dark'],
+                size: ['s', 'm', 'l', 'xl'],
+                font: ['sans', 'serif'],
+                leading: ['compact', 'comfortable', 'spacious']
+              };
+              var defaults = { theme: 'system', size: 'm', font: 'sans', leading: 'comfortable' };
+              for (var k in defaults) {
+                var v = valid[k].indexOf(p[k]) !== -1 ? p[k] : defaults[k];
+                d['reader' + k.charAt(0).toUpperCase() + k.slice(1)] = v;
+              }
+            })();
+          `}
+        </script>
+      )
+    }
     <BaseHead title={title} description={description} path={path} image={image} noindex={noindex} jsonLd={jsonLd} />
   </head>
   <body>

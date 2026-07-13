@@ -1,0 +1,83 @@
+html {
+  --reader-content-width: 44rem;
+  --reader-toolbar-height: 58px;
+  --reader-font-size: clamp(1.125rem, 1.04rem + 0.34vw, 1.25rem);
+  --reader-line-height: 1.75;
+  --reader-font-family: var(--font-body);
+  --reader-background: #fff7ea;
+  --reader-surface: #fffdf8;
+  --reader-surface-raised: #f4eadb;
+  --reader-text-color: #2d2a24;
+  --reader-text-soft: #766b5b;
+  --reader-border: #eadcc6;
+  --reader-accent: #1b57c8;
+  --reader-progress: #ffb01f;
+  --reader-focus: #ffb01f;
+}
+
+html[data-reader-size='s'] {
+  --reader-font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+}
+
+html[data-reader-size='l'] {
+  --reader-font-size: clamp(1.3125rem, 1.22rem + 0.45vw, 1.5rem);
+}
+
+html[data-reader-size='xl'] {
+  --reader-font-size: clamp(1.5rem, 1.38rem + 0.55vw, 1.75rem);
+}
+
+html[data-reader-leading='compact'] {
+  --reader-line-height: 1.5;
+}
+
+html[data-reader-leading='spacious'] {
+  --reader-line-height: 1.95;
+}
+
+html[data-reader-font='serif'] {
+  --reader-font-family: Georgia, "Times New Roman", serif;
+}
+
+html[data-reader-theme='sepia'] {
+  --reader-background: #f4ead6;
+  --reader-surface: #fcf4e4;
+  --reader-surface-raised: #ead9bc;
+  --reader-text-color: #46392a;
+  --reader-text-soft: #7a674d;
+  --reader-border: #dfcfad;
+  --reader-accent: #9a641b;
+  --reader-progress: #9a641b;
+  --reader-focus: #9a641b;
+}
+
+html[data-reader-theme='dark'] {
+  --reader-background: #0d214c;
+  --reader-surface: #132b5e;
+  --reader-surface-raised: #1d3974;
+  --reader-text-color: #efe8dc;
+  --reader-text-soft: #b6c0da;
+  --reader-border: #2b4786;
+  --reader-accent: #ffca45;
+  --reader-progress: #ffb01f;
+  --reader-focus: #ffca45;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-reader-theme='light']):not([data-reader-theme='sepia']) {
+    --reader-background: #0d214c;
+    --reader-surface: #132b5e;
+    --reader-surface-raised: #1d3974;
+    --reader-text-color: #efe8dc;
+    --reader-text-soft: #b6c0da;
+    --reader-border: #2b4786;
+    --reader-accent: #ffca45;
+    --reader-progress: #ffb01f;
+    --reader-focus: #ffca45;
+  }
+}
+
+html.is-reader-page body {
+  background: var(--reader-background);
+  color: var(--reader-text-color);
+}
