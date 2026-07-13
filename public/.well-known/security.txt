@@ -1,0 +1,4 @@
+Contact: mailto:orhan.erkol@masalnova.com
+Expires: 2027-07-13T23:59:59Z
+Preferred-Languages: en, de, tr
+Canonical: https://masalnova.com/.well-known/security.txt
