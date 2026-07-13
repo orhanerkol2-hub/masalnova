@@ -28,6 +28,6 @@ Fırtına başladığında bütün tohumlar güvendeymiş. Devrim, kanadını ok
 
 Toprak gururla gülümsemiş: "Bir söz verdiğimde, o sözü tutmak benim için en önemli şeydir Devrim. Küçük olmam önemli değil, kalbim büyük!"
 
-Fırtına dindiğinde ormanın bütün hayvanları toplanıp Toprak'ı kutlamışlar. Pamuk, sonunda yonca tarlasına birlikte gidip kutlama yapmışlar. O günden sonra ormanda kim bir söz verirse, "Toprak gibi ol, sözünü tut!" demiş.
+Fırtına dindiğinde ormanın bütün hayvanları toplanıp Toprak'ı kutlamışlar. Toprak'la Pamuk, sonunda yonca tarlasına birlikte gidip kutlama yapmışlar. O günden sonra ormanda kim bir söz verirse, "Toprak gibi ol, sözünü tut!" demiş.
 
 **Kıssadan hisse:** Küçük olsun büyük olsun, verilen her söz mutlaka tutulmalıdır.

@@ -42,4 +42,4 @@ Yaşlı adam gülümsemiş: "Gördün mü Keloğlan, sepeti açmak seni zorlu bi
 
 Keloğlan o günden sonra hâlâ meraklıymış ama artık her şeyi düşünerek, dikkatli ve dürüst bir şekilde araştırırmış. Sarayın kütüphanesinde geçirdiği günlerde öğrendiği hikâyeleri köylülere anlatır, herkesi güldürür, herkesi şaşırtırmış.
 
-**Kıssadan hisse:** Merak etmek güzeldir, ama merakımızı dürüstlükle ve sorumlulukla yönetmek gerekir.atolic
+**Kıssadan hisse:** Merak etmek güzeldir, ama merakımızı dürüstlükle ve sorumlulukla yönetmek gerekir.

@@ -14,7 +14,7 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde, ay ışığının gümüş bir şerit gibi uzandığı bir patika varmış. Bu patikanın bir ucunda Ayı Baldıran, öbür ucunda ise Tavşan Fındık yaşarmış.
 
-Ayı Baldıran, kocaman pençeleriyle bulduğu her balı hemen o gece yermiş. "Yarın yine bulurum," dermiş kendine kendine. Tavşan Fındık ise bulduğu her havucun, her yaban elmasının bir kısmını küçük bir toprak küpe koyarmış. "Kış gelince ne yiyeceğimi bilmiyorum ki," dermiş usulca.
+Ayı Baldıran, kocaman pençeleriyle bulduğu her balı hemen o gece yermiş. "Yarın yine bulurum," dermiş kendi kendine. Tavşan Fındık ise bulduğu her havucun, her yaban elmasının bir kısmını küçük bir toprak küpe koyarmış. "Kış gelince ne yiyeceğimi bilmiyorum ki," dermiş usulca.
 
 Bir sonbahar akşamı, ay ışığında patikada karşılaşmışlar. Baldıran, karnını tutarak esnemiş: "Ah Fındık, bu gece hiç yiyeceğim yok. Bal ağacını ördekler bile bilmiyordu, hepsini ben yedim ama bitti işte!"
 

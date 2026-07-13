@@ -20,7 +20,7 @@ Ama gökyüzü o gece pırıl pırılmış. Yıldızlar sanki bal damlaları gib
 
 Yıldızlı gökyüzünde süzülürken Sırma'nın kalbi mutluluktan çok hızlı çarpıyormuş. Ay ışığı kanatlarına vuruyor, her yıldız ona gülümsüyormuş sanki. Sırma zamanı unutmuş, dönmeyi hiç düşünmemiş.
 
-O sırada kovanın yakınındaki dala konmuş yaşlı Baykuş Hikmet, açık kalan kovan kapısını görmüş. "Vız vız!" diye seslenmiş içeriye. "Kovanınızın kapısı açık kalmış, küçük dostlar!"
+O sırada kovanın yakınındaki dala konmuş yaşlı Baykuş Hikmet, açık kalan kovan kapısını görmüş. "Uhu uhu!" diye seslenmiş içeriye. "Kovanınızın kapısı açık kalmış, küçük dostlar!"
 
 Kovandaki arılar hemen toparlanmış, kapıyı kapatmaya koşmuşlar. Meğer serin bir gece böceği içeri girmeye çalışıyormuş. Arılar hep birlikte kapıyı kapatıp böceği nazikçe uzaklaştırmışlar. Ama hepsi çok korkmuş, çünkü nöbetçi ortada yokmuş.
 

@@ -32,4 +32,4 @@ Uzun bir çekiş, bir itiş... Nihayet kaya yerinden kaymış! Dev Bereket ayağ
 
 O günden sonra gölün suları eskisinden bile bereketli akmış. Dev Bereket, minnettarlığının nişanesi olarak her yıl gölün kıyısına altın renkli papatyalar açtırırmış. Padişah bu haberi duyunca Keloğlan'ı saraya çağırmış, ona cesareti ve iyi yürekliliği için bir onur nişanı vermiş. Ama Keloğlan mütevazılıkla gülümsemiş: "Ben sadece bakmaya cesaret ettim, gerisini birlikte yaptık."
 
-**Kıssadan hisse:** Gerçek cesaret, korkuyu tanımak ve ona rağmen doğru olanı yapmaktır.”}
+**Kıssadan hisse:** Gerçek cesaret, korkuyu tanımak ve ona rağmen doğru olanı yapmaktır.

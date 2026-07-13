@@ -34,4 +34,4 @@ Böylece dağ başındaki küçük kulübe, sadece sebzelerin değil, dostluğun
 
 Sevgili dinleyici, sen de elindeki güzel bir şeyi bir arkadaşınla paylaştığında nasıl hissedersin?
 
-**Kıssadan hisse:** Paylaşılan her şey, sahip olduğumuzdan daha değerli ve daha kalıcı bir mutluluk getirir.”}
+**Kıssadan hisse:** Paylaşılan her şey, sahip olduğumuzdan daha değerli ve daha kalıcı bir mutluluk getirir.

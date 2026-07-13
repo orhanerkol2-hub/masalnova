@@ -30,4 +30,4 @@ Rüştü Amca başını sallamış. "Söz, buğday kadar değerlidir," demiş. "
 
 O günden sonra köyde herkes Rüştü Amca'yı örnek almış. Verdikleri sözleri, tıpkı onun gibi, ne olursa olsun tutmuşlar.
 
-**Kıssadan hisse:** Verilen söz, ne kadar küçük görünse de, tutulduğunda en değerli hazineden daha kıymetlidir.”}.
+**Kıssadan hisse:** Verilen söz, ne kadar küçük görünse de, tutulduğunda en değerli hazineden daha kıymetlidir.

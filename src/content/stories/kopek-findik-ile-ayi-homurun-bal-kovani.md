@@ -36,4 +36,4 @@ Fındık gülümsemiş: "Önemli değil Homur, önemli olan birlikte tatlı bir 
 
 O günden sonra Homur her sabah Fındık'la beraber ormanı gezmiş, çalışmayı ve paylaşmayı öğrenmiş. Yemyeşil orman, iki dostun kahkahalarıyla dolup taşmış.
 
-**Kıssadan hisse:** Çalışkanlık, en tatlı ödülleri her zaman sabırla ve emekle kazandırır.eger
+**Kıssadan hisse:** Çalışkanlık, en tatlı ödülleri her zaman sabırla ve emekle kazandırır.

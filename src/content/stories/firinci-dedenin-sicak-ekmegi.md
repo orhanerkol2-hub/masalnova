@@ -26,4 +26,4 @@ Dede Hasan sepeti gösterip torunlarına şöyle demiş: "Bakın, bir fırından
 
 O günden sonra köy meydanındaki bu sepete "Yardım Sepeti" denmiş ve hiç boş kalmamış.
 
-**Kıssadan hisse:** Küçük bir yardım, paylaşıldığında büyük bir mutluluğa dönüşür.“}
+**Kıssadan hisse:** Küçük bir yardım, paylaşıldığında büyük bir mutluluğa dönüşür.

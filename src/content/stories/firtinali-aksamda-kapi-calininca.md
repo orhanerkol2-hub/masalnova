@@ -34,4 +34,4 @@ Deniz o günden sonra herkese, tanıdığı ya da tanımadığı herkese aynı s
 
 Peki sen de bir gün kapını çalan birine, onu tanımasan bile, nasıl saygı gösterebilirsin?
 
-**Kıssadan hisse:** Gerçek saygı, karşımızdaki kişinin kim olduğuna bakmadan ona kalbimizle değer vermektir.”}.
+**Kıssadan hisse:** Gerçek saygı, karşımızdaki kişinin kim olduğuna bakmadan ona kalbimizle değer vermektir.

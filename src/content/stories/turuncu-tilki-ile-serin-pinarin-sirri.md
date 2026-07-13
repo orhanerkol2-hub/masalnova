@@ -32,4 +32,4 @@ Sarı uzun bir süre sessiz kalmış. Sonra başını kabuğundan çıkarıp gü
 
 O günden sonra Fındık, sabırsızlandığında derin bir nefes alıp Sarı'yı hatırlarmış. Sarı da Fındık'ın hızından ders alıp bazen biraz daha çabuk davranmaya çalışırmış. Pınar başında her buluştuklarında, suyun sesi sanki onlara "affetmek, dostluğu suyun berraklığı gibi korumaktır" dermiş.
 
-**Kıssadan hisse:** Gerçek dostluk, hatayı fark edip özür dileyen ve gönülden affeden yürekler arasında büyür.”}
+**Kıssadan hisse:** Gerçek dostluk, hatayı fark edip özür dileyen ve gönülden affeden yürekler arasında büyür.

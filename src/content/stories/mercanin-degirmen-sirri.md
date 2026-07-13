@@ -22,7 +22,7 @@ Mercan bu sözleri işitince aklına bir fikir gelmiş. Koşa koşa köye inmiş
 
 Önce kimse pek inanmamış küçük bir kızın çağrısına. Ama Mercan durmadan kapı kapı dolaşmış, komşulara, çocuklara, hatta yaşlı Nine Sevim'e bile haber vermiş.
 
-Azıcık sonra köyün marangozu testeresini almış, demirci ustası çekiçlerini getirmiş, güçlü kuvvetli gençler kalın halatlarla gelmiş. Çocuklar bile küçük ellerleriyle taşları taşımaya yardım etmiş.
+Azıcık sonra köyün marangozu testeresini almış, demirci ustası çekiçlerini getirmiş, güçlü kuvvetli gençler kalın halatlarla gelmiş. Çocuklar bile küçük elleriyle taşları taşımaya yardım etmiş.
 
 Herkes bir araya gelince şaşılacak bir şey olmuş: İşler hızla ilerlemiş! Marangoz çarkın kırık tahtasını değiştirmiş, demirci yeni bir demir çubuk dövmüş, gençler halatlarla ağır çarkı yerine kaldırmış. Mercan da su testisiyle herkese su dağıtmış, yorulanları neşelendirmiş.
 
@@ -38,4 +38,4 @@ O günden sonra köyde bir şey değişmiş. Ne zaman biri yardıma muhtaç olsa
 
 Peki sen, sevgili dinleyici, bir arkadaşının yardıma ihtiyacı olduğunda ne yaparsın?
 
-**Kıssadan hisse:** Birlikte çalışan eller, tek başına aşılamayacak zorlukları bile kolaylıkla yener.”}
+**Kıssadan hisse:** Birlikte çalışan eller, tek başına aşılamayacak zorlukları bile kolaylıkla yener.

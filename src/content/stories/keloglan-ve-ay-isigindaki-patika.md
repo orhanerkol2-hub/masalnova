@@ -42,7 +42,7 @@ Keloğlan bu söze inanmış ve yoluna devam etmiş. Az sonra karşısına gerç
 
 "Korktum aslında," demiş Keloğlan dürüstçe, "ama köyümün hayvanlarını bulmam gerekiyor. Korkumdan daha güçlü bir sebebim var."
 
-Dev, Keloğlan'ın dürtüklüğüne gülmüş. "Hayvanlarınız bende, ama zarar görmediler. Otlağıma gelip kaldılar, ben de onlara bakmaktan mutlu oldum. Kimse benimle konuşmaya cesaret etmedi, hep kaçtılar."
+Dev, Keloğlan'ın dürüstlüğüne gülmüş. "Hayvanlarınız bende, ama zarar görmediler. Otlağıma gelip kaldılar, ben de onlara bakmaktan mutlu oldum. Kimse benimle konuşmaya cesaret etmedi, hep kaçtılar."
 
 Keloğlan, devin yalnızlığını anlamış. "Bize hayvanları geri ver, ama istersen köyümüze de gel. Kimse senden korkmasın, herkes seni tanısın."
 

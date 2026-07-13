@@ -32,4 +32,4 @@ Padişah, Keloğlan'a köyün en güzel tarlalarından birini hediye etmiş. Kel
 
 Keloğlan'ın hikâyesi köy köy anlatılırmış: kel kafalı ama azimli bir çocuğun, yorulsa da hiç durmadan tırmandığı gizemli bir merdivenin hikâyesi.
 
-**Kıssadan hisse:** Azimle atılan her adım, en zorlu yolları bile bereğe çevirir.
+**Kıssadan hisse:** Azimle atılan her adım, en zorlu yolları bile berekete çevirir.

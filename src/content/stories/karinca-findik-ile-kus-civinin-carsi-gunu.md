@@ -38,4 +38,4 @@ Cıvı gülümsemiş, kanatlarını hafifçe açmış. "Zaten affetmiştim, sade
 
 O günden sonra Fındık ile Cıvı, çarşının en ayrılmaz ikilisi olmuşlar. Fındık tahıl toplarken Cıvı ona tehlikeleri haber vermiş, Cıvı yorulunca da Fındık ona en tatlı taneleri bulmuş. Kalabalık çarşı, bu küçük dostluğun sıcaklığıyla daha da güzelleşmiş.
 
-**Kıssadan hisse:** Gerçek dostluk, küçük kırgınlıkları affetmeyi bilenlerde yaşar.”
+**Kıssadan hisse:** Gerçek dostluk, küçük kırgınlıkları affetmeyi bilenlerde yaşar.

@@ -48,4 +48,4 @@ Keloğlan köye döndüğünde herkes onu meraklı bakışlarla karşılamış. 
 
 O günden sonra balıkçılar yeniden açık denize çıkmaya başlamış, Marmun da onlara zarar vermek yerine büyük dalgaları yatıştırarak yardım etmiş. Padişah bu haberi duyunca Keloğlan'a bol ödül göndermiş ama Keloğlan en büyük ödülü zaten aldığını söylermiş: yeni bir dost ve köyünün mutluluğu.
 
-**Kıssadan hisse:** Cesaret, korkmamak değil, korkuya rağmen doğru olanı yapabilmektir.”
+**Kıssadan hisse:** Cesaret, korkmamak değil, korkuya rağmen doğru olanı yapabilmektir.

@@ -30,4 +30,4 @@ O günden sonra Tosbik ile Minnak her yıl değirmene uğrarlarmış. Baykuş on
 
 Tosbik ile Minnak, hayatları boyunca hiçbir şeyden şikâyet etmeden, ellerindekine şükrederek yaşamışlar. Ve derler ki, o eski değirmen hâlâ dönerken, rüzgâr sanki onların adını fısıldarmış.
 
-**Kıssadan hisse:** Elimizdekine şükrederek yavaş da olsa yürümek, bazen en büyük mucizelere bizi vaktinde ulaştırır.”
+**Kıssadan hisse:** Elimizdekine şükrederek yavaş da olsa yürümek, bazen en büyük mucizelere bizi vaktinde ulaştırır.

@@ -4,7 +4,7 @@ shortDescription: "Keloğlan'ın kar fırtınasında köylüsüne yardım etmek 
 coverEmoji: "❄️"
 coverColor: "#ffb01f"
 ageGroups: ["5-7"]
-readingTime: 4
+readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","iyilik","dostluk"]
 characters: ["Keloğlan","Kar Devi","Nine Havva"]
@@ -44,8 +44,4 @@ Köylüler devi görünce önce ürkmüşler ama Keloğlan hemen araya girmiş. 
 
 O günden sonra dev artık yalnız değilmiş. Her kış köylülere yardım eder, karları temizler, yollarını açarmış. Köylüler de ona sıcak çorbalar, taze ekmekler götürürmüş. Keloğlan'ın cesareti sayesinde köy hem karnını doyurmuş hem de yeni bir dost kazanmış.
 
-**Kıssadan hisse:** Gerçek cesaret, korkularımızın ardındaki iyiliği görebilmektir.”}[Kapatılıyor - hata]  
-
-Affedersiniz, yukarıdaki metinde küçük bir yazım hatası oldu, düzeltilmiş hâli JSON içinde zaten doğru şekilde yer almaktadır.  
-
-**Kıssadan hisse:** Gerçek cesaret, korkularımızın ardındaki iyiliği görebilmektir.}
+**Kıssadan hisse:** Gerçek cesaret, korkularımızın ardındaki iyiliği görebilmektir.

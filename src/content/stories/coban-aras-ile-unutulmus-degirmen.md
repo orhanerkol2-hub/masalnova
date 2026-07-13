@@ -10,11 +10,11 @@ themes: ["nezaket","yardımseverlik","paylaşma"]
 characters: ["Çoban Aras","Değirmenci Nasuh Dede","Küçük kız Elmas"]
 publishedAt: "2026-07-12"
 ---
-Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında eski bir değirmen varmış. Bu değirmen yıllar önce köyün buğdayını öğütürmüş ama artık kimse ona uğramaz olmuş. Duvarları çatlamış, çarkı paslanmış, kapısının önünde otlar boy vermişti.
+Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında eski bir değirmen varmış. Bu değirmen yıllar önce köyün buğdayını öğütürmüş ama artık kimse ona uğramaz olmuş. Duvarları çatlamış, çarkı paslanmış, kapısının önünde otlar boy vermiş.
 
 Köyde Aras adında iyi kalpli bir çoban yaşarmış. Sabah erkenden kalkar, koyunlarını dağın eteklerine götürür, akşam olunca hepsini tek tek sayıp evine dönermiş. Aras'ın en sevdiği şey ise yolda kimseyi yardımsız bırakmamakmış.
 
-Bir gün koyunlarını otlatırken, eski değirmenin yanından geçiyordu. İçeriden hafif bir öksürük sesi duydu. Merakla kapıyı ittiğinde, içeride yaşlı bir adam gördü. Bu adam, değirmenin sahibi Nasuh Dede'ymiş. Kimse onu ziyaret etmediği için günlerdir tek başına, üşüyerek oturuyormuş.
+Bir gün koyunlarını otlatırken, eski değirmenin yanından geçiyormuş. İçeriden hafif bir öksürük sesi duymuş. Merakla kapıyı ittiğinde, içeride yaşlı bir adam görmüş. Bu adam, değirmenin sahibi Nasuh Dede'ymiş. Kimse onu ziyaret etmediği için günlerdir tek başına, üşüyerek oturuyormuş.
 
 "Dedeciğim, neden buradasın böyle üşüyerek?" diye sordu Aras. Nasuh Dede içini çekti: "Köylüler artık değirmenime gelmiyor, unutuldum evladım. Un öğütecek buğdayım da yok, konuşacak kimsem de."
 
@@ -30,6 +30,6 @@ Nasuh Dede, bir akşam Aras'ın elini tutup şöyle demiş: "Sen bana bir tabak 
 
 Aras gülümsemiş: "Ben sadece elimden geleni yaptım dedeciğim. Ama gördüm ki, birine gösterdiğimiz küçük bir iyilik, çok büyük mutluluklara dönüşebiliyor."
 
-Sizce siz de etrafınızda unutulmuş, yalnız kalmış birini fark ettiğinizde ona küçük bir iyilik yapabilir misiniz?
+Siz de etrafınızda unutulmuş, yalnız kalmış birini fark ettiğinizde ona küçük bir iyilik yapabilir misiniz?
 
 **Kıssadan hisse:** En küçük nezaket bile, bir kalbi ısıtıp bütün bir çevreyi aydınlatabilir.

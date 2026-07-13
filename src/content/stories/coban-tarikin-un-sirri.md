@@ -30,4 +30,4 @@ O günden sonra köyde herkes Çoban Tarık'ın adını dürüstlükle anmış. 
 
 Sevgili küçük dinleyici, sence Tarık altınları kendine alsaydı ne olurdu? Sen olsaydın, sen de aynı şeyi yapar mıydın?
 
-**Kıssadan hisse:** Dürüstlük, hiçbir hazineyle ölçülemeyecek en değerli hazinedir.”
+**Kıssadan hisse:** Dürüstlük, hiçbir hazineyle ölçülemeyecek en değerli hazinedir.

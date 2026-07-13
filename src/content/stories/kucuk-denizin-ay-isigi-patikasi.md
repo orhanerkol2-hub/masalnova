@@ -14,7 +14,7 @@ Bir varmış bir yokmuş, küçük bir köyün kenarında, yumuşak çimenlerin 
 
 Deniz adında cesur küçük bir çocuk varmış. Her akşam, annesi onu yatağa yatırmadan önce pencereden bu patikayı seyredermiş. "Bir gün oradan yürüyeceğim," dermiş yavaşça, gözleri ağırlaşırken.
 
-Bir gece, Ay Dede pencereden içeri usulca baktı ve fısıldadı: "Gel Deniz, seninle patikada yürüyelim." Deniz korkmadı, çünkü Ay Dede'nin ışığı her zaman sıcacık ve güven vericiydi. Yorganını omzuna sardı ve düşle gerçek arasındaki o yumuşak patikaya adım attı.
+Bir gece, Ay Dede pencereden içeri usulca bakmış ve fısıldamış: "Gel Deniz, seninle patikada yürüyelim." Deniz korkmamış, çünkü Ay Dede'nin ışığı her zaman sıcacık ve güven vericiymiş. Yorganını omzuna sarmış ve düşle gerçek arasındaki o yumuşak patikaya adım atmış.
 
 Patika, ay ışığıyla ıslanmış gibi parlıyordu. Deniz yürürken, ayaklarının altında yumuşak bir sıcaklık hissetti, sanki pamuktan bir halının üstündeymiş gibi. Yol boyunca küçük bir baykuş, Puf, ona eşlik etti. Kanatlarını yavaşça çırparak, "Merak etme Deniz, ben yanındayım," dedi sakin bir sesle.
 

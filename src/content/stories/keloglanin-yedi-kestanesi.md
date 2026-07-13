@@ -18,7 +18,7 @@ Keloğlan kasabanın en kalabalık çarşısına doğru yürümüş. Çarşı bu
 
 "Ne oldu nineciğim?" diye sormuş Keloğlan.
 
-"Ah evladım," demiş yaşlı kadın, "kömürüm bitti, ocağım söndü. Bu kestaneleri satamazsam bu gece açık kalacağım."
+"Ah evladım," demiş yaşlı kadın, "kömürüm bitti, ocağım söndü. Bu kestaneleri satamazsam bu gece aç kalacağım."
 
 Keloğlan hiç düşünmeden elindeki üç kuruşu kadına uzatmış. "Bunu al nineciğim, kömür al, ocağını yak."
 

@@ -44,4 +44,4 @@ Dede Hasan gözyaşlarını tutamamış: "Sen benim sözümü değil, kendi vicd
 
 O günden sonra fırının kapısına küçük bir tabela asılmış: "Burada söz de ekmek gibi tazedir." Keloğlan her sabah fırına uğrar, Dede Hasan'la birlikte çörek pişirir, kasabaya hem ekmek hem de güzel bir örnek kokusu yayarlarmış.
 
-**Kıssadan hisse:** Verilen söz, ne kadar zor olsa da, tutulduğunda hem kalbi hem yolu aydınlatır.”
+**Kıssadan hisse:** Verilen söz, ne kadar zor olsa da, tutulduğunda hem kalbi hem yolu aydınlatır.

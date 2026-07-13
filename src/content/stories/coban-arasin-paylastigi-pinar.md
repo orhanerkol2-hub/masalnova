@@ -14,7 +14,7 @@ Bir varmış bir yokmuş, evvel zaman içinde, yeşil tepelerin arasında Aras a
 
 Bu pınar, köyün en berrak suyuna sahipmiş. Suyu içen herkes yorgunluğunu unutur, gönlü ferahlarmış. Aras bu pınarı çok severmiş, ama asıl sevdiği şey oraya gelen herkesle suyu paylaşmakmış.
 
-Bir gün pınarın kenarına yorgun bir tüccar gelmiş. Adı Kasım'mış. Sırtındaki ağır çuvallarla uzun yoldan geliyormuş, dudakları kurumuş, ayakları şişmişmiş. Aras onu görünce hemen yanına koşmuş.
+Bir gün pınarın kenarına yorgun bir tüccar gelmiş. Adı Kasım'mış. Sırtındaki ağır çuvallarla uzun yoldan geliyormuş, dudakları kurumuş, ayakları şişmiş. Aras onu görünce hemen yanına koşmuş.
 
 "Buyurun, şu gölgede dinlenin," demiş. "Suyumuzdan içip serinleyin, çuvallarınızı da bir süre ben tutayım."
 
@@ -38,4 +38,4 @@ O günden sonra pınarın adı köyde "Paylaşan Pınar" olarak kalmış. Herkes
 
 Sen de çevrende yardıma ihtiyacı olan birini gördüğünde, ona elini uzatır mısın?
 
-**Kıssadan hisse:** Paylaşılan her iyilik, bir gün mutlaka başka bir iyilikle geri döner.'
+**Kıssadan hisse:** Paylaşılan her iyilik, bir gün mutlaka başka bir iyilikle geri döner.

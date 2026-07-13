@@ -28,4 +28,4 @@ Deniz başını sallamış. "Bir şey bulduğumda onu sahibine ulaştırmak beni
 
 Pati bu sözden sonra şemsiyeyi her zaman dikkatle taşımaya söz vermiş. O günden sonra çayırda kaybolan hiçbir şey uzun süre sahipsiz kalmamış, çünkü herkes birbirine göz kulak olmayı öğrenmiş.
 
-**Kıssadan hisse:** Bulduğumuz emanete sahip çıkmak, sorumluluğun en güzel gösterisidir.”
+**Kıssadan hisse:** Bulduğumuz emanete sahip çıkmak, sorumluluğun en güzel gösterisidir.

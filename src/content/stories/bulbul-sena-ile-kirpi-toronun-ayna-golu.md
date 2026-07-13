@@ -32,4 +32,4 @@ Bu söz Sena'nın içine işlemiş. O gün akşam, göl yeniden ayna gibi parlar
 
 O günden sonra Sena hâlâ en güzel sesle şarkı söylermiş ama artık kimseyle kıyaslamaz, Toron'un sessiz çalışkanlığına hep saygıyla bakarmış. Göl kıyısında iki farklı dost, birbirini tamamlayarak yaşamaya devam etmiş.
 
-**Kıssadan hisse:** Gerçek değer, gösterişte değil sessizce iyilik yapmakta gizlidir.”
+**Kıssadan hisse:** Gerçek değer, gösterişte değil sessizce iyilik yapmakta gizlidir.

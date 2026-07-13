@@ -12,13 +12,13 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, rengarenk çiçeklerle dolu bir bahçenin ortasında küçük bir ev varmış. Bu evde Nine Feride yaşarmış. Bahçesindeki güller, laleler ve papatyalar onun elinden su içer, güneşten önce onun gülümsemesini görürlermiş.
 
-Nine Feride'nin en sevdiği eşyası, bahçenin ortasındaki taş sehpanın üzerinde duran mavi çiçekli bir vazoymuş. Bu vazo, uzun zaman önce kendi annesinden kalmışmış ve içine her sabah taze çiçekler koyarmış.
+Nine Feride'nin en sevdiği eşyası, bahçenin ortasındaki taş sehpanın üzerinde duran mavi çiçekli bir vazoymuş. Bu vazo, uzun zaman önce kendi annesinden kalmış ve içine her sabah taze çiçekler koyarmış.
 
 Bir gün torunu Deniz, komşu çocuğu Kerem'le bahçede top oynamaya başlamış. Nine Feride onları severek izliyormuş, çünkü çocukların kahkahaları bahçeye müzik gibi yayılıyormuş. Ama bir anda top yanlış yöne sıçramış ve sehpaya çarpmış. Mavi vazo yere düşmüş, küçük parçalara ayrılmış.
 
 Kerem'in yüzü bembeyaz kesilmiş. Elleri titremeye başlamış. "Ben... ben yapmadım demeyeceğim," demiş utanarak. "Topu ben attım. Çok özür dilerim Nine Feride."
 
-Deniz de üzülmüş, çünkü o da topu ittirmişmiş biraz. "Ben de suçluyum," demiş. "İkimiz birlikte koşuyorduk."
+Deniz de üzülmüş, çünkü o da topu ittirmiş biraz. "Ben de suçluyum," demiş. "İkimiz birlikte koşuyorduk."
 
 Nine Feride yavaşça yerine çökmüş ve kırık parçaları eline almış. Uzun bir sessizlik olmuş. Çocuklar korkuyla bekliyorlarmış, belki nine kızacak, belki bir daha bahçeye girmelerine izin vermeyecekmiş.
 

@@ -34,4 +34,4 @@ Artık köyde kimse yalnız değilmiş. Fırının kokusu sadece ekmek kokusu de
 
 Sen de bir gün yeni birine "merhaba" desen, acaba nasıl güzel bir dostluk başlayabilir?
 
-**Kıssadan hisse:** Küçük bir merhaba, büyük dostlukların ve paylaşmanın ilk adımı olabilir.“}
+**Kıssadan hisse:** Küçük bir merhaba, büyük dostlukların ve paylaşmanın ilk adımı olabilir.

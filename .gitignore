@@ -4,3 +4,7 @@ node_modules/
 *.log
 .claude/
 docs/
+
+# Analyse-Artefakte des Märchen-Audits (lokal, nicht committen)
+src/content/.story-review.*
+src/content/.story-audit.json

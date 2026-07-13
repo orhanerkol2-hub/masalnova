@@ -30,4 +30,4 @@ Zamanla Fındık'ın telaşı azalmış, gözleri her şeyin içindeki iyi taraf
 
 Homur ile Fındık, her yıl aynı gölün kıyısında buluşur, güneşin batışını izler ve o güne şükrederlermiş. Ormandaki diğer hayvanlar da onları görüp öğrenmiş: mutluluk, çok şeye sahip olmakta değil, sahip olduğunu takdir etmekteymiş.
 
-**Kıssadan hisse:** Gerçek mutluluk, sahip olduklarımızın kıymetini bilip onlara şükretmekte gizlidir.”}
+**Kıssadan hisse:** Gerçek mutluluk, sahip olduklarımızın kıymetini bilip onlara şükretmekte gizlidir.

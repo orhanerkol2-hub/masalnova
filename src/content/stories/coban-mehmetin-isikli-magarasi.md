@@ -32,4 +32,4 @@ Mehmet, baykuşa teşekkür etmiş ve Benek'i kucağına alıp mağaradan çıkm
 
 Sevgili dinleyici, sen de zor bir şeyi yapmaya çalışırken hemen vazgeçmek mi istersin, yoksa Çoban Mehmet gibi bir kez daha denemeyi mi seçersin?
 
-**Kıssadan hisse:** Azimle ve sabırla denemeye devam eden, en karanlık yollarda bile ışığı bulur.**
+**Kıssadan hisse:** Azimle ve sabırla denemeye devam eden, en karanlık yollarda bile ışığı bulur.

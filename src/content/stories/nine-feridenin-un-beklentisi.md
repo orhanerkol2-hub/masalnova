@@ -22,4 +22,4 @@ Toprak yeniden oturmuş, bu kez sabırla. Taşın sesi, kuşların cıvıltısı
 
 Toprak, torbayı görünce sevinçle zıplamış. Nine Feride ona sarılmış: "Gördün mü yavrum, beklemek boşuna değilmiş." Toprak o gün öğrendiği şeyi hiç unutmamış; her güzel şeyin biraz zaman istediğini anlamış.
 
-**Kıssadan hisse:** Sabırla beklenen her şey, en güzel meyvesini verir.'
+**Kıssadan hisse:** Sabırla beklenen her şey, en güzel meyvesini verir.

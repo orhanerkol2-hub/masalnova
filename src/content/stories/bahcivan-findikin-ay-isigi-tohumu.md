@@ -28,4 +28,4 @@ Kısa süre sonra patikanın kenarı baştan başa çiçeklerle dolmuş. Fındı
 
 Köylüler ona sorduğunda Fındık hep aynı cevabı vermiş: "Az şeyi iyi kullanmak, çok şeyi boşa harcamaktan daha değerlidir."
 
-**Kıssadan hisse:** Elindeki azı akıllıca ve sabırla değerlendiren, zamanla en büyük bolluğa ulaşır.”
+**Kıssadan hisse:** Elindeki azı akıllıca ve sabırla değerlendiren, zamanla en büyük bolluğa ulaşır.

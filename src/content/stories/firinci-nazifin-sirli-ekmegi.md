@@ -26,4 +26,4 @@ Köylüler hep bir ağızdan alkışlamış. Nazif başını öne eğmiş, yine 
 
 Ama Nazif değişmemiş, ertesi sabah yine sessizce kapılara ekmek bırakmaya devam etmiş.
 
-**Kıssadan hisse:** Gerçek iyilik, övünmeden yapılan iyiliktir.”
+**Kıssadan hisse:** Gerçek iyilik, övünmeden yapılan iyiliktir.

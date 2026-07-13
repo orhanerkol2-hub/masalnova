@@ -22,4 +22,4 @@ O günden sonra serçe her sabah Mert'in bahçesine gelirmiş. Bazen bir tohum b
 
 Altın başaklı tarlada büyüyen bu küçük dostluk, hem Mert'in hem de serçenin her gününü biraz daha güzelleştirmiş. Artık tarlaya gittiğinde Mert hiç yalnız değilmiş; küçük bir dost hep yanındaymış.
 
-**Kıssadan hisse:** Küçük bir yardım, büyük bir dostluğun ilk adımı olabilir.”
+**Kıssadan hisse:** Küçük bir yardım, büyük bir dostluğun ilk adımı olabilir.

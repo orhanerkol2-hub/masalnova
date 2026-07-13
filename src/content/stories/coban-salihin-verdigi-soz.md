@@ -18,7 +18,7 @@ Günler geçmiş. Salih sözünü unutmamış ama koyunlarından biri, küçük 
 
 Sonunda Beyaz'ı güvenle bulmuş ama artık yelken bezini dokumaya vakti kalmamış gibi görünüyormuş. Salih çok üzülmüş. "Rana bana güvendi, ona söz verdim," diye düşünmüş. "Yorgun olsam da sözümü tutmalıyım."
 
-O gece mumla oturup yünleri eğirmiş, ellerinden kan gelesiye çalışmış. Köyün yaşlıları ona, "Sabah da örebilirsin, kimse seni zorlamıyor," demişler. Ama Salih başını sallayıp, "Söz verdiğim zaman içimde bir bağ kurulur. O bağı koparmak istemem," demiş.
+O gece mumla oturup yünleri eğirmiş, elleri yoruluncaya kadar çalışmış. Köyün yaşlıları ona, "Sabah da örebilirsin, kimse seni zorlamıyor," demişler. Ama Salih başını sallayıp, "Söz verdiğim zaman içimde bir bağ kurulur. O bağı koparmak istemem," demiş.
 
 Sabah olduğunda Salih, yorgun ama gururlu bir şekilde yelken bezini Rana'ya götürmüş. Rana bezi eline alınca gözleri dolmuş. "Bu kadar zorlanacağını bilseydim seni bu sözden azat ederdim," demiş.
 

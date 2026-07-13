@@ -48,4 +48,4 @@ Köye döndüğünde köylüler onu alkışlarla karşılamışlar. Gülenler bi
 
 O günden sonra dağ başındaki kulübe, hem Ayşe Nine'nin hem de zaman zaman yolu düşen yorgun gezginlerin sığınağı olmuş. Keloğlan ise köyde "azimli Keloğlan" diye anılmaya başlamış.
 
-**Kıssadan hisse:** Azimle ve iyi yürekle çalışan, en yıkık duvarları bile yeniden ayağa kaldırır.”
+**Kıssadan hisse:** Azimle ve iyi yürekle çalışan, en yıkık duvarları bile yeniden ayağa kaldırır.

@@ -34,4 +34,4 @@ Değirmen yeniden dönmeye başlamış, çarkları eskisinden daha gür sesle ö
 
 Keloğlan sık sık değirmene uğrar, Dede ile çay içip sohbet edermiş. Dede ona hep şöyle dermiş: "Sen meraklı bir çocuksun Keloğlan, ama merakını iyilikle birleştirdin. İşte bu yüzden köyün en akıllı delikanlısı oldun."
 
-**Kıssadan hisse:** Merak, iyilikle birleşince insanı korkudan değil, dostluktan ve akıldan geçirir.“}
+**Kıssadan hisse:** Merak, iyilikle birleşince insanı korkudan değil, dostluktan ve akıldan geçirir.

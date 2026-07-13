@@ -26,4 +26,4 @@ Bundan sonra Azra çayırda gezerken önce izin ister, sonra dokunurmuş. Papaty
 
 Çayırdaki tüm canlılar, Azra'nın kibarlığını fark etmiş. Kuşlar ona şarkı söyler, kelebekler etrafında uçuşurmuş. Azra artık çayırın en sevilen misafiriymiş.
 
-**Kıssadan hisse:** Her canlıya izin isteyerek ve nazikçe yaklaşmak, gerçek saygının ilk adımıdır.“}
+**Kıssadan hisse:** Her canlıya izin isteyerek ve nazikçe yaklaşmak, gerçek saygının ilk adımıdır.

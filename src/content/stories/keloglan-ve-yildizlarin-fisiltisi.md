@@ -44,4 +44,4 @@ O geceden sonra köyde bir gelenek başlamış: Her yıldızlı gecede, komşula
 
 Keloğlan ise hep şunu söylermiş: "Bir başına kaldırılamayan yükler, birlikte çekildiğinde hafifler."
 
-**Kıssadan hisse:** Gerçek güç, birlikte yardımlaşan yüreklerde bulunur.”
+**Kıssadan hisse:** Gerçek güç, birlikte yardımlaşan yüreklerde bulunur.

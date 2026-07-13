@@ -16,7 +16,7 @@ Bir varmış bir yokmuş, evvel zaman içinde, deniz kıyısındaki kum tepecikl
 
 Sırma'nın en sevdiği arkadaşı, kayalıklarda yaşayan yaşlı Midye Nine'ymiş. Midye Nine ona hep, "Küçük Sırma, ne yaparsan yap, doğruyu söylemekten korkma," dermiş. Sırma bu sözü çok severmiş ama tam anlamını henüz bilmezmiş.
 
-Bir gün Sırma, kovanın bal küpünü doldurmak için kıyıdaki en güzel çiçeğe, mor deniz laleye konmuş. O sırada rüzgâr esmiş ve Sırma dengesini kaybedip küçük bal kabını denize düşürmüş. Kabın içindeki bal, dalgalarla birlikte kayıp gitmiş.
+Bir gün Sırma, kovanın bal küpünü doldurmak için kıyıdaki en güzel çiçeğe, mor deniz lalesine konmuş. O sırada rüzgâr esmiş ve Sırma dengesini kaybedip küçük bal kabını denize düşürmüş. Kabın içindeki bal, dalgalarla birlikte kayıp gitmiş.
 
 Sırma çok üzülmüş. "Şimdi ne yapacağım? Kovana boş dönersem arkadaşlarım kızar," diye düşünmüş. Bir an, "Bal kabını rüzgâr uçurdu desem mi?" diye geçirmiş içinden. Ama sonra Midye Nine'nin sözü aklına gelmiş.
 

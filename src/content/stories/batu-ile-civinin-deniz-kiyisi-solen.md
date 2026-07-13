@@ -36,4 +36,4 @@ O günden sonra Batu da her akşam kardeşiyle beraber kıyıya oturup, o günde
 
 O kıyıda hâlâ, güneş her battığında iki küçük kirpinin mutlu mırıltıları duyulurmuş.
 
-**Kıssadan hisse:** Elimizdekine şükreden, sabırla ve paylaşarak her zaman daha çok mutluluk bulur.”
+**Kıssadan hisse:** Elimizdekine şükreden, sabırla ve paylaşarak her zaman daha çok mutluluk bulur.

@@ -14,7 +14,7 @@ Bir varmış bir yokmuş, güneşin altın gibi ışıldadığı bir tarlanın k
 
 Yaz günleri geldiğinde Fındık hiç durmadan çalışırmış. Sırtında kendinden büyük buğday taneleri taşır, minik ayaklarıyla tarlayı boydan boya geçip yuvasına gidip gelirmiş. Diğer karıncalar ona 'Sen dünyanın en çalışkan karıncasısın Fındık!' derlermiş. Fındık gururla gülümser, ama hiçbir zaman burnu büyümezmiş.
 
-Bir gün tarlanın kenarında oturan Cırcır Böceği Zilo'yu görmüş. Zilo bütün yaz şarkı söylemiş, kış için hiç yiyecek toplamamış. Şimdi yapraklar sararmaya başlamış, havalar serinlemeye yüz tutmuşmuş. Zilo'nun küçük karnı acıkmış, ama söyleyecek şarkısı bile kalmamışmış üzüntüden.
+Bir gün tarlanın kenarında oturan Cırcır Böceği Zilo'yu görmüş. Zilo bütün yaz şarkı söylemiş, kış için hiç yiyecek toplamamış. Şimdi yapraklar sararmaya başlamış, havalar serinlemeye yüz tutmuş. Zilo'nun küçük karnı acıkmış, ama söyleyecek şarkısı bile kalmamış üzüntüden.
 
 Fındık, Zilo'nun halini görünce hemen yanına gitmiş. 'Neden bu kadar üzgünsün küçük dostum?' diye sormuş. Zilo, başını öne eğerek, 'Kış geliyor ama benim hiç yiyeceğim yok,' demiş.
 
@@ -24,6 +24,6 @@ O günden sonra Fındık'ın ambarına başka misafirler de gelmeye başlamış.
 
 Kış geldiğinde Fındık'ın yuvası, tarladaki en kalabalık ve en mutlu yermiş. Zilo kış boyunca minik şarkılar mırıldanmış, Pamuk ise renkli tüylerini süsleyerek herkese gökyüzünden gördüğü hikâyeleri anlatmış. Hep birlikte gülmüşler, hep birlikte ısınmışlar.
 
-Bahar geldiğinde tarla yeniden yeşermiş, altın başaklar güneşte parıldamaya başlamış. Fındık, arkadaşlarına bakıp içi ısınarak düşünmüş: Tek başına topladığı taneler onu hiçbir zaman bu kadar mutlu etmemişmiş. Asıl zenginlik, paylaştığı her tanede saklıymış.
+Bahar geldiğinde tarla yeniden yeşermiş, altın başaklar güneşte parıldamaya başlamış. Fındık, arkadaşlarına bakıp içi ısınarak düşünmüş: Tek başına topladığı taneler onu hiçbir zaman bu kadar mutlu etmemiş. Asıl zenginlik, paylaştığı her tanede saklıymış.
 
-**Kıssadan hisse:** Paylaşılan bir tane, saklanan bir ambardan daha değerlidir.“}
+**Kıssadan hisse:** Paylaşılan bir tane, saklanan bir ambardan daha değerlidir.

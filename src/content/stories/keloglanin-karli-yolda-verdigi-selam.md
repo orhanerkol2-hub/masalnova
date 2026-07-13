@@ -34,7 +34,7 @@ Keloğlan'ın ağzı açık kalmış. Sırtında çıkın taşıdığı, çorba 
 
 Padişah gülümseyerek Keloğlan'a dönmüş: "Sen beni kim olduğumu bilmeden, sırf yaşlı ve yorgun olduğum için taşıdın, evine buyur ettin. Bu, en büyük saygının ta kendisidir evlat. Zenginliğe, makama bakmadan insana değer vermek işte budur."
 
-Sonra Keloğlan'a bir kese altın uzatmış ama Keloğlan başını sallamış: "Padişahım, ben yardım etmek için para beklemedim. Siz sağ salim eviniz varın, bana bu yeter."
+Sonra Keloğlan'a bir kese altın uzatmış ama Keloğlan başını sallamış: "Padişahım, ben yardım etmek için para beklemedim. Siz sağ salim evinize varın, bana bu yeter."
 
 Padişah bu sözlere çok sevinmiş. Israr edip küçük bir çift keçi ve bir torba tohum hediye etmiş, üstüne de her kışın başında Keloğlan'ın ailesine odun ve erzak gönderilmesini buyurmuş.
 

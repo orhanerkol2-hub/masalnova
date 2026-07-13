@@ -10,7 +10,7 @@ themes: ["çalışkanlık","dürüstlük","azim"]
 characters: ["Keloğlan","Padişah","Pınar Perisi"]
 publishedAt: "2026-07-12"
 ---
-Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında kel kafalı ama gönlü altından bir çocuk yaşarmış. Keloğlan'ın en sevdiği şey, hiçbir şey yapmadan ağaç altında uzanıp gökyüzündeki bulutları saymakmış. Annesi ne kadar 'Oğlum, bir işe yara!' desede, Keloğlan hep bir bahane bulup işten kaçarmış.
+Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında kel kafalı ama gönlü altından bir çocuk yaşarmış. Keloğlan'ın en sevdiği şey, hiçbir şey yapmadan ağaç altında uzanıp gökyüzündeki bulutları saymakmış. Annesi ne kadar 'Oğlum, bir işe yara!' dese de, Keloğlan hep bir bahane bulup işten kaçarmış.
 
 Bir gün köyün kenarındaki tarlalar kuruyunca, köylüler telaşlanmış. 'Mahsulümüz kavruluyor!' diye ağlaşırlarmış. Padişah bu haberi duyunca sarayından çıkmış, köye gelmiş. 'Kim şu dağın ardındaki serin pınarı buraya kadar getirirse, ona bir kese altın vereceğim!' diye ilan etmiş.
 
@@ -30,7 +30,7 @@ Keloğlan kazmaya devam ettikçe, toprak sanki kendiliğinden yumuşamış, hend
 
 Dere köye ulaştığında bütün köylüler sevinçle bağırmış. Padişah da haberi alınca hemen köye gelmiş. 'Bunu kim yaptı?' diye sormuş. Köylüler hep bir ağızdan, 'Keloğlan yaptı Padişahım, sabahtan akşama kadar hiç durmadan çalıştı!' demişler.
 
-Padişah, Keloğlan'ın yanına gidip elini sıkmış. 'Sözümü tutuyorum,' demiş, keseyi uzatmış. Ama Keloğlan başını iki yana sallamış. 'Padişahım, altını değil, bir tarla ister im. Öğrendim ki, terleyerek kazanılan şey, oturarak beklenenden çok daha tatlı.'
+Padişah, Keloğlan'ın yanına gidip elini sıkmış. 'Sözümü tutuyorum,' demiş, keseyi uzatmış. Ama Keloğlan başını iki yana sallamış. 'Padişahım, altını değil, bir tarla isterim. Öğrendim ki, terleyerek kazanılan şey, oturarak beklenenden çok daha tatlı.'
 
 Padişah bu sözlere çok gülmüş ve hem bir kese altın hem de güzel bir tarla vermiş Keloğlan'a. Keloğlan o günden sonra hiç tembellik etmemiş; tarlasını ekmiş, pınarın suyuyla sulamış, köyün en bereketli bahçesini yetiştirmiş. Ve her sabah, güneş doğmadan pınara gidip suyun sesini dinlermiş, çünkü bilirmiş ki en güzel şeyler, alın teriyle büyürmüş.
 

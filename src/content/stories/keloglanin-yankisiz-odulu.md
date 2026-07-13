@@ -52,4 +52,4 @@ Padişah bu sözler üzerine tahtından inmiş, Keloğlan'ın elini sıkmış. "
 
 O gün Keloğlan köyüne döndüğünde, elinde küçük bir kese altın, yüreğinde büyük bir mutluluk varmış. Gölün kıyısına oturmuş, suyun üzerindeki yansımasına bakıp gülümsemiş. Yankısı bile ona "iyi ki böylesin" der gibi geri gelmiş.
 
-**Kıssadan hisse:** Gerçek değer, elde ettiğimiz ödüllerde değil, başkalarına gösterdiğimiz alçakgönüllü iyilikte gizlidir.'
+**Kıssadan hisse:** Gerçek değer, elde ettiğimiz ödüllerde değil, başkalarına gösterdiğimiz alçakgönüllü iyilikte gizlidir.

@@ -36,4 +36,4 @@ O kıştan sonra Fıstık ile Pamuk da Huhu'yu örnek almışlar. Baharın gelme
 
 Ve o günden sonra ormanda herkes bilirmiş: Küçük baykuş Huhu, en akıllı ve en cömert dostlarıymış.
 
-**Kıssadan hisse:** Bugün elindekini akıllıca kullanan, yarın darda kalmaz ve paylaştıkça çoğalır.”
+**Kıssadan hisse:** Bugün elindekini akıllıca kullanan, yarın darda kalmaz ve paylaştıkça çoğalır.

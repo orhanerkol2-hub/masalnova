@@ -28,4 +28,4 @@ Kaya'nın çalışkanlığı tüm köye ders olmuş. O günden sonra köydeki ç
 
 Sakin göl, o günden sonra hep Kaya'nın azmini fısıldarmış rüzgârla birlikte.
 
-**Kıssadan hisse:** Küçük eller, büyük sabırla çalışırsa en zor işleri bile başarabilir.“
+**Kıssadan hisse:** Küçük eller, büyük sabırla çalışırsa en zor işleri bile başarabilir.

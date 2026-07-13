@@ -32,4 +32,4 @@ O günden sonra Berrin, kasabada "dürüst kız" olarak tanınmış. Herkes ona 
 
 Berrin büyüdükçe anlamış ki, gerçek hazine parlayan taşlarda değil, insanın vicdanında saklıdır. Peki sen, kimsenin görmediği bir anda doğru olanı yapmayı seçer misin?
 
-**Kıssadan hisse:** Kimse görmese de doğruyu söylemek, insanın kalbine en değerli hazineyi bırakır.”
+**Kıssadan hisse:** Kimse görmese de doğruyu söylemek, insanın kalbine en değerli hazineyi bırakır.

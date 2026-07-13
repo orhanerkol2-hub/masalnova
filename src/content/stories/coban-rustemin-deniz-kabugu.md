@@ -30,4 +30,4 @@ Rüstem gülümsemiş: "Küçük şeyler, saklarsan büyük işe yarar."
 
 O günden sonra iki çoban birlikte kabuğu kullanmışlar, sırayla su taşımışlar. Deniz kıyısında güzel bir dostluk başlamış.
 
-**Kıssadan hisse:** Küçük şeyleri değerli bilip iyi kullanan, günün birinde başkalarına da yardım edebilir.”
+**Kıssadan hisse:** Küçük şeyleri değerli bilip iyi kullanan, günün birinde başkalarına da yardım edebilir.

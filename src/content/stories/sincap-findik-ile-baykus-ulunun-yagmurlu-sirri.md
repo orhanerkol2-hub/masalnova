@@ -16,7 +16,7 @@ Bir gün gökyüzü kararmış, bulutlar birbirine girmiş ve şiddetli bir yağ
 
 "Torbam kayboldu!" diye bağırmış Fındık, yağmurun altında koşarak Ulu'nun dalına çıkmış. Ulu, yuvarlak gözlerini kırpıştırarak sormuş: "Ne oldu küçük dostum, neden bu kadar telaşlısın?"
 
-Fındık başını öne eğmiş. Aslında torbayı kovuktan kendisi almış, Minnak'la oynarken bir kayanın altına saklamış ve unutmuştu. Ama şimdi bunu söylemekten çekiniyormuş, çünkü belki de Ulu ona kızardı diye düşünüyormuş.
+Fındık başını öne eğmiş. Aslında torbayı kovuktan kendisi almış, Minnak'la oynarken bir kayanın altına saklamış ve unutmuş. Ama şimdi bunu söylemekten çekiniyormuş, çünkü belki de Ulu ona kızardı diye düşünüyormuş.
 
 "Torbamı biri çaldı sanırım," demiş Fındık, sesi titreyerek. Ama Ulu'nun bilge gözleri onu dikkatle izliyormuş. "Fındık," demiş yumuşak bir sesle, "gözlerin bana bir şey söylemiyor gibi görünüyor. Doğruyu söylersen sana yardım edebilirim, ama yanlış bir hikâye anlatırsan seni doğru yere götüremem."
 
@@ -30,4 +30,4 @@ O akşam Fındık ile Ulu, meşe ağacının kovuğunda sıcacık oturup yağmur
 
 Ertesi gün güneş açmış, orman ışıl ışıl parlamış. Fındık, Minnak'a da başına gelenleri anlatmış ve ikisi birlikte gülmüşler. O günden sonra Fındık, ne olursa olsun hep gerçeği söylemeye özen göstermiş, çünkü doğruluğun kendisine hem huzur hem de güvenilir dostlar kazandırdığını öğrenmiş.
 
-**Kıssadan hisse:** Doğruyu söylemek bazen zor gelse de, her zaman en güvenilir ve huzurlu yoldur.”}
+**Kıssadan hisse:** Doğruyu söylemek bazen zor gelse de, her zaman en güvenilir ve huzurlu yoldur.

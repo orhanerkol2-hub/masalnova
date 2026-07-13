@@ -50,4 +50,4 @@ Keloğlan gülümseyerek anlatmış: "Dağda yardıma ihtiyacı olan bir dost bu
 
 O günden sonra köylüler zaman zaman dağa çıkıp devi ziyaret etmeye başlamışlar. Dev artık yalnız değilmiş, köyün bir dostu olmuş. Kışın en soğuk günlerinde bile kulübesinde sıcacık bir ocak yanarmış, çünkü paylaşmanın sıcaklığı her yeri ısıtırmış.
 
-**Kıssadan hisse:** Bir elin nesi var, iki elin sesi var; yardımlaşan gönüller hiçbir kışta üşümez.”
+**Kıssadan hisse:** Bir elin nesi var, iki elin sesi var; yardımlaşan gönüller hiçbir kışta üşümez.

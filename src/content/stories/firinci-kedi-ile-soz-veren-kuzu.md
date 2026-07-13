@@ -30,4 +30,4 @@ Fırıncı dede bu güzel manzarayı görünce gülümsemiş ve fırının kapı
 
 Köyün çocukları bile bu hikâyeyi duyunca birbirlerine söz vermeye, sonra da o sözleri büyük bir gururla tutmaya başlamışlar. Minnoş ile Puf'un dostluğu, yıllarca köyde anlatılan en sevilen hikâye olmuş.
 
-**Kıssadan hisse:** Verilen bir söz, tutulduğunda en güzel dostlukların kapısını açar.”}[Not: internal tag closed]
+**Kıssadan hisse:** Verilen bir söz, tutulduğunda en güzel dostlukların kapısını açar.

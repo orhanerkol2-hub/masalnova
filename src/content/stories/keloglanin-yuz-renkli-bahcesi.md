@@ -28,7 +28,7 @@ Günler geçmiş, Keloğlan'ın alnından terler dökülmüş ama bahçe yavaş 
 
 Kırkıncı gün Padişah bahçeye girdiğinde gözlerine inanamamış. Bahçe, eskisinden bin kat daha güzel, rengarenk bir cennete dönüşmüş. Sarı, kırmızı, mor, pembe çiçekler yan yana dizilmiş; sanki gökkuşağı toprağa inmiş gibi görünüyormuş.
 
-"Bunu nasıl yaptın Keloğlan?" diye sormuş Padişah hayretle. Keloğlan tevazuyla eğilmiş: "Büyülü bir sırrım yok Padişahım. Sadece her gün erken kalktım, sabırla çalıştım ve çiçekleri sevgiyle sudum."
+"Bunu nasıl yaptın Keloğlan?" diye sormuş Padişah hayretle. Keloğlan tevazuyla eğilmiş: "Büyülü bir sırrım yok Padişahım. Sadece her gün erken kalktım, sabırla çalıştım ve çiçekleri sevgiyle suladım."
 
 Padişah, sözünü tutmuş ve Keloğlan'ı baş bahçıvan yapmış. Ama Keloğlan bu unvanla değil, bahçenin yeniden hayat bulmasıyla mutlu olmuş. Köyüne döndüğünde herkese demiş ki: "Görünüşe bakmayın, emeğe bakın. Çalışkanlık her kapıyı açar."
 

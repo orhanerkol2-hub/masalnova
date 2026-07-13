@@ -30,4 +30,4 @@ Kaan gururla gülümsemiş. "Söz verdim ya. Söz, verilince tutulur."
 
 O gece ikisi de yıldıza bakarak uyumuş, kalpleri sıcacık bir mutlulukla dolmuş.
 
-**Kıssadan hisse:** Verilen söz, ne kadar zor olsa da mutlaka tutulmalıdır.”
+**Kıssadan hisse:** Verilen söz, ne kadar zor olsa da mutlaka tutulmalıdır.

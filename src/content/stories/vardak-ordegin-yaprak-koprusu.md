@@ -12,7 +12,7 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde yemyeşil bir ormanın kıyısında küçük bir dere akarmış. Bu derede Vardak adında sarı gagalı, sevimli bir ördek yaşarmış. Vardak, her sabah derede yüzer, sonra ormanın içinde dolaşıp arkadaşlarını ziyaret edermiş.
 
-Bir gün ormanda güçlü bir yağmur yağmış. Yağmur dinince Vardak dereye gitmiş ama bir şey görmüş: derenin üzerindeki küçük tahta köprü, sel sularıyla kırılıp gitmişmiş. Köprünün öbür tarafında ise Fındık adlı sincap ile Toparlak adlı kirpi kalakalmışlar. Onlar dereyi geçemedikleri için kış için topladıkları yiyecekleri karşıya taşıyamıyorlarmış.
+Bir gün ormanda güçlü bir yağmur yağmış. Yağmur dinince Vardak dereye gitmiş ama bir şey görmüş: derenin üzerindeki küçük tahta köprü, sel sularıyla kırılıp gitmiş. Köprünün öbür tarafında ise Fındık adlı sincap ile Toparlak adlı kirpi kalakalmışlar. Onlar dereyi geçemedikleri için kış için topladıkları yiyecekleri karşıya taşıyamıyorlarmış.
 
 Vardak, arkadaşlarının üzgün yüzlerini görünce hemen bir çözüm aramaya başlamış. "Merak etmeyin," demiş gülümseyerek, "birlikte bir yol buluruz." Önce büyük bir yaprağı suya atmış, ama yaprak akıntıyla sürüklenip gitmiş. Sonra ince bir dal denemiş, o da işe yaramamış.
 

@@ -30,4 +30,4 @@ O günden sonra Sedef, her sabah Doruk'un evinin üstünden geçer, kanat çırp
 
 Sevgili çocuk, sence bir canlıya yardım ederken korkularımızı yenmek neden önemlidir?
 
-**Kıssadan hisse:** Küçük bir kalpten doğan büyük bir merhamet, en korkusuz cesaretin ta kendisidir.”
+**Kıssadan hisse:** Küçük bir kalpten doğan büyük bir merhamet, en korkusuz cesaretin ta kendisidir.

@@ -22,4 +22,4 @@ Fırtına dinip de bulutlar açılınca, çayırın üzerine yemyeşil bir gökk
 
 O günden sonra çayırdaki herkes Turan'ın adını cesaretle anmış. Aslında Turan da o gün fırtınadan korkmuştu, ama korkusunun üstesinden gelip koyunlarını korumuştu. İşte gerçek cesaret buymuş: korkmamak değil, korkuyla birlikte doğru olanı yapmakmış.
 
-**Kıssadan hisse:** Cesaret, korkusuz olmak değil, korkuya rağmen sevdiklerimizi korumaktır.”}
+**Kıssadan hisse:** Cesaret, korkusuz olmak değil, korkuya rağmen sevdiklerimizi korumaktır.

@@ -12,7 +12,7 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün en yüksek tepesinde küçük bir bahçe varmış. Bu bahçede yaşlı ve bilge bir dede yaşarmış. Herkes ona Dede Yıldızname dermiş, çünkü o, gökyüzündeki her yıldızın adını bilirmiş.
 
-Her akşam, güneş yavaşça batıp gökyüzü mora, sonra laciverte dönünce, Dede Yıldızname torunu küçük Elif'i bahçedeki yumuşak battaniyenin üzerine otururmuş. İkisi de başlarını kaldırıp göğe bakarlarmış.
+Her akşam, güneş yavaşça batıp gökyüzü mora, sonra laciverte dönünce, Dede Yıldızname torunu küçük Elif'i bahçedeki yumuşak battaniyenin üzerine oturturmuş. İkisi de başlarını kaldırıp göğe bakarlarmış.
 
 "Dede," demiş Elif bir akşam, sesi usulca esen rüzgâr gibi, "neden bu kadar çok yıldız var?"
 

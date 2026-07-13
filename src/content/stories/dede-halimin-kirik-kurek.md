@@ -12,7 +12,7 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, sakin bir gölün kenarında Dede Halim yaşarmış. Her sabah küçük kayığıyla göle açılır, balık tutar, sonra köyün çocuklarına dağıtırmış.
 
-Bir gün gölün kıyısında oturan küçük Ali'yi görmüş. Çocuğun kayığı kıyıya çekilmiş ama küreği ortadan ikiye kırılmışmış. Ali, ağlamaklı bir sesle "Babama balık götürecektim ama küreğim kırıldı" demiş.
+Bir gün gölün kıyısında oturan küçük Ali'yi görmüş. Çocuğun kayığı kıyıya çekilmiş ama küreği ortadan ikiye kırılmış. Ali, ağlamaklı bir sesle "Babama balık götürecektim ama küreğim kırıldı" demiş.
 
 Dede Halim hiç düşünmeden kendi küreklerinden birini çocuğa uzatmış. "Al bunu evladım, ben yavaşça kollarımla da kürek çekebilirim" demiş gülümseyerek.
 

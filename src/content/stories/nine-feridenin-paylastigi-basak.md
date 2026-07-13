@@ -22,4 +22,4 @@ Başağı nazikçe ikiye bölmüş, taneleri sayıp on ona on paylaştırmış. 
 
 O günden sonra tarlada bir şey bulduklarında hemen Nine Feride'yi çağırıp, "Sen bize adil olanı söyle," dermiş çocuklar. Nine Feride de her seferinde aynı sıcak gülümsemeyle onları dinlermiş.
 
-**Kıssadan hisse:** Adalet, herkesin emeğini görüp hakça paylaşmaktan geçer.”
+**Kıssadan hisse:** Adalet, herkesin emeğini görüp hakça paylaşmaktan geçer.

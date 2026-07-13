@@ -40,7 +40,7 @@ Keloğlan başını sallamış. "Padişahım, insanın kıyafeti, dili ya da gö
 
 Padişah bu sözlerden çok memnun kalmış. "Bu güzel düşünceni tüm ülkeme yaymalısın," demiş ve Keloğlan'ı pazarın baş hoşgörü elçisi ilan etmiş.
 
-O geceden sonra yıldızlı pazar, köyün insanlarının da ziyaret ettiği bir yer olmuş. Herkes birbirinin farklı dillerini, kıyafetlerini, gelenklerini tanımaya başlamış. Baba Recep'in fenerleri en çok satan ürün olmuş, kuş dilindeki tüccar ise köye sık sık uğrayan sevilen bir dost olmuş.
+O geceden sonra yıldızlı pazar, köyün insanlarının da ziyaret ettiği bir yer olmuş. Herkes birbirinin farklı dillerini, kıyafetlerini, geleneklerini tanımaya başlamış. Baba Recep'in fenerleri en çok satan ürün olmuş, kuş dilindeki tüccar ise köye sık sık uğrayan sevilen bir dost olmuş.
 
 Keloğlan, yıldızların altında gülümseyerek köyüne dönmüş. Artık kimse farklı görünen birini kapıdan çevirmiyormuş; çünkü hepsi Keloğlan'dan, gerçek dostluğun kalpte başladığını öğrenmiş.
 

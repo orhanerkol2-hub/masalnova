@@ -30,4 +30,4 @@ Bir gün çiftlikteki tavşan yavruları, Cesur'a neden artık hiç yalnız gör
 
 O günden sonra Cesur ile Hulki'nin dostluğu tüm ormana örnek olmuş. Yıldızlı gecelerde ikisinin sesi, meşe ağacının altından hafifçe yankılanırmış: biri havlar, biri ötermiş, ama ikisi de aynı gökyüzüne bakarak gülümsermiş.
 
-**Kıssadan hisse:** Gerçek dostluk, en karanlık geceleri bile ışıkla doldurur.”
+**Kıssadan hisse:** Gerçek dostluk, en karanlık geceleri bile ışıkla doldurur.

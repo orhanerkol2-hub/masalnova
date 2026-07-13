@@ -42,4 +42,4 @@ Tarık o günden sonra hem ormanda hem evinde her işine sevgiyle sarılmış. A
 
 Peki sen de sevdiğin bir işi yaparken sabırla emek vermeyi denedin mi?
 
-**Kıssadan hisse:** Gerçek değer, sabırla ve emekle kazanılan her şeydedir.”}]}.
+**Kıssadan hisse:** Gerçek değer, sabırla ve emekle kazanılan her şeydedir.

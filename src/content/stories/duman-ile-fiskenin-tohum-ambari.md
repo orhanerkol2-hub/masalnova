@@ -16,7 +16,7 @@ Bir gün gölün kenarında küçük ve çalışkan bir karınca olan Fiske'yle 
 
 "Neden bu kadar zorlanıyorsun?" diye sormuş Duman gülerek. "Şimdi ye gitsin, rahatla!"
 
-Fiske gülümsemiş. "Bu tohumu şimdi yemezsem, kışın açlıktan kurtulurum. Yuvamda küçük bir ambar yapıyorum, oraya biriktiriyorum."
+Fiske gülümsemiş. "Bu tohumu şimdi yersem, kışın aç kalırım. Yuvamda küçük bir ambar yapıyorum, oraya biriktiriyorum."
 
 Duman bu sözlere önce şaşırmış, sonra da gülmüş. Ona göre yiyeceği biriktirmek yerine hemen yemek daha mantıklıymış. Ne de olsa göl bereketliymiş, her gün balıkçılardan artan lokmalar bulunuyormuş.
 

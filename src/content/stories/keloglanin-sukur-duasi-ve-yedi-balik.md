@@ -36,4 +36,4 @@ Keloğlan köye döndüğünde altınları herkesle paylaşmış. O günden sonr
 
 Keloğlan her akşam denize bakıp şükredermiş: "Ne kadar azımız olsa da, paylaşınca çoğalıyor."
 
-**Kıssadan hisse:** Elimizdeki azıcık nimeti paylaşmak, onu bereketlendirir ve gönülleri şükürle doldurur.”}}
+**Kıssadan hisse:** Elimizdeki azıcık nimeti paylaşmak, onu bereketlendirir ve gönülleri şükürle doldurur.

@@ -30,4 +30,4 @@ Kraliçe, Kaan'a sarayın en özel odasının anahtarını vermiş. Ama Kaan bu 
 
 O günden sonra Kaan köyüne dönmüş ve herkese, en küçük görünen insanların bile en büyük gönüllere sahip olabileceğini anlatmış. Sen de çevrendeki insanlara, onların ne yaptığına bakmadan, sadece insan oldukları için değer verir misin?
 
-**Kıssadan hisse:** Gerçek değer, karşımızdaki herkese saygıyla davranmayı bilen bir kalpte gizlidir.”}
+**Kıssadan hisse:** Gerçek değer, karşımızdaki herkese saygıyla davranmayı bilen bir kalpte gizlidir.

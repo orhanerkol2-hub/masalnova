@@ -34,4 +34,4 @@ Tosbik gülümseyerek, "Sen bize hep nazik davrandın Pati. Şimdi sıra bizdeyd
 
 O günden sonra göldeki tüm hayvanlar birbirine daha çok yardım etmeye başlamışlar. Sakin göl, adının hakkını verircesine huzurlu ve sevgi dolu bir yer olmuş.
 
-**Kıssadan hisse:** Gösterdiğimiz her küçük nezaket, bir gün büyük bir dostluk olarak bize geri döner.”
+**Kıssadan hisse:** Gösterdiğimiz her küçük nezaket, bir gün büyük bir dostluk olarak bize geri döner.

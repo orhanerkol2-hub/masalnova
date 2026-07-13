@@ -24,7 +24,7 @@ Dede Şükrü onu ormanda gezmeye davet etmiş. Önce bir kelebeğin renkli kana
 
 Sonra bir kuşun tatlı sesini dinletmiş ona. Defne kulaklarına şükrederek sepete bir tüy koymuş. Derenin serin suyundan içmişler; Defne suyun tadına şükrederek küçük bir taş koymuş sepete.
 
-Akşam olduğunda sepet dolmuş taşan renkli yapraklar, tüyler, taşlarla. Defne sepete bakmış ve gülümsemiş. "Dede," demiş, "benim aslında çok şeyim varmış, hiç fark etmemişim."
+Akşam olduğunda sepet renkli yapraklar, tüyler ve taşlarla dolup taşmış. Defne sepete bakmış ve gülümsemiş. "Dede," demiş, "benim aslında çok şeyim varmış, hiç fark etmemişim."
 
 Dede Şükrü ona sevgiyle bakmış. "Şükür, elimizdekini görmektir kızım. İnsan ne kadar azla yetinirse, o kadar çok şeye sahip olduğunu anlar."
 

@@ -16,7 +16,7 @@ Bir akşam gökyüzü birden kararmış. Kara bulutlar birbirine girmiş, uzakta
 
 Tam o sırada yağmur damlaları düşmeye başlamış. Pamuk telaşla koşacak bir yer aramış ama her yer ıslanmaya başlamış bile. Küçük kuzucuk üşümüş, tir tir titremiş.
 
-O sırada ormanın öbür ucundan turuncu tüylü bir tilki, adı Fındık, elinde kocaman bir şemsiyeyle geçiyormuş. Fındık aslında bencil bir tilki değilmiş ama yalnız yaşadığı için paylaşmayı pek denememişmiş.
+O sırada ormanın öbür ucundan turuncu tüylü bir tilki, adı Fındık, elinde kocaman bir şemsiyeyle geçiyormuş. Fındık aslında bencil bir tilki değilmiş ama yalnız yaşadığı için paylaşmayı pek denememiş.
 
 Pamuk'u titrerken görünce Fındık'ın içi cız etmiş. "Bu küçük kuzucuk yağmurda kalmış," diye düşünmüş. Hızlıca yanına koşmuş.
 
@@ -38,4 +38,4 @@ O günden sonra Fındık ile Pamuk sık sık buluşmuşlar. Yağmurlu günlerde 
 
 Artık o çayırda hiçbir hayvan yağmurda tek başına kalmazmış, çünkü herkes bir arkadaşının şemsiyesinin altına sığınabilirmiş.
 
-**Kıssadan hisse:** Küçük bir yardım, en soğuk yağmurları bile sımsıcak bir dostluğa çevirebilir.“
+**Kıssadan hisse:** Küçük bir yardım, en soğuk yağmurları bile sımsıcak bir dostluğa çevirebilir.

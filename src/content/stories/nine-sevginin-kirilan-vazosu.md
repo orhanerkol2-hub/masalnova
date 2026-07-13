@@ -22,8 +22,8 @@ Nine Sevgi kırık parçalara bakmış, sonra Ela'nın üzgün yüzüne bakmış
 
 Ela, ninenin sıcak kollarına sarılmış. Birlikte kırık parçaları toplamışlar. Nine Sevgi, parçaları bahçenin bir köşesine koymuş, üzerine renkli çakıl taşları eklemiş. Böylece kırık vazo, minik bir çiçek saksısına dönüşmüş.
 
-Ela, o günden sonra her sabah o küçük saksıya kendi elleriyle çiçek dikermiş. Nine Sevgi de her seferinde ona gülümseyerek, "Bak, kırılan bir şeyden ne güzel bir şey doğdu," derm iş.
+Ela, o günden sonra her sabah o küçük saksıya kendi elleriyle çiçek dikermiş. Nine Sevgi de her seferinde ona gülümseyerek, "Bak, kırılan bir şeyden ne güzel bir şey doğdu," dermiş.
 
 Bahçedeki papatyalar rüzgârda sallanır, ikisinin dostluğunu izlermiş sanki.
 
-**Kıssadan hisse:** Affetmek, kırılan şeyleri yeniden güzelleştirmenin en tatlı yoludur.“
+**Kıssadan hisse:** Affetmek, kırılan şeyleri yeniden güzelleştirmenin en tatlı yoludur.

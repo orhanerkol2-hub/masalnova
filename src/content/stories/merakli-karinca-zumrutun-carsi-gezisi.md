@@ -14,7 +14,7 @@ Bir varmış bir yokmuş, minicik bir bahçenin kenarında Zümrüt adında bir 
 
 Bir sabah yuvasından çıkan Zümrüt, uzaktan gelen sesler işitmiş. Cıvıltılar, gıcırtılar, kahkahalar birbirine karışıyormuş. "Bu ses nereden geliyor?" diye düşünmüş ve sesin geldiği yöne doğru yürümeye başlamış.
 
-Yürüdükçe önüne kalabalık bir çarşı çıkmış. Ah, ne çarşıymış o! Böcekler tezgah tezgah dolaşıyor, kelebekler renkli kanatlarıyla süzülüyor, kurbağalar nane yaprağı satıyormuş. Zümrüt gözlerini kırpıştırmış, böyle bir yer görmemişmiş hiç.
+Yürüdükçe önüne kalabalık bir çarşı çıkmış. Ah, ne çarşıymış o! Böcekler tezgah tezgah dolaşıyor, kelebekler renkli kanatlarıyla süzülüyor, kurbağalar nane yaprağı satıyormuş. Zümrüt gözlerini kırpıştırmış, böyle bir yer görmemiş hiç.
 
 "Bu ne kadar güzel bir gürültü!" demiş kendi kendine ve hemen keşfe başlamış. Önce bal damlası satan arıların tezgahına gitmiş, "Bu bal nereden geliyor?" diye sormuş. Arı gülümsemiş, "Çiçeklerden, küçük dostum, güneşin ısıttığı çiçeklerden!" demiş.
 

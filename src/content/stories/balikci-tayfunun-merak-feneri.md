@@ -30,4 +30,4 @@ O günden sonra Tayfun, her yeni ve gizemli şeyle karşılaştığında hem mer
 
 Sen de merak ettiğin bir şeyle karşılaştığında, Tayfun gibi sabırlı olup dikkatle davranırsan ne bulacağını hiç düşündün mü?
 
-**Kıssadan hisse:** Merak bizi güzel keşiflere götürür, ama sabır o keşiflerin iyi sonuçlanmasını sağlar.'
+**Kıssadan hisse:** Merak bizi güzel keşiflere götürür, ama sabır o keşiflerin iyi sonuçlanmasını sağlar.

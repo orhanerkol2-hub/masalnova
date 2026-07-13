@@ -10,7 +10,7 @@ themes: ["azim","sabır","çaba"]
 characters: ["Zeynep","Rüzgar Kuşu Tita"]
 publishedAt: "2026-07-12"
 ---
-Bir varmış bir yokmuş, evvel zaman içinde, geniş bir çayırın kenarında Zeynep adında meraklı bir kız yaşarmış. Zeynep, babasıyla birlikte kağıttan bir uçurtma yapmış. Uçurtmasının üzerinde parlak sarı güneşler çizilmiş.
+Bir varmış bir yokmuş, evvel zaman içinde, geniş bir çayırın kenarında Zeynep adında meraklı bir kız yaşarmış. Zeynep, babasıyla birlikte kağıttan bir uçurtma yapmış. Uçurtmasının üzerine parlak sarı güneşler çizmişler.
 
 Çayıra koşup uçurtmayı havaya kaldırmış, ama uçurtma hemen yere düşmüş. Zeynep şaşırmış, sonra tekrar denemiş. Uçurtma yine düşmüş.
 

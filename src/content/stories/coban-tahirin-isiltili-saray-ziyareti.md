@@ -16,7 +16,7 @@ Bir gün Tahir, koyunlarını otlatırken tepenin ardında ışıl ışıl parla
 
 Bahçede küçük bir prenses, ağlamaklı bir şekilde otururken görmüş Tahir'i. Prensesin en sevdiği kuşu kafesten kaçmış ve bir daha bulunamamış. Saraydaki askerler, hizmetkârlar aramışlar ama kuşu bulamamışlar.
 
-Tahir hemen yardım etmek istemiş. "Merhamba, ben bir çobanım. Hayvanları iyi tanırım, birlikte ararsak belki bulabiliriz," demiş. Prenses gözlerini silmiş ve başını sallamış.
+Tahir hemen yardım etmek istemiş. "Merhaba, ben bir çobanım. Hayvanları iyi tanırım, birlikte ararsak belki bulabiliriz," demiş. Prenses gözlerini silmiş ve başını sallamış.
 
 Tahir, Pamuk'u yanına çağırmış. Koyunlar keskin duyularıyla tanınırdı. Pamuk, burnunu havaya kaldırıp etrafı koklamış ve bahçenin en ucundaki büyük çınar ağacına doğru yürümüş. Tahir de onu takip etmiş.
 

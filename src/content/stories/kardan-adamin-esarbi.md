@@ -26,4 +26,4 @@ O gün eve giderken Defne üşümemiş, çünkü içi sıcacık bir mutlulukla d
 
 Defne o gece uyurken, kırmızı eşarbının artık Turan Amca'nın boynunda olduğunu düşünmüş ve gülümseyerek uykuya dalmış.
 
-**Kıssadan hisse:** Gerçek sorumluluk, başkasının ihtiyacını görüp elimizden geleni yapmaktır.”}
+**Kıssadan hisse:** Gerçek sorumluluk, başkasının ihtiyacını görüp elimizden geleni yapmaktır.

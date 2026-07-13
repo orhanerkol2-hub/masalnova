@@ -34,4 +34,4 @@ O geceden sonra Toprak, Fındık ve Işık sık sık buluşup birlikte gezmeye b
 
 Ormanın diğer hayvanları da bu üçlünün hikâyesini duymuşlar ve onlardan ilham alarak birbirlerine daha çok yardım etmeye başlamışlar. Küçük bir karıncanın yağmurda kaybolması, aslında büyük bir dostluğun başlangıcı olmuş.
 
-**Kıssadan hisse:** Gerçek dostluk, en karanlık ve yağmurlu anlarda birbirine ışık olmaktır.”
+**Kıssadan hisse:** Gerçek dostluk, en karanlık ve yağmurlu anlarda birbirine ışık olmaktır.

@@ -16,9 +16,9 @@ Güneş usulca batarken gökyüzü pembeye, sonra mora boyanırmış. Sadık, ko
 
 En küçük kuzusu Pamuk, her zaman Sadık'ın yanına sokulurmuş. Yumuşacık beyaz yünüyle Sadık'ın eline sürtünür, sanki "iyi akşamlar" der gibi mırıldanırmış.
 
-Çayırın üzerinde yıldızlar birer birer uyanırmış. Önce bir tane, sonra iki, sonra sayılamayacak kadar çok. Ay Dede de yavaşça yükselir, çayırı ışıltılı, gümüş bir örtüyle sarardı.
+Çayırın üzerinde yıldızlar birer birer uyanırmış. Önce bir tane, sonra iki, sonra sayılamayacak kadar çok. Ay Dede de yavaşça yükselir, çayırı ışıltılı, gümüş bir örtüyle sararmış.
 
-Sadık, koyunlarına bakıp içinden sayardı: "Bu sıcak çayır için şükür. Bu yumuşak yünler için şükür. Bu sessiz akşam için şükür." Sesi rüzgârla birleşir, çayırın üstünde tatlı bir ninni gibi yayılırmış.
+Sadık, koyunlarına bakıp içinden sayarmış: "Bu sıcak çayır için şükür. Bu yumuşak yünler için şükür. Bu sessiz akşam için şükür." Sesi rüzgârla birleşir, çayırın üstünde tatlı bir ninni gibi yayılırmış.
 
 Koyunlar birer birer otların arasına kıvrılır, gözlerini kaparmış. Pamuk, Sadık'ın dizine yaslanır, minik başını sallayarak uykuya dalarmış.
 

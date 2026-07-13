@@ -32,4 +32,4 @@ O günden sonra Kırmızıbaş her sabah öterken sadece kendi gösterişi için
 
 Ve böylece horoz ile tavşan, çiçekli bahçelerinde birbirlerine kol kanat gererek, hiçbir işin yalnız yapılmasına gerek olmadığını herkese göstermişler.
 
-**Kıssadan hisse:** Gerçek güç, gösterişte değil, elini uzatıp bir başkasına yardım etmekte gizlidir.”
+**Kıssadan hisse:** Gerçek güç, gösterişte değil, elini uzatıp bir başkasına yardım etmekte gizlidir.

@@ -26,4 +26,4 @@ Defne'nin küçük kalbi mutlulukla dolmuş. Teyze Sultan ona teşekkür etmek i
 
 O günden sonra Defne, kıyıda ne bulursa hemen sahibini aramaya başlamış. Çünkü bulduğu her şeyi geri vermek, ona bulduğu şeyi tutmaktan daha çok mutluluk veriyormuş.
 
-**Kıssadan hisse:** Başkasına ait bir şeyi bulduğumuzda onu sahibine geri vermek, hem doğru olanı yapmak hem de en güzel mutluluğu yaşamaktır.”
+**Kıssadan hisse:** Başkasına ait bir şeyi bulduğumuzda onu sahibine geri vermek, hem doğru olanı yapmak hem de en güzel mutluluğu yaşamaktır.

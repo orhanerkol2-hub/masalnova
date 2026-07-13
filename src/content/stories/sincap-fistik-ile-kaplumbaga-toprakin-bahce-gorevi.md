@@ -34,4 +34,4 @@ O günden sonra gül fidanları yeniden canlanmış, kıpkırmızı çiçekler a
 
 Baykuş Hikmet bir akşam onlara gülümseyerek: "Sorumluluk, unutmamak ve yardımlaşmaktır," demiş. Fıstık ile Toprak, o günden sonra her görevi birlikte, gülüşerek tamamlamışlar.
 
-**Kıssadan hisse:** Sorumluluklarımızı unutmadan ve birbirimize destek olarak yerine getirdiğimizde, en zor işler bile kolaylaşır.”
+**Kıssadan hisse:** Sorumluluklarımızı unutmadan ve birbirimize destek olarak yerine getirdiğimizde, en zor işler bile kolaylaşır.

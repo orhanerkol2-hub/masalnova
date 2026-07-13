@@ -4,7 +4,7 @@ shortDescription: "Meraklı küçük bir kızın ışıl ışıl sarayda öğren
 coverEmoji: "👑"
 coverColor: "#2f74e8"
 ageGroups: ["5-7"]
-readingTime: 2
+readingTime: 1
 categories: ["kisa"]
 themes: ["saygı","merak","incelik"]
 characters: ["Elmas","Saray Bekçisi Nine Sultan","Kraliçe"]
@@ -24,4 +24,4 @@ Bu sözler tam o sırada oradan geçen Kraliçe'nin kulağına gitmiş. Kraliçe
 
 Elmas o gün öğrendiği şeyi hiç unutmamış: Merak etmek güzelmiş, ama önce izin isteyip saygı göstermek daha da güzelmiş.
 
-**Kıssadan hisse:** Merakımızı saygıyla birleştirirsek, kapılar bize daha kolay açılır.**Kıssadan hisse:** Merakımızı saygıyla birleştirirsek, kapılar bize daha kolay açılır.**Kıssadan hisse:** Merakımızı saygıyla birleştirirsek, kapılar bize daha kolay açılır.
+**Kıssadan hisse:** Merakımızı saygıyla birleştirirsek, kapılar bize daha kolay açılır.

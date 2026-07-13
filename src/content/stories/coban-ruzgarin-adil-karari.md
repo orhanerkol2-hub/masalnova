@@ -20,4 +20,4 @@ Elmayı çıkardığı küçük bıçakla tam ortadan ikiye bölmüş. Yarısın
 
 Kardeşler önce şaşırmış, sonra birbirlerine bakıp gülmüşler. Elmayı afiyetle yemişler ve o günden sonra ormanda buldukları her şeyi paylaşarak sevinçle oynamışlar. Rüzgar da sürüsünün başına dönmüş, gülümseyerek yoluna devam etmiş.
 
-**Kıssadan hisse:** Gerçek adalet, kavga etmeden paylaşmayı bilmektir.“}
+**Kıssadan hisse:** Gerçek adalet, kavga etmeden paylaşmayı bilmektir.

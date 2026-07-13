@@ -28,4 +28,4 @@ Sonra cebinden çıkardığı küçük bıçakla elmayı tam ortadan ikiye bölm
 
 O geceden sonra Fındık ile Minnak her akşam birlikte patikada yürümeye, buldukları her şeyi paylaşmaya başlamışlar. Bahçıvan Sadık da fenerinin ışığında onları izlerken içi sevinçle dolmuş.
 
-**Kıssadan hisse:** Paylaşmak, kavga etmekten her zaman daha tatlıdır.”
+**Kıssadan hisse:** Paylaşmak, kavga etmekten her zaman daha tatlıdır.

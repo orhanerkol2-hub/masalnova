@@ -26,5 +26,4 @@ Nine gözyaşlarına hâkim olamamış, sevinçle Sadık'a sarılmış. O gün k
 
 Sadık, koyunlarının yanına dönerken gülümsüyormuş. Bazen beklemek, en güzel çözümü bulmanın yoluymuş.
 
-**Kıssadan hisse:** Sabırla beklemek, çoğu zaman en güzel çözümü getirir.”}, wait invalid quote.  
 **Kıssadan hisse:** Sabırla beklemek, çoğu zaman en güzel çözümü getirir.

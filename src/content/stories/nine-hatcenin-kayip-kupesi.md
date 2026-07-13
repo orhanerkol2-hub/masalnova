@@ -22,4 +22,4 @@ Elmas gülümsemiş: "Almak isteseydim kolay olurdu nine, ama o senin hatıran, 
 
 Nine Hatçe, Elmas'a bir sepet dolusu taze başak vermiş. "Sen bu tarlanın en değerli hasadısın," demiş gülerek. O günden sonra Elmas her yıl tarlaya gelip Nine Hatçe'yle beraber başak toplamış, ikisi de bu küçük anıyı hiç unutmamış.
 
-**Kıssadan hisse:** Dürüstlük, en küçük bir buluşta bile gösterdiğimiz en büyük zenginliktir.”
+**Kıssadan hisse:** Dürüstlük, en küçük bir buluşta bile gösterdiğimiz en büyük zenginliktir.

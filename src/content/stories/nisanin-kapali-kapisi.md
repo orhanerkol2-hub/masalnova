@@ -24,7 +24,7 @@ Ertesi gün anahtarı Tomur'dan almış, kapının kilidine sokmuş. Elleri titr
 
 Kapının ardında karanlık bir yer değil, küçücük, unutulmuş bir bahçe varmış! İçinde solmuş ama hâlâ yaşayan minik fidanlar, kurumuş bir çeşme ve taşların arasından fışkıran cesur bir papatya varmış. Meğer bu, yıllar önce Ayşe Teyze'nin annesinin kurduğu ilk bahçeymiş, zamanla unutulmuş.
 
-Nisan hemen Ayşe Teyze'yi çağırmış. Teyze bahçeyi görünce gözyaşlarına boğulmuş; hem hüzünlü hem mutlu olmuş. "Bu bahçeyi annem kaybettiğimi düşünüyordum," demiş. "Sen onu bana geri verdin, küçük kızım."
+Nisan hemen Ayşe Teyze'yi çağırmış. Teyze bahçeyi görünce gözyaşlarına boğulmuş; hem hüzünlü hem mutlu olmuş. "Annemden kalan bu bahçeyi sonsuza dek kaybettiğimi düşünüyordum," demiş. "Sen onu bana geri verdin, küçük kızım."
 
 Birlikte fidanları sulamışlar, çeşmeyi temizlemişler. Kısa sürede unutulmuş bahçe yeniden çiçek açmış, rengarenk kelebeklerle dolmuş. Nisan, korkusuna rağmen kapıyı açtığı için hem kendisiyle hem de Ayşe Teyze'yle gurur duymuş.
 

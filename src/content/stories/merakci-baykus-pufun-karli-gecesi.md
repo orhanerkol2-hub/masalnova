@@ -30,4 +30,4 @@ Sabah olduğunda, Ceviz kendi yuvasına dönmüş, Fısıltı ormanın derinlikl
 
 Puf o günden sonra her merak ettiği şeyin ardına düşmüş, ama artık hep yardım etmeyi de unutmazmış. Çünkü öğrenmiş ki meraklı bir yürek, aynı zamanda cömert bir yürek olabilirmiş.
 
-**Kıssadan hisse:** Merak ederken bile başkalarına yardım etmeyi unutmayan bir yürek, en güzel keşifleri yapar.”
+**Kıssadan hisse:** Merak ederken bile başkalarına yardım etmeyi unutmayan bir yürek, en güzel keşifleri yapar.

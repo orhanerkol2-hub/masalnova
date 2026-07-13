@@ -36,4 +36,4 @@ Küçük Toprak da büyüyünce Nine Havva gibi alçakgönüllü bir çiftçi ol
 
 Peki sen, bir başarı kazandığında bunu sana yardım edenlerle paylaşır mısın?
 
-**Kıssadan hisse:** Gerçek büyüklük, başarılarımızı alçakgönüllülükle paylaşmayı bilmektir.”}}}}
+**Kıssadan hisse:** Gerçek büyüklük, başarılarımızı alçakgönüllülükle paylaşmayı bilmektir.

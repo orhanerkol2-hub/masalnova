@@ -10,7 +10,7 @@ themes: ["tutumluluk","dürüstlük","çalışkanlık"]
 characters: ["Keloğlan","Yaşlı Kadın","Padişah"]
 publishedAt: "2026-07-12"
 ---
-Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında zeki ve kahrolası kel başlı bir delikanlı yaşarmış. Annesiyle küçük bir evde otururlar, ellerine geçen az parayı hemen harcamadan biriktirmeye çalışırlarmış. Ama zaman zaman Keloğlan'ın canı sıkılır, "Bu kadar tutumlu olmak da neye yarar ki" diye söylenirmiş.
+Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında zeki ve kel başlı bir delikanlı yaşarmış. Annesiyle küçük bir evde otururlar, ellerine geçen az parayı hemen harcamadan biriktirmeye çalışırlarmış. Ama zaman zaman Keloğlan'ın canı sıkılır, "Bu kadar tutumlu olmak da neye yarar ki" diye söylenirmiş.
 
 Bir gün ormanın derinliklerinde odun toplarken, sarp bir kayanın arkasında hiç görmediği bir mağara ağzı fark etmiş. Mağaranın içinden hafif bir ışık sızıyormuş. Keloğlan meraklanmış, elindeki baltayı sıkıca tutup içeri girmiş.
 

@@ -12,7 +12,7 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağların eteğinde, ağaçların arasında sakin bir göl varmış. Bu göl o kadar durgunmuş ki, üzerine eğilen herkes kendi yüzünü ayna gibi görürmüş. Gölün kıyısında, küçük bir kulübede Turgay Dede yaşarmış. Köyün en yaşlı ve en bilge insanı oymuş.
 
-Bir gün köyden Deniz adında bir çocuk, dedeyi ziyarete gelmiş. Deniz aceleci bir çocukmuş, herkesin sözünü keser, kendi istediğini hemen yaptırmak isterdi. Turgay Dede'nin yanına oturmuş ve hemen sormuş:
+Bir gün köyden Deniz adında bir çocuk, dedeyi ziyarete gelmiş. Deniz aceleci bir çocukmuş, herkesin sözünü keser, kendi istediğini hemen yaptırmak istermiş. Turgay Dede'nin yanına oturmuş ve hemen sormuş:
 
 "Dede, bana balık tutmayı öğret! Hemen şimdi öğret, bekleyemem!"
 

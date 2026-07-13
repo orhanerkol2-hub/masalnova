@@ -12,7 +12,7 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında Nehir adında meraklı küçük bir kız yaşarmış. Nehir her gün ormana girer, çiçekleri koklar, böcekleri izlermiş.
 
-Bir sabah ormanda parlak kırmızı bir tohum bulmuş. "Bu tohumdan ne çıkacak?" diye merak etmiş hemen toprağa dikmiş.
+Bir sabah ormanda parlak kırmızı bir tohum bulmuş. "Bu tohumdan ne çıkacak?" diye merak etmiş ve hemen toprağa dikmiş.
 
 Ertesi gün koşarak bakmaya gitmiş. Hiçbir şey yokmuş. "Neden büyümedi?" diye söylenmiş, üzülmüş.
 

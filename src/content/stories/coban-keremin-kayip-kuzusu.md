@@ -26,4 +26,4 @@ Bu haber köyde hızla yayılmış. Artık herkes Kerem'e güveniyormuş; kaybol
 
 Kerem, dürüstlüğünün kendisine köyün en değerli hazinesini, insanların güvenini kazandırdığını görmüş ve içi huzurla dolmuş.
 
-**Kıssadan hisse:** Dürüstlük, insanın kazanabileceği en büyük hazinedir.”
+**Kıssadan hisse:** Dürüstlük, insanın kazanabileceği en büyük hazinedir.

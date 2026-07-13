@@ -14,11 +14,11 @@ Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarında küçük bir 
 
 Bir akşam annesi, komşu köyde yaşayan hasta teyzesine bir sepet taze ekmek ve bal götürmesi için Umut'tan yardım istemiş. Yol, ormanın içinden geçen ay ışıklı bir patikaymış. Umut hiç çekinmeden sepeti almış ve yola koyulmuş.
 
-Patikada yürürken önce yaşlı bir baykuşa rastlamış. Baykuş Sarman, kanadını incitmiş ve dalından inememişmiş. "Yardım eder misin küçük dostum?" diye seslenmiş. Umut hemen durmuş, yumuşak bir yaprak yığını bulup baykuşun altına koymuş, böylece Sarman güvenle inebilmiş. Baykuş ona teşekkür etmiş: "Nezaketin, karanlığı bile aydınlatıyor."
+Patikada yürürken önce yaşlı bir baykuşa rastlamış. Baykuş Sarman, kanadını incitmiş ve dalından inememiş. "Yardım eder misin küçük dostum?" diye seslenmiş. Umut hemen durmuş, yumuşak bir yaprak yığını bulup baykuşun altına koymuş, böylece Sarman güvenle inebilmiş. Baykuş ona teşekkür etmiş: "Nezaketin, karanlığı bile aydınlatıyor."
 
 Biraz sonra yolda küçük bir kirpi görmüş. Kirpi Fındık, dikenlerine takılan bir ip yumağıyla debelenip duruyormuş. Umut, ellerini dikkatlice kullanarak ipi yavaşça çözmüş. Fındık rahatlayınca sevinçle etrafında dönmüş. "Sağ ol Umut, sen gerçekten iyi yürekli bir çocuksun," demiş.
 
-Umut yoluna devam ederken sepetteki ekmeklerden birini de yorgun görünen bir tavşana vermiş. Tavşan aç olduğunu söylemiş, Umut da hiç düşünmeden paylaşmış. Çünkü annesi ona hep, "Elinden gelen küçük bir iyilik, büyük bir mutluluk yaratabilir," demişmiş.
+Umut yoluna devam ederken sepetteki ekmeklerden birini de yorgun görünen bir tavşana vermiş. Tavşan aç olduğunu söylemiş, Umut da hiç düşünmeden paylaşmış. Çünkü annesi ona hep, "Elinden gelen küçük bir iyilik, büyük bir mutluluk yaratabilir," demiş.
 
 Sonunda teyzesinin evine ulaşmış. Teyzesi onu görünce çok sevinmiş, ekmekle balı büyük bir mutlulukla kabul etmiş. Umut'un yüzündeki gülümseme, ay ışığından daha parlak görünüyormuş.
 

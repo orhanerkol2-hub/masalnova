@@ -36,4 +36,4 @@ Akşam olduğunda üçü birlikte topladıkları fındıkları paylaşmış, kah
 
 Fındık, o günden sonra her zaman önce kendi hatalarına bakmayı, sonra konuşmayı öğrenmiş. Çünkü doğruyu söylemenin, en zor zamanlarda bile en güzel dostlukları getirdiğini anlamış.
 
-**Kıssadan hisse:** Doğruyu söylemekten korkmayan, sonunda en değerli dostlukları kazanır.”
+**Kıssadan hisse:** Doğruyu söylemekten korkmayan, sonunda en değerli dostlukları kazanır.

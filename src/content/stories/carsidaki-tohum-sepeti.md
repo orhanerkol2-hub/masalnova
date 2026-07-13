@@ -24,4 +24,4 @@ Haftalar sonra filizler büyümüş, rengarenk kır çiçekleri açmış. Elmas 
 
 O günden sonra Elmas, her gördüğü tohumu, her duyduğu soruyu merakla araştırmaya başlamış. Çünkü öğrenmiş ki, merak etmek bir başlangıçtır; devamını sabır ve emek tamamlar.
 
-**Kıssadan hisse:** Merakını ekip sabırla suladığın her şey, günün birinde güzel bir çiçek gibi açar.“
+**Kıssadan hisse:** Merakını ekip sabırla suladığın her şey, günün birinde güzel bir çiçek gibi açar.

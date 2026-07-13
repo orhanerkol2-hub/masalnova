@@ -16,7 +16,7 @@ Yağmur damlaları denize düşerken küçük halkalar oluşturuyormuş. Turan a
 
 Sonunda ağı çekince içinde tek bir balık bulmuş. Küçük, parlak pullu bir balıkmış bu. Turan gülümsemiş; "Az ama bereketli olsun," demiş kendine ve kıyıya dönmüş.
 
-Eve giderken komşusu Hatun Ana'nın kapısının önünde küçük Ela'yı görmüş. Kız üşümüş, annesi hastaymış, evde yiyecek pek kalmamışmış. Turan hiç düşünmeden balığını Ela'nın eline uzatmış.
+Eve giderken komşusu Hatun Ana'nın kapısının önünde küçük Ela'yı görmüş. Kız üşümüş, annesi hastaymış, evde yiyecek pek kalmamış. Turan hiç düşünmeden balığını Ela'nın eline uzatmış.
 
 "Bu akşam bizim evde çorba kaynasın," demiş gülümseyerek.
 

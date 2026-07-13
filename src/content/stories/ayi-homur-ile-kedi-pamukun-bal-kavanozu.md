@@ -18,7 +18,7 @@ Bir kış sabahı, Homur ormanda gezerken tatlı bir koku almış. Kokuyu takip 
 
 Homur kavanozu kocaman pençeleriyle kaldırmış ve sevinçle kulübeye koşmuş. "Pamuk, Pamuk! Bak ne buldum!" diye bağırmış. Kapıyı açtığında Pamuk pencerede uyukluyormuş, ama bal kokusunu duyunca hemen gözlerini açmış.
 
-Pamuk kavanoza bakmış, sonra Homur'un mutlu yüzüne bakmış. İçinden küçük bir düşünce geçmiş: "Bu kavanoz Homur'un buldu, hepsi ona kalsın istiyorum ama... yalnız yemek hiç tatlı olmaz."
+Pamuk kavanoza bakmış, sonra Homur'un mutlu yüzüne bakmış. İçinden küçük bir düşünce geçmiş: "Bu kavanozu Homur buldu, hepsi ona kalsın istiyorum ama... yalnız yemek hiç tatlı olmaz."
 
 Homur ise kaşığı almış, önce büyük bir kaşık dolusu balı kendi tabağına koymuş. Sonra durmuş, Pamuk'a bakmış ve gülümsemiş. "Sen de al Pamuk, birlikte yiyelim," demiş. "Yalnız yesem bal bu kadar tatlı olmazdı zaten."
 

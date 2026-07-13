@@ -12,7 +12,7 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan yaşarmış. Keloğlan fakirmiş ama gönlü zengin, kafası da her zaman çalışırmış.
 
-Bir gün köye bir haberci gelmiş. Padişahın en güzel çiçekli bahçesine korkunç bir dev yerleşmişmiş. Bahçedeki güller solmaya başlamış, kimse deve yaklaşamıyormuş. Padişah, bahçeyi kurtarana bir kese altın ve bahçenin bekçiliğini vaat etmiş.
+Bir gün köye bir haberci gelmiş. Padişahın en güzel çiçekli bahçesine korkunç bir dev yerleşmiş. Bahçedeki güller solmaya başlamış, kimse deve yaklaşamıyormuş. Padişah, bahçeyi kurtarana bir kese altın ve bahçenin bekçiliğini vaat etmiş.
 
 Köylüler, "Ah bu işi ancak yiğit bir er başarır," demişler. Keloğlan gülümsemiş: "Belki de yiğitlik kılıç sallamak değil, akıl kullanmaktır." Sonra çıkmış yola, dağları aşmış, dereleri geçmiş, sonunda saraya varmış.
 
@@ -46,4 +46,4 @@ Padişah bahçeyi görünce hayretler içinde kalmış. Keloğlan'a keseyi uzatm
 
 Padişah bu inceliğe hayran kalmış, bahçenin bir köşesine dev için güzel bir kulübe yaptırmış. Keloğlan ile Gürbüz, o günden sonra bahçenin en sevilen bekçileri olmuşlar. Çiçekler her bahar daha da güzel açmış, çünkü artık sevgiyle sulanıyormuş.
 
-**Kıssadan hisse:** Gerçek cesaret, korkulan şeyi tanımaya ve onunla dostluk kurmaya cesaret etmektir.”}}I{
+**Kıssadan hisse:** Gerçek cesaret, korkulan şeyi tanımaya ve onunla dostluk kurmaya cesaret etmektir.

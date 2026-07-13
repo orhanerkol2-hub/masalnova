@@ -36,4 +36,4 @@ O geceden sonra Derya, eve dönünce bisikletine bakmış ve ona minnetle gülü
 
 Sevgili çocuk, sen de etrafına bakınca neye şükrettiğini düşünür müsün?
 
-**Kıssadan hisse:** Sahip olduklarımızın kıymetini bilmek, en büyük mutluluğun kapısını açar.**Kıssadan hisse:** Sahip olduklarımızın kıymetini bilmek, en büyük mutluluğun kapısını açar.
+**Kıssadan hisse:** Sahip olduklarımızın kıymetini bilmek, en büyük mutluluğun kapısını açar.

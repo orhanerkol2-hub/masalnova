@@ -28,4 +28,4 @@ Nazlı Teyze gülümseyerek, "Aramaya devam edince her şey bulunur canım," dem
 
 O günden sonra Mira, bir şey kaybettiğinde hiç üzülmemiş, sabırla aramaya devam etmiş.
 
-**Kıssadan hisse:** Azimle ve yardımlaşarak aranan her şey er ya da geç bulunur.”
+**Kıssadan hisse:** Azimle ve yardımlaşarak aranan her şey er ya da geç bulunur.

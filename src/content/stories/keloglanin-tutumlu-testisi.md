@@ -12,9 +12,9 @@ publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında Keloğlan yaşarmış. Annesiyle küçük bir evde otururlar, ellerindeki azıcık şeyle geçinip gidermiş. Keloğlan'ın komşuları bazen ona takılır, "Sende hiçbir şey biriktiremezsin, elinden avucundan akıp gider!" dermiş. Keloğlan da gülerek, "Bakalım göreceğiz," diye cevap verirmiş.
 
-Bir gün Keloğlan, köyün dışındaki sakin göle balık tutmaya gitmiş. Göl o kadar durgunmuş ki, gökyüzündeki bulutlar suda aynı aynı görünürmüş. Keloğlan kıyıda otururken ayağına çatlak bir testi çarpmış. Testi eski ve kırıkmış ama Keloğlan onu hemen çöpe atmamış. "Bunu tamir edersem işime yarar," demiş kendi kendine.
+Bir gün Keloğlan, köyün dışındaki sakin göle balık tutmaya gitmiş. Göl o kadar durgunmuş ki, gökyüzündeki bulutlar suda aynen görünürmüş. Keloğlan kıyıda otururken ayağına çatlak bir testi çarpmış. Testi eski ve kırıkmış ama Keloğlan onu hemen çöpe atmamış. "Bunu tamir edersem işime yarar," demiş kendi kendine.
 
-Eve dönünce testiyi çamurla, iple ustaca onarmış. Annesi, "Oğlum, yenisini alsak olmaz mı?" demiş. Keloğlan gülümseyerek, "Anacığım, elimizdekini iyi kullanırsak yeniye hiç gerek kalmaz," demiş. Bu sözleri duyan Ayşe Nine, kapının önünden geçerken gülümsemiş: "Aferin sana Keloğlan, sen gerçek bir hazine biliyorsun bulmuşsun."
+Eve dönünce testiyi çamurla, iple ustaca onarmış. Annesi, "Oğlum, yenisini alsak olmaz mı?" demiş. Keloğlan gülümseyerek, "Anacığım, elimizdekini iyi kullanırsak yeniye hiç gerek kalmaz," demiş. Bu sözleri duyan Ayşe Nine, kapının önünden geçerken gülümsemiş: "Aferin sana Keloğlan, sen gerçek bir hazine bulmuşsun."
 
 Günler sonra köye bir haber gelmiş. Padişah, ülkesindeki en akıllı ve tutumlu genci arıyormuş. Kim ona, hiçbir şeyi çürütmeden, en küçük eşyayı bile değerli kılan bir çözüm bulursa, ona büyük bir ödül verecekmiş. Köylüler telaşla saraya akın etmiş, herkes yeni bir icat, parlak bir hediye götürmüş.
 

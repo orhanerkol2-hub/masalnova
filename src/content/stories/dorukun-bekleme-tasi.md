@@ -10,7 +10,7 @@ themes: ["sabır","azim","doğa sevgisi"]
 characters: ["Doruk","Pınar Perisi Damla","Yaşlı Çınar"]
 publishedAt: "2026-07-12"
 ---
-Bir varmış bir yokmuş, evvel zaman içinde, dağ eteğindeki küçük bir köyde Doruk adında cesur bir çocuk yaşarmış. Doruk çok meraklı ve çok cesurmış ama bir kusuru varmış: hiçbir şey için beklemeyi sevmezmiş. Yemeği hemen pişsin, oyuncağı hemen çalışsın, tohum ektiği anda çiçek açsın istermiş.
+Bir varmış bir yokmuş, evvel zaman içinde, dağ eteğindeki küçük bir köyde Doruk adında cesur bir çocuk yaşarmış. Doruk çok meraklı ve çok cesurmuş ama bir kusuru varmış: hiçbir şey için beklemeyi sevmezmiş. Yemeği hemen pişsin, oyuncağı hemen çalışsın, tohum ektiği anda çiçek açsın istermiş.
 
 Bir gün köyün büyükleri, dağın arkasındaki serin pınarın suyunun herkese şifa verdiğini ama bu suyu almanın sabır gerektirdiğini söylemişler. Pınar, sadece güneş tam tepedeyken ve sadece bekleyen kişiye suyunu açarmış. Doruk bunu duyunca hemen çıkıp gitmiş, çünkü annesinin hasta olan komşusu için o sudan getirmek istiyormuş.
 

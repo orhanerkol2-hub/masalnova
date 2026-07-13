@@ -38,4 +38,4 @@ Pamuk, yumuşak sesiyle, "Bazen yol uzun görünür ama küçük adımlarla, sab
 
 O günden sonra Pamuk ile Minik, her ay tepenin oradaki parlayan kayaya gidip oturmuşlar. Serin pınardan aldıkları suyu içip, birlikte güneşin batışını izlemişler. Ve her zaman, azimle yürünen bir yolun sonunda güzel bir manzara olduğunu hatırlamışlar.
 
-**Kıssadan hisse:** Küçük adımlarla ve azimle yürüyen, en yüksek tepeye bile ulaşır.”
+**Kıssadan hisse:** Küçük adımlarla ve azimle yürüyen, en yüksek tepeye bile ulaşır.

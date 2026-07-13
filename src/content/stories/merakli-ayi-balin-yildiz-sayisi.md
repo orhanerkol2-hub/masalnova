@@ -30,4 +30,4 @@ Bir akşam, küçük bir yıldız kayması olmuş. Bal heyecanla haykırmış: "
 
 O günden sonra ormanın her köşesinde Bal'ın hikâyesi anlatılırmış: Meraklı bir ayının, yıldızları sayamasa da onlarla dost olabileceğini keşfetmesi.
 
-**Kıssadan hisse:** Bazı şeyleri saymaya çalışmak yerine, onlarla birlikte olmanın tadını çıkarmak daha güzeldir.'
+**Kıssadan hisse:** Bazı şeyleri saymaya çalışmak yerine, onlarla birlikte olmanın tadını çıkarmak daha güzeldir.

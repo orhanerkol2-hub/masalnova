@@ -28,4 +28,4 @@ Emre bunu düşünmüş. Köye vardığında taşı göstermiş ama böbürlenme
 
 O geceden sonra köyde herkes Emre'yi hem cesur hem de alçakgönüllü bir çocuk olarak tanımış. Taş, onun cebinde sessizce parlamaya devam etmiş, ama en çok Emre'nin kalbi ışıldarmış.
 
-**Kıssadan hisse:** Gerçek parlaklık, sahip olduklarımızı böbürlenmeden paylaşmakta gizlidir.”
+**Kıssadan hisse:** Gerçek parlaklık, sahip olduklarımızı böbürlenmeden paylaşmakta gizlidir.

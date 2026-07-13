@@ -18,7 +18,7 @@ Diğer çocuklar Dede Salim'e hiç bakmadan, "Çekil yolumdan yaşlı adam!" diy
 
 "İyi günler dede," demiş gülümseyerek. "Bu güzel sarayı böyle pırıl pırıl tutmak çok zor olmalı. Emeğiniz için teşekkür ederim."
 
-Dede Salim'in gözleri parlamış. Kimse ona daha önce böyle bir söz söylememişmiş. "Sağ ol evladım," demiş yumuşak bir sesle. "Sen içeri girmeden önce bir şey söyleyeyim mi? Sarayın en önemli kapısı, kraliçenin odasına açılan kapı değildir. En önemli kapı, kalbe açılan kapıdır."
+Dede Salim'in gözleri parlamış. Kimse ona daha önce böyle bir söz söylememiş. "Sağ ol evladım," demiş yumuşak bir sesle. "Sen içeri girmeden önce bir şey söyleyeyim mi? Sarayın en önemli kapısı, kraliçenin odasına açılan kapı değildir. En önemli kapı, kalbe açılan kapıdır."
 
 Ekin bu sözü aklında tutmuş ve içeri girmiş. Saray gerçekten göz kamaştırıcıymış; her yerde altın süslemeler, ışıltılı avizeler varmış. Diğer çocuklar hemen tahtın önüne koşup kraliçeye kim olduklarını, ne kadar zeki olduklarını anlatmaya başlamışlar.
 

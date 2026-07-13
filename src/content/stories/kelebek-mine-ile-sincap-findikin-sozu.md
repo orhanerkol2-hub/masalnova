@@ -46,4 +46,4 @@ Mine başını sallamış:
 
 O günden sonra dağdaki herkes bilirmiş: Kelebek Mine ile Sincap Fındık'ın sözü, dağın kayaları gibi sağlamdır.
 
-**Kıssadan hisse:** Verilen söz, ne kadar küçük görünse de, tutulduğunda en büyük dostlukları büyütür.”
+**Kıssadan hisse:** Verilen söz, ne kadar küçük görünse de, tutulduğunda en büyük dostlukları büyütür.

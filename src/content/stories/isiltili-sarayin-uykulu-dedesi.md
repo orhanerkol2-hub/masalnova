@@ -10,11 +10,11 @@ themes: ["affetmek","huzur","sevgi"]
 characters: ["Bilge Dede Sadık","Küçük Yıldız Elin"]
 publishedAt: "2026-07-12"
 ---
-Bir varmış bir yokmuş, bulutların üstünde, ışıl ışıl bir saray varmış. Bu sarayın duvarları ay ışığından, pencereleri yumuşak bulut pamuklarından yapılmışmış. Sarayda yaşlı bilge bir dede yaşarmış, adı Dede Sadık'mış.
+Bir varmış bir yokmuş, bulutların üstünde, ışıl ışıl bir saray varmış. Bu sarayın duvarları ay ışığından, pencereleri yumuşak bulut pamuklarından yapılmış. Sarayda yaşlı bilge bir dede yaşarmış, adı Dede Sadık'mış.
 
 Dede Sadık'ın gözleri sıcacık, sesi ninni gibi yumuşakmış. Her gece sarayın en yüksek kulesine çıkar, gökyüzündeki yıldızları sayarmış. Yıldızlar da onu görünce usulca parlarmış, sanki ona gülümserlermiş.
 
-Bir akşam, küçük bir yıldız, adı Elin'miş, biraz üzgün görünüyormuş. Yanındaki yıldıza kızmış, ışığını ondan çekmişmiş. Dede Sadık bunu görmüş, yavaşça yanına gitmiş.
+Bir akşam, küçük bir yıldız, adı Elin'miş, biraz üzgün görünüyormuş. Yanındaki yıldıza kızmış, ışığını ondan çekmiş. Dede Sadık bunu görmüş, yavaşça yanına gitmiş.
 
 "Küçük Elin," demiş dede, sesi rüzgâr gibi yumuşak. "Gökyüzü çok büyük, içinde herkese yer var. Bazen küçük yıldızlar da birbirine gölge düşürür, ama gönül affetmeyi bilirse, ışık yeniden parlar."
 

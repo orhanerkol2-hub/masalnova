@@ -14,7 +14,7 @@ Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarındaki kalabalık 
 
 Çarşı her sabah hayvan sesleriyle dolarmış. Tilkiler kumaş satar, kunduzlar tahta keser, serçeler tohum tartarmış. Herkes birbirinden bir şeyler alır, birbirine güvenirmiş. Ama bu güveni kazanmak hiç kolay değilmiş.
 
-Bir gün Fındık'ın tezgâhına yaşlı Serçe Nine gelmiş. Elindeki küçük kesesiyle üç havuç almak istiyormuş. Fındık havuçları tartmış, tam parayı alacakken terazinin ibnesinin biraz kaymış olduğunu görmüş. Bu kayma yüzünden havuçlar gerçekte olduğundan biraz daha ağır gösteriliyormuş.
+Bir gün Fındık'ın tezgâhına yaşlı Serçe Nine gelmiş. Elindeki küçük kesesiyle üç havuç almak istiyormuş. Fındık havuçları tartmış, tam parayı alacakken terazinin ibresinin biraz kaymış olduğunu görmüş. Bu kayma yüzünden havuçlar gerçekte olduğundan biraz daha ağır gösteriliyormuş.
 
 Fındık bir an duraksamış. Kimse bu küçük farkı fark etmeyecekti belki. Ama içinden bir ses ona doğruyu söylemesini fısıldamış. Derin bir nefes almış ve Serçe Nine'ye dönmüş.
 

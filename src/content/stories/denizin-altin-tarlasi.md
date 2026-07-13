@@ -14,7 +14,7 @@ Bir varmış bir yokmuş, evvel zaman içinde, ay ışığının usulca süzüld
 
 Bu tarlanın kenarında, minicik ve cesur bir çocuk yaşarmış. Adı Deniz'miş. Deniz, her akşam güneş batarken tarlaya gelir, başakların arasında usulca yürür, yıldızların birer birer açılmasını izlermiş.
 
-Bir akşam, Deniz tarlada yürürken minik bir kuş görmüş. Kuşcuk, yumuşacık yuvasından biraz uzağa düşmüş, üşümüş ve yorgunmuş. Deniz hiç düşünmeden yanına gitmiş, avuçlarını nazikçe açıp kuşu ellerine almış.
+Bir akşam, Deniz tarlada yürürken minik bir kuş görmüş. Kuşçuk, yumuşacık yuvasından biraz uzağa düşmüş, üşümüş ve yorgunmuş. Deniz hiç düşünmeden yanına gitmiş, avuçlarını nazikçe açıp kuşu ellerine almış.
 
 "Merak etme küçük dostum," demiş yavaşça. "Seni yuvana geri götüreceğim."
 

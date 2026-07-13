@@ -26,4 +26,4 @@ Güneş yükselince perinin kanatları parıldamış ve uçmaya başlamış. Ama
 
 Fikret o günden sonra hep o parlak derenin kıyısına gitmiş, oltasını sallarken hiçbir zaman aceleci olmamış. Çünkü biliyormuş ki, sabırla ve nezaketle beklemenin karşılığı her zaman güzel olurmuş.
 
-**Kıssadan hisse:** Küçük bir nezaket, en beklenmedik anda en güzel armağanla geri döner.“
+**Kıssadan hisse:** Küçük bir nezaket, en beklenmedik anda en güzel armağanla geri döner.

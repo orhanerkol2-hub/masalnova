@@ -10,7 +10,7 @@ themes: ["azim","emek","alaycılığa boyun eğmemek"]
 characters: ["Keloğlan","Padişah","İplikçi Nine"]
 publishedAt: "2026-07-12"
 ---
-Bir varmış bir yokmuş, evvel zaman içinde, kalabur çarşısının en gürültülü köşesinde Keloğlan yaşarmış. Keloğlan'ın ne atı ne parası varmış; sadece iki eli, bir de hiç bitmeyen umudu varmış.
+Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir çarşının en gürültülü köşesinde Keloğlan yaşarmış. Keloğlan'ın ne atı ne parası varmış; sadece iki eli, bir de hiç bitmeyen umudu varmış.
 
 Bir gün çarşıya çıkmış, tezgahların arasında dolaşırken bazı satıcılar onunla dalga geçmiş. "Bak bak, kel kafalı geldi, herhalde bugün de boş cebiyle döner!" demişler. Keloğlan üzülmüş ama pes etmemiş, kendi kendine "Bir gün bu çarşıda herkes benim adımı hayırla anacak" demiş.
 
@@ -32,4 +32,4 @@ O günden sonra Keloğlan'ın dükkanı çarşının gözbebeği olmuş. Eskiden
 
 Çarşıdaki herkes anlamış ki, gerçek değer görünüşte değil, azimde ve emekte saklıymış.
 
-**Kıssadan hisse:** Alaylara kulak asmadan sabırla çalışan gönül, en küçük fırsattan büyük bir başarı yaratabilir.”
+**Kıssadan hisse:** Alaylara kulak asmadan sabırla çalışan gönül, en küçük fırsattan büyük bir başarı yaratabilir.

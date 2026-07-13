@@ -20,7 +20,7 @@ Kabuk gülümsemiş. "Ben de severim gezmeyi ama bu kulübe onarılmazsa yağmur
 
 Nare önce bu sözlere kulak asmamış, çimenlerin arasında uçuşup durmuş. Ama günler geçtikçe Kabuk'un kulübeye taş taşıdığını, çatıyı yapraklarla kapattığını, kapıyı otlarla süsleyerek gıcırtısını azalttığını görmüş.
 
-Bir akşam ansızın bulutlar kararmış, rüzgâr sertleşmiş. Nare telaşla saklanacak bir yer aramış ama çiçekler yağmurdan ezilmiş, kanatları üşümüş. O sırade Kabuk'un onardığı kulübeyi görmüş, hızla içeri girmiş.
+Bir akşam ansızın bulutlar kararmış, rüzgâr sertleşmiş. Nare telaşla saklanacak bir yer aramış ama çiçekler yağmurdan ezilmiş, kanatları üşümüş. O sırada Kabuk'un onardığı kulübeyi görmüş, hızla içeri girmiş.
 
 Kulübe sımsıcakmış! Çatı artık damlamıyormuş, ocak başında Kabuk oturuyormuş. "Gel Nare, burada ısınabilirsin," demiş kaplumbağa tatlı bir sesle.
 
@@ -36,4 +36,4 @@ Dağdaki hayvanlar bu güzel kulübeyi görmeye gelmiş, hepsi Kabuk ile Nare'ni
 
 Ve o kulübe, dağın en sevilen yeri olmuş, her mevsim sıcacık kalmış.
 
-**Kıssadan hisse:** Küçük ama düzenli çalışmalar, zamanla en büyük işleri bile başarıya ulaştırır.**
+**Kıssadan hisse:** Küçük ama düzenli çalışmalar, zamanla en büyük işleri bile başarıya ulaştırır.

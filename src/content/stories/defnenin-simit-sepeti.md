@@ -30,4 +30,4 @@ O günden sonra Defne, sepetindeki simitleri hiç tek başına yemez olmuş. Her
 
 Peki sen, elindeki güzel bir şeyi başkasıyla paylaştığında nasıl hissedersin?
 
-**Kıssadan hisse:** Paylaşılan bir mutluluk, tek başına yaşanandan daha uzun süre kalpte ışıldar.”
+**Kıssadan hisse:** Paylaşılan bir mutluluk, tek başına yaşanandan daha uzun süre kalpte ışıldar.

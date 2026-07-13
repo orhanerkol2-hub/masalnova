@@ -28,4 +28,4 @@ Dede Hasan başını sallamış. "Aynen öyle küçük kızım. Tutumlu olan, he
 
 O günden sonra Ela da kendi küçük çakıl taşlarını biriktirmeye başlamış, her hafta bir arkadaşına küçük bir hediye vermiş.
 
-**Kıssadan hisse:** Azar azar biriktirmek, hem bize hem sevdiklerimize her zaman iyilik olarak geri döner.“}
+**Kıssadan hisse:** Azar azar biriktirmek, hem bize hem sevdiklerimize her zaman iyilik olarak geri döner.

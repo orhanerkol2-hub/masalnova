@@ -4,7 +4,7 @@ shortDescription: "Yağmurlu bir akşam merakına yenilen Keloğlan, padişahın
 coverEmoji: "🌧️"
 coverColor: "#ffb01f"
 ageGroups: ["7-9"]
-readingTime: 4
+readingTime: 3
 categories: ["keloglan"]
 themes: ["merak","zeka","dürüstlük"]
 characters: ["Keloğlan","Padişah","Yaşlı bahçıvan kadın"]
@@ -46,4 +46,4 @@ Padişah bu isteğe çok sevinmiş, hem yaşlı kadına güzel bir oda vermiş h
 
 O günden sonra köylüler, tuhaf bir ses işitince hemen Keloğlan'ı çağırırmış, çünkü onun merakı hep işe yararmış.
 
-**Kıssadan hisse:** Merak, korkuyla değil cesaretle birleşince güzel çözümlerin kapısını açar.**Kıssadan hisse:** Merak, korkuyla değil cesaretle birleşince güzel çözümlerin kapısını açar.
+**Kıssadan hisse:** Merak, korkuyla değil cesaretle birleşince güzel çözümlerin kapısını açar.

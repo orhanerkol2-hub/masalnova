@@ -16,7 +16,7 @@ Bir gün gökyüzü kapkara bulutlarla kaplanmış. Rüzgâr uğuldamaya, dallar
 
 "Keloğlan!" demiş. "Büyük bir fırtına geliyor. Değirmenin kanatları çok yıpranmış, kırılırlarsa köy bu kış un bulamaz!"
 
-Keloğlan hemen değirmenin kanatlarına bakmış. Gerçekten de tahtalar çatlamış, ipler gevşemişmiş. Tek başına onarmaya kalksa günler sürerdi, oysa fırtına akşama kadar gelecekmiş.
+Keloğlan hemen değirmenin kanatlarına bakmış. Gerçekten de tahtalar çatlamış, ipler gevşemiş. Tek başına onarmaya kalksa günler sürerdi, oysa fırtına akşama kadar gelecekmiş.
 
 "Merak etme Hasan Dede," demiş Keloğlan gülümseyerek. "Bir başımıza olmayız ki! Köyde kaç ev var, hepsi bize komşu."
 

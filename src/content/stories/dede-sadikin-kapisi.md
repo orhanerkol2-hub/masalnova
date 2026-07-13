@@ -26,4 +26,4 @@ Elif gülümsedi. "Siz bize hep hikâyeler anlatırsınız dede, ben de size yar
 
 O günden sonra Elif, her yağmurlu akşam Dede Sadık'ın kapısını çalar, ona küçük yardımlarda bulunurmuş. Köyün herkesi bu güzel dostluğu görür, çocuklara örnek gösterirmiş.
 
-**Kıssadan hisse:** Büyüklerimize gösterdiğimiz küçük bir saygı, en soğuk günleri bile ısıtabilir.”
+**Kıssadan hisse:** Büyüklerimize gösterdiğimiz küçük bir saygı, en soğuk günleri bile ısıtabilir.

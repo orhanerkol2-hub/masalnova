@@ -30,4 +30,4 @@ Nine Sevgi gülmüş: "Aynen öyle evladım. Kar nasıl herkesin üstüne aynı 
 
 O kış boyunca köy halkı birbirine kol kanat germiş, hiç kimse üşümemiş, hiç kimse açıkta kalmamış. Peki sence sen de çevrende üşüyen ya da yardıma ihtiyacı olan birini görsen, ona nasıl bir iyilik yapabilirsin?
 
-**Kıssadan hisse:** Paylaşılan her iyilik, kar taneleri gibi çoğalarak bütün bir köyü ısıtabilir.”}
+**Kıssadan hisse:** Paylaşılan her iyilik, kar taneleri gibi çoğalarak bütün bir köyü ısıtabilir.

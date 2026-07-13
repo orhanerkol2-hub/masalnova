@@ -30,4 +30,4 @@ Deniz sevinçle başını sallamış. Artık biliyormuş ki, küçük bir görev
 
 Sevgili çocuk, sence sana verilen küçük bir görevi unutursan neler olabilir?
 
-**Kıssadan hisse:** En küçük görevler bile özenle yapıldığında büyük bir güvenin temelini oluşturur.**}**Kıssadan hisse:** En küçük görevler bile özenle yapıldığında büyük bir güvenin temelini oluşturur.
+**Kıssadan hisse:** En küçük görevler bile özenle yapıldığında büyük bir güvenin temelini oluşturur.

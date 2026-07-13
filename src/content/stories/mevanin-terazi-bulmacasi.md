@@ -30,4 +30,4 @@ O günden sonra Meva, çarşıya her gittiğinde tezgahları meraklı gözlerle 
 
 Peki sen de çevrende bir haksızlık gördüğünde, Meva gibi meraklı ve cesur olabilir misin?
 
-**Kıssadan hisse:** Adaleti korumak için bazen sadece dikkatli bakmak ve doğruyu söylemeye cesaret etmek yeterlidir.atın son cümle.
+**Kıssadan hisse:** Adaleti korumak için bazen sadece dikkatli bakmak ve doğruyu söylemeye cesaret etmek yeterlidir.

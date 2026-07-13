@@ -26,4 +26,4 @@ Kedi o gün sonra evi hiç terk etmemiş. Köy halkı, Dede Sadık'ın kapısın
 
 Küçük bir iyilik, bazen en büyük dostlukların başlangıcı olurmuş.
 
-**Kıssadan hisse:** Bir kapıyı nezaketle açmak, bazen bir yürek için sıcacık bir yuva yaratır.”
+**Kıssadan hisse:** Bir kapıyı nezaketle açmak, bazen bir yürek için sıcacık bir yuva yaratır.

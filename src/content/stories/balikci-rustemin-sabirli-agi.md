@@ -18,7 +18,7 @@ Köydeki diğer balıkçılar acele ederler, ağlarını suya vurup hemen çeker
 
 Bir gün ormanda dolaşırken küçük bir baykuş yere düşmüş, kanadını incitmiş. Diğer köylüler baykuşu görmemiş, geçip gitmişler. Ama Rüstem yavaşça yaklaşmış, elini uzatmadan önce baykuşa sormuş gibi başını hafifçe eğmiş. "Sana yardım etmek isterim, izin verir misin küçük dost?"
 
-Baykuş, adamın sesindeki nazik tonu duyunca korkmamış. Rüstem onu avuçlarına alıp yumuşak bir yapraklarla sarmış ve kendi evine götürmüş. Kanadı iyileşene kadar ona su ve tohum vermiş, hiçbir şey beklemeden.
+Baykuş, adamın sesindeki nazik tonu duyunca korkmamış. Rüstem onu avuçlarına alıp yumuşak yapraklarla sarmış ve kendi evine götürmüş. Kanadı iyileşene kadar ona su ve tohum vermiş, hiçbir şey beklemeden.
 
 Günler geçmiş, baykuşun kanadı iyileşmiş ve uçup gitmiş. Rüstem hiç pişman olmamış, çünkü ona göre iyilik yapmanın karşılığını beklemek gerekmezmiş.
 

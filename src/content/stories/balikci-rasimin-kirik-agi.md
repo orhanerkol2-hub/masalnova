@@ -30,4 +30,4 @@ Su perisi gözlerini kırpıştırdı, sonra sevinçle suya daldı. Az sonra eli
 
 Rasim yeni ağıyla o günden sonra hem bol balık tuttu hem de her sabah gölün küçük dostuyla selamlaştı. Affetmenin verdiği huzur, kızgınlıktan çok daha tatlıymış.
 
-**Kıssadan hisse:** Affetmek, hem kalbimizi hem de dostluk kapılarımızı açar.”
+**Kıssadan hisse:** Affetmek, hem kalbimizi hem de dostluk kapılarımızı açar.
