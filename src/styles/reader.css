@@ -80,4 +80,14 @@ html[data-reader-theme='dark'] {
 html.is-reader-page body {
   background: var(--reader-background);
   color: var(--reader-text-color);
+  /* `overflow-x: hidden` (global.css) zwingt overflow-y auf `auto` und macht den
+     body zum Scroll-Container — das bricht `position: sticky`. `clip` verhindert
+     horizontales Überlaufen OHNE Scroll-Container, sodass die Lese-Leiste klebt. */
+  overflow-x: clip;
+}
+
+/* Auf der Leseseite scrollt die große Seiten-Navigation weg; nur die schlanke
+   Lese-Leiste (mit dem „Aa"-Schriftknopf) bleibt oben angeheftet. */
+html.is-reader-page .site-header {
+  position: static;
 }
