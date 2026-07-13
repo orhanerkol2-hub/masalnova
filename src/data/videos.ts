@@ -60,7 +60,7 @@ export const videos: Video[] = (raw as RawVideo[]).map((v, i) => {
     slug: uniqueSlug(v.title, v.id),
     title: v.title,
     youtubeVideoId: v.id,
-    thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
+    thumbnailUrl: `/covers/videos/${v.id}.jpg`,
     categories: categorize(v.title),
     publishedAt: v.published,
     isNew: i < 4,

@@ -43,7 +43,7 @@ const activeCats = videoCategories.filter((c) => videos.some((v) => v.categories
   .page-head p { color: var(--soft); max-width: 66ch; margin-top: 8px; }
 
   .catbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-  .chip { border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.12); color: #fff; font-family: 'Baloo 2', cursive; font-weight: 700; padding: 9px 16px; border-radius: 999px; transition: background .15s ease, color .15s ease; }
+  .chip { border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.12); color: #fff; font-family: var(--font-display); font-weight: 700; padding: 9px 16px; border-radius: 999px; transition: background .15s ease, color .15s ease; }
   .chip:hover { background: rgba(255,255,255,.22); }
   .chip.is-active { background: #fff; color: var(--ink); }
   .result-count { color: var(--soft); margin-bottom: 14px; font-weight: 600; }
