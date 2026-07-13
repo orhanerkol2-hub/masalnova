@@ -17,7 +17,7 @@ const { counts } = Astro.props;
 </div>
 <style>
   .tabs { display: inline-flex; gap: 6px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.24); padding: 6px; border-radius: 999px; }
-  .tab { border: 0; background: transparent; color: #fff; font-family: 'Baloo 2', cursive; font-weight: 700; font-size: .98rem; padding: 8px 16px; border-radius: 999px; transition: background .15s ease, color .15s ease; }
+  .tab { border: 0; background: transparent; color: #fff; font-family: var(--font-display); font-weight: 700; font-size: .98rem; padding: 8px 16px; border-radius: 999px; transition: background .15s ease, color .15s ease; }
   .tab.is-active { background: #fff; color: var(--ink); }
 </style>
 <script>

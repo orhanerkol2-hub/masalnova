@@ -1,13 +1,14 @@
 // Fetches the YouTube RSS feed and writes public/videos.json.
 // Runs server-side (GitHub Actions), so no CORS proxy is needed.
 // After this runs, the Astro site must be rebuilt for changes to appear.
-import { writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 const CHANNEL_ID = 'UCNPq9m9ctBeaGXZeSUVRiLA';
 const MAX = 12;
 const FEED = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 const OUT = fileURLToPath(new URL('../public/videos.json', import.meta.url));
+const THUMB_DIR = fileURLToPath(new URL('../public/covers/videos/', import.meta.url));
 
 function decode(s) {
   return (s || '')
@@ -32,4 +33,10 @@ for (const chunk of xml.split('<entry>').slice(1)) {
 if (!videos.length) throw new Error('Keine Video-Einträge im Feed gefunden');
 
 await writeFile(OUT, JSON.stringify(videos, null, 2) + '\n');
+await mkdir(THUMB_DIR, { recursive: true });
+await Promise.all(videos.map(async ({ id }) => {
+  const thumb = await fetch(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`);
+  if (!thumb.ok) throw new Error(`Thumbnail ${id}: HTTP ${thumb.status}`);
+  await writeFile(`${THUMB_DIR}${id}.jpg`, Buffer.from(await thumb.arrayBuffer()));
+}));
 console.log('public/videos.json geschrieben:', videos.length, 'Videos');

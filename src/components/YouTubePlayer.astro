@@ -3,15 +3,15 @@
 // The real iframe (and any playback) loads ONLY after a deliberate click — never autoplay on load.
 interface Props { videoId: string; title: string }
 const { videoId, title } = Astro.props;
-const poster = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
-const posterFallback = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+const poster = `/covers/videos/${videoId}.jpg`;
 ---
 <div class="yt-lite" data-ytid={videoId}>
   <button class="yt-poster" type="button" aria-label={`${title} videosunu oynat`}>
-    <img src={poster} alt="" loading="lazy" data-fallback={posterFallback} />
+    <img src={poster} alt="" loading="lazy" />
     <span class="yt-play" aria-hidden="true">
       <svg viewBox="0 0 68 48" width="68" height="48"><path class="bg" d="M66.5 7.7c-.8-2.9-3-5.1-5.9-5.9C55.3.5 34 .5 34 .5S12.7.5 7.4 1.8C4.5 2.6 2.3 4.8 1.5 7.7.2 13 .2 24 .2 24s0 11 1.3 16.3c.8 2.9 3 5.1 5.9 5.9C12.7 47.5 34 47.5 34 47.5s21.3 0 26.6-1.3c2.9-.8 5.1-3 5.9-5.9C67.8 35 67.8 24 67.8 24s0-11-1.3-16.3z" fill="#f00"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
     </span>
+    <span class="yt-notice">YouTube laden – Datenübertragung an Google; unter 16 nur mit Zustimmung der Eltern</span>
   </button>
 </div>
 <style>
@@ -20,16 +20,13 @@ const posterFallback = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
   .yt-poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .yt-play { position: absolute; inset: 0; margin: auto; width: 68px; height: 48px; filter: drop-shadow(0 4px 10px rgba(0,0,0,.4)); transition: transform .15s ease; }
   .yt-play .bg { transition: fill .15s ease; }
+  .yt-notice { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); width: max-content; max-width: calc(100% - 24px); padding: 7px 12px; border-radius: 999px; background: rgba(10, 34, 94, .9); color: #fff; font-size: .78rem; font-weight: 700; }
   .yt-poster:hover .yt-play { transform: scale(1.08); }
   .yt-lite :global(iframe) { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 </style>
 <script>
-  // Fallback poster if maxres is missing
-  document.querySelectorAll('.yt-lite img[data-fallback]').forEach((img) => {
-    const el = img as HTMLImageElement;
-    el.addEventListener('error', () => { el.src = el.dataset.fallback || ''; }, { once: true });
-  });
-  // Click-to-play: build the iframe only on a deliberate user click.
+  // Two-click style activation: the iframe is created only after the user
+  // deliberately requests the third-party YouTube service.
   document.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement).closest('.yt-lite .yt-poster');
     if (!btn) return;

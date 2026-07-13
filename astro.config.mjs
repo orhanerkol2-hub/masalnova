@@ -10,5 +10,10 @@ export default defineConfig({
   // clean URLs: /masallar/ -> masallar/index.html, /videolar/slug -> videolar/slug/index.html
   build: { format: 'directory' },
   image: { service: passthroughImageService() },
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    filter: (page) => ![
+      'https://masalnova.com/datenschutz/',
+      'https://masalnova.com/impressum/',
+    ].includes(page),
+  })],
 });

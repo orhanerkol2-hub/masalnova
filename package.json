@@ -10,7 +10,8 @@
     "gen:stories": "node scripts/generate-stories.mjs",
     "gen:covers": "node scripts/generate-cover-briefs.mjs",
     "optimize:covers": "node scripts/optimize-cover-images.mjs",
-    "apply:covers": "node scripts/apply-cover-images.mjs"
+    "apply:covers": "node scripts/apply-cover-images.mjs",
+    "render:legal": "node scripts/render-legal-images.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",

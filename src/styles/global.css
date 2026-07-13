@@ -26,13 +26,15 @@
 
   --maxw: 1120px;
   --gap: 22px;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
-  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, sans-serif;
+  font-family: var(--font-body);
   color: var(--ink);
   line-height: 1.6;
   min-height: 100vh;
@@ -43,7 +45,7 @@ body {
   background-attachment: fixed;
 }
 
-h1, h2, h3, h4, .display { font-family: 'Baloo 2', system-ui, cursive; line-height: 1.15; font-weight: 800; }
+h1, h2, h3, h4, .display { font-family: var(--font-display); line-height: 1.15; font-weight: 800; }
 
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
@@ -62,7 +64,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sec-head h2 { color: #fff; font-size: clamp(1.5rem, 3.6vw, 2.2rem); }
 .sec-head .sec-link {
-  color: #fff; font-family: 'Baloo 2', cursive; font-weight: 700;
+  color: #fff; font-family: var(--font-display); font-weight: 700;
   background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28);
   padding: 8px 16px; border-radius: var(--radius-pill); white-space: nowrap;
   transition: background .15s ease, transform .15s ease;
@@ -73,7 +75,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ---------- buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  font-family: 'Baloo 2', cursive; font-weight: 700; font-size: 1.05rem;
+  font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
   padding: 13px 26px; border-radius: var(--radius-pill); border: 2px solid transparent;
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
   white-space: nowrap;
@@ -105,7 +107,7 @@ button { font-family: inherit; cursor: pointer; }
 /* badge used to distinguish content type */
 .badge-type {
   display: inline-flex; align-items: center; gap: 6px;
-  font-family: 'Baloo 2', cursive; font-weight: 700; font-size: .75rem;
+  font-family: var(--font-display); font-weight: 700; font-size: .75rem;
   padding: 4px 10px; border-radius: var(--radius-pill);
 }
 .badge-video { background: #ffe2e2; color: #c31a1a; }
