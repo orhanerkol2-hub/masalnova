@@ -31,33 +31,114 @@ const homeCats = [
   path="/"
   activeNav="home"
 >
-  <!-- 1) HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <h1>Bu Akşam Ne İzleyelim, Hangi Masalı Okuyalım?</h1>
-      <p class="lead">Çocuğunuza uygun masalları ve eğlenceli videoları kolayca keşfedin.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="/masallar/">📖 Masal Oku</a>
-        <a class="btn btn-secondary" href="/videolar/">▶ Video İzle</a>
+  <!-- 1) PREMIUM HERO -->
+  <section class="premium-hero">
+    <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">MasalNova Çocuk · Türkçe Masal Kütüphanesi</p>
+        <h1>Her akşamı küçük bir masal galasına dönüştürün.</h1>
+        <p class="lead">
+          Yaşa, süreye ve ruh haline göre seçilmiş yüzlerce masal ve çocuk videosu.
+          Okuma deneyimi artık sakin, modern ve aile dostu.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/masallar/">📖 Masal koleksiyonunu aç</a>
+          <a class="btn btn-secondary" href="/masal-bul/">✨ Bana masal öner</a>
+        </div>
+        <div class="hero-search">
+          <SearchBox big />
+        </div>
+        <div class="trust-row" aria-label="MasalNova özellikleri">
+          <span>Sakin okuma modu</span>
+          <span>Yaşa göre filtre</span>
+          <span>Uyku öncesi seçimler</span>
+        </div>
       </div>
-      <SearchBox big />
+
+      <div class="hero-stage" aria-label="Öne çıkan MasalNova içerikleri">
+        <div class="hero-orbit-card hero-orbit-card--top">
+          <span class="mini-kicker">Bugünün seçimi</span>
+          <strong>{today?.data.title ?? 'Uykucu Ay ile Küçük Yıldız'}</strong>
+          <small>{today ? `${today.data.readingTime} dk okuma` : 'Uyku öncesi masal'}</small>
+        </div>
+        <div class="showcase-card">
+          <div class="showcase-frame">
+            {
+              today && (
+                <CoverThumb
+                  emoji={today.data.coverEmoji}
+                  color={today.data.coverColor}
+                  image={today.data.coverImage}
+                  alt={today.data.altText ?? today.data.title}
+                  ratio="4 / 3"
+                  big
+                />
+              )
+            }
+          </div>
+          <div class="showcase-content">
+            <span class="badge-type badge-story">📖 Premium Reader</span>
+            <h2>{today?.data.title ?? 'MasalNova Reader'}</h2>
+            <p>{today?.data.shortDescription ?? 'Çocuğunuz için sakin, modern ve keyifli bir masal okuma alanı.'}</p>
+            <a href={today ? `/masallar/${today.id}/` : '/masallar/'}>Şimdi oku →</a>
+          </div>
+        </div>
+        <div class="hero-orbit-card hero-orbit-card--bottom">
+          <span class="mini-kicker">Kütüphane</span>
+          <strong>{stories.length}+ masal</strong>
+          <small>Her yaş ve her akşam için</small>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 2) CHOICE CARDS -->
-  <section class="section-tight">
+  <!-- 2) PREMIUM STATS -->
+  <section class="premium-strip" aria-label="MasalNova öne çıkan rakamlar">
+    <div class="container">
+      <div class="strip-panel">
+        <div>
+          <strong>{stories.length}+</strong>
+          <span>Türkçe masal</span>
+        </div>
+        <div>
+          <strong>4 dk</strong>
+          <span>Ortalama okuma hissi</span>
+        </div>
+        <div>
+          <strong>3–9</strong>
+          <span>Yaşa göre keşif</span>
+        </div>
+        <div>
+          <strong>Reader</strong>
+          <span>Telefon & tablet uyumlu</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) CHOICE CARDS -->
+  <section class="section-tight premium-choices">
     <div class="container">
       <div class="grid grid-2">
-        <ChoiceCard kind="story" icon="📖" title="Masallar" subtitle="Kısa, eğitici ve uyku öncesi masalları keşfedin" href="/masallar/" />
-        <ChoiceCard kind="video" icon="🎬" title="Videolar" subtitle="Çocuk şarkıları, masallar ve eğlenceli videolar izleyin" href="/videolar/" />
+        <ChoiceCard kind="story" icon="📖" title="Masal Oku" subtitle="Kısa, eğitici ve uyku öncesi masalları premium reader ile keşfedin" href="/masallar/" />
+        <ChoiceCard kind="video" icon="🎬" title="Video İzle" subtitle="Çocuk şarkıları, masallar ve eğlenceli videoları güvenli biçimde bulun" href="/videolar/" />
       </div>
     </div>
   </section>
 
-  <!-- 3) STORY CATEGORIES -->
-  <section class="section">
+  <!-- 4) STORY CATEGORIES -->
+  <section class="section premium-categories">
     <div class="container">
-      <div class="sec-head"><h2>Masal Kategorileri</h2><a class="sec-link" href="/masallar/">Tüm Masallar →</a></div>
+      <div class="section-intro">
+        <p class="eyebrow">Koleksiyon</p>
+        <div class="sec-head">
+          <h2>Her ruh haline uygun masal rafı.</h2>
+          <a class="sec-link" href="/masallar/">Tüm Masallar →</a>
+        </div>
+        <p class="sec-sub">Uyku öncesi sakinlik, kısa molalar, eğitici hikâyeler veya Keloğlan maceraları — hepsi birkaç dokunuş uzağında.</p>
+      </div>
       <div class="grid grid-3">
         {homeCats.map((c) => (
           <CategoryCard href={c.href} emoji={c.emoji} label={c.label} desc={c.desc} count={c.count} color={c.color} />
@@ -66,32 +147,24 @@ const homeCats = [
     </div>
   </section>
 
-  <!-- 4) ÖNE ÇIKAN VIDEOLAR -->
-  <FeaturedVideos
-    videos={featuredVids}
-    title="Öne Çıkan Videolar"
-    subtitle="Çocuk şarkıları ve eğlenceli videolar — küçük resme dokun, video açılsın."
-    cols={3}
-  />
-
   <!-- 5) BUGÜNÜN MASALI -->
   {today && (
-    <section class="section">
+    <section class="section daily-feature">
       <div class="container">
-        <div class="sec-head"><h2>Bugünün Masalı ✨</h2></div>
-        <a class="today card" href={`/masallar/${today.id}/`}>
-          <div class="today-cover">
-            <CoverThumb emoji={today.data.coverEmoji} color={today.data.coverColor} image={today.data.coverImage} alt={today.data.altText ?? today.data.title} ratio="4 / 3" big />
-          </div>
-          <div class="today-body">
-            <div class="meta">
-              <span class="badge-type badge-story">📖 Masal</span>
-              {today.data.ageGroups[0] && <span class="tag">{ageLabel(today.data.ageGroups[0])}</span>}
-              <span class="tag">⏱️ {today.data.readingTime} dk okuma</span>
-            </div>
-            <h3>{today.data.title}</h3>
+        <a class="today-premium" href={`/masallar/${today.id}/`}>
+          <div class="today-copy">
+            <span class="eyebrow">Bugünün Masalı ✨</span>
+            <h2>{today.data.title}</h2>
             <p>{today.data.shortDescription}</p>
+            <div class="meta">
+              <span class="tag">{today.data.ageGroups[0] ? ageLabel(today.data.ageGroups[0]) : 'Aile okuması'}</span>
+              <span class="tag">⏱️ {today.data.readingTime} dk okuma</span>
+              <span class="tag">Reader modu</span>
+            </div>
             <span class="btn btn-primary">Masalı Oku →</span>
+          </div>
+          <div class="today-art">
+            <CoverThumb emoji={today.data.coverEmoji} color={today.data.coverColor} image={today.data.coverImage} alt={today.data.altText ?? today.data.title} ratio="4 / 3" big />
           </div>
         </a>
       </div>
@@ -99,19 +172,51 @@ const homeCats = [
   )}
 
   <!-- 6) POPÜLER MASALLAR -->
-  <section class="section">
+  <section class="section premium-stories">
     <div class="container">
-      <div class="sec-head"><h2>Popüler Masallar</h2><a class="sec-link" href="/masallar/?siralama=populer">Tümü →</a></div>
+      <div class="section-intro">
+        <p class="eyebrow">Editör vitrini</p>
+        <div class="sec-head">
+          <h2>En sevilen masallar, vitrin kalitesinde.</h2>
+          <a class="sec-link" href="/masallar/?siralama=populer">Tümü →</a>
+        </div>
+      </div>
       <div class="grid grid-3">
         {popular.map((s) => <StoryCard story={s} />)}
       </div>
     </div>
   </section>
 
-  <!-- 7) YENİ VIDEOLAR -->
+  <!-- 7) ÖNE ÇIKAN VIDEOLAR -->
+  <FeaturedVideos
+    videos={featuredVids}
+    title="Sinema hissinde çocuk videoları"
+    subtitle="Çocuk şarkıları ve eğlenceli videolar — küçük resme dokun, video açılsın."
+    cols={3}
+  />
+
+  <!-- 8) CURATED JOURNEY -->
+  <section class="section reading-journey">
+    <div class="container">
+      <div class="journey-card">
+        <div>
+          <p class="eyebrow">3 adımda akşam ritüeli</p>
+          <h2>Seç, oku, sakinleş.</h2>
+          <p>MasalNova çocukların dikkatini dağıtmadan, ailelerin hızlı karar vermesine yardım eden sıcak bir keşif alanı olarak tasarlandı.</p>
+        </div>
+        <div class="journey-steps">
+          <span><b>01</b> Yaşa göre filtrele</span>
+          <span><b>02</b> Reader modunda oku</span>
+          <span><b>03</b> İstersen videoyla devam et</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9) YENİ VIDEOLAR -->
   <FeaturedVideos
     videos={newVids}
-    title="Yeni Videolar"
+    title="Yeni eklenen videolar"
     moreHref="/videolar/"
     moreLabel="Tüm Videoları Gör"
     cols={4}
@@ -119,30 +224,531 @@ const homeCats = [
 </BaseLayout>
 
 <style>
-  .hero {
-    position: relative; color: #fff; text-align: center;
+  :global(body) {
     background:
-      linear-gradient(180deg, rgba(15, 43, 99, 0.5), rgba(15, 43, 99, 0.82)),
+      radial-gradient(900px 420px at 82% 4%, rgba(255, 176, 31, 0.2), transparent 60%),
+      radial-gradient(900px 520px at 12% 12%, rgba(114, 155, 255, 0.38), transparent 62%),
+      linear-gradient(180deg, #081b46 0%, #123a97 42%, #1f57cf 74%, #123a97 100%);
+  }
+
+  .premium-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 680px;
+    color: #fff;
+    background:
+      linear-gradient(115deg, rgba(8, 27, 70, 0.96), rgba(18, 58, 151, 0.72) 48%, rgba(255, 176, 31, 0.14)),
       url('/background.jpg') center / cover no-repeat;
   }
-  .hero-inner { padding: 54px 20px 44px; }
-  .hero h1 { font-size: clamp(1.7rem, 4.6vw, 2.9rem); text-shadow: 0 2px 16px rgba(8, 24, 70, 0.55); max-width: 18ch; margin: 0 auto 14px; }
-  .hero .lead { font-size: clamp(1.02rem, 2.4vw, 1.28rem); font-weight: 600; max-width: 46ch; margin: 0 auto 22px; color: #eaf1ff; }
-  .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 22px; }
 
-  .today {
-    display: grid; grid-template-columns: 300px 1fr; gap: 0; text-decoration: none;
-    color: var(--ink); overflow: hidden;
+  .premium-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.2), transparent 34%),
+      linear-gradient(180deg, transparent 70%, rgba(8, 27, 70, 0.72));
+    z-index: -2;
   }
-  .today-cover { height: 100%; }
-  .today-cover :global(.cover) { height: 100%; }
-  .today-body { padding: 26px 28px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
-  .today-body .meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .today-body h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--ink); }
-  .today-body p { color: var(--ink-soft); }
-  .today-body .btn { margin-top: 6px; }
-  @media (max-width: 700px) {
-    .today { grid-template-columns: 1fr; }
-    .today-cover { max-height: 220px; }
+
+  .premium-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 170px;
+    background: linear-gradient(180deg, transparent, #123a97);
+    z-index: -1;
+  }
+
+  .hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(8px);
+    opacity: 0.78;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .hero-glow-one {
+    width: 360px;
+    height: 360px;
+    right: 7%;
+    top: 10%;
+    background: radial-gradient(circle, rgba(255, 176, 31, 0.34), transparent 68%);
+  }
+
+  .hero-glow-two {
+    width: 420px;
+    height: 420px;
+    left: -120px;
+    bottom: 3%;
+    background: radial-gradient(circle, rgba(47, 116, 232, 0.56), transparent 66%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(330px, 0.88fr);
+    gap: clamp(36px, 6vw, 80px);
+    align-items: center;
+    padding-top: clamp(78px, 10vw, 126px);
+    padding-bottom: clamp(76px, 10vw, 112px);
+  }
+
+  .hero-copy { max-width: 720px; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    color: #ffd77a;
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .hero-copy h1 {
+    max-width: 10.8ch;
+    margin-bottom: 22px;
+    font-size: clamp(3rem, 8vw, 6.95rem);
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+    text-wrap: balance;
+    text-shadow: 0 22px 60px rgba(0, 0, 0, 0.34);
+  }
+
+  .hero-copy .lead {
+    max-width: 58ch;
+    margin-bottom: 28px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(1.08rem, 2vw, 1.3rem);
+    font-weight: 650;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  .hero-search {
+    max-width: 660px;
+    margin-bottom: 18px;
+  }
+
+  .hero-search :global(.searchbox) {
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+  }
+
+  .trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+
+  .trust-row span {
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+  }
+
+  .hero-stage {
+    position: relative;
+    min-height: 540px;
+  }
+
+  .showcase-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 38px;
+    background: linear-gradient(155deg, rgba(255,255,255,0.96), rgba(236, 242, 255, 0.9));
+    color: var(--ink);
+    box-shadow: 0 38px 110px rgba(0, 0, 0, 0.38);
+    transform: rotate(2deg);
+  }
+
+  .showcase-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(120deg, rgba(255,255,255,0.55), transparent 34%, rgba(255, 176, 31, 0.18));
+  }
+
+  .showcase-frame {
+    padding: 18px;
+    background: linear-gradient(180deg, #fff, #eef4ff);
+  }
+
+  .showcase-frame :global(.cover) {
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: 0 18px 50px rgba(9, 24, 65, 0.22);
+  }
+
+  .showcase-content {
+    position: relative;
+    z-index: 1;
+    padding: 8px 26px 28px;
+  }
+
+  .showcase-content h2 {
+    margin: 12px 0 8px;
+    font-size: clamp(1.45rem, 3vw, 2.05rem);
+    letter-spacing: -0.03em;
+  }
+
+  .showcase-content p {
+    color: var(--ink-soft);
+    font-weight: 650;
+  }
+
+  .showcase-content a {
+    display: inline-flex;
+    margin-top: 16px;
+    color: var(--blue-d);
+    font-family: var(--font-display);
+    font-weight: 900;
+  }
+
+  .hero-orbit-card {
+    position: absolute;
+    z-index: 2;
+    width: min(245px, 60%);
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--ink);
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(18px);
+  }
+
+  .hero-orbit-card--top {
+    top: 10px;
+    right: -12px;
+  }
+
+  .hero-orbit-card--bottom {
+    left: -28px;
+    bottom: 70px;
+  }
+
+  .mini-kicker {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--blue-d);
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-orbit-card strong,
+  .hero-orbit-card small {
+    display: block;
+  }
+
+  .hero-orbit-card strong {
+    font-family: var(--font-display);
+    font-size: 1.04rem;
+    line-height: 1.18;
+  }
+
+  .hero-orbit-card small {
+    margin-top: 4px;
+    color: var(--ink-soft);
+    font-weight: 750;
+  }
+
+  .premium-strip {
+    position: relative;
+    z-index: 4;
+    margin-top: -54px;
+  }
+
+  .strip-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(22px);
+  }
+
+  .strip-panel div {
+    padding: 24px 24px;
+    background: rgba(255, 255, 255, 0.93);
+  }
+
+  .strip-panel strong,
+  .strip-panel span {
+    display: block;
+  }
+
+  .strip-panel strong {
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.6vw, 2.35rem);
+    line-height: 1;
+  }
+
+  .strip-panel span {
+    margin-top: 8px;
+    color: var(--ink-soft);
+    font-weight: 800;
+  }
+
+  .premium-choices {
+    padding-top: 42px;
+  }
+
+  .section-intro {
+    max-width: 900px;
+    margin-bottom: 22px;
+  }
+
+  .section-intro .sec-head {
+    margin-bottom: 10px;
+  }
+
+  .section-intro .sec-head h2 {
+    max-width: 16ch;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: -0.055em;
+  }
+
+  .section-intro .sec-sub {
+    max-width: 68ch;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.06rem;
+    font-weight: 650;
+  }
+
+  .premium-categories :global(.cat-card),
+  .premium-stories :global(.story-card) {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 24px 60px rgba(8, 24, 70, 0.2);
+  }
+
+  .daily-feature {
+    padding-top: 34px;
+  }
+
+  .today-premium {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: clamp(26px, 6vw, 72px);
+    align-items: center;
+    overflow: hidden;
+    min-height: 420px;
+    padding: clamp(28px, 5vw, 56px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 38px;
+    background:
+      radial-gradient(500px 260px at 85% 20%, rgba(255, 176, 31, 0.34), transparent 64%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 241, 255, 0.91));
+    color: var(--ink);
+    box-shadow: 0 36px 100px rgba(8, 24, 70, 0.25);
+  }
+
+  .today-copy h2 {
+    max-width: 14ch;
+    margin-bottom: 14px;
+    font-size: clamp(2.1rem, 5vw, 4.2rem);
+    letter-spacing: -0.065em;
+    color: var(--ink);
+  }
+
+  .today-copy p {
+    max-width: 58ch;
+    margin-bottom: 18px;
+    color: var(--ink-soft);
+    font-size: 1.08rem;
+    font-weight: 650;
+  }
+
+  .today-copy .eyebrow {
+    color: var(--blue-d);
+  }
+
+  .today-copy .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .today-art {
+    transform: rotate(3deg);
+  }
+
+  .today-art :global(.cover) {
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 26px 70px rgba(8, 24, 70, 0.24);
+  }
+
+  .reading-journey {
+    padding-top: 20px;
+  }
+
+  .journey-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: 28px;
+    align-items: center;
+    padding: clamp(28px, 5vw, 46px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 34px;
+    background: linear-gradient(135deg, rgba(8, 27, 70, 0.72), rgba(47, 116, 232, 0.38));
+    color: #fff;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(18px);
+  }
+
+  .journey-card h2 {
+    margin-bottom: 12px;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    letter-spacing: -0.055em;
+  }
+
+  .journey-card p {
+    max-width: 58ch;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 650;
+  }
+
+  .journey-steps {
+    display: grid;
+    gap: 12px;
+  }
+
+  .journey-steps span {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.11);
+    font-weight: 850;
+  }
+
+  .journey-steps b {
+    color: #ffd77a;
+    font-family: var(--font-display);
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid,
+    .today-premium,
+    .journey-card {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-copy h1 {
+      max-width: 12ch;
+    }
+
+    .hero-stage {
+      min-height: auto;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .hero-orbit-card--top {
+      right: -8px;
+      top: -24px;
+    }
+
+    .hero-orbit-card--bottom {
+      left: -8px;
+      bottom: -24px;
+    }
+
+    .today-art {
+      max-width: 420px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .premium-hero {
+      min-height: auto;
+    }
+
+    .hero-grid {
+      padding-top: 58px;
+      padding-bottom: 84px;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.75rem, 15vw, 4.7rem);
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+    }
+
+    .trust-row span {
+      flex: 1 1 auto;
+    }
+
+    .strip-panel {
+      grid-template-columns: repeat(2, 1fr);
+      border-radius: 24px;
+    }
+
+    .strip-panel div {
+      padding: 18px;
+    }
+
+    .hero-orbit-card {
+      position: relative;
+      inset: auto;
+      width: auto;
+      margin-top: 12px;
+    }
+
+    .showcase-card {
+      transform: none;
+    }
+
+    .today-premium {
+      border-radius: 28px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .strip-panel {
+      grid-template-columns: 1fr;
+    }
+
+    .premium-strip {
+      margin-top: -38px;
+    }
+
+    .section-intro .sec-head h2,
+    .today-copy h2,
+    .journey-card h2 {
+      letter-spacing: -0.04em;
+    }
   }
 </style>
