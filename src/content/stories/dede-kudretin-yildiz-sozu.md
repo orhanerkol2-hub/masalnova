@@ -3,6 +3,8 @@ title: "Dede Kudret'in Yıldız Sözü"
 shortDescription: "Yaşlı bir dedenin, torununa verdiği küçük bir sözü yıldızların altında nasıl tuttuğunu anlatan sıcak bir masal."
 coverEmoji: "⭐"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/dede-kudretin-yildiz-sozu.webp"
+altText: "Kapak görseli: Dede Kudret'in Yıldız Sözü"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

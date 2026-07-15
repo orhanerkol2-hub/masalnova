@@ -3,6 +3,8 @@ title: "Minik Defne'nin Yıldız Battaniyesi"
 shortDescription: "Meraklı küçük bir kızın gökyüzündeki yıldızlara battaniye örtme görevini üstlenerek uykuya dalışının sıcacık öyküsü."
 coverEmoji: "⭐"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/minik-defnenin-yildiz-battaniyesi.webp"
+altText: "Kapak görseli: Minik Defne'nin Yıldız Battaniyesi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

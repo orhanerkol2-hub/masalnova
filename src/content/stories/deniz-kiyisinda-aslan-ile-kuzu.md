@@ -3,6 +3,8 @@ title: "Deniz Kıyısında Aslan ile Kuzu"
 shortDescription: "Tembelliğinden kurtulmak isteyen bir aslanın, çalışkan bir kuzudan öğrendiği kıyıdaki güzel bir ders."
 coverEmoji: "🦁"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/deniz-kiyisinda-aslan-ile-kuzu.webp"
+altText: "Kapak görseli: Deniz Kıyısında Aslan ile Kuzu"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Dede Sadık'ın Dürüst Gülleri"
 shortDescription: "Çiçekli bir bahçede yaşayan yaşlı ve dürüst bir dedenin, ay ışığında çiçeklerle konuşarak minik bir tavşana sakin bir gece dileği anlattığı huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dede-sadikin-durust-gulleri.webp"
+altText: "Kapak görseli: Dede Sadık'ın Dürüst Gülleri"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

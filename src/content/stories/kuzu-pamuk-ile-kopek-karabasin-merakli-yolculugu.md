@@ -3,6 +3,8 @@ title: "Kuzu Pamuk ile Köpek Karabaş'ın Meraklı Yolculuğu"
 shortDescription: "Meraklı bir kuzu ile onu koruyan sadık köpeğin, yemyeşil ormanda merakın nereye götürdüğünü keşfettiği sıcacık bir hikaye."
 coverEmoji: "🐑"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kuzu-pamuk-ile-kopek-karabasin-merakli-yolculugu.webp"
+altText: "Kapak görseli: Kuzu Pamuk ile Köpek Karabaş'ın Meraklı Yolculuğu"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

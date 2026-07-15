@@ -3,6 +3,8 @@ title: "Küçük Deniz'in Işıltılı Sarayı"
 shortDescription: "Cesur küçük bir çocuğun, ışıl ışıl bir sarayda çalışkanlığıyla herkesin gönlünü kazanmasını anlatan öğretici bir masal."
 coverEmoji: "🏰"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/kucuk-denizin-isiltili-sarayi.webp"
+altText: "Kapak görseli: Küçük Deniz'in Işıltılı Sarayı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

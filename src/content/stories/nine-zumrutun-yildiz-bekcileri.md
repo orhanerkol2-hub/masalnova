@@ -3,6 +3,8 @@ title: "Nine Zümrüt'ün Yıldız Bekçileri"
 shortDescription: "Şefkatli bir ninenin, torununa gökyüzündeki yıldızları izleterek sorumluluk almanın değerini öğrettiği sıcak bir masal."
 coverEmoji: "⭐"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-zumrutun-yildiz-bekcileri.webp"
+altText: "Kapak görseli: Nine Zümrüt'ün Yıldız Bekçileri"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

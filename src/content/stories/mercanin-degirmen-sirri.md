@@ -3,6 +3,8 @@ title: "Mercan'ın Değirmen Sırrı"
 shortDescription: "Meraklı küçük bir kızın eski bir değirmende yardımlaşmanın gücünü keşfettiği sıcacık bir masal."
 coverEmoji: "🌾"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/mercanin-degirmen-sirri.webp"
+altText: "Kapak görseli: Mercan'ın Değirmen Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

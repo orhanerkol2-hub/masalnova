@@ -3,6 +3,8 @@ title: "Küçük Defne'nin Şükür Sepeti"
 shortDescription: "Yemyeşil bir ormanda yaşayan yaşlı bir dede, huysuz bir kızın gözlerini şükretmenin güzelliğine açar."
 coverEmoji: "🧺"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/kucuk-defnenin-sukur-sepeti.webp"
+altText: "Kapak görseli: Küçük Defne'nin Şükür Sepeti"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

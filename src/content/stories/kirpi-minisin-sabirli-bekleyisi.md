@@ -3,6 +3,8 @@ title: "Kirpi Miniş'in Sabırlı Bekleyişi"
 shortDescription: "Işıl ışıl bir sarayın bahçesinde yaşayan sabırsız bir kirpinin, sabrı öğrenerek en güzel armağana kavuştuğu sıcacık bir masal."
 coverEmoji: "🦔"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kirpi-minisin-sabirli-bekleyisi.webp"
+altText: "Kapak görseli: Kirpi Miniş'in Sabırlı Bekleyişi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

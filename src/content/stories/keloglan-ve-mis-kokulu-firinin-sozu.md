@@ -3,6 +3,8 @@ title: "Keloğlan ve Mis Kokulu Fırının Sözü"
 shortDescription: "Keloğlan, mahallenin fırıncısına verdiği sözü tutmak için akıl ve dürüstlükle güzel bir çözüm bulur."
 coverEmoji: "🍞"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-mis-kokulu-firinin-sozu.webp"
+altText: "Kapak görseli: Keloğlan ve Mis Kokulu Fırının Sözü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

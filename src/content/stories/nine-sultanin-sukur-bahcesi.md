@@ -3,6 +3,8 @@ title: "Nine Sultan'ın Şükür Bahçesi"
 shortDescription: "Küçük bir köyde yaşayan şefkatli bir ninenin, her akşam yıldızlara şükür fısıldayarak torununu uykuya hazırladığı huzurlu bir masal."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/nine-sultanin-sukur-bahcesi.webp"
+altText: "Kapak görseli: Nine Sultan'ın Şükür Bahçesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

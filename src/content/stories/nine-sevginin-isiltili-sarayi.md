@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin Işıltılı Sarayı"
 shortDescription: "Işıl ışıl bir sarayda yaşayan şefkatli bir ninenin, kibirli bir prensese gerçek dostluğun ne olduğunu öğretmesini anlatan sıcacık bir masal."
 coverEmoji: "🏰"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-sevginin-isiltili-sarayi.webp"
+altText: "Kapak görseli: Nine Sevgi'nin Işıltılı Sarayı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

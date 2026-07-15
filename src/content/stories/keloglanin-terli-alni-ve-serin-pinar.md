@@ -3,6 +3,8 @@ title: "Keloğlan'ın Terli Alnı ve Serin Pınar"
 shortDescription: "Tembellikten kaçan Keloğlan, serin bir pınarın başında çalışmanın gerçek tatlılığını öğrenir."
 coverEmoji: "💧"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-terli-alni-ve-serin-pinar.webp"
+altText: "Kapak görseli: Keloğlan'ın Terli Alnı ve Serin Pınar"
 ageGroups: ["5-7"]
 readingTime: 4
 categories: ["keloglan"]

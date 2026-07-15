@@ -3,6 +3,8 @@ title: "Keloğlan'ın Karlı Adalet Terazisi"
 shortDescription: "Keloğlan, karlı bir kış gününde köy pazarında hile yapan bir tüccarı akıllıca yakalayıp herkes için adaleti sağlar."
 coverEmoji: "⚖️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-karli-adalet-terazisi.webp"
+altText: "Kapak görseli: Keloğlan'ın Karlı Adalet Terazisi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

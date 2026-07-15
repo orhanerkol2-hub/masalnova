@@ -3,6 +3,8 @@ title: "Dede Sadık'ın Sıcak Kapısı"
 shortDescription: "Yağmurlu bir akşamda kapısını çalan küçük bir kediye yardım eden bilge dedenin nezaket dolu hikâyesi."
 coverEmoji: "🌧️"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/dede-sadikin-sicak-kapisi.webp"
+altText: "Kapak görseli: Dede Sadık'ın Sıcak Kapısı"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

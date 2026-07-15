@@ -3,6 +3,8 @@ title: "Küçük Deniz'in Ay Işığı Patikası"
 shortDescription: "Ay ışığında ışıldayan bir patikada yürüyen cesur küçük bir çocuğun, yıldızların eşliğinde huzurla uykuya dalmasının tatlı öyküsü."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/kucuk-denizin-ay-isigi-patikasi.webp"
+altText: "Kapak görseli: Küçük Deniz'in Ay Işığı Patikası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Çiçekli Bahçe Bilmecesi"
 shortDescription: "Keloğlan, padişahın kurumuş bahçesini nezaketiyle canlandırıp gönülleri kazanır."
 coverEmoji: "🌷"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-cicekli-bahce-bilmecesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Çiçekli Bahçe Bilmecesi"
 ageGroups: ["7-9"]
 readingTime: 4
 categories: ["keloglan"]

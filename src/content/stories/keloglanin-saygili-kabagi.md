@@ -3,6 +3,8 @@ title: "Keloğlan'ın Saygılı Kabağı"
 shortDescription: "Keloğlan, serin bir pınarın başında herkese saygıyla davranarak devin gönlünü kazanır ve köyüne bereket getirir."
 coverEmoji: "🎃"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-saygili-kabagi.webp"
+altText: "Kapak görseli: Keloğlan'ın Saygılı Kabağı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

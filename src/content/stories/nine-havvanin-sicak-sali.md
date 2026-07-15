@@ -3,6 +3,8 @@ title: "Nine Havva'nın Sıcak Şalı"
 shortDescription: "Yağmurlu bir akşamda şefkatli bir ninenin, küçük torununa sorumluluğu sevgiyle öğrettiği huzurlu bir uyku masalı."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/nine-havvanin-sicak-sali.webp"
+altText: "Kapak görseli: Nine Havva'nın Sıcak Şalı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

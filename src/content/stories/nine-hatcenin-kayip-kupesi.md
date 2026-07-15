@@ -3,6 +3,8 @@ title: "Nine Hatçe'nin Kayıp Küpesi"
 shortDescription: "Altın başaklı bir tarlada dürtü ile dürüstlüğü seçen küçük bir kızın öyküsü."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-hatcenin-kayip-kupesi.webp"
+altText: "Kapak görseli: Nine Hatçe'nin Kayıp Küpesi"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

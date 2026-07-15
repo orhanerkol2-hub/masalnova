@@ -3,6 +3,8 @@ title: "Minik Baştankara ile Şükür Mağarası"
 shortDescription: "Aç ve yorgun bir baştankara kuşunun gizemli bir mağarada bulduğu şeyle şükretmeyi öğrenmesinin sıcak öyküsü."
 coverEmoji: "🐦"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/minik-bastankara-ile-sukur-magarasi.webp"
+altText: "Kapak görseli: Minik Baştankara ile Şükür Mağarası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

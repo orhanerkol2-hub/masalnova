@@ -3,6 +3,8 @@ title: "Tilki Turna ile Tavşan Puf'un Işıltılı Mağarası"
 shortDescription: "Aceleci bir tilki ile sabırlı bir tavşanın, gizemli bir mağarada saklı hazineyi bulmak için birlikte öğrendiği sabır dolu bir dostluk hikâyesi."
 coverEmoji: "🦊"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/tilki-turna-ile-tavsan-pufun-isiltili-magarasi.webp"
+altText: "Kapak görseli: Tilki Turna ile Tavşan Puf'un Işıltılı Mağarası"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

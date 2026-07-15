@@ -3,6 +3,8 @@ title: "Çoban Kerem'in Kayıp Kuzusu"
 shortDescription: "Dürüst bir çobanın bulduğu kuzuyu sahibine geri vermesiyle köyde güven kazandığı sıcacık bir masal."
 coverEmoji: "🐑"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-keremin-kayip-kuzusu.webp"
+altText: "Kapak görseli: Çoban Kerem'in Kayıp Kuzusu"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

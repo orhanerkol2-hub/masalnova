@@ -3,6 +3,8 @@ title: "Küçük Mira'nın Kayıp Ayakkabısı"
 shortDescription: "Kalabalık bir çarşıda ayakkabısını kaybeden Mira'ya, yardımsever komşusu Nazlı Teyze'nin desteğiyle azimle arayarak bulmasının sıcacık öyküsü."
 coverEmoji: "👟"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/kucuk-miranin-kayip-ayakkabisi.webp"
+altText: "Kapak görseli: Küçük Mira'nın Kayıp Ayakkabısı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

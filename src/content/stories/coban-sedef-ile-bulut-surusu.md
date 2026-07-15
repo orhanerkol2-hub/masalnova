@@ -3,6 +3,8 @@ title: "Çoban Sedef ile Bulut Sürüsü"
 shortDescription: "Dağ başındaki kulübesinde yaşayan iyi kalpli çoban Sedef'in, koyunlarını ve gökyüzündeki bulut sürüsünü sevgiyle uyutuşunun huzurlu hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-sedef-ile-bulut-surusu.webp"
+altText: "Kapak görseli: Çoban Sedef ile Bulut Sürüsü"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

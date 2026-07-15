@@ -3,6 +3,8 @@ title: "Meraklı Karınca Zümrüt'ün Çarşı Gezisi"
 shortDescription: "Kalabalık bir çarşıda her şeyi öğrenmek isteyen meraklı bir karıncanın, arkadaşlık ve paylaşmayı keşfettiği sıcak bir masal."
 coverEmoji: "🐜"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/merakli-karinca-zumrutun-carsi-gezisi.webp"
+altText: "Kapak görseli: Meraklı Karınca Zümrüt'ün Çarşı Gezisi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

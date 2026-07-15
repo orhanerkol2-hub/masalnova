@@ -3,6 +3,8 @@ title: "Mira'nın Yıldız Kuyusu"
 shortDescription: "Meraklı küçük bir kızın, gökyüzündeki en parlak yıldızı görmek için sabrı keşfetmesini anlatan sıcacık bir masal."
 coverEmoji: "⭐"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/miranin-yildiz-kuyusu.webp"
+altText: "Kapak görseli: Mira'nın Yıldız Kuyusu"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

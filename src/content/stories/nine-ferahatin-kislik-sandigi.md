@@ -3,6 +3,8 @@ title: "Nine Ferahat'ın Kışlık Sandığı"
 shortDescription: "Dağ başındaki kulübesinde yaşayan şefkatli bir ninenin, tutumlu olmayı torununa küçük bir sandık dolusu güzel örnekle öğrettiği sevimli bir masal."
 coverEmoji: "🧺"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-ferahatin-kislik-sandigi.webp"
+altText: "Kapak görseli: Nine Ferahat'ın Kışlık Sandığı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

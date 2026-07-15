@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yedi Renkli Ipi"
 shortDescription: "Kalabalık çarşıda alay edilen Keloğlan'ın, azmiyle küçük bir ip yumağından herkesin takdirini kazanan bir iş kurmasının hikâyesi."
 coverEmoji: "🧵"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yedi-renkli-ipi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yedi Renkli Ipi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

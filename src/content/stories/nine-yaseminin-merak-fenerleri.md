@@ -3,6 +3,8 @@ title: "Nine Yasemin'in Merak Fenerleri"
 shortDescription: "Şefkatli bir ninenin, meraklı bir çocuğu kalabalık çarşının en sakin köşesinde ay ışığıyla uyuttuğu huzurlu bir uyku masalı."
 coverEmoji: "🏮"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/nine-yaseminin-merak-fenerleri.webp"
+altText: "Kapak görseli: Nine Yasemin'in Merak Fenerleri"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Sincap Fındık ile Baykuş Ulu'nun Yağmurlu Sırrı"
 shortDescription: "Yağmurlu bir akşamda kaybolan fındık torbasının hikâyesi, doğruyu söylemenin dostluğu nasıl güçlendirdiğini gösterir."
 coverEmoji: "🌧️"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/sincap-findik-ile-baykus-ulunun-yagmurlu-sirri.webp"
+altText: "Kapak görseli: Sincap Fındık ile Baykuş Ulu'nun Yağmurlu Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

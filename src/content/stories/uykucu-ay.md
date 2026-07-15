@@ -3,6 +3,8 @@ title: "Uykucu Ay ile Küçük Yıldız"
 shortDescription: "Gökyüzünde uyumak istemeyen küçük bir yıldıza, Ay usulca en tatlı uyku masalını fısıldar."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/uykucu-ay.webp"
+altText: "Kapak görseli: Uykucu Ay ile Küçük Yıldız"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

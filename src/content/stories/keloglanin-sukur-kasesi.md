@@ -3,6 +3,8 @@ title: "Keloğlan'ın Şükür Kâsesi"
 shortDescription: "Keloğlan, çiçekli bir bahçede bulduğu küçük bir kâse sayesinde şükretmenin gerçek anlamını öğrenir."
 coverEmoji: "🌷"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-sukur-kasesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Şükür Kâsesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

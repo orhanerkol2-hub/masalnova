@@ -3,6 +3,8 @@ title: "Keloğlan'ın Nazik Sözlü Balığı"
 shortDescription: "Keloğlan'ın sakin bir gölde küçük bir balığa gösterdiği nezaketin, kendisine ve tüm köye nasıl iyilikle döndüğünü anlatan sevimli bir masal."
 coverEmoji: "🐟"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-nazik-sozlu-baligi.webp"
+altText: "Kapak görseli: Keloğlan'ın Nazik Sözlü Balığı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

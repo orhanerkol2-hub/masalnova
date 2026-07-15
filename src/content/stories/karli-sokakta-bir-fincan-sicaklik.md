@@ -3,6 +3,8 @@ title: "Karlı Sokakta Bir Fincan Sıcaklık"
 shortDescription: "Karlı bir kış gününde dürüst ve yardımsever bir komşunun küçük bir kız çocuğuna gösterdiği içten yardımı anlatan, uyumadan önce dinlenecek huzurlu bir masal."
 coverEmoji: "❄️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/karli-sokakta-bir-fincan-sicaklik.webp"
+altText: "Kapak görseli: Karlı Sokakta Bir Fincan Sıcaklık"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

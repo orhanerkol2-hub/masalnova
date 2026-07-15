@@ -3,6 +3,8 @@ title: "Batu ile Cıvı'nın Deniz Kıyısı Şölen"
 shortDescription: "İki kirpi kardeşin deniz kıyısında bulduklarına şükrederek paylaşmayı öğrendiği sıcacık bir masal."
 coverEmoji: "🦔"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/batu-ile-civinin-deniz-kiyisi-solen.webp"
+altText: "Kapak görseli: Batu ile Cıvı'nın Deniz Kıyısı Şölen"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

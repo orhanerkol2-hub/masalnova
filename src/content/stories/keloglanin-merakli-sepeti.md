@@ -3,6 +3,8 @@ title: "Keloğlan'ın Meraklı Sepeti"
 shortDescription: "Keloğlan'ın kalabalık çarşıda merakla açtığı gizemli sepet, ona ve tüm köylülere büyük bir ders verir."
 coverEmoji: "🧺"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-merakli-sepeti.webp"
+altText: "Kapak görseli: Keloğlan'ın Meraklı Sepeti"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

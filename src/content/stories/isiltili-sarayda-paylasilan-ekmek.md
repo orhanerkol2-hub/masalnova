@@ -3,6 +3,8 @@ title: "Işıltılı Sarayda Paylaşılan Ekmek"
 shortDescription: "Işıl ışıl bir sarayda yaşayan yaşlı bilge dede, küçük bir kızıla yardımlaşmanın gerçek değerini gösterir."
 coverEmoji: "🏰"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/isiltili-sarayda-paylasilan-ekmek.webp"
+altText: "Kapak görseli: Işıltılı Sarayda Paylaşılan Ekmek"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

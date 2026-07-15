@@ -3,6 +3,8 @@ title: "Fısıltı Mağarasında Bekleyen Tohum"
 shortDescription: "Güler yüzlü bir bahçıvanın, ay ışığıyla parıldayan gizemli bir mağarada sabırla bekleyerek büyülü bir tohumu çiçek açtırmasını anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/fisilti-magarasinda-bekleyen-tohum.webp"
+altText: "Kapak görseli: Fısıltı Mağarasında Bekleyen Tohum"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

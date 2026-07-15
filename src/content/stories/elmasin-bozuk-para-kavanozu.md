@@ -3,6 +3,8 @@ title: "Elmas'ın Bozuk Para Kavanozu"
 shortDescription: "Meraklı bir kız, yağmurlu bir akşamda annesinin biriktirdiği paraların gerçek değerini keşfeder."
 coverEmoji: "🐷"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/elmasin-bozuk-para-kavanozu.webp"
+altText: "Kapak görseli: Elmas'ın Bozuk Para Kavanozu"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

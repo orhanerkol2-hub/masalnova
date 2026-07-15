@@ -3,6 +3,8 @@ title: "Kaya'nın Balıkçı Ağı"
 shortDescription: "Cesur bir çocuğun sakin bir gölde çalışkanlıkla balıkçı ağını onarıp herkese örnek olmasını anlatan kısa bir masal."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/kayanin-balikci-agi.webp"
+altText: "Kapak görseli: Kaya'nın Balıkçı Ağı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

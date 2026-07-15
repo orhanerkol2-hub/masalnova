@@ -3,6 +3,8 @@ title: "Dede Kerim'in Yedi Kapılı Bahçesi"
 shortDescription: "Yaşlı bir bahçıvanın çocuklara paylaşmanın gerçek mutluluğunu öğrettiği sıcacık bir bahçe hikâyesi."
 coverEmoji: "🌷"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/dede-kerimin-yedi-kapili-bahcesi.webp"
+altText: "Kapak görseli: Dede Kerim'in Yedi Kapılı Bahçesi"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

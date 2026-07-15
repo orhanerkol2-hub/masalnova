@@ -3,6 +3,8 @@ title: "Keloğlan'ın Doğru Sözü"
 shortDescription: "Kel bir çocuğun, eski bir değirmende bulduğu altınları sahiplenmeyip doğruyu söylemesiyle herkesin gönlünü kazandığı sıcak bir masal."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-dogru-sozu.webp"
+altText: "Kapak görseli: Keloğlan'ın Doğru Sözü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

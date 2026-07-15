@@ -3,6 +3,8 @@ title: "Deniz Kabuğu Kutusu"
 shortDescription: "Yaşlı bir dedenin biriktirdiği deniz kabuklarıyla küçük bir kıza tutumluluğu öğretmesini anlatan sıcak bir masal."
 coverEmoji: "🐚"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/deniz-kabugu-kutusu.webp"
+altText: "Kapak görseli: Deniz Kabuğu Kutusu"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

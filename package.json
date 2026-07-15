@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "gen:stories": "node scripts/generate-stories.mjs",
     "gen:covers": "node scripts/generate-cover-briefs.mjs",
+    "fill:covers": "node scripts/generate-missing-cover-assets.mjs && node scripts/apply-cover-images.mjs",
     "optimize:covers": "node scripts/optimize-cover-images.mjs",
     "apply:covers": "node scripts/apply-cover-images.mjs",
     "render:legal": "node scripts/render-legal-images.mjs"

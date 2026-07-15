@@ -3,6 +3,8 @@ title: "Keloğlan'ın Ormandaki Yedi Dostu"
 shortDescription: "Keloğlan'ın yemyeşil ormanda kaybolan bir sincabı kurtarırken ormanın bütün hayvanlarıyla dost olup büyük bir zorluğu birlikte yenmesinin öyküsü."
 coverEmoji: "🌳"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-ormandaki-yedi-dostu.webp"
+altText: "Kapak görseli: Keloğlan'ın Ormandaki Yedi Dostu"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

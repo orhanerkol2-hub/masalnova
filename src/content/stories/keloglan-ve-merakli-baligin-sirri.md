@@ -3,6 +3,8 @@ title: "Keloğlan ve Meraklı Balığın Sırrı"
 shortDescription: "Meraklı Keloğlan'ın sakin bir gölde konuşan bir balıkla dostluk kurup köyüne akıl ve güzellik getirmesinin öyküsü."
 coverEmoji: "🐟"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-merakli-baligin-sirri.webp"
+altText: "Kapak görseli: Keloğlan ve Meraklı Balığın Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Keloğlan ve Padişahın Saygı Sınavı"
 shortDescription: "Keloğlan, padişahın çiçekli bahçesinde saygıyla hareket ederek herkesin gönlünü kazanır."
 coverEmoji: "🌷"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-padisahin-saygi-sinavi.webp"
+altText: "Kapak görseli: Keloğlan ve Padişahın Saygı Sınavı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Köpek Fındık ile Ayı Homur'un Bal Kovanı"
 shortDescription: "Tembel ayı Homur ile çalışkan köpek Fındık'ın yemyeşil ormanda birlikte bal toplayarak çalışkanlığın tatlı ödülünü keşfettiği sıcak bir dostluk masalı."
 coverEmoji: "🐝"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kopek-findik-ile-ayi-homurun-bal-kovani.webp"
+altText: "Kapak görseli: Köpek Fındık ile Ayı Homur'un Bal Kovanı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

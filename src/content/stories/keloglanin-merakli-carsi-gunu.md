@@ -3,6 +3,8 @@ title: "Keloğlan'ın Meraklı Çarşı Günü"
 shortDescription: "Keloğlan'ın kalabalık çarşıda meraklı sorularıyla hem bir hilekârı ortaya çıkardığı hem de padişahın gönlünü kazandığı eğlenceli bir masal."
 coverEmoji: "🏮"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-merakli-carsi-gunu.webp"
+altText: "Kapak görseli: Keloğlan'ın Meraklı Çarşı Günü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

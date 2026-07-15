@@ -3,6 +3,8 @@ title: "Kelebek Yelpaze'nin Verdiği Söz"
 shortDescription: "Küçük bir köyde yaşayan minik kelebeğin, arkadaşlarına verdiği sözü tutmak için gösterdiği azmi anlatan sıcacık bir masal."
 coverEmoji: "🦋"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kelebek-yelpazenin-verdigi-soz.webp"
+altText: "Kapak görseli: Kelebek Yelpaze'nin Verdiği Söz"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Un Küpü Şenliği"
 shortDescription: "Keloğlan, terk edilmiş bir değirmende bulduğu bereketi köylüyle paylaşarak herkesin karnını doyurur."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-un-kupu-senligi.webp"
+altText: "Kapak görseli: Keloğlan'ın Un Küpü Şenliği"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

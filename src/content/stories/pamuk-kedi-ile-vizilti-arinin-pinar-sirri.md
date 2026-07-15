@@ -3,6 +3,8 @@ title: "Pamuk Kedi ile Vızıltı Arı'nın Pınar Sırrı"
 shortDescription: "Bir kedi ile bir arının serin pınar başında kurdukları beklenmedik dostluğun sıcacık öyküsü."
 coverEmoji: "🐱"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/pamuk-kedi-ile-vizilti-arinin-pinar-sirri.webp"
+altText: "Kapak görseli: Pamuk Kedi ile Vızıltı Arı'nın Pınar Sırrı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

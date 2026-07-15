@@ -3,6 +3,8 @@ title: "Keloğlan'ın Verdiği Söz"
 shortDescription: "Keloğlan'ın dağ başındaki bir devle verdiği söze sadık kalarak akıllılığı ve dürüstlüğüyle herkesi mutlu ettiği sıcak bir masal."
 coverEmoji: "🏔️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-verdigi-soz-3.webp"
+altText: "Kapak görseli: Keloğlan'ın Verdiği Söz"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Karınca Pare'nin Deniz Kıyısı Mahkemesi"
 shortDescription: "Deniz kıyısında kaybolan bir kabuğun sahibini bulmaya çalışan küçük bir karıncanın adalet dolu hikayesi."
 coverEmoji: "🐜"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/karinca-parenin-deniz-kiyisi-mahkemesi.webp"
+altText: "Kapak görseli: Karınca Pare'nin Deniz Kıyısı Mahkemesi"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

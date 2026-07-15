@@ -3,6 +3,8 @@ title: "Serin Pınarda Kaybolan Bilezik"
 shortDescription: "Bir çocuğun pınarda bulduğu bileziği sahibine dürüstçe geri vermesini anlatan sıcak bir masal."
 coverEmoji: "💧"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/serin-pinarda-kaybolan-bilezik.webp"
+altText: "Kapak görseli: Serin Pınarda Kaybolan Bilezik"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

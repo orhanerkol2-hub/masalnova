@@ -3,6 +3,8 @@ title: "Değirmenci Dede'nin Sırası"
 shortDescription: "Sabırsız bir tavşanın, eski değirmende sıra beklemeyi öğrenmesini anlatan sıcacık bir masal."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/degirmenci-dedenin-sirasi.webp"
+altText: "Kapak görseli: Değirmenci Dede'nin Sırası"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

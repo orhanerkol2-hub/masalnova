@@ -3,6 +3,8 @@ title: "Mert'in Ay Işığında Yardımı"
 shortDescription: "Ay ışığında bir patikada yürüyen cesur bir çocuğun, yolunu kaybetmiş küçük bir kirpiciğe merhametle yardım etmesini anlatan sıcacık bir masal."
 coverEmoji: "🦔"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/mertin-ay-isiginda-yardimi.webp"
+altText: "Kapak görseli: Mert'in Ay Işığında Yardımı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

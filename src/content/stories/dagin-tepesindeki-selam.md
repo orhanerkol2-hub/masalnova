@@ -3,6 +3,8 @@ title: "Dağın Tepesindeki Selam"
 shortDescription: "İyi kalpli bir çobanın, dağdaki herkese gösterdiği saygının küçük bir çocuğa nasıl güzel bir ders verdiğini anlatan sıcak bir masal."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/dagin-tepesindeki-selam.webp"
+altText: "Kapak görseli: Dağın Tepesindeki Selam"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

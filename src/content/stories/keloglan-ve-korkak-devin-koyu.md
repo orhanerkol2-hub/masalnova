@@ -3,6 +3,8 @@ title: "Keloğlan ve Korkak Devin Köyü"
 shortDescription: "Keloğlan'ın, köyünü tehdit eden korkunç söylentiler yayan bir devle yüzleşerek cesaretini ve zekasını gösterdiği sıcak bir masal."
 coverEmoji: "🦁"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-korkak-devin-koyu.webp"
+altText: "Kapak görseli: Keloğlan ve Korkak Devin Köyü"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

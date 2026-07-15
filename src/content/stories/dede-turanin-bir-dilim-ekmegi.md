@@ -3,6 +3,8 @@ title: "Dede Turan'ın Bir Dilim Ekmeği"
 shortDescription: "Yaşlı bir dedenin küçük köyde tek somun ekmeğini paylaşarak herkesin karnını doyurmasının sıcacık öyküsü."
 coverEmoji: "🍞"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/dede-turanin-bir-dilim-ekmegi.webp"
+altText: "Kapak görseli: Dede Turan'ın Bir Dilim Ekmeği"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

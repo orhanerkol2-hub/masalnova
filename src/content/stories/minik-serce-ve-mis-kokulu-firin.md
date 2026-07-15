@@ -3,6 +3,8 @@ title: "Minik Serçe ve Mis Kokulu Fırın"
 shortDescription: "Korkak bir serçenin, sıcacık bir fırında cesaretini bulup arkadaşlarına yardım etmesinin sıcak öyküsü."
 coverEmoji: "🐦"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/minik-serce-ve-mis-kokulu-firin.webp"
+altText: "Kapak görseli: Minik Serçe ve Mis Kokulu Fırın"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

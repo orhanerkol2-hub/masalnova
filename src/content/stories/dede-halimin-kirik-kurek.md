@@ -3,6 +3,8 @@ title: "Dede Halim'in Kırık Kürek"
 shortDescription: "Balığa gitmek isteyen yaşlı bir dedenin, kürekleri kırık bir çocuğa yardım ederken bulduğu güzel karşılık."
 coverEmoji: "🚣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/dede-halimin-kirik-kurek.webp"
+altText: "Kapak görseli: Dede Halim'in Kırık Kürek"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

@@ -3,6 +3,8 @@ title: "Çoban Sadık'ın Ay Işığı Bekleyişi"
 shortDescription: "Sabırlı bir çobanın, ay ışığında kaybolan kuzusunu telaşsızca bulma öyküsü."
 coverEmoji: "🌙"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-sadikin-ay-isigi-bekleyisi.webp"
+altText: "Kapak görseli: Çoban Sadık'ın Ay Işığı Bekleyişi"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

@@ -3,6 +3,8 @@ title: "Lina'nın Gölün Ortasındaki Sırrı"
 shortDescription: "Meraklı bir kızın sakin bir gölün ortasındaki adaya ulaşmak için cesaretini toplamasının hikâyesi."
 coverEmoji: "🌊"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/linanin-golun-ortasindaki-sirri.webp"
+altText: "Kapak görseli: Lina'nın Gölün Ortasındaki Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

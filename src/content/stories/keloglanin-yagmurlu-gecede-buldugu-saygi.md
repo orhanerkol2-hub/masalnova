@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yağmurlu Gecede Bulduğu Saygı"
 shortDescription: "Keloğlan, yağmurlu bir akşamda kapısını çalan yaşlı bir devi ağırlayarak saygının ve iyiliğin en büyük hazine olduğunu öğrenir."
 coverEmoji: "🌧️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yagmurlu-gecede-buldugu-saygi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yağmurlu Gecede Bulduğu Saygı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

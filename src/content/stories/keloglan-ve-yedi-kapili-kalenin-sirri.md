@@ -3,6 +3,8 @@ title: "Keloğlan ve Yedi Kapılı Kalenin Sırrı"
 shortDescription: "Keloğlan'ın cesareti ve dürüstlüğüyle korkulan devin gizemini çözüp köylüyü sevindirdiği eğlenceli bir masal."
 coverEmoji: "🗝️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-yedi-kapili-kalenin-sirri.webp"
+altText: "Kapak görseli: Keloğlan ve Yedi Kapılı Kalenin Sırrı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

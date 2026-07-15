@@ -3,6 +3,8 @@ title: "Keloğlan'ın Dağ Başındaki Kulübesi"
 shortDescription: "Kel başlı, yüreği sıcak Keloğlan'ın, dağ başındaki yıkık bir kulübeyi azimle onarıp bir aileye yuva olmasının öyküsü."
 coverEmoji: "🏔️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-dag-basindaki-kulubesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Dağ Başındaki Kulübesi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

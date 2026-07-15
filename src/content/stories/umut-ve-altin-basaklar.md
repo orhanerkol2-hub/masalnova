@@ -3,6 +3,8 @@ title: "Umut ve Altın Başaklar"
 shortDescription: "Cesur küçük Toprak, komşularının tarlasını hep birlikte hasat ederek yardımlaşmanın gücünü öğrenir."
 coverEmoji: "🌾"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/umut-ve-altin-basaklar.webp"
+altText: "Kapak görseli: Umut ve Altın Başaklar"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

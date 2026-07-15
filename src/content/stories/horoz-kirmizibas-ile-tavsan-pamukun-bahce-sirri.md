@@ -3,6 +3,8 @@ title: "Horoz Kırmızıbaş ile Tavşan Pamuk'un Bahçe Sırrı"
 shortDescription: "Gururlu bir horoz ile telaşlı bir tavşanın, çiçekli bir bahçede birbirine yardım ederek gerçek dostluğu öğrendiği sıcacık bir masal."
 coverEmoji: "🌷"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/horoz-kirmizibas-ile-tavsan-pamukun-bahce-sirri.webp"
+altText: "Kapak görseli: Horoz Kırmızıbaş ile Tavşan Pamuk'un Bahçe Sırrı"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

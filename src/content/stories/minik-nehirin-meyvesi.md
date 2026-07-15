@@ -3,6 +3,8 @@ title: "Minik Nehir'in Meyvesi"
 shortDescription: "Meraklı bir kızın yemyeşil ormanda sabırla bir tohumun büyümesini beklemesini anlatan kısa bir masal."
 coverEmoji: "🌱"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/minik-nehirin-meyvesi.webp"
+altText: "Kapak görseli: Minik Nehir'in Meyvesi"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

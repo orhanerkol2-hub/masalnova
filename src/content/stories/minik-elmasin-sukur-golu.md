@@ -3,6 +3,8 @@ title: "Minik Elmas'ın Şükür Gölü"
 shortDescription: "Meraklı küçük bir kızın, sakin bir gölün başında şükretmeyi ve huzurla uyumayı öğrendiği yumuşacık bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/minik-elmasin-sukur-golu.webp"
+altText: "Kapak görseli: Minik Elmas'ın Şükür Gölü"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

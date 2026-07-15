@@ -3,6 +3,8 @@ title: "Zeynep'in Uçurtması"
 shortDescription: "Meraklı küçük bir kızın, geniş bir çayırda uçurtmasını uçurmak için gösterdiği azmi anlatan sıcacık bir masal."
 coverEmoji: "🪁"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/zeynepin-ucurtmasi.webp"
+altText: "Kapak görseli: Zeynep'in Uçurtması"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

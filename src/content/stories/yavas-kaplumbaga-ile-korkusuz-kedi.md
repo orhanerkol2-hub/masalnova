@@ -3,6 +3,8 @@ title: "Yavaş Kaplumbağa ile Korkusuz Kedi"
 shortDescription: "Yemyeşil bir ormanda yaşayan çekingen bir kedi ile sakin bir kaplumbağanın, cesaretin hızla değil yürekle ilgili olduğunu keşfettiği neşeli bir dostluk öyküsü."
 coverEmoji: "🐢"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/yavas-kaplumbaga-ile-korkusuz-kedi.webp"
+altText: "Kapak görseli: Yavaş Kaplumbağa ile Korkusuz Kedi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

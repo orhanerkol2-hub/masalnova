@@ -3,6 +3,8 @@ title: "Dede Sadık'ın Paylaşılan Sıcaklığı"
 shortDescription: "Dağ başındaki kulübesinde yaşayan sevgi dolu bir dedenin, gecenin en soğuk saatinde battaniyesini ve sıcak çorbasını paylaşırken çocuklara huzurlu bir uyku dileyen yumuşacık hikayesi."
 coverEmoji: "🏔️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dede-sadikin-paylasilan-sicakligi.webp"
+altText: "Kapak görseli: Dede Sadık'ın Paylaşılan Sıcaklığı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

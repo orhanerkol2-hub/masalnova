@@ -3,6 +3,8 @@ title: "Emre'nin Paylaşılan Sürüsü"
 shortDescription: "İyi kalpli bir çobanın, kuraklık zamanında köylülerle birlik olup yardımlaşmayı öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/emrenin-paylasilan-surusu.webp"
+altText: "Kapak görseli: Emre'nin Paylaşılan Sürüsü"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

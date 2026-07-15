@@ -3,6 +3,8 @@ title: "Dede Hikmet'in Yağmurlu Kapısı"
 shortDescription: "Yağmurlu bir akşamda yaşlı bir dedenin nazik davranışının küçük bir kediyi ve bütün mahalleyi huzurla uyutmasını anlatan sakin bir uyku masalı."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dede-hikmetin-yagmurlu-kapisi-2.webp"
+altText: "Kapak görseli: Dede Hikmet'in Yağmurlu Kapısı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

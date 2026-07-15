@@ -3,6 +3,8 @@ title: "Vak Vak'ın Verdiği Söz"
 shortDescription: "Küçük bir ördeğin, arkadaşlarına verdiği sözü tutmak için yağmurlu bir günde gösterdiği azmi anlatan sıcacık bir masal."
 coverEmoji: "🦆"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/vak-vakin-verdigi-soz.webp"
+altText: "Kapak görseli: Vak Vak'ın Verdiği Söz"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

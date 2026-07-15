@@ -3,6 +3,8 @@ title: "Nine Feride'nin Kırık Vazosu"
 shortDescription: "Şefkatli bir ninenin çiçekli bahçesinde, kırık bir vazo üzerinden torunu ile küçük komşu çocuğuna affetmenin gücünü öğreten sıcak bir masal."
 coverEmoji: "🌸"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-feridenin-kirik-vazosu.webp"
+altText: "Kapak görseli: Nine Feride'nin Kırık Vazosu"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yankısız Ödülü"
 shortDescription: "Padişahın düzenlediği bilgelik yarışında Keloğlan'ın alçakgönüllülüğü, en büyük ödülden daha değerli bir armağan getirir."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yankisiz-odulu.webp"
+altText: "Kapak görseli: Keloğlan'ın Yankısız Ödülü"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

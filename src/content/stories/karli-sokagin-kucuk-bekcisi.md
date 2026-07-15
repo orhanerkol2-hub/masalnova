@@ -3,6 +3,8 @@ title: "Karlı Sokağın Küçük Bekçisi"
 shortDescription: "Karlı bir kış gününde meraklı küçük bir kızın, komşularının serçelerine ve çiçeklerine göz kulak olarak öğrendiği sorumluluğun sıcacık öyküsü."
 coverEmoji: "❄️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/karli-sokagin-kucuk-bekcisi.webp"
+altText: "Kapak görseli: Karlı Sokağın Küçük Bekçisi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

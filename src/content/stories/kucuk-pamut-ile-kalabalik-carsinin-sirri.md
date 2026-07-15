@@ -3,6 +3,8 @@ title: "Küçük Pamut ile Kalabalık Çarşının Sırrı"
 shortDescription: "Şirin bir kuzunun, çarşıda yaptığı küçük bir yaramazlığı affettirmek için öğrendiği tatlı bir ders."
 coverEmoji: "🐑"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kucuk-pamut-ile-kalabalik-carsinin-sirri.webp"
+altText: "Kapak görseli: Küçük Pamut ile Kalabalık Çarşının Sırrı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

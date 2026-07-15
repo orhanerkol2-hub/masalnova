@@ -3,6 +3,8 @@ title: "Çoban Mehmet'in Işıklı Mağarası"
 shortDescription: "Yorulduğunda bile denemekten vazgeçmeyen bir çobanın gizemli mağarada azimle bulduğu ışığın öyküsü."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-mehmetin-isikli-magarasi.webp"
+altText: "Kapak görseli: Çoban Mehmet'in Işıklı Mağarası"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Çoban Yusuf ile Serin Pınarın Ninnisi"
 shortDescription: "İyi kalpli bir çobanın, serin pınar başında koyunlarıyla birlikte tutumluluğu ve huzuru öğrendiği sakin bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-yusuf-ile-serin-pinarin-ninnisi.webp"
+altText: "Kapak görseli: Çoban Yusuf ile Serin Pınarın Ninnisi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

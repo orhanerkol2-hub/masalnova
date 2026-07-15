@@ -3,6 +3,8 @@ title: "Baykuş Huhu'nun Işıltılı Görevi"
 shortDescription: "Unutkan bir baykuşun, ormandaki hayvanlara verdiği sözü tutmak için gizemli bir mağarada sorumluluk dersi öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🦉"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/baykus-huhunun-isiltili-gorevi.webp"
+altText: "Kapak görseli: Baykuş Huhu'nun Işıltılı Görevi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

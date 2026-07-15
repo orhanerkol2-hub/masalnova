@@ -3,6 +3,8 @@ title: "Çalışkan Karınca ile Tembel Ağustosböceği"
 shortDescription: "Yaz boyunca şarkı söyleyen ağustosböceği ile azıcık azıcık biriktiren karıncanın kışı çok farklı geçer."
 coverEmoji: "🐜"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/caliskan-karinca.webp"
+altText: "Kapak görseli: Çalışkan Karınca ile Tembel Ağustosböceği"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan", "egitici"]

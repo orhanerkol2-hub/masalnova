@@ -3,6 +3,8 @@ title: "Dede Sabri'nin Tohum Yarışı"
 shortDescription: "Sabırsız bir tavşan yavrusu, yaşlı bilge dededen sabrın gerçek gücünü öğrenir."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/dede-sabrinin-tohum-yarisi.webp"
+altText: "Kapak görseli: Dede Sabri'nin Tohum Yarışı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

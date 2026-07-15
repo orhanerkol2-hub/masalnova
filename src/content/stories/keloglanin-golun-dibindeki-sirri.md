@@ -3,6 +3,8 @@ title: "Keloğlan'ın Gölün Dibindeki Sırrı"
 shortDescription: "Keloğlan, sakin bir gölün dibinde saklanan sırrı çözmek için cesaretini toplar ve köylüsüne yardım eder."
 coverEmoji: "🌊"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-golun-dibindeki-sirri.webp"
+altText: "Kapak görseli: Keloğlan'ın Gölün Dibindeki Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Meraklı Sincap Fındık'ın Çayır Gezisi"
 shortDescription: "Meraklı bir sincabın geniş çayırda yeni dostluklar keşfetmesini anlatan sıcak bir masal."
 coverEmoji: "🐿️"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/merakli-sincap-findikin-cayir-gezisi.webp"
+altText: "Kapak görseli: Meraklı Sincap Fındık'ın Çayır Gezisi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

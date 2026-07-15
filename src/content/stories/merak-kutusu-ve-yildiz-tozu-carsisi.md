@@ -3,6 +3,8 @@ title: "Merak Kutusu ve Yıldız Tozu Çarşısı"
 shortDescription: "Yaşlı bilge bir dedenin, meraklı bir çocuğa kalabalık çarşıda gösterdiği huzurlu gece yolculuğunun sakinleştirici hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/merak-kutusu-ve-yildiz-tozu-carsisi.webp"
+altText: "Kapak görseli: Merak Kutusu ve Yıldız Tozu Çarşısı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

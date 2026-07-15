@@ -3,6 +3,8 @@ title: "Fındıkçı Fıstık'ın Deniz Kıyısı Sürprizi"
 shortDescription: "Fındıklarını denizde kaybeden nazik bir sincabın, yardımseverliği sayesinde yeni dostluklar kazandığı sıcacık bir masal."
 coverEmoji: "🐿️"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/findikci-fistikin-deniz-kiyisi-surprizi.webp"
+altText: "Kapak görseli: Fındıkçı Fıstık'ın Deniz Kıyısı Sürprizi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

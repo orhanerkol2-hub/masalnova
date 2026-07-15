@@ -3,6 +3,8 @@ title: "Tosbağa Rana'nın Bahçesi"
 shortDescription: "Yavaş ama merhametli bir kaplumbağanın, çiçekli bahçedeki hayvanlara verdiği küçük yardımlarla büyük bir dostluk kazandığı sıcacık bir masal."
 coverEmoji: "🐢"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/tosbaga-rananin-bahcesi.webp"
+altText: "Kapak görseli: Tosbağa Rana'nın Bahçesi"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

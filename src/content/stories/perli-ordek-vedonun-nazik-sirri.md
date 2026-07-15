@@ -3,6 +3,8 @@ title: "Perli Ördek Vedo'nun Nazik Sırrı"
 shortDescription: "Sakin bir gölde yaşayan nazik bir ördeğin, kibirli bir kurbağayı bile kalbini yumuşatarak değiştirdiği sıcacık bir masal."
 coverEmoji: "🦆"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/perli-ordek-vedonun-nazik-sirri.webp"
+altText: "Kapak görseli: Perli Ördek Vedo'nun Nazik Sırrı"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

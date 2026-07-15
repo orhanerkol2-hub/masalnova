@@ -3,6 +3,8 @@ title: "Onur'un Şeftalili Sepeti"
 shortDescription: "Kalabalık bir çarşıda küçük bir kaza sonrası, cesur bir çocuğun affetmeyi öğrenmesinin sıcacık öyküsü."
 coverEmoji: "🍑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/onurun-seftalili-sepeti.webp"
+altText: "Kapak görseli: Onur'un Şeftalili Sepeti"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

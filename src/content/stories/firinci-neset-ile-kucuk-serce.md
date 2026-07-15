@@ -3,6 +3,8 @@ title: "Fırıncı Neşet ile Küçük Serçe"
 shortDescription: "Mis kokulu bir fırında çalışan güler yüzlü bir bahçıvanın, aç bir serçeye gösterdiği merhametin herkese nasıl iyilik olarak döndüğünü anlatan sıcak bir masal."
 coverEmoji: "🍞"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/firinci-neset-ile-kucuk-serce.webp"
+altText: "Kapak görseli: Fırıncı Neşet ile Küçük Serçe"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

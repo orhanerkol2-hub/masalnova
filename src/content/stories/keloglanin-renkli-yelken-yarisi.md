@@ -3,6 +3,8 @@ title: "Keloğlan'ın Renkli Yelken Yarışı"
 shortDescription: "Keloğlan, deniz kıyısında farklı ülkelerden gelen balıkçı çocuklarını birleştirip herkesin katılabildiği bir yelken yarışı düzenler."
 coverEmoji: "⛵"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-renkli-yelken-yarisi.webp"
+altText: "Kapak görseli: Keloğlan'ın Renkli Yelken Yarışı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

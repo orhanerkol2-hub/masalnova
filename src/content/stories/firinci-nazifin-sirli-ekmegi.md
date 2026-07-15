@@ -3,6 +3,8 @@ title: "Fırıncı Nazif'in Sırlı Ekmeği"
 shortDescription: "Küçük bir köyde herkese sessizce yardım eden fırıncının, ödül gecesinde alçakgönüllülüğüyle herkesi şaşırtan öyküsü."
 coverEmoji: "🍞"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/firinci-nazifin-sirli-ekmegi.webp"
+altText: "Kapak görseli: Fırıncı Nazif'in Sırlı Ekmeği"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

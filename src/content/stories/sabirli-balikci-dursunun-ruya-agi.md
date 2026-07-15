@@ -3,6 +3,8 @@ title: "Sabırlı Balıkçı Dursun'un Rüya Ağı"
 shortDescription: "Yorgun bir balıkçının, eski bir değirmenin yanındaki sakin gölde sabırla örülen rüya ağıyla uykuya dalışının ninni gibi hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/sabirli-balikci-dursunun-ruya-agi.webp"
+altText: "Kapak görseli: Sabırlı Balıkçı Dursun'un Rüya Ağı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

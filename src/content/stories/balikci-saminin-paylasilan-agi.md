@@ -3,6 +3,8 @@ title: "Balıkçı Sami'nin Paylaşılan Ağı"
 shortDescription: "Sabırlı balıkçı Sami'nin, küçük bir köyde herkesle balığını paylaşarak öğrendiği yardımlaşmanın değerini anlatan sıcak bir masal."
 coverEmoji: "🐟"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-saminin-paylasilan-agi.webp"
+altText: "Kapak görseli: Balıkçı Sami'nin Paylaşılan Ağı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yankısız Mağarası"
 shortDescription: "Keloğlan, köylüsünü korkutan gizemli bir mağaranın sırrını cesaretle çözüp herkesi şaşırtır."
 coverEmoji: "🦇"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yankisiz-magarasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yankısız Mağarası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Elmas'ın Geniş Çayır Gezisi"
 shortDescription: "Meraklı küçük bir kızın geniş çayırda farklı canlılarla tanışıp hoşgörüyü öğrendiği, huzurlu bir uyku masalı."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/elmasin-genis-cayir-gezisi.webp"
+altText: "Kapak görseli: Elmas'ın Geniş Çayır Gezisi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

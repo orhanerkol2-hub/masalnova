@@ -3,6 +3,8 @@ title: "Keloğlan'ın Verdiği Söz"
 shortDescription: "Keloğlan, yaşlı bir kadına verdiği sözü tutmak için köyün en zor günlerinde bile direnir ve herkese örnek olur."
 coverEmoji: "🤝"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-verdigi-soz-2.webp"
+altText: "Kapak görseli: Keloğlan'ın Verdiği Söz"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

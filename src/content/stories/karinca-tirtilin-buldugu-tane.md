@@ -3,6 +3,8 @@ title: "Karınca Tırtıl'ın Bulduğu Tane"
 shortDescription: "Altın başaklı tarlada bir taneyi bulan küçük karınca, dürüstlüğüyle bütün tarlaya örnek olur."
 coverEmoji: "🐜"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/karinca-tirtilin-buldugu-tane.webp"
+altText: "Kapak görseli: Karınca Tırtıl'ın Bulduğu Tane"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

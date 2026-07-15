@@ -3,6 +3,8 @@ title: "Minik Ela'nın Serin Pınar Masalı"
 shortDescription: "Meraklı küçük bir kızın serin bir pınar başında çalışkanlığın ve sabrın tatlı gücünü keşfettiği, huzurla uykuya daldığı bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/minik-elanin-serin-pinar-masali.webp"
+altText: "Kapak görseli: Minik Ela'nın Serin Pınar Masalı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

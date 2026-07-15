@@ -3,6 +3,8 @@ title: "Deniz'in Altın Tarlası"
 shortDescription: "Küçük ve cesur Deniz, altın başaklı bir tarlada minik bir kuşa merhamet gösterir ve gökyüzüyle birlikte huzurla uykuya dalar."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/denizin-altin-tarlasi.webp"
+altText: "Kapak görseli: Deniz'in Altın Tarlası"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

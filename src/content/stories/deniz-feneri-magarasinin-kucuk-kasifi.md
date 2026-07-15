@@ -3,6 +3,8 @@ title: "Deniz Feneri Mağarasının Küçük Kaşifi"
 shortDescription: "Cesur küçük bir çocuğun gizemli bir mağarada yaralı bir yarasaya gösterdiği merhametin öyküsü."
 coverEmoji: "🦇"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/deniz-feneri-magarasinin-kucuk-kasifi.webp"
+altText: "Kapak görseli: Deniz Feneri Mağarasının Küçük Kaşifi"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

@@ -3,6 +3,8 @@ title: "Fıstık'ın Emanet Fidanı"
 shortDescription: "Meraklı bir sincabın, yaşlı bir dededen emanet aldığı fidana bakarken sorumluluğun anlamını öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🌳"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/fistikin-emanet-fidani.webp"
+altText: "Kapak görseli: Fıstık'ın Emanet Fidanı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

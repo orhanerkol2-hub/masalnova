@@ -3,6 +3,8 @@ title: "Keloğlan'ın Aynası Olan Göl"
 shortDescription: "Keloğlan'ın sakin bir göl kıyısında padişahın gururlu vezirine alçakgönüllülüğü öğrettiği eğlenceli bir masal."
 coverEmoji: "🌊"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-aynasi-olan-gol.webp"
+altText: "Kapak görseli: Keloğlan'ın Aynası Olan Göl"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

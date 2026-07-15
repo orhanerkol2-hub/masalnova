@@ -3,6 +3,8 @@ title: "Keloğlan ve Dağın Alçakgönüllü Devi"
 shortDescription: "Keloğlan, dağ başındaki kulübede yaşayan mütevazı bir devle tanışıp gerçek zenginliğin gösterişte değil alçakgönüllülükte olduğunu öğrenir."
 coverEmoji: "🏔️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-dagin-alcakgonullu-devi.webp"
+altText: "Kapak görseli: Keloğlan ve Dağın Alçakgönüllü Devi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

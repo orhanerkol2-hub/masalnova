@@ -3,6 +3,8 @@ title: "Keloğlan'ın Bulutlu Dağ Kulübesi"
 shortDescription: "Keloğlan, dağ başında yardıma muhtaç bir devle tanışıp paylaşmanın ve yardımlaşmanın gücünü öğrenir."
 coverEmoji: "🏔️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-bulutlu-dag-kulubesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Bulutlu Dağ Kulübesi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

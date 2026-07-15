@@ -3,6 +3,8 @@ title: "Şefkat Nine'nin Yıldız Çarşısı"
 shortDescription: "Şefkatli bir ninenin kalabalık çarşıda küçük bir kızla yaşadığı sakin ve sıcacık bir gece serüveni."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/sefkat-ninenin-yildiz-carsisi.webp"
+altText: "Kapak görseli: Şefkat Nine'nin Yıldız Çarşısı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

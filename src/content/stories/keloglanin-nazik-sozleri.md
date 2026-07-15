@@ -3,6 +3,8 @@ title: "Keloğlan'ın Nazik Sözleri"
 shortDescription: "Keloğlan'ın yemyeşil bir ormanda gösterdiği küçük nezaketlerin kendisine büyük bir mutluluk olarak geri dönmesini anlatan sıcacık bir masal."
 coverEmoji: "🌳"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-nazik-sozleri.webp"
+altText: "Kapak görseli: Keloğlan'ın Nazik Sözleri"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

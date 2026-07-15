@@ -3,6 +3,8 @@ title: "Fırıncı Sincap ile Aceleci Tavşan"
 shortDescription: "Sabırsız bir tavşan, mis kokulu bir fırında sincap ustadan sabrın tatlı meyvesini öğrenir."
 coverEmoji: "🥖"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/firinci-sincap-ile-aceleci-tavsan.webp"
+altText: "Kapak görseli: Fırıncı Sincap ile Aceleci Tavşan"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

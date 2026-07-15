@@ -3,6 +3,8 @@ title: "Çoban Alperen'in Ay Işığı Sözü"
 shortDescription: "İyi kalpli bir çobanın, gizemli bir mağarada verdiği sözü tutarak koyunlarını sakin bir uykuya kavuşturmasının huzurlu hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-alperenin-ay-isigi-sozu.webp"
+altText: "Kapak görseli: Çoban Alperen'in Ay Işığı Sözü"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Balıkçı Sadık'ın Saray Sırrı"
 shortDescription: "Sabırlı bir balıkçının, ışıl ışıl bir sarayda küçük birikimlerinin değerini keşfettiği tatlı bir masal."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-sadikin-saray-sirri.webp"
+altText: "Kapak görseli: Balıkçı Sadık'ın Saray Sırrı"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

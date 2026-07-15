@@ -3,6 +3,8 @@ title: "Vardo ile Kayıp Deniz Kabuğu"
 shortDescription: "Bencil davranan bir ördeğin, deniz kıyısındaki dostlarıyla birlikte yardımlaşmayı öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🦆"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/vardo-ile-kayip-deniz-kabugu.webp"
+altText: "Kapak görseli: Vardo ile Kayıp Deniz Kabuğu"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

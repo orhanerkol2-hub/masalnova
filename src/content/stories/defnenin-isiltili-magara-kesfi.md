@@ -3,6 +3,8 @@ title: "Defne'nin Işıltılı Mağara Keşfi"
 shortDescription: "Meraklı bir kızın gizemli mağarada bulduğu ışıltılı taşları arkadaşlarıyla paylaşarak daha da güzel bir hazineye dönüştürdüğü sıcacık bir masal."
 coverEmoji: "💎"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/defnenin-isiltili-magara-kesfi.webp"
+altText: "Kapak görseli: Defne'nin Işıltılı Mağara Keşfi"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

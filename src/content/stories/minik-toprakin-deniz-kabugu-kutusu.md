@@ -3,6 +3,8 @@ title: "Minik Toprak'ın Deniz Kabuğu Kutusu"
 shortDescription: "Deniz kıyısında yaşayan küçük bir çocuğun, komşusuna verdiği sözü tutarak sorumluluk öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🐚"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/minik-toprakin-deniz-kabugu-kutusu.webp"
+altText: "Kapak görseli: Minik Toprak'ın Deniz Kabuğu Kutusu"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

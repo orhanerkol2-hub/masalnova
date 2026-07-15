@@ -3,6 +3,8 @@ title: "Keloğlan'ın Cesur Dalgası"
 shortDescription: "Keloğlan, deniz kıyısındaki köyün korkusunu yenmesine yardım etmek için cesaretini ortaya koyar."
 coverEmoji: "🌊"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-cesur-dalgasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Cesur Dalgası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

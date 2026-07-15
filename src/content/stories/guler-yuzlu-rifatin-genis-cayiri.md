@@ -3,6 +3,8 @@ title: "Güler Yüzlü Rıfat'ın Geniş Çayırı"
 shortDescription: "Güler yüzlü bir bahçıvanın geniş çayırda hayvan dostlarıyla birlikte akşamı sakince karşılamasını anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/guler-yuzlu-rifatin-genis-cayiri.webp"
+altText: "Kapak görseli: Güler Yüzlü Rıfat'ın Geniş Çayırı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "İki Kaplumbağa ve Değirmenin Sırrı"
 shortDescription: "İki yavaş ama şükürkâr kaplumbağanın eski bir değirmende bulduğu küçük mucizeyi anlatan sıcak bir masal."
 coverEmoji: "🐢"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/iki-kaplumbaga-ve-degirmenin-sirri.webp"
+altText: "Kapak görseli: İki Kaplumbağa ve Değirmenin Sırrı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

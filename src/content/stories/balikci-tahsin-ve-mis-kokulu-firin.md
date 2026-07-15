@@ -3,6 +3,8 @@ title: "Balıkçı Tahsin ve Mis Kokulu Fırın"
 shortDescription: "Sabırlı bir balıkçının, küçük bir fırıncı çırağına gösterdiği nezaketin köyde nasıl güzel bir zincir oluşturduğunu anlatan öğretici bir masal."
 coverEmoji: "🐟"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-tahsin-ve-mis-kokulu-firin.webp"
+altText: "Kapak görseli: Balıkçı Tahsin ve Mis Kokulu Fırın"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

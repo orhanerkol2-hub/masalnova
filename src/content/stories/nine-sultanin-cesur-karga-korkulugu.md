@@ -3,6 +3,8 @@ title: "Nine Sultan'ın Cesur Karga Korkuluğu"
 shortDescription: "Altın başaklı bir tarlada yaşayan çekingen bir çocuğun, şefkatli bir ninenin yardımıyla cesareti öğrenmesini anlatan eğitici bir masal."
 coverEmoji: "🌾"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-sultanin-cesur-karga-korkulugu.webp"
+altText: "Kapak görseli: Nine Sultan'ın Cesur Karga Korkuluğu"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

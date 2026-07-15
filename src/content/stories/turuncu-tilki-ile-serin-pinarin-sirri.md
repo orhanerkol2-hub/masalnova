@@ -3,6 +3,8 @@ title: "Turuncu Tilki ile Serin Pınarın Sırrı"
 shortDescription: "Bir tilkinin, kırdığı dostluğu affetmeyi öğrenerek serin bir pınar başında yeniden kurduğu sıcacık bir hikâye."
 coverEmoji: "🦊"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/turuncu-tilki-ile-serin-pinarin-sirri.webp"
+altText: "Kapak görseli: Turuncu Tilki ile Serin Pınarın Sırrı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

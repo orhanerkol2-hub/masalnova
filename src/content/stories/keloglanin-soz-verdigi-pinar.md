@@ -3,6 +3,8 @@ title: "Keloğlan'ın Söz Verdiği Pınar"
 shortDescription: "Keloğlan, serin bir pınarın başında verdiği sözü tutarak hem bir devi hem de kendi köyünü mutlu eder."
 coverEmoji: "💧"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-soz-verdigi-pinar.webp"
+altText: "Kapak görseli: Keloğlan'ın Söz Verdiği Pınar"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

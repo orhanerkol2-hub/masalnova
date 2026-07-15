@@ -3,6 +3,8 @@ title: "Pamuk ile Dikendost'un Saray Yarışı"
 shortDescription: "Işıl ışıl bir sarayda düzenlenen yarışta hızlı tavşan ile çalışkan kirpinin dostluk dolu macerası."
 coverEmoji: "🐰"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/pamuk-ile-dikendostun-saray-yarisi.webp"
+altText: "Kapak görseli: Pamuk ile Dikendost'un Saray Yarışı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

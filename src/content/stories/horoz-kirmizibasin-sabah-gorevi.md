@@ -3,6 +3,8 @@ title: "Horoz Kırmızıbaş'ın Sabah Görevi"
 shortDescription: "Görevini önemsemeyen bir horozun, köyün sabahını uyandırmanın ne kadar değerli olduğunu keşfetmesini anlatan sıcak bir masal."
 coverEmoji: "🐓"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/horoz-kirmizibasin-sabah-gorevi.webp"
+altText: "Kapak görseli: Horoz Kırmızıbaş'ın Sabah Görevi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

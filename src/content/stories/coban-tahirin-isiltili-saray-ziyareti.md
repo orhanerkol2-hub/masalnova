@@ -3,6 +3,8 @@ title: "Çoban Tahir'in Işıltılı Saray Ziyareti"
 shortDescription: "İyi kalpli bir çobanın, ışıl ışıl bir sarayda hayvanlarla ve saray halkıyla birlikte yardımlaşmanın gücünü keşfettiği sıcacık bir masal."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-tahirin-isiltili-saray-ziyareti.webp"
+altText: "Kapak görseli: Çoban Tahir'in Işıltılı Saray Ziyareti"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

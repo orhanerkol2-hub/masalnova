@@ -3,6 +3,8 @@ title: "Rıza Amca'nın Gül Bahçesi"
 shortDescription: "Güler yüzlü bir bahçıvanın, sakin bir göl kıyısında yalnız bir çocukla kurduğu dostluğun hikâyesi."
 coverEmoji: "🌹"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/riza-amcanin-gul-bahcesi.webp"
+altText: "Kapak görseli: Rıza Amca'nın Gül Bahçesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

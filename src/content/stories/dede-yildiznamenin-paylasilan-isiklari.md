@@ -3,6 +3,8 @@ title: "Dede Yıldızname'nin Paylaşılan Işıkları"
 shortDescription: "Yaşlı bir bilge dede, torununa yıldızlı gökyüzünde ışığını paylaşmayı öğreten huzurlu bir uyku masalı."
 coverEmoji: "🌌"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dede-yildiznamenin-paylasilan-isiklari.webp"
+altText: "Kapak görseli: Dede Yıldızname'nin Paylaşılan Işıkları"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Fırıncı Kedi ile Söz Veren Kuzu"
 shortDescription: "Mis kokulu bir fırında çalışan sevimli bir kedi ile ona verdiği sözü tutan minik bir kuzunun sıcacık dostluk hikâyesi."
 coverEmoji: "🥐"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/firinci-kedi-ile-soz-veren-kuzu.webp"
+altText: "Kapak görseli: Fırıncı Kedi ile Söz Veren Kuzu"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

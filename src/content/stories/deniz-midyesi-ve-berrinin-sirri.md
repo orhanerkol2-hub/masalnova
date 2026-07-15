@@ -3,6 +3,8 @@ title: "Deniz Midyesi ve Berrin'in Sırrı"
 shortDescription: "Meraklı bir kızın deniz kıyısında bulduğu değerli bir kabuğu iade ederken dürüstlüğün gücünü öğrendiği sıcak bir masal."
 coverEmoji: "🐚"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/deniz-midyesi-ve-berrinin-sirri.webp"
+altText: "Kapak görseli: Deniz Midyesi ve Berrin'in Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

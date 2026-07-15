@@ -3,6 +3,8 @@ title: "Horoz Kırmızıtaç ve Unutkan Tavşan"
 shortDescription: "Her sabah öterek ormanı uyandıran gururlu bir horozun, unutkan bir tavşana yardım ederken merhameti öğrenmesinin sıcacık öyküsü."
 coverEmoji: "🐓"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/horoz-kirmizitac-ve-unutkan-tavsan.webp"
+altText: "Kapak görseli: Horoz Kırmızıtaç ve Unutkan Tavşan"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

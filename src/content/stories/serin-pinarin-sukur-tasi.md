@@ -3,6 +3,8 @@ title: "Serin Pınarın Şükür Taşı"
 shortDescription: "Şefkatli bir ninenin serin pınar başında küçük bir kızla paylaştığı şükür dersi."
 coverEmoji: "💧"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/serin-pinarin-sukur-tasi.webp"
+altText: "Kapak görseli: Serin Pınarın Şükür Taşı"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

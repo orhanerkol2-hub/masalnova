@@ -3,6 +3,8 @@ title: "Dağ Kulübesinde Şükür Vakti"
 shortDescription: "Dağ başındaki küçük kulübesinde yaşayan güler yüzlü bir bahçıvanın, her akşam minik şeyler için şükretmesini anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dag-kulubesinde-sukur-vakti.webp"
+altText: "Kapak görseli: Dağ Kulübesinde Şükür Vakti"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

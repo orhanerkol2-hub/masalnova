@@ -3,6 +3,8 @@ title: "Defne'nin Yağmur Damlaları"
 shortDescription: "Meraklı bir kızın yağmurlu bir akşamda komşusuyla paylaşmayı öğrendiği sıcak bir hikâye."
 coverEmoji: "☔"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/defnenin-yagmur-damlalari.webp"
+altText: "Kapak görseli: Defne'nin Yağmur Damlaları"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

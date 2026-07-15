@@ -3,6 +3,8 @@ title: "Elmas Öniz'in Sabırlı Gecesi"
 shortDescription: "Işıl ışıl bir sarayda yaşayan meraklı küçük bir kızın, ay ışığında sabrı öğrenip huzurla uykuya daldığı sakin bir masal."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/elmas-onizin-sabirli-gecesi.webp"
+altText: "Kapak görseli: Elmas Öniz'in Sabırlı Gecesi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

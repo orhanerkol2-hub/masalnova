@@ -3,6 +3,8 @@ title: "Berat'ın Işıklı Taşı"
 shortDescription: "Cesur küçük Berat, gizemli bir mağarada azmiyle parıldayan taşı bulup köyüne ışık getirir."
 coverEmoji: "🔦"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/beratin-isikli-tasi.webp"
+altText: "Kapak görseli: Berat'ın Işıklı Taşı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

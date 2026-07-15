@@ -3,6 +3,8 @@ title: "Küçük Deniz'in Uykulu Bahçesi"
 shortDescription: "Çiçekli bahçede çalışkanlıkla toprağı seven küçük bir çocuğun, ay ışığında huzurla uykuya dalışının hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/kucuk-denizin-uykulu-bahcesi.webp"
+altText: "Kapak görseli: Küçük Deniz'in Uykulu Bahçesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Deniz'in Ay Işığındaki Çayırı"
 shortDescription: "Cesur küçük Deniz'in geniş bir çayırda ay ışığında yıldızlara doğru yürüyerek uykuya dalışının huzurlu hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/denizin-ay-isigindaki-cayiri.webp"
+altText: "Kapak görseli: Deniz'in Ay Işığındaki Çayırı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

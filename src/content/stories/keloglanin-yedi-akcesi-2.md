@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yedi Akçesi"
 shortDescription: "Keloğlan'ın deniz kıyısındaki köyde tutumluluk ve akılla küçük bir hazineyi büyük bir mutluluğa dönüştürmesinin öyküsü."
 coverEmoji: "🐚"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yedi-akcesi-2.webp"
+altText: "Kapak görseli: Keloğlan'ın Yedi Akçesi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

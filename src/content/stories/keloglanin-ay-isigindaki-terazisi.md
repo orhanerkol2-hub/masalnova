@@ -3,6 +3,8 @@ title: "Keloğlan'ın Ay Işığındaki Terazisi"
 shortDescription: "Keloğlan, ay ışığında yürüdüğü bir patikada haksızlığa uğrayan komşularını akıllıca ve adaletle koruyan bir çözüm bulur."
 coverEmoji: "⚖️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-ay-isigindaki-terazisi.webp"
+altText: "Kapak görseli: Keloğlan'ın Ay Işığındaki Terazisi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

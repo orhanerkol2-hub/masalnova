@@ -3,6 +3,8 @@ title: "Nazlı'nın Dağ Kulübesi Sırrı"
 shortDescription: "Meraklı küçük bir kızın dağ başındaki yaşlı kadına küçük bir kırgınlığı affetmeyi öğrendiği sıcacık bir hikâye."
 coverEmoji: "🏔️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nazlinin-dag-kulubesi-sirri.webp"
+altText: "Kapak görseli: Nazlı'nın Dağ Kulübesi Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Barış'ın Bozuk Para Kavanozu"
 shortDescription: "Yağmurlu bir akşamda cesur küçük Barış, biriktirdiği paralarla ailesine yardım ederken tutumluluğun gerçek değerini öğrenir."
 coverEmoji: "🌧️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/barisin-bozuk-para-kavanozu.webp"
+altText: "Kapak görseli: Barış'ın Bozuk Para Kavanozu"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Balıkçı Tayfun'un Merak Feneri"
 shortDescription: "Sabırlı balıkçı Tayfun'un, gizemli bir mağarada merakının peşinden giderken sabrın da değerini öğrenmesini anlatan sevimli bir masal."
 coverEmoji: "🏮"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-tayfunun-merak-feneri.webp"
+altText: "Kapak görseli: Balıkçı Tayfun'un Merak Feneri"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

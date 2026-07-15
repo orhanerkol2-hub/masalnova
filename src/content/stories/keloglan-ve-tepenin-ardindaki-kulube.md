@@ -3,6 +3,8 @@ title: "Keloğlan ve Tepenin Ardındaki Kulübe"
 shortDescription: "Keloğlan, dağ başındaki küçük bir kulübede yaşayan yaşlı ve yalnız bir kadına merhametiyle yardım ederken, iyiliğin en büyük hazine olduğunu keşfeder."
 coverEmoji: "🏚️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-tepenin-ardindaki-kulube.webp"
+altText: "Kapak görseli: Keloğlan ve Tepenin Ardındaki Kulübe"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

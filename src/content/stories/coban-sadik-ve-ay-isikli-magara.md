@@ -3,6 +3,8 @@ title: "Çoban Sadık ve Ay Işıklı Mağara"
 shortDescription: "İyi kalpli bir çobanın, ay ışığıyla dolu gizemli bir mağarada bulduğu huzuru anlatan, sakin bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-sadik-ve-ay-isikli-magara.webp"
+altText: "Kapak görseli: Çoban Sadık ve Ay Işıklı Mağara"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

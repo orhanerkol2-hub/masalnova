@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin Cesur Damlaları"
 shortDescription: "Yağmurlu bir akşamda şefkatli bir ninenin, küçük torununa cesaret hakkında anlattığı sakinleştirici bir uyku masalı."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/nine-sevginin-cesur-damlalari.webp"
+altText: "Kapak görseli: Nine Sevgi'nin Cesur Damlaları"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

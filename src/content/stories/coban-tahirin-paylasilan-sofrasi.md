@@ -3,6 +3,8 @@ title: "Çoban Tahir'in Paylaşılan Sofrası"
 shortDescription: "İyi kalpli bir çobanın, ormandaki tüm hayvanlarla yiyeceğini paylaşarak yardımlaşmanın gücünü öğrendiği sıcak bir masal."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-tahirin-paylasilan-sofrasi.webp"
+altText: "Kapak görseli: Çoban Tahir'in Paylaşılan Sofrası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

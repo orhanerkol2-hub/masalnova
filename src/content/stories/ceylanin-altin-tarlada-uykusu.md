@@ -3,6 +3,8 @@ title: "Ceylan'ın Altın Tarlada Uykusu"
 shortDescription: "Meraklı küçük bir kızın, altın başaklı tarlada arkadaşlarıyla yardımlaşıp huzurla uykuya dalmasını anlatan sakin bir uyku masalı."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/ceylanin-altin-tarlada-uykusu.webp"
+altText: "Kapak görseli: Ceylan'ın Altın Tarlada Uykusu"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

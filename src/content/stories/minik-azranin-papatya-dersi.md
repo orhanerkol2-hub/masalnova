@@ -3,6 +3,8 @@ title: "Minik Azra'nın Papatya Dersi"
 shortDescription: "Meraklı bir kızın geniş çayırda böceklere ve çiçeklere saygı göstermeyi öğrendiği tatlı bir masal."
 coverEmoji: "🌼"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/minik-azranin-papatya-dersi.webp"
+altText: "Kapak görseli: Minik Azra'nın Papatya Dersi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

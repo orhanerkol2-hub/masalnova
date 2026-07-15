@@ -3,6 +3,8 @@ title: "Balıkçı Sadık'ın Bakır Kumbarası"
 shortDescription: "Sabırlı bir balıkçının, çiçekli bahçesinde küçük birikimlerle nasıl büyük bir mutluluğa ulaştığını anlatan tutumluluk masalı."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-sadikin-bakir-kumbarasi.webp"
+altText: "Kapak görseli: Balıkçı Sadık'ın Bakır Kumbarası"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

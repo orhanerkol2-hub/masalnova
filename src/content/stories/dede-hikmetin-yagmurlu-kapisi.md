@@ -3,6 +3,8 @@ title: "Dede Hikmet'in Yağmurlu Kapısı"
 shortDescription: "Yağmurlu bir akşamda kapısını çalan yolculara yardım eden yaşlı bir dedenin, alçakgönüllülüğün gücünü bir çocuğa öğrettiği sıcacık bir hikâye."
 coverEmoji: "🌧️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/dede-hikmetin-yagmurlu-kapisi.webp"
+altText: "Kapak görseli: Dede Hikmet'in Yağmurlu Kapısı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

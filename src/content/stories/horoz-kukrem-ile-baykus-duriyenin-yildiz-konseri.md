@@ -3,6 +3,8 @@ title: "Horoz Kükrem ile Baykuş Düriye'nin Yıldız Konseri"
 shortDescription: "Öten sesiyle övünen bir horoz, alçakgönüllü bir baykuşla yıldızlı bir gecede karşılaşınca gerçek değerin ne olduğunu öğrenir."
 coverEmoji: "🐓"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/horoz-kukrem-ile-baykus-duriyenin-yildiz-konseri.webp"
+altText: "Kapak görseli: Horoz Kükrem ile Baykuş Düriye'nin Yıldız Konseri"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Merhametli Un Çuvalı"
 shortDescription: "Keloğlan, kırık dökük bir değirmende karşılaştığı çaresiz bir devin derdine ortak olunca, iyiliğin en büyük hüner olduğunu öğrenir."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-merhametli-un-cuvali.webp"
+altText: "Kapak görseli: Keloğlan'ın Merhametli Un Çuvalı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

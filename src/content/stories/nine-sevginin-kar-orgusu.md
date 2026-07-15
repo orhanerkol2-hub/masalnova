@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin Kar Örgüsü"
 shortDescription: "Karlı bir kış günü çalışkan bir ninenin ördüğü atkılarla köy çocuklarını nasıl ısıttığını anlatan sıcacık bir masal."
 coverEmoji: "🧣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-sevginin-kar-orgusu.webp"
+altText: "Kapak görseli: Nine Sevgi'nin Kar Örgüsü"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

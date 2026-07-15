@@ -3,6 +3,8 @@ title: "Karınca Fındık ile Kuş Cıvı'nın Çarşı Günü"
 shortDescription: "Kalabalık bir çarşıda küçük bir yanlış anlaşılmayı bir karınca ile bir kuşun birbirini affetmesiyle çözen sıcacık bir dostluk masalı."
 coverEmoji: "🐜"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/karinca-findik-ile-kus-civinin-carsi-gunu.webp"
+altText: "Kapak görseli: Karınca Fındık ile Kuş Cıvı'nın Çarşı Günü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

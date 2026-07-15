@@ -3,6 +3,8 @@ title: "Keloğlan'ın Şükür Kâsesi"
 shortDescription: "Keloğlan'ın çiçekli bir bahçede küçük bir kâseyle padişahın gönlünü fetheden şükür dolu macerası."
 coverEmoji: "🌸"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-sukur-kasesi-2.webp"
+altText: "Kapak görseli: Keloğlan'ın Şükür Kâsesi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

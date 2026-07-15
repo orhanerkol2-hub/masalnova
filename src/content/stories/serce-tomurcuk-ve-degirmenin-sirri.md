@@ -3,6 +3,8 @@ title: "Serçe Tomurcuk ve Değirmenin Sırrı"
 shortDescription: "Dürüst bir serçenin, eski bir değirmende bulduğu buğdayı sahibine geri vermesiyle tüm hayvanların dostluğunu kazandığı sıcak bir masal."
 coverEmoji: "🐦"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/serce-tomurcuk-ve-degirmenin-sirri.webp"
+altText: "Kapak görseli: Serçe Tomurcuk ve Değirmenin Sırrı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

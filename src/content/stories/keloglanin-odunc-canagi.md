@@ -3,6 +3,8 @@ title: "Keloğlan'ın Ödünç Çanağı"
 shortDescription: "Keloğlan'ın küçük bir tahta çanağı köyde dolaştırarak herkesin birbirine yardım etmesini sağlamasının sıcacık öyküsü."
 coverEmoji: "🥣"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-odunc-canagi.webp"
+altText: "Kapak görseli: Keloğlan'ın Ödünç Çanağı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

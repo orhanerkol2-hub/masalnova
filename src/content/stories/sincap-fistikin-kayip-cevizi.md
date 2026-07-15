@@ -3,6 +3,8 @@ title: "Sincap Fıstık'ın Kayıp Cevizi"
 shortDescription: "Bir sincap ile bir kaplumbağanın, dürüstlüğün ödülünü keşfettiği çiçekli bahçe dolu bir dostluk masalı."
 coverEmoji: "🐿️"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/sincap-fistikin-kayip-cevizi.webp"
+altText: "Kapak görseli: Sincap Fıstık'ın Kayıp Cevizi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

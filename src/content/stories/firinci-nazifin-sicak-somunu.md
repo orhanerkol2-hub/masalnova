@@ -3,6 +3,8 @@ title: "Fırıncı Nazif'in Sıcak Somunu"
 shortDescription: "Mis kokulu bir fırında, küçük bir yardım büyük bir dostluğa dönüşür."
 coverEmoji: "🍞"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/firinci-nazifin-sicak-somunu.webp"
+altText: "Kapak görseli: Fırıncı Nazif'in Sıcak Somunu"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

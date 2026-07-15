@@ -3,6 +3,8 @@ title: "Deniz Fıçısı ve Kumsalın Küçük Kahramanı"
 shortDescription: "Deniz kıyısında yaşayan cesur bir çocuğun, yaralı bir martıya gösterdiği merhametin öyküsü."
 coverEmoji: "🐚"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/deniz-ficisi-ve-kumsalin-kucuk-kahramani.webp"
+altText: "Kapak görseli: Deniz Fıçısı ve Kumsalın Küçük Kahramanı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

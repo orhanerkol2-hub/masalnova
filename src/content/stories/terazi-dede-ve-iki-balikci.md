@@ -3,6 +3,8 @@ title: "Terazi Dede ve İki Balıkçı"
 shortDescription: "Sakin bir gölün kıyısında yaşayan bilge bir dede, kavga eden iki balıkçıya gerçek adaletin ne olduğunu öğretir."
 coverEmoji: "⚖️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/terazi-dede-ve-iki-balikci.webp"
+altText: "Kapak görseli: Terazi Dede ve İki Balıkçı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

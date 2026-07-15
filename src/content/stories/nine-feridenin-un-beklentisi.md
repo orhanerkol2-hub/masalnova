@@ -3,6 +3,8 @@ title: "Nine Feride'nin Un Beklentisi"
 shortDescription: "Eski bir değirmende buğdayının öğütülmesini bekleyen şefkatli bir ninenin sabrının küçük bir çocuğa öğrettiği kıymetli ders."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-feridenin-un-beklentisi.webp"
+altText: "Kapak görseli: Nine Feride'nin Un Beklentisi"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

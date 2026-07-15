@@ -3,6 +3,8 @@ title: "Minik Elif'in Ay Işığı Çarşısı"
 shortDescription: "Meraklı küçük Elif, ay ışığıyla aydınlanan sakin bir çarşıda cesaretini bularak yıldız tozu hediyesi toplar."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/minik-elifin-ay-isigi-carsisi.webp"
+altText: "Kapak görseli: Minik Elif'in Ay Işığı Çarşısı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

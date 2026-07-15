@@ -3,6 +3,8 @@ title: "Deniz'in Ay Işığındaki Özür Yolu"
 shortDescription: "Kardeşine kızgın olan cesur bir çocuğun, ay ışığında bir patikada affetmeyi öğrenmesini anlatan kısa bir masal."
 coverEmoji: "🌙"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/denizin-ay-isigindaki-ozur-yolu.webp"
+altText: "Kapak görseli: Deniz'in Ay Işığındaki Özür Yolu"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

@@ -3,6 +3,8 @@ title: "Çoban Sadık'ın Ay Yolundaki Tavşanı"
 shortDescription: "İyi kalpli bir çobanın, ay ışığında kaybolan küçük bir tavşana gösterdiği nezaketi anlatan sıcacık bir masal."
 coverEmoji: "🌙"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-sadikin-ay-yolundaki-tavsani.webp"
+altText: "Kapak görseli: Çoban Sadık'ın Ay Yolundaki Tavşanı"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

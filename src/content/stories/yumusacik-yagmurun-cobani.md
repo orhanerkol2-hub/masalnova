@@ -3,6 +3,8 @@ title: "Yumuşacık Yağmurun Çobanı"
 shortDescription: "Yağmurlu bir akşamda iyi kalpli bir çobanın küçük kuzusuna cesaret vererek onu sakince uykuya hazırlaması."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/yumusacik-yagmurun-cobani.webp"
+altText: "Kapak görseli: Yumuşacık Yağmurun Çobanı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

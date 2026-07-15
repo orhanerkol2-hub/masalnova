@@ -3,6 +3,8 @@ title: "Defne'nin Simit Sepeti"
 shortDescription: "Meraklı bir kızın sakin bir gölün kıyısında paylaşmanın gerçek mutluluğunu keşfetmesini anlatan eğitici bir masal."
 coverEmoji: "🍞"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/defnenin-simit-sepeti.webp"
+altText: "Kapak görseli: Defne'nin Simit Sepeti"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

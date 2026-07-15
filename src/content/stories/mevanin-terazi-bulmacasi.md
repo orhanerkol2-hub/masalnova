@@ -3,6 +3,8 @@ title: "Meva'nın Terazi Bulmacası"
 shortDescription: "Kalabalık bir çarşıda haksızlığa uğrayan yaşlı bir satıcıyı korumak için meraklı küçük bir kızın adaleti aradığı sıcacık bir öykü."
 coverEmoji: "⚖️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/mevanin-terazi-bulmacasi.webp"
+altText: "Kapak görseli: Meva'nın Terazi Bulmacası"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

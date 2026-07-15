@@ -3,6 +3,8 @@ title: "Nine Sevda'nın Pınar Başındaki Dersi"
 shortDescription: "Serin bir pınar başında şefkatli bir ninenin, sabırsız bir çocuğa nezaketin gücünü öğrettiği sıcacık bir masal."
 coverEmoji: "💧"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-sevdanin-pinar-basindaki-dersi.webp"
+altText: "Kapak görseli: Nine Sevda'nın Pınar Başındaki Dersi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

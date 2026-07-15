@@ -3,6 +3,8 @@ title: "Nazlı'nın Çarşı Sözü"
 shortDescription: "Kalabalık çarşıda verdiği küçük bir sözü tutmak için çabalayan meraklı bir kızın öğretici hikâyesi."
 coverEmoji: "🏮"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nazlinin-carsi-sozu.webp"
+altText: "Kapak görseli: Nazlı'nın Çarşı Sözü"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Karlı Bekleyişi"
 shortDescription: "Karlı bir kış gününde Keloğlan, aceleyle değil sabırla iş görmenin ödülünü öğrenir."
 coverEmoji: "❄️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-karli-bekleyisi.webp"
+altText: "Kapak görseli: Keloğlan'ın Karlı Bekleyişi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

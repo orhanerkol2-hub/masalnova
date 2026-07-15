@@ -3,6 +3,8 @@ title: "Karınca Toprak'ın Yağmurlu Gecesi"
 shortDescription: "Yağmurlu bir akşamda yuvasından uzakta kalan bir karıncanın, ormanın küçük dostları sayesinde eve dönüş yolculuğu."
 coverEmoji: "🐜"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/karinca-toprakin-yagmurlu-gecesi.webp"
+altText: "Kapak görseli: Karınca Toprak'ın Yağmurlu Gecesi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

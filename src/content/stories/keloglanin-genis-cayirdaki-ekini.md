@@ -3,6 +3,8 @@ title: "Keloğlan'ın Geniş Çayırdaki Ekini"
 shortDescription: "Tembel görünen Keloğlan'ın, geniş bir çayırda gösterdiği azimle köylülere ve gururlu bir padişaha çalışkanlığın gerçek değerini öğrettiği masal."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-genis-cayirdaki-ekini.webp"
+altText: "Kapak görseli: Keloğlan'ın Geniş Çayırdaki Ekini"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

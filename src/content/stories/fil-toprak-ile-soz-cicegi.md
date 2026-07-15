@@ -3,6 +3,8 @@ title: "Fil Toprak ile Söz Çiçeği"
 shortDescription: "Sözünü tutmayı öğrenen büyük bir filin, çiçekli bahçedeki küçük dostlarına verdiği sözü nasıl tuttuğunu anlatan sıcak bir masal."
 coverEmoji: "🐘"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/fil-toprak-ile-soz-cicegi.webp"
+altText: "Kapak görseli: Fil Toprak ile Söz Çiçeği"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

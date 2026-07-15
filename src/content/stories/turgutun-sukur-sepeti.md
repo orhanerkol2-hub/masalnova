@@ -3,6 +3,8 @@ title: "Turgut'un Şükür Sepeti"
 shortDescription: "Kalabalık bir çarşıda kaybolan cesur bir çocuğun, elindeki azıcık şeyle bile şükretmeyi öğrenmesinin öyküsü."
 coverEmoji: "🧺"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/turgutun-sukur-sepeti.webp"
+altText: "Kapak görseli: Turgut'un Şükür Sepeti"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

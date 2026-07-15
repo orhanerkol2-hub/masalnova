@@ -3,6 +3,8 @@ title: "Kelebek Mine ile Sincap Fındık'ın Sözü"
 shortDescription: "Dağ başındaki bir kulübede yaşayan sincap ile kelebek, verdikleri sözü tutmanın gerçek dostluğu nasıl güçlendirdiğini öğrenir."
 coverEmoji: "🦋"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kelebek-mine-ile-sincap-findikin-sozu.webp"
+altText: "Kapak görseli: Kelebek Mine ile Sincap Fındık'ın Sözü"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

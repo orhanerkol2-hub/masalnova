@@ -3,6 +3,8 @@ title: "Turuncu Tilki ile Ay Işığı Patikası"
 shortDescription: "Farklı hayvanların ay ışığında aynı patikayı paylaşırken hoşgörüyü öğrendiği sıcak bir orman masalı."
 coverEmoji: "🦊"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/turuncu-tilki-ile-ay-isigi-patikasi.webp"
+altText: "Kapak görseli: Turuncu Tilki ile Ay Işığı Patikası"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

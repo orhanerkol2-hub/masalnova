@@ -3,6 +3,8 @@ title: "Keloğlan'ın Terlemez Külahı"
 shortDescription: "Keloğlan'ın tembel diye bilinen bir saray hizmetkarına iyi kalpli fikirleriyle yardım edip, çalışkanlığın gerçek değerini herkese gösterdiği eğlenceli bir masal."
 coverEmoji: "👒"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-terlemez-kulahi.webp"
+altText: "Kapak görseli: Keloğlan'ın Terlemez Külahı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

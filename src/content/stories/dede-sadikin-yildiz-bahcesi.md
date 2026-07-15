@@ -3,6 +3,8 @@ title: "Dede Sadık'ın Yıldız Bahçesi"
 shortDescription: "Yaşlı bir dedenin yıldızlı gökyüzü altında torununa affetmenin ne kadar huzur verici olduğunu anlattığı, uykuya davet eden sakin bir masal."
 coverEmoji: "⭐"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dede-sadikin-yildiz-bahcesi.webp"
+altText: "Kapak görseli: Dede Sadık'ın Yıldız Bahçesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

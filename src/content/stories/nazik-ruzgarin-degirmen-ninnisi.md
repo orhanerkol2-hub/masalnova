@@ -3,6 +3,8 @@ title: "Nazik Rüzgâr'ın Değirmen Ninnisi"
 shortDescription: "Güler yüzlü bir bahçıvanın eski bir değirmende nazik sözlerle her canlıyı uykuya hazırladığı huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/nazik-ruzgarin-degirmen-ninnisi.webp"
+altText: "Kapak görseli: Nazik Rüzgâr'ın Değirmen Ninnisi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

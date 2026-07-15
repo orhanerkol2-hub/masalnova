@@ -3,6 +3,8 @@ title: "Kardan Adamın Kırık Burnu"
 shortDescription: "Meraklı küçük bir kızın karlı bir kış günü yaptığı hatayı affetmeyi öğrenerek düzeltmesinin sıcacık öyküsü."
 coverEmoji: "⛄"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/kardan-adamin-kirik-burnu.webp"
+altText: "Kapak görseli: Kardan Adamın Kırık Burnu"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

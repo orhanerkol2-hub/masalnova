@@ -3,6 +3,8 @@ title: "Kelebek Mine ile Aslan Karaca'nın Sözü"
 shortDescription: "Küçük bir kelebek ile büyük bir aslanın ay ışığında verdiği sözü tutma öyküsü."
 coverEmoji: "🦋"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kelebek-mine-ile-aslan-karacanin-sozu.webp"
+altText: "Kapak görseli: Kelebek Mine ile Aslan Karaca'nın Sözü"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

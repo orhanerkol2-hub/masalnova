@@ -3,6 +3,8 @@ title: "Elmas'ın Yıldız Sayma Gecesi"
 shortDescription: "Meraklı küçük bir kızın gökyüzündeki yıldızları sayarken huzurla uykuya dalışını anlatan yumuşak bir uyku masalı."
 coverEmoji: "✨"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/elmasin-yildiz-sayma-gecesi.webp"
+altText: "Kapak görseli: Elmas'ın Yıldız Sayma Gecesi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

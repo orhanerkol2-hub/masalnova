@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin Erinç Fidanı"
 shortDescription: "Şefkatli bir ninenin çiçekli bahçesinde, çalışkanlıkla büyüyen küçük bir fidanın öyküsü."
 coverEmoji: "🌷"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-sevginin-erinc-fidani.webp"
+altText: "Kapak görseli: Nine Sevgi'nin Erinç Fidanı"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

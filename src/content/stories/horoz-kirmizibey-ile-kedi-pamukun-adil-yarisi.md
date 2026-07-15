@@ -3,6 +3,8 @@ title: "Horoz Kırmızıbey ile Kedi Pamuk'un Adil Yarışı"
 shortDescription: "Küçük bir köyde horoz ile kedinin, tavuk kümesindeki bir anlaşmazlığı adil bir şekilde çözme çabasını anlatan sıcak bir masal."
 coverEmoji: "🐓"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/horoz-kirmizibey-ile-kedi-pamukun-adil-yarisi.webp"
+altText: "Kapak görseli: Horoz Kırmızıbey ile Kedi Pamuk'un Adil Yarışı"
 ageGroups: ["3-5"]
 readingTime: 3
 categories: ["hayvan"]

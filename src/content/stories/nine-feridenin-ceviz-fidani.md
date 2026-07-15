@@ -3,6 +3,8 @@ title: "Nine Feride'nin Ceviz Fidanı"
 shortDescription: "Küçük bir köyde yaşayan şefkatli bir ninenin, kuruyacak sanılan bir fidanı azimle sulayıp büyütmesinin sıcacık öyküsü."
 coverEmoji: "🌱"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-feridenin-ceviz-fidani.webp"
+altText: "Kapak görseli: Nine Feride'nin Ceviz Fidanı"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

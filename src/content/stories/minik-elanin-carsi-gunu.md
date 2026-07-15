@@ -3,6 +3,8 @@ title: "Minik Ela'nın Çarşı Günü"
 shortDescription: "Kalabalık bir çarşıda yolunu kaybeden Minik Ela, yaşlı bilge bir dedenin yardımıyla şükretmenin gerçek anlamını öğrenir."
 coverEmoji: "🧺"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/minik-elanin-carsi-gunu.webp"
+altText: "Kapak görseli: Minik Ela'nın Çarşı Günü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

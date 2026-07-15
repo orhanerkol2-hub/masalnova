@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yıldız Sayan Gecesi"
 shortDescription: "Keloğlan, padişahın sabırsız damadı için istediği zor bir görevi, gökyüzünü sabırla izleyerek ve bilgeliğiyle başarır."
 coverEmoji: "⭐"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yildiz-sayan-gecesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yıldız Sayan Gecesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

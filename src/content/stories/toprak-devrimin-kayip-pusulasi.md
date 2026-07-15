@@ -3,6 +3,8 @@ title: "Toprak Devrim'in Kayıp Pusulası"
 shortDescription: "Yemyeşil ormanda kaybolan küçük bir çocuğun cesaretle yolunu bulma öyküsü."
 coverEmoji: "🧭"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/toprak-devrimin-kayip-pusulasi.webp"
+altText: "Kapak görseli: Toprak Devrim'in Kayıp Pusulası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

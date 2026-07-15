@@ -3,6 +3,8 @@ title: "Keloğlan'ın Saygı Sınavı"
 shortDescription: "Keloğlan, ışıl ışıl bir sarayda büyüklere saygı göstererek hem padişahın gönlünü hem de bir devin dostluğunu kazanır."
 coverEmoji: "👑"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-saygi-sinavi.webp"
+altText: "Kapak görseli: Keloğlan'ın Saygı Sınavı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

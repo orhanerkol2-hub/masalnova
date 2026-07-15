@@ -3,6 +3,8 @@ title: "Sincap Fındık ile Ayı Homur'un Şükür Günü"
 shortDescription: "Sakin bir gölün kıyısında yaşayan telaşlı bir sincap ile ağırkanlı bir ayının, ellerindekiyle yetinmeyi öğrendiği sıcacık bir dostluk hikâyesi."
 coverEmoji: "🐿️"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/sincap-findik-ile-ayi-homurun-sukur-gunu.webp"
+altText: "Kapak görseli: Sincap Fındık ile Ayı Homur'un Şükür Günü"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

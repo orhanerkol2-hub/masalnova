@@ -3,6 +3,8 @@ title: "Fırıncı Rüya ve Uykulu Bahçenin Ekmeği"
 shortDescription: "Mis kokulu bir fırında görevini severek yapan bahçıvanın, gece boyunca bahçesini ve fırını sakince koruma öyküsü."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/firinci-ruya-ve-uykulu-bahcenin-ekmegi.webp"
+altText: "Kapak görseli: Fırıncı Rüya ve Uykulu Bahçenin Ekmeği"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

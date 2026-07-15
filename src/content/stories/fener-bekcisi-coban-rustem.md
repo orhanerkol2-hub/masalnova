@@ -3,6 +3,8 @@ title: "Fener Bekçisi Çoban Rüstem"
 shortDescription: "Sürüsünü bırakıp balıkçıların yolunu aydınlatan sorumluluk sahibi bir çobanın deniz kıyısındaki güzel hikâyesi."
 coverEmoji: "🐑"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/fener-bekcisi-coban-rustem.webp"
+altText: "Kapak görseli: Fener Bekçisi Çoban Rüstem"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

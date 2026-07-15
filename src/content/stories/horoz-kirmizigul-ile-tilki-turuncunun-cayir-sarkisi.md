@@ -3,6 +3,8 @@ title: "Horoz Kırmızıgül ile Tilki Turuncu'nun Çayır Şarkısı"
 shortDescription: "Kibirli bir horoz ile kurnaz bir tilkinin, geniş bir çayırda yardımlaşmayı öğrenmesini anlatan sıcacık bir masal."
 coverEmoji: "🐓"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/horoz-kirmizigul-ile-tilki-turuncunun-cayir-sarkisi.webp"
+altText: "Kapak görseli: Horoz Kırmızıgül ile Tilki Turuncu'nun Çayır Şarkısı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

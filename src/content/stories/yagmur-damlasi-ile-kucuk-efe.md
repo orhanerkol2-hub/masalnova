@@ -3,6 +3,8 @@ title: "Yağmur Damlası ile Küçük Efe"
 shortDescription: "Yağmurlu bir akşamda cesur küçük Efe, ıslak bir kirpiye kucak açarak hoşgörünün sıcaklığını keşfeder."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/yagmur-damlasi-ile-kucuk-efe.webp"
+altText: "Kapak görseli: Yağmur Damlası ile Küçük Efe"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Deniz Kıyısında Küçük Ali'nin Yıldız Fenerleri"
 shortDescription: "Deniz kıyısında yaşayan küçük ve cesur bir çocuğun, farklı canlılarla dostluk kurarak hoşgörüyü öğrendiği huzurlu bir uyku masalı."
 coverEmoji: "🌊"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/deniz-kiyisinda-kucuk-alinin-yildiz-fenerleri.webp"
+altText: "Kapak görseli: Deniz Kıyısında Küçük Ali'nin Yıldız Fenerleri"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

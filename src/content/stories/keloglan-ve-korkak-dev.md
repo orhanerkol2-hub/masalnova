@@ -3,6 +3,8 @@ title: "Keloğlan ve Korkak Dev"
 shortDescription: "Keloğlan, köyünü korkutan devin aslında ne kadar korkak olduğunu keşfedip herkese cesareti öğretir."
 coverEmoji: "🦶"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-korkak-dev.webp"
+altText: "Kapak görseli: Keloğlan ve Korkak Dev"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

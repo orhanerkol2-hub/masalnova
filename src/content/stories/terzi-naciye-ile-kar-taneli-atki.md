@@ -3,6 +3,8 @@ title: "Terzi Naciye ile Kar Taneli Atkı"
 shortDescription: "Karlı bir kış gününde küçük bir kızın, yaşlı ve yardımsever komşusu Terzi Naciye'den öğrendiği nezaket dersini anlatan sıcak bir masal."
 coverEmoji: "🧣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/terzi-naciye-ile-kar-taneli-atki.webp"
+altText: "Kapak görseli: Terzi Naciye ile Kar Taneli Atkı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

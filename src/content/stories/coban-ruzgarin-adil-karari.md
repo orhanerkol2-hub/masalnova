@@ -3,6 +3,8 @@ title: "Çoban Rüzgar'ın Adil Kararı"
 shortDescription: "Yemyeşil bir ormanda otlayan sürüsünün başında, iyi kalpli bir çobanın iki kardeşi arasında verdiği adil kararın öyküsü."
 coverEmoji: "🐑"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-ruzgarin-adil-karari.webp"
+altText: "Kapak görseli: Çoban Rüzgar'ın Adil Kararı"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

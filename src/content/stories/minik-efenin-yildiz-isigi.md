@@ -3,6 +3,8 @@ title: "Minik Efe'nin Yıldız Işığı"
 shortDescription: "Karanlıktan korkan küçük bir çocuğun, iyi yürekli komşusunun yardımıyla cesaret bulup gökyüzündeki yıldızlara ışık yollamasının sıcacık öyküsü."
 coverEmoji: "⭐"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/minik-efenin-yildiz-isigi.webp"
+altText: "Kapak görseli: Minik Efe'nin Yıldız Işığı"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

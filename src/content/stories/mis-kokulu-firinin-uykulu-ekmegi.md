@@ -3,6 +3,8 @@ title: "Mis Kokulu Fırının Uykulu Ekmeği"
 shortDescription: "Güler yüzlü bir bahçıvanın, mis kokulu fırında öğrendiği tutumluluk dersiyle huzurlu bir uykuya dalması."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/mis-kokulu-firinin-uykulu-ekmegi.webp"
+altText: "Kapak görseli: Mis Kokulu Fırının Uykulu Ekmeği"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

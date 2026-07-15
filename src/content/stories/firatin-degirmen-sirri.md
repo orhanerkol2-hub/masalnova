@@ -3,6 +3,8 @@ title: "Fırat'ın Değirmen Sırrı"
 shortDescription: "Cesur bir çocuğun eski bir değirmende paylaşmanın gücünü keşfetmesini anlatan öğretici bir masal."
 coverEmoji: "🌾"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/firatin-degirmen-sirri.webp"
+altText: "Kapak görseli: Fırat'ın Değirmen Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

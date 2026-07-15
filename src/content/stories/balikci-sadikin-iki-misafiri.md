@@ -3,6 +3,8 @@ title: "Balıkçı Sadık'ın İki Misafiri"
 shortDescription: "Sabırlı bir balıkçının, birbirinden hoşlanmayan iki köylüyü aynı teknede buluşturarak hoşgörüyü öğretmesini anlatan sıcacık bir masal."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-sadikin-iki-misafiri.webp"
+altText: "Kapak görseli: Balıkçı Sadık'ın İki Misafiri"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

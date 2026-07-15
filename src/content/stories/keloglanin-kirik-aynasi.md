@@ -3,6 +3,8 @@ title: "Keloğlan'ın Kırık Aynası"
 shortDescription: "Keloğlan'ın bir hata yüzünden kırdığı sarayın aynasını düzeltmesi, affetmenin ve dürtü olmadan özür dilemenin değerini anlatan sıcak bir masal."
 coverEmoji: "🪞"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-kirik-aynasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Kırık Aynası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

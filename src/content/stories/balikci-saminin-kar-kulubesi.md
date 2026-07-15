@@ -3,6 +3,8 @@ title: "Balıkçı Sami'nin Kar Kulübesi"
 shortDescription: "Sabırlı balıkçı Sami, kar fırtınasında karşılaştığı hayvanlara yardım ederken, iyiliğin katbekat geri döndüğünü öğrenir."
 coverEmoji: "🎣"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/balikci-saminin-kar-kulubesi.webp"
+altText: "Kapak görseli: Balıkçı Sami'nin Kar Kulübesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

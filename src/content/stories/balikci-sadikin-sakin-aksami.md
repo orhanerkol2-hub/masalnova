@@ -3,6 +3,8 @@ title: "Balıkçı Sadık'ın Sakin Akşamı"
 shortDescription: "Sabırlı bir balıkçının geniş çayırın kenarındaki dere başında, alçakgönüllülükle ve sabırla geçirdiği huzurlu bir akşamı anlatan uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/balikci-sadikin-sakin-aksami.webp"
+altText: "Kapak görseli: Balıkçı Sadık'ın Sakin Akşamı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

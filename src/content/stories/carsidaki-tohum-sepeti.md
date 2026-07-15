@@ -3,6 +3,8 @@ title: "Çarşıdaki Tohum Sepeti"
 shortDescription: "Meraklı bir bahçıvanın kalabalık çarşıda dağıttığı gizemli tohumlar, çocuklara merakın güzel bir kapı olduğunu öğretiyor."
 coverEmoji: "🌱"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/carsidaki-tohum-sepeti.webp"
+altText: "Kapak görseli: Çarşıdaki Tohum Sepeti"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

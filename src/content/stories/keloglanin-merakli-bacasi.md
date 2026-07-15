@@ -3,6 +3,8 @@ title: "Keloğlan'ın Meraklı Bacası"
 shortDescription: "Keloğlan, dağ başındaki tuhaf bir kulübenin dumansız bacasının sırrını çözerken hem bir yaşlı kadına yardım eder hem de büyük bir ödül kazanır."
 coverEmoji: "🏔️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-merakli-bacasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Meraklı Bacası"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

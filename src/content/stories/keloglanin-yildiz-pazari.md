@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yıldız Pazarı"
 shortDescription: "Keloğlan, farklı köylerden gelen tuhaf tüccarlarla dolu bir yıldız pazarında hoşgörünün gerçek değerini keşfeder."
 coverEmoji: "✨"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yildiz-pazari.webp"
+altText: "Kapak görseli: Keloğlan'ın Yıldız Pazarı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

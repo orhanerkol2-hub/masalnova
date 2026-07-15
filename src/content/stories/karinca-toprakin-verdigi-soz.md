@@ -3,6 +3,8 @@ title: "Karınca Toprak'ın Verdiği Söz"
 shortDescription: "Küçük bir karıncanın, ormandaki arkadaşlarına verdiği sözü tutmak için gösterdiği azmi anlatan sıcacık bir hikaye."
 coverEmoji: "🐜"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/karinca-toprakin-verdigi-soz.webp"
+altText: "Kapak görseli: Karınca Toprak'ın Verdiği Söz"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

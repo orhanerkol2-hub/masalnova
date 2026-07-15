@@ -3,6 +3,8 @@ title: "Yıldız Toplayan Çocuk"
 shortDescription: "Küçük bir çocuk her gece bir yıldız biriktirir; en parlak olanı paylaşınca gökyüzü ona bambaşka bir armağan verir."
 coverEmoji: "⭐"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/yildiz-toplayan-cocuk.webp"
+altText: "Kapak görseli: Yıldız Toplayan Çocuk"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]
