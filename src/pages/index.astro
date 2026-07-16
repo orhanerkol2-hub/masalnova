@@ -6,13 +6,15 @@ import CategoryCard from '../components/CategoryCard.astro';
 import StoryCard from '../components/StoryCard.astro';
 import FeaturedVideos from '../components/FeaturedVideos.astro';
 import CoverThumb from '../components/CoverThumb.astro';
-import { getStories, popularStories, newStories, todayStory, storyCount } from '../data/stories';
+import { getStories, popularStories, todayStory, storyCount } from '../data/stories';
 import { featuredVideos, newestVideos } from '../data/videos';
 import { ageLabel } from '../data/taxonomy';
 
 const stories = await getStories();
 const today = todayStory(stories);
 const popular = popularStories(stories, 6);
+const latest = stories.slice(0, 12);
+const heroStories = [today, ...stories.filter((story) => story.id !== today?.id)].filter(Boolean).slice(0, 5);
 const featuredVids = featuredVideos(6);
 const newVids = newestVideos(4);
 
@@ -58,37 +60,44 @@ const homeCats = [
       </div>
 
       <div class="hero-stage" aria-label="Öne çıkan MasalNova içerikleri">
-        <div class="hero-orbit-card hero-orbit-card--top">
-          <span class="mini-kicker">Bugünün seçimi</span>
-          <strong>{today?.data.title ?? 'Uykucu Ay ile Küçük Yıldız'}</strong>
-          <small>{today ? `${today.data.readingTime} dk okuma` : 'Uyku öncesi masal'}</small>
-        </div>
-        <div class="showcase-card">
-          <div class="showcase-frame">
-            {
-              today && (
+        <div class="hero-carousel" data-hero-carousel>
+          {heroStories.map((story, index) => (
+            <a
+              class="showcase-card"
+              href={`/masallar/${story.id}/`}
+              data-hero-slide
+              data-title={story.data.title}
+              data-time={`${story.data.readingTime} dk okuma`}
+              aria-hidden={index === 0 ? 'false' : 'true'}
+            >
+              <div class="showcase-frame">
                 <CoverThumb
-                  emoji={today.data.coverEmoji}
-                  color={today.data.coverColor}
-                  image={today.data.coverImage}
-                  alt={today.data.altText ?? today.data.title}
+                  emoji={story.data.coverEmoji}
+                  color={story.data.coverColor}
+                  image={story.data.coverImage}
+                  alt={story.data.altText ?? story.data.title}
                   ratio="4 / 3"
                   big
                 />
-              )
-            }
+              </div>
+              <div class="showcase-content">
+                <span class="badge-type badge-story">📖 Premium Reader</span>
+                <h2>{story.data.title}</h2>
+                <p>{story.data.shortDescription}</p>
+                <span class="showcase-link">Şimdi oku →</span>
+              </div>
+            </a>
+          ))}
+          <div class="hero-dots" aria-label="Öne çıkan masalı seç">
+            {heroStories.map((story, index) => (
+              <button
+                type="button"
+                data-hero-dot
+                aria-label={`${story.data.title} masalını göster`}
+                aria-current={index === 0 ? 'true' : 'false'}
+              ></button>
+            ))}
           </div>
-          <div class="showcase-content">
-            <span class="badge-type badge-story">📖 Premium Reader</span>
-            <h2>{today?.data.title ?? 'MasalNova Reader'}</h2>
-            <p>{today?.data.shortDescription ?? 'Çocuğunuz için sakin, modern ve keyifli bir masal okuma alanı.'}</p>
-            <a href={today ? `/masallar/${today.id}/` : '/masallar/'}>Şimdi oku →</a>
-          </div>
-        </div>
-        <div class="hero-orbit-card hero-orbit-card--bottom">
-          <span class="mini-kicker">Kütüphane</span>
-          <strong>{stories.length}+ masal</strong>
-          <small>Her yaş ve her akşam için</small>
         </div>
       </div>
     </div>
@@ -124,6 +133,35 @@ const homeCats = [
       <div class="grid grid-2">
         <ChoiceCard kind="story" icon="📖" title="Masal Oku" subtitle="Kısa, eğitici ve uyku öncesi masalları premium reader ile keşfedin" href="/masallar/" />
         <ChoiceCard kind="video" icon="🎬" title="Video İzle" subtitle="Çocuk şarkıları, masallar ve eğlenceli videoları güvenli biçimde bulun" href="/videolar/" />
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW STORIES: automatically filled from the newest story files -->
+  <section class="section latest-stories" aria-labelledby="latest-stories-title">
+    <div class="container">
+      <div class="latest-head">
+        <div>
+          <p class="eyebrow">Yeni keşifler</p>
+          <h2 id="latest-stories-title">Masal rafı sürekli büyüyor.</h2>
+          <p>Yeni eklenen masallar otomatik olarak en öne gelir. Kartları kaydırarak keşfedin.</p>
+        </div>
+        <div class="latest-actions" aria-label="Masal kartlarını kaydır">
+          <button type="button" class="rail-button" data-rail-prev aria-label="Önceki masalları göster">←</button>
+          <button type="button" class="rail-button" data-rail-next aria-label="Sonraki masalları göster">→</button>
+        </div>
+      </div>
+      <div class="story-rail" data-story-rail tabindex="0" aria-label="Yeni eklenen masallar">
+        {latest.map((s, index) => (
+          <div class="rail-card" data-new={index < 3 ? 'true' : undefined}>
+            {index < 3 && <span class="new-ribbon">Yeni</span>}
+            <StoryCard story={s} />
+          </div>
+        ))}
+      </div>
+      <div class="latest-foot">
+        <span>{latest.length} yeni masal · düzenli güncellenir</span>
+        <a class="sec-link" href="/masallar/?siralama=yeni">Tüm yeni masallar →</a>
       </div>
     </div>
   </section>
@@ -222,6 +260,62 @@ const homeCats = [
     cols={4}
   />
 </BaseLayout>
+
+<script>
+  const rail = document.querySelector<HTMLElement>('[data-story-rail]');
+  const previous = document.querySelector<HTMLButtonElement>('[data-rail-prev]');
+  const next = document.querySelector<HTMLButtonElement>('[data-rail-next]');
+
+  if (rail && previous && next) {
+    const step = () => Math.min(380, rail.clientWidth * 0.82);
+    const move = (direction: number) => rail.scrollBy({ left: direction * step(), behavior: 'smooth' });
+    previous.addEventListener('click', () => move(-1));
+    next.addEventListener('click', () => move(1));
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let timer: number | undefined;
+    const stop = () => window.clearInterval(timer);
+    const start = () => {
+      if (reducedMotion) return;
+      stop();
+      timer = window.setInterval(() => {
+        const atEnd = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 12;
+        rail.scrollTo({ left: atEnd ? 0 : rail.scrollLeft + step(), behavior: 'smooth' });
+      }, 5200);
+    };
+    rail.addEventListener('pointerenter', stop);
+    rail.addEventListener('pointerleave', start);
+    rail.addEventListener('focusin', stop);
+    rail.addEventListener('focusout', start);
+    start();
+  }
+
+  const heroCarousel = document.querySelector<HTMLElement>('[data-hero-carousel]');
+  const heroSlides = Array.from(document.querySelectorAll<HTMLElement>('[data-hero-slide]'));
+  const heroDots = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-hero-dot]'));
+  if (heroCarousel && heroSlides.length > 1 && heroSlides.length === heroDots.length) {
+    let activeHero = 0;
+    let heroTimer: number | undefined;
+    const reducedHeroMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const showHero = (index: number) => {
+      activeHero = (index + heroSlides.length) % heroSlides.length;
+      heroSlides.forEach((slide, slideIndex) => slide.setAttribute('aria-hidden', slideIndex === activeHero ? 'false' : 'true'));
+      heroDots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', dotIndex === activeHero ? 'true' : 'false'));
+    };
+    const stopHero = () => window.clearInterval(heroTimer);
+    const startHero = () => {
+      if (reducedHeroMotion) return;
+      stopHero();
+      heroTimer = window.setInterval(() => showHero(activeHero + 1), 5800);
+    };
+    heroDots.forEach((dot, index) => dot.addEventListener('click', () => { showHero(index); startHero(); }));
+    heroCarousel.addEventListener('pointerenter', stopHero);
+    heroCarousel.addEventListener('pointerleave', startHero);
+    heroCarousel.addEventListener('focusin', stopHero);
+    heroCarousel.addEventListener('focusout', startHero);
+    startHero();
+  }
+</script>
 
 <style>
   :global(body) {
@@ -367,7 +461,7 @@ const homeCats = [
 
   .hero-stage {
     position: relative;
-    min-height: 540px;
+    min-height: 580px;
   }
 
   .showcase-card {
@@ -379,6 +473,54 @@ const homeCats = [
     color: var(--ink);
     box-shadow: 0 38px 110px rgba(0, 0, 0, 0.38);
     transform: rotate(2deg);
+  }
+
+  .hero-carousel {
+    position: relative;
+    min-height: 540px;
+  }
+
+  .showcase-card[data-hero-slide] {
+    position: absolute;
+    inset: 0;
+    transition: opacity .65s ease, transform .65s cubic-bezier(.2,.75,.25,1);
+  }
+
+  .showcase-card[data-hero-slide][aria-hidden="true"] {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(34px) rotate(4deg) scale(.965);
+  }
+
+  .showcase-card[data-hero-slide][aria-hidden="false"] {
+    opacity: 1;
+    transform: translateX(0) rotate(2deg) scale(1);
+  }
+
+  .hero-dots {
+    position: absolute;
+    z-index: 6;
+    right: 24px;
+    bottom: -28px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .hero-dots button {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255,255,255,.46);
+    box-shadow: 0 5px 16px rgba(0,0,0,.2);
+    cursor: pointer;
+    transition: width .25s ease, background .25s ease;
+  }
+
+  .hero-dots button[aria-current="true"] {
+    width: 28px;
+    background: #ffd46a;
   }
 
   .showcase-card::after {
@@ -417,13 +559,15 @@ const homeCats = [
     font-weight: 650;
   }
 
-  .showcase-content a {
+  .showcase-link {
     display: inline-flex;
     margin-top: 16px;
     color: var(--blue-d);
     font-family: var(--font-display);
     font-weight: 900;
   }
+
+  .showcase-card:hover .showcase-link { transform: translateX(4px); }
 
   .hero-orbit-card {
     position: absolute;
@@ -444,8 +588,8 @@ const homeCats = [
   }
 
   .hero-orbit-card--bottom {
-    left: -28px;
-    bottom: 70px;
+    left: 22px;
+    bottom: 0;
   }
 
   .mini-kicker {
@@ -518,6 +662,103 @@ const homeCats = [
 
   .premium-choices {
     padding-top: 42px;
+  }
+
+  .latest-stories {
+    overflow: hidden;
+    padding-top: 54px;
+    padding-bottom: 36px;
+  }
+
+  .latest-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 24px;
+  }
+
+  .latest-head h2 {
+    max-width: 13ch;
+    color: #fff;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    letter-spacing: -0.06em;
+  }
+
+  .latest-head p:last-child {
+    max-width: 58ch;
+    margin-top: 10px;
+    color: rgba(255,255,255,.78);
+    font-weight: 650;
+  }
+
+  .latest-actions { display: flex; gap: 10px; }
+
+  .rail-button {
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(255,255,255,.34);
+    border-radius: 50%;
+    background: rgba(255,255,255,.13);
+    color: #fff;
+    box-shadow: 0 16px 36px rgba(4,16,54,.2);
+    backdrop-filter: blur(14px);
+    font-size: 1.35rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .18s ease, background .18s ease;
+  }
+
+  .rail-button:hover { transform: translateY(-2px); background: rgba(255,255,255,.24); }
+
+  .story-rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: clamp(278px, 31vw, 365px);
+    gap: 20px;
+    overflow-x: auto;
+    padding: 8px 4px 26px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,.42) transparent;
+    overscroll-behavior-inline: contain;
+  }
+
+  .rail-card {
+    position: relative;
+    scroll-snap-align: start;
+  }
+
+  .rail-card :global(.story-card) {
+    height: 100%;
+    border-color: rgba(255,255,255,.56);
+    box-shadow: 0 26px 64px rgba(5,20,62,.28);
+  }
+
+  .new-ribbon {
+    position: absolute;
+    z-index: 5;
+    top: -7px;
+    right: 14px;
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffd86b, #ff9f1c);
+    color: #402000;
+    box-shadow: 0 10px 24px rgba(87,45,0,.28);
+    font-family: var(--font-display);
+    font-size: .78rem;
+    font-weight: 900;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  .latest-foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    color: rgba(255,255,255,.7);
+    font-size: .92rem;
+    font-weight: 750;
   }
 
   .section-intro {
@@ -674,16 +915,6 @@ const homeCats = [
       margin: 0 auto;
     }
 
-    .hero-orbit-card--top {
-      right: -8px;
-      top: -24px;
-    }
-
-    .hero-orbit-card--bottom {
-      left: -8px;
-      bottom: -24px;
-    }
-
     .today-art {
       max-width: 420px;
     }
@@ -698,6 +929,8 @@ const homeCats = [
       padding-top: 58px;
       padding-bottom: 84px;
     }
+
+    .hero-stage { padding-bottom: 0; }
 
     .hero-copy h1 {
       font-size: clamp(2.75rem, 15vw, 4.7rem);
@@ -731,9 +964,17 @@ const homeCats = [
       transform: none;
     }
 
+    .showcase-card[data-hero-slide][aria-hidden="false"] { transform: none; }
+
     .today-premium {
       border-radius: 28px;
     }
+
+    .latest-head { align-items: flex-end; }
+    .latest-head p:last-child { font-size: .95rem; }
+    .rail-button { width: 46px; height: 46px; }
+    .story-rail { grid-auto-columns: min(84vw, 330px); }
+    .latest-foot { align-items: flex-start; flex-direction: column; }
   }
 
   @media (max-width: 460px) {
