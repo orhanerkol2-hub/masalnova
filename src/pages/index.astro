@@ -14,7 +14,18 @@ const stories = await getStories();
 const today = todayStory(stories);
 const popular = popularStories(stories, 6);
 const latest = stories.slice(0, 12);
-const heroStories = [today, ...stories.filter((story) => story.id !== today?.id)].filter(Boolean).slice(0, 5);
+const heroStoryIds = [
+  'keloglan-dev',
+  'alice',
+  'aslan-kral-ile-kar-kaplumbagasi',
+  'akilli-tavsan',
+  'caliskan-karinca',
+  'keloglan-degirmen',
+];
+const heroStories = heroStoryIds.flatMap((id) => {
+  const story = stories.find((candidate) => candidate.id === id);
+  return story?.data.coverImage ? [story] : [];
+});
 const featuredVids = featuredVideos(6);
 const newVids = newestVideos(4);
 
@@ -89,8 +100,12 @@ const homeCats = [
               data-hero-slide
               data-title={story.data.title}
               data-time={`${story.data.readingTime} dk okuma`}
+              data-state={index === 0 ? 'active' : index === 1 ? 'next' : index === 2 ? 'queued' : 'hidden'}
               aria-hidden={index === 0 ? 'false' : 'true'}
+              inert={index === 0 ? undefined : true}
             >
+              <span class="hero-swipe-stamp hero-swipe-stamp--previous" aria-hidden="true">ÖNCEKİ</span>
+              <span class="hero-swipe-stamp hero-swipe-stamp--next" aria-hidden="true">SONRAKİ</span>
               <div class="showcase-frame">
                 <CoverThumb
                   emoji={story.data.coverEmoji}
@@ -109,16 +124,21 @@ const homeCats = [
               </div>
             </a>
           ))}
-          <div class="hero-dots" aria-label="Öne çıkan masalı seç">
-            {heroStories.map((story, index) => (
-              <button
-                type="button"
-                data-hero-dot
-                aria-label={`${story.data.title} masalını göster`}
-                aria-current={index === 0 ? 'true' : 'false'}
-              ></button>
-            ))}
+          <div class="hero-controls" aria-label="Öne çıkan masalları kaydır">
+            <button type="button" class="hero-swipe-button" data-hero-prev aria-label="Önceki öne çıkan masalı göster">←</button>
+            <div class="hero-dots" aria-label="Öne çıkan masalı seç">
+              {heroStories.map((story, index) => (
+                <button
+                  type="button"
+                  data-hero-dot
+                  aria-label={`${story.data.title} masalını göster`}
+                  aria-current={index === 0 ? 'true' : 'false'}
+                ></button>
+              ))}
+            </div>
+            <button type="button" class="hero-swipe-button" data-hero-next aria-label="Sonraki öne çıkan masalı göster">→</button>
           </div>
+          <p class="hero-swipe-hint">Kartı kaydırarak masal seç</p>
         </div>
       </div>
     </div>
@@ -431,26 +451,113 @@ const homeCats = [
   const heroCarousel = document.querySelector<HTMLElement>('[data-hero-carousel]');
   const heroSlides = Array.from(document.querySelectorAll<HTMLElement>('[data-hero-slide]'));
   const heroDots = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-hero-dot]'));
-  if (heroCarousel && heroSlides.length > 1 && heroSlides.length === heroDots.length) {
+  const heroPrevious = document.querySelector<HTMLButtonElement>('[data-hero-prev]');
+  const heroNext = document.querySelector<HTMLButtonElement>('[data-hero-next]');
+  if (heroCarousel && heroSlides.length > 1 && heroSlides.length === heroDots.length && heroPrevious && heroNext) {
     let activeHero = 0;
     let heroTimer: number | undefined;
+    let heroMoving = false;
+    let heroPointerId: number | null = null;
+    let heroStartX = 0;
+    let heroDragX = 0;
+    let heroDragged = false;
     const reducedHeroMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const heroIndexAt = (offset: number) => (activeHero + offset + heroSlides.length) % heroSlides.length;
+    const currentHero = () => heroSlides[activeHero];
     const showHero = (index: number) => {
       activeHero = (index + heroSlides.length) % heroSlides.length;
-      heroSlides.forEach((slide, slideIndex) => slide.setAttribute('aria-hidden', slideIndex === activeHero ? 'false' : 'true'));
+      const nextHero = heroIndexAt(1);
+      const queuedHero = heroIndexAt(2);
+      heroSlides.forEach((slide, slideIndex) => {
+        const state = slideIndex === activeHero ? 'active' : slideIndex === nextHero ? 'next' : slideIndex === queuedHero ? 'queued' : 'hidden';
+        slide.dataset.state = state;
+        slide.setAttribute('aria-hidden', state === 'active' ? 'false' : 'true');
+        slide.toggleAttribute('inert', state !== 'active');
+        slide.style.removeProperty('--hero-drag-x');
+        slide.style.removeProperty('--hero-drag-rotate');
+        slide.style.removeProperty('--hero-drag-opacity');
+      });
       heroDots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', dotIndex === activeHero ? 'true' : 'false'));
+      heroMoving = false;
     };
     const stopHero = () => window.clearInterval(heroTimer);
     const startHero = () => {
       if (reducedHeroMotion) return;
       stopHero();
-      heroTimer = window.setInterval(() => showHero(activeHero + 1), 5800);
+      heroTimer = window.setInterval(() => moveHero(1), 5800);
     };
-    heroDots.forEach((dot, index) => dot.addEventListener('click', () => { showHero(index); startHero(); }));
+    const resetHeroDrag = () => {
+      const slide = currentHero();
+      slide.style.setProperty('--hero-drag-x', '0px');
+      slide.style.setProperty('--hero-drag-rotate', '2deg');
+      slide.style.setProperty('--hero-drag-opacity', '1');
+    };
+    const moveHero = (direction: number) => {
+      if (heroMoving) return;
+      heroMoving = true;
+      stopHero();
+      const slide = currentHero();
+      slide.style.setProperty('--hero-drag-x', direction > 0 ? '-105vw' : '105vw');
+      slide.style.setProperty('--hero-drag-rotate', direction > 0 ? '-16deg' : '16deg');
+      slide.style.setProperty('--hero-drag-opacity', '0');
+      window.setTimeout(() => {
+        showHero(heroIndexAt(direction));
+        startHero();
+      }, reducedHeroMotion ? 0 : 300);
+    };
+    heroDots.forEach((dot, index) => dot.addEventListener('click', () => {
+      if (index === activeHero) return;
+      stopHero();
+      showHero(index);
+      startHero();
+    }));
+    heroPrevious.addEventListener('click', () => moveHero(-1));
+    heroNext.addEventListener('click', () => moveHero(1));
+
+    heroCarousel.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); moveHero(-1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); moveHero(1); }
+    });
+    heroCarousel.addEventListener('pointerdown', (event) => {
+      if (heroMoving || event.button !== 0 || (event.target instanceof Element && event.target.closest('button'))) return;
+      heroPointerId = event.pointerId;
+      heroStartX = event.clientX;
+      heroDragX = 0;
+      heroDragged = false;
+      heroCarousel.setPointerCapture(heroPointerId);
+      heroCarousel.dataset.dragging = 'true';
+      stopHero();
+    });
+    heroCarousel.addEventListener('pointermove', (event) => {
+      if (heroPointerId !== event.pointerId || heroMoving) return;
+      heroDragX = event.clientX - heroStartX;
+      heroDragged ||= Math.abs(heroDragX) > 8;
+      const slide = currentHero();
+      slide.style.setProperty('--hero-drag-x', `${heroDragX}px`);
+      slide.style.setProperty('--hero-drag-rotate', `${Math.max(-10, Math.min(10, heroDragX / 28))}deg`);
+      slide.style.setProperty('--hero-drag-opacity', String(Math.max(.78, 1 - Math.abs(heroDragX) / 850)));
+      heroCarousel.style.setProperty('--hero-swipe-direction', String(Math.max(-1, Math.min(1, heroDragX / 90))));
+    });
+    const finishHeroDrag = (event: PointerEvent) => {
+      if (heroPointerId !== event.pointerId) return;
+      if (heroCarousel.hasPointerCapture(heroPointerId)) heroCarousel.releasePointerCapture(heroPointerId);
+      heroPointerId = null;
+      heroCarousel.dataset.dragging = 'false';
+      heroCarousel.style.setProperty('--hero-swipe-direction', '0');
+      if (Math.abs(heroDragX) >= 80) moveHero(heroDragX < 0 ? 1 : -1);
+      else { resetHeroDrag(); startHero(); }
+    };
+    heroCarousel.addEventListener('pointerup', finishHeroDrag);
+    heroCarousel.addEventListener('pointercancel', finishHeroDrag);
+    heroCarousel.addEventListener('click', (event) => {
+      if (heroDragged) event.preventDefault();
+      heroDragged = false;
+    }, true);
     heroCarousel.addEventListener('pointerenter', stopHero);
     heroCarousel.addEventListener('pointerleave', startHero);
     heroCarousel.addEventListener('focusin', stopHero);
     heroCarousel.addEventListener('focusout', startHero);
+    showHero(0);
     startHero();
   }
 </script>
@@ -607,41 +714,86 @@ const homeCats = [
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.26);
     border-radius: 38px;
-    background: linear-gradient(155deg, rgba(255,255,255,0.96), rgba(236, 242, 255, 0.9));
+    background: linear-gradient(155deg, #fff, #ecf2ff);
     color: var(--ink);
     box-shadow: 0 38px 110px rgba(0, 0, 0, 0.38);
     transform: rotate(2deg);
   }
 
   .hero-carousel {
+    --hero-swipe-direction: 0;
     position: relative;
     min-height: 540px;
+    perspective: 1100px;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .showcase-card[data-hero-slide] {
+    --hero-drag-x: 0px;
+    --hero-drag-rotate: 2deg;
+    --hero-drag-opacity: 1;
     position: absolute;
     inset: 0;
-    transition: opacity .65s ease, transform .65s cubic-bezier(.2,.75,.25,1);
+    transform-origin: 50% 94%;
+    transition: opacity .32s ease, transform .38s cubic-bezier(.2,.75,.25,1);
+    will-change: transform, opacity;
   }
 
-  .showcase-card[data-hero-slide][aria-hidden="true"] {
+  .showcase-card[data-hero-slide][data-state="active"] {
+    z-index: 5;
+    opacity: var(--hero-drag-opacity);
+    pointer-events: auto;
+    transform: translateX(var(--hero-drag-x)) rotate(var(--hero-drag-rotate)) scale(1);
+    cursor: grab;
+  }
+
+  .hero-carousel[data-dragging="true"] .showcase-card[data-hero-slide][data-state="active"] {
+    transition: none;
+    cursor: grabbing;
+  }
+
+  .showcase-card[data-hero-slide][data-state="next"] {
+    z-index: 4;
+    opacity: .86;
+    pointer-events: none;
+    transform: translate(18px, 15px) rotate(4.4deg) scale(.965);
+  }
+
+  .showcase-card[data-hero-slide][data-state="queued"] {
+    z-index: 3;
+    opacity: .58;
+    pointer-events: none;
+    transform: translate(-12px, 29px) rotate(-3.4deg) scale(.93);
+  }
+
+  .showcase-card[data-hero-slide][data-state="hidden"] {
+    z-index: 1;
     opacity: 0;
     pointer-events: none;
-    transform: translateX(34px) rotate(4deg) scale(.965);
+    transform: translateY(34px) scale(.9);
   }
 
-  .showcase-card[data-hero-slide][aria-hidden="false"] {
-    opacity: 1;
-    transform: translateX(0) rotate(2deg) scale(1);
+  .hero-controls {
+    position: absolute;
+    z-index: 9;
+    right: 18px;
+    top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .hero-dots {
-    position: absolute;
-    z-index: 6;
-    right: 24px;
-    bottom: -28px;
     display: flex;
+    align-items: center;
     gap: 8px;
+    padding: 10px 13px;
+    border: 1px solid rgba(255,255,255,.24);
+    border-radius: 999px;
+    background: rgba(8,27,70,.42);
+    backdrop-filter: blur(14px);
   }
 
   .hero-dots button {
@@ -659,6 +811,72 @@ const homeCats = [
   .hero-dots button[aria-current="true"] {
     width: 28px;
     background: #ffd46a;
+  }
+
+  .hero-swipe-button {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    background: rgba(8,27,70,.55);
+    color: #fff;
+    box-shadow: 0 14px 36px rgba(0,0,0,.22);
+    backdrop-filter: blur(14px);
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .18s ease, background .18s ease;
+  }
+
+  .hero-swipe-button:hover { transform: translateY(-2px); background: rgba(255,255,255,.2); }
+
+  .hero-swipe-hint {
+    position: absolute;
+    z-index: 8;
+    left: 24px;
+    top: 23px;
+    padding: 8px 11px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 999px;
+    background: rgba(8,27,70,.46);
+    color: rgba(255,255,255,.82);
+    backdrop-filter: blur(14px);
+    font-size: .78rem;
+    font-weight: 800;
+  }
+
+  .hero-swipe-stamp {
+    position: absolute;
+    z-index: 8;
+    top: 92px;
+    padding: 8px 13px;
+    border: 3px solid currentColor;
+    border-radius: 10px;
+    background: rgba(5,16,38,.72);
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .hero-swipe-stamp--previous {
+    left: 34px;
+    color: #78e6c2;
+    transform: rotate(-9deg);
+    opacity: clamp(0, var(--hero-swipe-direction), 1);
+  }
+
+  .hero-swipe-stamp--next {
+    right: 34px;
+    color: #ffd46a;
+    transform: rotate(9deg);
+    opacity: clamp(0, calc(var(--hero-swipe-direction) * -1), 1);
   }
 
   .showcase-card::after {
@@ -684,7 +902,12 @@ const homeCats = [
     position: relative;
     z-index: 1;
     padding: 8px 26px 28px;
+    transition: opacity .2s ease;
   }
+
+  .showcase-card[data-state="next"] .showcase-content,
+  .showcase-card[data-state="queued"] .showcase-content,
+  .showcase-card[data-state="hidden"] .showcase-content { opacity: 0; }
 
   .showcase-content h2 {
     margin: 12px 0 8px;
@@ -1229,7 +1452,33 @@ const homeCats = [
       padding-bottom: 84px;
     }
 
-    .hero-stage { padding-bottom: 0; }
+    .hero-stage {
+      order: -1;
+      width: min(100%, 350px);
+      padding-bottom: 0;
+    }
+
+    .hero-carousel { min-height: 430px; }
+
+    .showcase-frame { padding: 12px; }
+    .showcase-frame :global(.cover) { border-radius: 22px; }
+
+    .showcase-content { padding: 5px 20px 20px; }
+    .showcase-content h2 { margin: 9px 0 6px; font-size: 1.38rem; }
+    .showcase-content p {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      font-size: .9rem;
+    }
+
+    .showcase-link { margin-top: 10px; }
+    .hero-controls { top: 12px; right: 10px; }
+    .hero-swipe-button { width: 38px; height: 38px; }
+    .hero-dots { gap: 6px; padding: 8px 10px; }
+    .hero-dots button { width: 7px; height: 7px; }
+    .hero-dots button[aria-current="true"] { width: 22px; }
 
     .hero-copy h1 {
       font-size: clamp(2.75rem, 15vw, 4.7rem);
@@ -1263,7 +1512,12 @@ const homeCats = [
       transform: none;
     }
 
-    .showcase-card[data-hero-slide][aria-hidden="false"] { transform: none; }
+    .showcase-card[data-hero-slide][data-state="active"] {
+      transform: translateX(var(--hero-drag-x)) rotate(var(--hero-drag-rotate)) scale(1);
+    }
+
+    .hero-swipe-hint { display: none; }
+    .hero-controls { right: 14px; }
 
     .today-premium {
       border-radius: 28px;
