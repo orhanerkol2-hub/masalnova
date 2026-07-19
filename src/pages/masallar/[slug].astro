@@ -23,23 +23,44 @@ const related = d.relatedVideoIds.map((id) => videoById(id)).filter(Boolean);
 const moreStories = allStories
   .filter((s) => s.id !== story.id && s.data.categories.some((c) => d.categories.includes(c)))
   .slice(0, 3);
+const primaryCategory = d.categories[0];
+const primaryCategoryLabel = primaryCategory ? storyCategoryLabel(primaryCategory) : 'Masallar';
+const storyUrl = `https://masalnova.com/masallar/${story.id}/`;
+const storyImage = d.coverImage ? `https://masalnova.com${d.coverImage}` : 'https://masalnova.com/logo.png';
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: d.title,
-  description: d.shortDescription,
-  inLanguage: 'tr-TR',
-  datePublished: d.publishedAt,
-  author: { '@type': 'Organization', name: 'MasalNova Çocuk' },
-  publisher: { '@type': 'Organization', name: 'MasalNova Çocuk', logo: { '@type': 'ImageObject', url: 'https://masalnova.com/logo.png' } },
-  mainEntityOfPage: `https://masalnova.com/masallar/${story.id}/`,
-};
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.title,
+    description: d.shortDescription,
+    image: storyImage,
+    inLanguage: 'tr-TR',
+    datePublished: d.publishedAt,
+    dateModified: d.publishedAt,
+    isAccessibleForFree: true,
+    articleSection: d.categories.map(storyCategoryLabel),
+    author: { '@type': 'Organization', name: 'MasalNova Çocuk', url: 'https://masalnova.com/' },
+    publisher: { '@type': 'Organization', name: 'MasalNova Çocuk', logo: { '@type': 'ImageObject', url: 'https://masalnova.com/logo.png' } },
+    mainEntityOfPage: storyUrl,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Masallar', item: 'https://masalnova.com/masallar/' },
+      ...(primaryCategory ? [{ '@type': 'ListItem', position: 3, name: primaryCategoryLabel, item: `https://masalnova.com/masallar/kategori/${primaryCategory}/` }] : []),
+      { '@type': 'ListItem', position: primaryCategory ? 4 : 3, name: d.title, item: storyUrl },
+    ],
+  },
+];
 ---
 <BaseLayout
-  title={`${d.title} — MasalNova Çocuk Masalları`}
+  title={`${d.title} | Masal Oku – MasalNova`}
   description={d.shortDescription}
   path={`/masallar/${story.id}/`}
+  image={d.coverImage}
   jsonLd={jsonLd}
   activeNav="masallar"
   readerPage
@@ -49,7 +70,9 @@ const jsonLd = {
   <section class="story-page">
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb">
-        <a href="/">Ana Sayfa</a> <span>›</span> <a href="/masallar/">Masallar</a> <span>›</span> <span>{d.title}</span>
+        <a href="/">Ana Sayfa</a> <span>›</span> <a href="/masallar/">Masallar</a>
+        {primaryCategory && <><span>›</span><a href={`/masallar/kategori/${primaryCategory}/`}>{primaryCategoryLabel}</a></>}
+        <span>›</span> <span>{d.title}</span>
       </nav>
 
       <div class="reader-shell">
@@ -65,7 +88,7 @@ const jsonLd = {
               {d.categories.map((c) => (
                 <>
                   <span aria-hidden="true">·</span>
-                  <span>{storyCategoryLabel(c)}</span>
+                  <a href={`/masallar/kategori/${c}/`}>{storyCategoryLabel(c)}</a>
                 </>
               ))}
             </div>

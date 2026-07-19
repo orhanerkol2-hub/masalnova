@@ -30,8 +30,10 @@ const orgGraph = {
       '@type': 'Organization',
       '@id': 'https://masalnova.com/#organization',
       name: 'MasalNova Çocuk',
+      alternateName: 'MasalNova',
       url: 'https://masalnova.com/',
       logo: 'https://masalnova.com/logo.png',
+      sameAs: ['https://www.youtube.com/@masalnovacocuk'],
     },
     {
       '@type': 'WebSite',
@@ -58,6 +60,7 @@ const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
 <link rel="canonical" href={canonical} />
 <link rel="alternate" hreflang="tr" href={canonical} />
+<link rel="alternate" hreflang="x-default" href={canonical} />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />

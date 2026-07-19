@@ -18,19 +18,40 @@ const heroStories = [today, ...stories.filter((story) => story.id !== today?.id)
 const featuredVids = featuredVideos(6);
 const newVids = newestVideos(4);
 
+const homeJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': 'https://masalnova.com/#masal-koleksiyonu',
+  name: 'Masal Oku – Uyku Masalları ve Çocuk Hikâyeleri',
+  description: 'Çocuklar için ücretsiz Türkçe uyku masalları, eğitici masallar, kısa masallar ve Keloğlan hikâyeleri.',
+  url: 'https://masalnova.com/',
+  inLanguage: 'tr-TR',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: latest.length,
+    itemListElement: latest.map((story, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `https://masalnova.com/masallar/${story.id}/`,
+      name: story.data.title,
+    })),
+  },
+};
+
 const homeCats = [
-  { emoji: '🧒', label: 'Keloğlan Masalları', desc: "Keloğlan'ın sevimli maceraları", href: '/masallar/?tur=keloglan', count: storyCount(stories, 'keloglan'), color: '#ffb01f' },
-  { emoji: '🌙', label: 'Uyku Masalları', desc: 'Uyku öncesi sakin masallar', href: '/masallar/?tur=uyku', count: storyCount(stories, 'uyku'), color: '#7b5cff' },
-  { emoji: '⏱️', label: 'Kısa Masallar', desc: 'Birkaç dakikada biten masallar', href: '/masallar/?tur=kisa', count: storyCount(stories, 'kisa'), color: '#2f74e8' },
-  { emoji: '🎓', label: 'Eğitici Masallar', desc: 'Güzel bir ders veren masallar', href: '/masallar/?tur=egitici', count: storyCount(stories, 'egitici'), color: '#3bb98b' },
-  { emoji: '🦊', label: 'Hayvan Masalları', desc: 'Sevimli hayvan kahramanlar', href: '/masallar/?tur=hayvan', count: storyCount(stories, 'hayvan'), color: '#21b6c9' },
+  { emoji: '🧒', label: 'Keloğlan Masalları', desc: "Keloğlan'ın sevimli maceraları", href: '/masallar/kategori/keloglan/', count: storyCount(stories, 'keloglan'), color: '#ffb01f' },
+  { emoji: '🌙', label: 'Uyku Masalları', desc: 'Uyku öncesi sakin masallar', href: '/masallar/kategori/uyku/', count: storyCount(stories, 'uyku'), color: '#7b5cff' },
+  { emoji: '⏱️', label: 'Kısa Masallar', desc: 'Birkaç dakikada biten masallar', href: '/masallar/kategori/kisa/', count: storyCount(stories, 'kisa'), color: '#2f74e8' },
+  { emoji: '🎓', label: 'Eğitici Masallar', desc: 'Güzel bir ders veren masallar', href: '/masallar/kategori/egitici/', count: storyCount(stories, 'egitici'), color: '#3bb98b' },
+  { emoji: '🦊', label: 'Hayvan Masalları', desc: 'Sevimli hayvan kahramanlar', href: '/masallar/kategori/hayvan/', count: storyCount(stories, 'hayvan'), color: '#21b6c9' },
   { emoji: '🎈', label: 'Yaşa Göre Masallar', desc: 'Çocuğunuzun yaşına uygun', href: '/masallar/', count: stories.length, color: '#ff8a00' },
 ];
 ---
 <BaseLayout
-  title="MasalNova Çocuk | Masallar ve Çocuk Videoları"
-  description="MasalNova Çocuk'ta kısa Türkçe masallar okuyun, çocuk şarkıları ve eğlenceli videoları izleyin. Çocuğunuza uygun içeriği kolayca keşfedin."
+  title="Masal Oku – Uyku Masalları ve Çocuk Hikâyeleri | MasalNova"
+  description="Masal oku: Çocuklar için ücretsiz uyku masalları, kısa ve eğitici hikâyeler, hayvan ve Keloğlan masalları. Yaşa ve okuma süresine göre keşfet."
   path="/"
+  jsonLd={homeJsonLd}
   activeNav="home"
 >
   <!-- 1) PREMIUM HERO -->
@@ -40,7 +61,7 @@ const homeCats = [
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">MasalNova Çocuk · Türkçe Masal Kütüphanesi</p>
-        <h1>Her akşamı küçük bir masal galasına dönüştürün.</h1>
+        <h1>Masal oku, her akşamı küçük bir masal galasına dönüştür.</h1>
         <p class="lead">
           Yaşa, süreye ve ruh haline göre seçilmiş yüzlerce masal ve çocuk videosu.
           Okuma deneyimi artık sakin, modern ve aile dostu.
@@ -139,29 +160,58 @@ const homeCats = [
 
   <!-- NEW STORIES: automatically filled from the newest story files -->
   <section class="section latest-stories" aria-labelledby="latest-stories-title">
-    <div class="container">
-      <div class="latest-head">
-        <div>
-          <p class="eyebrow">Yeni keşifler</p>
-          <h2 id="latest-stories-title">Masal rafı sürekli büyüyor.</h2>
-          <p>Yeni eklenen masallar otomatik olarak en öne gelir. Kartları kaydırarak keşfedin.</p>
+    <div class="container swipe-layout">
+      <div class="swipe-intro">
+        <p class="eyebrow">Kaydırarak keşfet</p>
+        <h2 id="latest-stories-title">Bir masal seç. Kaydır. Hikâyeye dal.</h2>
+        <p>Yeni masalları kart destesi gibi keşfet. Kartı sürükle, ok tuşlarını kullan veya doğrudan okumaya başla.</p>
+        <div class="swipe-progress" aria-live="polite">
+          <strong data-swipe-current>1</strong>
+          <span>/ {latest.length} yeni masal</span>
         </div>
-        <div class="latest-actions" aria-label="Masal kartlarını kaydır">
-          <button type="button" class="rail-button" data-rail-prev aria-label="Önceki masalları göster">←</button>
-          <button type="button" class="rail-button" data-rail-next aria-label="Sonraki masalları göster">→</button>
+        <p class="swipe-hint">Sola kaydır: sonraki · Sağa kaydır: önceki</p>
+        <a class="sec-link" href="/masallar/?siralama=yeni">Tüm yeni masalları gör →</a>
+      </div>
+
+      <div class="swipe-deck">
+        <div
+          class="swipe-stack"
+          data-story-swipe
+          tabindex="0"
+          role="group"
+          aria-roledescription="kaydırılabilir masal kartları"
+          aria-label="Yeni eklenen masalları keşfet"
+        >
+          {latest.map((s, index) => (
+            <div
+              class="swipe-card"
+              data-swipe-card
+              data-card-title={s.data.title}
+              data-card-href={`/masallar/${s.id}/`}
+              data-state={index === 0 ? 'active' : index === 1 ? 'next' : index === 2 ? 'queued' : 'hidden'}
+              aria-hidden={index === 0 ? 'false' : 'true'}
+              inert={index === 0 ? undefined : true}
+            >
+              <span class="swipe-stamp swipe-stamp--previous" aria-hidden="true">ÖNCEKİ</span>
+              <span class="swipe-stamp swipe-stamp--next" aria-hidden="true">SONRAKİ</span>
+              {index < 3 && <span class="new-ribbon">Yeni</span>}
+              <StoryCard story={s} />
+            </div>
+          ))}
         </div>
-      </div>
-      <div class="story-rail" data-story-rail tabindex="0" aria-label="Yeni eklenen masallar">
-        {latest.map((s, index) => (
-          <div class="rail-card" data-new={index < 3 ? 'true' : undefined}>
-            {index < 3 && <span class="new-ribbon">Yeni</span>}
-            <StoryCard story={s} />
-          </div>
-        ))}
-      </div>
-      <div class="latest-foot">
-        <span>{latest.length} yeni masal · düzenli güncellenir</span>
-        <a class="sec-link" href="/masallar/?siralama=yeni">Tüm yeni masallar →</a>
+
+        <div class="swipe-actions" aria-label="Masal kartlarını kontrol et">
+          <button type="button" class="swipe-button swipe-button--previous" data-swipe-prev aria-label="Önceki masalı göster">
+            <span aria-hidden="true">←</span>
+            <small>Önceki</small>
+          </button>
+          <a class="swipe-open" data-swipe-open href={`/masallar/${latest[0]?.id}/`}>Bu masalı oku</a>
+          <button type="button" class="swipe-button swipe-button--next" data-swipe-next aria-label="Sonraki masalı göster">
+            <span aria-hidden="true">→</span>
+            <small>Sonraki</small>
+          </button>
+        </div>
+        <p class="sr-only" data-swipe-status aria-live="polite">{latest[0]?.data.title} gösteriliyor.</p>
       </div>
     </div>
   </section>
@@ -262,32 +312,120 @@ const homeCats = [
 </BaseLayout>
 
 <script>
-  const rail = document.querySelector<HTMLElement>('[data-story-rail]');
-  const previous = document.querySelector<HTMLButtonElement>('[data-rail-prev]');
-  const next = document.querySelector<HTMLButtonElement>('[data-rail-next]');
+  const swipeStack = document.querySelector<HTMLElement>('[data-story-swipe]');
+  const swipeCards = Array.from(document.querySelectorAll<HTMLElement>('[data-swipe-card]'));
+  const swipePrevious = document.querySelector<HTMLButtonElement>('[data-swipe-prev]');
+  const swipeNext = document.querySelector<HTMLButtonElement>('[data-swipe-next]');
+  const swipeOpen = document.querySelector<HTMLAnchorElement>('[data-swipe-open]');
+  const swipeCurrent = document.querySelector<HTMLElement>('[data-swipe-current]');
+  const swipeStatus = document.querySelector<HTMLElement>('[data-swipe-status]');
 
-  if (rail && previous && next) {
-    const step = () => Math.min(380, rail.clientWidth * 0.82);
-    const move = (direction: number) => rail.scrollBy({ left: direction * step(), behavior: 'smooth' });
-    previous.addEventListener('click', () => move(-1));
-    next.addEventListener('click', () => move(1));
-
+  if (swipeStack && swipeCards.length && swipePrevious && swipeNext && swipeOpen) {
+    let activeIndex = 0;
+    let startX = 0;
+    let dragX = 0;
+    let pointerId: number | null = null;
+    let moving = false;
+    let dragged = false;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let timer: number | undefined;
-    const stop = () => window.clearInterval(timer);
-    const start = () => {
-      if (reducedMotion) return;
-      stop();
-      timer = window.setInterval(() => {
-        const atEnd = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 12;
-        rail.scrollTo({ left: atEnd ? 0 : rail.scrollLeft + step(), behavior: 'smooth' });
-      }, 5200);
+
+    const indexAt = (offset: number) => (activeIndex + offset + swipeCards.length) % swipeCards.length;
+    const activeCard = () => swipeCards[activeIndex];
+
+    const renderSwipe = () => {
+      const nextIndex = indexAt(1);
+      const queuedIndex = indexAt(2);
+      swipeCards.forEach((card, index) => {
+        const state = index === activeIndex ? 'active' : index === nextIndex ? 'next' : index === queuedIndex ? 'queued' : 'hidden';
+        card.dataset.state = state;
+        card.setAttribute('aria-hidden', state === 'active' ? 'false' : 'true');
+        card.toggleAttribute('inert', state !== 'active');
+        card.style.removeProperty('--drag-x');
+        card.style.removeProperty('--drag-rotate');
+        card.style.removeProperty('--drag-opacity');
+      });
+
+      const card = activeCard();
+      const title = card.dataset.cardTitle ?? 'Masal';
+      const href = card.dataset.cardHref ?? '/masallar/';
+      swipeOpen.href = href;
+      swipeOpen.setAttribute('aria-label', `${title} masalını oku`);
+      if (swipeCurrent) swipeCurrent.textContent = String(activeIndex + 1);
+      if (swipeStatus) swipeStatus.textContent = `${title} gösteriliyor.`;
+      moving = false;
     };
-    rail.addEventListener('pointerenter', stop);
-    rail.addEventListener('pointerleave', start);
-    rail.addEventListener('focusin', stop);
-    rail.addEventListener('focusout', start);
-    start();
+
+    const resetDrag = () => {
+      const card = activeCard();
+      card.style.setProperty('--drag-x', '0px');
+      card.style.setProperty('--drag-rotate', '0deg');
+      card.style.setProperty('--drag-opacity', '1');
+    };
+
+    const moveSwipe = (direction: number) => {
+      if (moving) return;
+      moving = true;
+      const card = activeCard();
+      const exitX = direction > 0 ? '-120vw' : '120vw';
+      const exitRotation = direction > 0 ? '-18deg' : '18deg';
+      card.style.setProperty('--drag-x', exitX);
+      card.style.setProperty('--drag-rotate', exitRotation);
+      card.style.setProperty('--drag-opacity', '0');
+
+      window.setTimeout(() => {
+        activeIndex = indexAt(direction);
+        renderSwipe();
+      }, reducedMotion ? 0 : 280);
+    };
+
+    swipePrevious.addEventListener('click', () => moveSwipe(-1));
+    swipeNext.addEventListener('click', () => moveSwipe(1));
+
+    swipeStack.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); moveSwipe(-1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); moveSwipe(1); }
+      if (event.key === 'Enter') { event.preventDefault(); swipeOpen.click(); }
+    });
+
+    swipeStack.addEventListener('pointerdown', (event) => {
+      if (moving || event.button !== 0) return;
+      pointerId = event.pointerId;
+      startX = event.clientX;
+      dragX = 0;
+      dragged = false;
+      swipeStack.setPointerCapture(pointerId);
+      swipeStack.dataset.dragging = 'true';
+    });
+
+    swipeStack.addEventListener('pointermove', (event) => {
+      if (pointerId !== event.pointerId || moving) return;
+      dragX = event.clientX - startX;
+      dragged ||= Math.abs(dragX) > 8;
+      const card = activeCard();
+      card.style.setProperty('--drag-x', `${dragX}px`);
+      card.style.setProperty('--drag-rotate', `${Math.max(-12, Math.min(12, dragX / 22))}deg`);
+      card.style.setProperty('--drag-opacity', String(Math.max(.78, 1 - Math.abs(dragX) / 900)));
+      swipeStack.style.setProperty('--swipe-direction', String(Math.max(-1, Math.min(1, dragX / 100))));
+    });
+
+    const finishDrag = (event: PointerEvent) => {
+      if (pointerId !== event.pointerId) return;
+      if (swipeStack.hasPointerCapture(pointerId)) swipeStack.releasePointerCapture(pointerId);
+      pointerId = null;
+      swipeStack.dataset.dragging = 'false';
+      swipeStack.style.setProperty('--swipe-direction', '0');
+      if (Math.abs(dragX) >= 90) moveSwipe(dragX < 0 ? 1 : -1);
+      else resetDrag();
+    };
+
+    swipeStack.addEventListener('pointerup', finishDrag);
+    swipeStack.addEventListener('pointercancel', finishDrag);
+    swipeStack.addEventListener('click', (event) => {
+      if (dragged) event.preventDefault();
+      dragged = false;
+    }, true);
+
+    renderSwipe();
   }
 
   const heroCarousel = document.querySelector<HTMLElement>('[data-hero-carousel]');
@@ -670,70 +808,229 @@ const homeCats = [
     padding-bottom: 36px;
   }
 
-  .latest-head {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 28px;
-    margin-bottom: 24px;
+  .swipe-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .82fr) minmax(360px, 1fr);
+    gap: clamp(40px, 8vw, 110px);
+    align-items: center;
   }
 
-  .latest-head h2 {
-    max-width: 13ch;
+  .swipe-intro h2 {
+    max-width: 10ch;
     color: #fff;
-    font-size: clamp(2.2rem, 5vw, 4rem);
-    letter-spacing: -0.06em;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: -0.065em;
+    line-height: .96;
+    text-wrap: balance;
   }
 
-  .latest-head p:last-child {
-    max-width: 58ch;
-    margin-top: 10px;
-    color: rgba(255,255,255,.78);
+  .swipe-intro > p:not(.eyebrow):not(.swipe-hint) {
+    max-width: 48ch;
+    margin-top: 20px;
+    color: rgba(255,255,255,.82);
+    font-size: 1.05rem;
     font-weight: 650;
   }
 
-  .latest-actions { display: flex; gap: 10px; }
+  .swipe-progress {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 30px;
+    color: rgba(255,255,255,.72);
+    font-weight: 800;
+  }
 
-  .rail-button {
-    width: 52px;
-    height: 52px;
-    border: 1px solid rgba(255,255,255,.34);
-    border-radius: 50%;
-    background: rgba(255,255,255,.13);
-    color: #fff;
-    box-shadow: 0 16px 36px rgba(4,16,54,.2);
-    backdrop-filter: blur(14px);
-    font-size: 1.35rem;
+  .swipe-progress strong {
+    color: #ffd46a;
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+
+  .swipe-hint {
+    margin: 10px 0 22px;
+    color: rgba(255,255,255,.58);
+    font-size: .86rem;
+    font-weight: 750;
+  }
+
+  .swipe-intro .sec-link { color: #fff; }
+
+  .swipe-deck {
+    display: grid;
+    justify-items: center;
+    min-width: 0;
+  }
+
+  .swipe-stack {
+    --swipe-direction: 0;
+    display: grid;
+    width: min(100%, 430px);
+    padding: 20px 14px 34px;
+    outline: none;
+    perspective: 1100px;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .swipe-stack:focus-visible::after {
+    content: "";
+    grid-area: 1 / 1;
+    z-index: 8;
+    margin: 8px;
+    border: 3px solid #ffd46a;
+    border-radius: 34px;
+    pointer-events: none;
+  }
+
+  .swipe-card {
+    --drag-x: 0px;
+    --drag-rotate: 0deg;
+    --drag-opacity: 1;
+    position: relative;
+    grid-area: 1 / 1;
+    min-width: 0;
+    transform-origin: 50% 92%;
+    will-change: transform, opacity;
+    transition: transform .3s cubic-bezier(.2,.78,.25,1), opacity .24s ease;
+  }
+
+  .swipe-card[data-state="active"] {
+    z-index: 4;
+    opacity: var(--drag-opacity);
+    pointer-events: auto;
+    transform: translateX(var(--drag-x)) rotate(var(--drag-rotate));
+    cursor: grab;
+  }
+
+  .swipe-stack[data-dragging="true"] .swipe-card[data-state="active"] {
+    transition: none;
+    cursor: grabbing;
+  }
+
+  .swipe-card[data-state="next"] {
+    z-index: 3;
+    opacity: .9;
+    pointer-events: none;
+    transform: translateY(18px) rotate(2.5deg) scale(.955);
+  }
+
+  .swipe-card[data-state="queued"] {
+    z-index: 2;
+    opacity: .6;
+    pointer-events: none;
+    transform: translateY(34px) rotate(-2.8deg) scale(.91);
+  }
+
+  .swipe-card[data-state="hidden"] {
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(42px) scale(.88);
+  }
+
+  .swipe-card :global(.story-card) {
+    height: 100%;
+    border-color: rgba(255,255,255,.62);
+    box-shadow: 0 34px 85px rgba(3,14,46,.4);
+  }
+
+  .swipe-card[data-state="active"] :global(.story-card:hover) {
+    transform: none;
+  }
+
+  .swipe-stamp {
+    position: absolute;
+    z-index: 7;
+    top: 92px;
+    padding: 8px 13px;
+    border: 3px solid currentColor;
+    border-radius: 10px;
+    background: rgba(5,16,38,.72);
+    font-family: var(--font-display);
+    font-size: 1.18rem;
     font-weight: 900;
+    letter-spacing: .08em;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .12s ease;
+  }
+
+  .swipe-stamp--previous {
+    left: 26px;
+    color: #78e6c2;
+    transform: rotate(-9deg);
+    opacity: clamp(0, var(--swipe-direction), 1);
+  }
+
+  .swipe-stamp--next {
+    right: 26px;
+    color: #ffd46a;
+    transform: rotate(9deg);
+    opacity: clamp(0, calc(var(--swipe-direction) * -1), 1);
+  }
+
+  .swipe-actions {
+    position: relative;
+    z-index: 8;
+    display: grid;
+    grid-template-columns: 74px minmax(160px, 1fr) 74px;
+    gap: 12px;
+    align-items: center;
+    width: min(100%, 430px);
+    margin-top: 2px;
+  }
+
+  .swipe-button,
+  .swipe-open {
+    min-height: 58px;
+    border: 1px solid rgba(255,255,255,.3);
+    box-shadow: 0 18px 44px rgba(3,14,46,.24);
+    backdrop-filter: blur(14px);
+  }
+
+  .swipe-button {
+    display: grid;
+    place-items: center;
+    gap: 0;
+    padding: 7px;
+    border-radius: 22px;
+    background: rgba(255,255,255,.12);
+    color: #fff;
     cursor: pointer;
     transition: transform .18s ease, background .18s ease;
   }
 
-  .rail-button:hover { transform: translateY(-2px); background: rgba(255,255,255,.24); }
+  .swipe-button span {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    line-height: .8;
+  }
 
-  .story-rail {
+  .swipe-button small {
+    color: rgba(255,255,255,.7);
+    font-size: .66rem;
+    font-weight: 800;
+  }
+
+  .swipe-button:hover { transform: translateY(-3px); background: rgba(255,255,255,.2); }
+
+  .swipe-open {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: clamp(278px, 31vw, 365px);
-    gap: 20px;
-    overflow-x: auto;
-    padding: 8px 4px 26px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255,255,255,.42) transparent;
-    overscroll-behavior-inline: contain;
+    place-items: center;
+    padding: 0 20px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #ffd86b, #ff9f1c);
+    color: #2b1b00;
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-align: center;
+    transition: transform .18s ease, box-shadow .18s ease;
   }
 
-  .rail-card {
-    position: relative;
-    scroll-snap-align: start;
-  }
-
-  .rail-card :global(.story-card) {
-    height: 100%;
-    border-color: rgba(255,255,255,.56);
-    box-shadow: 0 26px 64px rgba(5,20,62,.28);
-  }
+  .swipe-open:hover { transform: translateY(-3px); box-shadow: 0 22px 54px rgba(255,159,28,.3); }
 
   .new-ribbon {
     position: absolute;
@@ -750,15 +1047,6 @@ const homeCats = [
     font-weight: 900;
     letter-spacing: .05em;
     text-transform: uppercase;
-  }
-
-  .latest-foot {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    color: rgba(255,255,255,.7);
-    font-size: .92rem;
-    font-weight: 750;
   }
 
   .section-intro {
@@ -901,7 +1189,8 @@ const homeCats = [
   @media (max-width: 960px) {
     .hero-grid,
     .today-premium,
-    .journey-card {
+    .journey-card,
+    .swipe-layout {
       grid-template-columns: 1fr;
     }
 
@@ -918,6 +1207,16 @@ const homeCats = [
     .today-art {
       max-width: 420px;
     }
+
+    .swipe-intro {
+      max-width: 660px;
+      text-align: center;
+      justify-self: center;
+    }
+
+    .swipe-intro h2 { max-width: 12ch; }
+    .swipe-intro > p:not(.eyebrow):not(.swipe-hint) { margin-inline: auto; }
+    .swipe-progress { justify-content: center; }
   }
 
   @media (max-width: 760px) {
@@ -970,11 +1269,10 @@ const homeCats = [
       border-radius: 28px;
     }
 
-    .latest-head { align-items: flex-end; }
-    .latest-head p:last-child { font-size: .95rem; }
-    .rail-button { width: 46px; height: 46px; }
-    .story-rail { grid-auto-columns: min(84vw, 330px); }
-    .latest-foot { align-items: flex-start; flex-direction: column; }
+    .swipe-layout { gap: 30px; }
+    .swipe-stack { width: min(100%, 370px); padding-inline: 8px; }
+    .swipe-actions { width: min(100%, 370px); grid-template-columns: 64px minmax(150px, 1fr) 64px; }
+    .swipe-intro h2 { font-size: clamp(2.55rem, 13vw, 4rem); }
   }
 
   @media (max-width: 460px) {

@@ -5,19 +5,43 @@ import { getStories } from '../../data/stories';
 import { storyCategories, ageGroups, durationBuckets } from '../../data/taxonomy';
 
 const stories = await getStories();
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Masal Oku – Çocuk Masalları ve Uyku Hikâyeleri',
+  description: 'Çocuklar için ücretsiz Türkçe masallar; uyku, kısa, eğitici, hayvan ve Keloğlan masalları.',
+  url: 'https://masalnova.com/masallar/',
+  inLanguage: 'tr-TR',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: stories.length,
+    itemListElement: stories.slice(0, 30).map((story, index) => ({
+      '@type': 'ListItem', position: index + 1, name: story.data.title,
+      url: `https://masalnova.com/masallar/${story.id}/`,
+    })),
+  },
+};
 ---
 <BaseLayout
-  title="Çocuk Masalları | Kısa Türkçe Masallar — MasalNova"
-  description="Çocuklar için kısa Türkçe masallar: uyku masalları, kısa masallar, eğitici ve hayvan masalları. Yaşa ve süreye göre filtreleyin, birlikte okuyun."
+  title="Masal Oku – Çocuk Masalları ve Uyku Hikâyeleri | MasalNova"
+  description="Masal oku: Çocuklar için ücretsiz Türkçe uyku masalları, kısa, eğitici, hayvan ve Keloğlan hikâyeleri. Yaşa ve süreye göre hemen keşfet."
   path="/masallar/"
+  jsonLd={jsonLd}
   activeNav="masallar"
 >
   <section class="section">
     <div class="container">
       <header class="page-head">
-        <h1>Çocuk Masalları 📖</h1>
-        <p>Çocuğunuzla birlikte okuyabileceğiniz kısa Türkçe masallar. Yaşa, süreye ve türe göre filtreleyin; başlığa dokununca masal açılır.</p>
+        <h1>Masal Oku: Çocuk Masalları 📖</h1>
+        <p>Çocuğunuzla birlikte okuyabileceğiniz ücretsiz Türkçe uyku masalları, kısa ve eğitici hikâyeler. Yaşa, süreye ve türe göre keşfedin.</p>
       </header>
+
+      <nav class="seo-categories" aria-label="Masal kategorileri">
+        {storyCategories.map((category) => (
+          <a href={`/masallar/kategori/${category.key}/`}>{category.emoji} {category.label}</a>
+        ))}
+        {ageGroups.map((age) => <a href={`/masallar/yas/${age.key}/`}>{age.label} masalları</a>)}
+      </nav>
 
       <div class="filters">
         <div class="search-wrap">
@@ -59,6 +83,9 @@ const stories = await getStories();
   .page-head { color: #fff; margin-bottom: 22px; }
   .page-head h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
   .page-head p { color: var(--soft); max-width: 66ch; margin-top: 8px; }
+  .seo-categories { display: flex; flex-wrap: wrap; gap: 9px; margin: 0 0 18px; }
+  .seo-categories a { padding: 8px 13px; border: 1px solid rgba(255,255,255,.26); border-radius: 999px; background: rgba(255,255,255,.12); color: #fff; font-weight: 750; font-size: .9rem; }
+  .seo-categories a:hover { background: rgba(255,255,255,.23); }
 
   .filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 16px; }
   .search-wrap { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 8px 14px; flex: 1 1 220px; }
