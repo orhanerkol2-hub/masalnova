@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yıldız Tarlası"
 shortDescription: "Keloğlan'ın gökyüzündeki yıldızlardan ilham alarak tembel köylülere çalışkanlığın değerini öğrettiği eğlenceli bir masal."
 coverEmoji: "⭐"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yildiz-tarlasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yıldız Tarlası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

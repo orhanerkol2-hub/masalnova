@@ -3,6 +3,8 @@ title: "Çoban Rasim'in Yıldız Kesesi"
 shortDescription: "Tutumlu bir çobanın yıldızlı bir gecede biriktirdiği küçük şeylerle büyük bir mutluluk yaratmasını anlatan kısa masal."
 coverEmoji: "⭐"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-rasimin-yildiz-kesesi.webp"
+altText: "Kapak görseli: Çoban Rasim'in Yıldız Kesesi"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

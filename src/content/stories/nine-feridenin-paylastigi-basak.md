@@ -3,6 +3,8 @@ title: "Nine Feride'nin Paylaştığı Başak"
 shortDescription: "İki köylü çocuğun tarla kavgasını, adaletli bir ninenin bulduğu çözümle anlatan minik bir masal."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-feridenin-paylastigi-basak.webp"
+altText: "Kapak görseli: Nine Feride'nin Paylaştığı Başak"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

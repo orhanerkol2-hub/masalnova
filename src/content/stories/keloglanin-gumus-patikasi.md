@@ -3,6 +3,8 @@ title: "Keloğlan'ın Gümüş Patikası"
 shortDescription: "Keloğlan, ay ışığında bulduğu bir kese altını sahibine dürüstçe geri vererek beklenmedik bir ödülün sırrına ulaşır."
 coverEmoji: "🌕"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-gumus-patikasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Gümüş Patikası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

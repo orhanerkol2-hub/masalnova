@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin İnatçı Nakışı"
 shortDescription: "Işıl ışıl bir sarayda yaşlı bir ninenin sabırla ördüğü nakış, azmin gücünü küçük bir kıza öğretir."
 coverEmoji: "🧵"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-sevginin-inatci-nakisi.webp"
+altText: "Kapak görseli: Nine Sevgi'nin İnatçı Nakışı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

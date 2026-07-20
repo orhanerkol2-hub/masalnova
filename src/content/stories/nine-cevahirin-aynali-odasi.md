@@ -3,6 +3,8 @@ title: "Nine Cevahir'in Aynalı Odası"
 shortDescription: "Işıl ışıl bir sarayda görevli şefkatli bir ninenin, kaybolan bir kolyeyi bulmak için dürüstlüğü nasıl ödüllendirdiğini anlatan öğretici bir masal."
 coverEmoji: "💎"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-cevahirin-aynali-odasi.webp"
+altText: "Kapak görseli: Nine Cevahir'in Aynalı Odası"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

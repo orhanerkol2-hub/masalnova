@@ -3,6 +3,8 @@ title: "Onur'un Kayıp Kuşağı"
 shortDescription: "İyi kalpli bir çobanın çiçekli bahçede kayıp bir tavşana yardım ederken bulduğu güzel dostluk."
 coverEmoji: "🌸"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/onurun-kayip-kusagi.webp"
+altText: "Kapak görseli: Onur'un Kayıp Kuşağı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

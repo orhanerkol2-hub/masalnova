@@ -3,6 +3,8 @@ title: "Elif'in Kar Tanesi Ödevi"
 shortDescription: "Karlı bir kış akşamında meraklı küçük Elif, ninesiyle birlikte küçük işlerini tamamlayıp huzurla uykuya dalar."
 coverEmoji: "❄️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/elifin-kar-tanesi-odevi.webp"
+altText: "Kapak görseli: Elif'in Kar Tanesi Ödevi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

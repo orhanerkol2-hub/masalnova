@@ -3,6 +3,8 @@ title: "Keloğlan'ın Azimli Değirmeni"
 shortDescription: "Keloğlan, köyün eski değirmenini yeniden çalıştırmak için azimle çabalayıp herkese örnek olur."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-azimli-degirmeni.webp"
+altText: "Kapak görseli: Keloğlan'ın Azimli Değirmeni"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

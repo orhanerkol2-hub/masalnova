@@ -3,6 +3,8 @@ title: "Mercan'ın Çarşı Günü"
 shortDescription: "Küçük bir çocuğun kalabalık pazarda kaybolan bir yaşlı kadını bulmak için içindeki cesareti keşfetmesini anlatan öğretici bir masal."
 coverEmoji: "🧺"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/mercanin-carsi-gunu.webp"
+altText: "Kapak görseli: Mercan'ın Çarşı Günü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

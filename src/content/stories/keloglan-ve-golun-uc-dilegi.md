@@ -3,6 +3,8 @@ title: "Keloğlan ve Gölün Üç Dileği"
 shortDescription: "Keloğlan'ın sakin bir gölün kenarında yardımseverliği sayesinde köyünü kuraklıktan kurtarmasının sıcacık öyküsü."
 coverEmoji: "🌊"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-golun-uc-dilegi.webp"
+altText: "Kapak görseli: Keloğlan ve Gölün Üç Dileği"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

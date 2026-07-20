@@ -3,6 +3,8 @@ title: "Dede Sedef ve Uyuyan Yapraklar"
 shortDescription: "Yemyeşil bir ormanda yaşayan yaşlı bilge Dede Sedef'in, aceleci bir yavru serçeye sabırla ay ışığında ninni söylemesinin huzurlu hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dede-sedef-ve-uyuyan-yapraklar.webp"
+altText: "Kapak görseli: Dede Sedef ve Uyuyan Yapraklar"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

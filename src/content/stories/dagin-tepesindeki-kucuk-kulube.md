@@ -3,6 +3,8 @@ title: "Dağın Tepesindeki Küçük Kulübe"
 shortDescription: "Dağ başında yaşayan bilge bir dedenin, soğuk bir gecede küçük hayvanlara sıcak kulübesini açarak yardımlaşmayı öğrettiği huzurlu bir uyku masalı."
 coverEmoji: "🏠"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dagin-tepesindeki-kucuk-kulube.webp"
+altText: "Kapak görseli: Dağın Tepesindeki Küçük Kulübe"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

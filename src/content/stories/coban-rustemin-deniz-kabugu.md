@@ -3,6 +3,8 @@ title: "Çoban Rüstem'in Deniz Kabuğu"
 shortDescription: "Deniz kıyısında yaşayan tutumlu bir çobanın küçük bir kabuktan öğrendiği büyük ders."
 coverEmoji: "🐚"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-rustemin-deniz-kabugu.webp"
+altText: "Kapak görseli: Çoban Rüstem'in Deniz Kabuğu"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

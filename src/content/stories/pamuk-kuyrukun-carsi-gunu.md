@@ -3,6 +3,8 @@ title: "Pamuk Kuyruk'un Çarşı Günü"
 shortDescription: "Ürkek bir tavşanın kalabalık çarşıda kaybolan arkadaşını bulmak için cesaretini toplamasının sıcacık öyküsü."
 coverEmoji: "🐰"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/pamuk-kuyrukun-carsi-gunu.webp"
+altText: "Kapak görseli: Pamuk Kuyruk'un Çarşı Günü"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

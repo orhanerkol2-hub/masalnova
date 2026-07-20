@@ -3,6 +3,8 @@ title: "Keloğlan ve Korkak Devin Bahçesi"
 shortDescription: "Keloğlan'ın, padişahın çiçekli bahçesindeki gizemli deviyle tanışıp cesaretin gerçek anlamını öğrendiği eğlenceli bir masal."
 coverEmoji: "🌷"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-korkak-devin-bahcesi.webp"
+altText: "Kapak görseli: Keloğlan ve Korkak Devin Bahçesi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Balıkçı Sadık'ın Yıldız Ağı"
 shortDescription: "Sabırlı bir balıkçının çiçekli bahçedeki gölette küçük bir yıldız balığına gösterdiği cesaret ve sabırla dolu, uykuya davet eden bir masal."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/balikci-sadikin-yildiz-agi.webp"
+altText: "Kapak görseli: Balıkçı Sadık'ın Yıldız Ağı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

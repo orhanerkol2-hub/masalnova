@@ -3,6 +3,8 @@ title: "Çoban Rüzgin'in Şükür Torbası"
 shortDescription: "Elindekilerin kıymetini bilmeyen bir çobanın, ay ışığında yürüdüğü patikada şükretmeyi öğrenmesini anlatan sevimli bir masal."
 coverEmoji: "🌙"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-ruzginin-sukur-torbasi.webp"
+altText: "Kapak görseli: Çoban Rüzgin'in Şükür Torbası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

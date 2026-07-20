@@ -3,6 +3,8 @@ title: "Nine Havva'nın Doğru Ölçek Sırrı"
 shortDescription: "Altın başaklı bir tarlada yaşayan alçakgönüllü bir ninenin, kendi başarısını herkesle paylaşmasının hikâyesi."
 coverEmoji: "🌾"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-havvanin-dogru-olcek-sirri.webp"
+altText: "Kapak görseli: Nine Havva'nın Doğru Ölçek Sırrı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

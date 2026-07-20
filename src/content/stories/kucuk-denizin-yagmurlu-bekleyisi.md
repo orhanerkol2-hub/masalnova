@@ -3,6 +3,8 @@ title: "Küçük Deniz'in Yağmurlu Bekleyişi"
 shortDescription: "Yağmurlu bir akşamda cesur küçük bir çocuğun sabırla yıldızları beklemesini anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/kucuk-denizin-yagmurlu-bekleyisi.webp"
+altText: "Kapak görseli: Küçük Deniz'in Yağmurlu Bekleyişi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

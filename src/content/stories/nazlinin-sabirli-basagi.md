@@ -3,6 +3,8 @@ title: "Nazlı'nın Sabırlı Başağı"
 shortDescription: "Meraklı bir kızın, altın başaklı tarlada en büyük buğday başağını bulmak için gösterdiği azmi anlatan kısa bir masal."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nazlinin-sabirli-basagi.webp"
+altText: "Kapak görseli: Nazlı'nın Sabırlı Başağı"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

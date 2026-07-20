@@ -3,6 +3,8 @@ title: "Fırıncı Dede'nin Sıcak Ekmekleri"
 shortDescription: "Mis kokulu bir fırında çalışan yaşlı bir dedenin, gece yarısı gelen küçük hayvanlara sıcacık ekmek ve şefkat sunduğu uyku öncesi bir masal."
 coverEmoji: "🥖"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/firinci-dedenin-sicak-ekmekleri.webp"
+altText: "Kapak görseli: Fırıncı Dede'nin Sıcak Ekmekleri"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Emre'nin Parlayan Taşı"
 shortDescription: "Ay ışığında yolunu kaybeden küçük bir çocuğun, en parlak taşı bulmasıyla alçakgönüllülüğü öğrenmesini anlatan kısa bir masal."
 coverEmoji: "🌙"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/emrenin-parlayan-tasi.webp"
+altText: "Kapak görseli: Emre'nin Parlayan Taşı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

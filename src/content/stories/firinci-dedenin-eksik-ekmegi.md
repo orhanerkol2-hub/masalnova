@@ -3,6 +3,8 @@ title: "Fırıncı Dede'nin Eksik Ekmeği"
 shortDescription: "Mis kokulu bir fırında yaşlı bir dedenin, küçük bir çocuğun dürtüklediği yanlışı düzeltmesiyle ortaya çıkan tatlı bir dürüstlük dersi."
 coverEmoji: "🍞"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/firinci-dedenin-eksik-ekmegi.webp"
+altText: "Kapak görseli: Fırıncı Dede'nin Eksik Ekmeği"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["kisa"]

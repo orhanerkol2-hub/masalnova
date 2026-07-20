@@ -3,6 +3,8 @@ title: "Nine Havva'nın Fındık Sözü"
 shortDescription: "Yemyeşil bir ormanda yaşayan şefkatli bir ninenin, küçük bir sincaba verdiği sözü tutarak dostluk kazanmasını anlatan sıcacık bir masal."
 coverEmoji: "🌳"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-havvanin-findik-sozu.webp"
+altText: "Kapak görseli: Nine Havva'nın Fındık Sözü"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

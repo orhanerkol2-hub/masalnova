@@ -3,6 +3,8 @@ title: "Elif'in Altın Başağı"
 shortDescription: "Meraklı küçük bir kız, altın başaklı tarlada düşürdüğü sepeti sayesinde yardımlaşmanın gücünü öğrenir."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/elifin-altin-basagi.webp"
+altText: "Kapak görseli: Elif'in Altın Başağı"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

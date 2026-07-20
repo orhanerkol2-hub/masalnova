@@ -3,6 +3,8 @@ title: "Nine Havva'nın Yedi Fidanı"
 shortDescription: "Şefkatli bir ninenin çayırda diktiği fidanlarla küçük bir kızın çalışkanlığı öğrenmesini anlatan sıcacık bir masal."
 coverEmoji: "🌱"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-havvanin-yedi-fidani.webp"
+altText: "Kapak görseli: Nine Havva'nın Yedi Fidanı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

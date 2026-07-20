@@ -3,6 +3,8 @@ title: "Defne'nin Sırlı Fidanı"
 shortDescription: "Meraklı bir kızın, yemyeşil ormanda küçük bir fidanı büyütmek için sabırla azmetmesini anlatan kısa bir masal."
 coverEmoji: "🌱"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/defnenin-sirli-fidani.webp"
+altText: "Kapak görseli: Defne'nin Sırlı Fidanı"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

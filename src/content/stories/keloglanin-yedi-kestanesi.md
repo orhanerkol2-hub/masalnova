@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yedi Kestanesi"
 shortDescription: "Keloğlan'ın kalabalık çarşıda küçük kestane payını herkesle paylaşarak büyük bir dostluk kazanmasının hikâyesi."
 coverEmoji: "🌰"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yedi-kestanesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yedi Kestanesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

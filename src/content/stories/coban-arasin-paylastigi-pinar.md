@@ -3,6 +3,8 @@ title: "Çoban Aras'ın Paylaştığı Pınar"
 shortDescription: "İyi kalpli bir çobanın, serin bir pınar başında yorgun yolculara ve hayvanlara yardım ederek yardımlaşmanın gücünü öğrendiği sıcacık bir masal."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-arasin-paylastigi-pinar.webp"
+altText: "Kapak görseli: Çoban Aras'ın Paylaştığı Pınar"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

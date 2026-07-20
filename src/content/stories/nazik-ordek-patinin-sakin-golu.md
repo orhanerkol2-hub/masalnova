@@ -3,6 +3,8 @@ title: "Nazik Ördek Pati'nin Sakin Gölü"
 shortDescription: "Nazik bir ördeğin, gölündeki hayvanlara gösterdiği küçük iyiliklerle herkesin gönlünü kazandığı sevimli bir masal."
 coverEmoji: "🦆"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/nazik-ordek-patinin-sakin-golu.webp"
+altText: "Kapak görseli: Nazik Ördek Pati'nin Sakin Gölü"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

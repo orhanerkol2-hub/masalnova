@@ -3,6 +3,8 @@ title: "Merve'nin Değirmen Ninnisi"
 shortDescription: "Meraklı küçük bir kızın, eski bir değirmeni sorumlulukla korumasını anlatan sakin bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/mervenin-degirmen-ninnisi.webp"
+altText: "Kapak görseli: Merve'nin Değirmen Ninnisi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

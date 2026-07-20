@@ -3,6 +3,8 @@ title: "Doruk'un Bekleme Taşı"
 shortDescription: "Sabırsız küçük bir çocuğun serin bir pınar başında sabrın değerini öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🪨"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/dorukun-bekleme-tasi.webp"
+altText: "Kapak görseli: Doruk'un Bekleme Taşı"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

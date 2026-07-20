@@ -3,6 +3,8 @@ title: "Keloğlan'ın Sabırlı Karpuz Tarlası"
 shortDescription: "Keloğlan, geniş bir çayırda ektiği karpuz tohumlarının büyümesini sabırla beklerken hem padişahın gönlünü hem de kendi bahtını kazanır."
 coverEmoji: "🍉"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-sabirli-karpuz-tarlasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Sabırlı Karpuz Tarlası"
 ageGroups: ["5-7"]
 readingTime: 4
 categories: ["keloglan"]

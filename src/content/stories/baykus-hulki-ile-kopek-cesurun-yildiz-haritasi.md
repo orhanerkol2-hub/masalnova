@@ -3,6 +3,8 @@ title: "Baykuş Hulki ile Köpek Cesur'un Yıldız Haritası"
 shortDescription: "Geceleri yalnız hisseden bir köpekle bilge bir baykuşun, yıldızları sayarak kurduğu güzel dostluğun öyküsü."
 coverEmoji: "🦉"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/baykus-hulki-ile-kopek-cesurun-yildiz-haritasi.webp"
+altText: "Kapak görseli: Baykuş Hulki ile Köpek Cesur'un Yıldız Haritası"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

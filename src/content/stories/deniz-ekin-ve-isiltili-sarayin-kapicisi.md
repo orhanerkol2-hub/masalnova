@@ -3,6 +3,8 @@ title: "Deniz Ekin ve Işıltılı Sarayın Kapıcısı"
 shortDescription: "Küçük ve cesur bir çocuğun, ışıl ışıl bir sarayda herkese saygıyla davranarak gerçek bir kahraman olduğunu anlattığı öğretici bir masal."
 coverEmoji: "🏰"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/deniz-ekin-ve-isiltili-sarayin-kapicisi.webp"
+altText: "Kapak görseli: Deniz Ekin ve Işıltılı Sarayın Kapıcısı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

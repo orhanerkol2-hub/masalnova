@@ -3,6 +3,8 @@ title: "Sincap Fıstık ile Kaplumbağa Toprak'ın Bahçe Görevi"
 shortDescription: "Unutkan bir sincap ile sabırlı bir kaplumbağanın, çiçekli bahçedeki sorumluluklarını birlikte üstlenerek öğrendiği güzel dersin öyküsü."
 coverEmoji: "🐿️"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/sincap-fistik-ile-kaplumbaga-toprakin-bahce-gorevi.webp"
+altText: "Kapak görseli: Sincap Fıstık ile Kaplumbağa Toprak'ın Bahçe Görevi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

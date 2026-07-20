@@ -3,6 +3,8 @@ title: "Keloğlan ve Değirmendeki Yedi Konuk"
 shortDescription: "Keloğlan'ın eski bir değirmende farklı köylülere hoşgörüyle kucak açması, aslında herkesin aynı ekmeği paylaştığını öğretir."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-degirmendeki-yedi-konuk.webp"
+altText: "Kapak görseli: Keloğlan ve Değirmendeki Yedi Konuk"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

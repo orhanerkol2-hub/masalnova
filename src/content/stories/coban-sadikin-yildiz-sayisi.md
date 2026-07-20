@@ -3,6 +3,8 @@ title: "Çoban Sadık'ın Yıldız Sayısı"
 shortDescription: "İyi kalpli bir çobanın, sürüsünü uyuturken yıldızları sayarak azimle huzur bulduğu sakin bir uyku masalı."
 coverEmoji: "⭐"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-sadikin-yildiz-sayisi.webp"
+altText: "Kapak görseli: Çoban Sadık'ın Yıldız Sayısı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

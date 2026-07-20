@@ -3,6 +3,8 @@ title: "Balıkçı Tahir'in Dağdaki Kulübesi"
 shortDescription: "Dağ başındaki kulübesine göz kulak olmayı unutmayan sabırlı bir balıkçının küçük ama öğretici günü."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-tahirin-dagdaki-kulubesi.webp"
+altText: "Kapak görseli: Balıkçı Tahir'in Dağdaki Kulübesi"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

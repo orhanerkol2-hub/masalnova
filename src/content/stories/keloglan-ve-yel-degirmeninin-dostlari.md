@@ -3,6 +3,8 @@ title: "Keloğlan ve Yel Değirmeninin Dostları"
 shortDescription: "Keloğlan'ın eski bir değirmende komşularıyla birlik olup zor bir kışı nasıl aştığını anlatan sıcacık bir masal."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-yel-degirmeninin-dostlari.webp"
+altText: "Kapak görseli: Keloğlan ve Yel Değirmeninin Dostları"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

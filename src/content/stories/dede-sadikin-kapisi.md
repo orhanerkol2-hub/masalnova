@@ -3,6 +3,8 @@ title: "Dede Sadık'ın Kapısı"
 shortDescription: "Yağmurlu bir akşamda küçük bir kızın yaşlı bir dedeye gösterdiği saygının, ona nasıl güzel bir sıcaklık getirdiğini anlatan kısa bir masal."
 coverEmoji: "🌧️"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/dede-sadikin-kapisi.webp"
+altText: "Kapak görseli: Dede Sadık'ın Kapısı"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

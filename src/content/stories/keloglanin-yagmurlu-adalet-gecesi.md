@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yağmurlu Adalet Gecesi"
 shortDescription: "Yağmurlu bir akşam köye sığınan Keloğlan, haksızlığa uğrayan yaşlı bir kadının hakkını akıllıca ve dürüstçe savunur."
 coverEmoji: "☔"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yagmurlu-adalet-gecesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yağmurlu Adalet Gecesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

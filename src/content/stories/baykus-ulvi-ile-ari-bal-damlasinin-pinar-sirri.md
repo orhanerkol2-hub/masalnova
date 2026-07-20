@@ -3,6 +3,8 @@ title: "Baykuş Ulvi ile Arı Bal Damlası'nın Pınar Sırrı"
 shortDescription: "Bilgili bir baykuş ile küçük bir arının serin bir pınar başında öğrendiği alçakgönüllülük dersi."
 coverEmoji: "🦉"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/baykus-ulvi-ile-ari-bal-damlasinin-pinar-sirri.webp"
+altText: "Kapak görseli: Baykuş Ulvi ile Arı Bal Damlası'nın Pınar Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

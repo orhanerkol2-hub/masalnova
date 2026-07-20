@@ -3,6 +3,8 @@ title: "Çoban Sadık'ın Şükür Çayırı"
 shortDescription: "İyi kalpli bir çobanın, geniş bir çayırda koyunlarıyla birlikte akşamın huzurunu ve şükretmeyi hissettiği sakin bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-sadikin-sukur-cayiri.webp"
+altText: "Kapak görseli: Çoban Sadık'ın Şükür Çayırı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

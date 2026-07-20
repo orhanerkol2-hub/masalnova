@@ -3,6 +3,8 @@ title: "Kuzu Beyaz'ın Terazi Sırrı"
 shortDescription: "Kalabalık bir çarşıda kaybolan bir tartıyı bulan dürüst kuzunun, herkese doğruluğun değerini öğretmesini anlatan sevimli bir hikâye."
 coverEmoji: "🐑"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kuzu-beyazin-terazi-sirri.webp"
+altText: "Kapak görseli: Kuzu Beyaz'ın Terazi Sırrı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Küçük Deniz Kabuğu Bekçisi"
 shortDescription: "Bir çocuk, komşusuna ait unutulmuş oyuncağı bulup sahibine geri götürerek sorumluluğun tatlı bir sürpriz olduğunu keşfeder."
 coverEmoji: "🐚"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/kucuk-deniz-kabugu-bekcisi.webp"
+altText: "Kapak görseli: Küçük Deniz Kabuğu Bekçisi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

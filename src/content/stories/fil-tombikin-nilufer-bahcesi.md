@@ -3,6 +3,8 @@ title: "Fil Tombik'in Nilüfer Bahçesi"
 shortDescription: "Tembelliği seven bir yavru fil, sakin bir gölde çalışkanlığın tatlı meyvesini keşfeder."
 coverEmoji: "🐘"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/fil-tombikin-nilufer-bahcesi.webp"
+altText: "Kapak görseli: Fil Tombik'in Nilüfer Bahçesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

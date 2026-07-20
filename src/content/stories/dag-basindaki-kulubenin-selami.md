@@ -3,6 +3,8 @@ title: "Dağ Başındaki Kulübenin Selamı"
 shortDescription: "Dağ başındaki küçük kulübesinde yaşayan şefkatli bir ninenin, gelip geçen herkese ve her şeye saygıyla iyi geceler dilediği huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dag-basindaki-kulubenin-selami.webp"
+altText: "Kapak görseli: Dağ Başındaki Kulübenin Selamı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

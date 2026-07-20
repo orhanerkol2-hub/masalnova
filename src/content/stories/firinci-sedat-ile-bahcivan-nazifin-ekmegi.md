@@ -3,6 +3,8 @@ title: "Fırıncı Sedat ile Bahçıvan Nazif'in Ekmeği"
 shortDescription: "Mis kokulu bir fırının önünde tanışan bir fırıncı ile bir bahçıvanın, birlikte çalışarak nasıl gerçek dostluğu bulduğunu anlatan sıcacık bir masal."
 coverEmoji: "🍞"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/firinci-sedat-ile-bahcivan-nazifin-ekmegi.webp"
+altText: "Kapak görseli: Fırıncı Sedat ile Bahçıvan Nazif'in Ekmeği"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Çoban Selim ve Fısıldayan Mağara"
 shortDescription: "İyi kalpli bir çobanın, tepedeki gizemli mağarada ay ışığı ve yıldızlarla dolu sakin bir keşif yapmasını anlatan, uykuya davet eden bir masal."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-selim-ve-fisildayan-magara.webp"
+altText: "Kapak görseli: Çoban Selim ve Fısıldayan Mağara"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

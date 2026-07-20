@@ -3,6 +3,8 @@ title: "Balıkçı Tayfun'un Küçük Adımı"
 shortDescription: "Sakin bir gölde balık tutan sabırlı bir balıkçının, ürkütücü görünen bir sesle karşılaşınca cesaretini bulmasını anlatan kısa bir masal."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-tayfunun-kucuk-adimi.webp"
+altText: "Kapak görseli: Balıkçı Tayfun'un Küçük Adımı"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

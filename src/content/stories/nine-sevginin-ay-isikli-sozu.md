@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin Ay Işıklı Sözü"
 shortDescription: "Şefkatli bir ninenin torununa verdiği küçük bir sözü tutması, ay ışığında huzurlu bir uykuya dönüşür."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/nine-sevginin-ay-isikli-sozu.webp"
+altText: "Kapak görseli: Nine Sevgi'nin Ay Işıklı Sözü"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

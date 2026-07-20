@@ -3,6 +3,8 @@ title: "Fil Tombik ile Kelebek Pamuk'un Bekleme Oyunu"
 shortDescription: "Sabırsız bir fil, minik bir kelebekten çiçeklerin açmasını beklemenin güzelliğini öğrenir."
 coverEmoji: "🐘"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/fil-tombik-ile-kelebek-pamukun-bekleme-oyunu.webp"
+altText: "Kapak görseli: Fil Tombik ile Kelebek Pamuk'un Bekleme Oyunu"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

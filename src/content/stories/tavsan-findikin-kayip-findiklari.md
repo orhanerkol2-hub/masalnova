@@ -3,6 +3,8 @@ title: "Tavşan Fındık'ın Kayıp Fındıkları"
 shortDescription: "Fındıkları kaybolan dürüst bir tavşanın, doğruyu söylemekten korkmayarak ormandaki dostluğu kazanmasının hikâyesi."
 coverEmoji: "🐰"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/tavsan-findikin-kayip-findiklari.webp"
+altText: "Kapak görseli: Tavşan Fındık'ın Kayıp Fındıkları"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Sedef Teyze'nin Deniz Kabukları"
 shortDescription: "Deniz kıyısında yaşayan tutumlu bir teyzenin, komşusuna yardım ederken küçük şeylerin değerini gösteren huzurlu bir uyku masalı."
 coverEmoji: "🐚"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/sedef-teyzenin-deniz-kabuklari.webp"
+altText: "Kapak görseli: Sedef Teyze'nin Deniz Kabukları"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

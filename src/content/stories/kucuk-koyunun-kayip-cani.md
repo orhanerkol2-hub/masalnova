@@ -3,6 +3,8 @@ title: "Küçük Koyunun Kayıp Çanı"
 shortDescription: "Geniş bir çayırda kaybolan çanı bulmak için yardımlaşan bir çoban ve komşusunun sıcacık öyküsü."
 coverEmoji: "🐑"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/kucuk-koyunun-kayip-cani.webp"
+altText: "Kapak görseli: Küçük Koyunun Kayıp Çanı"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

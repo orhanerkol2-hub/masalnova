@@ -3,6 +3,8 @@ title: "Fırıncı Kaya'nın İlk Ekmeği"
 shortDescription: "Küçük bir çocuğun mis kokulu fırında sabırla ekmek pişirmeyi öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🍞"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/firinci-kayanin-ilk-ekmegi.webp"
+altText: "Kapak görseli: Fırıncı Kaya'nın İlk Ekmeği"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

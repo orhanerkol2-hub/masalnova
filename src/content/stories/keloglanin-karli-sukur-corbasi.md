@@ -3,6 +3,8 @@ title: "Keloğlan'ın Karlı Şükür Çorbası"
 shortDescription: "Keloğlan, karlı bir kış günü elindeki azıcık malzemeyle komşularına yardım ederek şükrün gerçek tadını öğrenir."
 coverEmoji: "🍲"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-karli-sukur-corbasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Karlı Şükür Çorbası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

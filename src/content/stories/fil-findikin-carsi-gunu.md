@@ -3,6 +3,8 @@ title: "Fil Fındık'ın Çarşı Günü"
 shortDescription: "Kalabalık bir çarşıda kaybolan minik bir tavşanı, iri kalpli bir fil ile arkadaşlarının dostça yardımlaşarak bulmasını anlatan sıcak bir masal."
 coverEmoji: "🐘"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/fil-findikin-carsi-gunu.webp"
+altText: "Kapak görseli: Fil Fındık'ın Çarşı Günü"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

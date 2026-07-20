@@ -3,6 +3,8 @@ title: "Keloğlan'ın Karlı Yolda Verdiği Selam"
 shortDescription: "Kar altında kalan yaşlı bir yolcuya saygıyla yardım eden Keloğlan'ın padişahın gönlünü kazanmasını anlatan sıcacık bir masal."
 coverEmoji: "❄️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-karli-yolda-verdigi-selam.webp"
+altText: "Kapak görseli: Keloğlan'ın Karlı Yolda Verdiği Selam"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

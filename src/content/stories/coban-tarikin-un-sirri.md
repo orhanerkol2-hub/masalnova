@@ -3,6 +3,8 @@ title: "Çoban Tarık'ın Un Sırrı"
 shortDescription: "Dürüst bir çobanın, eski bir değirmende bulduğu unu sahibine geri vermesiyle güven kazanmasını anlatan öğretici bir masal."
 coverEmoji: "🌾"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-tarikin-un-sirri.webp"
+altText: "Kapak görseli: Çoban Tarık'ın Un Sırrı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

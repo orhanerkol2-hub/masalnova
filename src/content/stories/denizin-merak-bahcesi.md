@@ -3,6 +3,8 @@ title: "Deniz'in Merak Bahçesi"
 shortDescription: "Meraklı küçük Deniz, çiçekli bahçede ay ışığının sırrını keşfederken tatlı bir uykuya dalar."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/denizin-merak-bahcesi.webp"
+altText: "Kapak görseli: Deniz'in Merak Bahçesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

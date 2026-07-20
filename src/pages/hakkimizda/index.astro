@@ -1,30 +1,61 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': 'https://masalnova.com/hakkimizda/#about',
+  url: 'https://masalnova.com/hakkimizda/',
+  name: 'MasalNova Hakkında ve İçerik Yaklaşımı',
+  inLanguage: 'tr-TR',
+  mainEntity: { '@id': 'https://masalnova.com/#organization' },
+};
 ---
 <BaseLayout
-  title="Hakkımızda — MasalNova Çocuk"
-  description="MasalNova Çocuk; çocuklar için güvenli, sevgi dolu masallar, şarkılar ve eğlenceli videolar hazırlayan bir Sunbeam Media markasıdır."
+  title="MasalNova Hakkında – İçerik ve Editör Yaklaşımı"
+  description="MasalNova Çocuk'un masal seçimi, yaş ve okuma süresi etiketleri, görsel yaklaşımı, yayın modeli ve düzeltme süreci hakkında bilgi."
   path="/hakkimizda/"
+  jsonLd={jsonLd}
   activeNav=""
 >
   <section class="section">
     <div class="container">
       <article class="content">
-        <h1>Hakkımızda</h1>
+        <p class="eyebrow">MasalNova Çocuk · Sunbeam Media</p>
+        <h1>Hakkımızda ve içerik yaklaşımımız</h1>
         <p>
-          <strong>MasalNova Çocuk</strong>, çocuklar için sevgiyle hazırlanan kısa masallar,
-          neşeli şarkılar ve eğlenceli videoların bir arada bulunduğu güvenli bir dünyadır.
-          Amacımız; çocukların hayal gücünü besleyen, güzel değerler kazandıran ve ailelerin
-          gönül rahatlığıyla açabileceği içerikler sunmaktır.
+          <strong>MasalNova Çocuk</strong>, ailelerin ücretsiz Türkçe masalları yaşa, okuma süresine
+          ve konuya göre bulabildiği; resimli hikâyeler ile çocuk videolarını bir araya getiren
+          çevrimiçi bir okuma platformudur.
+        </p>
+
+        <h2>Masallar nasıl sunuluyor?</h2>
+        <p>
+          Her masal için başlık, kısa açıklama, yaş grubu, yaklaşık birlikte okuma süresi,
+          tema ve kapak görseli birlikte değerlendirilir. Yaş etiketi tıbbi veya pedagojik bir
+          değerlendirme değildir; metnin dili, uzunluğu ve olay örgüsüne göre seçim desteği sağlar.
+          Ebeveynler son kararı kendi çocuklarının ilgi ve ihtiyaçlarına göre vermelidir.
         </p>
         <p>
-          Masallarımız kısa ve anlaşılır bir dille yazılır; her masalın sonunda çocuğun
-          hatırlayacağı sevimli bir öğüt bulunur. Videolarımızda ise Keloğlan şarkıları,
-          animasyonlu masallar ve eğitici içerikler yer alır.
+          Kapakların hikâyedeki karakter ve ortamla uyumlu olmasına, metnin okunabilir paragraflara
+          ayrılmasına ve Reader’ın telefon, tablet ve bilgisayarda rahat kullanılmasına dikkat edilir.
+          Her hikâye sayfasında seçim notu ve okuma sonrası konuşma soruları bulunur.
         </p>
+
+        <h2>Editör kimliği ve düzeltmeler</h2>
         <p>
-          İçeriklerimiz reklam odaklı değil, çocuk odaklıdır. Yeni masallar ve videolar
-          düzenli olarak eklenir.
+          Yayın sorumluluğu sayfalarda <strong>MasalNova Çocuk Editör Ekibi</strong> adıyla gösterilir.
+          Özel bir kişinin adı SEO amacıyla kullanılmaz. Bir yazım hatası, uyumsuz görsel veya
+          geliştirilmesi gereken içerik fark ederseniz <a href="/iletisim/">iletişim sayfası</a>
+          üzerinden bildirebilirsiniz; gerekli düzeltmeler içerik sayfasına işlenir.
+        </p>
+
+        <h2>Üyelik, gizlilik ve reklam modeli</h2>
+        <p>
+          MasalNova hesap açmayı gerektirmez. Favoriler ve okuma yüzdesi yalnızca cihazda küçük
+          kimlikler olarak tutulur; masal metinleri çevrimdışı arşivlenmez. Platformun gelir modeli
+          reklamdır. Reklam alanlarını ana okuma akışını kapatmayacak ve çocukların hikâyeye erişimini
+          engellemeyecek biçimde konumlandırmayı hedefliyoruz.
         </p>
         <p class="brand">MasalNova Çocuk, bir <strong>Sunbeam Media</strong> markasıdır.</p>
         <div class="cta">
@@ -39,7 +70,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <style>
   .content { background: #fff; color: var(--ink); border-radius: var(--radius-lg); padding: 34px clamp(20px, 5vw, 48px); box-shadow: var(--shadow-lg); border: 1px solid var(--line); max-width: 800px; margin: 0 auto; line-height: 1.8; }
   .content h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 16px; }
+  .content h2 { margin: 25px 0 10px; font-size: 1.35rem; }
+  .content .eyebrow { margin-bottom: 5px; color: var(--blue-d); font-size: .76rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
   .content p { margin-bottom: 14px; color: var(--ink-soft); }
+  .content p a { color: var(--blue-d); font-weight: 800; text-decoration: underline; }
   .content .brand { color: var(--ink); font-weight: 700; }
   .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
 </style>

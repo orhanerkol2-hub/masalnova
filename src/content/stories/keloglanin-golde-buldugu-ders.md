@@ -3,6 +3,8 @@ title: "Keloğlan'ın Gölde Bulduğu Ders"
 shortDescription: "Keloğlan, sakin bir gölün kenarında kendisine kötülük yapan bir devi affederek herkesin gönlünü kazanır."
 coverEmoji: "🌊"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-golde-buldugu-ders.webp"
+altText: "Kapak görseli: Keloğlan'ın Gölde Bulduğu Ders"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

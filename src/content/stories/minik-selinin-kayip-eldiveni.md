@@ -3,6 +3,8 @@ title: "Minik Selin'in Kayıp Eldiveni"
 shortDescription: "Karlı bir kış gününde kaybettiği eldiveni bulmaya çalışan meraklı bir kızın sorumluluk dersi."
 coverEmoji: "🧤"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/minik-selinin-kayip-eldiveni.webp"
+altText: "Kapak görseli: Minik Selin'in Kayıp Eldiveni"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

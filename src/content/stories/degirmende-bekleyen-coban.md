@@ -3,6 +3,8 @@ title: "Değirmende Bekleyen Çoban"
 shortDescription: "İyi kalpli bir çobanın eski değirmende sabırla beklemesinin küçük ama tatlı öyküsü."
 coverEmoji: "🐑"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/degirmende-bekleyen-coban.webp"
+altText: "Kapak görseli: Değirmende Bekleyen Çoban"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

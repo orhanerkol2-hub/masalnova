@@ -3,6 +3,8 @@ title: "Fındık ile Karabaş'ın Un Payı"
 shortDescription: "Eski bir değirmende paylaşımı adil yapmaya çalışan bir tavşan ile bir köpeğin dostluk dolu öyküsü."
 coverEmoji: "🐰"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/findik-ile-karabasin-un-payi.webp"
+altText: "Kapak görseli: Fındık ile Karabaş'ın Un Payı"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

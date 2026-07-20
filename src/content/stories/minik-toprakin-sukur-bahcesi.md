@@ -3,6 +3,8 @@ title: "Minik Toprak'ın Şükür Bahçesi"
 shortDescription: "Cesur küçük bir çocuğun, çiçekli bahçesinde ay ışığı altında şükretmeyi öğrendiği huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/minik-toprakin-sukur-bahcesi.webp"
+altText: "Kapak görseli: Minik Toprak'ın Şükür Bahçesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

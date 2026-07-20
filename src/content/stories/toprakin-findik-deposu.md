@@ -3,6 +3,8 @@ title: "Toprak'ın Fındık Deposu"
 shortDescription: "Yemyeşil bir ormanda yaşayan minnoş bir köpeğin, sahip olduklarına şükretmeyi öğrenmesini anlatan sıcacık bir masal."
 coverEmoji: "🐶"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/toprakin-findik-deposu.webp"
+altText: "Kapak görseli: Toprak'ın Fındık Deposu"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

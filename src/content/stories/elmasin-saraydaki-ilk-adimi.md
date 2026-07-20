@@ -3,6 +3,8 @@ title: "Elmas'ın Saraydaki İlk Adımı"
 shortDescription: "Meraklı küçük bir kızın ışıl ışıl sarayda öğrendiği saygı dersi."
 coverEmoji: "👑"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/elmasin-saraydaki-ilk-adimi.webp"
+altText: "Kapak görseli: Elmas'ın Saraydaki İlk Adımı"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

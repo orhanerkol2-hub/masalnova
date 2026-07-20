@@ -3,6 +3,8 @@ title: "Deniz'in Altın Başaklı Tarlası"
 shortDescription: "Cesur küçük Deniz'in, altın başaklı tarlada ay ışığı eşliğinde sabırla çalışıp huzurla uyuyakaldığı yumuşacık bir uyku masalı."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/denizin-altin-basakli-tarlasi.webp"
+altText: "Kapak görseli: Deniz'in Altın Başaklı Tarlası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

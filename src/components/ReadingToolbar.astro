@@ -4,12 +4,13 @@ import ReadingSettings from './ReadingSettings.astro';
 interface Props {
   backHref: string;
   audioSrc?: string | undefined;
+  storyId: string;
 }
 
-const { backHref, audioSrc } = Astro.props;
+const { backHref, audioSrc, storyId } = Astro.props;
 ---
 
-<div class="reading-toolbar" data-reading-toolbar>
+<div class="reading-toolbar" data-reading-toolbar data-story-id={storyId}>
   <div class="reading-toolbar__inner">
     <a class="reading-toolbar__back" href={backHref}>
       <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -150,13 +151,47 @@ const { backHref, audioSrc } = Astro.props;
 </style>
 
 <script>
+  import { recordRecent, setProgress } from '../lib/app-state';
+
+  const toolbar = document.querySelector<HTMLElement>('[data-reading-toolbar]');
+  const storyId = toolbar?.dataset.storyId;
   const progress = document.querySelector<HTMLElement>('[data-reading-progress]');
   const bar = document.querySelector<HTMLElement>('[data-reading-progress-bar]');
   const article = document.querySelector<HTMLElement>('[data-reader-article]');
 
+  if (storyId) recordRecent(storyId);
+
   if (progress && bar && article) {
+    const SAVE_INTERVAL_MS = 800;
     let ticking = false;
     let lastAnnounced = -1;
+    let persistAfterFrame = false;
+    let latestProgress: number | null = null;
+    let lastSavedProgress = -1;
+    let lastSavedAt = 0;
+    let saveTimer: ReturnType<typeof setTimeout> | undefined;
+
+    const flushProgress = () => {
+      if (saveTimer !== undefined) {
+        window.clearTimeout(saveTimer);
+        saveTimer = undefined;
+      }
+      if (!storyId || latestProgress === null || latestProgress === lastSavedProgress) return;
+
+      setProgress(storyId, latestProgress);
+      lastSavedProgress = latestProgress;
+      lastSavedAt = performance.now();
+    };
+
+    const scheduleProgressSave = (pct: number) => {
+      latestProgress = pct;
+      const remaining = SAVE_INTERVAL_MS - (performance.now() - lastSavedAt);
+      if (remaining <= 0) {
+        flushProgress();
+      } else if (saveTimer === undefined) {
+        saveTimer = window.setTimeout(flushProgress, remaining);
+      }
+    };
 
     const update = () => {
       ticking = false;
@@ -171,9 +206,21 @@ const { backHref, audioSrc } = Astro.props;
         lastAnnounced = step;
         progress.setAttribute('aria-valuenow', String(step));
       }
+      if (persistAfterFrame) {
+        persistAfterFrame = false;
+        scheduleProgressSave(pct);
+      }
     };
 
     const onScroll = () => {
+      persistAfterFrame = true;
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    const onResize = () => {
       if (!ticking) {
         ticking = true;
         requestAnimationFrame(update);
@@ -181,7 +228,11 @@ const { backHref, audioSrc } = Astro.props;
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll, { passive: true });
+    window.addEventListener('resize', onResize, { passive: true });
+    window.addEventListener('pagehide', flushProgress);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') flushProgress();
+    });
     update();
   }
 

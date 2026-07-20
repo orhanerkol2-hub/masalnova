@@ -3,6 +3,8 @@ title: "Fındık Fikret'in Unuttuğu Fide"
 shortDescription: "Güler yüzlü bir bahçıvanın, unuttuğu küçük fideyi hatırlayıp sorumluluğunu yerine getirmesini anlatan sıcacık bir masal."
 coverEmoji: "🌱"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/findik-fikretin-unuttugu-fide.webp"
+altText: "Kapak görseli: Fındık Fikret'in Unuttuğu Fide"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

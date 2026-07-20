@@ -3,6 +3,8 @@ title: "Ninem'in Yıldız Defteri"
 shortDescription: "Torununa bakması için bırakılan sorumluluğu, gökyüzünü kullanarak akıllıca yerine getiren şefkatli bir ninenin öyküsü."
 coverEmoji: "⭐"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/ninemin-yildiz-defteri.webp"
+altText: "Kapak görseli: Ninem'in Yıldız Defteri"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

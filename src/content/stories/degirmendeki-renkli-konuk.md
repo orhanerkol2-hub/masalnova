@@ -3,6 +3,8 @@ title: "Değirmendeki Renkli Konuk"
 shortDescription: "Eski bir değirmende yaşayan gururlu bir fare, küçük bir kelebeğe saygı göstermeyi öğrenince herkes için hayat güzelleşir."
 coverEmoji: "🦋"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/degirmendeki-renkli-konuk.webp"
+altText: "Kapak görseli: Değirmendeki Renkli Konuk"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

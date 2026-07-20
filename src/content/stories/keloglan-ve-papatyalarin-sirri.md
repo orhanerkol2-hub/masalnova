@@ -3,6 +3,8 @@ title: "Keloğlan ve Papatyaların Sırrı"
 shortDescription: "Keloğlan'ın, padişahın çiçekli bahçesinde küçük bir kız ile kurduğu dostluk sayesinde bahçeyi yeniden canlandırdığı sıcacık bir masal."
 coverEmoji: "🌼"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-papatyalarin-sirri.webp"
+altText: "Kapak görseli: Keloğlan ve Papatyaların Sırrı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Fırıncı Kâmil ile Çoban Reşat'ın Sıcak Ekmeği"
 shortDescription: "Yalnız bir çobanla mis kokulu fırının sahibi, paylaşmayı ve dostluğu öğrenerek küçük bir köyü sıcacık bir bayrama dönüştürür."
 coverEmoji: "🥖"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/firinci-kamil-ile-coban-resatin-sicak-ekmegi.webp"
+altText: "Kapak görseli: Fırıncı Kâmil ile Çoban Reşat'ın Sıcak Ekmeği"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

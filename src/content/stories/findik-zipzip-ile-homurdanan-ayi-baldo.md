@@ -3,6 +3,8 @@ title: "Fındık Zıpzıp ile Homurdanan Ayı Baldo"
 shortDescription: "Cimri bir sincapla aç bir ayının serin bir pınar başında paylaşmayı öğrendiği sıcacık bir hikâye."
 coverEmoji: "🐿️"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/findik-zipzip-ile-homurdanan-ayi-baldo.webp"
+altText: "Kapak görseli: Fındık Zıpzıp ile Homurdanan Ayı Baldo"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

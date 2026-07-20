@@ -3,6 +3,8 @@ title: "Keloğlan ve Ay Işığındaki Patika"
 shortDescription: "Keloğlan, korkusunu yenip ay ışığında dolanan bir patikada köyünü kurtarmak için cesaretini keşfeder."
 coverEmoji: "🌕"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-ay-isigindaki-patika.webp"
+altText: "Kapak görseli: Keloğlan ve Ay Işığındaki Patika"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

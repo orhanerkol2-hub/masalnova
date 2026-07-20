@@ -3,6 +3,8 @@ title: "Çoban Sadık'ın Selamlaşan Çiçekleri"
 shortDescription: "İyi kalpli bir çobanın çiçekli bahçede karşılaştığı her canlıya gösterdiği saygının, akşam vakti tatlı bir uykuya dönüşmesini anlatan sakin bir masal."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-sadikin-selamlasan-cicekleri.webp"
+altText: "Kapak görseli: Çoban Sadık'ın Selamlaşan Çiçekleri"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

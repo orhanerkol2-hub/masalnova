@@ -3,6 +3,8 @@ title: "Çoban Turaç'ın Çarşı Sözü"
 shortDescription: "İyi kalpli bir çobanın kalabalık bir çarşıda verdiği küçük bir sözü tutmak için gösterdiği çabayı anlatan öğretici bir masal."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-turacin-carsi-sozu.webp"
+altText: "Kapak görseli: Çoban Turaç'ın Çarşı Sözü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Meraklı Gecesi"
 shortDescription: "Keloğlan, köyün kenarındaki eski değirmenden gelen tuhaf sesleri araştırırken merakının ona nasıl akıl ve dostluk kazandırdığını öğrenir."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-merakli-gecesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Meraklı Gecesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

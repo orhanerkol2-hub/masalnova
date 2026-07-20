@@ -3,6 +3,8 @@ title: "Keloğlan ve Yıldızların Fısıltısı"
 shortDescription: "Keloğlan, yıldızlı bir gecede kaybolan bir devin yardımına koşarak köyünde büyük bir dayanışma başlatır."
 coverEmoji: "⭐"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-yildizlarin-fisiltisi.webp"
+altText: "Kapak görseli: Keloğlan ve Yıldızların Fısıltısı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

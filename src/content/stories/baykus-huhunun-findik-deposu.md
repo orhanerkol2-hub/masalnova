@@ -3,6 +3,8 @@ title: "Baykuş Huhu'nun Fındık Deposu"
 shortDescription: "Tutumlu baykuş Huhu, ay ışığında yürüdüğü patikada topladığı fındıkları paylaşarak arkadaşlarına gerçek zenginliğin ne olduğunu öğretir."
 coverEmoji: "🦉"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/baykus-huhunun-findik-deposu.webp"
+altText: "Kapak görseli: Baykuş Huhu'nun Fındık Deposu"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

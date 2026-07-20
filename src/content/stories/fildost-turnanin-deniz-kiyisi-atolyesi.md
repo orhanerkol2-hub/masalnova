@@ -3,6 +3,8 @@ title: "Fildost Turna'nın Deniz Kıyısı Atölyesi"
 shortDescription: "Çalışkan bir yavru filin, deniz kıyısında arkadaşlarıyla birlikte sabırla çalışarak küçük bir liman inşa etmesini anlatan sevimli bir masal."
 coverEmoji: "🐘"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/fildost-turnanin-deniz-kiyisi-atolyesi.webp"
+altText: "Kapak görseli: Fildost Turna'nın Deniz Kıyısı Atölyesi"
 ageGroups: ["3-5"]
 readingTime: 3
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Meraklı Fındık'ın Ay Işıklı Patikası"
 shortDescription: "Meraklı bir köpeğin ay ışığında keşfettiği patikada dostluk ve merakın değerini öğrendiği sıcak bir masal."
 coverEmoji: "🐾"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/merakli-findikin-ay-isikli-patikasi.webp"
+altText: "Kapak görseli: Meraklı Fındık'ın Ay Işıklı Patikası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

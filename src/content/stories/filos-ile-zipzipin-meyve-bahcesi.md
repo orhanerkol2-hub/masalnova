@@ -3,6 +3,8 @@ title: "Filoş ile Zıpzıp'ın Meyve Bahçesi"
 shortDescription: "Kocaman bir fil ile küçük bir tavşanın nezaket ve paylaşma üzerine yemyeşil ormanda yaşadığı sıcacık dostluk masalı."
 coverEmoji: "🐘"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/filos-ile-zipzipin-meyve-bahcesi.webp"
+altText: "Kapak görseli: Filoş ile Zıpzıp'ın Meyve Bahçesi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın İnci Dolu Ağı"
 shortDescription: "Keloğlan'ın deniz kıyısında yaşlı bir balıkçıya gösterdiği nezaketin, ona ve köyüne beklenmedik bir bereket getirdiğini anlatan sıcak bir masal."
 coverEmoji: "🐚"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-inci-dolu-agi.webp"
+altText: "Kapak görseli: Keloğlan'ın İnci Dolu Ağı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

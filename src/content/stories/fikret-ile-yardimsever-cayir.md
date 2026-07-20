@@ -3,6 +3,8 @@ title: "Fikret ile Yardımsever Çayır"
 shortDescription: "Güler yüzlü bahçıvan Fikret'in, geniş bir çayırdaki hayvanlarla birlikte yardımlaşmayı öğrendiği sıcak bir masal."
 coverEmoji: "🌻"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/fikret-ile-yardimsever-cayir.webp"
+altText: "Kapak görseli: Fikret ile Yardımsever Çayır"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

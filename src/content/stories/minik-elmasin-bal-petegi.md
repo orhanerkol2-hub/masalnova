@@ -3,6 +3,8 @@ title: "Minik Elmas'ın Bal Peteği"
 shortDescription: "Meraklı bir kızın arıların çalışkanlığından ders çıkardığı sıcak bir köy hikâyesi."
 coverEmoji: "🐝"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/minik-elmasin-bal-petegi.webp"
+altText: "Kapak görseli: Minik Elmas'ın Bal Peteği"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

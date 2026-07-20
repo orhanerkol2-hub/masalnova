@@ -2,8 +2,13 @@ node_modules/
 .astro/
 .DS_Store
 *.log
+.env
+.env.*
+!.env.example
 .claude/
 docs/
+cover-production/premium-cover-prompts.jsonl
+cover-production/premium-cover-run.jsonl
 
 # Analyse-Artefakte des Märchen-Audits (lokal, nicht committen)
 src/content/.story-review.*

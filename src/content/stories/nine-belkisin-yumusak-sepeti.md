@@ -3,6 +3,8 @@ title: "Nine Belkıs'ın Yumuşak Sepeti"
 shortDescription: "Kalabalık bir çarşıda nazik bir nine, herkese küçük bir iyilik dağıtırken huzurlu bir akşama doğru yol alır."
 coverEmoji: "🧺"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/nine-belkisin-yumusak-sepeti.webp"
+altText: "Kapak görseli: Nine Belkıs'ın Yumuşak Sepeti"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

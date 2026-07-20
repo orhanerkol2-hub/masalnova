@@ -3,6 +3,8 @@ title: "Deniz Kıyısında Minik Deniz Fenerinin Fısıltısı"
 shortDescription: "Deniz kıyısında yaşayan cesur bir çocuğun, alçakgönüllü bir deniz feneriyle tanışıp uykuya dalmadan önce yaşadığı sakin ve huzurlu bir akşamın öyküsü."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/deniz-kiyisinda-minik-deniz-fenerinin-fisiltisi.webp"
+altText: "Kapak görseli: Deniz Kıyısında Minik Deniz Fenerinin Fısıltısı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

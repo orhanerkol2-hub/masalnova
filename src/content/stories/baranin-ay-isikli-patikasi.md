@@ -3,6 +3,8 @@ title: "Baran'ın Ay Işıklı Patikası"
 shortDescription: "Küçük Baran'ın, korkusunu yenip yeni bir arkadaşa yardım ederken dostluğun gücünü keşfettiği sıcacık bir masal."
 coverEmoji: "🌕"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/baranin-ay-isikli-patikasi.webp"
+altText: "Kapak görseli: Baran'ın Ay Işıklı Patikası"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

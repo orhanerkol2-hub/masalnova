@@ -3,6 +3,8 @@ title: "Keloğlan ve Işıltılı Sarayın Sırrı"
 shortDescription: "Keloğlan, ışıl ışıl bir sarayı saran gizemli sessizliği çözmek için cesaretini ve kurnazlığını kullanır."
 coverEmoji: "🏰"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-isiltili-sarayin-sirri.webp"
+altText: "Kapak görseli: Keloğlan ve Işıltılı Sarayın Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

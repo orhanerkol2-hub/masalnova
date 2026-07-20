@@ -3,6 +3,8 @@ title: "Keloğlan'ın Bekleyen Değirmen Taşı"
 shortDescription: "Keloğlan, eski bir değirmende sabırla çalışarak hem köylülere yardım eder hem de büyük bir ödülün sırrını çözer."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-bekleyen-degirmen-tasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Bekleyen Değirmen Taşı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Kırmızı Şemsiyenin Emaneti"
 shortDescription: "Geniş bir çayırda küçük bir tavşanın unuttuğu şemsiyeyi bulan komşusu, sorumluluk alarak onu sahibine ulaştırır."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/kirmizi-semsiyenin-emaneti.webp"
+altText: "Kapak görseli: Kırmızı Şemsiyenin Emaneti"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

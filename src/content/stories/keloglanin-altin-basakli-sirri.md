@@ -3,6 +3,8 @@ title: "Keloğlan'ın Altın Başaklı Sırrı"
 shortDescription: "Keloğlan, komşusunun tarlasına yaptığı küçük bir yanlışı düzeltirken affetmenin ve dürtüklüğün gücünü öğrenir."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-altin-basakli-sirri.webp"
+altText: "Kapak görseli: Keloğlan'ın Altın Başaklı Sırrı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Çarşı Sırrı"
 shortDescription: "Keloğlan'ın kalabalık çarşıda çalışkanlığıyla hem para hem de gönül kazanmasını anlatan tatlı bir masal."
 coverEmoji: "🧺"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-carsi-sirri.webp"
+altText: "Kapak görseli: Keloğlan'ın Çarşı Sırrı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

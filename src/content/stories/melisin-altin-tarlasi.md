@@ -3,6 +3,8 @@ title: "Melis'in Altın Tarlası"
 shortDescription: "Meraklı küçük bir kızın, ay ışığında altın başaklı tarlada bulduğu sakin ve uykulu sırların masalı."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/melisin-altin-tarlasi.webp"
+altText: "Kapak görseli: Melis'in Altın Tarlası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Kerem'in Altın Tarlada Söylediği Şarkı"
 shortDescription: "Cesur küçük Kerem, altın başaklı tarlada ay ışığında affetmeyi ve huzuru bulur."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/keremin-altin-tarlada-soyledigi-sarki.webp"
+altText: "Kapak görseli: Kerem'in Altın Tarlada Söylediği Şarkı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

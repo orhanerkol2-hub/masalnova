@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yedi Renkli Çarşısı"
 shortDescription: "Keloğlan'ın kalabalık çarşıda farklı milletlerden tüccarları barıştırırken hoşgörünün gücünü keşfettiği eğlenceli bir masal."
 coverEmoji: "🏮"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yedi-renkli-carsisi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yedi Renkli Çarşısı"
 ageGroups: ["5-7"]
 readingTime: 4
 categories: ["keloglan"]

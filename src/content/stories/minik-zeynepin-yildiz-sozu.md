@@ -3,6 +3,8 @@ title: "Minik Zeynep'in Yıldız Sözü"
 shortDescription: "Meraklı bir kızın, gökyüzündeki yıldızları saymak için verdiği sözü tutmasını anlatan sıcak bir masal."
 coverEmoji: "⭐"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/minik-zeynepin-yildiz-sozu.webp"
+altText: "Kapak görseli: Minik Zeynep'in Yıldız Sözü"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

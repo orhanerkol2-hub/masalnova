@@ -3,6 +3,8 @@ title: "Fındık Baba'nın Kar Altındaki Fidesi"
 shortDescription: "Karlı bir günde, bahçıvan Fındık Baba'nın küçük bir fideyi büyütmek için gösterdiği azmi anlatan sıcacık bir masal."
 coverEmoji: "❄️"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/findik-babanin-kar-altindaki-fidesi.webp"
+altText: "Kapak görseli: Fındık Baba'nın Kar Altındaki Fidesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

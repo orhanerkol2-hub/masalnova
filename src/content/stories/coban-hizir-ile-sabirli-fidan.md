@@ -3,6 +3,8 @@ title: "Çoban Hızır ile Sabırlı Fidan"
 shortDescription: "Dağ başında yaşayan iyi kalpli bir çobanın, minik bir fidanı büyütürken sabrı öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🌱"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-hizir-ile-sabirli-fidan.webp"
+altText: "Kapak görseli: Çoban Hızır ile Sabırlı Fidan"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

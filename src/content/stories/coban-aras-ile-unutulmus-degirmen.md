@@ -3,6 +3,8 @@ title: "Çoban Aras ile Unutulmuş Değirmen"
 shortDescription: "İyi kalpli bir çobanın, kimsenin uğramadığı eski bir değirmene gösterdiği nezaketin köyü nasıl değiştirdiğini anlatan öğretici bir masal."
 coverEmoji: "🌾"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-aras-ile-unutulmus-degirmen.webp"
+altText: "Kapak görseli: Çoban Aras ile Unutulmuş Değirmen"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

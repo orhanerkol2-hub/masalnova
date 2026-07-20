@@ -3,6 +3,8 @@ title: "Nisan'ın Kapalı Kapısı"
 shortDescription: "Meraklı küçük bir kızın, çiçekli bahçedeki gizemli kapının ardındaki sırrı öğrenmek için cesaretini toplama hikâyesi."
 coverEmoji: "🌸"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nisanin-kapali-kapisi.webp"
+altText: "Kapak görseli: Nisan'ın Kapalı Kapısı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

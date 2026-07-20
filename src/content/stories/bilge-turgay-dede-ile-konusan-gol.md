@@ -3,6 +3,8 @@ title: "Bilge Turgay Dede ile Konuşan Göl"
 shortDescription: "Sabırsız bir çocuğun, sakin bir göl kıyısında yaşayan bilge bir dededen saygının kıymetini öğrenmesini anlatan sıcak bir masal."
 coverEmoji: "🌊"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/bilge-turgay-dede-ile-konusan-gol.webp"
+altText: "Kapak görseli: Bilge Turgay Dede ile Konuşan Göl"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

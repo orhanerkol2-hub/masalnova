@@ -3,6 +3,8 @@ title: "Keloğlan'ın Ay Işığındaki Patikası"
 shortDescription: "Keloğlan, ay ışığında bir patikada karşılaştığı yorgun devi eve götürüp ona yardım ederek merhametin gücünü öğrenir."
 coverEmoji: "🌕"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-ay-isigindaki-patikasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Ay Işığındaki Patikası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

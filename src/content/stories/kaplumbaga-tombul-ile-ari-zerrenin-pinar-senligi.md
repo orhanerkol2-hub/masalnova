@@ -3,6 +3,8 @@ title: "Kaplumbağa Tombul ile Arı Zerre'nin Pınar Şenliği"
 shortDescription: "Serin bir pınarın başında yarışmaya çalışan kaplumbağa ve arı, alçakgönüllülükle en güzel şenliği birlikte yaratır."
 coverEmoji: "🐢"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kaplumbaga-tombul-ile-ari-zerrenin-pinar-senligi.webp"
+altText: "Kapak görseli: Kaplumbağa Tombul ile Arı Zerre'nin Pınar Şenliği"
 ageGroups: ["3-5"]
 readingTime: 3
 categories: ["hayvan"]

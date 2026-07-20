@@ -3,6 +3,8 @@ title: "Dede İhsan'ın Yağmurlu Kapısı"
 shortDescription: "Yağmurlu bir akşamda kapısına gelen herkese sıcak nezaket gösteren yaşlı bir dedenin uykuya davet eden hikâyesi."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dede-ihsanin-yagmurlu-kapisi.webp"
+altText: "Kapak görseli: Dede İhsan'ın Yağmurlu Kapısı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

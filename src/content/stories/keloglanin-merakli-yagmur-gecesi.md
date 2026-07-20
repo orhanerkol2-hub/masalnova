@@ -3,6 +3,8 @@ title: "Keloğlan'ın Meraklı Yağmur Gecesi"
 shortDescription: "Yağmurlu bir akşam merakına yenilen Keloğlan, padişahın sarayındaki gizemli sesin peşine düşerek herkesi şaşırtan bir çözüm bulur."
 coverEmoji: "🌧️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-merakli-yagmur-gecesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Meraklı Yağmur Gecesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

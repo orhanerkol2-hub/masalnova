@@ -3,6 +3,8 @@ title: "Değirmenci Emre'nin Altın Sikkesi"
 shortDescription: "Eski bir değirmende bulduğu altın sikkeyi sahibine geri veren cesur bir çocuğun öyküsü."
 coverEmoji: "🪙"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/degirmenci-emrenin-altin-sikkesi.webp"
+altText: "Kapak görseli: Değirmenci Emre'nin Altın Sikkesi"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["kisa"]

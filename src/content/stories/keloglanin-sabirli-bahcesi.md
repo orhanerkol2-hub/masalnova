@@ -3,6 +3,8 @@ title: "Keloğlan'ın Sabırlı Bahçesi"
 shortDescription: "Keloğlan'ın acele etmeden emek verdiği bir bahçe, ona sabrın gerçek meyvesini öğretir."
 coverEmoji: "🌱"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-sabirli-bahcesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Sabırlı Bahçesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

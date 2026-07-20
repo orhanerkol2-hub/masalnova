@@ -1,0 +1,28 @@
+---
+import StoryArchivePage from '../../../../components/StoryArchivePage.astro';
+import { getStories } from '../../../../data/stories';
+import { STORY_ARCHIVE_PAGE_SIZE } from '../../../../data/pagination';
+
+export async function getStaticPaths() {
+  const allStories = await getStories();
+  const pageCount = Math.ceil(allStories.length / STORY_ARCHIVE_PAGE_SIZE);
+
+  return Array.from({ length: Math.max(0, pageCount - 1) }, (_, index) => {
+    const page = index + 2;
+    const start = (page - 1) * STORY_ARCHIVE_PAGE_SIZE;
+    return {
+      params: { page: String(page) },
+      props: {
+        stories: allStories.slice(start, start + STORY_ARCHIVE_PAGE_SIZE),
+        totalStories: allStories.length,
+        page,
+        pageCount,
+      },
+    };
+  });
+}
+
+const { stories, totalStories, page, pageCount } = Astro.props;
+---
+
+<StoryArchivePage stories={stories} totalStories={totalStories} page={page} pageCount={pageCount} />

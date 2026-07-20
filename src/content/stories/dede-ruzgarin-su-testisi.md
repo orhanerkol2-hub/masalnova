@@ -3,6 +3,8 @@ title: "Dede Rüzgâr'ın Su Testisi"
 shortDescription: "Yaşlı bir dedenin serin pınardan su taşımak için çalışkanlıkla bulduğu küçük çözümü anlatan tatlı bir masal."
 coverEmoji: "🏺"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/dede-ruzgarin-su-testisi.webp"
+altText: "Kapak görseli: Dede Rüzgâr'ın Su Testisi"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

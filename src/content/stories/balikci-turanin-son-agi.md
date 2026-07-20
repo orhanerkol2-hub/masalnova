@@ -3,6 +3,8 @@ title: "Balıkçı Turan'ın Son Ağı"
 shortDescription: "Yağmurlu bir akşamda balığa çıkan sabırlı bir balıkçının, tuttuğu tek balığı komşularıyla paylaşınca aslında ne kadar zengin olduğunu fark ettiğini anlatan tatlı bir masal."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-turanin-son-agi.webp"
+altText: "Kapak görseli: Balıkçı Turan'ın Son Ağı"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

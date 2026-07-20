@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yağmurlu Kapısı"
 shortDescription: "Yağmurlu bir akşam kapısını çalan yaşlı komşusunu affeden Keloğlan'ın sıcacık hikâyesi."
 coverEmoji: "🌧️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yagmurlu-kapisi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yağmurlu Kapısı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

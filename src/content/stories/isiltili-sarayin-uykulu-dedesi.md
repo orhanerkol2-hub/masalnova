@@ -3,6 +3,8 @@ title: "Işıltılı Sarayın Uykulu Dedesi"
 shortDescription: "Işıl ışıl bir sarayda yaşayan yaşlı bilge bir dede, küçük bir yıldıza affetmeyi öğretirken uykulara yumuşacık bir yolculuk sunar."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/isiltili-sarayin-uykulu-dedesi.webp"
+altText: "Kapak görseli: Işıltılı Sarayın Uykulu Dedesi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Emre'nin Karanlık Mağarası"
 shortDescription: "İyi kalpli bir çobanın, korkularını yenerek arkadaşlarına yardım etmek için gizemli bir mağaraya girme öyküsü."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/emrenin-karanlik-magarasi.webp"
+altText: "Kapak görseli: Emre'nin Karanlık Mağarası"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

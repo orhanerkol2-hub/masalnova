@@ -3,6 +3,8 @@ title: "Dede Fikret'in Kar Beyazı Şalı"
 shortDescription: "Karlı bir kış günü, yaşlı bir dede küçük bir kızın nezaketiyle asıl sıcaklığın kalpten geldiğini öğrenir."
 coverEmoji: "❄️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/dede-fikretin-kar-beyazi-sali.webp"
+altText: "Kapak görseli: Dede Fikret'in Kar Beyazı Şalı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

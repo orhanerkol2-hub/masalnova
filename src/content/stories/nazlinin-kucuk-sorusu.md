@@ -3,6 +3,8 @@ title: "Nazlı'nın Küçük Sorusu"
 shortDescription: "Meraklı küçük bir kızın altın başaklı tarlada öğrendiği alçakgönüllülük dersini anlatan minik bir masal."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nazlinin-kucuk-sorusu.webp"
+altText: "Kapak görseli: Nazlı'nın Küçük Sorusu"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

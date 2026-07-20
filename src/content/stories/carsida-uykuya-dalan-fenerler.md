@@ -3,6 +3,8 @@ title: "Çarşıda Uykuya Dalan Fenerler"
 shortDescription: "Güler yüzlü bir bahçıvanın kalabalık çarşıyı sevgiyle sulayıp fenerleri tek tek uykuya yatırdığı, huzurlu bir uyku masalı."
 coverEmoji: "🏮"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/carsida-uykuya-dalan-fenerler.webp"
+altText: "Kapak görseli: Çarşıda Uykuya Dalan Fenerler"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

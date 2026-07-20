@@ -3,6 +3,8 @@ title: "Emin Çoban'ın Sözü"
 shortDescription: "İyi kalpli bir çobanın, geniş bir çayırda verdiği küçük sözü tutmasının sıcacık öyküsü."
 coverEmoji: "🐑"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/emin-cobanin-sozu.webp"
+altText: "Kapak görseli: Emin Çoban'ın Sözü"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

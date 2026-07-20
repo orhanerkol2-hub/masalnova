@@ -3,6 +3,8 @@ title: "Çoban Sadık'ın Altın Tarlası"
 shortDescription: "İyi kalpli bir çobanın, ay ışığında altın başaklı tarlada küçük hayvanlarla yardımlaşarak huzurla uykuya dalmasını anlatan sakin bir masal."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-sadikin-altin-tarlasi.webp"
+altText: "Kapak görseli: Çoban Sadık'ın Altın Tarlası"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

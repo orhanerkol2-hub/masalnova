@@ -3,6 +3,8 @@ title: "Keloğlan ve Yıldızların Dileği"
 shortDescription: "Keloğlan, yıldızlı bir gecede komşularına yardım ederek köyün en değerli hazinesinin dostluk olduğunu keşfeder."
 coverEmoji: "⭐"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-yildizlarin-dilegi.webp"
+altText: "Kapak görseli: Keloğlan ve Yıldızların Dileği"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

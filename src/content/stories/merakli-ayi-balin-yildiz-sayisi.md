@@ -3,6 +3,8 @@ title: "Meraklı Ayı Bal'ın Yıldız Sayısı"
 shortDescription: "Meraklı bir ayının yıldızları saymaya çalışırken arkadaşlarıyla birlikte gökyüzünün gerçek büyüsünü keşfetmesini anlatan sıcak bir masal."
 coverEmoji: "🐻"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/merakli-ayi-balin-yildiz-sayisi.webp"
+altText: "Kapak görseli: Meraklı Ayı Bal'ın Yıldız Sayısı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

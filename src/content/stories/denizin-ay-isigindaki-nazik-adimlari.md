@@ -3,6 +3,8 @@ title: "Deniz'in Ay Işığındaki Nazik Adımları"
 shortDescription: "Ay ışığında bir patikada yürüyen küçük ve nazik bir çocuğun, karşılaştığı herkese kibarlıkla dokunduğu huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/denizin-ay-isigindaki-nazik-adimlari.webp"
+altText: "Kapak görseli: Deniz'in Ay Işığındaki Nazik Adımları"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

@@ -3,6 +3,8 @@ title: "Simitçi Duru'nun Kayıp Sepeti"
 shortDescription: "Kalabalık çarşıda kaybolan bir sepetin, sorumluluk sayesinde sahibine dönmesini anlatan sıcak bir masal."
 coverEmoji: "🧺"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/simitci-durunun-kayip-sepeti.webp"
+altText: "Kapak görseli: Simitçi Duru'nun Kayıp Sepeti"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["kisa"]

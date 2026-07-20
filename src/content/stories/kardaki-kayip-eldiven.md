@@ -3,6 +3,8 @@ title: "Kardaki Kayıp Eldiven"
 shortDescription: "Karlı bir kış gününde bulduğu eldiveni kime ait olduğunu bilerek geri veren küçük Ela'nın dürüstlük dersi."
 coverEmoji: "🧤"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/kardaki-kayip-eldiven.webp"
+altText: "Kapak görseli: Kardaki Kayıp Eldiven"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Mis Kokulu Fırının Gece Sırrı"
 shortDescription: "Meraklı küçük bir kız, yardımsever komşusuyla birlikte mis kokulu fırının gece sırrını öğrenirken tatlı bir uykuya dalar."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/mis-kokulu-firinin-gece-sirri.webp"
+altText: "Kapak görseli: Mis Kokulu Fırının Gece Sırrı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

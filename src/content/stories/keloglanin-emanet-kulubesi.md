@@ -3,6 +3,8 @@ title: "Keloğlan'ın Emanet Kulübesi"
 shortDescription: "Keloğlan, dağ başındaki yaşlı bir adamın kulübesine göz kulak olma sözü verince, sorumluluğun ne demek olduğunu eğlenceli bir şekilde öğrenir."
 coverEmoji: "🏚️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-emanet-kulubesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Emanet Kulübesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin Şemsiyesi"
 shortDescription: "Yağmurlu bir akşamda şefkatli bir ninenin tek şemsiyesini paylaştırma yolu bulması."
 coverEmoji: "☔"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-sevginin-semsiyesi.webp"
+altText: "Kapak görseli: Nine Sevgi'nin Şemsiyesi"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

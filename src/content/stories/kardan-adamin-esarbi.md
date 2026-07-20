@@ -3,6 +3,8 @@ title: "Kardan Adamın Eşarbı"
 shortDescription: "Karlı bir günde küçük bir kızın, üşüyen komşusuna eşarbını vermesiyle sorumluluğu ve paylaşmayı öğrendiği sıcacık bir masal."
 coverEmoji: "🧣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/kardan-adamin-esarbi.webp"
+altText: "Kapak görseli: Kardan Adamın Eşarbı"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

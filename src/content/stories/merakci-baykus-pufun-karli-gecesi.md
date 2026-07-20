@@ -3,6 +3,8 @@ title: "Merakçı Baykuş Puf'un Karlı Gecesi"
 shortDescription: "Meraklı bir baykuşun karlı bir kış gecesinde ormanın sırlarını keşfederken dostluk ve paylaşmayı öğrenmesini anlatan sıcacık bir masal."
 coverEmoji: "🦉"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/merakci-baykus-pufun-karli-gecesi.webp"
+altText: "Kapak görseli: Merakçı Baykuş Puf'un Karlı Gecesi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

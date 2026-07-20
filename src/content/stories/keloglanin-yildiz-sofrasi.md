@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yıldız Sofrası"
 shortDescription: "Keloğlan'ın bir devle karşılaştığı yıldızlı gecede şükretmenin gücünü öğrendiği sıcacık bir masal."
 coverEmoji: "✨"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yildiz-sofrasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yıldız Sofrası"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

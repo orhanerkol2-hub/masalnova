@@ -3,6 +3,8 @@ title: "Keloğlan ile Taşların Fısıltısı"
 shortDescription: "Kel Oğlan, gizemli bir mağarada bulduğu konuşan taşların yardımıyla köyünü kurtarırken yardımlaşmanın gücünü öğrenir."
 coverEmoji: "🪨"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ile-taslarin-fisiltisi.webp"
+altText: "Kapak görseli: Keloğlan ile Taşların Fısıltısı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Sarayın Küçük Bekçisi"
 shortDescription: "Işıl ışıl bir sarayda görev alan küçük bir çocuğun, yaşlı bilge dededen sorumluluğun gerçek anlamını öğrenmesini anlatan sevimli bir masal."
 coverEmoji: "🕯️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/sarayin-kucuk-bekcisi.webp"
+altText: "Kapak görseli: Sarayın Küçük Bekçisi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

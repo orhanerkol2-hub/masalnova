@@ -1,12 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import StoryCard from '../../components/StoryCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import ContentTypeTabs from '../../components/ContentTypeTabs.astro';
-import { getStories } from '../../data/stories';
 import { videos } from '../../data/videos';
-
-const stories = await getStories();
 ---
 <BaseLayout
   title="Ara | Masal ve Video Arama — MasalNova"
@@ -27,10 +23,11 @@ const stories = await getStories();
 
       <section data-pane-content="stories" class="pane">
         <h2>Masallar <span class="count" id="c-stories"></span></h2>
-        <div class="grid grid-3" id="story-results">
-          {stories.map((s) => <StoryCard story={s} />)}
-        </div>
+        <div class="grid grid-3" id="story-results" aria-busy="true"></div>
+        <p class="result-status" id="story-status" role="status">Masallar yükleniyor…</p>
+        <p class="result-note" id="story-limit-note" hidden></p>
         <p class="empty" id="no-stories" hidden>Eşleşen masal yok.</p>
+        <noscript><p class="empty">Arama için JavaScript gerekir. Tüm içerikleri <a href="/masallar/">masal arşivinde</a> bulabilirsiniz.</p></noscript>
       </section>
 
       <section data-pane-content="videos" class="pane">
@@ -53,28 +50,88 @@ const stories = await getStories();
   .pane { margin-top: 30px; }
   .pane h2 { color: #fff; font-size: 1.4rem; margin-bottom: 16px; }
   .count { color: var(--gold); }
+  .result-status, .result-note { color: var(--soft); margin-top: 14px; }
   .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 20px; text-align: center; }
+  .empty a { color: var(--gold); font-weight: 800; }
+</style>
+
+<style is:global>
+  .story-result-card {
+    --card-accent: #2f74e8;
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 30px;
+    background: radial-gradient(120% 100% at 0 0, color-mix(in srgb, var(--card-accent) 50%, transparent), transparent 58%), linear-gradient(155deg, color-mix(in srgb, var(--card-accent) 34%, #132d62), #08152f 78%);
+    color: #fff;
+    box-shadow: 0 24px 64px rgba(5,18,52,.28);
+    transition: transform .28s cubic-bezier(.2,.75,.25,1), box-shadow .28s ease, border-color .28s ease;
+  }
+  .story-result-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,.42); box-shadow: 0 34px 82px rgba(3,14,44,.4); }
+  .story-result-media { position: relative; display: grid; overflow: hidden; aspect-ratio: 4 / 3; place-items: center; background: radial-gradient(120% 120% at 18% 8%, rgba(255,255,255,.4), transparent 55%), var(--card-accent); }
+  .story-result-media::after { position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(180deg, transparent, rgba(5,18,44,.34)); content: ""; pointer-events: none; }
+  .story-result-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.75,.25,1), filter .35s ease; }
+  .story-result-card:hover .story-result-media img { transform: scale(1.045); filter: saturate(1.06); }
+  .story-result-placeholder { font-size: 3rem; filter: drop-shadow(0 6px 10px rgba(0,0,0,.25)); }
+  .story-result-badge, .story-result-audio { position: absolute; z-index: 2; top: 14px; padding: 7px 11px; border: 1px solid rgba(255,255,255,.2); border-radius: 9px; background: rgba(5,16,38,.78); color: rgba(255,255,255,.94); box-shadow: 0 8px 22px rgba(0,0,0,.2); backdrop-filter: blur(12px); font-size: .75rem; font-weight: 800; line-height: 1; }
+  .story-result-badge { right: 14px; }
+  .story-result-audio { left: 14px; }
+  .story-result-body { display: flex; min-height: 245px; flex: 1; flex-direction: column; gap: 10px; padding: 22px 22px 24px; }
+  .story-result-eyebrow { color: rgba(255,255,255,.68); font-size: .72rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+  .story-result-title { color: #fff; font-family: var(--font-display); font-size: clamp(1.18rem,2vw,1.38rem); font-weight: 800; line-height: 1.2; letter-spacing: -.025em; }
+  .story-result-meta { display: flex; flex-wrap: wrap; color: rgba(255,255,255,.78); font-size: .78rem; font-weight: 750; }
+  .story-result-meta > span { display: inline-flex; align-items: center; }
+  .story-result-meta > span + span::before { margin: 0 8px; color: rgba(255,255,255,.42); content: "·"; }
+  .story-result-description { display: -webkit-box; overflow: hidden; color: rgba(255,255,255,.88); font-size: .91rem; font-weight: 560; line-height: 1.62; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+  .story-result-link { align-self: flex-start; margin-top: auto; padding: 8px 13px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; background: rgba(255,255,255,.12); color: #fff; font-size: .8rem; font-weight: 850; transition: background .2s ease, color .2s ease; }
+  .story-result-card:hover .story-result-link { background: #fff; color: #102a66; }
+  @media (max-width: 640px) {
+    .story-result-card { border-radius: 24px; }
+    .story-result-body { min-height: 225px; padding: 18px 18px 20px; }
+    .story-result-description { -webkit-line-clamp: 3; }
+  }
 </style>
 
 <script>
+  import {
+    createStoryResultCard,
+    loadStoryIndex,
+    normalizeStorySearch,
+    storySearchText,
+    type StoryMetadata,
+  } from '../../lib/story-metadata';
+
+  const STORY_RESULT_LIMIT = 30;
   const q = document.getElementById('q') as HTMLInputElement;
-  const storyCards = Array.from(document.querySelectorAll<HTMLElement>('#story-results .story-card'));
   const videoCards = Array.from(document.querySelectorAll<HTMLElement>('#video-results .video-card'));
+  const storyResults = document.getElementById('story-results') as HTMLElement;
+  const storyStatus = document.getElementById('story-status') as HTMLElement;
+  const storyLimitNote = document.getElementById('story-limit-note') as HTMLElement;
+  let stories: StoryMetadata[] = [];
 
   function match(el: HTMLElement, term: string) {
     if (!term) return true;
     const hay = `${el.dataset.title || ''} ${el.dataset.desc || ''} ${el.dataset.cats || ''}`;
-    return hay.includes(term);
+    return normalizeStorySearch(hay).includes(term);
   }
 
   function apply() {
-    const term = q.value.trim().toLowerCase();
-    let s = 0, v = 0;
-    storyCards.forEach((c) => { const ok = match(c, term); c.style.display = ok ? '' : 'none'; if (ok) s++; });
+    const term = normalizeStorySearch(q.value.trim());
+    const storyMatches = term ? stories.filter((story) => storySearchText(story).includes(term)) : stories;
+    const visibleStories = storyMatches.slice(0, STORY_RESULT_LIMIT);
+    storyResults.replaceChildren(...visibleStories.map(createStoryResultCard));
+    document.getElementById('c-stories')!.textContent = stories.length ? `(${storyMatches.length})` : '';
+    (document.getElementById('no-stories') as HTMLElement).hidden = storyMatches.length !== 0 || stories.length === 0;
+    storyLimitNote.hidden = storyMatches.length <= STORY_RESULT_LIMIT;
+    storyLimitNote.textContent = storyMatches.length > STORY_RESULT_LIMIT
+      ? `${storyMatches.length} sonuçtan ilk ${STORY_RESULT_LIMIT} tanesi gösteriliyor. Daha özel bir arama yazabilirsiniz.`
+      : '';
+
+    let v = 0;
     videoCards.forEach((c) => { const ok = match(c, term); c.style.display = ok ? '' : 'none'; if (ok) v++; });
-    document.getElementById('c-stories')!.textContent = `(${s})`;
     document.getElementById('c-videos')!.textContent = `(${v})`;
-    (document.getElementById('no-stories') as HTMLElement).hidden = s !== 0;
     (document.getElementById('no-videos') as HTMLElement).hidden = v !== 0;
   }
 
@@ -82,4 +139,16 @@ const stories = await getStories();
   if (initial) q.value = initial;
   q.addEventListener('input', apply);
   apply();
+
+  loadStoryIndex()
+    .then((items) => {
+      stories = items;
+      storyResults.setAttribute('aria-busy', 'false');
+      storyStatus.hidden = true;
+      apply();
+    })
+    .catch(() => {
+      storyResults.setAttribute('aria-busy', 'false');
+      storyStatus.textContent = 'Masallar şu anda yüklenemedi. Lütfen sayfayı yenileyin.';
+    });
 </script>

@@ -3,6 +3,8 @@ title: "Umut'un Ay Işıklı Patikası"
 shortDescription: "Cesur küçük Umut, ay ışığında yürürken karşılaştığı yolculara gösterdiği nezaketle küçük bir mucize yaratır."
 coverEmoji: "🌙"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/umutun-ay-isikli-patikasi.webp"
+altText: "Kapak görseli: Umut'un Ay Işıklı Patikası"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

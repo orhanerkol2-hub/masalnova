@@ -3,6 +3,8 @@ title: "Değirmenci Dede'nin Ilık Unu"
 shortDescription: "Eski bir değirmende yaşayan yaşlı bilge dede ile köy hayvanlarının, ay ışığında birlikte un öğütüp paylaştıkları huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/degirmenci-dedenin-ilik-unu.webp"
+altText: "Kapak görseli: Değirmenci Dede'nin Ilık Unu"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

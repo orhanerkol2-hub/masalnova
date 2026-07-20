@@ -3,6 +3,8 @@ title: "Keloğlan'ın Sabır Taşı"
 shortDescription: "Keloğlan'ın dağ başındaki bir kulübede yaşlı bir kadına yardım ederken sabrın gücünü öğrenmesinin öyküsü."
 coverEmoji: "🏔️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-sabir-tasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Sabır Taşı"
 ageGroups: ["5-7"]
 readingTime: 4
 categories: ["keloglan"]

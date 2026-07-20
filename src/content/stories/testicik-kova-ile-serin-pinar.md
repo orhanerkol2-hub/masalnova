@@ -3,6 +3,8 @@ title: "Testicik Kova ile Serin Pınar"
 shortDescription: "Küçük bir çocuğun, yaşlı bilge dededen aldığı görevle sorumluluk sahibi olmayı öğrendiği kısa bir masal."
 coverEmoji: "💧"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/testicik-kova-ile-serin-pinar.webp"
+altText: "Kapak görseli: Testicik Kova ile Serin Pınar"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

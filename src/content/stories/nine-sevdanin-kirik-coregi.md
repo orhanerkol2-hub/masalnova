@@ -3,6 +3,8 @@ title: "Nine Sevda'nın Kırık Çöreği"
 shortDescription: "Mis kokulu bir fırında küçük bir kazanın affedilmesiyle tatlı bir dostluğun doğduğu kısa bir masal."
 coverEmoji: "🥐"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-sevdanin-kirik-coregi.webp"
+altText: "Kapak görseli: Nine Sevda'nın Kırık Çöreği"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

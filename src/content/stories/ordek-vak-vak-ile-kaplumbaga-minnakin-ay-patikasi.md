@@ -3,6 +3,8 @@ title: "Ördek Vak Vak ile Kaplumbağa Minnak'ın Ay Patikası"
 shortDescription: "Meraklı bir ördek ile sabırlı bir kaplumbağanın ay ışığında çıktıkları gizemli yolculuğu anlatan sıcacık bir masal."
 coverEmoji: "🌙"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/ordek-vak-vak-ile-kaplumbaga-minnakin-ay-patikasi.webp"
+altText: "Kapak görseli: Ördek Vak Vak ile Kaplumbağa Minnak'ın Ay Patikası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

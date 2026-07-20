@@ -3,6 +3,8 @@ title: "Duman ile Fiske'nin Tohum Ambarı"
 shortDescription: "Sakin bir gölün kıyısında yaşayan tutumlu bir köpek ile arkadaşı karıncanın, kış için birlikte biriktirmeyi öğrendiği sıcak bir dostluk hikâyesi."
 coverEmoji: "🐾"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/duman-ile-fiskenin-tohum-ambari.webp"
+altText: "Kapak görseli: Duman ile Fiske'nin Tohum Ambarı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

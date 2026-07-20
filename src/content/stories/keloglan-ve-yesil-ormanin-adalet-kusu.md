@@ -3,6 +3,8 @@ title: "Keloğlan ve Yeşil Ormanın Adalet Kuşu"
 shortDescription: "Keloğlan, yemyeşil bir ormanda haksızlığa uğrayan hayvanların davasını akıllıca çözerken gerçek adaletin ne olduğunu öğrenir."
 coverEmoji: "🌳"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-yesil-ormanin-adalet-kusu.webp"
+altText: "Kapak görseli: Keloğlan ve Yeşil Ormanın Adalet Kuşu"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

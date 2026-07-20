@@ -3,6 +3,8 @@ title: "Doruk ve Suların Sessiz Sırrı"
 shortDescription: "Cesur bir çocuğun, arkadaşını kırdığı bir yanlış anlamayı sakin bir gölün kıyısında affetmeyi öğrenerek düzeltmesinin öyküsü."
 coverEmoji: "🌿"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/doruk-ve-sularin-sessiz-sirri.webp"
+altText: "Kapak görseli: Doruk ve Suların Sessiz Sırrı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

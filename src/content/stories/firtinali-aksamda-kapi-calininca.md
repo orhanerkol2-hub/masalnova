@@ -3,6 +3,8 @@ title: "Fırtınalı Akşamda Kapı Çalınınca"
 shortDescription: "Yağmurlu bir akşamda kapısını çalan yaşlı yolcuya saygıyla kapısını açan cesur bir çocuğun öyküsü."
 coverEmoji: "🌧️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/firtinali-aksamda-kapi-calininca.webp"
+altText: "Kapak görseli: Fırtınalı Akşamda Kapı Çalınınca"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

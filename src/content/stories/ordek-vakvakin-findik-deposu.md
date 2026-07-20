@@ -3,6 +3,8 @@ title: "Ördek Vakvak'ın Fındık Deposu"
 shortDescription: "Tutumlu bir ördeğin, sakin bir gölde arkadaşlarıyla birlikte kışa hazırlanma serüveni."
 coverEmoji: "🦆"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/ordek-vakvakin-findik-deposu.webp"
+altText: "Kapak görseli: Ördek Vakvak'ın Fındık Deposu"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

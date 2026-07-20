@@ -3,6 +3,8 @@ title: "Duru'nun En Değerli Bulgusu"
 shortDescription: "Meraklı küçük bir kızın köyün en güzel hazinesini ararken alçakgönüllülüğün gerçek değerini keşfetmesi."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/durunun-en-degerli-bulgusu.webp"
+altText: "Kapak görseli: Duru'nun En Değerli Bulgusu"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

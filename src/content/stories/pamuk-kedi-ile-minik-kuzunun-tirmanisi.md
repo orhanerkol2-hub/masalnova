@@ -3,6 +3,8 @@ title: "Pamuk Kedi ile Minik Kuzu'nun Tırmanışı"
 shortDescription: "Serin bir pınarın başında tanışan bir kedi ile bir kuzunun, tepeye tırmanırken azimle öğrendikleri güzel dersin öyküsü."
 coverEmoji: "🐑"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/pamuk-kedi-ile-minik-kuzunun-tirmanisi.webp"
+altText: "Kapak görseli: Pamuk Kedi ile Minik Kuzu'nun Tırmanışı"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["hayvan"]

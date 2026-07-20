@@ -3,6 +3,8 @@ title: "Meraklı Elif ve Ay Işığındaki Kedicik"
 shortDescription: "Küçük bir köyde meraklı bir kızın, yolunu kaybeden bir kediciğe merhamet göstererek onu evine götürmesinin ılık ve uykulu hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/merakli-elif-ve-ay-isigindaki-kedicik.webp"
+altText: "Kapak görseli: Meraklı Elif ve Ay Işığındaki Kedicik"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

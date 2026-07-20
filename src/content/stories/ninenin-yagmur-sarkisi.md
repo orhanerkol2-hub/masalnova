@@ -3,6 +3,8 @@ title: "Nine'nin Yağmur Şarkısı"
 shortDescription: "Yağmurlu bir akşamda şefkatli bir ninenin, ürkek bir kedi yavrusuna cesaret ve sıcaklık göstermesini anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/ninenin-yagmur-sarkisi.webp"
+altText: "Kapak görseli: Nine'nin Yağmur Şarkısı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

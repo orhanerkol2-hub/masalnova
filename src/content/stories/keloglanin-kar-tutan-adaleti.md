@@ -3,6 +3,8 @@ title: "Keloğlan'ın Kar Tutan Adaleti"
 shortDescription: "Karlı bir kış günü Keloğlan, köylüler arasındaki bir haksızlığı akıllıca çözerek herkesi mutlu eder."
 coverEmoji: "❄️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-kar-tutan-adaleti.webp"
+altText: "Kapak görseli: Keloğlan'ın Kar Tutan Adaleti"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Işıltılı Saray Bilmecesi"
 shortDescription: "Keloğlan, ışıl ışıl bir sarayda dostluğun akıldan da değerli olduğunu keşfeder."
 coverEmoji: "✨"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-isiltili-saray-bilmecesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Işıltılı Saray Bilmecesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Tutumlu Küpü"
 shortDescription: "Keloğlan'ın gizemli bir mağarada bulduğu küçük küple tutumluluğun ve alın terinin gerçek zenginliğini öğrenmesi."
 coverEmoji: "🏺"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-tutumlu-kupu.webp"
+altText: "Kapak görseli: Keloğlan'ın Tutumlu Küpü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

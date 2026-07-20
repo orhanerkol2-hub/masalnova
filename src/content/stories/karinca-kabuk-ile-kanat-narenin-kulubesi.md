@@ -3,6 +3,8 @@ title: "Karınca Kabuk ile Kanat Nare'nin Kulübesi"
 shortDescription: "Yavaş ama azimli bir kaplumbağa ile uçarı bir kelebeğin, dağ başındaki eski kulübeyi onararak çalışkanlığın değerini öğrendiği sevimli bir hikâye."
 coverEmoji: "🐢"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/karinca-kabuk-ile-kanat-narenin-kulubesi.webp"
+altText: "Kapak görseli: Karınca Kabuk ile Kanat Nare'nin Kulübesi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

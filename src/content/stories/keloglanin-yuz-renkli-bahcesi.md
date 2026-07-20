@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yüz Renkli Bahçesi"
 shortDescription: "Keloğlan'ın, padişahın sararmış bahçesini emek ve sabırla yeniden canlandırırken çalışkanlığın değerini herkese göstermesinin öyküsü."
 coverEmoji: "🌷"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yuz-renkli-bahcesi.webp"
+altText: "Kapak görseli: Keloğlan'ın Yüz Renkli Bahçesi"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

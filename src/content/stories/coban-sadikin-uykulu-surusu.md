@@ -3,6 +3,8 @@ title: "Çoban Sadık'ın Uykulu Sürüsü"
 shortDescription: "İyi kalpli bir çobanın serin bir pınar başında sürüsüyle birlikte affetmeyi ve huzuru bulduğu, sakin bir uyku vakti masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-sadikin-uykulu-surusu.webp"
+altText: "Kapak görseli: Çoban Sadık'ın Uykulu Sürüsü"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

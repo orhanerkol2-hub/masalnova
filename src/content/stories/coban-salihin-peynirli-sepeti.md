@@ -3,6 +3,8 @@ title: "Çoban Salih'in Peynirli Sepeti"
 shortDescription: "Deniz kıyısında koyunlarını otlatan iyi kalpli bir çobanın azığını paylaşarak yeni dostlar kazanmasını anlatan kısa bir masal."
 coverEmoji: "🐑"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-salihin-peynirli-sepeti.webp"
+altText: "Kapak görseli: Çoban Salih'in Peynirli Sepeti"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

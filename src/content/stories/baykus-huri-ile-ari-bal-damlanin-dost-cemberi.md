@@ -3,6 +3,8 @@ title: "Baykuş Huri ile Arı Bal Damla'nın Dost Çemberi"
 shortDescription: "Yemyeşil bir ormanda uykucu bir baykuş ile çalışkan bir arının kurduğu, birbirine destek olan güzel bir dostluğun hikâyesi."
 coverEmoji: "🦉"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/baykus-huri-ile-ari-bal-damlanin-dost-cemberi.webp"
+altText: "Kapak görseli: Baykuş Huri ile Arı Bal Damla'nın Dost Çemberi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

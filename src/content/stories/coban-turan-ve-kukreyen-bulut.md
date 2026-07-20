@@ -3,6 +3,8 @@ title: "Çoban Turan ve Kükreyen Bulut"
 shortDescription: "Ürkek bir çobanın, geniş bir çayırı tehdit eden gürültülü bir fırtınaya karşı cesaretini bulmasının hikâyesi."
 coverEmoji: "🌩️"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-turan-ve-kukreyen-bulut.webp"
+altText: "Kapak görseli: Çoban Turan ve Kükreyen Bulut"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

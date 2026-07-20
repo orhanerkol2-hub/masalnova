@@ -3,6 +3,8 @@ title: "Kaan ve Işıltılı Sarayın Kapıcısı"
 shortDescription: "Cesur küçük bir çocuğun ışıl ışıl bir sarayda herkese saygıyla davranarak gerçek değeri keşfettiği öğretici bir masal."
 coverEmoji: "👑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/kaan-ve-isiltili-sarayin-kapicisi.webp"
+altText: "Kapak görseli: Kaan ve Işıltılı Sarayın Kapıcısı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Fıstık'ın Meraklı Kulübesi"
 shortDescription: "Meraklı bir sincabın dağ başındaki gizemli kulübeyi keşfederken dostluk ve sabrı öğrenmesi."
 coverEmoji: "🐿️"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/fistikin-merakli-kulubesi.webp"
+altText: "Kapak görseli: Fıstık'ın Meraklı Kulübesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

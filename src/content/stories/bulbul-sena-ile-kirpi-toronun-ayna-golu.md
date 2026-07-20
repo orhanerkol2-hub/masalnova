@@ -3,6 +3,8 @@ title: "Bülbül Sena ile Kirpi Toron'un Ayna Gölü"
 shortDescription: "Şarkısıyla ünlenen bir bülbül ile mütevazı bir kirpinin sakin bir gölde alçakgönüllülüğü öğrendiği sıcacık bir dostluk hikâyesi."
 coverEmoji: "🦔"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/bulbul-sena-ile-kirpi-toronun-ayna-golu.webp"
+altText: "Kapak görseli: Bülbül Sena ile Kirpi Toron'un Ayna Gölü"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["hayvan"]

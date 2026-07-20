@@ -3,6 +3,8 @@ title: "Minik Azra'nın Altın Tarlası"
 shortDescription: "Meraklı küçük bir kızın, ay ışığında altın başaklı bir tarlada şükrü keşfetmesini anlatan huzurlu bir uyku masalı."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/minik-azranin-altin-tarlasi.webp"
+altText: "Kapak görseli: Minik Azra'nın Altın Tarlası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

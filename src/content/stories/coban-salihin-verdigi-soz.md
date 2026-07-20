@@ -3,6 +3,8 @@ title: "Çoban Salih'in Verdiği Söz"
 shortDescription: "İyi kalpli bir çobanın deniz kıyısında verdiği sözü tutmak için yaşadığı öğretici bir yolculuk."
 coverEmoji: "🐑"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/coban-salihin-verdigi-soz.webp"
+altText: "Kapak görseli: Çoban Salih'in Verdiği Söz"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Kaan'ın Yıldız Sözü"
 shortDescription: "Küçük bir çocuğun, ablasına verdiği sözü tutmak için yıldızlı gökyüzü altında gösterdiği küçük ama değerli bir sadakatin öyküsü."
 coverEmoji: "⭐"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/kaanin-yildiz-sozu.webp"
+altText: "Kapak görseli: Kaan'ın Yıldız Sözü"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

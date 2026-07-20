@@ -3,6 +3,8 @@ title: "Deniz'in Çiçekli Bahçesi ve Ay Işığı Arkadaşı"
 shortDescription: "Cesur küçük Deniz'in çiçekli bahçede yeni bir dost bulup birlikte huzurla uyuduğu, sakinleştirici bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/denizin-cicekli-bahcesi-ve-ay-isigi-arkadasi.webp"
+altText: "Kapak görseli: Deniz'in Çiçekli Bahçesi ve Ay Işığı Arkadaşı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

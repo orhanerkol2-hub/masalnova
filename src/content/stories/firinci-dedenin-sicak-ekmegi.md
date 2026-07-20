@@ -3,6 +3,8 @@ title: "Fırıncı Dede'nin Sıcak Ekmeği"
 shortDescription: "Yaşlı bir fırıncı dede, mis kokulu ekmeklerini komşularıyla paylaşınca köyde herkesin birbirine yardım ettiğini görür."
 coverEmoji: "🍞"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/firinci-dedenin-sicak-ekmegi.webp"
+altText: "Kapak görseli: Fırıncı Dede'nin Sıcak Ekmeği"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

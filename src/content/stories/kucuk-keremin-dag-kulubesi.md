@@ -3,6 +3,8 @@ title: "Küçük Kerem'in Dağ Kulübesi"
 shortDescription: "Dağ başındaki minik kulübede yaşayan cesur bir çocuğun, sahip olduklarına şükrederek huzurla uykuya dalmasını anlatan sakin bir masal."
 coverEmoji: "🏔️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/kucuk-keremin-dag-kulubesi.webp"
+altText: "Kapak görseli: Küçük Kerem'in Dağ Kulübesi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

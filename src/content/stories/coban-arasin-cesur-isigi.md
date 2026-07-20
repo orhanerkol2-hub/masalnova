@@ -3,6 +3,8 @@ title: "Çoban Aras'ın Cesur Işığı"
 shortDescription: "Yıldızlı bir gecede kaybolan kuzuları bulmak için karanlıktan korkmayı bırakan bir çobanın kısa öyküsü."
 coverEmoji: "⭐"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/coban-arasin-cesur-isigi.webp"
+altText: "Kapak görseli: Çoban Aras'ın Cesur Işığı"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

@@ -3,6 +3,8 @@ title: "Minik Elif ve Çayırın Uyuyan Yıldızları"
 shortDescription: "Meraklı küçük bir kızın geniş bir çayırda yeni bir arkadaş bulup birlikte huzurla uykuya dalmasını anlatan sakin bir uyku masalı."
 coverEmoji: "🌾"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/minik-elif-ve-cayirin-uyuyan-yildizlari.webp"
+altText: "Kapak görseli: Minik Elif ve Çayırın Uyuyan Yıldızları"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

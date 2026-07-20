@@ -3,6 +3,8 @@ title: "Duran'ın Dağ Kulübesi"
 shortDescription: "İyi kalpli bir çobanın, yolunu kaybeden yaşlı bir yolcuya saygıyla kapısını açmasını anlatan sıcacık bir masal."
 coverEmoji: "🏔️"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/duranin-dag-kulubesi.webp"
+altText: "Kapak görseli: Duran'ın Dağ Kulübesi"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

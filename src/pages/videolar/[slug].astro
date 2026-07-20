@@ -5,6 +5,7 @@ import RelatedVideos from '../../components/RelatedVideos.astro';
 import { videos, videoBySlug } from '../../data/videos';
 import { getStories, storyById } from '../../data/stories';
 import { videoCategoryLabel } from '../../data/taxonomy';
+import { compactDescription, durationToIso, formatTurkishDate, videoSeoTitle } from '../../lib/seo';
 
 export async function getStaticPaths() {
   return videos.map((video) => ({ params: { slug: video.slug }, props: { video } }));
@@ -22,24 +23,49 @@ const relatedStories = (video.relatedStoryIds ?? [])
   .filter(Boolean);
 
 const watchUrl = `https://www.youtube.com/watch?v=${video.youtubeVideoId}`;
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'VideoObject',
-  name: video.title,
-  description: video.shortDescription ?? `${video.title} — MasalNova Çocuk`,
-  thumbnailUrl: [video.thumbnailUrl],
-  uploadDate: video.publishedAt,
-  contentUrl: watchUrl,
-  embedUrl: `https://www.youtube-nocookie.com/embed/${video.youtubeVideoId}`,
-  inLanguage: 'tr-TR',
-  publisher: { '@type': 'Organization', name: 'MasalNova Çocuk', logo: { '@type': 'ImageObject', url: 'https://masalnova.com/logo.png' } },
-};
+const pagePath = `/videolar/${video.slug}/`;
+const pageUrl = `https://masalnova.com${pagePath}`;
+const thumbnailUrl = `https://masalnova.com${video.thumbnailUrl}`;
+const videoDescription = compactDescription(video.shortDescription ?? `${video.title} çocuk videosunu MasalNova'da izle.`);
+const durationIso = durationToIso(video.duration);
+const publishedLabel = video.publishedAt ? formatTurkishDate(video.publishedAt.slice(0, 10)) : undefined;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    '@id': `${pageUrl}#video`,
+    name: video.title,
+    description: videoDescription,
+    thumbnailUrl: [thumbnailUrl],
+    uploadDate: video.publishedAt,
+    duration: durationIso,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${video.youtubeVideoId}`,
+    url: pageUrl,
+    inLanguage: 'tr-TR',
+    isFamilyFriendly: true,
+    publisher: { '@id': 'https://masalnova.com/#organization' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Çocuk Videoları', item: 'https://masalnova.com/videolar/' },
+      { '@type': 'ListItem', position: 3, name: video.title, item: pageUrl },
+    ],
+  },
+];
 ---
 <BaseLayout
-  title={`${video.title} — MasalNova Çocuk Videosu`}
-  description={video.shortDescription ?? `${video.title} — çocuklar için güvenli video, MasalNova Çocuk.`}
-  path={`/videolar/${video.slug}/`}
+  title={videoSeoTitle(video.title)}
+  description={videoDescription}
+  path={pagePath}
   image={video.thumbnailUrl}
+  imageAlt={`${video.title} video küçük resmi`}
+  ogType="video.other"
+  publishedTime={video.publishedAt}
+  preloadImage={video.thumbnailUrl}
   jsonLd={jsonLd}
   activeNav="videolar"
 >
@@ -58,7 +84,11 @@ const jsonLd = {
           {video.categories.map((c) => <a class="tag" href={`/videolar/?kategori=${c}`}>{videoCategoryLabel(c)}</a>)}
           {video.duration && <span class="tag">⏱️ {video.duration}</span>}
         </div>
-        {video.shortDescription && <p class="desc">{video.shortDescription}</p>}
+        <p class="video-byline">
+          <span>MasalNova Çocuk</span>
+          {publishedLabel && <><span aria-hidden="true">·</span><time datetime={video.publishedAt}>{publishedLabel} tarihinde yayınlandı</time></>}
+        </p>
+        <p class="desc">{videoDescription}</p>
         <a class="btn btn-yt" href={watchUrl} target="_blank" rel="noopener">▶ YouTube'da aç</a>
       </div>
 
@@ -92,6 +122,8 @@ const jsonLd = {
   .info { color: #fff; margin-top: 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
   .info h1 { font-size: clamp(1.5rem, 3.6vw, 2.2rem); }
   .info .meta { display: flex; gap: 8px; flex-wrap: wrap; }
+  .video-byline { display: flex; flex-wrap: wrap; gap: 7px; color: rgba(255,255,255,.66); font-size: .78rem; font-weight: 750; }
+  .video-byline span:first-child { color: #ffd77a; }
   .info .desc { color: var(--soft); max-width: 70ch; }
 
   .story-cta {

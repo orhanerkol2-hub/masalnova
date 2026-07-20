@@ -3,6 +3,8 @@ title: "Keloğlan ve Terazinin Adil Sesi"
 shortDescription: "Keloğlan, eski bir değirmende yaşanan haksız bir paylaşım kavgasını akıl ve dürüstlükle çözer."
 coverEmoji: "⚖️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-terazinin-adil-sesi.webp"
+altText: "Kapak görseli: Keloğlan ve Terazinin Adil Sesi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

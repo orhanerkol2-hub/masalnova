@@ -3,6 +3,8 @@ title: "Sevgi Amca'nın Kabak Sepeti"
 shortDescription: "Güler yüzlü bir bahçıvanın bol ürünlü kabak sepetini köylülerle paylaşarak herkesin karnını doyurduğu sıcak bir masal."
 coverEmoji: "🎃"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/sevgi-amcanin-kabak-sepeti.webp"
+altText: "Kapak görseli: Sevgi Amca'nın Kabak Sepeti"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

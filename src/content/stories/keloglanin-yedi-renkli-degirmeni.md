@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yedi Renkli Değirmeni"
 shortDescription: "Keloğlan'ın, eski bir değirmende farklı köylerden gelen komşuları barıştırıp hoşgörüyü öğrettiği eğlenceli bir macera."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yedi-renkli-degirmeni.webp"
+altText: "Kapak görseli: Keloğlan'ın Yedi Renkli Değirmeni"
 ageGroups: ["5-7"]
 readingTime: 4
 categories: ["keloglan"]

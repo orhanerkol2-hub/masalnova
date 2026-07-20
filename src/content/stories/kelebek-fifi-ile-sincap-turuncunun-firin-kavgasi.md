@@ -3,6 +3,8 @@ title: "Kelebek Fifi ile Sincap Turuncu'nun Fırın Kavgası"
 shortDescription: "Bir yanlış anlaşılma yüzünden küsen kelebek ile sincap, mis kokulu bir fırında yeniden barışıp affetmenin tatlılığını öğrenirler."
 coverEmoji: "🦋"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/kelebek-fifi-ile-sincap-turuncunun-firin-kavgasi.webp"
+altText: "Kapak görseli: Kelebek Fifi ile Sincap Turuncu'nun Fırın Kavgası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

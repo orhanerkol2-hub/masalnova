@@ -3,6 +3,8 @@ title: "Minik Damla ile Kocaman Karınca"
 shortDescription: "Serin bir pınarın başında yaşayan alçakgönüllü bir karıncanın, güçlü olduğunu düşünen bir böcek arkadaşına asıl gücün ne olduğunu öğrettiği sıcacık bir masal."
 coverEmoji: "🐜"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/minik-damla-ile-kocaman-karinca.webp"
+altText: "Kapak görseli: Minik Damla ile Kocaman Karınca"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["hayvan"]

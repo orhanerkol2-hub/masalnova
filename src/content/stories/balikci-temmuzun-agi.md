@@ -3,6 +3,8 @@ title: "Balıkçı Temmuz'un Ağı"
 shortDescription: "Sabırlı bir balıkçının, komşularının unuttuğu bir sözü yerine getirerek küçük köye örnek olmasını anlatan kısa bir masal."
 coverEmoji: "🎣"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/balikci-temmuzun-agi.webp"
+altText: "Kapak görseli: Balıkçı Temmuz'un Ağı"
 ageGroups: ["7-9"]
 readingTime: 1
 categories: ["kisa"]

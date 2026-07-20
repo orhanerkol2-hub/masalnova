@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin Kar Battaniyesi"
 shortDescription: "Kar altında kalan köyde şefkatli bir ninenin başlattığı yardımlaşma zinciri, herkesin ısınmasını sağlar."
 coverEmoji: "❄️"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-sevginin-kar-battaniyesi.webp"
+altText: "Kapak görseli: Nine Sevgi'nin Kar Battaniyesi"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "İki Baykuşun Bekleme Oyunu"
 shortDescription: "Sakin bir gölün kıyısında yaşayan iki baykuşun, balık tutmayı ve sabrı öğrenirken yaşadığı sıcacık bir dostluk hikâyesi."
 coverEmoji: "🦉"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/iki-baykusun-bekleme-oyunu.webp"
+altText: "Kapak görseli: İki Baykuşun Bekleme Oyunu"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Çoban Sadık'ın Sabırlı Mağarası"
 shortDescription: "İyi kalpli bir çobanın, gizemli bir mağarada sabırla beklerken bulduğu huzuru anlatan yumuşacık bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-sadikin-sabirli-magarasi.webp"
+altText: "Kapak görseli: Çoban Sadık'ın Sabırlı Mağarası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

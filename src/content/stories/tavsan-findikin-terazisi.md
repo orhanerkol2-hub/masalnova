@@ -3,6 +3,8 @@ title: "Tavşan Fındık'ın Terazisi"
 shortDescription: "Kalabalık bir çarşıda dürüstlüğüyle tanınan küçük bir tavşanın, herkesin güvenini kazanma öyküsü."
 coverEmoji: "🐰"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/tavsan-findikin-terazisi.webp"
+altText: "Kapak görseli: Tavşan Fındık'ın Terazisi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

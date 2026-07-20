@@ -3,6 +3,8 @@ title: "Nine Sevgi'nin Kırılan Vazosu"
 shortDescription: "Şefkatli bir ninenin, sevdiği vazoyu kıran küçük kızı affetmesiyle çiçekli bahçede yaşanan tatlı bir ders."
 coverEmoji: "🌸"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/nine-sevginin-kirilan-vazosu.webp"
+altText: "Kapak görseli: Nine Sevgi'nin Kırılan Vazosu"
 ageGroups: ["5-7"]
 readingTime: 1
 categories: ["kisa"]

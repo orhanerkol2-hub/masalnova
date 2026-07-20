@@ -3,6 +3,8 @@ title: "Nine Sultan'ın Kırık Sepeti"
 shortDescription: "Kalabalık bir çarşıda kazayla dökülen elmalar, küçük bir çocuğa affetmenin gücünü öğretir."
 coverEmoji: "🧺"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-sultanin-kirik-sepeti.webp"
+altText: "Kapak görseli: Nine Sultan'ın Kırık Sepeti"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

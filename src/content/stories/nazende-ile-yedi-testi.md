@@ -3,6 +3,8 @@ title: "Nazende ile Yedi Testi"
 shortDescription: "Meraklı bir kızın serin pınar başında paylaşmayı öğrenmesini anlatan sıcak bir eğitici masal."
 coverEmoji: "💧"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nazende-ile-yedi-testi.webp"
+altText: "Kapak görseli: Nazende ile Yedi Testi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["egitici"]

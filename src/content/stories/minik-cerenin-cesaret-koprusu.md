@@ -3,6 +3,8 @@ title: "Minik Ceren'in Cesaret Köprüsü"
 shortDescription: "Sakin bir gölün kıyısında yaşayan çekingen bir tavşan yavrusunun, yardımsever komşusu sayesinde cesareti keşfetmesinin öyküsü."
 coverEmoji: "🐇"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/minik-cerenin-cesaret-koprusu.webp"
+altText: "Kapak görseli: Minik Ceren'in Cesaret Köprüsü"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Turuncu Tilki ile Beyaz Kuzunun Şemsiyesi"
 shortDescription: "Yağmurlu bir akşamda birbirine sığınan bir tilki ile bir kuzunun yardımlaşmayı öğrendiği sıcacık bir masal."
 coverEmoji: "🦊"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/turuncu-tilki-ile-beyaz-kuzunun-semsiyesi.webp"
+altText: "Kapak görseli: Turuncu Tilki ile Beyaz Kuzunun Şemsiyesi"
 ageGroups: ["3-5"]
 readingTime: 3
 categories: ["hayvan"]

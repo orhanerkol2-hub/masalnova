@@ -3,6 +3,8 @@ title: "Yedi Renkli Şemsiye"
 shortDescription: "Işıl ışıl bir sarayda yaşlı bir dedenin, farklı olan bir misafiri kabul ederek herkese hoşgörüyü öğrettiği tatlı bir masal."
 coverEmoji: "☂️"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/yedi-renkli-semsiye.webp"
+altText: "Kapak görseli: Yedi Renkli Şemsiye"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Mis Kokulu Fırın Sırrı"
 shortDescription: "Meraklı Keloğlan, köyün ucundaki gizemli fırının kokusunun sırrını çözerken hem padişahın gönlünü hem de fırıncı ninenin yüreğini kazanır."
 coverEmoji: "🍞"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-mis-kokulu-firin-sirri.webp"
+altText: "Kapak görseli: Keloğlan'ın Mis Kokulu Fırın Sırrı"
 ageGroups: ["5-7"]
 readingTime: 4
 categories: ["keloglan"]

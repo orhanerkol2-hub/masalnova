@@ -3,6 +3,8 @@ title: "Minik Elif'in Şükür Yıldızı"
 shortDescription: "Meraklı küçük bir kızın serin bir pınar başında şükretmeyi öğrendiği, huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/minik-elifin-sukur-yildizi.webp"
+altText: "Kapak görseli: Minik Elif'in Şükür Yıldızı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

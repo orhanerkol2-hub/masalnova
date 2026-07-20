@@ -3,6 +3,8 @@ title: "Fırıncı Ömer'in Yedi Ekmeği"
 shortDescription: "Farklı köylerden gelen yedi yolcunun mis kokulu bir fırında hoşgörüyle paylaştığı sıcacık bir öğle vakti."
 coverEmoji: "🍞"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/firinci-omerin-yedi-ekmegi.webp"
+altText: "Kapak görseli: Fırıncı Ömer'in Yedi Ekmeği"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["kisa"]

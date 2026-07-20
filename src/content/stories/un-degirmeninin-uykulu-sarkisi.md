@@ -3,6 +3,8 @@ title: "Un Değirmeninin Uykulu Şarkısı"
 shortDescription: "Yaşlı bir dede, eski değirmende komşularıyla paylaştığı unla yıldızlar altında huzurlu bir gece geçirir."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/un-degirmeninin-uykulu-sarkisi.webp"
+altText: "Kapak görseli: Un Değirmeninin Uykulu Şarkısı"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

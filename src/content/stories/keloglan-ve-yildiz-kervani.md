@@ -3,6 +3,8 @@ title: "Keloğlan ve Yıldız Kervanı"
 shortDescription: "Keloğlan'ın yıldızlı bir gecede yolunu kaybeden bir kervana yardım ederek herkesin gücünü birleştirmesinin hikâyesi."
 coverEmoji: "⭐"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglan-ve-yildiz-kervani.webp"
+altText: "Kapak görseli: Keloğlan ve Yıldız Kervanı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

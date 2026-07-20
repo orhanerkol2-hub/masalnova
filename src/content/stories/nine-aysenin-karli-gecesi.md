@@ -3,6 +3,8 @@ title: "Nine Ayşe'nin Karlı Gecesi"
 shortDescription: "Karlı bir kış gecesinde şefkatli bir ninenin dürüstlüğü, küçük bir kar tanesi kadar saf ve sıcacık bir uyku masalı."
 coverEmoji: "❄️"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/nine-aysenin-karli-gecesi.webp"
+altText: "Kapak görseli: Nine Ayşe'nin Karlı Gecesi"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["uyku"]

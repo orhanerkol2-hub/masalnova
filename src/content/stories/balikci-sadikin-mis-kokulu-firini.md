@@ -3,6 +3,8 @@ title: "Balıkçı Sadık'ın Mis Kokulu Fırını"
 shortDescription: "Sabırlı bir balıkçının, ay ışığında mis kokulu bir fırından çıkan sıcacık ekmeği herkesle paylaşmasının huzurlu hikâyesi."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/balikci-sadikin-mis-kokulu-firini.webp"
+altText: "Kapak görseli: Balıkçı Sadık'ın Mis Kokulu Fırını"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

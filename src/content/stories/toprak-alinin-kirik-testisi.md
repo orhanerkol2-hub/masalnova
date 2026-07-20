@@ -3,6 +3,8 @@ title: "Toprak Ali'nin Kırık Testisi"
 shortDescription: "Yemyeşil ormanda oynarken komşusunun testisini kıran küçük Ali'nin dürüstlükle özür dilemesini anlatan öğretici bir masal."
 coverEmoji: "🏺"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/toprak-alinin-kirik-testisi.webp"
+altText: "Kapak görseli: Toprak Ali'nin Kırık Testisi"
 ageGroups: ["7-9"]
 readingTime: 2
 categories: ["egitici"]

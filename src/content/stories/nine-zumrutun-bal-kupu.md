@@ -3,6 +3,8 @@ title: "Nine Zümrüt'ün Bal Küpü"
 shortDescription: "Yemyeşil bir ormanda yaşayan şefkatli bir ninenin, çalışkanlığın gerçek değerini bir çocuğa öğretmesini anlatan sıcak bir masal."
 coverEmoji: "🍯"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/nine-zumrutun-bal-kupu.webp"
+altText: "Kapak görseli: Nine Zümrüt'ün Bal Küpü"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["egitici"]

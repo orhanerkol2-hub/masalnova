@@ -3,6 +3,8 @@ title: "Keloğlan'ın Altın Elması"
 shortDescription: "Keloğlan, ışıl ışıl bir sarayda kaybolan altın elmayı bulup dürüstlüğüyle padişahın gönlünü kazanır."
 coverEmoji: "🍎"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-altin-elmasi.webp"
+altText: "Kapak görseli: Keloğlan'ın Altın Elması"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

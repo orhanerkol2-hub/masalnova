@@ -3,6 +3,8 @@ title: "Minik Derya'nın Şükür Fenerleri"
 shortDescription: "Ay ışığında bir patikada yaşlı bir dedeyle tanışan küçük bir kızın, sahip olduklarına şükretmeyi öğrenmesinin sıcacık öyküsü."
 coverEmoji: "🌕"
 coverColor: "#3bb98b"
+coverImage: "/covers/stories/minik-deryanin-sukur-fenerleri.webp"
+altText: "Kapak görseli: Minik Derya'nın Şükür Fenerleri"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["egitici"]

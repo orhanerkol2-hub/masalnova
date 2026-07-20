@@ -1,8 +1,10 @@
 ---
-title: "Keloğlan'ın Verdiği Söz"
-shortDescription: "Keloğlan, ışıl ışıl bir sarayda verdiği küçük bir sözü tutarak padişahı ve kendini büyük bir dertten kurtarır."
+title: "Keloğlan ve Padişahın Gül Sözü"
+shortDescription: "Keloğlan, solan saray gülünü eski bahçıvanla kurtarır ve padişahın verdiği sözü tutarak yaşlı kadını yeniden bahçenin başına getirmesini sağlar."
 coverEmoji: "🤝"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-verdigi-soz.webp"
+altText: "Kapak görseli: Keloğlan'ın Verdiği Söz"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Çoban Rüzgin'in Yumuşak Kulübesi"
 shortDescription: "Dağ başındaki kulübesinde yaşayan iyi kalpli bir çoban, battaniyesini ve sıcak sütünü küçük hayvanlarla paylaşarak hepsini uykuya hazırlar."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/coban-ruzginin-yumusak-kulubesi.webp"
+altText: "Kapak görseli: Çoban Rüzgin'in Yumuşak Kulübesi"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

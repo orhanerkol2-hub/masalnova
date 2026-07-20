@@ -3,6 +3,8 @@ title: "Vardak Ördeğin Yaprak Köprüsü"
 shortDescription: "Yemyeşil bir ormanda yaşayan yardımsever bir ördeğin, arkadaşlarıyla birlikte küçük bir sorunu nasıl büyük bir dayanışmaya dönüştürdüğünü anlatan sıcacık bir masal."
 coverEmoji: "🦆"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/vardak-ordegin-yaprak-koprusu.webp"
+altText: "Kapak görseli: Vardak Ördeğin Yaprak Köprüsü"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

@@ -3,6 +3,8 @@ title: "Tilki Zeyno'nun Sabırlı Hasadı"
 shortDescription: "Altın başaklı bir tarlada, tembel bir aslana karşı azimle çalışan küçük bir tilkinin öğretici öyküsü."
 coverEmoji: "🌾"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/tilki-zeynonun-sabirli-hasadi.webp"
+altText: "Kapak görseli: Tilki Zeyno'nun Sabırlı Hasadı"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["hayvan"]

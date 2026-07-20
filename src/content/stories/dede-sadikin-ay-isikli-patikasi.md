@@ -3,6 +3,8 @@ title: "Dede Sadık'ın Ay Işıklı Patikası"
 shortDescription: "Yaşlı bilge bir dedenin ay ışığında yürüdüğü patikada, her canlıya gösterdiği saygının anlatıldığı huzurlu bir uyku masalı."
 coverEmoji: "🌙"
 coverColor: "#7b5cff"
+coverImage: "/covers/stories/dede-sadikin-ay-isikli-patikasi.webp"
+altText: "Kapak görseli: Dede Sadık'ın Ay Işıklı Patikası"
 ageGroups: ["3-5"]
 readingTime: 2
 categories: ["uyku"]

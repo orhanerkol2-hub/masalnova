@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import StoryCard from '../../../../components/StoryCard.astro';
+import { getStories } from '../../../../data/stories';
+import { ageGroups } from '../../../../data/taxonomy';
+
+export async function getStaticPaths() {
+  return ageGroups.map((age) => ({ params: { age: age.key }, props: { age } }));
+}
+
+const { age } = Astro.props;
+const allStories = await getStories();
+const stories = allStories.filter((story) => story.data.ageGroups.includes(age.key));
+const path = `/masallar/yas/${age.key}/`;
+const title = `${age.label} Masalları Oku – Yaşa Uygun Çocuk Hikâyeleri`;
+const description = `${age.label} çocuklar için masal oku: Yaşa uygun, kısa, eğitici ve ücretsiz Türkçe çocuk masallarını MasalNova'da keşfet.`;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: title,
+    description,
+    url: `https://masalnova.com${path}`,
+    inLanguage: 'tr-TR',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: stories.length,
+      itemListElement: stories.slice(0, 30).map((story, index) => ({
+        '@type': 'ListItem', position: index + 1, name: story.data.title,
+        url: `https://masalnova.com/masallar/${story.id}/`,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Masallar', item: 'https://masalnova.com/masallar/' },
+      { '@type': 'ListItem', position: 3, name: `${age.label} Masalları`, item: `https://masalnova.com${path}` },
+    ],
+  },
+];
+---
+<BaseLayout title={`${title} | MasalNova`} description={description} path={path} jsonLd={jsonLd} activeNav="masallar">
+  <section class="section age-page">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Ana Sayfa</a><span>›</span><a href="/masallar/">Masallar</a><span>›</span><span>{age.label} Masalları</span>
+      </nav>
+      <header class="age-head">
+        <p class="kicker">Yaşa göre masal oku</p>
+        <h1>{age.label} Masalları</h1>
+        <p>{age.label} çocukların ilgisine ve birlikte okuma alışkanlığına uygun kısa, eğitici ve hayal gücünü destekleyen Türkçe masalları keşfedin.</p>
+        <strong>{stories.length} masal</strong>
+      </header>
+      <div class="age-links" aria-label="Diğer yaş grupları">
+        {ageGroups.filter((item) => item.key !== age.key).map((item) => (
+          <a href={`/masallar/yas/${item.key}/`}>{item.label} masalları</a>
+        ))}
+      </div>
+      <div class="grid grid-3 story-grid">
+        {stories.map((story) => <StoryCard story={story} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .age-page { color: #fff; }
+  .crumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; color: rgba(255,255,255,.78); font-weight: 700; }
+  .crumbs a:hover { color: #fff; text-decoration: underline; }
+  .age-head { max-width: 850px; padding: clamp(26px,5vw,48px); border: 1px solid rgba(255,255,255,.24); border-radius: 30px; background: rgba(255,255,255,.1); box-shadow: 0 26px 70px rgba(6,20,60,.22); }
+  .kicker { color: #ffd77a; font-size: .8rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+  h1 { margin: 8px 0 14px; font-size: clamp(2.4rem,6vw,4.8rem); letter-spacing: -.055em; }
+  .age-head > p:last-of-type { max-width: 66ch; color: rgba(255,255,255,.86); font-size: 1.05rem; }
+  .age-head strong { display: inline-flex; margin-top: 18px; padding: 7px 13px; border-radius: 999px; background: #fff; color: var(--blue-d); }
+  .age-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0; }
+  .age-links a { padding: 9px 15px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.12); font-weight: 750; }
+  .story-grid :global(.story-card) { box-shadow: 0 22px 55px rgba(6,20,60,.2); }
+</style>

@@ -9,12 +9,16 @@
     "preview": "astro preview",
     "gen:stories": "node scripts/generate-stories.mjs",
     "gen:covers": "node scripts/generate-cover-briefs.mjs",
+    "premium:covers": "npx -y node@20 scripts/generate-premium-cover-images.mjs",
+    "premium:covers:all": "npx -y node@20 scripts/generate-premium-cover-images.mjs --all-stories --all --force --resume --continue-on-error --concurrency=1 --quality=medium --size=1024x1024 --final-width=1024 --webp-quality=84",
     "optimize:covers": "node scripts/optimize-cover-images.mjs",
     "apply:covers": "node scripts/apply-cover-images.mjs",
     "render:legal": "node scripts/render-legal-images.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
+    "@fontsource/nunito": "^5.3.0",
+    "@phosphor-icons/web": "^2.1.2",
     "astro": "^5.6.1"
   },
   "devDependencies": {

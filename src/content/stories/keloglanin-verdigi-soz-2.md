@@ -1,8 +1,10 @@
 ---
-title: "Keloğlan'ın Verdiği Söz"
-shortDescription: "Keloğlan, yaşlı bir kadına verdiği sözü tutmak için köyün en zor günlerinde bile direnir ve herkese örnek olur."
+title: "Keloğlan'ın Benekli İçin Verdiği Söz"
+shortDescription: "Keloğlan, Nine Ayşe'nin keçisi Benekli'yi bir kese altın karşılığında vermeyi reddeder ve güvenin her hazineden daha değerli olduğunu kanıtlar."
 coverEmoji: "🤝"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-verdigi-soz-2.webp"
+altText: "Kapak görseli: Keloğlan'ın Verdiği Söz"
 ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]

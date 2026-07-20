@@ -1,0 +1,23 @@
+---
+import StoryTopicPage from '../../../components/StoryTopicPage.astro';
+import { getStories } from '../../../data/stories';
+
+const allStories = await getStories();
+const illustratedStories = allStories.filter((story) => Boolean(story.data.coverImage));
+---
+
+<StoryTopicPage
+  path="/masallar/resimli/"
+  title="Resimli Masallar Oku – Görselli Çocuk Hikâyeleri"
+  description="Resimli masallar oku: Çocuklar için özgün kapak görselleriyle sunulan ücretsiz Türkçe uyku, hayvan, eğitici ve Keloğlan hikâyelerini keşfet."
+  kicker="Görseli ve hikâyesi birlikte seçilmiş masallar"
+  heading="Resimli Masallar Oku"
+  intro="Her masalın başlığını, karakterlerini ve atmosferini yansıtan bir kapak görseli vardır. Çocuğunuzla önce resmi inceleyebilir, ardından hikâyeyi sakin MasalNova Reader’da birlikte okuyabilirsiniz."
+  stories={illustratedStories.slice(0, 48)}
+  totalStories={illustratedStories.length}
+  guideTitle="Resimli masal nasıl seçilir?"
+  guideParagraphs={[
+    'Kapaktaki karakter ve ortam, çocuğun hikâyeye merak duymasına yardımcı olan ilk ipucudur. Ardından kart üzerindeki yaş, süre ve kategori bilgisini kontrol ederek akşama uygun seçimi yapabilirsiniz.',
+    'Görseller hikâyenin yerini almaz; tüm masal metni arama motorlarının ve ekran okuyucuların erişebildiği gerçek metin olarak Reader’da sunulur.',
+  ]}
+/>

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Tutumlu Testisi"
 shortDescription: "Keloğlan'ın sakin bir göl kenarında bulduğu kırık testiyi onararak tutumluluğun değerini öğrendiği eğlenceli bir Keloğlan masalı."
 coverEmoji: "🏺"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-tutumlu-testisi.webp"
+altText: "Kapak görseli: Keloğlan'ın Tutumlu Testisi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

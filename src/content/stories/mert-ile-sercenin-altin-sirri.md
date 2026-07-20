@@ -3,6 +3,8 @@ title: "Mert ile Serçenin Altın Sırrı"
 shortDescription: "Cesur bir çocuğun tarlada yardıma muhtaç bir serçeyle kurduğu küçük dostluğun sıcacık öyküsü."
 coverEmoji: "🌾"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/mert-ile-sercenin-altin-sirri.webp"
+altText: "Kapak görseli: Mert ile Serçenin Altın Sırrı"
 ageGroups: ["3-5"]
 readingTime: 1
 categories: ["kisa"]

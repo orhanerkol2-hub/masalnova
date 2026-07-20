@@ -3,6 +3,8 @@ title: "Fındık Kemal'in Unuttuğu Fidan"
 shortDescription: "Yemyeşil bir ormanda unutkan bir bahçıvanın, küçük bir fidanı hatırlayıp sorumluluğunu üstlenmesini anlatan sıcacık bir masal."
 coverEmoji: "🌱"
 coverColor: "#2f74e8"
+coverImage: "/covers/stories/findik-kemalin-unuttugu-fidan.webp"
+altText: "Kapak görseli: Fındık Kemal'in Unuttuğu Fidan"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["kisa"]

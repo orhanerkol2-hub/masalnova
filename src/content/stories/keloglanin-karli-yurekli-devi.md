@@ -3,6 +3,8 @@ title: "Keloğlan'ın Karlı Yürekli Devi"
 shortDescription: "Keloğlan'ın kar fırtınasında köylüsüne yardım etmek için cesaretle korkulan devin kapısını çalması."
 coverEmoji: "❄️"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-karli-yurekli-devi.webp"
+altText: "Kapak görseli: Keloğlan'ın Karlı Yürekli Devi"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

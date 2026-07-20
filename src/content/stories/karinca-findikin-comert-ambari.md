@@ -3,6 +3,8 @@ title: "Karınca Fındık'ın Cömert Ambarı"
 shortDescription: "Küçük bir karıncanın altın başaklı tarlada topladığı yiyecekleri arkadaşlarıyla paylaşarak kışı birlikte geçirmesini anlatan sıcacık bir masal."
 coverEmoji: "🐜"
 coverColor: "#21b6c9"
+coverImage: "/covers/stories/karinca-findikin-comert-ambari.webp"
+altText: "Kapak görseli: Karınca Fındık'ın Cömert Ambarı"
 ageGroups: ["5-7"]
 readingTime: 2
 categories: ["hayvan"]

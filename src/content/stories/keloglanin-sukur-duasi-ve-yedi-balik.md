@@ -3,6 +3,8 @@ title: "Keloğlan'ın Şükür Duası ve Yedi Balık"
 shortDescription: "Keloğlan, deniz kıyısında balıkçılara yardım ederken şükretmenin ve paylaşmanın değerini öğrenir."
 coverEmoji: "🐟"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-sukur-duasi-ve-yedi-balik.webp"
+altText: "Kapak görseli: Keloğlan'ın Şükür Duası ve Yedi Balık"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]

@@ -3,6 +3,8 @@ title: "Keloğlan'ın Yankılı Taş Merdiveni"
 shortDescription: "Keloğlan, gizemli bir mağarada bulduğu taş merdiveni azimle tırmanarak köyüne bereket getirir."
 coverEmoji: "🪜"
 coverColor: "#ffb01f"
+coverImage: "/covers/stories/keloglanin-yankili-tas-merdiveni.webp"
+altText: "Kapak görseli: Keloğlan'ın Yankılı Taş Merdiveni"
 ageGroups: ["5-7"]
 readingTime: 3
 categories: ["keloglan"]
