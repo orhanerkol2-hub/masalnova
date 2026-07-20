@@ -3,6 +3,8 @@ title: "Külkedisi"
 shortDescription: "Üvey ailesi tarafından ocak başında çalıştırılan iyi kalpli bir kızın, bir peri anne yardımıyla saraya gidip prensin gönlünü kazandığı dünyaca sevilen klasik masal."
 coverEmoji: "👠"
 coverColor: "#3d6ab3"
+coverImage: "/covers/stories/kulkedisi.webp"
+altText: "Kapak görseli: Külkedisi"
 ageGroups: ["7-9"]
 readingTime: 11
 categories: ["egitici"]

@@ -3,6 +3,8 @@ title: "Hansel ile Gretel"
 shortDescription: "Ormanda kaybolan iki kardeşin şekerden yapılmış bir eve rastlayıp kurnaz zekâlarıyla kötü bir cadıdan kurtulmasını anlatan dünyaca tanınan klasik masal."
 coverEmoji: "🍬"
 coverColor: "#c9862e"
+coverImage: "/covers/stories/hansel-ile-gretel.webp"
+altText: "Kapak görseli: Hansel ile Gretel"
 ageGroups: ["7-9"]
 readingTime: 11
 categories: ["egitici"]

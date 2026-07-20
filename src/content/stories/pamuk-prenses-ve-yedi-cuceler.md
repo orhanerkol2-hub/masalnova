@@ -3,6 +3,8 @@ title: "Pamuk Prenses ve Yedi Cüceler"
 shortDescription: "Kar gibi beyaz tenli prensesin kıskanç üvey annesinden kaçıp ormanda yedi cüceyle bulduğu dostluğu ve gerçek sevginin gücünü anlatan ünlü klasik masal."
 coverEmoji: "🍎"
 coverColor: "#8e44ad"
+coverImage: "/covers/stories/pamuk-prenses-ve-yedi-cuceler.webp"
+altText: "Kapak görseli: Pamuk Prenses ve Yedi Cüceler"
 ageGroups: ["7-9"]
 readingTime: 11
 categories: ["egitici"]

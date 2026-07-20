@@ -3,6 +3,8 @@ title: "Kırmızı Başlıklı Kız"
 shortDescription: "Ormanın içinden büyükannesine giden küçük kıza kurnaz bir kurdun oyununu ve dikkatli olmanın önemini anlatan, dünyaca ünlü klasik masal."
 coverEmoji: "🧺"
 coverColor: "#d64550"
+coverImage: "/covers/stories/kirmizi-baslikli-kiz.webp"
+altText: "Kapak görseli: Kırmızı Başlıklı Kız"
 ageGroups: ["7-9"]
 readingTime: 11
 categories: ["egitici"]

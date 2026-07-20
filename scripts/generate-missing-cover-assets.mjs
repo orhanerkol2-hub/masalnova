@@ -172,7 +172,34 @@ function pick(seed, values) {
   return values[seed % values.length];
 }
 
+// Well-known classic fairy tales get bespoke scenes/characters instead of the
+// generic keyword inference, which is prone to false-positive substring matches
+// (e.g. "gölgeli" contains "göl") and can't recognise fairy-tale-specific motifs
+// like wolves, glass slippers, or spinning wheels.
+const SLUG_SCENES = {
+  'kirmizi-baslikli-kiz': 'redhood',
+  'pamuk-prenses-ve-yedi-cuceler': 'palace',
+  'kulkedisi': 'palace',
+  'uyuyan-guzel': 'palace',
+  'hansel-ile-gretel': 'candyhouse',
+};
+
+const SLUG_CHARACTERS = {
+  'kirmizi-baslikli-kiz': ['redhood', 'wolf'],
+  'pamuk-prenses-ve-yedi-cuceler': ['princess'],
+  'kulkedisi': ['princess'],
+  'uyuyan-guzel': ['princess'],
+  'hansel-ile-gretel': ['child', 'child'],
+};
+
+const SLUG_FOREGROUND = {
+  'pamuk-prenses-ve-yedi-cuceler': 'appleMirror',
+  'kulkedisi': 'pumpkinSlipper',
+  'uyuyan-guzel': 'spindleRose',
+};
+
 function inferScene(story) {
+  if (SLUG_SCENES[story.slug]) return SLUG_SCENES[story.slug];
   const text = `${story.title} ${story.shortDescription} ${story.body.slice(0, 900)}`;
   if (has(text, 'deniz feneri')) return 'lighthouse';
   if (has(text, 'deniz') || has(text, 'kumsal') || has(text, 'balık') || has(text, 'balik')) return 'sea';
@@ -192,6 +219,7 @@ function inferScene(story) {
 }
 
 function inferCharacters(story) {
+  if (SLUG_CHARACTERS[story.slug]) return SLUG_CHARACTERS[story.slug];
   const source = `${story.title} ${(story.characters || []).join(' ')} ${story.shortDescription}`;
   const chars = [];
 
@@ -304,6 +332,39 @@ function prop(scene, story, palette) {
     tree: `<g opacity=".96"><path d="M118 505 C92 440 132 410 122 356 C166 386 192 438 160 506Z" fill="#1e8f6a"/><rect x="130" y="454" width="28" height="98" rx="14" fill="#8c552c"/></g>`,
     flowers: `<g opacity=".95">${[0, 1, 2, 3, 4].map((i) => `<circle cx="${835 + i * 44}" cy="${612 + (i % 2) * 18}" r="10" fill="${pick(hash(story.slug) + i, ['#ff6f91', '#ffd166', '#7b5cff', '#ffffff'])}"/><rect x="${831 + i * 44}" y="${624 + (i % 2) * 18}" width="8" height="34" rx="4" fill="#247b55"/>`).join('')}</g>`,
   };
+  if (scene === 'redhood') {
+    return `
+      <g transform="translate(800 290)" filter="url(#softShadow-${hash(story.slug)})">
+        <rect x="20" y="170" width="230" height="170" rx="22" fill="#e8c187"/>
+        <path d="M0 178 L135 85 L270 178 Z" fill="#8a4b2e"/>
+        <rect x="60" y="235" width="70" height="105" rx="14" fill="#6d3f28"/>
+        <circle cx="180" cy="255" r="30" fill="#fff4e0"/>
+        <circle cx="180" cy="255" r="30" fill="none" stroke="#d64550" stroke-width="6"/>
+        <rect x="205" y="110" width="24" height="60" rx="8" fill="#7c4a31"/>
+        <circle cx="220" cy="92" r="14" fill="#f2f2f2" opacity=".6"/>
+      </g>
+      ${common.tree}`;
+  }
+  if (scene === 'candyhouse') {
+    return `
+      <g transform="translate(780 250)" filter="url(#softShadow-${hash(story.slug)})">
+        <rect x="20" y="170" width="240" height="180" rx="24" fill="#e8b975"/>
+        <path d="M0 178 L140 80 L280 178 Z" fill="#c0442f"/>
+        <circle cx="40" cy="158" r="12" fill="#ffd166"/>
+        <circle cx="90" cy="146" r="12" fill="#ff6f91"/>
+        <circle cx="150" cy="138" r="12" fill="#7b5cff"/>
+        <circle cx="205" cy="146" r="12" fill="#ffd166"/>
+        <circle cx="250" cy="158" r="12" fill="#ff6f91"/>
+        <rect x="70" y="240" width="66" height="110" rx="14" fill="#7c4a31"/>
+        <circle cx="120" cy="295" r="7" fill="#ffd166"/>
+        <circle cx="180" cy="240" r="26" fill="#fff4e0"/>
+        <circle cx="180" cy="240" r="26" fill="none" stroke="#ff6f91" stroke-width="8" stroke-dasharray="6 8"/>
+        <rect x="240" y="100" width="24" height="60" rx="8" fill="#8a5a2e"/>
+      </g>
+      <g transform="translate(1075 645)">
+        ${[0, 1, 2].map((i) => `<path d="M${i * 44 - 44} 0 v-56" stroke="#fff4e0" stroke-width="16" stroke-linecap="round"/><path d="M${i * 44 - 44} -56 v56" stroke="#e0473f" stroke-width="16" stroke-dasharray="12 12" stroke-linecap="round"/>`).join('')}
+      </g>`;
+  }
   if (scene === 'mill') {
     return `
       <g transform="translate(800 300)" filter="url(#softShadow-${hash(story.slug)})">
@@ -408,8 +469,10 @@ function human(type, x, y, scale, story) {
     gardener: '#3bb98b',
     baker: '#f5efe1',
     ruler: '#127c89',
-    child: pick(hash(story.slug), ['#ff6f61', '#21b6c9', '#7b5cff', '#ffb01f']),
+    child: pick(hash(story.slug + x), ['#ff6f61', '#21b6c9', '#7b5cff', '#ffb01f']),
     giant: '#74a65d',
+    redhood: '#d64550',
+    princess: pick(hash(story.slug + x), ['#f2a7c3', '#7b5cff', '#5ec8ff', '#ffd166']),
   }[type] || '#ff6f61';
   const hat = type === 'shepherd' || type === 'gardener' || type === 'fisherman' || type === 'baker';
   const giant = type === 'giant';
@@ -420,8 +483,10 @@ function human(type, x, y, scale, story) {
       <path d="M-72 128 C-66 70 66 70 72 128 L58 220 L-58 220 Z" fill="${vest}"/>
       <path d="M-44 122 C-32 92 32 92 44 122 L34 210 L-34 210 Z" fill="#fff4df" opacity="${type === 'baker' ? '.35' : '.95'}"/>
       <circle cx="0" cy="45" r="62" fill="${skin}"/>
-      ${type === 'keloglan' ? '' : `<path d="M-54 31 C-38 -28 42 -28 58 32 C28 10 -16 8 -54 31Z" fill="${hair}"/>`}
+      ${type === 'keloglan' || type === 'redhood' ? '' : `<path d="M-54 31 C-38 -28 42 -28 58 32 C28 10 -16 8 -54 31Z" fill="${hair}"/>`}
       ${type === 'grandmother' ? `<path d="M-68 48 C-60 -28 60 -28 70 50 C34 10 -34 10 -68 48Z" fill="#bca6ff"/><path d="M-62 52 C-28 20 30 20 62 52 L50 96 C20 80 -20 80 -50 96Z" fill="#bca6ff"/>` : ''}
+      ${type === 'redhood' ? `<path d="M-58 34 L0 -50 L58 34 Z" fill="#d64550"/><path d="M-66 40 C-58 -34 58 -34 66 42 C32 6 -32 6 -66 40Z" fill="#d64550"/>` : ''}
+      ${type === 'princess' ? `<path d="M-32 -8 L-18 -36 L-6 -10 L0 -42 L6 -10 L18 -36 L32 -8 Z" fill="#ffd166"/>` : ''}
       ${hat ? `<path d="M-70 12 C-28 -28 34 -28 72 12 C42 26 -38 26 -70 12Z" fill="${type === 'baker' ? '#fff7e8' : '#d2a85f'}"/><rect x="-56" y="2" width="112" height="18" rx="9" fill="${type === 'baker' ? '#fff' : '#9c6f37'}"/>` : ''}
       ${type === 'ruler' ? `<path d="M-42 -10 L-18 -54 L0 -10 L22 -54 L46 -10 Z" fill="#ffd166"/>` : ''}
       <circle cx="-22" cy="42" r="7" fill="#18233f"/>
@@ -457,6 +522,7 @@ function animal(type, x, y, scale, story) {
     bee: ['#ffd166', '#2e2b38'],
     lamb: ['#fff7ef', '#e6d7cb'],
     rooster: ['#f4b24a', '#e43f3f'],
+    wolf: ['#8b8fa0', '#4b4f5e'],
     duck: ['#fff7df', '#ffd166'],
     fish: ['#21b6c9', '#ffcf65'],
   }[type] || ['#f5efe9', '#7b5cff'];
@@ -471,6 +537,7 @@ function animal(type, x, y, scale, story) {
   const ears = {
     rabbit: `<ellipse cx="-44" cy="-42" rx="24" ry="72" fill="${main}" transform="rotate(-16 -44 -42)"/><ellipse cx="44" cy="-42" rx="24" ry="72" fill="${main}" transform="rotate(16 44 -42)"/>`,
     fox: `<path d="M-58 0 L-98 -72 L-25 -42 Z" fill="${main}"/><path d="M58 0 L98 -72 L25 -42 Z" fill="${main}"/>`,
+    wolf: `<path d="M-64 -6 L-104 -80 L-24 -42 Z" fill="${main}"/><path d="M64 -6 L104 -80 L24 -42 Z" fill="${main}"/>`,
     cat: `<path d="M-56 -2 L-90 -70 L-20 -36 Z" fill="${main}"/><path d="M56 -2 L90 -70 L20 -36 Z" fill="${main}"/>`,
     dog: `<ellipse cx="-72" cy="12" rx="25" ry="58" fill="${accent}" transform="rotate(22 -72 12)"/><ellipse cx="72" cy="12" rx="25" ry="58" fill="${accent}" transform="rotate(-22 72 12)"/>`,
     bear: `<circle cx="-58" cy="-10" r="30" fill="${main}"/><circle cx="58" cy="-10" r="30" fill="${main}"/>`,
@@ -502,7 +569,7 @@ function animal(type, x, y, scale, story) {
       <circle cx="-28" cy="82" r="3.5" fill="#fff"/>
       <circle cx="36" cy="82" r="3.5" fill="#fff"/>
       <path d="M-22 138 C-5 154 14 154 30 138" stroke="#403025" stroke-width="8" fill="none" stroke-linecap="round"/>
-      ${type === 'fox' ? `<path d="M0 105 L-18 128 H18 Z" fill="#3e251b"/>` : ''}
+      ${type === 'fox' || type === 'wolf' ? `<path d="M0 105 L-18 128 H18 Z" fill="#3e251b"/>` : ''}
       ${type === 'owl' ? `<circle cx="-34" cy="86" r="26" fill="${accent}" opacity=".85"/><circle cx="34" cy="86" r="26" fill="${accent}" opacity=".85"/>` : ''}
     </g>`;
 }
@@ -518,7 +585,7 @@ function moonCharacter(x, y, scale, story) {
 }
 
 function subject(type, x, y, scale, story) {
-  if (['keloglan', 'grandmother', 'grandfather', 'shepherd', 'fisherman', 'gardener', 'baker', 'child', 'giant', 'ruler'].includes(type)) {
+  if (['keloglan', 'grandmother', 'grandfather', 'shepherd', 'fisherman', 'gardener', 'baker', 'child', 'giant', 'ruler', 'redhood', 'princess'].includes(type)) {
     return human(type, x, y, scale, story);
   }
   if (type === 'moon') return moonCharacter(x, y, scale, story);
@@ -542,7 +609,48 @@ function renderSubjects(story) {
   }).join('');
 }
 
+const FOREGROUND_MOTIFS = {
+  appleMirror: `
+    <g transform="translate(700 610)">
+      <ellipse cx="0" cy="46" rx="70" ry="20" fill="#071538" opacity=".14"/>
+      <path d="M0 -34 C-38 -34 -46 4 -30 26 C-16 44 16 44 30 26 C46 4 38 -34 0 -34Z" fill="#e0473f"/>
+      <path d="M0 -34 C-4 -46 -14 -50 -22 -46" stroke="#5c3a20" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M4 -44 C14 -56 26 -54 30 -44 C22 -46 14 -44 8 -38" fill="#2f9c5e"/>
+    </g>
+    <g transform="translate(800 596) rotate(-8)">
+      <ellipse cx="0" cy="66" rx="30" ry="8" fill="#071538" opacity=".14"/>
+      <rect x="-8" y="10" width="16" height="52" rx="6" fill="#c9a24a"/>
+      <ellipse cx="0" cy="-14" rx="42" ry="50" fill="#eaf6ff" opacity=".9"/>
+      <ellipse cx="0" cy="-14" rx="42" ry="50" fill="none" stroke="#c9a24a" stroke-width="8"/>
+    </g>`,
+  pumpkinSlipper: `
+    <g transform="translate(695 615)">
+      <ellipse cx="0" cy="44" rx="80" ry="20" fill="#071538" opacity=".14"/>
+      <ellipse cx="0" cy="0" rx="64" ry="46" fill="#ff9e2c"/>
+      <path d="M-52 0 C-52 -34 52 -34 52 0" fill="none" stroke="#d97a12" stroke-width="6" opacity=".6"/>
+      <path d="M-26 0 C-26 -34 26 -34 26 0" fill="none" stroke="#d97a12" stroke-width="6" opacity=".6"/>
+      <rect x="-8" y="-58" width="16" height="26" rx="6" fill="#5c8a3c"/>
+    </g>
+    <g transform="translate(818 608) rotate(6)">
+      <ellipse cx="0" cy="42" rx="36" ry="10" fill="#071538" opacity=".14"/>
+      <path d="M-30 40 C-30 -6 -6 -30 20 -22 C40 -14 40 10 30 24 C22 36 4 42 -30 40Z" fill="#eaf6ff" opacity=".9"/>
+      <path d="M-30 40 C-30 -6 -6 -30 20 -22 C40 -14 40 10 30 24 C22 36 4 42 -30 40Z" fill="none" stroke="#c9dcff" stroke-width="5"/>
+    </g>`,
+  spindleRose: `
+    <g transform="translate(750 605)">
+      <ellipse cx="0" cy="52" rx="80" ry="18" fill="#071538" opacity=".14"/>
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#c9a24a" stroke-width="10"/>
+      <circle cx="0" cy="0" r="8" fill="#c9a24a"/>
+      <line x1="0" y1="0" x2="0" y2="-70" stroke="#8a5a2e" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="0" cy="-74" r="7" fill="#e0473f"/>
+    </g>
+    <g transform="translate(858 606)">
+      ${[0, 1, 2].map((i) => `<circle cx="${i * 24}" cy="${(i % 2) * 16}" r="15" fill="#ff6f91"/><circle cx="${i * 24}" cy="${(i % 2) * 16}" r="6" fill="#ffd166"/>`).join('')}
+    </g>`,
+};
+
 function foregroundDetails(story, scene, palette) {
+  if (SLUG_FOREGROUND[story.slug]) return FOREGROUND_MOTIFS[SLUG_FOREGROUND[story.slug]];
   const text = `${story.title} ${story.shortDescription}`;
   const items = [];
   if (has(text, 'para') || has(text, 'kumbar')) {

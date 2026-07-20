@@ -3,6 +3,8 @@ title: "Uyuyan Güzel"
 shortDescription: "Kötü bir perinin lanetiyle yüz yıl uykuya dalan Prenses Aurora'nın hikâyesini ve sevginin en katı büyüleri bile bozabileceğini anlatan ünlü klasik masal."
 coverEmoji: "🌹"
 coverColor: "#b06ab3"
+coverImage: "/covers/stories/uyuyan-guzel.webp"
+altText: "Kapak görseli: Uyuyan Güzel"
 ageGroups: ["7-9"]
 readingTime: 11
 categories: ["egitici"]
