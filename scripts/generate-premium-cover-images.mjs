@@ -275,7 +275,47 @@ function leadCharacters(story) {
   return [story.title.split(/\s+(ile|ve)\s+/i)[0]].filter(Boolean);
 }
 
+// Hand-tuned safe prompts for classic tales whose full plot summary/excerpt
+// (jealous queen ordering harm, poison, etc.) tends to trip the image safety
+// filter. These keep the iconic imagery while avoiding trigger phrasing.
+const SLUG_PROMPT_OVERRIDES = {
+  'pamuk-prenses-ve-yedi-cuceler': `Create one premium landscape cover illustration for a Turkish children's fairy tale.
+
+Match the existing MasalNova premium card-cover family: polished, cinematic, richly detailed, expressive, warm, and immediately readable as a story thumbnail.
+
+Main character: an original young fairy-tale princess character, warm fair skin, wavy chestnut-brown hair in a loose side braid, wearing a soft lavender-and-cream storybook dress with a simple embroidered trim, warm kind smile, big expressive eyes.
+
+Scene: the princess stands happily in front of a cozy little forest cottage with a round door, surrounded by tall trees and dappled sunlight. A single shiny red apple and an ornate oval hand mirror rest on a mossy tree stump beside her as symbolic story props. A row of seven tiny friendly boots lined up by the cottage door hints playfully at seven small woodland friends living there, without depicting them directly.
+
+Visual style: high-end animated children's book illustration, polished 3D storybook look, cinematic warm light, rich hand-crafted detail, soft fur/cloth/leaf textures, vivid but tasteful colors, magical fairy-tale atmosphere. This is an original, non-copyrighted MasalNova character design, not based on any existing film or brand.
+
+Composition: 16:10 landscape cover, one character fills about 55% of the frame, clear silhouette, premium card thumbnail readability, leave top-left and top-right corners free of important details for website badges.
+
+Mood: joyful, safe, gentle, wonder-filled, emotionally inviting for children age 3-9.
+
+Hard constraints: no text, no title, no letters, no logo, no watermark, no border, no UI, no book mockup, no speech bubbles, no scary darkness, no weapons, no injury, no aggressive expressions, no other people, no queen, no villain, no photorealism, no flat vector icon style, no cheap clipart, no distorted hands/eyes/faces.`,
+
+  // "Külkedisi" contains the Turkish word "kedi" (cat) as a substring, which
+  // makes the generic character-keyword matcher misidentify her as a cat.
+  'kulkedisi': `Create one premium landscape cover illustration for a Turkish children's fairy tale.
+
+Match the existing MasalNova premium card-cover family: polished, cinematic, richly detailed, expressive, warm, and immediately readable as a story thumbnail.
+
+Main character: an original young fairy-tale girl character in patched work clothes, warm olive skin, curly auburn hair tied back with a simple cloth, warm hopeful smile, big expressive eyes, holding one sparkling glass slipper carefully in both hands.
+
+Scene: the girl stands on stone steps at dusk in front of a warm golden palace gate, a glowing golden pumpkin-shaped carriage waits behind her with soft magical sparkles drifting in the air. This is an original, non-copyrighted MasalNova character design, not based on any existing film or brand.
+
+Visual style: high-end animated children's book illustration, polished 3D storybook look, cinematic warm light, rich hand-crafted detail, soft fabric textures, vivid but tasteful colors, magical fairy-tale atmosphere.
+
+Composition: 16:10 landscape cover, one character fills about 55% of the frame, clear silhouette, premium card thumbnail readability, leave top-left and top-right corners free of important details for website badges.
+
+Mood: joyful, safe, gentle, wonder-filled, emotionally inviting for children age 3-9.
+
+Hard constraints: no text, no title, no letters, no logo, no watermark, no border, no UI, no book mockup, no speech bubbles, no scary darkness, no weapons, no injury, no aggressive expressions, no other people, no cats, no animals, no photorealism, no flat vector icon style, no cheap clipart, no distorted hands/eyes/faces.`,
+};
+
 function buildPrompt(story, hasReference) {
+  if (SLUG_PROMPT_OVERRIDES[story.slug]) return SLUG_PROMPT_OVERRIDES[story.slug];
   const characters = leadCharacters(story);
   const characterLines = characters.map((name) => `- ${describeCharacter(name, story)}`).join('\n');
   const scene = inferScene(story);
