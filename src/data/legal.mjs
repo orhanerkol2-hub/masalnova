@@ -42,7 +42,7 @@ export const imprint = {
 
 export const privacy = {
   title: 'Privacy Policy',
-  subtitle: 'Last updated: 13 July 2026',
+  subtitle: 'Last updated: 20 July 2026',
   sections: [
     {
       heading: '1. Controller',
@@ -69,10 +69,12 @@ export const privacy = {
       ],
     },
     {
-      heading: '4. Analytics and local website storage',
+      heading: '4. Google Analytics 4 and local website storage',
       paragraphs: [
+        'With your consent, MasalNova uses Google Analytics 4, a web analytics service provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. We use measurement ID G-YZYEN24W6J to understand aggregated visitor numbers, page views, approximate traffic sources, device categories and how visitors use the website.',
+        'Google Analytics may process online identifiers, truncated or derived IP information, page URLs, referrers, browser and device information, approximate location, timestamps and interaction data. Google Analytics is configured through Google Consent Mode. Analytics storage is denied by default and is enabled only after you consent to analytics. The legal basis is Article 6(1)(a) GDPR and, where access to or storage of information on your device occurs, Section 25(1) TDDDG. You may withdraw your consent at any time through the cookie settings with effect for the future.',
+        'Google may process data in the United States and other countries. Google LLC is certified under the EU-US Data Privacy Framework; EU Standard Contractual Clauses may also apply. Retention is governed by the settings of the Google Analytics property and Google\'s applicable retention rules. Further information: policies.google.com/privacy and support.google.com/analytics.',
         'MasalNova does not operate its own user account system and does not create its own reading profiles. Reader display settings may be stored locally in your browser so that your preferred reading view can be restored. This local storage remains on your device and is not transmitted to us.',
-        'A consent component may be used to manage optional analytics or advertising-related settings. Essential technical processing is required for the website to function. Non-essential access to device storage is used only where allowed by law or based on consent.',
       ],
     },
     {
