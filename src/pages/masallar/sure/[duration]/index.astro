@@ -1,0 +1,69 @@
+---
+import StoryTopicPage from '../../../../components/StoryTopicPage.astro';
+import { getStories } from '../../../../data/stories';
+import { durationBucketForMinutes } from '../../../../data/taxonomy';
+
+export async function getStaticPaths() {
+  const durationPages = [
+    {
+      key: 'kisa',
+      title: 'Kısa Masallar Oku – 1-2 Dakikalık Çocuk Hikâyeleri',
+      heading: 'Kısa Masallar Oku',
+      description: '1-2 dakikada okunabilen kısa masallar: Çocuklar için ücretsiz, resimli, eğitici ve uyku öncesine uygun Türkçe hikâyeleri keşfet.',
+      kicker: '1-2 dakikalık hızlı masal seçkisi',
+      intro: 'Vaktiniz az olduğunda bile birlikte okuma keyfinden vazgeçmeyin. Bu kısa masallar bir iki dakikada tamamlanır; yatmadan önce, yolculukta veya gün içindeki küçük molalarda okumaya uygundur.',
+      guideTitle: 'Kısa masal ne zaman iyi bir seçimdir?',
+      guideParagraphs: [
+        'Kısa masallar, çocuğun bir hikâyeyi baştan sona tek oturuşta takip etmesini kolaylaştırır. Sayfadaki süre etiketi, metnin yaklaşık birlikte okuma süresini gösterir.',
+        'Uyku öncesinde daha sakin bir ton arıyorsanız süre seçimine ek olarak Uyku Masalları kategorisini; belirli bir yaş için seçim yapıyorsanız yaş bağlantılarını kullanabilirsiniz.',
+      ],
+    },
+    {
+      key: 'orta',
+      title: '3-5 Dakikalık Masallar – Resimli Çocuk Hikâyeleri',
+      heading: '3-5 Dakikalık Masallar',
+      description: '3-5 dakikalık çocuk masalları: Biraz daha ayrıntılı, resimli ve ücretsiz Türkçe hikâyeleri yaşa ve türe göre keşfet.',
+      kicker: 'Biraz daha uzun birlikte okuma zamanı',
+      intro: 'Karakterleri ve olayları biraz daha yakından tanımak isteyenler için hazırlanan bu masallar yaklaşık üç ile beş dakikada okunur. Akşam rutini veya sakin bir aile molası için dengeli bir uzunluk sunar.',
+      guideTitle: '3-5 dakikalık masallar nasıl seçilir?',
+      guideParagraphs: [
+        'Önce yaş etiketine, ardından çocuğun o akşamki ilgisine bakabilirsiniz. Hayvan, Keloğlan, eğitici veya uyku kategorileri aynı süre içinde farklı ruh hâlleri sunar.',
+        'Her kart doğrudan Reader’a açılır; hesap gerekmez ve masal metni çevrimdışı depolanmaz.',
+      ],
+    },
+    {
+      key: 'uzun',
+      title: 'Uzun Masallar Oku – 8-10 Dakikalık Çocuk Masalları',
+      heading: 'Uzun Masallar Oku',
+      description: '8-10 dakikalık uzun masallar: Çocuklar için özgün, resimli ve ücretsiz Türkçe uyku ve macera hikâyelerini sakin Reader’da oku.',
+      kicker: '8-10 dakikalık özgün MasalNova hikâyeleri',
+      intro: 'Daha gelişmiş olay örgüsü, güçlü karakterler ve uzun bir birlikte okuma zamanı arayan aileler için seçilmiş özgün hikâyeler. Her uzun masalda yaş etiketi, gerçekçi okuma süresi ve konu bilgisi bulunur.',
+      guideTitle: 'Uzun masal okurken nelere dikkat edilmeli?',
+      guideParagraphs: [
+        'Uzun bir hikâyeyi tek gecede bitirmek şart değildir. Reader’daki ilerleme yüzdesi yalnızca bu cihazda küçük bir kimlik olarak tutulur; ertesi akşam kaldığınız yerden devam edebilirsiniz.',
+        'Uyku saatinde sakin bir anlatım için Uykucu Ay ile Küçük Yıldız veya Yıldız Toplayan Çocuk’u; daha hareketli bir macera için Keloğlan ve Sevimli Dev’i seçebilirsiniz.',
+      ],
+    },
+  ];
+
+  return durationPages.map((duration) => ({ params: { duration: duration.key }, props: { duration } }));
+}
+
+const { duration } = Astro.props;
+const allStories = await getStories();
+const matchingStories = allStories.filter((story) => durationBucketForMinutes(story.data.readingTime) === duration.key);
+const path = `/masallar/sure/${duration.key}/`;
+---
+
+<StoryTopicPage
+  path={path}
+  title={duration.title}
+  description={duration.description}
+  kicker={duration.kicker}
+  heading={duration.heading}
+  intro={duration.intro}
+  stories={matchingStories.slice(0, 48)}
+  totalStories={matchingStories.length}
+  guideTitle={duration.guideTitle}
+  guideParagraphs={[...duration.guideParagraphs]}
+/>

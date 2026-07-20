@@ -1,6 +1,6 @@
 ---
-title: "Keloğlan'ın Yedi Akçesi"
-shortDescription: "Keloğlan'ın deniz kıyısındaki köyde biriktirdiği akçelerle akıllıca bir çözüm bulup hem kendine hem köylülere yardım ettiği sıcak bir masal."
+title: "Keloğlan'ın Yedi Akçelik Bereketi"
+shortDescription: "Keloğlan biriktirdiği yedi akçeyi tohum, tavuk ve fideler için kullanır; padişah gelmeden önce köyün boş sofralarını ortak emekle berekete kavuşturur."
 coverEmoji: "🐚"
 coverColor: "#ffb01f"
 coverImage: "/covers/stories/keloglanin-yedi-akcesi.webp"

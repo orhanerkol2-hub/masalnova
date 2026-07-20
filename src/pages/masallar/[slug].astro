@@ -8,6 +8,7 @@ import ReadingToolbar from '../../components/ReadingToolbar.astro';
 import { getStories } from '../../data/stories';
 import { videoById } from '../../data/videos';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
+import { compactDescription, formatTurkishDate, storySeoTitle } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const stories = await getStories();
@@ -27,22 +28,42 @@ const primaryCategory = d.categories[0];
 const primaryCategoryLabel = primaryCategory ? storyCategoryLabel(primaryCategory) : 'Masallar';
 const storyUrl = `https://masalnova.com/masallar/${story.id}/`;
 const storyImage = d.coverImage ? `https://masalnova.com${d.coverImage}` : 'https://masalnova.com/logo.png';
+const publishedIso = `${d.publishedAt}T00:00:00+03:00`;
+const publishedLabel = formatTurkishDate(d.publishedAt);
+const seoDescription = compactDescription(d.shortDescription);
+const ageRange = d.ageGroups.map(ageLabel).join(' ve ');
+const primaryTheme = d.themes[0] ?? 'hikâyenin ana fikri';
+const ageBounds = d.ageGroups[0]?.split('-').map(Number) ?? [];
 
 const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${storyUrl}#article`,
+    url: storyUrl,
     headline: d.title,
-    description: d.shortDescription,
-    image: storyImage,
+    description: seoDescription,
+    image: [storyImage],
     inLanguage: 'tr-TR',
-    datePublished: d.publishedAt,
-    dateModified: d.publishedAt,
+    datePublished: publishedIso,
     isAccessibleForFree: true,
     articleSection: d.categories.map(storyCategoryLabel),
-    author: { '@type': 'Organization', name: 'MasalNova Çocuk', url: 'https://masalnova.com/' },
-    publisher: { '@type': 'Organization', name: 'MasalNova Çocuk', logo: { '@type': 'ImageObject', url: 'https://masalnova.com/logo.png' } },
-    mainEntityOfPage: storyUrl,
+    genre: d.categories.map(storyCategoryLabel),
+    keywords: [...d.themes, ...d.categories.map(storyCategoryLabel)].join(', '),
+    timeRequired: `PT${d.readingTime}M`,
+    about: d.themes.map((theme) => ({ '@type': 'Thing', name: theme })),
+    audience: ageBounds.length === 2 ? {
+      '@type': 'PeopleAudience',
+      suggestedMinAge: ageBounds[0],
+      suggestedMaxAge: ageBounds[1],
+    } : undefined,
+    author: {
+      '@type': 'Organization',
+      name: 'MasalNova Çocuk Editör Ekibi',
+      url: 'https://masalnova.com/hakkimizda/',
+    },
+    publisher: { '@id': 'https://masalnova.com/#organization' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': storyUrl },
   },
   {
     '@context': 'https://schema.org',
@@ -57,15 +78,19 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title={`${d.title} | Masal Oku – MasalNova`}
-  description={d.shortDescription}
+  title={storySeoTitle(d.title)}
+  description={seoDescription}
   path={`/masallar/${story.id}/`}
   image={d.coverImage}
+  imageAlt={d.altText ?? `${d.title} resimli masal kapağı`}
+  ogType="article"
+  publishedTime={publishedIso}
+  preloadImage={d.coverImage}
   jsonLd={jsonLd}
   activeNav="masallar"
   readerPage
 >
-  <ReadingToolbar backHref="/masallar/" audioSrc={d.audioUrl} />
+  <ReadingToolbar backHref="/masallar/" audioSrc={d.audioUrl} storyId={story.id} />
 
   <section class="story-page">
     <div class="container">
@@ -92,8 +117,23 @@ const jsonLd = [
                 </>
               ))}
             </div>
+            <p class="reader__byline">
+              <span>MasalNova Çocuk Editör Ekibi</span>
+              <span aria-hidden="true">·</span>
+              <time datetime={publishedIso}>{publishedLabel} tarihinde yayınlandı</time>
+            </p>
             <figure class="reader__cover">
-              <CoverThumb emoji={d.coverEmoji} color={d.coverColor} image={d.coverImage} alt={d.altText ?? d.title} ratio="16 / 9" big />
+              <CoverThumb
+                emoji={d.coverEmoji}
+                color={d.coverColor}
+                image={d.coverImage}
+                alt={d.altText ?? d.title}
+                ratio="16 / 9"
+                big
+                loading="eager"
+                fetchpriority="high"
+                sizes="(max-width: 860px) 100vw, 760px"
+              />
             </figure>
           </header>
 
@@ -102,6 +142,27 @@ const jsonLd = [
           </section>
         </article>
       </div>
+
+      <section class="story-guide" aria-labelledby="story-guide-title">
+        <p class="story-guide__kicker">Masal seçim notu</p>
+        <h2 id="story-guide-title">{d.title} kimler için uygun?</h2>
+        <p>
+          Bu resimli masal MasalNova’da <strong>{ageRange || 'çocuklar'}</strong> için etiketlenmiştir ve birlikte okunduğunda yaklaşık <strong>{d.readingTime} dakika</strong> sürer. Hikâyede {d.themes.length ? d.themes.join(', ') : 'dostluk ve hayal gücü'} temaları öne çıkar.
+        </p>
+        <dl>
+          <div><dt>Yaş</dt><dd>{ageRange || 'Her yaş'}</dd></div>
+          <div><dt>Süre</dt><dd>{d.readingTime} dakika</dd></div>
+          <div><dt>Konu</dt><dd>{d.themes.slice(0, 3).join(' · ') || primaryCategoryLabel}</dd></div>
+        </dl>
+        <div class="story-prompts">
+          <h3>Okuma sonrası birlikte konuşun</h3>
+          <ul>
+            <li>Kahramanın yerinde olsaydın hangi kararı verirdin?</li>
+            <li>Bu masalda {primaryTheme} neden önemliydi?</li>
+          </ul>
+        </div>
+        <a class="editorial-link" href="/hakkimizda/">MasalNova’nın içerik ve seçim yaklaşımı <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </section>
 
       {d.themes.length > 0 && (
         <div class="themes">
@@ -151,6 +212,7 @@ const jsonLd = [
   .crumbs span { opacity: .7; margin: 0 4px; }
 
   .reader-shell,
+  .story-guide,
   .themes,
   .watch,
   .more,
@@ -205,6 +267,17 @@ const jsonLd = [
     font-weight: 800;
   }
 
+  .reader__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    margin-top: .75rem;
+    color: var(--reader-text-soft);
+    font-size: .76rem;
+    font-weight: 700;
+  }
+  .reader__byline span:first-child { color: var(--reader-accent); }
+
   .reader__cover {
     margin: 1.5rem 0 0;
     overflow: hidden;
@@ -237,6 +310,27 @@ const jsonLd = [
     color: var(--reader-accent);
   }
 
+  .story-guide {
+    margin-top: 28px;
+    padding: clamp(22px, 5vw, 34px);
+    border: 1px solid var(--reader-border);
+    border-radius: 24px;
+    background: var(--reader-surface);
+    box-shadow: 0 18px 45px rgba(10,24,55,.08);
+  }
+  .story-guide__kicker { color: var(--reader-accent); font-size: .72rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+  .story-guide h2 { margin-top: 7px; color: var(--reader-text-color); font-size: 1.45rem; }
+  .story-guide > p:not(.story-guide__kicker) { margin-top: 11px; color: var(--reader-text-soft); }
+  .story-guide dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: 18px; }
+  .story-guide dl > div { padding: 12px 13px; border: 1px solid var(--reader-border); border-radius: 13px; background: var(--reader-surface-raised); }
+  .story-guide dt { color: var(--reader-text-soft); font-size: .68rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+  .story-guide dd { margin-top: 3px; color: var(--reader-text-color); font-size: .84rem; font-weight: 850; }
+  .story-prompts { margin-top: 21px; padding-top: 18px; border-top: 1px solid var(--reader-border); }
+  .story-prompts h3 { color: var(--reader-text-color); font-size: 1rem; }
+  .story-prompts ul { margin: 9px 0 0 1.2rem; color: var(--reader-text-soft); }
+  .editorial-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; color: var(--reader-accent); font-size: .82rem; font-weight: 850; }
+  .editorial-link:hover { text-decoration: underline; }
+
   .themes { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 20px; padding: 0 clamp(18px, 5vw, 24px); }
   .themes .tag { border-color: var(--reader-border); background: var(--reader-surface-raised); color: var(--reader-accent); }
 
@@ -247,4 +341,8 @@ const jsonLd = [
   .back { text-align: center; margin: 34px 0 10px; }
   .back .btn-ghost { color: var(--reader-accent); border-color: var(--reader-border); }
   .back .btn-ghost:hover { background: var(--reader-surface-raised); }
+
+  @media (max-width: 640px) {
+    .story-guide dl { grid-template-columns: 1fr; }
+  }
 </style>

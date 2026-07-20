@@ -1,6 +1,6 @@
 ---
-title: "Keloğlan'ın Geniş Çayırdaki Ekini"
-shortDescription: "Keloğlan'ın geniş bir çayırı işleyerek tembel komşularına çalışkanlığın değerini gösterdiği neşeli bir masal."
+title: "Keloğlan'ın Adım Adım Yeşerttiği Çayır"
+shortDescription: "Keloğlan, taşlı ve boş çayırı her gün küçük bir bölümünü işleyerek yeşertir; Tembel Hasan'a da büyük işlerin sabırla tamamlandığını öğretir."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
 coverImage: "/covers/stories/keloglanin-genis-cayirdaki-ekini-2.webp"

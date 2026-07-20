@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StoryCard from './StoryCard.astro';
+import type { Story } from '../data/stories';
+import { ageGroups, durationBuckets, storyCategories } from '../data/taxonomy';
+
+interface Props {
+  path: string;
+  title: string;
+  description: string;
+  kicker: string;
+  heading: string;
+  intro: string;
+  stories: Story[];
+  totalStories: number;
+  guideTitle: string;
+  guideParagraphs: string[];
+}
+
+const {
+  path,
+  title,
+  description,
+  kicker,
+  heading,
+  intro,
+  stories,
+  totalStories,
+  guideTitle,
+  guideParagraphs,
+} = Astro.props;
+const canonical = `https://masalnova.com${path}`;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${canonical}#collection`,
+    name: heading,
+    description,
+    url: canonical,
+    inLanguage: 'tr-TR',
+    isPartOf: { '@id': 'https://masalnova.com/#website' },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: stories.length,
+      itemListElement: stories.map((story, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: story.data.title,
+        url: `https://masalnova.com/masallar/${story.id}/`,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Masal Kütüphanesi', item: 'https://masalnova.com/masallar/' },
+      { '@type': 'ListItem', position: 3, name: heading, item: canonical },
+    ],
+  },
+];
+---
+
+<BaseLayout title={`${title} | MasalNova`} description={description} path={path} jsonLd={jsonLd} activeNav="masallar">
+  <section class="section topic-page">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Ana Sayfa</a><span>›</span><a href="/masallar/">Masal Kütüphanesi</a><span>›</span><span>{heading}</span>
+      </nav>
+
+      <header class="topic-head">
+        <p class="kicker">{kicker}</p>
+        <h1>{heading}</h1>
+        <p>{intro}</p>
+        <div class="topic-meta">
+          <strong>{totalStories} masal</strong>
+          <span>Ücretsiz · Üyeliksiz · Çevrimiçi okuma</span>
+        </div>
+      </header>
+
+      <nav class="topic-links" aria-label="Diğer masal seçimleri">
+        <a href="/masallar/resimli/">Resimli masallar</a>
+        {storyCategories.map((category) => <a href={`/masallar/kategori/${category.key}/`}>{category.label}</a>)}
+        {ageGroups.map((age) => <a href={`/masallar/yas/${age.key}/`}>{age.label}</a>)}
+        {durationBuckets.map((duration) => <a href={`/masallar/sure/${duration.key}/`}>{duration.label}</a>)}
+      </nav>
+
+      <div class="grid grid-3 story-grid">
+        {stories.map((story) => <StoryCard story={story} />)}
+      </div>
+
+      {totalStories > stories.length && (
+        <p class="archive-note">
+          Bu sayfada öne çıkan {stories.length} masal gösteriliyor.
+          <a href="/masallar/">Tüm masal arşivini aç <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </p>
+      )}
+
+      <section class="topic-guide" aria-labelledby="topic-guide-title">
+        <p class="guide-kicker">Ebeveynler için seçim yardımı</p>
+        <h2 id="topic-guide-title">{guideTitle}</h2>
+        {guideParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+        <div class="guide-actions">
+          <a href="/masal-bul/">Masal Bul aracını kullan</a>
+          <a href="/masallar/">Tüm çocuk masalları</a>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .topic-page { color: #fff; }
+  .crumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; color: rgba(255,255,255,.78); font-weight: 750; }
+  .crumbs a:hover { color: #fff; text-decoration: underline; }
+  .topic-head { max-width: 900px; padding: clamp(26px, 5vw, 48px); border: 1px solid rgba(255,255,255,.22); border-radius: 30px; background: rgba(255,255,255,.1); box-shadow: 0 26px 70px rgba(3,20,78,.2); backdrop-filter: blur(16px); }
+  .kicker, .guide-kicker { color: #ffda73; font-size: .78rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+  .topic-head h1 { max-width: 18ch; margin: 8px 0 14px; font-size: clamp(2.35rem, 6vw, 4.8rem); letter-spacing: -.055em; }
+  .topic-head > p:last-of-type { max-width: 70ch; color: rgba(255,255,255,.87); font-size: 1.05rem; }
+  .topic-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-top: 20px; color: rgba(255,255,255,.78); font-size: .88rem; font-weight: 750; }
+  .topic-meta strong { padding: 7px 13px; border-radius: 999px; background: #fff; color: var(--blue-d); }
+  .topic-links { display: flex; flex-wrap: wrap; gap: 9px; margin: 24px 0; }
+  .topic-links a { padding: 8px 13px; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; background: rgba(255,255,255,.11); font-size: .85rem; font-weight: 800; }
+  .topic-links a:hover { background: rgba(255,255,255,.22); }
+  .story-grid { margin-top: 18px; }
+  .archive-note { margin-top: 24px; padding: 15px 18px; border: 1px solid rgba(255,255,255,.18); border-radius: 16px; background: rgba(255,255,255,.09); color: rgba(255,255,255,.82); }
+  .archive-note a { margin-left: 8px; color: #fff; font-weight: 850; }
+  .topic-guide { max-width: 900px; margin-top: 38px; padding: clamp(24px, 5vw, 42px); border: 1px solid rgba(255,255,255,.18); border-radius: 28px; background: #fff; color: var(--ink); box-shadow: 0 25px 70px rgba(3,20,78,.22); }
+  .guide-kicker { color: #1752c5; }
+  .topic-guide h2 { margin: 7px 0 13px; font-size: clamp(1.65rem, 4vw, 2.4rem); }
+  .topic-guide > p:not(.guide-kicker) { max-width: 75ch; margin-top: 11px; color: var(--ink-soft); }
+  .guide-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 21px; }
+  .guide-actions a { padding: 10px 15px; border-radius: 999px; background: #edf3ff; color: #1749ae; font-weight: 850; }
+</style>

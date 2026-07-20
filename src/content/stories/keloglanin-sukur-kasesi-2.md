@@ -1,6 +1,6 @@
 ---
-title: "Keloğlan'ın Şükür Kâsesi"
-shortDescription: "Keloğlan'ın çiçekli bir bahçede küçük bir kâseyle padişahın gönlünü fetheden şükür dolu macerası."
+title: "Keloğlan'ın Küçük Su Kâsesi"
+shortDescription: "Keloğlan, küçük su kâsesi ve sabırlı bakımıyla sarayın solan gül ağacını canlandırır; şükür dolu emeğiyle bahçenin baş bahçıvanı olur."
 coverEmoji: "🌸"
 coverColor: "#ffb01f"
 coverImage: "/covers/stories/keloglanin-sukur-kasesi-2.webp"

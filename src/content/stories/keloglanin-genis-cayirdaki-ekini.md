@@ -1,6 +1,6 @@
 ---
-title: "Keloğlan'ın Geniş Çayırdaki Ekini"
-shortDescription: "Tembel görünen Keloğlan'ın, geniş bir çayırda gösterdiği azimle köylülere ve gururlu bir padişaha çalışkanlığın gerçek değerini öğrettiği masal."
+title: "Keloğlan ve Altın Başaklı Çayır"
+shortDescription: "Keloğlan toprağı tanıyıp Nine Ayşe'den doğru tohumu seçer, sabırla yetiştirdiği altın başaklarla padişaha akıllı çalışmanın değerini gösterir."
 coverEmoji: "🌾"
 coverColor: "#ffb01f"
 coverImage: "/covers/stories/keloglanin-genis-cayirdaki-ekini.webp"

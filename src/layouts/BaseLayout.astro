@@ -12,14 +12,36 @@ interface Props {
   path?: string;
   image?: string;
   noindex?: boolean;
+  ogType?: 'website' | 'article' | 'video.other';
+  imageAlt?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  preloadImage?: string;
   jsonLd?: Record<string, any> | Record<string, any>[];
   activeNav?: string;
   readerPage?: boolean;
+  appShell?: boolean;
 }
-const { title, description, path, image, noindex, jsonLd, activeNav, readerPage = false } = Astro.props;
+const {
+  title,
+  description,
+  path,
+  image,
+  noindex,
+  ogType,
+  imageAlt,
+  publishedTime,
+  modifiedTime,
+  preloadImage,
+  jsonLd,
+  activeNav,
+  readerPage = false,
+  appShell,
+} = Astro.props;
+const useAppShell = appShell ?? !readerPage;
 ---
 <!doctype html>
-<html lang="tr" class:list={[{ 'is-reader-page': readerPage }]}>
+<html lang="tr" class:list={[{ 'is-reader-page': readerPage, 'is-app-shell': useAppShell }]}>
   <head>
     {
       readerPage && (
@@ -47,15 +69,36 @@ const { title, description, path, image, noindex, jsonLd, activeNav, readerPage 
         </script>
       )
     }
-    <BaseHead title={title} description={description} path={path} image={image} noindex={noindex} jsonLd={jsonLd} />
+    <BaseHead
+      title={title}
+      description={description}
+      path={path}
+      image={image}
+      noindex={noindex}
+      ogType={ogType}
+      imageAlt={imageAlt}
+      publishedTime={publishedTime}
+      modifiedTime={modifiedTime}
+      preloadImage={preloadImage}
+      jsonLd={jsonLd}
+    />
     <Consent />
   </head>
-  <body>
+  <body class:list={[{ 'app-shell': useAppShell }]}>
     <a class="skip-link" href="#main">İçeriğe geç</a>
-    <Header active={activeNav} />
+    {!readerPage && <Header active={activeNav} />}
     <main id="main">
       <slot />
     </main>
-    <Footer />
+    {!readerPage && <Footer />}
+    <script is:inline>
+      {`
+        if ('serviceWorker' in navigator && location.protocol === 'https:') {
+          window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js').catch(function () {});
+          });
+        }
+      `}
+    </script>
   </body>
 </html>

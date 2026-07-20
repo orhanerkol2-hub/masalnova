@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#123a97" />
+    <meta name="color-scheme" content="light" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Çevrimdışısın · MasalNova</title>
+    <style>
+      :root {
+        color: #102a66;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-synthesis: none;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { min-height: 100%; }
+
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+          max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+        background:
+          radial-gradient(circle at 50% 6%, rgba(255, 255, 255, 0.2), transparent 32rem),
+          linear-gradient(160deg, #2f74e8 0%, #1f57cf 48%, #123a97 100%);
+      }
+
+      main {
+        width: min(100%, 560px);
+        padding: clamp(28px, 7vw, 52px);
+        text-align: center;
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: clamp(24px, 5vw, 36px);
+        box-shadow: 0 24px 70px rgba(8, 30, 80, 0.28);
+      }
+
+      .mark {
+        width: 92px;
+        aspect-ratio: 1;
+        margin: 0 auto 24px;
+        display: grid;
+        place-items: center;
+        color: #5b2e00;
+        background: linear-gradient(145deg, #ffd268, #ff9a0b);
+        border-radius: 28px;
+        box-shadow: 0 14px 30px rgba(255, 138, 0, 0.3);
+      }
+
+      .mark svg { width: 52px; height: 52px; }
+
+      h1 {
+        margin: 0;
+        font-family: ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+        font-size: clamp(2rem, 7vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+
+      p {
+        margin: 18px auto 0;
+        max-width: 40ch;
+        color: #47547a;
+        font-size: clamp(1rem, 3.5vw, 1.15rem);
+        line-height: 1.65;
+      }
+
+      .actions {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      a {
+        min-height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border: 2px solid #d9e5ff;
+        border-radius: 999px;
+        color: #102a66;
+        background: #fff;
+        font-weight: 800;
+        text-decoration: none;
+        transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      }
+
+      a:first-child {
+        border-color: transparent;
+        color: #5b2e00;
+        background: linear-gradient(90deg, #ffb01f, #ff8a00);
+        box-shadow: 0 10px 24px rgba(255, 140, 0, 0.26);
+      }
+
+      a:hover { transform: translateY(-2px); }
+      a:focus-visible { outline: 4px solid rgba(47, 116, 232, 0.32); outline-offset: 3px; }
+
+      .note {
+        margin-top: 22px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #60709c;
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #ff8a00;
+        box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.14);
+      }
+
+      @media (max-width: 440px) {
+        .actions { grid-template-columns: 1fr; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        a { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <path d="M9 18.5c0-3.2 3.5-5.2 6.2-3.5L32 25.2 48.8 15c2.7-1.7 6.2.3 6.2 3.5v31.2c0 2.8-3 4.6-5.5 3.3L32 43.6 14.5 53C12 54.3 9 52.5 9 49.7V18.5Z" fill="currentColor" opacity=".22" />
+          <path d="m32 17.5 4.4 9 9.9 1.4-7.2 7 1.7 9.9-8.8-4.7-8.8 4.7 1.7-9.9-7.2-7 9.9-1.4 4.4-9Z" fill="currentColor" />
+        </svg>
+      </div>
+      <h1>İnternet bağlantısı yok</h1>
+      <p>
+        Masallar yalnızca çevrimiçi sunulur. Bağlantın geri geldiğinde kaldığın yerden keşfetmeye
+        devam edebilirsin.
+      </p>
+      <div class="actions">
+        <a href="/">Tekrar dene</a>
+        <a href="/masal-bul/">Masal bul</a>
+      </div>
+      <div class="note" aria-live="polite">
+        <span class="dot" aria-hidden="true"></span>
+        İçerikler bu cihaza kaydedilmez
+      </div>
+    </main>
+  </body>
+</html>

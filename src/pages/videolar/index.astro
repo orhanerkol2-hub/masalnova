@@ -6,18 +6,48 @@ import { videoCategories } from '../../data/taxonomy';
 
 // only show categories that actually have videos (keep it simple, max ~5)
 const activeCats = videoCategories.filter((c) => videos.some((v) => v.categories.includes(c.key))).slice(0, 5);
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': 'https://masalnova.com/videolar/#collection',
+    name: 'Çocuk Videoları, Masal Şarkıları ve Animasyonlar',
+    description: 'Çocuklar için Türkçe masal videoları, şarkılar, Keloğlan animasyonları ve eğitici videolar.',
+    url: 'https://masalnova.com/videolar/',
+    inLanguage: 'tr-TR',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: videos.length,
+      itemListElement: videos.map((video, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: video.title,
+        url: `https://masalnova.com/videolar/${video.slug}/`,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Çocuk Videoları', item: 'https://masalnova.com/videolar/' },
+    ],
+  },
+];
 ---
 <BaseLayout
-  title="Çocuk Videoları | Şarkılar, Masal Videoları — MasalNova"
-  description="MasalNova Çocuk videoları: çocuk şarkıları, animasyonlu masallar, Keloğlan ve eğitici videolar. Küçük resme dokun, video güvenle açılsın."
+  title="Çocuk Videoları İzle – Masal Şarkıları ve Animasyonlar | MasalNova"
+  description="Türkçe çocuk videoları izle: Masal şarkıları, Keloğlan animasyonları ve eğitici videolar. Otomatik oynatma olmadan güvenle keşfet."
   path="/videolar/"
+  jsonLd={jsonLd}
   activeNav="videolar"
 >
   <section class="section">
     <div class="container">
       <header class="page-head">
-        <h1>Çocuk Videoları ▶</h1>
-        <p>Çocuk şarkıları, animasyonlu masallar ve eğlenceli videolar. Videolar yalnızca dokunduğunuzda açılır — otomatik oynatma yoktur.</p>
+        <h1>Çocuk Videoları İzle ▶</h1>
+        <p>Türkçe çocuk şarkıları, animasyonlu masallar, Keloğlan maceraları ve eğitici videolar. Her video kendi açıklamalı sayfasında açılır; otomatik oynatma yoktur.</p>
       </header>
 
       <div class="catbar" role="tablist" aria-label="Video kategorileri">

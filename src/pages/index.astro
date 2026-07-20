@@ -1,46 +1,54 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SearchBox from '../components/SearchBox.astro';
-import ChoiceCard from '../components/ChoiceCard.astro';
-import CategoryCard from '../components/CategoryCard.astro';
-import StoryCard from '../components/StoryCard.astro';
-import FeaturedVideos from '../components/FeaturedVideos.astro';
-import CoverThumb from '../components/CoverThumb.astro';
-import { getStories, popularStories, todayStory, storyCount } from '../data/stories';
-import { featuredVideos, newestVideos } from '../data/videos';
-import { ageLabel } from '../data/taxonomy';
+import { getStories, popularStories } from '../data/stories';
+import { featuredVideos } from '../data/videos';
+import {
+  ageLabel,
+  durationBucketForMinutes,
+  storyCategoryLabel,
+  videoCategoryLabel,
+} from '../data/taxonomy';
 
 const stories = await getStories();
-const today = todayStory(stories);
-const popular = popularStories(stories, 6);
-const latest = stories.slice(0, 12);
-const heroStoryIds = [
-  'keloglan-dev',
-  'alice',
+const preferredIds = [
   'aslan-kral-ile-kar-kaplumbagasi',
   'akilli-tavsan',
+  'keloglan-dev',
+  'alice',
   'caliskan-karinca',
   'keloglan-degirmen',
 ];
-const heroStories = heroStoryIds.flatMap((id) => {
+
+const deckStories = preferredIds.flatMap((id) => {
   const story = stories.find((candidate) => candidate.id === id);
   return story?.data.coverImage ? [story] : [];
 });
-const featuredVids = featuredVideos(6);
-const newVids = newestVideos(4);
+
+const continueStories = [...deckStories, ...popularStories(stories, 12)]
+  .filter((story, index, list) => list.findIndex((candidate) => candidate.id === story.id) === index)
+  .filter((story) => story.data.coverImage)
+  .slice(0, 10);
+const videos = featuredVideos(6);
+
+const moodForStory = (story: (typeof stories)[number]) => {
+  const signals = [...story.data.categories, ...story.data.themes].join(' ').toLocaleLowerCase('tr');
+  if (/(uyku|sakin|huzur|sabır|sabir)/.test(signals)) return 'sakin';
+  if (/(macera|cesaret|keşif|kesif|kahraman)/.test(signals)) return 'macera';
+  return 'neseli';
+};
 
 const homeJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   '@id': 'https://masalnova.com/#masal-koleksiyonu',
   name: 'Masal Oku – Uyku Masalları ve Çocuk Hikâyeleri',
-  description: 'Çocuklar için ücretsiz Türkçe uyku masalları, eğitici masallar, kısa masallar ve Keloğlan hikâyeleri.',
+  description: 'Çocuklar için ücretsiz Türkçe uyku masalları, eğitici masallar, kısa masallar ve videolar.',
   url: 'https://masalnova.com/',
   inLanguage: 'tr-TR',
   mainEntity: {
     '@type': 'ItemList',
-    numberOfItems: latest.length,
-    itemListElement: latest.map((story, index) => ({
+    numberOfItems: deckStories.length,
+    itemListElement: deckStories.map((story, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       url: `https://masalnova.com/masallar/${story.id}/`,
@@ -48,1500 +56,853 @@ const homeJsonLd = {
     })),
   },
 };
-
-const homeCats = [
-  { emoji: '🧒', label: 'Keloğlan Masalları', desc: "Keloğlan'ın sevimli maceraları", href: '/masallar/kategori/keloglan/', count: storyCount(stories, 'keloglan'), color: '#ffb01f' },
-  { emoji: '🌙', label: 'Uyku Masalları', desc: 'Uyku öncesi sakin masallar', href: '/masallar/kategori/uyku/', count: storyCount(stories, 'uyku'), color: '#7b5cff' },
-  { emoji: '⏱️', label: 'Kısa Masallar', desc: 'Birkaç dakikada biten masallar', href: '/masallar/kategori/kisa/', count: storyCount(stories, 'kisa'), color: '#2f74e8' },
-  { emoji: '🎓', label: 'Eğitici Masallar', desc: 'Güzel bir ders veren masallar', href: '/masallar/kategori/egitici/', count: storyCount(stories, 'egitici'), color: '#3bb98b' },
-  { emoji: '🦊', label: 'Hayvan Masalları', desc: 'Sevimli hayvan kahramanlar', href: '/masallar/kategori/hayvan/', count: storyCount(stories, 'hayvan'), color: '#21b6c9' },
-  { emoji: '🎈', label: 'Yaşa Göre Masallar', desc: 'Çocuğunuzun yaşına uygun', href: '/masallar/', count: stories.length, color: '#ff8a00' },
-];
 ---
+
 <BaseLayout
   title="Masal Oku – Uyku Masalları ve Çocuk Hikâyeleri | MasalNova"
-  description="Masal oku: Çocuklar için ücretsiz uyku masalları, kısa ve eğitici hikâyeler, hayvan ve Keloğlan masalları. Yaşa ve okuma süresine göre keşfet."
+  description="Masal oku: Çocuklar için ücretsiz uyku masalları, kısa ve eğitici hikâyeler ile güvenli çocuk videoları. Yaşa, süreye ve ruh haline göre keşfet."
   path="/"
+  image={deckStories[0]?.data.coverImage}
+  imageAlt={deckStories[0] ? `${deckStories[0].data.title} resimli masal kapağı` : 'MasalNova çocuk masalları'}
+  preloadImage={deckStories[0]?.data.coverImage}
   jsonLd={homeJsonLd}
   activeNav="home"
 >
-  <!-- 1) PREMIUM HERO -->
-  <section class="premium-hero">
-    <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">MasalNova Çocuk · Türkçe Masal Kütüphanesi</p>
-        <h1>Masal oku, her akşamı küçük bir masal galasına dönüştür.</h1>
-        <p class="lead">
-          Yaşa, süreye ve ruh haline göre seçilmiş yüzlerce masal ve çocuk videosu.
-          Okuma deneyimi artık sakin, modern ve aile dostu.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="/masallar/">📖 Masal koleksiyonunu aç</a>
-          <a class="btn btn-secondary" href="/masal-bul/">✨ Bana masal öner</a>
-        </div>
-        <div class="hero-search">
-          <SearchBox big />
-        </div>
-        <div class="trust-row" aria-label="MasalNova özellikleri">
-          <span>Sakin okuma modu</span>
-          <span>Yaşa göre filtre</span>
-          <span>Uyku öncesi seçimler</span>
-        </div>
-      </div>
-
-      <div class="hero-stage" aria-label="Öne çıkan MasalNova içerikleri">
-        <div class="hero-carousel" data-hero-carousel>
-          {heroStories.map((story, index) => (
-            <a
-              class="showcase-card"
-              href={`/masallar/${story.id}/`}
-              data-hero-slide
-              data-title={story.data.title}
-              data-time={`${story.data.readingTime} dk okuma`}
-              data-state={index === 0 ? 'active' : index === 1 ? 'next' : index === 2 ? 'queued' : 'hidden'}
-              aria-hidden={index === 0 ? 'false' : 'true'}
-              inert={index === 0 ? undefined : true}
-            >
-              <span class="hero-swipe-stamp hero-swipe-stamp--previous" aria-hidden="true">ÖNCEKİ</span>
-              <span class="hero-swipe-stamp hero-swipe-stamp--next" aria-hidden="true">SONRAKİ</span>
-              <div class="showcase-frame">
-                <CoverThumb
-                  emoji={story.data.coverEmoji}
-                  color={story.data.coverColor}
-                  image={story.data.coverImage}
-                  alt={story.data.altText ?? story.data.title}
-                  ratio="4 / 3"
-                  big
-                />
-              </div>
-              <div class="showcase-content">
-                <span class="badge-type badge-story">📖 Premium Reader</span>
-                <h2>{story.data.title}</h2>
-                <p>{story.data.shortDescription}</p>
-                <span class="showcase-link">Şimdi oku →</span>
-              </div>
-            </a>
-          ))}
-          <div class="hero-controls" aria-label="Öne çıkan masalları kaydır">
-            <button type="button" class="hero-swipe-button" data-hero-prev aria-label="Önceki öne çıkan masalı göster">←</button>
-            <div class="hero-dots" aria-label="Öne çıkan masalı seç">
-              {heroStories.map((story, index) => (
-                <button
-                  type="button"
-                  data-hero-dot
-                  aria-label={`${story.data.title} masalını göster`}
-                  aria-current={index === 0 ? 'true' : 'false'}
-                ></button>
-              ))}
-            </div>
-            <button type="button" class="hero-swipe-button" data-hero-next aria-label="Sonraki öne çıkan masalı göster">→</button>
-          </div>
-          <p class="hero-swipe-hint">Kartı kaydırarak masal seç</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2) PREMIUM STATS -->
-  <section class="premium-strip" aria-label="MasalNova öne çıkan rakamlar">
-    <div class="container">
-      <div class="strip-panel">
+  <div class="app-home">
+    <section class="tonight" aria-labelledby="tonight-title">
+      <div class="tonight-heading">
         <div>
-          <strong>{stories.length}+</strong>
-          <span>Türkçe masal</span>
+          <p class="app-kicker"><i class="ph ph-moon-stars" aria-hidden="true"></i> Masal oku · Bu akşam için</p>
+          <h1 id="tonight-title">Bu gece hangi masalı okuyalım?</h1>
+          <p class="tonight-intro">Ücretsiz Türkçe uyku masalları ve çocuk hikâyeleri arasından yaşa, süreye ve ruh hâline göre seçim yapın.</p>
         </div>
-        <div>
-          <strong>4 dk</strong>
-          <span>Ortalama okuma hissi</span>
-        </div>
-        <div>
-          <strong>3–9</strong>
-          <span>Yaşa göre keşif</span>
-        </div>
-        <div>
-          <strong>Reader</strong>
-          <span>Telefon & tablet uyumlu</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3) CHOICE CARDS -->
-  <section class="section-tight premium-choices">
-    <div class="container">
-      <div class="grid grid-2">
-        <ChoiceCard kind="story" icon="📖" title="Masal Oku" subtitle="Kısa, eğitici ve uyku öncesi masalları premium reader ile keşfedin" href="/masallar/" />
-        <ChoiceCard kind="video" icon="🎬" title="Video İzle" subtitle="Çocuk şarkıları, masallar ve eğlenceli videoları güvenli biçimde bulun" href="/videolar/" />
-      </div>
-    </div>
-  </section>
-
-  <!-- NEW STORIES: automatically filled from the newest story files -->
-  <section class="section latest-stories" aria-labelledby="latest-stories-title">
-    <div class="container swipe-layout">
-      <div class="swipe-intro">
-        <p class="eyebrow">Kaydırarak keşfet</p>
-        <h2 id="latest-stories-title">Bir masal seç. Kaydır. Hikâyeye dal.</h2>
-        <p>Yeni masalları kart destesi gibi keşfet. Kartı sürükle, ok tuşlarını kullan veya doğrudan okumaya başla.</p>
-        <div class="swipe-progress" aria-live="polite">
-          <strong data-swipe-current>1</strong>
-          <span>/ {latest.length} yeni masal</span>
-        </div>
-        <p class="swipe-hint">Sola kaydır: sonraki · Sağa kaydır: önceki</p>
-        <a class="sec-link" href="/masallar/?siralama=yeni">Tüm yeni masalları gör →</a>
-      </div>
-
-      <div class="swipe-deck">
-        <div
-          class="swipe-stack"
-          data-story-swipe
-          tabindex="0"
-          role="group"
-          aria-roledescription="kaydırılabilir masal kartları"
-          aria-label="Yeni eklenen masalları keşfet"
-        >
-          {latest.map((s, index) => (
-            <div
-              class="swipe-card"
-              data-swipe-card
-              data-card-title={s.data.title}
-              data-card-href={`/masallar/${s.id}/`}
-              data-state={index === 0 ? 'active' : index === 1 ? 'next' : index === 2 ? 'queued' : 'hidden'}
-              aria-hidden={index === 0 ? 'false' : 'true'}
-              inert={index === 0 ? undefined : true}
-            >
-              <span class="swipe-stamp swipe-stamp--previous" aria-hidden="true">ÖNCEKİ</span>
-              <span class="swipe-stamp swipe-stamp--next" aria-hidden="true">SONRAKİ</span>
-              {index < 3 && <span class="new-ribbon">Yeni</span>}
-              <StoryCard story={s} />
-            </div>
-          ))}
-        </div>
-
-        <div class="swipe-actions" aria-label="Masal kartlarını kontrol et">
-          <button type="button" class="swipe-button swipe-button--previous" data-swipe-prev aria-label="Önceki masalı göster">
-            <span aria-hidden="true">←</span>
-            <small>Önceki</small>
-          </button>
-          <a class="swipe-open" data-swipe-open href={`/masallar/${latest[0]?.id}/`}>Bu masalı oku</a>
-          <button type="button" class="swipe-button swipe-button--next" data-swipe-next aria-label="Sonraki masalı göster">
-            <span aria-hidden="true">→</span>
-            <small>Sonraki</small>
-          </button>
-        </div>
-        <p class="sr-only" data-swipe-status aria-live="polite">{latest[0]?.data.title} gösteriliyor.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4) STORY CATEGORIES -->
-  <section class="section premium-categories">
-    <div class="container">
-      <div class="section-intro">
-        <p class="eyebrow">Koleksiyon</p>
-        <div class="sec-head">
-          <h2>Her ruh haline uygun masal rafı.</h2>
-          <a class="sec-link" href="/masallar/">Tüm Masallar →</a>
-        </div>
-        <p class="sec-sub">Uyku öncesi sakinlik, kısa molalar, eğitici hikâyeler veya Keloğlan maceraları — hepsi birkaç dokunuş uzağında.</p>
-      </div>
-      <div class="grid grid-3">
-        {homeCats.map((c) => (
-          <CategoryCard href={c.href} emoji={c.emoji} label={c.label} desc={c.desc} count={c.count} color={c.color} />
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- 5) BUGÜNÜN MASALI -->
-  {today && (
-    <section class="section daily-feature">
-      <div class="container">
-        <a class="today-premium" href={`/masallar/${today.id}/`}>
-          <div class="today-copy">
-            <span class="eyebrow">Bugünün Masalı ✨</span>
-            <h2>{today.data.title}</h2>
-            <p>{today.data.shortDescription}</p>
-            <div class="meta">
-              <span class="tag">{today.data.ageGroups[0] ? ageLabel(today.data.ageGroups[0]) : 'Aile okuması'}</span>
-              <span class="tag">⏱️ {today.data.readingTime} dk okuma</span>
-              <span class="tag">Reader modu</span>
-            </div>
-            <span class="btn btn-primary">Masalı Oku →</span>
-          </div>
-          <div class="today-art">
-            <CoverThumb emoji={today.data.coverEmoji} color={today.data.coverColor} image={today.data.coverImage} alt={today.data.altText ?? today.data.title} ratio="4 / 3" big />
-          </div>
+        <a class="discover-link" href="/masallar/">
+          Tüm masallar <i class="ph ph-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
+
+      <div class="preference-bar" aria-label="Masal tercihleri">
+        <label class="preference-chip">
+          <i class="ph ph-child" aria-hidden="true"></i>
+          <span class="sr-only">Yaş</span>
+          <select data-story-preference="age" aria-label="Yaş seç">
+            <option value="">Her yaş</option>
+            <option value="3-5">3–5 yaş</option>
+            <option value="5-7">5–7 yaş</option>
+            <option value="7-9">7–9 yaş</option>
+          </select>
+          <i class="ph ph-caret-down" aria-hidden="true"></i>
+        </label>
+        <label class="preference-chip">
+          <i class="ph ph-clock" aria-hidden="true"></i>
+          <span class="sr-only">Süre</span>
+          <select data-story-preference="duration" aria-label="Okuma süresi seç">
+            <option value="">Her süre</option>
+            <option value="kisa">2 dakika</option>
+            <option value="orta">5 dakika</option>
+            <option value="uzun">Uzun masal</option>
+          </select>
+          <i class="ph ph-caret-down" aria-hidden="true"></i>
+        </label>
+        <label class="preference-chip">
+          <i class="ph ph-sparkle" aria-hidden="true"></i>
+          <span class="sr-only">Ruh hali</span>
+          <select data-story-preference="mood" aria-label="Ruh hali seç">
+            <option value="">Her ruh hali</option>
+            <option value="sakin">Sakin</option>
+            <option value="neseli">Neşeli</option>
+            <option value="macera">Macera</option>
+          </select>
+          <i class="ph ph-caret-down" aria-hidden="true"></i>
+        </label>
+      </div>
+
+      <div class="story-deck-shell">
+        <div
+          class="story-deck"
+          data-story-deck
+          tabindex="0"
+          role="group"
+          aria-roledescription="kaydırılabilir masal destesi"
+          aria-label="Bu akşamın masal önerileri"
+        >
+          {deckStories.map((story, index) => {
+            const d = story.data;
+            const primaryCategory = d.categories[0] ? storyCategoryLabel(d.categories[0]) : 'Masal';
+            return (
+              <article
+                class="deck-card"
+                data-deck-card
+                data-story-id={story.id}
+                data-age={d.ageGroups.join(' ')}
+                data-duration={durationBucketForMinutes(d.readingTime)}
+                data-mood={moodForStory(story)}
+                data-state={index === 0 ? 'active' : index === 1 ? 'next' : 'hidden'}
+                aria-hidden={index === 0 ? 'false' : 'true'}
+              >
+                <div class="deck-cover">
+                  <img
+                    src={d.coverImage}
+                    alt={d.altText ?? d.title}
+                    width="900"
+                    height="680"
+                    loading={index < 2 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    fetchpriority={index === 0 ? 'high' : 'auto'}
+                    sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1100px) 55vw, 520px"
+                  />
+                  <span class="story-kind"><i class="ph ph-book-open-text" aria-hidden="true"></i> {primaryCategory}</span>
+                  <button
+                    class="favorite-button"
+                    type="button"
+                    data-favorite-story={story.id}
+                    data-favorite-title={d.title}
+                    aria-label={`${d.title} masalını favorilere ekle`}
+                    aria-pressed="false"
+                  >
+                    <i class="ph ph-heart" aria-hidden="true"></i>
+                  </button>
+                  <div class="deck-gradient" aria-hidden="true"></div>
+                </div>
+                <div class="deck-copy">
+                  <div class="deck-copy-top">
+                    <p class="deck-eyebrow">MasalNova seçkisi</p>
+                    <h2>{d.title}</h2>
+                    <p class="deck-description">{d.shortDescription}</p>
+                  </div>
+                  <div class="story-meta" aria-label="Masal bilgileri">
+                    {d.ageGroups[0] && <span><i class="ph ph-child" aria-hidden="true"></i>{ageLabel(d.ageGroups[0])}</span>}
+                    <span><i class="ph ph-clock" aria-hidden="true"></i>{d.readingTime} dk</span>
+                    <span><i class="ph ph-moon-stars" aria-hidden="true"></i>{moodForStory(story) === 'sakin' ? 'Sakin' : moodForStory(story) === 'macera' ? 'Macera' : 'Neşeli'}</span>
+                  </div>
+                  <a class="start-story" href={`/masallar/${story.id}/`}>
+                    <i class="ph-fill ph-play" aria-hidden="true"></i>
+                    Masalı başlat
+                  </a>
+                  <p class="online-note"><i class="ph ph-shield-check" aria-hidden="true"></i> Çevrimiçi okuma · Metin cihazda saklanmaz</p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        <div class="deck-controls" aria-label="Masal kartlarını değiştir">
+          <button type="button" data-deck-prev aria-label="Önceki masal">
+            <i class="ph ph-arrow-left" aria-hidden="true"></i>
+          </button>
+          <p><strong data-deck-position>1</strong><span> / {deckStories.length}</span> · Kartı kaydır</p>
+          <button type="button" data-deck-next aria-label="Sonraki masal">
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </section>
-  )}
 
-  <!-- 6) POPÜLER MASALLAR -->
-  <section class="section premium-stories">
-    <div class="container">
-      <div class="section-intro">
-        <p class="eyebrow">Editör vitrini</p>
-        <div class="sec-head">
-          <h2>En sevilen masallar, vitrin kalitesinde.</h2>
-          <a class="sec-link" href="/masallar/?siralama=populer">Tümü →</a>
-        </div>
+    <aside class="native-ad" aria-label="Reklam alanı">
+      <div>
+        <span>Reklam</span>
+        <p>Aileler için seçilmiş içerik</p>
       </div>
-      <div class="grid grid-3">
-        {popular.map((s) => <StoryCard story={s} />)}
-      </div>
-    </div>
-  </section>
+      <i class="ph ph-sparkle" aria-hidden="true"></i>
+    </aside>
 
-  <!-- 7) ÖNE ÇIKAN VIDEOLAR -->
-  <FeaturedVideos
-    videos={featuredVids}
-    title="Sinema hissinde çocuk videoları"
-    subtitle="Çocuk şarkıları ve eğlenceli videolar — küçük resme dokun, video açılsın."
-    cols={3}
-  />
-
-  <!-- 8) CURATED JOURNEY -->
-  <section class="section reading-journey">
-    <div class="container">
-      <div class="journey-card">
+    <section class="continue-section" id="kitapligim" aria-labelledby="continue-title">
+      <div class="section-heading">
         <div>
-          <p class="eyebrow">3 adımda akşam ritüeli</p>
-          <h2>Seç, oku, sakinleş.</h2>
-          <p>MasalNova çocukların dikkatini dağıtmadan, ailelerin hızlı karar vermesine yardım eden sıcak bir keşif alanı olarak tasarlandı.</p>
+          <p class="app-kicker"><i class="ph ph-bookmark-simple" aria-hidden="true"></i> Senin alanın</p>
+          <h2 id="continue-title">Kaldığın yerden devam et</h2>
         </div>
-        <div class="journey-steps">
-          <span><b>01</b> Yaşa göre filtrele</span>
-          <span><b>02</b> Reader modunda oku</span>
-          <span><b>03</b> İstersen videoyla devam et</span>
+        <a href="/masallar/">Kitaplığı aç <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="continue-grid" data-continue-grid>
+        {continueStories.map((story, index) => (
+          <a
+            class="continue-card"
+            href={`/masallar/${story.id}/`}
+            data-continue-story={story.id}
+            data-fallback-index={index}
+          >
+            <img src={story.data.coverImage} alt="" width="320" height="220" loading="lazy" />
+            <div>
+              <span>{story.data.readingTime} dk okuma</span>
+              <h3>{story.data.title}</h3>
+              <div class="progress-track" aria-hidden="true"><span data-story-progress></span></div>
+              <p data-progress-label>Okumaya başla</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="video-section" aria-labelledby="video-title">
+      <div class="section-heading">
+        <div>
+          <p class="app-kicker"><i class="ph ph-film-slate" aria-hidden="true"></i> İzle</p>
+          <h2 id="video-title">Masalları video olarak da keşfet</h2>
+          <p>Şarkılar, animasyonlar ve masal videoları — her biri doğrudan kendi sayfasına açılır.</p>
+        </div>
+        <a href="/videolar/">Tüm videolar <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="video-rail">
+        {videos.map((video, index) => (
+          <a class="video-tile" href={`/videolar/${video.slug}/`} aria-label={`${video.title} videosunu aç`}>
+            <div class="video-visual">
+              <img
+                src={video.thumbnailUrl}
+                alt={`${video.title} video küçük resmi`}
+                width="640"
+                height="360"
+                loading={index < 2 ? 'eager' : 'lazy'}
+              />
+              <span class="video-badge"><i class="ph-fill ph-play" aria-hidden="true"></i> Video</span>
+              <span class="video-play" aria-hidden="true"><i class="ph-fill ph-play"></i></span>
+            </div>
+            <div class="video-copy">
+              <span>{video.categories[0] ? videoCategoryLabel(video.categories[0]) : 'MasalNova Video'}</span>
+              <h3>{video.title}</h3>
+              <p>Şimdi izle <i class="ph ph-arrow-up-right" aria-hidden="true"></i></p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="library-section" aria-labelledby="favorites-title">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="app-kicker"><i class="ph ph-heart" aria-hidden="true"></i> Favoriler</p>
+          <h2 id="favorites-title">Kaydettiğin masallar</h2>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="favorite-grid" data-favorite-grid>
+        {deckStories.map((story) => (
+          <a class="favorite-card" href={`/masallar/${story.id}/`} data-favorite-card={story.id} hidden>
+            <img src={story.data.coverImage} alt="" width="280" height="190" loading="lazy" />
+            <div><span>{story.data.readingTime} dk</span><h3>{story.data.title}</h3></div>
+          </a>
+        ))}
+      </div>
+      <div class="empty-library" data-empty-library>
+        <i class="ph ph-heart-straight" aria-hidden="true"></i>
+        <div><h3>Favorilerin burada görünür</h3><p>Bir masal kartındaki kalbe dokunman yeterli.</p></div>
+      </div>
+    </section>
 
-  <!-- 9) YENİ VIDEOLAR -->
-  <FeaturedVideos
-    videos={newVids}
-    title="Yeni eklenen videolar"
-    moreHref="/videolar/"
-    moreLabel="Tüm Videoları Gör"
-    cols={4}
-  />
+    <section class="settings-section" id="ayarlar" aria-labelledby="settings-title">
+      <div class="settings-copy">
+        <p class="app-kicker"><i class="ph ph-gear" aria-hidden="true"></i> Ayarlar</p>
+        <h2 id="settings-title">Basit, özel ve hesapsız.</h2>
+        <p>Favoriler, filtreler ve okuma yüzdesi yalnızca bu cihazda küçük kimlikler olarak tutulur. Masal metinleri cihazına kaydedilmez.</p>
+      </div>
+      <div class="settings-actions">
+        <button type="button" class="clear-data" data-open-cookie-settings>
+          <i class="ph ph-cookie" aria-hidden="true"></i> Çerez tercihleri
+        </button>
+        <button type="button" class="clear-data" data-clear-app-state>
+          <i class="ph ph-trash" aria-hidden="true"></i> Yerel verileri temizle
+        </button>
+        <p data-settings-status role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="search-guide" aria-labelledby="search-guide-title">
+      <div class="search-guide-copy">
+        <p class="app-kicker"><i class="ph ph-sparkle" aria-hidden="true"></i> Masal seçme rehberi</p>
+        <h2 id="search-guide-title">Masal oku: yaşa, süreye ve o akşamki ruh hâline göre seç</h2>
+        <p>
+          MasalNova; resimli uyku masalları, kısa çocuk hikâyeleri, eğitici masallar ve daha uzun maceraları tek bir sakin okuma deneyiminde buluşturur. Üyelik gerekmez; karttaki yaş ve süre bilgisi doğru hikâyeyi hızlıca bulmanıza yardımcı olur.
+        </p>
+      </div>
+
+      <div class="guide-link-grid">
+        <a href="/masallar/kategori/uyku/">
+          <i class="ph ph-moon-stars" aria-hidden="true"></i>
+          <div><h3>Uyku öncesi masallar</h3><p>Sakin anlatımlı gece hikâyelerini keşfet.</p></div>
+          <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+        </a>
+        <a href="/masallar/sure/uzun/">
+          <i class="ph ph-book-open-text" aria-hidden="true"></i>
+          <div><h3>Uzun masallar</h3><p>8-10 dakikalık özgün hikâyeler oku.</p></div>
+          <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+        </a>
+        <a href="/masallar/resimli/">
+          <i class="ph ph-image" aria-hidden="true"></i>
+          <div><h3>Resimli masallar</h3><p>Kapak görseliyle birlikte hikâyeni seç.</p></div>
+          <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="quick-answers">
+        <article>
+          <h3>Masallar ücretsiz mi?</h3>
+          <p>Evet. MasalNova’daki yazılı masallar ücretsiz ve hesap açmadan çevrimiçi okunabilir.</p>
+        </article>
+        <article>
+          <h3>Kısa mı, uzun mu?</h3>
+          <p>Bir iki dakikalık bir mola için kısa masalları; daha gelişmiş bir olay örgüsü için 8-10 dakikalık uzun masalları seçebilirsiniz.</p>
+        </article>
+        <article>
+          <h3>Yaşa uygun masal nasıl bulunur?</h3>
+          <p>Kartlardaki 3-5, 5-7 ve 7-9 yaş etiketlerini kullanın veya Masal Bul aracından yaş ve süre seçin.</p>
+        </article>
+      </div>
+    </section>
+  </div>
 </BaseLayout>
 
 <script>
-  const swipeStack = document.querySelector<HTMLElement>('[data-story-swipe]');
-  const swipeCards = Array.from(document.querySelectorAll<HTMLElement>('[data-swipe-card]'));
-  const swipePrevious = document.querySelector<HTMLButtonElement>('[data-swipe-prev]');
-  const swipeNext = document.querySelector<HTMLButtonElement>('[data-swipe-next]');
-  const swipeOpen = document.querySelector<HTMLAnchorElement>('[data-swipe-open]');
-  const swipeCurrent = document.querySelector<HTMLElement>('[data-swipe-current]');
-  const swipeStatus = document.querySelector<HTMLElement>('[data-swipe-status]');
+  import {
+    APP_STATE_CHANGE_EVENT,
+    APP_STATE_VERSION,
+    loadState,
+    saveState,
+    setPreferences,
+    toggleFavorite,
+    type AppState,
+  } from '../lib/app-state';
 
-  if (swipeStack && swipeCards.length && swipePrevious && swipeNext && swipeOpen) {
-    let activeIndex = 0;
-    let startX = 0;
-    let dragX = 0;
-    let pointerId: number | null = null;
-    let moving = false;
-    let dragged = false;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-deck-card]')];
+  const deck = document.querySelector<HTMLElement>('[data-story-deck]');
+  const position = document.querySelector<HTMLElement>('[data-deck-position]');
+  let activeIndex = 0;
+  let pointerStart = 0;
+  let pointerDelta = 0;
+  let activePointer: number | null = null;
 
-    const indexAt = (offset: number) => (activeIndex + offset + swipeCards.length) % swipeCards.length;
-    const activeCard = () => swipeCards[activeIndex];
-
-    const renderSwipe = () => {
-      const nextIndex = indexAt(1);
-      const queuedIndex = indexAt(2);
-      swipeCards.forEach((card, index) => {
-        const state = index === activeIndex ? 'active' : index === nextIndex ? 'next' : index === queuedIndex ? 'queued' : 'hidden';
-        card.dataset.state = state;
-        card.setAttribute('aria-hidden', state === 'active' ? 'false' : 'true');
-        card.toggleAttribute('inert', state !== 'active');
-        card.style.removeProperty('--drag-x');
-        card.style.removeProperty('--drag-rotate');
-        card.style.removeProperty('--drag-opacity');
-      });
-
-      const card = activeCard();
-      const title = card.dataset.cardTitle ?? 'Masal';
-      const href = card.dataset.cardHref ?? '/masallar/';
-      swipeOpen.href = href;
-      swipeOpen.setAttribute('aria-label', `${title} masalını oku`);
-      if (swipeCurrent) swipeCurrent.textContent = String(activeIndex + 1);
-      if (swipeStatus) swipeStatus.textContent = `${title} gösteriliyor.`;
-      moving = false;
-    };
-
-    const resetDrag = () => {
-      const card = activeCard();
-      card.style.setProperty('--drag-x', '0px');
-      card.style.setProperty('--drag-rotate', '0deg');
-      card.style.setProperty('--drag-opacity', '1');
-    };
-
-    const moveSwipe = (direction: number) => {
-      if (moving) return;
-      moving = true;
-      const card = activeCard();
-      const exitX = direction > 0 ? '-120vw' : '120vw';
-      const exitRotation = direction > 0 ? '-18deg' : '18deg';
-      card.style.setProperty('--drag-x', exitX);
-      card.style.setProperty('--drag-rotate', exitRotation);
-      card.style.setProperty('--drag-opacity', '0');
-
-      window.setTimeout(() => {
-        activeIndex = indexAt(direction);
-        renderSwipe();
-      }, reducedMotion ? 0 : 280);
-    };
-
-    swipePrevious.addEventListener('click', () => moveSwipe(-1));
-    swipeNext.addEventListener('click', () => moveSwipe(1));
-
-    swipeStack.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowLeft') { event.preventDefault(); moveSwipe(-1); }
-      if (event.key === 'ArrowRight') { event.preventDefault(); moveSwipe(1); }
-      if (event.key === 'Enter') { event.preventDefault(); swipeOpen.click(); }
-    });
-
-    swipeStack.addEventListener('pointerdown', (event) => {
-      if (moving || event.button !== 0) return;
-      pointerId = event.pointerId;
-      startX = event.clientX;
-      dragX = 0;
-      dragged = false;
-      swipeStack.setPointerCapture(pointerId);
-      swipeStack.dataset.dragging = 'true';
-    });
-
-    swipeStack.addEventListener('pointermove', (event) => {
-      if (pointerId !== event.pointerId || moving) return;
-      dragX = event.clientX - startX;
-      dragged ||= Math.abs(dragX) > 8;
-      const card = activeCard();
-      card.style.setProperty('--drag-x', `${dragX}px`);
-      card.style.setProperty('--drag-rotate', `${Math.max(-12, Math.min(12, dragX / 22))}deg`);
-      card.style.setProperty('--drag-opacity', String(Math.max(.78, 1 - Math.abs(dragX) / 900)));
-      swipeStack.style.setProperty('--swipe-direction', String(Math.max(-1, Math.min(1, dragX / 100))));
-    });
-
-    const finishDrag = (event: PointerEvent) => {
-      if (pointerId !== event.pointerId) return;
-      if (swipeStack.hasPointerCapture(pointerId)) swipeStack.releasePointerCapture(pointerId);
-      pointerId = null;
-      swipeStack.dataset.dragging = 'false';
-      swipeStack.style.setProperty('--swipe-direction', '0');
-      if (Math.abs(dragX) >= 90) moveSwipe(dragX < 0 ? 1 : -1);
-      else resetDrag();
-    };
-
-    swipeStack.addEventListener('pointerup', finishDrag);
-    swipeStack.addEventListener('pointercancel', finishDrag);
-    swipeStack.addEventListener('click', (event) => {
-      if (dragged) event.preventDefault();
-      dragged = false;
-    }, true);
-
-    renderSwipe();
+  function normalizeIndex(index: number) {
+    if (!cards.length) return 0;
+    return (index + cards.length) % cards.length;
   }
 
-  const heroCarousel = document.querySelector<HTMLElement>('[data-hero-carousel]');
-  const heroSlides = Array.from(document.querySelectorAll<HTMLElement>('[data-hero-slide]'));
-  const heroDots = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-hero-dot]'));
-  const heroPrevious = document.querySelector<HTMLButtonElement>('[data-hero-prev]');
-  const heroNext = document.querySelector<HTMLButtonElement>('[data-hero-next]');
-  if (heroCarousel && heroSlides.length > 1 && heroSlides.length === heroDots.length && heroPrevious && heroNext) {
-    let activeHero = 0;
-    let heroTimer: number | undefined;
-    let heroMoving = false;
-    let heroPointerId: number | null = null;
-    let heroStartX = 0;
-    let heroDragX = 0;
-    let heroDragged = false;
-    const reducedHeroMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const heroIndexAt = (offset: number) => (activeHero + offset + heroSlides.length) % heroSlides.length;
-    const currentHero = () => heroSlides[activeHero];
-    const showHero = (index: number) => {
-      activeHero = (index + heroSlides.length) % heroSlides.length;
-      const nextHero = heroIndexAt(1);
-      const queuedHero = heroIndexAt(2);
-      heroSlides.forEach((slide, slideIndex) => {
-        const state = slideIndex === activeHero ? 'active' : slideIndex === nextHero ? 'next' : slideIndex === queuedHero ? 'queued' : 'hidden';
-        slide.dataset.state = state;
-        slide.setAttribute('aria-hidden', state === 'active' ? 'false' : 'true');
-        slide.toggleAttribute('inert', state !== 'active');
-        slide.style.removeProperty('--hero-drag-x');
-        slide.style.removeProperty('--hero-drag-rotate');
-        slide.style.removeProperty('--hero-drag-opacity');
-      });
-      heroDots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', dotIndex === activeHero ? 'true' : 'false'));
-      heroMoving = false;
-    };
-    const stopHero = () => window.clearInterval(heroTimer);
-    const startHero = () => {
-      if (reducedHeroMotion) return;
-      stopHero();
-      heroTimer = window.setInterval(() => moveHero(1), 5800);
-    };
-    const resetHeroDrag = () => {
-      const slide = currentHero();
-      slide.style.setProperty('--hero-drag-x', '0px');
-      slide.style.setProperty('--hero-drag-rotate', '2deg');
-      slide.style.setProperty('--hero-drag-opacity', '1');
-    };
-    const moveHero = (direction: number) => {
-      if (heroMoving) return;
-      heroMoving = true;
-      stopHero();
-      const slide = currentHero();
-      slide.style.setProperty('--hero-drag-x', direction > 0 ? '-105vw' : '105vw');
-      slide.style.setProperty('--hero-drag-rotate', direction > 0 ? '-16deg' : '16deg');
-      slide.style.setProperty('--hero-drag-opacity', '0');
-      window.setTimeout(() => {
-        showHero(heroIndexAt(direction));
-        startHero();
-      }, reducedHeroMotion ? 0 : 300);
-    };
-    heroDots.forEach((dot, index) => dot.addEventListener('click', () => {
-      if (index === activeHero) return;
-      stopHero();
-      showHero(index);
-      startHero();
-    }));
-    heroPrevious.addEventListener('click', () => moveHero(-1));
-    heroNext.addEventListener('click', () => moveHero(1));
-
-    heroCarousel.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowLeft') { event.preventDefault(); moveHero(-1); }
-      if (event.key === 'ArrowRight') { event.preventDefault(); moveHero(1); }
+  function renderDeck(nextIndex: number) {
+    activeIndex = normalizeIndex(nextIndex);
+    const next = normalizeIndex(activeIndex + 1);
+    cards.forEach((card, index) => {
+      const state = index === activeIndex ? 'active' : index === next ? 'next' : 'hidden';
+      card.dataset.state = state;
+      card.setAttribute('aria-hidden', state === 'active' ? 'false' : 'true');
+      card.toggleAttribute('inert', state !== 'active');
+      card.style.removeProperty('--drag-x');
+      card.classList.remove('is-dragging');
     });
-    heroCarousel.addEventListener('pointerdown', (event) => {
-      if (heroMoving || event.button !== 0 || (event.target instanceof Element && event.target.closest('button'))) return;
-      heroPointerId = event.pointerId;
-      heroStartX = event.clientX;
-      heroDragX = 0;
-      heroDragged = false;
-      heroCarousel.setPointerCapture(heroPointerId);
-      heroCarousel.dataset.dragging = 'true';
-      stopHero();
-    });
-    heroCarousel.addEventListener('pointermove', (event) => {
-      if (heroPointerId !== event.pointerId || heroMoving) return;
-      heroDragX = event.clientX - heroStartX;
-      heroDragged ||= Math.abs(heroDragX) > 8;
-      const slide = currentHero();
-      slide.style.setProperty('--hero-drag-x', `${heroDragX}px`);
-      slide.style.setProperty('--hero-drag-rotate', `${Math.max(-10, Math.min(10, heroDragX / 28))}deg`);
-      slide.style.setProperty('--hero-drag-opacity', String(Math.max(.78, 1 - Math.abs(heroDragX) / 850)));
-      heroCarousel.style.setProperty('--hero-swipe-direction', String(Math.max(-1, Math.min(1, heroDragX / 90))));
-    });
-    const finishHeroDrag = (event: PointerEvent) => {
-      if (heroPointerId !== event.pointerId) return;
-      if (heroCarousel.hasPointerCapture(heroPointerId)) heroCarousel.releasePointerCapture(heroPointerId);
-      heroPointerId = null;
-      heroCarousel.dataset.dragging = 'false';
-      heroCarousel.style.setProperty('--hero-swipe-direction', '0');
-      if (Math.abs(heroDragX) >= 80) moveHero(heroDragX < 0 ? 1 : -1);
-      else { resetHeroDrag(); startHero(); }
-    };
-    heroCarousel.addEventListener('pointerup', finishHeroDrag);
-    heroCarousel.addEventListener('pointercancel', finishHeroDrag);
-    heroCarousel.addEventListener('click', (event) => {
-      if (heroDragged) event.preventDefault();
-      heroDragged = false;
-    }, true);
-    heroCarousel.addEventListener('pointerenter', stopHero);
-    heroCarousel.addEventListener('pointerleave', startHero);
-    heroCarousel.addEventListener('focusin', stopHero);
-    heroCarousel.addEventListener('focusout', startHero);
-    showHero(0);
-    startHero();
+    if (position) position.textContent = String(activeIndex + 1);
   }
+
+  function showNext() { renderDeck(activeIndex + 1); }
+  function showPrevious() { renderDeck(activeIndex - 1); }
+
+  document.querySelector('[data-deck-next]')?.addEventListener('click', showNext);
+  document.querySelector('[data-deck-prev]')?.addEventListener('click', showPrevious);
+
+  deck?.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') { event.preventDefault(); showNext(); }
+    if (event.key === 'ArrowLeft') { event.preventDefault(); showPrevious(); }
+  });
+
+  deck?.addEventListener('pointerdown', (event) => {
+    if ((event.target as HTMLElement).closest('a, button, select')) return;
+    const activeCard = cards[activeIndex];
+    if (!activeCard) return;
+    activePointer = event.pointerId;
+    pointerStart = event.clientX;
+    pointerDelta = 0;
+    activeCard.classList.add('is-dragging');
+    deck.setPointerCapture(event.pointerId);
+  });
+
+  deck?.addEventListener('pointermove', (event) => {
+    if (activePointer !== event.pointerId) return;
+    pointerDelta = event.clientX - pointerStart;
+    cards[activeIndex]?.style.setProperty('--drag-x', `${pointerDelta}px`);
+  });
+
+  function finishSwipe(event: PointerEvent) {
+    if (activePointer !== event.pointerId) return;
+    const delta = pointerDelta;
+    activePointer = null;
+    if (deck?.hasPointerCapture(event.pointerId)) deck.releasePointerCapture(event.pointerId);
+    if (Math.abs(delta) > 64) {
+      delta < 0 ? showNext() : showPrevious();
+    } else {
+      renderDeck(activeIndex);
+    }
+  }
+
+  deck?.addEventListener('pointerup', finishSwipe);
+  deck?.addEventListener('pointercancel', finishSwipe);
+
+  const preferenceInputs = [...document.querySelectorAll<HTMLSelectElement>('[data-story-preference]')];
+
+  function applyPreferencesFromState(state: AppState) {
+    preferenceInputs.forEach((input) => {
+      const key = input.dataset.storyPreference as 'age' | 'duration' | 'mood';
+      if (state.preferences[key]) input.value = state.preferences[key] ?? '';
+    });
+  }
+
+  function chooseMatchingStory() {
+    const values = Object.fromEntries(preferenceInputs.map((input) => [input.dataset.storyPreference, input.value]));
+    const matchIndex = cards.findIndex((card) => {
+      const ageMatches = !values.age || (card.dataset.age ?? '').split(' ').includes(values.age);
+      const durationMatches = !values.duration || card.dataset.duration === values.duration;
+      const moodMatches = !values.mood || card.dataset.mood === values.mood;
+      return ageMatches && durationMatches && moodMatches;
+    });
+    renderDeck(matchIndex >= 0 ? matchIndex : 0);
+  }
+
+  preferenceInputs.forEach((input) => {
+    input.addEventListener('change', () => {
+      setPreferences({
+        age: preferenceInputs.find((item) => item.dataset.storyPreference === 'age')?.value || null,
+        duration: preferenceInputs.find((item) => item.dataset.storyPreference === 'duration')?.value || null,
+        mood: preferenceInputs.find((item) => item.dataset.storyPreference === 'mood')?.value || null,
+      });
+      chooseMatchingStory();
+    });
+  });
+
+  function renderLocalState(state: AppState) {
+    document.querySelectorAll<HTMLButtonElement>('[data-favorite-story]').forEach((button) => {
+      const storyId = button.dataset.favoriteStory ?? '';
+      const storyTitle = button.dataset.favoriteTitle ?? 'Masal';
+      const favorite = state.favorites.includes(storyId);
+      button.setAttribute('aria-pressed', String(favorite));
+      button.setAttribute('aria-label', favorite
+        ? `${storyTitle} masalını favorilerden çıkar`
+        : `${storyTitle} masalını favorilere ekle`);
+      button.classList.toggle('is-favorite', favorite);
+      const icon = button.querySelector('i');
+      if (icon) icon.className = favorite ? 'ph-fill ph-heart' : 'ph ph-heart';
+    });
+
+    const favoriteCards = [...document.querySelectorAll<HTMLElement>('[data-favorite-card]')];
+    let visibleFavorites = 0;
+    favoriteCards.forEach((card) => {
+      const visible = state.favorites.includes(card.dataset.favoriteCard ?? '');
+      card.hidden = !visible;
+      if (visible) visibleFavorites += 1;
+    });
+    const empty = document.querySelector<HTMLElement>('[data-empty-library]');
+    if (empty) empty.hidden = visibleFavorites > 0;
+
+    const continueCards = [...document.querySelectorAll<HTMLElement>('[data-continue-story]')];
+    const order = state.recentStoryIds.length ? state.recentStoryIds : continueCards.map((card) => card.dataset.continueStory ?? '');
+    continueCards.forEach((card) => {
+      const id = card.dataset.continueStory ?? '';
+      const rank = order.indexOf(id);
+      card.style.order = String(rank >= 0 ? rank : 99 + Number(card.dataset.fallbackIndex ?? 0));
+      card.hidden = rank < 0 && state.recentStoryIds.length > 0;
+      const progress = state.progress[id] ?? 0;
+      card.querySelector<HTMLElement>('[data-story-progress]')?.style.setProperty('width', `${progress}%`);
+      const label = card.querySelector<HTMLElement>('[data-progress-label]');
+      if (label) label.textContent = progress > 0 ? `%${progress} tamamlandı` : 'Okumaya başla';
+    });
+
+    const visibleContinue = continueCards.filter((card) => !card.hidden).slice(3);
+    visibleContinue.forEach((card) => { card.hidden = true; });
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('[data-favorite-story]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const storyId = button.dataset.favoriteStory;
+      if (storyId) renderLocalState(toggleFavorite(storyId));
+    });
+  });
+
+  document.querySelector('[data-clear-app-state]')?.addEventListener('click', () => {
+    const cleared = saveState({
+      version: APP_STATE_VERSION,
+      favorites: [],
+      recentStoryIds: [],
+      progress: {},
+      preferences: { age: null, duration: null, mood: null },
+    });
+    preferenceInputs.forEach((input) => { input.selectedIndex = input.querySelector('option[selected]') ? [...input.options].findIndex((option) => option.hasAttribute('selected')) : 0; });
+    renderLocalState(cleared);
+    const status = document.querySelector<HTMLElement>('[data-settings-status]');
+    if (status) status.textContent = 'Bu cihazdaki favoriler ve okuma ilerlemesi temizlendi.';
+  });
+
+  document.querySelector('[data-open-cookie-settings]')?.addEventListener('click', () => {
+    document.querySelector<HTMLButtonElement>('#stcm-icon')?.click();
+  });
+
+  window.addEventListener(APP_STATE_CHANGE_EVENT, (event) => {
+    const detail = (event as CustomEvent<{ state: AppState }>).detail;
+    if (detail?.state) renderLocalState(detail.state);
+  });
+
+  const initialState = loadState();
+  applyPreferencesFromState(initialState);
+  renderLocalState(initialState);
+  chooseMatchingStory();
 </script>
 
 <style>
-  :global(body) {
-    background:
-      radial-gradient(900px 420px at 82% 4%, rgba(255, 176, 31, 0.2), transparent 60%),
-      radial-gradient(900px 520px at 12% 12%, rgba(114, 155, 255, 0.38), transparent 62%),
-      linear-gradient(180deg, #081b46 0%, #123a97 42%, #1f57cf 74%, #123a97 100%);
-  }
-
-  .premium-hero {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    min-height: 680px;
+  .app-home {
+    width: min(100%, 1320px);
+    margin: 0 auto;
+    padding: 26px clamp(22px, 4.2vw, 64px) 88px;
     color: #fff;
-    background:
-      linear-gradient(115deg, rgba(8, 27, 70, 0.96), rgba(18, 58, 151, 0.72) 48%, rgba(255, 176, 31, 0.14)),
-      url('/background.jpg') center / cover no-repeat;
   }
 
-  .premium-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.2), transparent 34%),
-      linear-gradient(180deg, transparent 70%, rgba(8, 27, 70, 0.72));
-    z-index: -2;
+  .tonight-heading,
+  .section-heading,
+  .settings-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
   }
 
-  .premium-hero::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0;
-    height: 170px;
-    background: linear-gradient(180deg, transparent, #123a97);
-    z-index: -1;
-  }
-
-  .hero-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(8px);
-    opacity: 0.78;
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  .hero-glow-one {
-    width: 360px;
-    height: 360px;
-    right: 7%;
-    top: 10%;
-    background: radial-gradient(circle, rgba(255, 176, 31, 0.34), transparent 68%);
-  }
-
-  .hero-glow-two {
-    width: 420px;
-    height: 420px;
-    left: -120px;
-    bottom: 3%;
-    background: radial-gradient(circle, rgba(47, 116, 232, 0.56), transparent 66%);
-  }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.02fr) minmax(330px, 0.88fr);
-    gap: clamp(36px, 6vw, 80px);
-    align-items: center;
-    padding-top: clamp(78px, 10vw, 126px);
-    padding-bottom: clamp(76px, 10vw, 112px);
-  }
-
-  .hero-copy { max-width: 720px; }
-
-  .eyebrow {
-    display: inline-flex;
+  .app-kicker {
+    display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 14px;
-    color: #ffd77a;
-    font-family: var(--font-display);
-    font-size: 0.82rem;
+    margin-bottom: 9px;
+    color: #9fc0ff;
+    font-size: .73rem;
     font-weight: 900;
-    letter-spacing: 0.12em;
+    letter-spacing: .13em;
     text-transform: uppercase;
   }
 
-  .hero-copy h1 {
-    max-width: 10.8ch;
-    margin-bottom: 22px;
-    font-size: clamp(3rem, 8vw, 6.95rem);
-    line-height: 0.9;
-    letter-spacing: -0.08em;
-    text-wrap: balance;
-    text-shadow: 0 22px 60px rgba(0, 0, 0, 0.34);
-  }
+  .app-kicker i { color: var(--app-yellow); font-size: 1rem; }
+  .tonight-heading h1 { max-width: 750px; color: #fff; font-size: clamp(2.25rem, 4vw, 3.4rem); letter-spacing: -.055em; }
+  .tonight-heading > div > p:last-child { margin-top: 12px; color: rgba(255,255,255,.7); font-size: 1rem; font-weight: 700; }
 
-  .hero-copy .lead {
-    max-width: 58ch;
-    margin-bottom: 28px;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: clamp(1.08rem, 2vw, 1.3rem);
-    font-weight: 650;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 22px;
-  }
-
-  .hero-search {
-    max-width: 660px;
-    margin-bottom: 18px;
-  }
-
-  .hero-search :global(.searchbox) {
-    margin: 0;
-    border: 1px solid rgba(255, 255, 255, 0.34);
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
-  }
-
-  .trust-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    color: rgba(255, 255, 255, 0.84);
-    font-size: 0.9rem;
-    font-weight: 800;
-  }
-
-  .trust-row span {
-    padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(14px);
-  }
-
-  .hero-stage {
-    position: relative;
-    min-height: 580px;
-  }
-
-  .showcase-card {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.26);
-    border-radius: 38px;
-    background: linear-gradient(155deg, #fff, #ecf2ff);
-    color: var(--ink);
-    box-shadow: 0 38px 110px rgba(0, 0, 0, 0.38);
-    transform: rotate(2deg);
-  }
-
-  .hero-carousel {
-    --hero-swipe-direction: 0;
-    position: relative;
-    min-height: 540px;
-    perspective: 1100px;
-    touch-action: pan-y;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-
-  .showcase-card[data-hero-slide] {
-    --hero-drag-x: 0px;
-    --hero-drag-rotate: 2deg;
-    --hero-drag-opacity: 1;
-    position: absolute;
-    inset: 0;
-    transform-origin: 50% 94%;
-    transition: opacity .32s ease, transform .38s cubic-bezier(.2,.75,.25,1);
-    will-change: transform, opacity;
-  }
-
-  .showcase-card[data-hero-slide][data-state="active"] {
-    z-index: 5;
-    opacity: var(--hero-drag-opacity);
-    pointer-events: auto;
-    transform: translateX(var(--hero-drag-x)) rotate(var(--hero-drag-rotate)) scale(1);
-    cursor: grab;
-  }
-
-  .hero-carousel[data-dragging="true"] .showcase-card[data-hero-slide][data-state="active"] {
-    transition: none;
-    cursor: grabbing;
-  }
-
-  .showcase-card[data-hero-slide][data-state="next"] {
-    z-index: 4;
-    opacity: .86;
-    pointer-events: none;
-    transform: translate(18px, 15px) rotate(4.4deg) scale(.965);
-  }
-
-  .showcase-card[data-hero-slide][data-state="queued"] {
-    z-index: 3;
-    opacity: .58;
-    pointer-events: none;
-    transform: translate(-12px, 29px) rotate(-3.4deg) scale(.93);
-  }
-
-  .showcase-card[data-hero-slide][data-state="hidden"] {
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(34px) scale(.9);
-  }
-
-  .hero-controls {
-    position: absolute;
-    z-index: 9;
-    right: 18px;
-    top: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .hero-dots {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 13px;
-    border: 1px solid rgba(255,255,255,.24);
-    border-radius: 999px;
-    background: rgba(8,27,70,.42);
-    backdrop-filter: blur(14px);
-  }
-
-  .hero-dots button {
-    width: 9px;
-    height: 9px;
-    padding: 0;
-    border: 0;
-    border-radius: 999px;
-    background: rgba(255,255,255,.46);
-    box-shadow: 0 5px 16px rgba(0,0,0,.2);
-    cursor: pointer;
-    transition: width .25s ease, background .25s ease;
-  }
-
-  .hero-dots button[aria-current="true"] {
-    width: 28px;
-    background: #ffd46a;
-  }
-
-  .hero-swipe-button {
-    display: grid;
-    place-items: center;
-    width: 42px;
-    height: 42px;
-    padding: 0;
-    border: 1px solid rgba(255,255,255,.3);
-    border-radius: 50%;
-    background: rgba(8,27,70,.55);
-    color: #fff;
-    box-shadow: 0 14px 36px rgba(0,0,0,.22);
-    backdrop-filter: blur(14px);
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 900;
-    cursor: pointer;
-    transition: transform .18s ease, background .18s ease;
-  }
-
-  .hero-swipe-button:hover { transform: translateY(-2px); background: rgba(255,255,255,.2); }
-
-  .hero-swipe-hint {
-    position: absolute;
-    z-index: 8;
-    left: 24px;
-    top: 23px;
-    padding: 8px 11px;
-    border: 1px solid rgba(255,255,255,.2);
-    border-radius: 999px;
-    background: rgba(8,27,70,.46);
-    color: rgba(255,255,255,.82);
-    backdrop-filter: blur(14px);
-    font-size: .78rem;
-    font-weight: 800;
-  }
-
-  .hero-swipe-stamp {
-    position: absolute;
-    z-index: 8;
-    top: 92px;
-    padding: 8px 13px;
-    border: 3px solid currentColor;
-    border-radius: 10px;
-    background: rgba(5,16,38,.72);
-    font-family: var(--font-display);
-    font-size: 1.08rem;
-    font-weight: 900;
-    letter-spacing: .08em;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .hero-swipe-stamp--previous {
-    left: 34px;
-    color: #78e6c2;
-    transform: rotate(-9deg);
-    opacity: clamp(0, var(--hero-swipe-direction), 1);
-  }
-
-  .hero-swipe-stamp--next {
-    right: 34px;
-    color: #ffd46a;
-    transform: rotate(9deg);
-    opacity: clamp(0, calc(var(--hero-swipe-direction) * -1), 1);
-  }
-
-  .showcase-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: linear-gradient(120deg, rgba(255,255,255,0.55), transparent 34%, rgba(255, 176, 31, 0.18));
-  }
-
-  .showcase-frame {
-    padding: 18px;
-    background: linear-gradient(180deg, #fff, #eef4ff);
-  }
-
-  .showcase-frame :global(.cover) {
-    overflow: hidden;
-    border-radius: 28px;
-    box-shadow: 0 18px 50px rgba(9, 24, 65, 0.22);
-  }
-
-  .showcase-content {
-    position: relative;
-    z-index: 1;
-    padding: 8px 26px 28px;
-    transition: opacity .2s ease;
-  }
-
-  .showcase-card[data-state="next"] .showcase-content,
-  .showcase-card[data-state="queued"] .showcase-content,
-  .showcase-card[data-state="hidden"] .showcase-content { opacity: 0; }
-
-  .showcase-content h2 {
-    margin: 12px 0 8px;
-    font-size: clamp(1.45rem, 3vw, 2.05rem);
-    letter-spacing: -0.03em;
-  }
-
-  .showcase-content p {
-    color: var(--ink-soft);
-    font-weight: 650;
-  }
-
-  .showcase-link {
+  .discover-link,
+  .section-heading > a {
     display: inline-flex;
-    margin-top: 16px;
-    color: var(--blue-d);
-    font-family: var(--font-display);
-    font-weight: 900;
-  }
-
-  .showcase-card:hover .showcase-link { transform: translateX(4px); }
-
-  .hero-orbit-card {
-    position: absolute;
-    z-index: 2;
-    width: min(245px, 60%);
-    padding: 16px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.32);
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.88);
-    color: var(--ink);
-    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(18px);
-  }
-
-  .hero-orbit-card--top {
-    top: 10px;
-    right: -12px;
-  }
-
-  .hero-orbit-card--bottom {
-    left: 22px;
-    bottom: 0;
-  }
-
-  .mini-kicker {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--blue-d);
-    font-size: 0.75rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .hero-orbit-card strong,
-  .hero-orbit-card small {
-    display: block;
-  }
-
-  .hero-orbit-card strong {
-    font-family: var(--font-display);
-    font-size: 1.04rem;
-    line-height: 1.18;
-  }
-
-  .hero-orbit-card small {
-    margin-top: 4px;
-    color: var(--ink-soft);
-    font-weight: 750;
-  }
-
-  .premium-strip {
-    position: relative;
-    z-index: 4;
-    margin-top: -54px;
-  }
-
-  .strip-panel {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(22px);
-  }
-
-  .strip-panel div {
-    padding: 24px 24px;
-    background: rgba(255, 255, 255, 0.93);
-  }
-
-  .strip-panel strong,
-  .strip-panel span {
-    display: block;
-  }
-
-  .strip-panel strong {
-    color: var(--ink);
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 3.6vw, 2.35rem);
-    line-height: 1;
-  }
-
-  .strip-panel span {
-    margin-top: 8px;
-    color: var(--ink-soft);
-    font-weight: 800;
-  }
-
-  .premium-choices {
-    padding-top: 42px;
-  }
-
-  .latest-stories {
-    overflow: hidden;
-    padding-top: 54px;
-    padding-bottom: 36px;
-  }
-
-  .swipe-layout {
-    display: grid;
-    grid-template-columns: minmax(0, .82fr) minmax(360px, 1fr);
-    gap: clamp(40px, 8vw, 110px);
     align-items: center;
-  }
-
-  .swipe-intro h2 {
-    max-width: 10ch;
-    color: #fff;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    letter-spacing: -0.065em;
-    line-height: .96;
-    text-wrap: balance;
-  }
-
-  .swipe-intro > p:not(.eyebrow):not(.swipe-hint) {
-    max-width: 48ch;
-    margin-top: 20px;
-    color: rgba(255,255,255,.82);
-    font-size: 1.05rem;
-    font-weight: 650;
-  }
-
-  .swipe-progress {
-    display: flex;
-    align-items: baseline;
     gap: 8px;
-    margin-top: 30px;
-    color: rgba(255,255,255,.72);
-    font-weight: 800;
-  }
-
-  .swipe-progress strong {
-    color: #ffd46a;
-    font-family: var(--font-display);
-    font-size: 2.2rem;
-    line-height: 1;
-  }
-
-  .swipe-hint {
-    margin: 10px 0 22px;
-    color: rgba(255,255,255,.58);
+    color: rgba(255,255,255,.8);
     font-size: .86rem;
-    font-weight: 750;
-  }
-
-  .swipe-intro .sec-link { color: #fff; }
-
-  .swipe-deck {
-    display: grid;
-    justify-items: center;
-    min-width: 0;
-  }
-
-  .swipe-stack {
-    --swipe-direction: 0;
-    display: grid;
-    width: min(100%, 430px);
-    padding: 20px 14px 34px;
-    outline: none;
-    perspective: 1100px;
-    touch-action: pan-y;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-
-  .swipe-stack:focus-visible::after {
-    content: "";
-    grid-area: 1 / 1;
-    z-index: 8;
-    margin: 8px;
-    border: 3px solid #ffd46a;
-    border-radius: 34px;
-    pointer-events: none;
-  }
-
-  .swipe-card {
-    --drag-x: 0px;
-    --drag-rotate: 0deg;
-    --drag-opacity: 1;
-    position: relative;
-    grid-area: 1 / 1;
-    min-width: 0;
-    transform-origin: 50% 92%;
-    will-change: transform, opacity;
-    transition: transform .3s cubic-bezier(.2,.78,.25,1), opacity .24s ease;
-  }
-
-  .swipe-card[data-state="active"] {
-    z-index: 4;
-    opacity: var(--drag-opacity);
-    pointer-events: auto;
-    transform: translateX(var(--drag-x)) rotate(var(--drag-rotate));
-    cursor: grab;
-  }
-
-  .swipe-stack[data-dragging="true"] .swipe-card[data-state="active"] {
-    transition: none;
-    cursor: grabbing;
-  }
-
-  .swipe-card[data-state="next"] {
-    z-index: 3;
-    opacity: .9;
-    pointer-events: none;
-    transform: translateY(18px) rotate(2.5deg) scale(.955);
-  }
-
-  .swipe-card[data-state="queued"] {
-    z-index: 2;
-    opacity: .6;
-    pointer-events: none;
-    transform: translateY(34px) rotate(-2.8deg) scale(.91);
-  }
-
-  .swipe-card[data-state="hidden"] {
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(42px) scale(.88);
-  }
-
-  .swipe-card :global(.story-card) {
-    height: 100%;
-    border-color: rgba(255,255,255,.62);
-    box-shadow: 0 34px 85px rgba(3,14,46,.4);
-  }
-
-  .swipe-card[data-state="active"] :global(.story-card:hover) {
-    transform: none;
-  }
-
-  .swipe-stamp {
-    position: absolute;
-    z-index: 7;
-    top: 92px;
-    padding: 8px 13px;
-    border: 3px solid currentColor;
-    border-radius: 10px;
-    background: rgba(5,16,38,.72);
-    font-family: var(--font-display);
-    font-size: 1.18rem;
     font-weight: 900;
-    letter-spacing: .08em;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .12s ease;
+    white-space: nowrap;
   }
 
-  .swipe-stamp--previous {
-    left: 26px;
-    color: #78e6c2;
-    transform: rotate(-9deg);
-    opacity: clamp(0, var(--swipe-direction), 1);
-  }
+  .discover-link:hover,
+  .section-heading > a:hover { color: #fff; }
 
-  .swipe-stamp--next {
-    right: 26px;
-    color: #ffd46a;
-    transform: rotate(9deg);
-    opacity: clamp(0, calc(var(--swipe-direction) * -1), 1);
-  }
-
-  .swipe-actions {
-    position: relative;
-    z-index: 8;
-    display: grid;
-    grid-template-columns: 74px minmax(160px, 1fr) 74px;
-    gap: 12px;
+  .preference-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .preference-chip {
+    display: flex;
     align-items: center;
-    width: min(100%, 430px);
-    margin-top: 2px;
-  }
-
-  .swipe-button,
-  .swipe-open {
-    min-height: 58px;
-    border: 1px solid rgba(255,255,255,.3);
-    box-shadow: 0 18px 44px rgba(3,14,46,.24);
+    gap: 7px;
+    min-height: 43px;
+    padding: 0 12px;
+    border: 1px solid rgba(255,255,255,.17);
+    border-radius: 14px;
+    background: rgba(255,255,255,.11);
+    box-shadow: 0 12px 26px rgba(0,20,95,.13);
     backdrop-filter: blur(14px);
   }
 
-  .swipe-button {
-    display: grid;
-    place-items: center;
-    gap: 0;
-    padding: 7px;
-    border-radius: 22px;
-    background: rgba(255,255,255,.12);
+  .preference-chip > i:first-child { color: #c9dbff; font-size: 1.12rem; }
+  .preference-chip > i:last-child { color: rgba(255,255,255,.6); font-size: .78rem; }
+  .preference-chip select {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: transparent;
     color: #fff;
-    cursor: pointer;
-    transition: transform .18s ease, background .18s ease;
-  }
-
-  .swipe-button span {
-    font-family: var(--font-display);
-    font-size: 1.45rem;
-    line-height: .8;
-  }
-
-  .swipe-button small {
-    color: rgba(255,255,255,.7);
-    font-size: .66rem;
-    font-weight: 800;
-  }
-
-  .swipe-button:hover { transform: translateY(-3px); background: rgba(255,255,255,.2); }
-
-  .swipe-open {
-    display: grid;
-    place-items: center;
-    padding: 0 20px;
-    border-radius: 22px;
-    background: linear-gradient(135deg, #ffd86b, #ff9f1c);
-    color: #2b1b00;
-    font-family: var(--font-display);
+    font-family: inherit;
+    font-size: .83rem;
     font-weight: 900;
-    text-align: center;
+    cursor: pointer;
+  }
+
+  .preference-chip select option { color: #102a66; }
+  .story-deck-shell { margin-top: 20px; }
+  .story-deck { position: relative; min-height: 444px; touch-action: pan-y; perspective: 1200px; }
+
+  .deck-card {
+    position: absolute;
+    inset: 0 230px 0 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1.26fr) minmax(310px, .74fr);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 36px;
+    background: #fff;
+    color: var(--app-text);
+    box-shadow: 0 36px 95px rgba(0,16,75,.42);
+    transform-origin: 50% 100%;
+    transition: transform .42s cubic-bezier(.2,.75,.25,1), opacity .3s ease, filter .3s ease;
+  }
+
+  .deck-card[data-state='active'] { z-index: 3; opacity: 1; transform: translateX(var(--drag-x, 0)) rotate(calc(var(--drag-x, 0px) * .006)); }
+  .deck-card[data-state='next'] { z-index: 2; opacity: .78; transform: translateX(calc(100% - 190px)) scale(.95) rotate(1.2deg); filter: saturate(.82); pointer-events: none; }
+  .deck-card[data-state='hidden'] { z-index: 1; opacity: 0; transform: translateX(82px) scale(.92); pointer-events: none; }
+  .deck-card.is-dragging { transition: none; cursor: grabbing; }
+
+  .deck-cover { position: relative; min-height: 444px; overflow: hidden; background: #dce8ff; }
+  .deck-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s cubic-bezier(.2,.75,.25,1); }
+  .deck-card:hover .deck-cover img { transform: scale(1.025); }
+  .deck-gradient { position: absolute; inset: auto 0 0; height: 34%; background: linear-gradient(180deg, transparent, rgba(3,19,66,.32)); pointer-events: none; }
+
+  .story-kind,
+  .favorite-button {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    border: 1px solid rgba(255,255,255,.32);
+    background: rgba(3,24,73,.72);
+    color: #fff;
+    box-shadow: 0 12px 30px rgba(0,15,61,.22);
+    backdrop-filter: blur(14px);
+  }
+
+  .story-kind { left: 20px; display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; border-radius: 11px; font-size: .72rem; font-weight: 900; }
+  .favorite-button { right: 20px; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; font-size: 1.25rem; }
+  .favorite-button:hover { background: rgba(255,255,255,.96); color: #e43869; }
+  .favorite-button.is-favorite { background: #fff; color: #e43a69; }
+
+  .deck-copy { display: flex; flex-direction: column; padding: clamp(25px, 3vw, 36px); }
+  .deck-eyebrow { margin-bottom: 12px; color: #2355c5; font-size: .72rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+  .deck-copy h2 { color: #102d75; font-size: clamp(1.65rem, 2.5vw, 2.45rem); letter-spacing: -.045em; }
+  .deck-description { display: -webkit-box; overflow: hidden; margin-top: 13px; color: #526184; font-size: .9rem; font-weight: 650; line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+  .story-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .story-meta span { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 10px; background: #f1f5ff; color: #3e5181; font-size: .72rem; font-weight: 900; }
+  .story-meta i { color: #1c55d4; font-size: .95rem; }
+
+  .start-story {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    margin-top: auto;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffc631, #ffad19);
+    color: #162b62;
+    box-shadow: 0 14px 30px rgba(255,171,24,.3);
+    font-size: .94rem;
+    font-weight: 900;
     transition: transform .18s ease, box-shadow .18s ease;
   }
 
-  .swipe-open:hover { transform: translateY(-3px); box-shadow: 0 22px 54px rgba(255,159,28,.3); }
+  .start-story:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(255,171,24,.4); }
+  .online-note { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; color: #7c88a4; font-size: .66rem; font-weight: 750; text-align: center; }
+  .online-note i { color: #39966c; font-size: .9rem; }
 
-  .new-ribbon {
-    position: absolute;
-    z-index: 5;
-    top: -7px;
-    right: 14px;
-    padding: 7px 13px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #ffd86b, #ff9f1c);
-    color: #402000;
-    box-shadow: 0 10px 24px rgba(87,45,0,.28);
-    font-family: var(--font-display);
-    font-size: .78rem;
-    font-weight: 900;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-  }
+  .deck-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 14px 230px 0 0; }
+  .deck-controls button { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; background: rgba(255,255,255,.1); color: #fff; font-size: 1.1rem; }
+  .deck-controls button:hover { background: rgba(255,255,255,.2); }
+  .deck-controls p { color: rgba(255,255,255,.62); font-size: .78rem; font-weight: 800; }
+  .deck-controls strong { color: #fff; }
 
-  .section-intro {
-    max-width: 900px;
-    margin-bottom: 22px;
-  }
+  .continue-section { padding-top: 38px; }
+  .video-section,
+  .library-section { padding-top: 74px; }
+  .section-heading { margin-bottom: 22px; }
+  .section-heading h2,
+  .settings-copy h2 { color: #fff; font-size: clamp(1.65rem, 3vw, 2.35rem); letter-spacing: -.035em; }
+  .section-heading > div > p:last-child { max-width: 670px; margin-top: 8px; color: rgba(255,255,255,.63); font-size: .9rem; font-weight: 650; }
 
-  .section-intro .sec-head {
-    margin-bottom: 10px;
-  }
-
-  .section-intro .sec-head h2 {
-    max-width: 16ch;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    letter-spacing: -0.055em;
-  }
-
-  .section-intro .sec-sub {
-    max-width: 68ch;
-    color: rgba(255, 255, 255, 0.82);
-    font-size: 1.06rem;
-    font-weight: 650;
-  }
-
-  .premium-categories :global(.cat-card),
-  .premium-stories :global(.story-card) {
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 24px 60px rgba(8, 24, 70, 0.2);
-  }
-
-  .daily-feature {
-    padding-top: 34px;
-  }
-
-  .today-premium {
+  .continue-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .continue-card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 360px;
-    gap: clamp(26px, 6vw, 72px);
-    align-items: center;
+    grid-template-columns: 116px minmax(0, 1fr);
+    min-height: 142px;
     overflow: hidden;
-    min-height: 420px;
-    padding: clamp(28px, 5vw, 56px);
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    border-radius: 38px;
-    background:
-      radial-gradient(500px 260px at 85% 20%, rgba(255, 176, 31, 0.34), transparent 64%),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 241, 255, 0.91));
-    color: var(--ink);
-    box-shadow: 0 36px 100px rgba(8, 24, 70, 0.25);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 22px;
+    background: rgba(255,255,255,.1);
+    box-shadow: 0 20px 50px rgba(0,17,79,.18);
+    backdrop-filter: blur(12px);
+    transition: transform .2s ease, background .2s ease;
   }
 
-  .today-copy h2 {
-    max-width: 14ch;
-    margin-bottom: 14px;
-    font-size: clamp(2.1rem, 5vw, 4.2rem);
-    letter-spacing: -0.065em;
-    color: var(--ink);
-  }
+  .continue-card:hover { transform: translateY(-4px); background: rgba(255,255,255,.15); }
+  .continue-card img { width: 100%; height: 100%; object-fit: cover; }
+  .continue-card > div { min-width: 0; padding: 18px 15px; }
+  .continue-card span { color: #9ebeff; font-size: .68rem; font-weight: 900; }
+  .continue-card h3 { display: -webkit-box; overflow: hidden; margin-top: 5px; color: #fff; font-size: .97rem; line-height: 1.28; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .progress-track { height: 5px; overflow: hidden; margin-top: 17px; border-radius: 99px; background: rgba(255,255,255,.15); }
+  .progress-track span { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--app-yellow); transition: width .35s ease; }
+  .continue-card p { margin-top: 6px; color: rgba(255,255,255,.55); font-size: .65rem; font-weight: 800; }
 
-  .today-copy p {
-    max-width: 58ch;
-    margin-bottom: 18px;
-    color: var(--ink-soft);
-    font-size: 1.08rem;
-    font-weight: 650;
-  }
-
-  .today-copy .eyebrow {
-    color: var(--blue-d);
-  }
-
-  .today-copy .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 22px;
-  }
-
-  .today-art {
-    transform: rotate(3deg);
-  }
-
-  .today-art :global(.cover) {
+  .video-rail { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .video-tile {
     overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 0 26px 70px rgba(8, 24, 70, 0.24);
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 25px;
+    background: #fff;
+    color: var(--app-text);
+    box-shadow: 0 26px 60px rgba(0,18,80,.28);
+    transition: transform .24s cubic-bezier(.2,.75,.25,1), box-shadow .24s ease;
   }
 
-  .reading-journey {
-    padding-top: 20px;
-  }
+  .video-tile:hover { transform: translateY(-7px); box-shadow: 0 34px 72px rgba(0,15,70,.4); }
+  .video-visual { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #071e62; }
+  .video-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+  .video-tile:hover .video-visual img { transform: scale(1.04); }
+  .video-badge { position: absolute; top: 13px; left: 13px; display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 9px; background: rgba(255,255,255,.92); color: #d92645; font-size: .68rem; font-weight: 900; box-shadow: 0 8px 22px rgba(0,0,0,.15); }
+  .video-play { position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; background: rgba(8,29,85,.7); color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,.25); backdrop-filter: blur(9px); }
+  .video-copy { min-height: 158px; padding: 19px 20px 21px; }
+  .video-copy > span { color: #2d5dce; font-size: .67rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .video-copy h3 { display: -webkit-box; overflow: hidden; margin-top: 7px; color: #112d70; font-size: 1.05rem; line-height: 1.32; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .video-copy p { display: flex; align-items: center; gap: 5px; margin-top: 15px; color: #5570ae; font-size: .76rem; font-weight: 900; }
 
-  .journey-card {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
-    gap: 28px;
-    align-items: center;
-    padding: clamp(28px, 5vw, 46px);
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 34px;
-    background: linear-gradient(135deg, rgba(8, 27, 70, 0.72), rgba(47, 116, 232, 0.38));
-    color: #fff;
-    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(18px);
-  }
+  .compact-heading { margin-bottom: 18px; }
+  .favorite-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .favorite-card { display: flex; align-items: center; gap: 14px; padding: 11px; border: 1px solid rgba(255,255,255,.14); border-radius: 19px; background: rgba(255,255,255,.1); }
+  .favorite-card[hidden] { display: none; }
+  .favorite-card img { width: 90px; height: 72px; object-fit: cover; border-radius: 13px; }
+  .favorite-card span { color: #a8c4ff; font-size: .66rem; font-weight: 900; }
+  .favorite-card h3 { margin-top: 3px; color: #fff; font-size: .9rem; }
+  .empty-library { display: flex; align-items: center; gap: 15px; padding: 22px; border: 1px dashed rgba(255,255,255,.22); border-radius: 20px; color: rgba(255,255,255,.7); }
+  .empty-library[hidden] { display: none; }
+  .empty-library > i { font-size: 1.7rem; color: #ff7f9f; }
+  .empty-library h3 { color: #fff; font-size: .98rem; }
+  .empty-library p { margin-top: 3px; font-size: .78rem; font-weight: 650; }
 
-  .journey-card h2 {
-    margin-bottom: 12px;
-    font-size: clamp(2rem, 5vw, 3.6rem);
-    letter-spacing: -0.055em;
-  }
-
-  .journey-card p {
-    max-width: 58ch;
-    color: rgba(255, 255, 255, 0.82);
-    font-weight: 650;
-  }
-
-  .journey-steps {
-    display: grid;
-    gap: 12px;
-  }
-
-  .journey-steps span {
+  .native-ad {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 16px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.11);
-    font-weight: 850;
+    justify-content: space-between;
+    min-height: 76px;
+    margin-top: 30px;
+    padding: 19px 24px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 21px;
+    background: rgba(255,255,255,.07);
+    color: rgba(255,255,255,.6);
   }
 
-  .journey-steps b {
-    color: #ffd77a;
-    font-family: var(--font-display);
+  .native-ad span { font-size: .62rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+  .native-ad p { margin-top: 2px; color: rgba(255,255,255,.72); font-size: .83rem; font-weight: 800; }
+  .native-ad > i { color: var(--app-yellow); font-size: 1.45rem; }
+
+  .settings-section {
+    align-items: center;
+    margin-top: 26px;
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 26px;
+    background: linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.06));
   }
 
-  @media (max-width: 960px) {
-    .hero-grid,
-    .today-premium,
-    .journey-card,
-    .swipe-layout {
-      grid-template-columns: 1fr;
-    }
+  .settings-copy { max-width: 720px; }
+  .settings-copy > p:last-child { margin-top: 11px; color: rgba(255,255,255,.67); font-size: .86rem; font-weight: 650; }
+  .settings-actions { display: flex; min-width: 230px; flex-wrap: wrap; justify-content: flex-end; gap: 9px; text-align: right; }
+  .clear-data { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 14px; background: rgba(255,255,255,.1); color: #fff; font-size: .78rem; font-weight: 900; }
+  .clear-data:hover { background: rgba(255,255,255,.17); }
+  [data-settings-status] { flex-basis: 100%; max-width: 330px; margin-top: 0; color: #b9d0ff; font-size: .68rem; font-weight: 750; }
 
-    .hero-copy h1 {
-      max-width: 12ch;
-    }
+  .search-guide {
+    margin-top: 28px;
+    padding: clamp(26px, 4vw, 42px);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.07));
+    box-shadow: 0 28px 75px rgba(0,18,80,.2);
+  }
+  .search-guide-copy { max-width: 880px; }
+  .search-guide-copy h2 { max-width: 25ch; color: #fff; font-size: clamp(1.8rem, 3.6vw, 2.85rem); letter-spacing: -.045em; }
+  .search-guide-copy > p:last-child { max-width: 78ch; margin-top: 13px; color: rgba(255,255,255,.75); font-size: .95rem; font-weight: 650; }
+  .guide-link-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; margin-top: 24px; }
+  .guide-link-grid > a { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; min-height: 104px; padding: 17px; border: 1px solid rgba(255,255,255,.15); border-radius: 19px; background: rgba(255,255,255,.09); transition: transform .2s ease, background .2s ease; }
+  .guide-link-grid > a:hover { transform: translateY(-3px); background: rgba(255,255,255,.15); }
+  .guide-link-grid > a > i:first-child { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: rgba(255,198,46,.16); color: var(--app-yellow); font-size: 1.3rem; }
+  .guide-link-grid > a > i:last-child { color: rgba(255,255,255,.6); }
+  .guide-link-grid h3 { color: #fff; font-size: .96rem; }
+  .guide-link-grid p { margin-top: 4px; color: rgba(255,255,255,.6); font-size: .73rem; font-weight: 700; line-height: 1.4; }
+  .quick-answers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 30px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,.12); }
+  .quick-answers h3 { color: #fff; font-size: .92rem; }
+  .quick-answers p { margin-top: 7px; color: rgba(255,255,255,.65); font-size: .78rem; font-weight: 650; line-height: 1.55; }
 
-    .hero-stage {
-      min-height: auto;
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    .today-art {
-      max-width: 420px;
-    }
-
-    .swipe-intro {
-      max-width: 660px;
-      text-align: center;
-      justify-self: center;
-    }
-
-    .swipe-intro h2 { max-width: 12ch; }
-    .swipe-intro > p:not(.eyebrow):not(.swipe-hint) { margin-inline: auto; }
-    .swipe-progress { justify-content: center; }
+  @media (max-width: 1120px) {
+    .app-home { padding-inline: 34px; }
+    .deck-card { grid-template-columns: 1.16fr .84fr; }
+    .deck-copy { padding: 32px; }
+    .continue-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .continue-card:nth-child(n+3) { display: none; }
   }
 
-  @media (max-width: 760px) {
-    .premium-hero {
-      min-height: auto;
-    }
-
-    .hero-grid {
-      padding-top: 58px;
-      padding-bottom: 84px;
-    }
-
-    .hero-stage {
-      order: -1;
-      width: min(100%, 350px);
-      padding-bottom: 0;
-    }
-
-    .hero-carousel { min-height: 430px; }
-
-    .showcase-frame { padding: 12px; }
-    .showcase-frame :global(.cover) { border-radius: 22px; }
-
-    .showcase-content { padding: 5px 20px 20px; }
-    .showcase-content h2 { margin: 9px 0 6px; font-size: 1.38rem; }
-    .showcase-content p {
-      display: -webkit-box;
-      overflow: hidden;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      font-size: .9rem;
-    }
-
-    .showcase-link { margin-top: 10px; }
-    .hero-controls { top: 12px; right: 10px; }
-    .hero-swipe-button { width: 38px; height: 38px; }
-    .hero-dots { gap: 6px; padding: 8px 10px; }
-    .hero-dots button { width: 7px; height: 7px; }
-    .hero-dots button[aria-current="true"] { width: 22px; }
-
-    .hero-copy h1 {
-      font-size: clamp(2.75rem, 15vw, 4.7rem);
-    }
-
-    .hero-actions .btn {
-      width: 100%;
-    }
-
-    .trust-row span {
-      flex: 1 1 auto;
-    }
-
-    .strip-panel {
-      grid-template-columns: repeat(2, 1fr);
-      border-radius: 24px;
-    }
-
-    .strip-panel div {
-      padding: 18px;
-    }
-
-    .hero-orbit-card {
-      position: relative;
-      inset: auto;
-      width: auto;
-      margin-top: 12px;
-    }
-
-    .showcase-card {
-      transform: none;
-    }
-
-    .showcase-card[data-hero-slide][data-state="active"] {
-      transform: translateX(var(--hero-drag-x)) rotate(var(--hero-drag-rotate)) scale(1);
-    }
-
-    .hero-swipe-hint { display: none; }
-    .hero-controls { right: 14px; }
-
-    .today-premium {
-      border-radius: 28px;
-    }
-
-    .swipe-layout { gap: 30px; }
-    .swipe-stack { width: min(100%, 370px); padding-inline: 8px; }
-    .swipe-actions { width: min(100%, 370px); grid-template-columns: 64px minmax(150px, 1fr) 64px; }
-    .swipe-intro h2 { font-size: clamp(2.55rem, 13vw, 4rem); }
+  @media (max-width: 900px) {
+    .story-deck { min-height: 650px; }
+    .deck-card { grid-template-columns: 1fr; grid-template-rows: 330px 1fr; inset-right: 34px; }
+    .deck-cover { min-height: 0; }
+    .deck-copy { padding: 25px 27px 24px; }
+    .deck-description { -webkit-line-clamp: 2; }
+    .start-story { margin-top: 22px; }
+    .online-note { margin-top: 9px; }
+    .video-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .video-tile:nth-child(n+5) { display: none; }
+    .favorite-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .guide-link-grid { grid-template-columns: 1fr; }
+    .quick-answers { grid-template-columns: 1fr; gap: 16px; }
   }
 
-  @media (max-width: 460px) {
-    .strip-panel {
-      grid-template-columns: 1fr;
+  @media (max-width: 720px) {
+    .app-home { padding: 27px 16px 58px; }
+    .tonight-heading { display: block; }
+    .tonight-heading h1 { font-size: clamp(2.05rem, 10vw, 3.05rem); }
+    .tonight-heading > div > p:last-child { font-size: .88rem; }
+    .discover-link { display: none; }
+    .preference-bar { flex-wrap: nowrap; gap: 8px; margin-top: 22px; overflow-x: auto; scrollbar-width: none; }
+    .preference-bar::-webkit-scrollbar { display: none; }
+    .preference-chip { flex: 0 0 auto; min-height: 41px; padding-inline: 10px; }
+    .preference-chip select { font-size: .78rem; }
+    .story-deck-shell { margin-top: 20px; overflow-x: clip; overflow-clip-margin: 14px; }
+    .story-deck { min-height: 600px; }
+    .deck-card { inset: 0 10px 0 0; grid-template-rows: 270px 1fr; border-radius: 27px; }
+    .deck-card[data-state='next'] { transform: translateX(12px) scale(.975) rotate(.7deg); }
+    .deck-copy { padding: 22px 20px 20px; }
+    .deck-copy h2 { font-size: clamp(1.55rem, 7vw, 2rem); }
+    .deck-description { margin-top: 10px; font-size: .87rem; line-height: 1.5; }
+    .story-meta { margin-top: 14px; }
+    .story-meta span { padding: 6px 8px; font-size: .65rem; }
+    .start-story { min-height: 49px; margin-top: 17px; }
+    .story-kind { top: 14px; left: 14px; }
+    .favorite-button { top: 14px; right: 14px; width: 42px; height: 42px; }
+    .deck-controls { margin-right: 10px; gap: 14px; }
+    .continue-section, .video-section, .library-section { padding-top: 55px; }
+    .section-heading { align-items: flex-end; }
+    .section-heading h2 { font-size: 1.65rem; }
+    .section-heading > a { font-size: .72rem; }
+    .continue-grid { grid-template-columns: 1fr; gap: 12px; }
+    .continue-card { min-height: 124px; grid-template-columns: 108px minmax(0, 1fr); }
+    .continue-card:nth-child(n+3) { display: none; }
+    .continue-card > div { padding: 15px 13px; }
+    .video-rail {
+      display: flex;
+      gap: 13px;
+      margin-inline: -16px;
+      padding: 0 16px 13px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
     }
+    .video-rail::-webkit-scrollbar { display: none; }
+    .video-tile { flex: 0 0 min(83vw, 330px); scroll-snap-align: start; border-radius: 22px; }
+    .video-tile:nth-child(n+5) { display: block; }
+    .video-copy { min-height: 145px; }
+    .favorite-grid { grid-template-columns: 1fr; }
+    .settings-section { display: block; padding: 23px; }
+    .settings-actions { min-width: 0; justify-content: flex-start; margin-top: 20px; text-align: left; }
+    [data-settings-status] { max-width: none; }
+    .search-guide { padding: 23px; }
+  }
 
-    .premium-strip {
-      margin-top: -38px;
-    }
+  @media (max-width: 390px) {
+    .story-deck { min-height: 620px; }
+    .deck-card { grid-template-rows: 245px 1fr; }
+    .online-note { font-size: .59rem; }
+    .deck-controls p { font-size: .68rem; }
+  }
 
-    .section-intro .sec-head h2,
-    .today-copy h2,
-    .journey-card h2 {
-      letter-spacing: -0.04em;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    .deck-card,
+    .deck-cover img,
+    .video-tile,
+    .video-visual img,
+    .continue-card { transition: none; }
   }
 </style>

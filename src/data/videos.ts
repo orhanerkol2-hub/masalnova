@@ -21,17 +21,63 @@ export type Video = {
   publishedAt?: string;
 };
 
-type RawVideo = { id: string; title: string; published?: string };
+type RawVideo = { id: string; title: string; published?: string; slug?: string };
 
 // Optional manual metadata per YouTube id (duration/category/related story).
 // Fill in as you like — anything omitted is inferred from the title.
 const overrides: Record<string, Partial<Video>> = {
-  Ugd4Pfgln30: { categories: ['sarkilar', 'keloglan'], relatedStoryIds: ['keloglan-degirmen'] },
-  Yrt45W_743A: { categories: ['sarkilar', 'keloglan'], relatedStoryIds: ['keloglan-tohum'] },
-  maMMAF1oWPg: { categories: ['sarkilar', 'keloglan'] },
-  _BCOsqAVfIU: { categories: ['sarkilar', 'keloglan', 'masal'], relatedStoryIds: ['keloglan-dev'] },
-  otPg1Pe39VM: { categories: ['sarkilar', 'masal'], relatedStoryIds: ['alice'] },
-  s7l67b0kNiU: { categories: ['sarkilar', 'egitici'] },
+  zDgIJ31YASk: {
+    categories: ['sarkilar', 'masal'],
+    shortDescription: 'Alice kaybolan gölgesinin peşinden renkli bir maceraya çıkıyor. Çocuklar için neşeli müzik, hikâye ve animasyonu birleştiren Türkçe MasalNova videosu.',
+  },
+  Ugd4Pfgln30: {
+    categories: ['sarkilar', 'keloglan'],
+    relatedStoryIds: ['keloglan-degirmen'],
+    shortDescription: 'Aykız’ın uyanışıyla başlayan Keloğlan temalı neşeli çocuk şarkısı. Renkli animasyon ve kolay eşlik edilen Türkçe sözlerle birlikte izleyin.',
+  },
+  Yrt45W_743A: {
+    categories: ['sarkilar', 'keloglan'],
+    relatedStoryIds: ['keloglan-tohum'],
+    shortDescription: 'Keloğlan’ın iyimserliğini ve vazgeçmeyen ruhunu anlatan hareketli çocuk şarkısı. 3D animasyonlu Türkçe müzik klibi MasalNova’da.',
+  },
+  maMMAF1oWPg: {
+    categories: ['sarkilar', 'keloglan'],
+    shortDescription: 'Keloğlan’ın yaylalardaki neşeli yolculuğuna eşlik eden ritmik Türkçe çocuk şarkısı. Doğa, müzik ve animasyonla dolu eğlenceli bir video.',
+  },
+  _BCOsqAVfIU: {
+    categories: ['sarkilar', 'keloglan', 'masal'],
+    relatedStoryIds: ['keloglan-dev'],
+    shortDescription: 'Keloğlan ile herkesin korktuğu ama aslında dost arayan sevimli devin hikâyesini şarkı ve animasyonla izleyin. Cesaret ve önyargı üzerine sıcak bir video.',
+  },
+  otPg1Pe39VM: {
+    categories: ['sarkilar', 'masal'],
+    relatedStoryIds: ['alice'],
+    shortDescription: 'Alice’in harikalarla dolu dünyasını neşeli bir masal şarkısı ve renkli animasyonla keşfedin. Merak duygusunu canlandıran Türkçe çocuk videosu.',
+  },
+  s7l67b0kNiU: {
+    categories: ['sarkilar', 'egitici'],
+    shortDescription: 'Yusuf ve sevimli ayının korku karşısında güven bulduğu, Bismillah sözünü çocuklara müzikle anlatan sakin ve eğitici Türkçe ilahi.',
+  },
+  PrYelmKYf_I: {
+    categories: ['sarkilar', 'hayvan'],
+    shortDescription: 'Sevimli eşek karakteriyle arkadaşlık ve birlikte eğlenme temasını işleyen animasyonlu Türkçe çocuk şarkısı. Ailece izlenebilecek neşeli bir klip.',
+  },
+  h1eKIahPNvI: {
+    categories: ['sarkilar', 'keloglan'],
+    shortDescription: 'Keloğlan’la yaylada hoplayıp dans etmeye çağıran enerjik çizgi film müzik videosu. Hareketli ritmiyle çocukların eşlik edebileceği Türkçe şarkı.',
+  },
+  '9XbDS-hgkeE': {
+    categories: ['sarkilar', 'egitici'],
+    shortDescription: 'Uçan halıyla başlayan hayal dolu bir yolculuğu salavat ve çizgi film anlatımıyla birleştiren Türkçe çocuk ilahisi.',
+  },
+  eq1X_tggww8: {
+    categories: ['sarkilar', 'egitici'],
+    shortDescription: 'Altın zeplinle Türkiye’yi gezerken kalem ve öğrenme sevgisini anlatan eğlenceli çocuk şarkısı. Renkli animasyonla hazırlanan öğretici bir yolculuk.',
+  },
+  Ig0y4OR9vzA: {
+    categories: ['sarkilar', 'keloglan'],
+    shortDescription: 'Keloğlan’ın dış görünüşten daha önemli olan iyi kalbini anlatan sıcak ve neşeli Türkçe çocuk şarkısı. Kabul ve özgüven temasını animasyonla işler.',
+  },
 };
 
 function categorize(title: string): string[] {
@@ -47,8 +93,8 @@ function categorize(title: string): string[] {
 }
 
 const used = new Set<string>();
-function uniqueSlug(title: string, id: string): string {
-  let s = slugify(title) || id.toLowerCase();
+function uniqueSlug(title: string, id: string, persistedSlug?: string): string {
+  let s = persistedSlug || slugify(title) || id.toLowerCase();
   if (used.has(s)) s = `${s}-${id.slice(0, 4).toLowerCase()}`;
   used.add(s);
   return s;
@@ -57,7 +103,7 @@ function uniqueSlug(title: string, id: string): string {
 export const videos: Video[] = (raw as RawVideo[]).map((v, i) => {
   const base: Video = {
     id: v.id,
-    slug: uniqueSlug(v.title, v.id),
+    slug: uniqueSlug(v.title, v.id, v.slug),
     title: v.title,
     youtubeVideoId: v.id,
     thumbnailUrl: `/covers/videos/${v.id}.jpg`,

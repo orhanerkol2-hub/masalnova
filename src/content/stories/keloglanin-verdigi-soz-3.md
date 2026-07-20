@@ -1,6 +1,6 @@
 ---
-title: "Keloğlan'ın Verdiği Söz"
-shortDescription: "Keloğlan'ın dağ başındaki bir devle verdiği söze sadık kalarak akıllılığı ve dürüstlüğüyle herkesi mutlu ettiği sıcak bir masal."
+title: "Keloğlan'ın Dağ Devi Homur'a Verdiği Söz"
+shortDescription: "Keloğlan, yalnız dev Homur'u her hafta ziyaret etme sözünü tutar; korkunun yerini dostluğun aldığı köy ile dağ arasında sıcacık bir bağ kurar."
 coverEmoji: "🏔️"
 coverColor: "#ffb01f"
 coverImage: "/covers/stories/keloglanin-verdigi-soz-3.webp"

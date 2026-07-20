@@ -1,6 +1,6 @@
 ---
-title: "Dede Hikmet'in Yağmurlu Kapısı"
-shortDescription: "Yağmurlu bir akşamda yaşlı bir dedenin nazik davranışının küçük bir kediyi ve bütün mahalleyi huzurla uyutmasını anlatan sakin bir uyku masalı."
+title: "Dede Hikmet ve Yağmurlu Gecenin Misafirleri"
+shortDescription: "Dede Hikmet, yağmurdan kaçan kedi Pamuk ile serçe Civciv'e evini açar; ninniler eşliğinde üç dostun huzurla uykuya daldığı sakin bir masal başlar."
 coverEmoji: "🌧️"
 coverColor: "#7b5cff"
 coverImage: "/covers/stories/dede-hikmetin-yagmurlu-kapisi-2.webp"

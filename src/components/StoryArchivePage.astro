@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StoryCard from './StoryCard.astro';
+import type { Story } from '../data/stories';
+import { ageGroups, durationBuckets, storyCategories } from '../data/taxonomy';
+import { STORY_ARCHIVE_PAGE_SIZE, storyArchivePath } from '../data/pagination';
+
+interface Props {
+  stories: Story[];
+  totalStories: number;
+  page: number;
+  pageCount: number;
+}
+
+const { stories, totalStories, page, pageCount } = Astro.props;
+const path = storyArchivePath(page);
+const pageTitle = page === 1
+  ? 'Türkçe Çocuk Masalları Kütüphanesi – Yaşa ve Süreye Göre | MasalNova'
+  : `Çocuk Masalları Arşivi – Sayfa ${page} | MasalNova`;
+const pageDescription = page === 1
+  ? `${totalStories} resimli Türkçe çocuk masalını yaşa, türe ve okuma süresine göre keşfet. Uyku, kısa, eğitici, hayvan ve Keloğlan masalları.`
+  : `MasalNova çocuk masalları arşivinin ${page}. sayfası. Ücretsiz, resimli ve yaşa uygun Türkçe hikâyeleri keşfet.`;
+const startPosition = (page - 1) * STORY_ARCHIVE_PAGE_SIZE;
+const canonical = `https://masalnova.com${path}`;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${canonical}#collection`,
+    name: pageTitle.replace(' | MasalNova', ''),
+    description: pageDescription,
+    url: canonical,
+    inLanguage: 'tr-TR',
+    isPartOf: { '@id': 'https://masalnova.com/#website' },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListOrder: 'https://schema.org/ItemListOrderDescending',
+      numberOfItems: stories.length,
+      itemListElement: stories.map((story, index) => ({
+        '@type': 'ListItem',
+        position: startPosition + index + 1,
+        name: story.data.title,
+        url: `https://masalnova.com/masallar/${story.id}/`,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: page === 1 ? 'Çocuk Masalları Kütüphanesi' : `Masal Arşivi – Sayfa ${page}`,
+        item: canonical,
+      },
+    ],
+  },
+];
+
+const visiblePages = Array.from({ length: pageCount }, (_, index) => index + 1)
+  .filter((candidate) => candidate === 1 || candidate === pageCount || Math.abs(candidate - page) <= 2);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  path={path}
+  jsonLd={jsonLd}
+  activeNav="masallar"
+>
+  <section class="section archive-page">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Ana Sayfa</a><span>›</span>
+        {page === 1 ? <span>Masal Kütüphanesi</span> : <><a href="/masallar/">Masal Kütüphanesi</a><span>›</span><span>Sayfa {page}</span></>}
+      </nav>
+
+      <header class="page-head">
+        <p class="kicker">MasalNova · resimli Türkçe masal arşivi</p>
+        <h1>{page === 1 ? 'Türkçe Çocuk Masalları Kütüphanesi' : `Çocuk Masalları – Sayfa ${page}`}</h1>
+        <p>
+          {page === 1
+            ? `${totalStories} ücretsiz masalı yaşa, türe ve okuma süresine göre keşfedin. Her hikâye doğrudan sakin MasalNova Reader'da açılır.`
+            : `Arşivin ${page}. sayfasındaki resimli çocuk masallarını keşfedin veya kategori bağlantılarıyla seçiminizi daraltın.`}
+        </p>
+      </header>
+
+      <form class="archive-search" action="/ara/" method="get" role="search">
+        <label class="sr-only" for="archive-query">Masal ara</label>
+        <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+        <input id="archive-query" type="search" name="q" placeholder="491 masal içinde ara..." autocomplete="off" />
+        <button type="submit">Ara</button>
+      </form>
+
+      <nav class="topic-links" aria-label="Masal türleri, yaş ve süre seçenekleri">
+        <a class="featured" href="/masallar/resimli/"><i class="ph ph-image" aria-hidden="true"></i> Resimli masallar</a>
+        {storyCategories.map((category) => (
+          <a href={`/masallar/kategori/${category.key}/`}>{category.emoji} {category.label}</a>
+        ))}
+        {ageGroups.map((age) => <a href={`/masallar/yas/${age.key}/`}>{age.label} masalları</a>)}
+        {durationBuckets.map((duration) => (
+          <a href={`/masallar/sure/${duration.key}/`}>{duration.label} masallar</a>
+        ))}
+      </nav>
+
+      <div class="archive-summary">
+        <p><strong>{totalStories}</strong> masal · Sayfa <strong>{page}</strong> / {pageCount}</p>
+        <a href="/masal-bul/">Yaşa ve süreye göre masal bul <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="grid grid-3 story-grid">
+        {stories.map((story) => <StoryCard story={story} />)}
+      </div>
+
+      {pageCount > 1 && (
+        <nav class="pagination" aria-label="Masal arşivi sayfaları">
+          {page > 1 && <a class="page-direction" href={storyArchivePath(page - 1)} rel="prev"><i class="ph ph-arrow-left" aria-hidden="true"></i> Önceki</a>}
+          <div class="page-numbers">
+            {visiblePages.map((candidate, index) => {
+              const previousCandidate = visiblePages[index - 1];
+              return (
+                <>
+                  {previousCandidate && candidate - previousCandidate > 1 && <span aria-hidden="true">…</span>}
+                  <a
+                    href={storyArchivePath(candidate)}
+                    aria-current={candidate === page ? 'page' : undefined}
+                    class:list={{ 'is-current': candidate === page }}
+                  >{candidate}</a>
+                </>
+              );
+            })}
+          </div>
+          {page < pageCount && <a class="page-direction" href={storyArchivePath(page + 1)} rel="next">Sonraki <i class="ph ph-arrow-right" aria-hidden="true"></i></a>}
+        </nav>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .archive-page { color: #fff; }
+  .crumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; color: rgba(255,255,255,.78); font-weight: 750; }
+  .crumbs a:hover { color: #fff; text-decoration: underline; }
+  .page-head { max-width: 850px; margin-bottom: 22px; }
+  .kicker { margin-bottom: 8px; color: #ffd973; font-size: .78rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+  .page-head h1 { max-width: 18ch; font-size: clamp(2.1rem, 5vw, 4rem); letter-spacing: -.05em; }
+  .page-head > p:last-child { max-width: 70ch; margin-top: 13px; color: rgba(255,255,255,.86); font-size: 1.03rem; }
+  .archive-search { display: flex; align-items: center; gap: 10px; max-width: 720px; padding: 7px 8px 7px 16px; border: 1px solid rgba(255,255,255,.26); border-radius: 18px; background: #fff; color: #16326f; box-shadow: 0 18px 40px rgba(3,20,78,.2); }
+  .archive-search i { font-size: 1.2rem; }
+  .archive-search input { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; }
+  .archive-search button { padding: 10px 20px; border: 0; border-radius: 12px; background: var(--app-yellow); color: #17336f; font-weight: 900; }
+  .topic-links { display: flex; flex-wrap: wrap; gap: 9px; margin: 22px 0 20px; }
+  .topic-links a { padding: 8px 13px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.11); color: #fff; font-size: .86rem; font-weight: 800; }
+  .topic-links a:hover { background: rgba(255,255,255,.22); }
+  .topic-links .featured { border-color: rgba(255,210,73,.55); background: rgba(255,198,46,.17); }
+  .archive-summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin: 18px 0; color: rgba(255,255,255,.82); font-size: .9rem; }
+  .archive-summary a { color: #fff; font-weight: 850; }
+  .archive-summary a:hover { text-decoration: underline; }
+  .story-grid { margin-top: 18px; }
+  .pagination { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 38px 0 8px; }
+  .page-direction, .page-numbers a { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; border: 1px solid rgba(255,255,255,.24); background: rgba(255,255,255,.11); color: #fff; font-weight: 850; }
+  .page-direction { gap: 7px; padding: 0 15px; border-radius: 13px; }
+  .page-numbers { display: flex; align-items: center; gap: 6px; }
+  .page-numbers a { min-width: 42px; border-radius: 12px; }
+  .page-numbers a.is-current { border-color: var(--app-yellow); background: var(--app-yellow); color: #16326f; }
+  .page-direction:hover, .page-numbers a:hover { background: rgba(255,255,255,.22); }
+  @media (max-width: 640px) {
+    .archive-search { border-radius: 16px; }
+    .archive-search button { padding-inline: 16px; }
+    .archive-summary { align-items: flex-start; flex-direction: column; }
+    .pagination { flex-wrap: wrap; gap: 10px; }
+    .page-numbers { order: -1; width: 100%; justify-content: center; }
+  }
+</style>
