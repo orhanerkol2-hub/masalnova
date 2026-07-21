@@ -173,9 +173,11 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 900px) {
   .grid-4 { grid-template-columns: repeat(3, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .story-grid.grid-3 { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .story-grid.grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .section { padding: 34px 0; }
 }

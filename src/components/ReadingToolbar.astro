@@ -20,6 +20,18 @@ const { backHref, audioSrc, storyId } = Astro.props;
     </a>
 
     <div class="reading-toolbar__actions">
+      <button
+        class="reading-toolbar__btn reading-toolbar__bedtime"
+        type="button"
+        data-bedtime-toggle
+        aria-pressed="false"
+        aria-label="Uyku modunu aç"
+        title="Uyku modu"
+      >
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
       {
         audioSrc && (
           <button class="reading-toolbar__btn" type="button" data-audio-toggle aria-label="Sesli masalı oynat" aria-pressed="false">
@@ -124,6 +136,11 @@ const { backHref, audioSrc, storyId } = Astro.props;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.06rem;
     font-weight: 800;
+  }
+
+  .reading-toolbar__bedtime[aria-pressed='true'] {
+    background: var(--reader-surface-raised);
+    color: var(--reader-accent);
   }
 
   .reading-toolbar__progress {
@@ -251,5 +268,28 @@ const { backHref, audioSrc, storyId } = Astro.props;
     });
     audio.addEventListener('play', syncAudioButton);
     audio.addEventListener('pause', syncAudioButton);
+  }
+
+  const bedtimeBtn = document.querySelector<HTMLButtonElement>('[data-bedtime-toggle]');
+
+  if (bedtimeBtn) {
+    const storageKey = 'masalnova:bedtime-mode';
+    const root = document.documentElement;
+
+    const setBedtimeMode = (active: boolean, persist = true) => {
+      root.dataset.bedtimeMode = String(active);
+      bedtimeBtn.setAttribute('aria-pressed', String(active));
+      bedtimeBtn.setAttribute('aria-label', active ? 'Uyku modunu kapat' : 'Uyku modunu aç');
+      bedtimeBtn.title = active ? 'Uyku modunu kapat' : 'Uyku modu';
+
+      if (persist) {
+        try { localStorage.setItem(storageKey, String(active)); } catch {}
+      }
+    };
+
+    setBedtimeMode(root.dataset.bedtimeMode === 'true', false);
+    bedtimeBtn.addEventListener('click', () => {
+      setBedtimeMode(root.dataset.bedtimeMode !== 'true');
+    });
   }
 </script>

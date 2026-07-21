@@ -64,6 +64,11 @@ const useAppShell = appShell ?? !readerPage;
                 var v = valid[k].indexOf(p[k]) !== -1 ? p[k] : defaults[k];
                 d['reader' + k.charAt(0).toUpperCase() + k.slice(1)] = v;
               }
+              try {
+                d.bedtimeMode = localStorage.getItem('masalnova:bedtime-mode') === 'true' ? 'true' : 'false';
+              } catch (e) {
+                d.bedtimeMode = 'false';
+              }
             })();
           `}
         </script>

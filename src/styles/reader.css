@@ -91,3 +91,28 @@ html.is-reader-page body {
 html.is-reader-page .site-header {
   position: static;
 }
+
+/* Hoppelpop'taki hızlı gece okuma fikrinin MasalNova uyarlaması. Okuma
+   ayarlarındaki temadan bağımsızdır ve gece tek dokunuşla daha sakin bir
+   yüzey ile daha loş bir kapak sunar. Çift öznitelik, sistem teması kuralından
+   daha öncelikli olmasını sağlar. */
+html[data-bedtime-mode='true'][data-bedtime-mode='true'] {
+  color-scheme: dark;
+  --reader-background: #06142f;
+  --reader-surface: #0b2047;
+  --reader-surface-raised: #132f61;
+  --reader-text-color: #f3ecdd;
+  --reader-text-soft: #b8c3dd;
+  --reader-border: #29497b;
+  --reader-accent: #ffd46f;
+  --reader-progress: #ffd46f;
+  --reader-focus: #ffd46f;
+}
+
+html.is-reader-page .reader__cover img {
+  transition: filter .25s ease;
+}
+
+html[data-bedtime-mode='true'] .reader__cover img {
+  filter: brightness(.64) saturate(.78);
+}

@@ -15,6 +15,7 @@ export default defineConfig({
       'https://masalnova.com/datenschutz/',
       'https://masalnova.com/impressum/',
       'https://masalnova.com/ara/',
+      'https://masalnova.com/kitapligim/',
       'https://masalnova.com/masal-bul/',
       'https://masalnova.com/story-index.json',
     ].includes(page),
