@@ -5,6 +5,8 @@ seoTitle: "Pinokyo Masalı (3-4 Yaş) | MasalNova"
 seoKeywords: ["pinokyo masalı", "çocuk masalları", "uyku masalı", "sesli masal", "3 yaş masalları", "4 yaş masalları", "klasik masallar türkçe", "en güzel çocuk masalları"]
 coverEmoji: "🪵"
 coverColor: "#b86f3d"
+coverImage: "/covers/stories/pinokyo-v2.webp"
+altText: "Geppetto'nun sıcak marangoz atölyesinde canlanan tahta kukla Pinokyo"
 ageGroups: ["3-5"]
 readingTime: 7
 categories: ["egitici"]
