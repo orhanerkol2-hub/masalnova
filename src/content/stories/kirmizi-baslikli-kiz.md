@@ -5,7 +5,7 @@ seoTitle: "Kırmızı Başlıklı Kız Masalı (3-4 Yaş) | MasalNova"
 seoKeywords: ["kırmızı başlıklı kız masalı", "çocuk masalları", "uyku masalı", "sesli masal", "3 yaş masalları", "4 yaş masalları", "klasik masallar türkçe"]
 coverEmoji: "🧺"
 coverColor: "#d64550"
-coverImage: "/covers/stories/kirmizi-baslikli-kiz.webp"
+coverImage: "/covers/stories/kirmizi-baslikli-kiz-v2.webp"
 altText: "Orman yolunda sepet taşıyan Kırmızı Başlıklı Kız masalı kapağı"
 ageGroups: ["3-5"]
 readingTime: 6

@@ -5,7 +5,7 @@ seoTitle: "Uyuyan Güzel Masalı (3-4 Yaş) | MasalNova"
 seoKeywords: ["uyuyan güzel masalı", "çocuk masalları", "uyku masalı", "sesli masal", "3 yaş masalları", "4 yaş masalları", "klasik masallar türkçe"]
 coverEmoji: "🌹"
 coverColor: "#b06ab3"
-coverImage: "/covers/stories/uyuyan-guzel.webp"
+coverImage: "/covers/stories/uyuyan-guzel-v2.webp"
 altText: "Prenses Aurora'yı ve gül sarılı sarayı gösteren Uyuyan Güzel masalı kapağı"
 ageGroups: ["3-5"]
 readingTime: 7

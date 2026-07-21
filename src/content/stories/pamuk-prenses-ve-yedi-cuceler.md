@@ -5,7 +5,7 @@ seoTitle: "Pamuk Prenses Masalı (3-4 Yaş) | MasalNova"
 seoKeywords: ["pamuk prenses masalı", "çocuk masalları", "uyku masalı", "sesli masal", "3 yaş masalları", "4 yaş masalları", "klasik masallar türkçe"]
 coverEmoji: "🍎"
 coverColor: "#8e44ad"
-coverImage: "/covers/stories/pamuk-prenses-ve-yedi-cuceler.webp"
+coverImage: "/covers/stories/pamuk-prenses-ve-yedi-cuceler-v2.webp"
 altText: "Pamuk Prenses ve ormandaki yedi cüceleri gösteren masal kapağı"
 ageGroups: ["3-5"]
 readingTime: 7

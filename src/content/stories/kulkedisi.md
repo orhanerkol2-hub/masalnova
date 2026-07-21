@@ -5,7 +5,7 @@ seoTitle: "Külkedisi Masalı (3-4 Yaş) | MasalNova"
 seoKeywords: ["külkedisi masalı", "çocuk masalları", "uyku masalı", "sesli masal", "3 yaş masalları", "4 yaş masalları", "klasik masallar türkçe"]
 coverEmoji: "👠"
 coverColor: "#3d6ab3"
-coverImage: "/covers/stories/kulkedisi.webp"
+coverImage: "/covers/stories/kulkedisi-v2.webp"
 altText: "Cam ayakkabıyı tutan Külkedisi ve büyülü bal kabağı arabası"
 ageGroups: ["3-5"]
 readingTime: 7
