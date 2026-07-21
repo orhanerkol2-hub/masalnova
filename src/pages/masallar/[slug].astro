@@ -31,6 +31,7 @@ const storyImage = d.coverImage ? `https://masalnova.com${d.coverImage}` : 'http
 const publishedIso = `${d.publishedAt}T00:00:00+03:00`;
 const publishedLabel = formatTurkishDate(d.publishedAt);
 const seoDescription = compactDescription(d.shortDescription);
+const seoTitle = d.seoTitle ?? storySeoTitle(d.title);
 const ageRange = d.ageGroups.map(ageLabel).join(' ve ');
 const primaryTheme = d.themes[0] ?? 'hikâyenin ana fikri';
 const ageBounds = d.ageGroups[0]?.split('-').map(Number) ?? [];
@@ -49,7 +50,9 @@ const jsonLd = [
     isAccessibleForFree: true,
     articleSection: d.categories.map(storyCategoryLabel),
     genre: d.categories.map(storyCategoryLabel),
-    keywords: [...d.themes, ...d.categories.map(storyCategoryLabel)].join(', '),
+    keywords: (d.seoKeywords.length
+      ? d.seoKeywords
+      : [...d.themes, ...d.categories.map(storyCategoryLabel)]).join(', '),
     timeRequired: `PT${d.readingTime}M`,
     about: d.themes.map((theme) => ({ '@type': 'Thing', name: theme })),
     audience: ageBounds.length === 2 ? {
@@ -78,7 +81,7 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title={storySeoTitle(d.title)}
+  title={seoTitle}
   description={seoDescription}
   path={`/masallar/${story.id}/`}
   image={d.coverImage}

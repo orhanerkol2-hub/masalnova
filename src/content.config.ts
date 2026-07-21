@@ -7,6 +7,8 @@ const stories = defineCollection({
   schema: z.object({
     title: z.string(),
     shortDescription: z.string(),
+    seoTitle: z.string().optional(),
+    seoKeywords: z.array(z.string()).default([]),
     coverEmoji: z.string().default('📖'),
     coverColor: z.string().default('#2f74e8'),
     coverImage: z.string().optional(),
