@@ -10,21 +10,29 @@ import {
 } from '../data/taxonomy';
 
 const stories = await getStories();
-const preferredIds = [
-  'aslan-kral-ile-kar-kaplumbagasi',
-  'akilli-tavsan',
+const bestStoryIds = [
+  'kirmizi-baslikli-kiz',
+  'pamuk-prenses-ve-yedi-cuceler',
+  'kulkedisi',
+  'pinokyo',
+  'uyuyan-guzel',
   'keloglan-dev',
-  'alice',
-  'caliskan-karinca',
-  'keloglan-degirmen',
 ];
 
-const deckStories = preferredIds.flatMap((id) => {
+const deckStoryIds = [
+  ...bestStoryIds,
+  'alice',
+];
+
+const storiesWithCoversForIds = (ids: string[]) => ids.flatMap((id) => {
   const story = stories.find((candidate) => candidate.id === id);
   return story?.data.coverImage ? [story] : [];
 });
 
-const continueStories = [...deckStories, ...popularStories(stories, 12)]
+const bestStories = storiesWithCoversForIds(bestStoryIds);
+const deckStories = storiesWithCoversForIds(deckStoryIds);
+
+const continueStories = [...bestStories, ...deckStories, ...popularStories(stories, 12)]
   .filter((story, index, list) => list.findIndex((candidate) => candidate.id === story.id) === index)
   .filter((story) => story.data.coverImage)
   .slice(0, 10);
@@ -47,8 +55,8 @@ const homeJsonLd = {
   inLanguage: 'tr-TR',
   mainEntity: {
     '@type': 'ItemList',
-    numberOfItems: deckStories.length,
-    itemListElement: deckStories.map((story, index) => ({
+    numberOfItems: bestStories.length,
+    itemListElement: bestStories.map((story, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       url: `https://masalnova.com/masallar/${story.id}/`,
@@ -62,9 +70,9 @@ const homeJsonLd = {
   title="Masal Oku – Uyku Masalları ve Çocuk Hikâyeleri | MasalNova"
   description="Masal oku: Çocuklar için ücretsiz uyku masalları, kısa ve eğitici hikâyeler ile güvenli çocuk videoları. Yaşa, süreye ve ruh haline göre keşfet."
   path="/"
-  image={deckStories[0]?.data.coverImage}
-  imageAlt={deckStories[0] ? `${deckStories[0].data.title} resimli masal kapağı` : 'MasalNova çocuk masalları'}
-  preloadImage={deckStories[0]?.data.coverImage}
+  image={bestStories[0]?.data.coverImage}
+  imageAlt={bestStories[0] ? `${bestStories[0].data.title} resimli masal kapağı` : 'MasalNova çocuk masalları'}
+  preloadImage={bestStories[0]?.data.coverImage}
   jsonLd={homeJsonLd}
   activeNav="home"
 >
@@ -206,13 +214,20 @@ const homeJsonLd = {
       <i class="ph ph-sparkle" aria-hidden="true"></i>
     </aside>
 
-    <section class="continue-section" id="kitapligim" aria-labelledby="continue-title">
+    <section
+      class="continue-section"
+      id="kitapligim"
+      aria-labelledby="continue-title"
+      data-smart-story-section
+      data-mode="best"
+    >
       <div class="section-heading">
         <div>
-          <p class="app-kicker"><i class="ph ph-bookmark-simple" aria-hidden="true"></i> Senin alanın</p>
-          <h2 id="continue-title">Kaldığın yerden devam et</h2>
+          <p class="app-kicker" data-smart-story-kicker><i class="ph ph-sparkle" aria-hidden="true"></i> <span data-smart-story-kicker-label>Klasik masallar</span></p>
+          <h2 id="continue-title" data-smart-story-title>En sevilen klasik çocuk masalları</h2>
+          <p data-smart-story-intro>Kırmızı Başlıklı Kız, Pamuk Prenses, Külkedisi, Pinokyo, Uyuyan Güzel ve Keloğlan gibi kuşakların sevdiği Türkçe klasik masalları keşfet.</p>
         </div>
-        <a href="/masallar/">Kitaplığı aç <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        <a href="/masallar/" data-smart-story-link><span data-smart-story-link-label>Tüm masallar</span> <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </div>
 
       <div class="continue-grid" data-continue-grid>
@@ -222,13 +237,14 @@ const homeJsonLd = {
             href={`/masallar/${story.id}/`}
             data-continue-story={story.id}
             data-fallback-index={index}
+            data-featured-story={index < bestStories.length ? 'true' : 'false'}
           >
-            <img src={story.data.coverImage} alt="" width="320" height="220" loading="lazy" />
+            <img src={story.data.coverImage} alt={story.data.altText ?? `${story.data.title} masal kapağı`} width="320" height="220" loading="lazy" />
             <div>
               <span>{story.data.readingTime} dk okuma</span>
               <h3>{story.data.title}</h3>
               <div class="progress-track" aria-hidden="true"><span data-story-progress></span></div>
-              <p data-progress-label>Okumaya başla</p>
+              <p data-progress-label>Masalı oku</p>
             </div>
           </a>
         ))}
@@ -489,19 +505,46 @@ const homeJsonLd = {
     if (empty) empty.hidden = visibleFavorites > 0;
 
     const continueCards = [...document.querySelectorAll<HTMLElement>('[data-continue-story]')];
-    const order = state.recentStoryIds.length ? state.recentStoryIds : continueCards.map((card) => card.dataset.continueStory ?? '');
+    const availableStoryIds = new Set(continueCards.map((card) => card.dataset.continueStory ?? ''));
+    const availableRecentIds = state.recentStoryIds.filter((id) => availableStoryIds.has(id));
+    const hasRecentStories = availableRecentIds.length > 0;
+    const featuredIds = continueCards
+      .filter((card) => card.dataset.featuredStory === 'true')
+      .map((card) => card.dataset.continueStory ?? '');
+    const order = hasRecentStories ? availableRecentIds : featuredIds;
+
+    const smartSection = document.querySelector<HTMLElement>('[data-smart-story-section]');
+    const smartKickerIcon = document.querySelector<HTMLElement>('[data-smart-story-kicker] i');
+    const smartKickerLabel = document.querySelector<HTMLElement>('[data-smart-story-kicker-label]');
+    const smartTitle = document.querySelector<HTMLElement>('[data-smart-story-title]');
+    const smartIntro = document.querySelector<HTMLElement>('[data-smart-story-intro]');
+    const smartLink = document.querySelector<HTMLAnchorElement>('[data-smart-story-link]');
+    const smartLinkLabel = document.querySelector<HTMLElement>('[data-smart-story-link-label]');
+
+    if (smartSection) smartSection.dataset.mode = hasRecentStories ? 'recent' : 'best';
+    if (smartKickerIcon) smartKickerIcon.className = hasRecentStories ? 'ph ph-bookmark-simple' : 'ph ph-sparkle';
+    if (smartKickerLabel) smartKickerLabel.textContent = hasRecentStories ? 'Senin alanın' : 'Klasik masallar';
+    if (smartTitle) smartTitle.textContent = hasRecentStories ? 'Kaldığın yerden devam et' : 'En sevilen klasik çocuk masalları';
+    if (smartIntro) smartIntro.textContent = hasRecentStories
+      ? 'Okumaya başladığın masallara bu cihazdan hızlıca dön.'
+      : 'Kırmızı Başlıklı Kız, Pamuk Prenses, Külkedisi, Pinokyo, Uyuyan Güzel ve Keloğlan gibi kuşakların sevdiği Türkçe klasik masalları keşfet.';
+    if (smartLink) smartLink.href = hasRecentStories ? '/kitapligim/' : '/masallar/';
+    if (smartLinkLabel) smartLinkLabel.textContent = hasRecentStories ? 'Kitaplığı aç' : 'Tüm masallar';
+
     continueCards.forEach((card) => {
       const id = card.dataset.continueStory ?? '';
       const rank = order.indexOf(id);
       card.style.order = String(rank >= 0 ? rank : 99 + Number(card.dataset.fallbackIndex ?? 0));
-      card.hidden = rank < 0 && state.recentStoryIds.length > 0;
+      card.hidden = rank < 0;
       const progress = state.progress[id] ?? 0;
       card.querySelector<HTMLElement>('[data-story-progress]')?.style.setProperty('width', `${progress}%`);
       const label = card.querySelector<HTMLElement>('[data-progress-label]');
-      if (label) label.textContent = progress > 0 ? `%${progress} tamamlandı` : 'Okumaya başla';
+      if (label) label.textContent = hasRecentStories
+        ? (progress > 0 ? `%${progress} tamamlandı` : 'Okumaya devam et')
+        : 'Masalı oku';
     });
 
-    const visibleContinue = continueCards.filter((card) => !card.hidden).slice(3);
+    const visibleContinue = continueCards.filter((card) => !card.hidden).slice(hasRecentStories ? 3 : 6);
     visibleContinue.forEach((card) => { card.hidden = true; });
   }
 
@@ -705,6 +748,8 @@ const homeJsonLd = {
   .section-heading > div > p:last-child { max-width: 670px; margin-top: 8px; color: rgba(255,255,255,.63); font-size: .9rem; font-weight: 650; }
 
   .continue-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .continue-section[data-mode='best'] .continue-card:not([data-featured-story='true']),
+  .continue-card[hidden] { display: none; }
   .continue-card {
     display: grid;
     grid-template-columns: 116px minmax(0, 1fr);
@@ -726,6 +771,8 @@ const homeJsonLd = {
   .progress-track { height: 5px; overflow: hidden; margin-top: 17px; border-radius: 99px; background: rgba(255,255,255,.15); }
   .progress-track span { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--app-yellow); transition: width .35s ease; }
   .continue-card p { margin-top: 6px; color: rgba(255,255,255,.55); font-size: .65rem; font-weight: 800; }
+  .continue-section[data-mode='best'] .progress-track { display: none; }
+  .continue-section[data-mode='best'] .continue-card p { margin-top: 17px; color: #c8d8ff; }
 
   .video-rail { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
   .video-tile {
@@ -822,7 +869,6 @@ const homeJsonLd = {
     .deck-card { grid-template-columns: 1.16fr .84fr; }
     .deck-copy { padding: 32px; }
     .continue-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .continue-card:nth-child(n+3) { display: none; }
   }
 
   @media (max-width: 900px) {
@@ -869,8 +915,21 @@ const homeJsonLd = {
     .section-heading > a { font-size: .72rem; }
     .continue-grid { grid-template-columns: 1fr; gap: 12px; }
     .continue-card { min-height: 124px; grid-template-columns: 108px minmax(0, 1fr); }
-    .continue-card:nth-child(n+3) { display: none; }
     .continue-card > div { padding: 15px 13px; }
+    .continue-section[data-mode='best'] .continue-grid {
+      display: flex;
+      gap: 12px;
+      margin-inline: -16px;
+      padding: 0 16px 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+    .continue-section[data-mode='best'] .continue-grid::-webkit-scrollbar { display: none; }
+    .continue-section[data-mode='best'] .continue-card {
+      flex: 0 0 min(84vw, 360px);
+      scroll-snap-align: start;
+    }
     .video-rail {
       display: flex;
       gap: 13px;
