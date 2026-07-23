@@ -1,3 +1,11 @@
+# Google AdSense and Ads diagnostics must always be able to crawl the site.
+# Keep these specific rules even when a CDN prepends its own wildcard rules.
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
 # AI training, answer-engine and bulk-content crawlers are not authorised.
 User-agent: GPTBot
 User-agent: ChatGPT-User
