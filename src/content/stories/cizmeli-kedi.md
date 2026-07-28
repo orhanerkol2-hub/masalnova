@@ -2,7 +2,7 @@
 title: "Çizmeli Kedi"
 shortDescription: "Çizmeli Kedi, Kaan'a ve köylülere kaba kuvvet yerine zekâ, cesaret ve nezaketle yardım eder. 4-5 yaş için uzun ve eğitici klasik masal."
 seoTitle: "Çizmeli Kedi Masalı (4-5 Yaş) | MasalNova"
-seoKeywords: ["çizmeli kedi masalı", "4 yaş masalları", "5 yaş masalları", "Charles Perrault masalları", "uzun çocuk masalı", "zekâ masalı", "hayvan masalı"]
+seoKeywords: ["çizmeli kedi masalı", "4 yaş masalları", "5 yaş masalları", "uzun çocuk masalı", "zekâ masalı", "hayvan masalı"]
 coverEmoji: "🐈"
 coverColor: "#cc5b42"
 coverImage: "/covers/stories/cizmeli-kedi.webp"
@@ -15,8 +15,6 @@ characters: ["Çizmeli Kedi", "Kaan", "Ceren", "Kral"]
 isNew: true
 publishedAt: "2026-07-28"
 ---
-**Klasik masaldan uyarlanmıştır (Charles Perrault).**
-
 Bir varmış, bir yokmuş. Bir zamanlar bir değirmenci varmış. Bu değirmencinin üç oğlu varmış.
 
 Değirmenci çok yaşlanmış. Bir gün üç oğlunu yanına çağırmış.

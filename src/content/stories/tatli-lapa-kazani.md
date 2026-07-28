@@ -2,7 +2,7 @@
 title: "Tatlı Lapa Kazanı"
 shortDescription: "İyi kalpli bir kız, sihirli lapa kazanını bütün köyle paylaşarak cömertliğin mutluluğunu keşfeder. 3-4 yaş için sıcacık bir uyku masalı."
 seoTitle: "Tatlı Lapa Kazanı Masalı (3-4 Yaş) | MasalNova"
-seoKeywords: ["tatlı lapa kazanı masalı", "sihirli lapa kazanı", "3 yaş uyku masalı", "4 yaş uyku masalı", "paylaşmak masalı", "grimm masalları türkçe"]
+seoKeywords: ["tatlı lapa kazanı masalı", "sihirli lapa kazanı", "3 yaş uyku masalı", "4 yaş uyku masalı", "paylaşmak masalı"]
 coverEmoji: "🥣"
 coverColor: "#a76a42"
 coverImage: "/covers/stories/tatli-lapa-kazani.webp"
