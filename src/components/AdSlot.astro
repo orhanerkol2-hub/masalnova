@@ -1,0 +1,59 @@
+---
+interface Props {
+  slot?: string;
+  placement: string;
+}
+
+const { slot, placement } = Astro.props;
+const adsenseEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true';
+const showAd = adsenseEnabled && Boolean(slot);
+---
+
+{
+  showAd && (
+    <aside class="ad-slot" aria-label="Reklam" data-ad-placement={placement}>
+      <p class="ad-label">Reklam</p>
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5606540854153205"
+        data-ad-slot={slot}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+        data-tag-for-child-directed-treatment="1"
+      ></ins>
+      <script is:inline>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </aside>
+  )
+}
+
+<style>
+  .ad-slot {
+    width: 100%;
+    min-height: 120px;
+    margin-block: 48px;
+    padding: 22px;
+    border: 1px solid #e4e7ef;
+    border-radius: 18px;
+    background: #fff;
+  }
+
+  .ad-label {
+    margin-bottom: 12px;
+    color: #697590;
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 720px) {
+    .ad-slot {
+      min-height: 100px;
+      margin-block: 36px;
+      padding: 18px 14px;
+    }
+  }
+</style>
