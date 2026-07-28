@@ -76,6 +76,7 @@ const orgGraph = {
 };
 
 const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const adsenseEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true';
 ---
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,7 +93,16 @@ const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
 <!-- Google AdSense -->
 <meta name="google-adsense-account" content="ca-pub-5606540854153205" />
-<script async is:inline src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606540854153205" crossorigin="anonymous"></script>
+{
+  adsenseEnabled && (
+    <script
+      async
+      is:inline
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606540854153205"
+      crossorigin="anonymous"
+    ></script>
+  )
+}
 
 <title>{title}</title>
 <meta name="description" content={description} />
