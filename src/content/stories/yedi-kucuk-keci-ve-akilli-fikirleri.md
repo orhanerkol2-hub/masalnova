@@ -2,7 +2,7 @@
 title: "Yedi Küçük Keçi ve Akıllı Fikirleri"
 shortDescription: "Yedi keçi kardeş, verdikleri sözü tutarken güvenli ve nazik davranmanın yolunu bulur. 3-4 yaş için sıcak, öğretici bir uyku masalı."
 seoTitle: "Yedi Küçük Keçi Masalı (3-4 Yaş) | MasalNova"
-seoKeywords: ["yedi küçük keçi masalı", "yedi keçi yavrusu uyku masalı", "3 yaş uyku masalı", "4 yaş uyku masalı", "güvenlik masalı", "korkutmayan grimm masalları"]
+seoKeywords: ["yedi küçük keçi masalı", "yedi keçi yavrusu uyku masalı", "3 yaş uyku masalı", "4 yaş uyku masalı", "güvenlik masalı"]
 coverEmoji: "🐐"
 coverColor: "#8c7656"
 coverImage: "/covers/stories/yedi-kucuk-keci-ve-akilli-fikirleri.webp"

@@ -2,7 +2,7 @@
 title: "Arı Kraliçesi"
 shortDescription: "Umut, karıncaları, ördekleri ve arıları koruyunca üç zorlu görevde onların yardımını görür. 4-5 yaş için uzun ve eğitici bir masal."
 seoTitle: "Arı Kraliçesi Masalı (4-5 Yaş) | MasalNova"
-seoKeywords: ["arı kraliçesi masalı", "4 yaş masalları", "5 yaş masalları", "Grimm masalları", "hayvanları koruma masalı", "yardımlaşma masalı", "uzun çocuk masalı"]
+seoKeywords: ["arı kraliçesi masalı", "4 yaş masalları", "5 yaş masalları", "hayvanları koruma masalı", "yardımlaşma masalı", "uzun çocuk masalı"]
 coverEmoji: "🐝"
 coverColor: "#d59b18"
 coverImage: "/covers/stories/ari-kralicesi.webp"
@@ -15,8 +15,6 @@ characters: ["Umut", "Arı Kraliçesi", "Karıncalar", "Ördekler"]
 isNew: true
 publishedAt: "2026-07-28"
 ---
-**Klasik masaldan uyarlanmıştır (Grimm Kardeşler).**
-
 Bir varmış, bir yokmuş. Bir zamanlar üç kardeş varmış. En büyüğünün adı Barış, ortancanın adı Deniz, en küçüğünün adı ise Umut'muş.
 
 Barış ile Deniz kendilerini çok akıllı sanırlarmış. Umut ise sessiz, sakin bir çocukmuş. Abileri ona hep, "Sen safsın, sen dünyayı bilmiyorsun," derlermiş. Bu yüzden ona "Saf Umut" derlermiş.

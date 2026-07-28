@@ -2,7 +2,7 @@
 title: "Altın Kaz"
 shortDescription: "İyi kalpli Ali, altın kazla çıktığı yolculukta paylaşmanın ve neşenin gücünü keşfeder. 4-5 yaş için uzun, eğitici ve sıcak bir uyku masalı."
 seoTitle: "Altın Kaz Masalı (4-5 Yaş) | MasalNova"
-seoKeywords: ["altın kaz masalı", "4 yaş masalları", "5 yaş masalları", "uzun uyku masalı", "Grimm masalları", "paylaşma masalı", "eğitici çocuk masalı"]
+seoKeywords: ["altın kaz masalı", "4 yaş masalları", "5 yaş masalları", "uzun uyku masalı", "paylaşma masalı", "eğitici çocuk masalı"]
 coverEmoji: "🪿"
 coverColor: "#d9a21b"
 coverImage: "/covers/stories/altin-kaz.webp"
@@ -15,8 +15,6 @@ characters: ["Ali", "Altın Kaz", "Nilay", "Yaşlı Amca"]
 isNew: true
 publishedAt: "2026-07-28"
 ---
-**Klasik masaldan uyarlanmıştır (Grimm Kardeşler).**
-
 Bir varmış, bir yokmuş. Evvel zaman içinde, yeşil bir ormanın kıyısında küçük, tahta bir ev varmış. Bu evde üç kardeş yaşarmış. En büyüğünün adı Emre, ortancanın adı Kerem, en küçüğünün adı ise Ali'ymiş.
 
 Emre çok güçlüymüş. Kerem çok hızlıymış. Ali ise çok tatlı yürekliymiş. Ama abileri ona hep, "Sen daha küçüksün, sen bir işe yaramazsın," derlermiş. Ali bunu duyunca üzülür, ama hiç kimseye kötü söz söylemezmiş.

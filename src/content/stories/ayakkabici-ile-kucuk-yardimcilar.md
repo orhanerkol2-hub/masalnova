@@ -2,7 +2,7 @@
 title: "Ayakkabıcı ile Küçük Yardımcılar"
 shortDescription: "Musa Usta ile Ayşe Teyze, geceleri çalışan iki küçük yardımcının iyiliğine sevgiyle karşılık verir. 4-5 yaş için uzun bir iyilik masalı."
 seoTitle: "Ayakkabıcı ile Küçük Yardımcılar (4-5 Yaş) | MasalNova"
-seoKeywords: ["ayakkabıcı ve küçük yardımcılar masalı", "4 yaş masalları", "5 yaş masalları", "uzun uyku masalı", "Grimm masalları", "iyilik masalı", "yardımlaşma masalı"]
+seoKeywords: ["ayakkabıcı ve küçük yardımcılar masalı", "4 yaş masalları", "5 yaş masalları", "uzun uyku masalı", "iyilik masalı", "yardımlaşma masalı"]
 coverEmoji: "👞"
 coverColor: "#b85f3d"
 coverImage: "/covers/stories/ayakkabici-ile-kucuk-yardimcilar.webp"
@@ -15,8 +15,6 @@ characters: ["Musa Usta", "Ayşe Teyze", "Küçük Yardımcılar"]
 isNew: true
 publishedAt: "2026-07-28"
 ---
-**Klasik masaldan uyarlanmıştır (Grimm Kardeşler).**
-
 Bir varmış, bir yokmuş. Küçük bir kasabanın dar bir sokağında, minicik bir ayakkabı dükkânı varmış. Bu dükkânın sahibi Musa Usta ile karısı Ayşe Teyze'ymiş.
 
 Musa Usta çok güzel ayakkabı yaparmış. Ama o yıl işler hiç iyi gitmemiş. Müşteri gelmemiş, para bitmiş. Bir akşam Musa Usta rafları toplarken derin bir nefes almış.

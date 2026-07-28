@@ -2,7 +2,7 @@
 title: "Kurbağa Prens ve Altın Top"
 shortDescription: "Küçük prenses, altın topunu bulan kurbağaya verdiği sözü tutar ve gerçek dostluğu keşfeder. 3-4 yaş için huzurlu bir uyku masalı."
 seoTitle: "Kurbağa Prens ve Altın Top (3-4 Yaş) | MasalNova"
-seoKeywords: ["kurbağa prens ve altın top", "kurbağa prens uyku masalı", "3 yaş uyku masalı", "4 yaş uyku masalı", "sözünü tutmak masalı", "grimm masalları türkçe"]
+seoKeywords: ["kurbağa prens ve altın top", "kurbağa prens uyku masalı", "3 yaş uyku masalı", "4 yaş uyku masalı", "sözünü tutmak masalı"]
 coverEmoji: "🐸"
 coverColor: "#4d956c"
 coverImage: "/covers/stories/kurbaga-prens-ve-altin-top.webp"

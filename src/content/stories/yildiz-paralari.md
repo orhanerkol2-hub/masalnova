@@ -2,7 +2,7 @@
 title: "Yıldız Paraları"
 shortDescription: "Elif, sahip olduklarını üşüyenlerle paylaşır; yıldızlar onun cömertliğini unutmaz. 4-5 yaş için sakin, uzun ve sıcacık bir uyku masalı."
 seoTitle: "Yıldız Paraları Masalı (4-5 Yaş) | MasalNova"
-seoKeywords: ["yıldız paraları masalı", "4 yaş uyku masalı", "5 yaş uyku masalı", "Grimm masalları", "paylaşma masalı", "cömertlik masalı", "uzun uyku masalı"]
+seoKeywords: ["yıldız paraları masalı", "4 yaş uyku masalı", "5 yaş uyku masalı", "paylaşma masalı", "cömertlik masalı", "uzun uyku masalı"]
 coverEmoji: "🌟"
 coverColor: "#6f5ad7"
 coverImage: "/covers/stories/yildiz-paralari.webp"
@@ -15,8 +15,6 @@ characters: ["Elif", "Yaşlı Amca", "Nine", "Çocuklar"]
 isNew: true
 publishedAt: "2026-07-28"
 ---
-**Klasik masaldan uyarlanmıştır (Grimm Kardeşler).**
-
 Bir varmış, bir yokmuş. Küçük bir köyde Elif adında küçücük bir kız yaşarmış.
 
 Elif'in çok az şeyi varmış. Sırtında bir ceketi, başında bir şapkası, üstünde bir elbisesi ve cebinde bir dilim ekmeği varmış. Hepsi bu kadarmış. Ama Elif hiç somurtmazmış. "Bende yeteri kadar var," dermiş.

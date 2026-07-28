@@ -2,7 +2,7 @@
 title: "Bremen Mızıkacıları ve Yeni Bir Ev"
 shortDescription: "Yaşlı eşek, köpek, kedi ve horoz birlikte kendilerini değerli hissedecekleri sıcak bir yuva bulur. 3-4 yaş için dostluk dolu uyku masalı."
 seoTitle: "Bremen Mızıkacıları Masalı (3-4 Yaş) | MasalNova"
-seoKeywords: ["bremen mızıkacıları masalı", "bremen mızıkacıları uyku masalı", "3 yaş uyku masalı", "4 yaş uyku masalı", "hayvan dostluğu masalı", "grimm masalları türkçe"]
+seoKeywords: ["bremen mızıkacıları masalı", "bremen mızıkacıları uyku masalı", "3 yaş uyku masalı", "4 yaş uyku masalı", "hayvan dostluğu masalı"]
 coverEmoji: "🎻"
 coverColor: "#8b5b3f"
 coverImage: "/covers/stories/bremen-mizikacilari-ve-yeni-bir-ev.webp"

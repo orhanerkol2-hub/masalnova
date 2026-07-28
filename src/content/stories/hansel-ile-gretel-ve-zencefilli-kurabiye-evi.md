@@ -2,7 +2,7 @@
 title: "Hansel ile Gretel ve Zencefilli Kurabiye Evi"
 shortDescription: "Hansel ile Gretel, ormanda yollarını bulmak için kardeşlikten ve akıllı fikirlerden güç alır. 3-4 yaş için korkutmayan bir uyku masalı."
 seoTitle: "Hansel ile Gretel Uyku Masalı (3-4 Yaş) | MasalNova"
-seoKeywords: ["hansel ile gretel uyku masalı", "zencefilli kurabiye evi masalı", "3 yaş uyku masalı", "4 yaş uyku masalı", "kardeşlik masalı", "korkutmayan grimm masalları"]
+seoKeywords: ["hansel ile gretel uyku masalı", "zencefilli kurabiye evi masalı", "3 yaş uyku masalı", "4 yaş uyku masalı", "kardeşlik masalı"]
 coverEmoji: "🍪"
 coverColor: "#a96542"
 coverImage: "/covers/stories/hansel-ile-gretel-ve-zencefilli-kurabiye-evi.webp"
