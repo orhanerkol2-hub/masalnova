@@ -27,6 +27,10 @@ export const GET: APIRoute = async () => {
     readingTime: data.readingTime,
     duration: durationBucketForMinutes(data.readingTime),
     categories: data.categories,
+    themes: data.themes,
+    characters: data.characters,
+    seoKeywords: data.seoKeywords,
+    publishedAt: data.publishedAt,
     categoryLabel: data.categories[0]
       ? storyCategoryLabel(data.categories[0])
       : 'Çocuk Masalı',
@@ -36,7 +40,7 @@ export const GET: APIRoute = async () => {
   return new Response(JSON.stringify(items), {
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, s-maxage=86400',
+      'Cache-Control': 'public, max-age=300, s-maxage=300, stale-while-revalidate=60',
       'X-Content-Type-Options': 'nosniff',
     },
   });

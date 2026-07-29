@@ -15,10 +15,10 @@ interface Props {
 const { stories, totalStories, page, pageCount } = Astro.props;
 const path = storyArchivePath(page);
 const pageTitle = page === 1
-  ? 'Türkçe Çocuk Masalları Kütüphanesi – Yaşa ve Süreye Göre | MasalNova'
+  ? 'Çocuk Masalları Oku – Türkçe Masal Kütüphanesi | MasalNova'
   : `Çocuk Masalları Arşivi – Sayfa ${page} | MasalNova`;
 const pageDescription = page === 1
-  ? `${totalStories} resimli Türkçe çocuk masalını yaşa, türe ve okuma süresine göre keşfet. Uyku, kısa, eğitici, hayvan ve Keloğlan masalları.`
+  ? `${totalStories} resimli Türkçe çocuk masalını ücretsiz okuyun; yaşa, türe ve okuma süresine göre keşfedin. Uyku, kısa, eğitici, hayvan ve Keloğlan masalları.`
   : `MasalNova çocuk masalları arşivinin ${page}. sayfası. Ücretsiz, resimli ve yaşa uygun Türkçe hikâyeleri keşfet.`;
 const startPosition = (page - 1) * STORY_ARCHIVE_PAGE_SIZE;
 const canonical = `https://masalnova.com${path}`;
@@ -53,7 +53,7 @@ const jsonLd = [
       {
         '@type': 'ListItem',
         position: 2,
-        name: page === 1 ? 'Çocuk Masalları Kütüphanesi' : `Masal Arşivi – Sayfa ${page}`,
+        name: page === 1 ? 'Çocuk Masalları' : `Masal Arşivi – Sayfa ${page}`,
         item: canonical,
       },
     ],
@@ -79,11 +79,11 @@ const visiblePages = Array.from({ length: pageCount }, (_, index) => index + 1)
       </nav>
 
       <header class="page-head">
-        <p class="kicker">MasalNova · resimli Türkçe masal arşivi</p>
-        <h1>{page === 1 ? 'Türkçe Çocuk Masalları Kütüphanesi' : `Çocuk Masalları – Sayfa ${page}`}</h1>
+        <p class="kicker">{page === 1 ? 'Ücretsiz Türkçe çocuk hikâyeleri' : 'MasalNova · resimli Türkçe masal arşivi'}</p>
+        <h1>{page === 1 ? 'Türkçe Çocuk Masalları Oku' : `Çocuk Masalları – Sayfa ${page}`}</h1>
         <p>
           {page === 1
-            ? `Yüzlerce ücretsiz masalı yaşa, türe ve okuma süresine göre keşfedin. Her hikâye doğrudan sakin MasalNova Reader'da açılır.`
+            ? `Yüzlerce ücretsiz ve resimli Türkçe masalı yaşa, türe ve okuma süresine göre keşfedin. Her hikâye doğrudan sakin MasalNova Reader'da açılır.`
             : `Arşivin ${page}. sayfasındaki resimli çocuk masallarını keşfedin veya kategori bağlantılarıyla seçiminizi daraltın.`}
         </p>
       </header>

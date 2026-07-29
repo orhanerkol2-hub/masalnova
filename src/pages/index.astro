@@ -4,7 +4,6 @@ import AdSlot from '../components/AdSlot.astro';
 import { getStories, popularStories } from '../data/stories';
 import {
   ageLabel,
-  durationBucketForMinutes,
   storyCategoryLabel,
 } from '../data/taxonomy';
 
@@ -18,7 +17,25 @@ const moodForStory = (story: (typeof stories)[number]) => {
 };
 
 const storiesWithCovers = stories.filter((story) => story.data.coverImage);
-const latestStories = storiesWithCovers.slice(0, 12);
+const latestStories = storiesWithCovers.slice(0, 18);
+const carouselFeed = storiesWithCovers.map((story) => ({
+  id: story.id,
+  title: story.data.title,
+  coverImage: story.data.coverImage,
+  altText: story.data.altText ?? `${story.data.title} resimli masal kapağı`,
+  category: story.data.categories[0] ? storyCategoryLabel(story.data.categories[0]) : 'Çocuk masalı',
+  age: story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : 'Her yaş',
+  readingTime: story.data.readingTime,
+  publishedAt: story.data.publishedAt,
+  publishedLabel: new Intl.DateTimeFormat('tr-TR', {
+    day: 'numeric',
+    month: 'short',
+  }).format(new Date(`${story.data.publishedAt}T12:00:00Z`)),
+  isNew: Boolean(story.data.isNew),
+}));
+const carouselWindowSize = Math.min(24, carouselFeed.length);
+const initialCarouselFeed = carouselFeed.slice(0, carouselWindowSize);
+const serializedCarouselFeed = JSON.stringify(carouselFeed).replaceAll('<', '\\u003c');
 const tonightStory = storiesWithCovers.find((story) => story.data.isTodayStory)
   ?? storiesWithCovers.find((story) => moodForStory(story) === 'sakin')
   ?? latestStories[0];
@@ -69,11 +86,6 @@ const categoryLinks = [
     count: stories.filter((story) => story.data.categories.includes('hayvan')).length,
   },
 ];
-
-const formatPublishedDate = (value: string) => new Intl.DateTimeFormat('tr-TR', {
-  day: 'numeric',
-  month: 'short',
-}).format(new Date(`${value}T12:00:00Z`));
 
 const buildDate = new Intl.DateTimeFormat('tr-TR', {
   day: 'numeric',
@@ -163,8 +175,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               <i class="ph ph-moon-stars" aria-hidden="true"></i>
               <span data-today-date>{buildDate}</span> · Bugün
             </p>
-            <h1 id="welcome-title">Bugün ne okuyalım?</h1>
-            <p class="welcome-intro">Çocuğunuz için yeni, sakin ve yaşına uygun bir masalı birkaç saniyede bulun.</p>
+            <h1 id="welcome-title">Masal Oku: Bugün ne okuyalım?</h1>
+            <p class="welcome-intro">Çocuğunuz için ücretsiz, yeni, sakin ve yaşına uygun Türkçe masalları birkaç saniyede bulun.</p>
           </div>
         </div>
 
@@ -182,33 +194,60 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
             <label class="preference-chip">
               <i class="ph ph-child" aria-hidden="true"></i>
               <span class="sr-only">Yaş</span>
-              <select data-story-preference="age" aria-label="Yaş seç">
+              <select name="age" data-story-preference="age" aria-label="Yaş seç">
                 <option value="">Her yaş</option>
-                <option value="3-5">3–5 yaş</option>
-                <option value="5-7">5–7 yaş</option>
-                <option value="7-9">7–9 yaş</option>
+                <optgroup label="Yaş aralığı">
+                  <option value="3-5">3–5 yaş</option>
+                  <option value="5-7">5–7 yaş</option>
+                  <option value="7-9">7–9 yaş</option>
+                </optgroup>
+                <optgroup label="Tek yaş">
+                  <option value="3">3 yaş</option>
+                  <option value="4">4 yaş</option>
+                  <option value="5">5 yaş</option>
+                  <option value="6">6 yaş</option>
+                  <option value="7">7 yaş</option>
+                  <option value="8">8 yaş</option>
+                  <option value="9">9 yaş</option>
+                </optgroup>
               </select>
               <i class="ph ph-caret-down" aria-hidden="true"></i>
             </label>
             <label class="preference-chip">
               <i class="ph ph-clock" aria-hidden="true"></i>
               <span class="sr-only">Süre</span>
-              <select data-story-preference="duration" aria-label="Okuma süresi seç">
+              <select name="duration" data-story-preference="duration" aria-label="Okuma süresi seç">
                 <option value="">Her süre</option>
                 <option value="kisa">2 dakika</option>
                 <option value="orta">5 dakika</option>
-                <option value="uzun">Uzun masal</option>
+                <option value="uzun">10 dakika</option>
+                <option value="cok_uzun">Uzun masal</option>
               </select>
               <i class="ph ph-caret-down" aria-hidden="true"></i>
             </label>
             <label class="preference-chip">
               <i class="ph ph-heart" aria-hidden="true"></i>
-              <span class="sr-only">Ruh hâli</span>
-              <select data-story-preference="mood" aria-label="Ruh hâli seç">
+              <span class="sr-only">Ruh hâli veya tema</span>
+              <select name="topic" data-story-preference="mood" aria-label="Ruh hâli veya tema seç">
                 <option value="">Her ruh hâli</option>
-                <option value="sakin">Sakin</option>
-                <option value="neseli">Neşeli</option>
-                <option value="macera">Macera</option>
+                <optgroup label="Ruh hâli">
+                  <option value="sakin">Sakin</option>
+                  <option value="neseli">Neşeli</option>
+                  <option value="macera">Macera</option>
+                </optgroup>
+                <optgroup label="Masal türü">
+                  <option value="category_uyku">Uyku</option>
+                  <option value="category_hayvan">Hayvanlar</option>
+                  <option value="category_egitici">Eğitici</option>
+                  <option value="category_keloglan">Keloğlan</option>
+                </optgroup>
+                <optgroup label="Tema">
+                  <option value="theme_dostluk">Dostluk</option>
+                  <option value="theme_paylasma">Paylaşma</option>
+                  <option value="theme_sabir">Sabır</option>
+                  <option value="theme_cesaret">Cesaret</option>
+                  <option value="theme_huzur">Huzur</option>
+                </optgroup>
               </select>
               <i class="ph ph-caret-down" aria-hidden="true"></i>
             </label>
@@ -220,23 +259,12 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
         <div class="section-heading">
           <div>
             <p class="section-kicker"><i class="ph ph-sparkle" aria-hidden="true"></i> Kronolojik</p>
-            <h2 id="latest-title">En yeni masallar</h2>
+            <h2 id="latest-title">Tüm masallar</h2>
           </div>
 
-          <div class="carousel-controls" aria-label="Yeni masalları kaydır">
+          <div class="carousel-controls" aria-label="Masalları kaydır">
             <button type="button" data-carousel-prev aria-label="Önceki masallar">
               <i class="ph ph-arrow-left" aria-hidden="true"></i>
-            </button>
-            <button
-              class="autoplay-toggle"
-              type="button"
-              data-carousel-autoplay
-              aria-label="Otomatik geçişi duraklat"
-              aria-pressed="false"
-            >
-              <span class="autoplay-dot" aria-hidden="true"></span>
-              <span data-autoplay-label>Otomatik</span>
-              <i class="ph ph-pause" aria-hidden="true"></i>
             </button>
             <button type="button" data-carousel-next aria-label="Sonraki masallar">
               <i class="ph ph-arrow-right" aria-hidden="true"></i>
@@ -249,71 +277,78 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
           data-latest-carousel
           tabindex="0"
           role="region"
-          aria-roledescription="otomatik kayan masal listesi"
-          aria-label="En yeni masallar, en yeniden eskiye"
+          aria-roledescription="kesintisiz kayan masal listesi"
+          aria-label="Tüm masallar, en yeniden eskiye"
+          aria-live="off"
+          data-latest-count={carouselFeed.length}
         >
-          {latestStories.map((story, index) => {
-            const d = story.data;
-            const category = d.categories[0] ? storyCategoryLabel(d.categories[0]) : 'Çocuk masalı';
-            const mood = moodForStory(story);
-            return (
-              <article
-                class="latest-card"
-                data-latest-card
-                data-story-id={story.id}
-                data-age={d.ageGroups.join(' ')}
-                data-duration={durationBucketForMinutes(d.readingTime)}
-                data-mood={mood}
+          {initialCarouselFeed.map((story, index) => (
+            <article
+              class="latest-card"
+              data-latest-card
+              data-feed-index={index}
+              data-story-id={story.id}
+            >
+              <a
+                class="latest-cover"
+                data-card-cover-link
+                href={`/masallar/${story.id}/`}
+                aria-label={`${story.title} masalını oku`}
               >
-                <a class="latest-cover" href={`/masallar/${story.id}/`} aria-label={`${d.title} masalını oku`}>
-                  <img
-                    src={d.coverImage}
-                    alt={d.altText ?? `${d.title} resimli masal kapağı`}
-                    width="520"
-                    height="520"
-                    loading={index < 5 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    fetchpriority={index === 0 ? 'high' : 'auto'}
-                  />
-                  <span class="new-badge">Yeni</span>
-                  <span class="category-badge">{category}</span>
-                </a>
-                <div class="latest-card-body">
-                  <div class="card-title-row">
-                    <a href={`/masallar/${story.id}/`}>
-                      <h3>{d.title}</h3>
-                    </a>
-                    <button
-                      class="favorite-button"
-                      type="button"
-                      data-favorite-story={story.id}
-                      data-favorite-title={d.title}
-                      aria-label={`${d.title} masalını favorilere ekle`}
-                      aria-pressed="false"
-                    >
-                      <i class="ph ph-heart" aria-hidden="true"></i>
-                    </button>
-                  </div>
-                  <div class="story-meta" aria-label="Masal bilgileri">
-                    {d.ageGroups[0] && <span><i class="ph ph-child" aria-hidden="true"></i>{ageLabel(d.ageGroups[0])}</span>}
-                    <span><i class="ph ph-clock" aria-hidden="true"></i>{d.readingTime} dk</span>
-                    <time datetime={d.publishedAt}>{formatPublishedDate(d.publishedAt)}</time>
-                  </div>
+                <img
+                  data-card-image
+                  src={story.coverImage}
+                  alt={story.altText}
+                  width="520"
+                  height="520"
+                  loading={index < 4 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  fetchpriority={index === 0 ? 'high' : 'auto'}
+                />
+                <span class="new-badge" data-card-new hidden={!story.isNew}>Yeni</span>
+                <span class="category-badge" data-card-category>{story.category}</span>
+              </a>
+              <div class="latest-card-body">
+                <div class="card-title-row">
+                  <a data-card-title-link href={`/masallar/${story.id}/`}>
+                    <h3 data-card-title>{story.title}</h3>
+                  </a>
+                  <button
+                    class="favorite-button"
+                    type="button"
+                    data-favorite-story={story.id}
+                    data-favorite-title={story.title}
+                    aria-label={`${story.title} masalını favorilere ekle`}
+                    aria-pressed="false"
+                  >
+                    <i class="ph ph-heart" aria-hidden="true"></i>
+                  </button>
                 </div>
-              </article>
-            );
-          })}
+                <div class="story-meta" aria-label="Masal bilgileri">
+                  <span>
+                    <i class="ph ph-child" aria-hidden="true"></i>
+                    <span data-card-age>{story.age}</span>
+                  </span>
+                  <span>
+                    <i class="ph ph-clock" aria-hidden="true"></i>
+                    <span data-card-duration>{story.readingTime} dk</span>
+                  </span>
+                  <time data-card-date datetime={story.publishedAt}>{story.publishedLabel}</time>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
+
+        <script
+          id="home-story-carousel-feed"
+          type="application/json"
+          is:inline
+          set:html={serializedCarouselFeed}
+        ></script>
 
         <div class="carousel-footer">
           <div class="carousel-track" aria-hidden="true"><span data-carousel-progress></span></div>
-          <p data-filter-status aria-live="polite">En yeni {latestStories.length} masal gösteriliyor.</p>
-        </div>
-
-        <div class="no-filter-results" data-no-filter-results hidden>
-          <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
-          <p>Bu seçimde yeni bir masal bulunamadı.</p>
-          <button type="button" data-reset-filters>Tümünü göster</button>
         </div>
       </section>
 
@@ -471,95 +506,215 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     type AppState,
   } from '../lib/app-state';
 
+  type CarouselStory = {
+    id: string;
+    title: string;
+    coverImage: string;
+    altText: string;
+    category: string;
+    age: string;
+    readingTime: number;
+    publishedAt: string;
+    publishedLabel: string;
+    isNew: boolean;
+  };
+
   const carousel = document.querySelector<HTMLElement>('[data-latest-carousel]');
   const carouselCards = [...document.querySelectorAll<HTMLElement>('[data-latest-card]')];
-  const autoplayButton = document.querySelector<HTMLButtonElement>('[data-carousel-autoplay]');
-  const autoplayLabel = document.querySelector<HTMLElement>('[data-autoplay-label]');
   const progressBar = document.querySelector<HTMLElement>('[data-carousel-progress]');
-  const filterStatus = document.querySelector<HTMLElement>('[data-filter-status]');
-  const noResults = document.querySelector<HTMLElement>('[data-no-filter-results]');
   const preferenceInputs = [...document.querySelectorAll<HTMLSelectElement>('[data-story-preference]')];
+  const discoveryForm = document.querySelector<HTMLFormElement>('.discovery-bar');
+  const storySearchInput = document.getElementById('home-story-search') as HTMLInputElement | null;
+  const carouselFeedElement = document.getElementById('home-story-carousel-feed');
 
-  let autoplayTimer: number | undefined;
-  let manuallyPaused = false;
-
-  const visibleCards = () => carouselCards.filter((card) => !card.hidden);
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-  function cardScrollLeft(card: HTMLElement) {
-    if (!carousel) return 0;
-    return Math.max(0, card.offsetLeft - carousel.offsetLeft);
+  let carouselFeed: CarouselStory[] = [];
+  try {
+    const parsedFeed = JSON.parse(carouselFeedElement?.textContent ?? '[]');
+    if (Array.isArray(parsedFeed)) carouselFeed = parsedFeed;
+  } catch {
+    carouselFeed = [];
   }
 
-  function activeCardIndex(cards = visibleCards()) {
-    if (!carousel || !cards.length) return 0;
-    const current = carousel.scrollLeft + 12;
-    let nearest = 0;
-    let distance = Number.POSITIVE_INFINITY;
-    cards.forEach((card, index) => {
-      const nextDistance = Math.abs(cardScrollLeft(card) - current);
-      if (nextDistance < distance) {
-        distance = nextDistance;
-        nearest = index;
-      }
-    });
-    return nearest;
+  let currentState: AppState | undefined;
+  let nextFeedIndex = carouselFeed.length
+    ? carouselCards.length % carouselFeed.length
+    : 0;
+  let carouselFrame: number | undefined;
+  let previousFrameTime = 0;
+  let carouselPixelRemainder = 0;
+  let cachedCardStep = 0;
+  const CAROUSEL_SPEED_PX_PER_SECOND = 32;
+
+  function firstCarouselCard() {
+    const first = carousel?.firstElementChild;
+    return first instanceof HTMLElement ? first : undefined;
+  }
+
+  function lastCarouselCard() {
+    const last = carousel?.lastElementChild;
+    return last instanceof HTMLElement ? last : undefined;
+  }
+
+  function carouselCardStep() {
+    if (cachedCardStep > 0) return cachedCardStep;
+    const first = firstCarouselCard();
+    if (!carousel || !first) return 0;
+    const gap = Number.parseFloat(getComputedStyle(carousel).columnGap) || 0;
+    cachedCardStep = first.offsetWidth + gap;
+    return cachedCardStep;
+  }
+
+  function syncFavoriteButton(button: HTMLButtonElement, state = currentState) {
+    const storyId = button.dataset.favoriteStory ?? '';
+    const storyTitle = button.dataset.favoriteTitle ?? 'Masal';
+    const favorite = state?.favorites.includes(storyId) ?? false;
+    button.setAttribute('aria-pressed', String(favorite));
+    button.setAttribute('aria-label', favorite
+      ? `${storyTitle} masalını favorilerden çıkar`
+      : `${storyTitle} masalını favorilere ekle`);
+    button.classList.toggle('is-favorite', favorite);
+    const icon = button.querySelector('i');
+    if (icon) icon.className = favorite ? 'ph-fill ph-heart' : 'ph ph-heart';
+  }
+
+  function renderCarouselCard(card: HTMLElement, feedIndex: number) {
+    const story = carouselFeed[feedIndex];
+    if (!story) return;
+
+    const href = `/masallar/${story.id}/`;
+    card.dataset.feedIndex = String(feedIndex);
+    card.dataset.storyId = story.id;
+
+    const coverLink = card.querySelector<HTMLAnchorElement>('[data-card-cover-link]');
+    if (coverLink) {
+      coverLink.href = href;
+      coverLink.setAttribute('aria-label', `${story.title} masalını oku`);
+    }
+
+    const titleLink = card.querySelector<HTMLAnchorElement>('[data-card-title-link]');
+    if (titleLink) titleLink.href = href;
+
+    const image = card.querySelector<HTMLImageElement>('[data-card-image]');
+    if (image) {
+      image.loading = 'lazy';
+      image.fetchPriority = 'auto';
+      image.src = story.coverImage;
+      image.alt = story.altText;
+    }
+
+    const newBadge = card.querySelector<HTMLElement>('[data-card-new]');
+    if (newBadge) newBadge.hidden = !story.isNew;
+
+    const category = card.querySelector<HTMLElement>('[data-card-category]');
+    if (category) category.textContent = story.category;
+
+    const title = card.querySelector<HTMLElement>('[data-card-title]');
+    if (title) title.textContent = story.title;
+
+    const age = card.querySelector<HTMLElement>('[data-card-age]');
+    if (age) age.textContent = story.age;
+
+    const duration = card.querySelector<HTMLElement>('[data-card-duration]');
+    if (duration) duration.textContent = `${story.readingTime} dk`;
+
+    const date = card.querySelector<HTMLTimeElement>('[data-card-date]');
+    if (date) {
+      date.dateTime = story.publishedAt;
+      date.textContent = story.publishedLabel;
+    }
+
+    const favoriteButton = card.querySelector<HTMLButtonElement>('[data-favorite-story]');
+    if (favoriteButton) {
+      favoriteButton.dataset.favoriteStory = story.id;
+      favoriteButton.dataset.favoriteTitle = story.title;
+      syncFavoriteButton(favoriteButton);
+    }
   }
 
   function updateCarouselProgress() {
-    const cards = visibleCards();
-    const index = activeCardIndex(cards);
-    const percentage = cards.length ? ((index + 1) / cards.length) * 100 : 0;
+    const activeIndex = Number(firstCarouselCard()?.dataset.feedIndex ?? 0);
+    const total = carouselFeed.length || Number(carousel?.dataset.latestCount ?? carouselCards.length);
+    const percentage = total ? ((activeIndex + 1) / total) * 100 : 0;
     progressBar?.style.setProperty('width', `${percentage}%`);
   }
 
+  function recycleCarouselForward() {
+    if (!carousel || carouselCards.length < 2) return;
+    const first = firstCarouselCard();
+    const step = carouselCardStep();
+    if (!first || step <= 0) return;
+
+    if (carouselFeed.length > carouselCards.length) {
+      renderCarouselCard(first, nextFeedIndex);
+      nextFeedIndex = (nextFeedIndex + 1) % carouselFeed.length;
+    }
+
+    carousel.append(first);
+    carousel.scrollLeft = Math.max(0, carousel.scrollLeft - step);
+    updateCarouselProgress();
+  }
+
+  function recycleCarouselBackward() {
+    if (!carousel || carouselCards.length < 2) return;
+    const first = firstCarouselCard();
+    const last = lastCarouselCard();
+    if (!first || !last) return;
+
+    if (carouselFeed.length > carouselCards.length) {
+      const currentIndex = Number(first.dataset.feedIndex ?? 0);
+      const previousIndex = (currentIndex - 1 + carouselFeed.length) % carouselFeed.length;
+      renderCarouselCard(last, previousIndex);
+      nextFeedIndex = (previousIndex + carouselCards.length) % carouselFeed.length;
+    }
+
+    carousel.prepend(last);
+    carousel.scrollLeft = 0;
+    updateCarouselProgress();
+  }
+
   function moveCarousel(direction: 1 | -1) {
+    if (direction === 1) recycleCarouselForward();
+    else recycleCarouselBackward();
+  }
+
+  function normalizeCarousel() {
     if (!carousel) return;
-    const cards = visibleCards();
-    if (!cards.length) return;
-    const current = activeCardIndex(cards);
-    const next = (current + direction + cards.length) % cards.length;
-    carousel.scrollTo({
-      left: cardScrollLeft(cards[next]),
-      behavior: reducedMotion.matches ? 'auto' : 'smooth',
-    });
-    window.setTimeout(updateCarouselProgress, reducedMotion.matches ? 0 : 380);
+    const step = carouselCardStep();
+    let safety = 0;
+    while (step > 0 && carousel.scrollLeft >= step && safety < carouselCards.length) {
+      recycleCarouselForward();
+      safety += 1;
+    }
   }
 
-  function setAutoplayUi() {
-    if (!autoplayButton || !autoplayLabel) return;
-    const paused = manuallyPaused || reducedMotion.matches;
-    autoplayButton.setAttribute('aria-pressed', String(paused));
-    autoplayButton.setAttribute('aria-label', paused ? 'Otomatik geçişi başlat' : 'Otomatik geçişi duraklat');
-    autoplayButton.classList.toggle('is-paused', paused);
-    autoplayLabel.textContent = reducedMotion.matches ? 'Hareket kapalı' : paused ? 'Duraklatıldı' : 'Otomatik';
-    const icon = autoplayButton.querySelector('i');
-    if (icon) icon.className = paused ? 'ph ph-play' : 'ph ph-pause';
-  }
-
-  function stopAutoplay() {
-    window.clearInterval(autoplayTimer);
-    autoplayTimer = undefined;
-  }
-
-  function startAutoplay() {
-    stopAutoplay();
-    if (manuallyPaused || reducedMotion.matches || visibleCards().length < 2) {
-      setAutoplayUi();
+  function runCarousel(timestamp: number) {
+    if (!carousel || carouselCards.length < 2) {
+      carouselFrame = undefined;
       return;
     }
-    autoplayTimer = window.setInterval(() => moveCarousel(1), 4600);
-    setAutoplayUi();
+
+    const elapsed = previousFrameTime
+      ? Math.min(timestamp - previousFrameTime, 80)
+      : 0;
+    previousFrameTime = timestamp;
+    carouselPixelRemainder += (elapsed / 1000) * CAROUSEL_SPEED_PX_PER_SECOND;
+    const pixelsToMove = Math.floor(carouselPixelRemainder);
+    if (pixelsToMove > 0) {
+      carousel.scrollLeft += pixelsToMove;
+      carouselPixelRemainder -= pixelsToMove;
+      normalizeCarousel();
+    }
+    carouselFrame = window.requestAnimationFrame(runCarousel);
   }
 
-  document.querySelector('[data-carousel-next]')?.addEventListener('click', () => {
-    moveCarousel(1);
-    startAutoplay();
-  });
-  document.querySelector('[data-carousel-prev]')?.addEventListener('click', () => {
-    moveCarousel(-1);
-    startAutoplay();
-  });
+  function startCarousel() {
+    if (carouselFrame !== undefined) return;
+    previousFrameTime = 0;
+    carouselFrame = window.requestAnimationFrame(runCarousel);
+  }
+
+  document.querySelector('[data-carousel-next]')?.addEventListener('click', () => moveCarousel(1));
+  document.querySelector('[data-carousel-prev]')?.addEventListener('click', () => moveCarousel(-1));
 
   carousel?.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') {
@@ -571,44 +726,13 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
       moveCarousel(-1);
     }
   });
-  carousel?.addEventListener('scroll', updateCarouselProgress, { passive: true });
-  carousel?.addEventListener('mouseenter', stopAutoplay);
-  carousel?.addEventListener('mouseleave', startAutoplay);
-  carousel?.addEventListener('focusin', stopAutoplay);
-  carousel?.addEventListener('focusout', startAutoplay);
-  carousel?.addEventListener('pointerdown', stopAutoplay, { passive: true });
-  carousel?.addEventListener('pointerup', () => window.setTimeout(startAutoplay, 1200), { passive: true });
 
-  autoplayButton?.addEventListener('click', () => {
-    manuallyPaused = !manuallyPaused;
-    manuallyPaused ? stopAutoplay() : startAutoplay();
-    setAutoplayUi();
+  window.addEventListener('resize', () => {
+    cachedCardStep = 0;
   });
-
-  reducedMotion.addEventListener('change', startAutoplay);
 
   function valuesForPreferences() {
     return Object.fromEntries(preferenceInputs.map((input) => [input.dataset.storyPreference, input.value]));
-  }
-
-  function applyFilters() {
-    const values = valuesForPreferences();
-    let matches = 0;
-    carouselCards.forEach((card) => {
-      const ageMatches = !values.age || (card.dataset.age ?? '').split(' ').includes(values.age);
-      const durationMatches = !values.duration || card.dataset.duration === values.duration;
-      const moodMatches = !values.mood || card.dataset.mood === values.mood;
-      const match = ageMatches && durationMatches && moodMatches;
-      card.hidden = !match;
-      if (match) matches += 1;
-    });
-    if (carousel) carousel.scrollLeft = 0;
-    if (noResults) noResults.hidden = matches > 0;
-    if (filterStatus) filterStatus.textContent = matches
-      ? `Seçimine uygun ${matches} yeni masal gösteriliyor.`
-      : 'Seçimine uygun yeni masal bulunamadı.';
-    updateCarouselProgress();
-    startAutoplay();
   }
 
   function saveCurrentPreferences() {
@@ -620,17 +744,33 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     });
   }
 
+  function resultsUrl(mode: 'search' | 'filter') {
+    const url = new URL('/ara/', location.origin);
+
+    if (mode === 'search') {
+      const query = storySearchInput?.value.trim();
+      if (query) url.searchParams.set('q', query);
+    } else {
+      preferenceInputs.forEach((input) => {
+        if (input.value) url.searchParams.set(input.name, input.value);
+      });
+    }
+
+    return `${url.pathname}${url.search}`;
+  }
+
+  discoveryForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const mode = storySearchInput?.value.trim() ? 'search' : 'filter';
+    location.assign(resultsUrl(mode));
+  });
+
   preferenceInputs.forEach((input) => {
     input.addEventListener('change', () => {
       saveCurrentPreferences();
-      applyFilters();
+      if (storySearchInput) storySearchInput.value = '';
+      location.assign(resultsUrl('filter'));
     });
-  });
-
-  document.querySelector('[data-reset-filters]')?.addEventListener('click', () => {
-    preferenceInputs.forEach((input) => { input.value = ''; });
-    saveCurrentPreferences();
-    applyFilters();
   });
 
   function applyPreferencesFromState(state: AppState) {
@@ -641,17 +781,9 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
   }
 
   function renderLocalState(state: AppState) {
+    currentState = state;
     document.querySelectorAll<HTMLButtonElement>('[data-favorite-story]').forEach((button) => {
-      const storyId = button.dataset.favoriteStory ?? '';
-      const storyTitle = button.dataset.favoriteTitle ?? 'Masal';
-      const favorite = state.favorites.includes(storyId);
-      button.setAttribute('aria-pressed', String(favorite));
-      button.setAttribute('aria-label', favorite
-        ? `${storyTitle} masalını favorilerden çıkar`
-        : `${storyTitle} masalını favorilere ekle`);
-      button.classList.toggle('is-favorite', favorite);
-      const icon = button.querySelector('i');
-      if (icon) icon.className = favorite ? 'ph-fill ph-heart' : 'ph ph-heart';
+      syncFavoriteButton(button, state);
     });
 
     const continueCards = [...document.querySelectorAll<HTMLElement>('[data-continue-story]')];
@@ -706,7 +838,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     });
     preferenceInputs.forEach((input) => { input.value = ''; });
     renderLocalState(cleared);
-    applyFilters();
+    updateCarouselProgress();
     const status = document.querySelector<HTMLElement>('[data-settings-status]');
     if (status) status.textContent = 'Favoriler ve okuma ilerlemesi bu cihazdan temizlendi.';
   });
@@ -732,9 +864,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
   const initialState = loadState();
   applyPreferencesFromState(initialState);
   renderLocalState(initialState);
-  applyFilters();
   updateCarouselProgress();
-  startAutoplay();
+  startCarousel();
 </script>
 
 <style>
@@ -893,6 +1024,9 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     cursor: pointer;
   }
 
+  .preference-chip select[name="age"] { width: 48px; }
+  .preference-chip select[name="topic"] { width: 74px; }
+
   .latest-section,
   .continue-section,
   .category-section {
@@ -954,33 +1088,16 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     background: #f6f8fc;
   }
 
-  .carousel-controls .autoplay-toggle {
-    gap: 7px;
-    min-width: 118px;
-    padding: 0 12px;
-    color: #40547e;
-    font-size: .7rem;
-    font-weight: 850;
-  }
-
-  .autoplay-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #42a44f;
-  }
-
-  .autoplay-toggle.is-paused .autoplay-dot { background: #9aa3b5; }
-
   .latest-carousel {
     display: flex;
     gap: 14px;
     padding: 2px 2px 14px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
     scrollbar-width: none;
+    overflow-anchor: none;
   }
 
   .latest-carousel::-webkit-scrollbar { display: none; }
@@ -1131,13 +1248,6 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     border-radius: inherit;
     background: #48a454;
     transition: width .28s ease;
-  }
-
-  .carousel-footer p {
-    flex: 0 0 auto;
-    color: #7b8498;
-    font-size: .67rem;
-    font-weight: 750;
   }
 
   .no-filter-results {
@@ -1458,10 +1568,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     .section-heading { align-items: center; margin-bottom: 14px; }
     .section-heading h2 { font-size: 1.4rem; }
     .section-link { font-size: .68rem; }
-    .carousel-controls > button:first-child,
-    .carousel-controls > button:last-child { display: none; }
-    .carousel-controls .autoplay-toggle { min-width: 42px; width: 42px; padding: 0; }
-    .autoplay-toggle span:not(.autoplay-dot) { display: none; }
+    .carousel-controls button { min-width: 44px; height: 44px; }
     .latest-carousel {
       gap: 12px;
       margin-inline: -16px;
@@ -1474,7 +1581,6 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     }
     .latest-cover { aspect-ratio: 1.08 / 1; }
     .latest-card-body { padding: 13px 14px 15px; }
-    .carousel-footer p { display: none; }
     .evening-card {
       grid-template-columns: 86px minmax(0, 1fr) auto;
       gap: 12px;

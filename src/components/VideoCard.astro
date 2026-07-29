@@ -11,8 +11,10 @@ const cats = video.categories.join(' ');
 <a
   class="video-card"
   href={href}
-  data-title={video.title.toLowerCase()}
+  data-title={video.title}
+  data-desc={video.shortDescription ?? ''}
   data-cats={cats}
+  data-published={video.publishedAt ?? ''}
 >
   <div class="thumb">
     <img

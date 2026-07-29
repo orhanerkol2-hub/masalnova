@@ -2,7 +2,39 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import ContentTypeTabs from '../../components/ContentTypeTabs.astro';
+import { getStories } from '../../data/stories';
+import {
+  ageLabel,
+  durationBucketForMinutes,
+  storyCategoryLabel,
+} from '../../data/taxonomy';
 import { videos } from '../../data/videos';
+import type { StoryMetadata } from '../../lib/story-metadata';
+
+const indexedStories = await getStories();
+const fallbackEntry = indexedStories.find((story) => story.data.isTodayStory) ?? indexedStories[0];
+const fallbackStory: StoryMetadata | undefined = fallbackEntry ? {
+  id: fallbackEntry.id,
+  title: fallbackEntry.data.title,
+  shortDescription: fallbackEntry.data.shortDescription,
+  coverEmoji: fallbackEntry.data.coverEmoji,
+  coverColor: fallbackEntry.data.coverColor,
+  coverImage: fallbackEntry.data.coverImage,
+  altText: fallbackEntry.data.altText ?? fallbackEntry.data.title,
+  ageGroups: fallbackEntry.data.ageGroups,
+  ageLabel: fallbackEntry.data.ageGroups[0] ? ageLabel(fallbackEntry.data.ageGroups[0]) : '',
+  readingTime: fallbackEntry.data.readingTime,
+  duration: durationBucketForMinutes(fallbackEntry.data.readingTime),
+  categories: fallbackEntry.data.categories,
+  themes: fallbackEntry.data.themes,
+  characters: fallbackEntry.data.characters,
+  seoKeywords: fallbackEntry.data.seoKeywords,
+  publishedAt: fallbackEntry.data.publishedAt,
+  categoryLabel: fallbackEntry.data.categories[0]
+    ? storyCategoryLabel(fallbackEntry.data.categories[0])
+    : 'Çocuk Masalı',
+  hasAudio: Boolean(fallbackEntry.data.audioUrl),
+} : undefined;
 ---
 <BaseLayout
   title="Ara | Masal ve Video Arama — MasalNova"
@@ -13,20 +45,122 @@ import { videos } from '../../data/videos';
   <section class="section">
     <div class="container">
       <header class="page-head">
-        <h1>Ara 🔍</h1>
-        <form class="searchbox big" role="search" onsubmit="return false;">
-          <span class="ic" aria-hidden="true">🔍</span>
-          <input type="search" id="q" name="q" placeholder="Masal veya video ara..." aria-label="Masal veya video ara" autocomplete="off" />
+        <p class="page-kicker">MasalNova arama</p>
+        <h1>Ne okumak istersiniz?</h1>
+        <p class="page-intro">Başlık, kahraman, tema, yaş veya okuma süresiyle arayın.</p>
+        <form class="discovery-bar" id="search-form" action="/ara/" method="get" role="search">
+          <div class="searchbox">
+            <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="q"
+              name="q"
+              placeholder="Örn. Keloğlan, cesaret, kedi..."
+              aria-label="Masal veya video ara"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+            <button class="search-clear" type="button" data-search-clear aria-label="Aramayı temizle" hidden>
+              <i class="ph ph-x" aria-hidden="true"></i>
+            </button>
+            <button class="search-submit" type="submit">Ara</button>
+          </div>
+
+          <div class="preference-bar" aria-label="Masal tercihleri">
+            <label class="preference-chip">
+              <i class="ph ph-child" aria-hidden="true"></i>
+              <span class="sr-only">Yaş</span>
+              <select name="age" data-story-filter="age" aria-label="Yaş seç">
+                <option value="">Her yaş</option>
+                <optgroup label="Yaş aralığı">
+                  <option value="3-5">3–5 yaş</option>
+                  <option value="5-7">5–7 yaş</option>
+                  <option value="7-9">7–9 yaş</option>
+                </optgroup>
+                <optgroup label="Tek yaş">
+                  <option value="3">3 yaş</option>
+                  <option value="4">4 yaş</option>
+                  <option value="5">5 yaş</option>
+                  <option value="6">6 yaş</option>
+                  <option value="7">7 yaş</option>
+                  <option value="8">8 yaş</option>
+                  <option value="9">9 yaş</option>
+                </optgroup>
+              </select>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </label>
+
+            <label class="preference-chip">
+              <i class="ph ph-clock" aria-hidden="true"></i>
+              <span class="sr-only">Süre</span>
+              <select name="duration" data-story-filter="duration" aria-label="Okuma süresi seç">
+                <option value="">Her süre</option>
+                <option value="kisa">2 dakika</option>
+                <option value="orta">5 dakika</option>
+                <option value="uzun">10 dakika</option>
+                <option value="cok_uzun">Uzun masal</option>
+              </select>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </label>
+
+            <label class="preference-chip">
+              <i class="ph ph-heart" aria-hidden="true"></i>
+              <span class="sr-only">Ruh hâli veya tema</span>
+              <select name="topic" data-story-filter="topic" aria-label="Ruh hâli veya tema seç">
+                <option value="">Her ruh hâli</option>
+                <optgroup label="Ruh hâli">
+                  <option value="sakin">Sakin</option>
+                  <option value="neseli">Neşeli</option>
+                  <option value="macera">Macera</option>
+                </optgroup>
+                <optgroup label="Masal türü">
+                  <option value="category_uyku">Uyku</option>
+                  <option value="category_hayvan">Hayvanlar</option>
+                  <option value="category_egitici">Eğitici</option>
+                  <option value="category_keloglan">Keloğlan</option>
+                </optgroup>
+                <optgroup label="Tema">
+                  <option value="theme_dostluk">Dostluk</option>
+                  <option value="theme_paylasma">Paylaşma</option>
+                  <option value="theme_sabir">Sabır</option>
+                  <option value="theme_cesaret">Cesaret</option>
+                  <option value="theme_huzur">Huzur</option>
+                </optgroup>
+              </select>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
+            </label>
+          </div>
         </form>
+        <div class="quick-searches" aria-label="Hızlı aramalar">
+          <span>Hızlı ara:</span>
+          <button type="button" data-search-suggestion="Keloğlan">Keloğlan</button>
+          <button type="button" data-search-suggestion="Uyku masalı">Uyku masalı</button>
+          <button type="button" data-search-suggestion="Hayvanlar">Hayvanlar</button>
+          <button type="button" data-search-suggestion="4 yaş">4 yaş</button>
+          <button type="button" data-search-suggestion="Cesaret">Cesaret</button>
+        </div>
+        <p class="search-feedback" id="search-feedback" role="status" aria-live="polite">
+          Bir başlık, kahraman veya tema yazın.
+        </p>
         <div class="tabs-wrap"><ContentTypeTabs /></div>
       </header>
 
       <section data-pane-content="stories" class="pane">
         <h2>Masallar <span class="count" id="c-stories"></span></h2>
-        <div class="grid grid-3" id="story-results" aria-busy="true"></div>
+        <div
+          class="grid grid-3"
+          id="story-results"
+          aria-busy="true"
+          data-fallback-story={fallbackStory ? JSON.stringify(fallbackStory) : undefined}
+        ></div>
         <p class="result-status" id="story-status" role="status">Masallar yükleniyor…</p>
         <p class="result-note" id="story-limit-note" hidden></p>
-        <p class="empty" id="no-stories" hidden>Eşleşen masal yok.</p>
+        <button class="load-more" type="button" data-story-load-more hidden>Daha fazla göster</button>
+        <div class="empty" id="no-stories" hidden>
+          <strong>Bu aramayla masal bulamadık.</strong>
+          <p>Yazımı kontrol edin, daha kısa bir ifade deneyin veya yukarıdaki hızlı aramalardan birini seçin.</p>
+          <a href="/masallar/">Tüm masalları keşfet</a>
+        </div>
         <noscript><p class="empty">Arama için JavaScript gerekir. Tüm içerikleri <a href="/masallar/">masal arşivinde</a> bulabilirsiniz.</p></noscript>
       </section>
 
@@ -35,7 +169,11 @@ import { videos } from '../../data/videos';
         <div class="grid grid-4" id="video-results">
           {videos.map((v) => <VideoCard video={v} />)}
         </div>
-        <p class="empty" id="no-videos" hidden>Eşleşen video yok.</p>
+        <div class="empty" id="no-videos" hidden>
+          <strong>Bu aramayla video bulamadık.</strong>
+          <p>Daha kısa bir ifade deneyebilir veya tüm videolara göz atabilirsiniz.</p>
+          <a href="/videolar/">Tüm videoları keşfet</a>
+        </div>
       </section>
     </div>
   </section>
@@ -43,16 +181,136 @@ import { videos } from '../../data/videos';
 
 <style>
   .page-head { color: #fff; margin-bottom: 20px; }
-  .page-head h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin-bottom: 16px; }
-  .searchbox { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 8px 16px; box-shadow: var(--shadow); max-width: 620px; }
-  .searchbox input { flex: 1; border: 0; outline: none; font: inherit; font-size: 1.05rem; color: var(--ink); background: transparent; padding: 8px 4px; }
+  .page-kicker { color: #b9cffb; font-size: .75rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+  .page-head h1 { margin-top: 6px; font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -.04em; }
+  .page-intro { max-width: 620px; margin-top: 8px; color: rgba(255,255,255,.74); font-weight: 650; }
+  .discovery-bar {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) auto;
+    gap: 10px;
+    width: 100%;
+    margin-top: 22px;
+  }
+  .searchbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    min-height: 52px;
+    padding: 5px 7px 5px 16px;
+    border: 2px solid transparent;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 22px 55px rgba(3,18,62,.28);
+    transition: border-color .18s ease, box-shadow .18s ease;
+  }
+  .searchbox:focus-within { border-color: #ffca3a; box-shadow: 0 24px 62px rgba(3,18,62,.36), 0 0 0 4px rgba(255,202,58,.2); }
+  .searchbox > i { color: #5a6e9c; font-size: 1.15rem; line-height: 1; }
+  .searchbox input { flex: 1; min-width: 0; border: 0; outline: none; font: inherit; font-size: 1.02rem; color: var(--ink); background: transparent; padding: 8px 4px; }
+  .searchbox input::placeholder { color: #8190ac; opacity: 1; }
+  .searchbox input::-webkit-search-cancel-button { appearance: none; }
+  .search-clear,
+  .search-submit {
+    flex: 0 0 auto;
+    min-height: 44px;
+    border: 0;
+    font: inherit;
+    font-weight: 900;
+  }
+  .search-clear { width: 42px; border-radius: 12px; background: #eef2f8; color: #51658f; font-size: 1.05rem; }
+  .search-submit { padding: 0 22px; border-radius: 14px; background: #ffc62e; color: #17336d; }
+  .preference-bar {
+    display: flex;
+    gap: 8px;
+    min-width: 0;
+  }
+  .preference-chip {
+    display: flex;
+    min-height: 52px;
+    align-items: center;
+    gap: 7px;
+    padding: 0 11px;
+    border: 1px solid #d9dfec;
+    border-radius: 16px;
+    background: #fff;
+    color: #17377c;
+    box-shadow: 0 10px 26px rgba(3,18,62,.16);
+  }
+  .preference-chip > i:first-child { color: #4e68a5; font-size: 1.02rem; }
+  .preference-chip > i:last-child { color: #8290ae; font-size: .7rem; }
+  .preference-chip select {
+    max-width: 118px;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #17377c;
+    font: inherit;
+    font-size: .78rem;
+    font-weight: 850;
+    cursor: pointer;
+  }
+  .preference-chip select[name="age"] { width: 48px; }
+  .preference-chip select[name="topic"] { width: 74px; }
+  .preference-chip:focus-within { box-shadow: 0 0 0 3px rgba(255,202,58,.35), 0 10px 26px rgba(3,18,62,.16); }
+  .quick-searches { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; max-width: 820px; margin-top: 14px; }
+  .quick-searches > span { color: rgba(255,255,255,.62); font-size: .74rem; font-weight: 800; }
+  .quick-searches button {
+    min-height: 36px;
+    padding: 0 12px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    font: inherit;
+    font-size: .73rem;
+    font-weight: 850;
+  }
+  .quick-searches button:hover { background: rgba(255,255,255,.18); }
+  .search-feedback { min-height: 20px; margin-top: 14px; color: #d4e1ff; font-size: .82rem; font-weight: 750; }
   .tabs-wrap { margin-top: 16px; }
   .pane { margin-top: 30px; }
   .pane h2 { color: #fff; font-size: 1.4rem; margin-bottom: 16px; }
   .count { color: var(--gold); }
   .result-status, .result-note { color: var(--soft); margin-top: 14px; }
-  .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 20px; text-align: center; }
+  .load-more {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    padding: 0 18px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 14px;
+    background: rgba(255,255,255,.12);
+    color: #fff;
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 850;
+  }
+  .load-more:hover { background: rgba(255,255,255,.2); }
+  .load-more[hidden] { display: none; }
+  .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 24px; text-align: center; }
+  .empty strong { display: block; font-size: 1.05rem; }
+  .empty p { max-width: 540px; margin: 7px auto 12px; color: rgba(255,255,255,.72); font-size: .88rem; }
   .empty a { color: var(--gold); font-weight: 800; }
+  @media (max-width: 960px) {
+    .discovery-bar { grid-template-columns: 1fr; }
+    .preference-bar { overflow-x: auto; padding: 2px 2px 7px; scrollbar-width: none; }
+    .preference-bar::-webkit-scrollbar { display: none; }
+    .preference-chip { flex: 0 0 auto; }
+  }
+  @media (max-width: 640px) {
+    .searchbox { min-height: 56px; padding-left: 14px; border-radius: 17px; }
+    .searchbox > i { display: none; }
+    .searchbox input { font-size: .92rem; }
+    .search-submit { padding-inline: 16px; }
+    .preference-chip { min-height: 44px; }
+    .quick-searches { flex-wrap: nowrap; margin-inline: -16px; padding: 0 16px 5px; overflow-x: auto; scrollbar-width: none; }
+    .quick-searches::-webkit-scrollbar { display: none; }
+    .quick-searches > * { flex: 0 0 auto; }
+    .quick-searches button { min-height: 44px; }
+  }
 </style>
 
 <style is:global>
@@ -70,6 +328,8 @@ import { videos } from '../../data/videos';
     transition: transform .28s cubic-bezier(.2,.75,.25,1), box-shadow .28s ease, border-color .28s ease;
   }
   .story-result-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,.42); box-shadow: 0 34px 82px rgba(3,14,44,.4); }
+  .story-result-card.is-alternative { border-color: #ffca3a; box-shadow: 0 26px 72px rgba(3,14,44,.38), 0 0 0 2px rgba(255,202,58,.18); }
+  .story-result-card.is-alternative .story-result-eyebrow { color: #ffd86b; }
   .story-result-media { position: relative; display: grid; overflow: hidden; aspect-ratio: 4 / 3; place-items: center; background: radial-gradient(120% 120% at 18% 8%, rgba(255,255,255,.4), transparent 55%), var(--card-accent); }
   .story-result-media::after { position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(180deg, transparent, rgba(5,18,44,.34)); content: ""; pointer-events: none; }
   .story-result-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.75,.25,1), filter .35s ease; }
@@ -97,58 +357,250 @@ import { videos } from '../../data/videos';
 <script>
   import {
     createStoryResultCard,
+    filterStories,
+    findStoryAlternative,
     loadStoryIndex,
     normalizeStorySearch,
-    storySearchText,
+    scoreSearchFields,
+    searchStories,
+    type StoryDiscoveryFilters,
     type StoryMetadata,
   } from '../../lib/story-metadata';
 
-  const STORY_RESULT_LIMIT = 30;
+  const STORY_RESULT_PAGE_SIZE = 30;
+  const form = document.getElementById('search-form') as HTMLFormElement;
   const q = document.getElementById('q') as HTMLInputElement;
+  const clearButton = document.querySelector<HTMLButtonElement>('[data-search-clear]')!;
+  const filterInputs = Array.from(
+    document.querySelectorAll<HTMLSelectElement>('[data-story-filter]'),
+  );
+  const searchFeedback = document.getElementById('search-feedback') as HTMLElement;
   const videoCards = Array.from(document.querySelectorAll<HTMLElement>('#video-results .video-card'));
+  const videoResults = document.getElementById('video-results') as HTMLElement;
   const storyResults = document.getElementById('story-results') as HTMLElement;
   const storyStatus = document.getElementById('story-status') as HTMLElement;
   const storyLimitNote = document.getElementById('story-limit-note') as HTMLElement;
+  const loadMoreButton = document.querySelector<HTMLButtonElement>('[data-story-load-more]')!;
+  const originalVideoOrder = new Map(videoCards.map((card, index) => [card, index]));
   let stories: StoryMetadata[] = [];
+  let searchFrame = 0;
+  let visibleStoryLimit = STORY_RESULT_PAGE_SIZE;
+  let catalogueLimited = false;
+  let builtInFallback: StoryMetadata | undefined;
 
-  function match(el: HTMLElement, term: string) {
-    if (!term) return true;
-    const hay = `${el.dataset.title || ''} ${el.dataset.desc || ''} ${el.dataset.cats || ''}`;
-    return normalizeStorySearch(hay).includes(term);
+  try {
+    const serializedFallback = storyResults.dataset.fallbackStory;
+    builtInFallback = serializedFallback ? JSON.parse(serializedFallback) as StoryMetadata : undefined;
+  } catch {
+    builtInFallback = undefined;
   }
 
-  function apply() {
-    const term = normalizeStorySearch(q.value.trim());
-    const storyMatches = term ? stories.filter((story) => storySearchText(story).includes(term)) : stories;
-    const visibleStories = storyMatches.slice(0, STORY_RESULT_LIMIT);
-    storyResults.replaceChildren(...visibleStories.map(createStoryResultCard));
-    document.getElementById('c-stories')!.textContent = stories.length ? `(${storyMatches.length})` : '';
-    (document.getElementById('no-stories') as HTMLElement).hidden = storyMatches.length !== 0 || stories.length === 0;
-    storyLimitNote.hidden = storyMatches.length <= STORY_RESULT_LIMIT;
-    storyLimitNote.textContent = storyMatches.length > STORY_RESULT_LIMIT
-      ? `${storyMatches.length} sonuçtan ilk ${STORY_RESULT_LIMIT} tanesi gösteriliyor. Daha özel bir arama yazabilirsiniz.`
+  function rankedVideos(query: string) {
+    if (!query) return videoCards;
+
+    return videoCards
+      .map((card) => ({
+        card,
+        score: scoreSearchFields([
+          { value: card.dataset.title || '', weight: 8 },
+          { value: card.dataset.desc || '', weight: 3 },
+          { value: card.dataset.cats || '', weight: 3 },
+        ], query),
+      }))
+      .filter((result) => result.score > 0)
+      .sort((a, b) => (
+        b.score - a.score
+        || (b.card.dataset.published || '').localeCompare(a.card.dataset.published || '')
+        || (originalVideoOrder.get(a.card) ?? 0) - (originalVideoOrder.get(b.card) ?? 0)
+      ))
+      .map((result) => result.card);
+  }
+
+  function currentFilters(): StoryDiscoveryFilters {
+    const values = Object.fromEntries(filterInputs.map((input) => [input.name, input.value]));
+    return {
+      age: values.age || null,
+      duration: values.duration || null,
+      topic: values.topic || null,
+    };
+  }
+
+  function updateUrl(query: string, filters: StoryDiscoveryFilters) {
+    const url = new URL(location.href);
+    if (query) url.searchParams.set('q', query);
+    else url.searchParams.delete('q');
+
+    for (const [key, value] of Object.entries(filters)) {
+      if (value) url.searchParams.set(key, value);
+      else url.searchParams.delete(key);
+    }
+
+    history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+  }
+
+  function resultCard(story: StoryMetadata, alternative: boolean) {
+    const card = createStoryResultCard(story);
+    if (!alternative) return card;
+
+    card.classList.add('is-alternative');
+    const eyebrow = card.querySelector<HTMLElement>('.story-result-eyebrow');
+    if (eyebrow) eyebrow.textContent = 'Alternatif öneri';
+    return card;
+  }
+
+  function apply({
+    updateHistory = true,
+    resetLimit = true,
+  }: {
+    updateHistory?: boolean;
+    resetLimit?: boolean;
+  } = {}) {
+    if (resetLimit) visibleStoryLimit = STORY_RESULT_PAGE_SIZE;
+
+    const query = q.value.trim();
+    const term = normalizeStorySearch(query);
+    const filters = currentFilters();
+    const queryMatches = term ? searchStories(stories, query) : stories;
+    const exactStoryMatches = catalogueLimited ? [] : filterStories(queryMatches, filters);
+    const alternative = catalogueLimited
+      ? stories[0]
+      : exactStoryMatches.length === 0
+        ? findStoryAlternative(stories, query, filters)
+        : undefined;
+    const showingAlternative = Boolean(alternative) && exactStoryMatches.length === 0;
+    const visibleStories = showingAlternative
+      ? [alternative!]
+      : exactStoryMatches.slice(0, visibleStoryLimit);
+
+    storyResults.replaceChildren(
+      ...visibleStories.map((story) => resultCard(story, showingAlternative)),
+    );
+    document.getElementById('c-stories')!.textContent = stories.length
+      ? showingAlternative
+        ? '(1 alternatif)'
+        : `(${exactStoryMatches.length})`
+      : '';
+    (document.getElementById('no-stories') as HTMLElement).hidden = visibleStories.length > 0
+      || stories.length === 0;
+
+    const hasMoreStories = !showingAlternative && exactStoryMatches.length > visibleStoryLimit;
+    loadMoreButton.hidden = !hasMoreStories;
+    storyLimitNote.hidden = !hasMoreStories;
+    storyLimitNote.textContent = hasMoreStories
+      ? `${Math.min(visibleStoryLimit, exactStoryMatches.length)} / ${exactStoryMatches.length} masal gösteriliyor.`
       : '';
 
-    let v = 0;
-    videoCards.forEach((c) => { const ok = match(c, term); c.style.display = ok ? '' : 'none'; if (ok) v++; });
-    document.getElementById('c-videos')!.textContent = `(${v})`;
-    (document.getElementById('no-videos') as HTMLElement).hidden = v !== 0;
+    const visibleVideos = rankedVideos(query);
+    videoCards.forEach((card) => { card.style.display = 'none'; });
+    visibleVideos.forEach((card) => {
+      card.style.display = '';
+      videoResults.append(card);
+    });
+
+    document.getElementById('c-videos')!.textContent = `(${visibleVideos.length})`;
+    (document.getElementById('no-videos') as HTMLElement).hidden = visibleVideos.length !== 0;
+    clearButton.hidden = !term;
+
+    const hasActiveFilters = Boolean(filters.age || filters.duration || filters.topic);
+    if (catalogueLimited && showingAlternative) {
+      searchFeedback.textContent = 'Katalog şu anda yüklenemedi; yine de bir alternatif gösteriliyor.';
+    } else if (showingAlternative) {
+      searchFeedback.textContent = 'Birebir sonuç bulunamadı; en yakın alternatif gösteriliyor.';
+    } else if (term || hasActiveFilters) {
+      searchFeedback.textContent = `${exactStoryMatches.length} masal bulundu. En uygun sonuçlar önce gösteriliyor.`;
+    } else {
+      searchFeedback.textContent = `${exactStoryMatches.length} masal keşfe hazır. Arama ve filtreleri birlikte kullanabilirsiniz.`;
+    }
+
+    if (updateHistory) updateUrl(query, filters);
   }
 
-  const initial = new URLSearchParams(location.search).get('q');
-  if (initial) q.value = initial;
-  q.addEventListener('input', apply);
-  apply();
+  function applyParamsFromUrl() {
+    const params = new URLSearchParams(location.search);
+    q.value = params.get('q') ?? '';
+    const freeSearchMode = Boolean(q.value.trim());
+
+    filterInputs.forEach((input) => {
+      const candidate = freeSearchMode ? '' : params.get(input.name) ?? '';
+      input.value = Array.from(input.options).some((option) => option.value === candidate)
+        ? candidate
+        : '';
+    });
+
+    if (freeSearchMode) {
+      filterInputs.forEach((input) => params.delete(input.name));
+      const search = params.toString();
+      history.replaceState({}, '', `${location.pathname}${search ? `?${search}` : ''}${location.hash}`);
+    }
+  }
+
+  applyParamsFromUrl();
+  q.addEventListener('input', () => {
+    if (q.value.trim()) {
+      filterInputs.forEach((input) => { input.value = ''; });
+    }
+    cancelAnimationFrame(searchFrame);
+    searchFrame = requestAnimationFrame(() => apply());
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (q.value.trim()) {
+      filterInputs.forEach((input) => { input.value = ''; });
+    }
+    apply();
+    q.focus();
+  });
+
+  clearButton.addEventListener('click', () => {
+    q.value = '';
+    apply();
+    q.focus();
+  });
+
+  filterInputs.forEach((input) => {
+    input.addEventListener('change', () => {
+      q.value = '';
+      apply();
+    });
+  });
+
+  loadMoreButton.addEventListener('click', () => {
+    visibleStoryLimit += STORY_RESULT_PAGE_SIZE;
+    apply({ updateHistory: false, resetLimit: false });
+  });
+
+  document.querySelectorAll<HTMLButtonElement>('[data-search-suggestion]').forEach((button) => {
+    button.addEventListener('click', () => {
+      q.value = button.dataset.searchSuggestion || '';
+      filterInputs.forEach((input) => { input.value = ''; });
+      apply();
+      q.focus();
+    });
+  });
+
+  window.addEventListener('popstate', () => {
+    applyParamsFromUrl();
+    apply({ updateHistory: false });
+  });
+
+  apply({ updateHistory: false });
 
   loadStoryIndex()
     .then((items) => {
       stories = items;
       storyResults.setAttribute('aria-busy', 'false');
       storyStatus.hidden = true;
-      apply();
+      apply({ updateHistory: false });
     })
     .catch(() => {
+      catalogueLimited = true;
+      stories = builtInFallback ? [builtInFallback] : [];
       storyResults.setAttribute('aria-busy', 'false');
-      storyStatus.textContent = 'Masallar şu anda yüklenemedi. Lütfen sayfayı yenileyin.';
+      storyStatus.hidden = Boolean(stories.length);
+      if (!stories.length) {
+        storyStatus.textContent = 'Masallar şu anda yüklenemedi. Lütfen sayfayı yenileyin.';
+      }
+      apply({ updateHistory: false });
     });
 </script>
