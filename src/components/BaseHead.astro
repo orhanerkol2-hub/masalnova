@@ -58,9 +58,9 @@ const orgGraph = {
       '@type': 'WebSite',
       '@id': 'https://masalnova.com/#website',
       url: 'https://masalnova.com/',
-      name: 'MasalNova Çocuk',
-      alternateName: 'MasalNova',
-      description: 'Masal oku: ücretsiz Türkçe uyku masalları, kısa ve eğitici çocuk hikâyeleri.',
+      name: 'MasalNova',
+      alternateName: ['MasalNova Çocuk', 'masalnova.com'],
+      description: 'Çocuklar için ücretsiz Türkçe masallar, uyku masalları ve eğitici hikâyeler.',
       inLanguage: 'tr-TR',
       publisher: { '@id': 'https://masalnova.com/#organization' },
       potentialAction: {
@@ -121,7 +121,7 @@ const serializeJsonLd = (value: unknown) => JSON.stringify(value).replace(/</g, 
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
-<meta property="og:site_name" content="MasalNova Çocuk" />
+<meta property="og:site_name" content="MasalNova" />
 <meta property="og:locale" content="tr_TR" />
 <meta property="og:image" content={imageUrl} />
 <meta property="og:image:alt" content={imageAlt} />
