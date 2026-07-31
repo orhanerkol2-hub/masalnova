@@ -3,6 +3,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import GameCard from '../../components/GameCard.astro';
 import { games } from '../../data/games.mjs';
 
+const kidNavItems = [
+  { href: '/', label: 'Bugün', image: '/nav-tiles/bugun.png' },
+  { href: '/masallar/', label: 'Masallar', image: '/nav-tiles/masallar.png' },
+  { href: '/videolar/', label: 'Videolar', image: '/nav-tiles/videolar.png' },
+  { href: '/oyunlar/', label: 'Oyunlar', image: '/nav-tiles/oyunlar.png', active: true },
+  { href: '/boyama/', label: 'Boyama', image: '/nav-tiles/boyama.png' },
+  { href: '/kitapligim/', label: 'Kitaplığım', image: '/nav-tiles/kitapligim.png' },
+];
+
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -41,6 +50,7 @@ const jsonLd = [
   allowAds={false}
   jsonLd={jsonLd}
 >
+  <div class="games-page">
   <section class="games-hero">
     <div class="container hero-grid">
       <div>
@@ -55,6 +65,24 @@ const jsonLd = [
           <p>Oyunlar otomatik başlamaz. GamePix ve oyun içi reklamlar yalnızca açık onaydan sonra yüklenir.</p>
         </div>
       </aside>
+    </div>
+  </section>
+
+  <section class="kid-nav" aria-labelledby="kid-nav-title">
+    <div class="container">
+      <h2 id="kid-nav-title"><i class="ph-fill ph-star" aria-hidden="true"></i> Ne yapmak istersin?</h2>
+      <nav class="kid-nav-grid" aria-label="Çocuklar için ana menü">
+        {kidNavItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={['kid-nav-tile', { 'is-active': item.active }]}
+            aria-current={item.active ? 'page' : undefined}
+          >
+            <img src={item.image} alt="" width="640" height="400" loading="eager" decoding="async" />
+            <span>{item.label}</span>
+          </a>
+        ))}
+      </nav>
     </div>
   </section>
 
@@ -76,6 +104,7 @@ const jsonLd = [
       </div>
     </div>
   </section>
+  </div>
 </BaseLayout>
 
 <style>
@@ -95,6 +124,7 @@ const jsonLd = [
   .family-note > i { flex: 0 0 auto; color: #ffd44d; font-size: 1.75rem; }
   .family-note strong { font-size: .96rem; }
   .family-note p { margin-top: 4px; color: rgba(255,255,255,.74); font-size: .82rem; line-height: 1.45; }
+  .kid-nav { display: none; }
   .games-section { padding: 24px 0 58px; }
   .section-title { display: flex; align-items: end; justify-content: space-between; gap: 22px; margin-bottom: 20px; color: #fff; }
   .section-title span { color: #ffd44d; font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
@@ -112,9 +142,68 @@ const jsonLd = [
     .family-note { max-width: 620px; }
     .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
-  @media (max-width: 600px) {
-    .games-hero { padding-top: 34px; }
-    .section-title { align-items: flex-start; flex-direction: column; gap: 7px; }
+  @media (max-width: 720px) {
+    .games-page {
+      min-height: 100dvh;
+      background: url('/nav-tiles/games-mobile-backdrop.png') center top / 100% auto no-repeat;
+    }
+    .games-hero { padding: 30px 0 18px; }
+    .hero-grid { gap: 0; }
+    .eyebrow { padding: 7px 12px; font-size: .76rem; }
+    h1 { margin-top: 15px; font-size: clamp(1.72rem, 8.8vw, 2.15rem); line-height: 1.04; letter-spacing: -.055em; white-space: nowrap; }
+    .hero-grid > div > p { margin-top: 14px; font-size: .93rem; line-height: 1.48; }
+    .family-note { display: none; }
+    .kid-nav { display: block; padding: 20px 0 8px; }
+    .kid-nav .container { max-width: 480px; }
+    .kid-nav h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: #ffd44d;
+      font-size: 1.28rem;
+      letter-spacing: -.025em;
+    }
+    .kid-nav h2 i { flex: 0 0 auto; font-size: 1.4rem; }
+    .kid-nav-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; }
+    .kid-nav-tile {
+      min-width: 0;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,.8);
+      border-radius: 24px;
+      background: #fff;
+      color: #0d2d78;
+      box-shadow: 0 12px 26px rgba(2, 22, 86, .2);
+      transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .kid-nav-tile:hover { transform: translateY(-2px); box-shadow: 0 15px 30px rgba(2, 22, 86, .25); }
+    .kid-nav-tile:active { transform: scale(.98); }
+    .kid-nav-tile:focus-visible { outline: 4px solid #ffd44d; outline-offset: 3px; }
+    .kid-nav-tile.is-active {
+      border-color: #ffd44d;
+      box-shadow: inset 0 0 0 2px #ffd44d, 0 12px 26px rgba(2, 22, 86, .2);
+    }
+    .kid-nav-tile img { width: 100%; height: clamp(88px, 23vw, 110px); object-fit: cover; }
+    .kid-nav-tile span {
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 6px 6px;
+      font-size: clamp(.97rem, 4.8vw, 1.12rem);
+      font-weight: 900;
+      line-height: 1.05;
+      text-align: center;
+    }
+    .section-title { display: none; }
+    .games-section { padding-top: 4px; }
     .games-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 360px) {
+    .kid-nav-grid { gap: 10px; }
+    .kid-nav-tile { border-radius: 20px; }
+    .kid-nav-tile span { font-size: .94rem; }
   }
 </style>

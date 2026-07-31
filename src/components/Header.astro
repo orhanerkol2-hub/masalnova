@@ -19,7 +19,7 @@ const links = [
 ];
 ---
 
-<header class="app-header" data-app-header>
+<header class:list={['app-header', { 'app-header--tile-nav': activeKey === 'oyunlar' }]} data-app-header>
   <aside class="app-rail" aria-label="Uygulama menüsü">
     <a class="rail-brand" href="/" aria-label="MasalNova ana sayfa">
       <img class="rail-logo rail-logo--full" src="/logo.webp" alt="MasalNova" width="188" height="48" />
@@ -72,6 +72,7 @@ const links = [
       </button>
       <a class="top-action settings-action" href="/#ayarlar" aria-label="Ayarlar">
         <i class="ph ph-gear" aria-hidden="true"></i>
+        <span><i class="ph ph-lock-simple" aria-hidden="true"></i>Ayarlar</span>
       </a>
     </div>
   </div>
@@ -284,6 +285,8 @@ const links = [
     font-size: 1.22rem;
   }
 
+  .settings-action span { display: none; }
+
   .install-action {
     display: inline-flex;
     align-items: center;
@@ -387,6 +390,31 @@ const links = [
     }
     .mobile-link i { font-size: 1.34rem; }
     .mobile-link.is-active { background: #edf3ff; color: #0a43c1; }
+    .app-header--tile-nav .install-action,
+    .app-header--tile-nav .mobile-nav { display: none; }
+    .app-header--tile-nav .topbar-actions { gap: 8px; }
+    .app-header--tile-nav .mobile-brand { width: 145px; }
+    .app-header--tile-nav .top-action { width: 48px; min-height: 48px; border-radius: 16px; }
+    .app-header--tile-nav .settings-action {
+      width: 62px;
+      min-height: 52px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      padding: 4px 5px 3px;
+      font-size: 1.24rem;
+      line-height: 1;
+    }
+    .app-header--tile-nav .settings-action span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      font-size: .66rem;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+    .app-header--tile-nav .settings-action span i { font-size: .58rem; }
     .install-toast { right: 18px; bottom: calc(88px + env(safe-area-inset-bottom)); }
   }
 </style>
