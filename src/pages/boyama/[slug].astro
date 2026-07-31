@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { coloringPages } from '../../data/coloring-pages.mjs';
+
+export function getStaticPaths() {
+  return coloringPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const pageUrl = `https://masalnova.com/boyama/${page.slug}/`;
+const boyamaDetailAdSlot = import.meta.env.PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    '@id': `${pageUrl}#boyama`,
+    name: `${page.title} Boyama Sayfası`,
+    description: page.shortDescription,
+    url: pageUrl,
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+    learningResourceType: 'Boyama sayfası',
+    educationalUse: 'Boyama ve ince motor becerileri',
+    audience: { '@type': 'PeopleAudience', suggestedMinAge: 4, suggestedMaxAge: 7 },
+    image: `https://masalnova.com${page.previewImage}`,
+    encoding: {
+      '@type': 'MediaObject',
+      contentUrl: `https://masalnova.com${page.printImage}`,
+      encodingFormat: 'image/png',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Boyama Sayfaları', item: 'https://masalnova.com/boyama/' },
+      { '@type': 'ListItem', position: 3, name: page.title, item: pageUrl },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={`${page.title} Boyama Sayfası | MasalNova`}
+  description={`${page.shortDescription} Ücretsiz A4 Keloğlan boyama sayfasını indir, yazdır veya reklamsız çocuk modunda boya.`}
+  path={`/boyama/${page.slug}/`}
+  image={page.previewImage}
+  imageAlt={page.imageAlt}
+  activeNav="boyama"
+  jsonLd={jsonLd}
+  allowAds={true}
+>
+  <div class="detail-shell">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="İçerik yolu">
+        <a href="/">Ana Sayfa</a><span aria-hidden="true">›</span>
+        <a href="/boyama/">Boyama Sayfaları</a><span aria-hidden="true">›</span>
+        <span>{page.title}</span>
+      </nav>
+
+      <div class="detail-grid">
+        <section class="print-card" aria-label={`${page.title} yazdırılabilir görseli`}>
+          <img src={page.printImage} alt={page.imageAlt} width="2480" height="3508" />
+        </section>
+
+        <aside class="detail-copy">
+          <span class="eyebrow"><i class="ph ph-paint-brush-broad" aria-hidden="true"></i> Ücretsiz Keloğlan boyaması</span>
+          <h1>{page.title}</h1>
+          <p class="intro">{page.shortDescription}</p>
+
+          <div class="meta" aria-label="Boyama sayfası bilgileri">
+            <span><i class="ph ph-child" aria-hidden="true"></i>{page.age}</span>
+            <span><i class="ph ph-sparkle" aria-hidden="true"></i>{page.difficulty}</span>
+            <span><i class="ph ph-tag" aria-hidden="true"></i>{page.theme}</span>
+          </div>
+
+          <div class="actions">
+            <a class="digital-action" href={`/boyama/${page.slug}/boya/`}>
+              <i class="ph ph-palette" aria-hidden="true"></i>
+              <span><strong>Tam ekran boya</strong><small>Çocuk modu · reklamsız · kolay kullanım</small></span>
+            </a>
+            <a class="download-action" href={page.printImage} download={`${page.slug}.png`}>
+              <i class="ph ph-download-simple" aria-hidden="true"></i>
+              <span><strong>PNG indir</strong><small>A4 · yüksek çözünürlük</small></span>
+            </a>
+            <button class="print-action" type="button" data-print-page>
+              <i class="ph ph-printer" aria-hidden="true"></i>
+              <span><strong>Hemen yazdır</strong><small>Yazıcı penceresini aç</small></span>
+            </button>
+          </div>
+
+          <div class="print-tip">
+            <i class="ph ph-lightbulb" aria-hidden="true"></i>
+            <p>A4 kâğıt, dikey yön ve “sayfaya sığdır” ayarı en iyi sonucu verir.</p>
+          </div>
+
+          <div class="related-story">
+            <span>Boyamadan önce oku</span>
+            <h2>{page.relatedStory.title}</h2>
+            <a href={`/masallar/${page.relatedStory.slug}/`}>Masalı aç <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+          </div>
+
+          <a class="back-link" href="/boyama/"><i class="ph ph-grid-four" aria-hidden="true"></i> Tüm boyama sayfaları</a>
+        </aside>
+      </div>
+
+      <section class="parent-guide" aria-labelledby="parent-guide-title">
+        <span class="guide-eyebrow"><i class="ph ph-heart" aria-hidden="true"></i> Ebeveynler için</span>
+        <h2 id="parent-guide-title">Bu boyama sayfasını nasıl kullanabilirsiniz?</h2>
+        <p><strong>{page.title}</strong>, {page.theme.toLocaleLowerCase('tr-TR')} temasını renkler ve küçük ayrıntılar üzerinden konuşmak için sakin bir etkinlik sunar. Çocuğunuzdan sahnede ilk fark ettiği üç şeyi göstermesini ve kendi renklerini seçmesini isteyebilirsiniz.</p>
+        <ul>
+          <li><strong>Ekranda:</strong> “Tam ekran boya” düğmesi resmi ve büyük boyama araçlarını açar. Reklam gösterilirse yalnızca sayfanın üstündeki ayrı alanda bulunur; araçların yanında başka görseller yer almaz.</li>
+          <li><strong>Kâğıtta:</strong> A4, dikey yön ve “sayfaya sığdır” seçeneğiyle yazdırın. Kalın boya kalemleri küçük eller için daha rahattır.</li>
+          <li><strong>Birlikte:</strong> Boyama bittikten sonra <a href={`/masallar/${page.relatedStory.slug}/`}>{page.relatedStory.title}</a> masalını okuyup çocuğunuzdan resmine kısa bir isim vermesini isteyin.</li>
+        </ul>
+      </section>
+
+      <div class="ad-area">
+        <AdSlot slot={boyamaDetailAdSlot} placement="boyama-detail-after-parent-guide" />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  document.querySelector<HTMLButtonElement>('[data-print-page]')?.addEventListener('click', () => window.print());
+</script>
+
+<style>
+  .detail-shell { padding: 28px 0 64px; }
+  .breadcrumbs { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 22px; color: rgba(255,255,255,.72); font-size: .82rem; font-weight: 800; }
+  .breadcrumbs a:hover { color: #fff; text-decoration: underline; }
+  .detail-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(330px, .8fr); gap: clamp(26px, 5vw, 56px); align-items: start; }
+  .print-card { overflow: hidden; padding: clamp(12px, 2vw, 20px); border: 1px solid rgba(255,255,255,.35); border-radius: 28px; background: #fff; box-shadow: 0 25px 60px rgba(2,24,86,.32); }
+  .print-card img { width: 100%; height: auto; border: 1px solid #e2e7f2; border-radius: 15px; background: #fff; }
+  .detail-copy { position: sticky; top: calc(var(--app-nav-height) + 24px); padding-top: 8px; color: #fff; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 7px; color: #ffd44d; font-size: .77rem; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
+  h1 { margin-top: 10px; font-size: clamp(2rem, 5vw, 3.65rem); letter-spacing: -.045em; }
+  .intro { max-width: 52ch; margin-top: 14px; color: rgba(255,255,255,.82); font-size: 1.03rem; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 19px; }
+  .meta span { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; background: rgba(255,255,255,.11); font-size: .77rem; font-weight: 900; }
+  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 25px; }
+  .digital-action, .download-action, .print-action {
+    display: flex; align-items: center; gap: 11px; min-width: 0; min-height: 70px; padding: 12px 14px;
+    border: 0; border-radius: 17px; text-align: left; transition: transform .17s ease, box-shadow .17s ease;
+  }
+  .digital-action { grid-column: 1 / -1; background: #8ce3c4; color: #123c5b; box-shadow: 0 12px 28px rgba(40,180,136,.25); }
+  .download-action { background: #ffc62e; color: #18306b; box-shadow: 0 12px 28px rgba(255,198,46,.24); }
+  .print-action { background: #fff; color: #18306b; box-shadow: 0 12px 28px rgba(2,24,86,.2); }
+  .digital-action:hover, .download-action:hover, .print-action:hover { transform: translateY(-2px); }
+  .digital-action > i, .download-action > i, .print-action > i { flex: 0 0 auto; font-size: 1.45rem; }
+  .digital-action span, .download-action span, .print-action span { display: grid; min-width: 0; }
+  .digital-action strong, .download-action strong, .print-action strong { font-size: .88rem; }
+  .digital-action small, .download-action small, .print-action small { opacity: .68; font-size: .68rem; }
+  .print-tip { display: flex; gap: 10px; margin-top: 13px; padding: 13px 15px; border: 1px solid rgba(255,255,255,.18); border-radius: 15px; background: rgba(255,255,255,.08); color: rgba(255,255,255,.76); font-size: .78rem; }
+  .print-tip i { flex: 0 0 auto; margin-top: 2px; color: #ffd44d; font-size: 1.1rem; }
+  .related-story { margin-top: 21px; padding: 18px; border: 1px solid rgba(255,255,255,.2); border-radius: 19px; background: rgba(5,33,111,.42); }
+  .related-story > span { color: #ffd44d; font-size: .68rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .related-story h2 { margin-top: 4px; font-size: 1.05rem; }
+  .related-story a { display: inline-flex; align-items: center; gap: 7px; margin-top: 11px; font-size: .82rem; font-weight: 900; }
+  .related-story a:hover { text-decoration: underline; }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; color: rgba(255,255,255,.75); font-size: .82rem; font-weight: 900; }
+  .back-link:hover { color: #fff; }
+  .parent-guide {
+    max-width: 860px;
+    margin: clamp(54px, 8vw, 88px) auto 0;
+    padding: clamp(22px, 4vw, 34px);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 25px;
+    background: rgba(255,255,255,.96);
+    color: #18306b;
+    box-shadow: 0 20px 55px rgba(2,24,86,.2);
+  }
+  .guide-eyebrow { display: inline-flex; align-items: center; gap: 7px; color: #1b5eca; font-size: .72rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+  .guide-eyebrow i { color: #e95172; font-size: 1rem; }
+  .parent-guide h2 { margin-top: 7px; font-size: clamp(1.35rem, 3vw, 1.9rem); }
+  .parent-guide > p { margin-top: 13px; color: #506080; font-size: .93rem; }
+  .parent-guide ul { display: grid; gap: 10px; margin: 18px 0 0 20px; color: #425375; font-size: .88rem; }
+  .parent-guide a { color: #174fc0; font-weight: 900; text-decoration: underline; text-underline-offset: 2px; }
+  .ad-area { max-width: 860px; margin: 0 auto; }
+  @media (max-width: 900px) {
+    .detail-grid { grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr); gap: 24px; }
+    .actions { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .detail-shell { padding-top: 20px; }
+    .detail-grid { display: flex; flex-direction: column; }
+    .detail-copy { position: static; order: -1; padding-top: 0; }
+    .actions { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 430px) { .actions { grid-template-columns: 1fr; } }
+  @media print {
+    :global(.app-header), :global(.site-footer), :global(.digital-studio), .breadcrumbs, .detail-copy { display: none !important; }
+    :global(html), :global(body), :global(body.app-shell), :global(body.app-shell > main) {
+      width: 100% !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; background: #fff !important;
+    }
+    .detail-shell, .detail-shell .container, .detail-grid { display: block; width: 100%; max-width: none; margin: 0; padding: 0; }
+    .print-card { width: 100%; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+    .print-card img { width: 100%; height: 100vh; object-fit: contain; border: 0; border-radius: 0; }
+    @page { size: A4 portrait; margin: 0; }
+  }
+</style>

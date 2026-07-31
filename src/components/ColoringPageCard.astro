@@ -1,0 +1,94 @@
+---
+interface ColoringPage {
+  slug: string;
+  title: string;
+  shortDescription: string;
+  theme: string;
+  age: string;
+  difficulty: string;
+  previewImage: string;
+  imageAlt: string;
+}
+
+interface Props { page: ColoringPage }
+const { page } = Astro.props;
+---
+
+<article class="coloring-card">
+  <a class="coloring-preview" href={`/boyama/${page.slug}/`} aria-label={`${page.title} boyama sayfasını aç`}>
+    <img src={page.previewImage} alt={page.imageAlt} width="760" height="1075" loading="lazy" />
+    <span class="coloring-badge"><i class="ph ph-printer" aria-hidden="true"></i> Yazdırılabilir</span>
+  </a>
+  <div class="coloring-body">
+    <div class="coloring-meta">
+      <span>{page.theme}</span>
+      <span>{page.age}</span>
+      <span>{page.difficulty}</span>
+    </div>
+    <h2><a href={`/boyama/${page.slug}/`}>{page.title}</a></h2>
+    <p>{page.shortDescription}</p>
+    <a class="coloring-cta" href={`/boyama/${page.slug}/`}>
+      Boyama sayfasını aç <i class="ph ph-arrow-right" aria-hidden="true"></i>
+    </a>
+  </div>
+</article>
+
+<style>
+  .coloring-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.24);
+    border-radius: 24px;
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 18px 42px rgba(3,26,92,.24);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .coloring-card:hover { transform: translateY(-5px); box-shadow: 0 24px 52px rgba(3,26,92,.31); }
+  .coloring-preview { position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #f4f7ff; }
+  .coloring-preview img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .28s ease; }
+  .coloring-card:hover .coloring-preview img { transform: scale(1.025); }
+  .coloring-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 11px;
+    border: 1px solid rgba(255,255,255,.6);
+    border-radius: 999px;
+    background: rgba(8,38,112,.9);
+    color: #fff;
+    font-size: .73rem;
+    font-weight: 900;
+    backdrop-filter: blur(8px);
+  }
+  .coloring-body { display: flex; flex: 1; flex-direction: column; padding: 18px; }
+  .coloring-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
+  .coloring-meta span {
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #edf3ff;
+    color: #1c51bd;
+    font-size: .7rem;
+    font-weight: 900;
+  }
+  h2 { font-size: 1.16rem; }
+  h2 a:hover { color: var(--blue-d); }
+  p { margin-top: 8px; color: var(--ink-soft); font-size: .89rem; line-height: 1.5; }
+  .coloring-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 17px;
+    color: #174ab7;
+    font-weight: 900;
+  }
+  .coloring-cta i { transition: transform .18s ease; }
+  .coloring-card:hover .coloring-cta i { transform: translateX(3px); }
+</style>

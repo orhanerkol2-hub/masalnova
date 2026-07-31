@@ -80,7 +80,11 @@ const orgGraph = {
 };
 
 const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
-const adsenseEnabled = allowAds && import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true';
+// Ad code stays hard-disabled until the publisher confirms that a Google-certified
+// CMP is configured. This prevents an environment toggle from activating ads early.
+const adsenseEnabled = allowAds
+  && import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true'
+  && import.meta.env.PUBLIC_GOOGLE_CERTIFIED_CMP === 'true';
 const serializeJsonLd = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
 ---
 <meta charset="UTF-8" />
