@@ -144,6 +144,14 @@ const homeJsonLd = [
 
 const homeFeedAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_FEED_SLOT;
 const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
+
+const kidNavItems = [
+  { href: '/masallar/', label: 'Masallar', image: '/nav-tiles/masallar.png', featured: true },
+  { href: '/videolar/', label: 'Videolar', image: '/nav-tiles/videolar.png' },
+  { href: '/oyunlar/', label: 'Oyunlar', image: '/nav-tiles/oyunlar.png' },
+  { href: '/boyama/', label: 'Boyama', image: '/nav-tiles/boyama.png' },
+  { href: '/kitapligim/', label: 'Kitaplığım', image: '/nav-tiles/kitapligim.png' },
+];
 ---
 
 <BaseLayout
@@ -158,6 +166,28 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
 >
   <div class="home-surface">
     <div class="home-container">
+      <section class="home-kid-nav" aria-labelledby="home-kid-nav-title">
+        <h2 id="home-kid-nav-title">
+          <i class="ph-fill ph-star" aria-hidden="true"></i>
+          Ne yapmak istersin?
+        </h2>
+        <nav class="home-kid-nav-grid" aria-label="Çocuklar için ana menü">
+          {kidNavItems.map((item) => (
+            <a href={item.href} class:list={['home-kid-nav-tile', { 'is-featured': item.featured }]}>
+              <img
+                src={item.image}
+                alt=""
+                width="640"
+                height="400"
+                loading="eager"
+                decoding="async"
+              />
+              <span>{item.label}</span>
+            </a>
+          ))}
+        </nav>
+      </section>
+
       <section class="welcome" aria-labelledby="welcome-title">
         <div class="welcome-heading">
           {tonightStory?.data.coverImage && (
@@ -881,6 +911,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     padding: 34px clamp(28px, 4vw, 58px) 86px;
   }
 
+  .home-kid-nav { display: none; }
+
   .welcome {
     padding-bottom: 30px;
     border-bottom: 1px solid #e6e0d4;
@@ -1545,6 +1577,73 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
   @media (max-width: 720px) {
     .home-surface { min-height: calc(100dvh - 70px); }
     .home-container { padding: 25px 16px 52px; }
+    .home-kid-nav {
+      display: block;
+      margin-bottom: 26px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.36);
+      border-radius: 28px;
+      background: #0b43b8 url('/nav-tiles/games-mobile-backdrop.png') center top / cover no-repeat;
+      box-shadow: 0 18px 38px rgba(10,45,125,.2);
+    }
+    .home-kid-nav h2 {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 1.22rem;
+      letter-spacing: -.025em;
+    }
+    .home-kid-nav h2 i { color: #ffd44d; font-size: 1.35rem; }
+    .home-kid-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .home-kid-nav-tile {
+      min-width: 0;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,.82);
+      border-radius: 20px;
+      background: #fff;
+      color: #0d2d78;
+      box-shadow: 0 10px 24px rgba(2,22,86,.22);
+      transition: transform .16s ease, box-shadow .16s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .home-kid-nav-tile:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(2,22,86,.28); }
+    .home-kid-nav-tile:active { transform: scale(.98); }
+    .home-kid-nav-tile:focus-visible { outline: 4px solid #ffd44d; outline-offset: 3px; }
+    .home-kid-nav-tile img {
+      width: 100%;
+      height: clamp(82px, 22vw, 106px);
+      object-fit: cover;
+    }
+    .home-kid-nav-tile span {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      font-size: clamp(.94rem, 4.5vw, 1.08rem);
+      font-weight: 900;
+      line-height: 1.05;
+      text-align: center;
+    }
+    .home-kid-nav-tile.is-featured {
+      grid-column: 1 / -1;
+      border-color: #ffd44d;
+      border-width: 3px;
+      border-radius: 24px;
+      box-shadow: 0 14px 30px rgba(2,22,86,.3);
+    }
+    .home-kid-nav-tile.is-featured img { height: clamp(128px, 35vw, 158px); }
+    .home-kid-nav-tile.is-featured span {
+      min-height: 48px;
+      color: #092b77;
+      font-size: clamp(1.25rem, 6vw, 1.48rem);
+    }
     .welcome { padding-bottom: 24px; }
     .welcome-heading { align-items: flex-start; gap: 12px; }
     .welcome-avatar { width: 50px; height: 50px; border-width: 3px; }
