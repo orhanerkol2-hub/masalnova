@@ -20,6 +20,8 @@ interface Props {
   activeNav?: string;
   readerPage?: boolean;
   appShell?: boolean;
+  allowAds?: boolean;
+  robots?: string;
 }
 const {
   title,
@@ -35,6 +37,8 @@ const {
   activeNav,
   readerPage = false,
   appShell,
+  allowAds = true,
+  robots,
 } = Astro.props;
 const useAppShell = appShell ?? !readerPage;
 ---
@@ -83,6 +87,8 @@ const useAppShell = appShell ?? !readerPage;
       modifiedTime={modifiedTime}
       preloadImage={preloadImage}
       jsonLd={jsonLd}
+      allowAds={allowAds}
+      robots={robots}
     />
     <Consent />
   </head>

@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { games, gameEmbedUrl, gamepixPublisherSid } from '../../data/games.mjs';
+
+export function getStaticPaths() {
+  return games.map((game) => ({ params: { slug: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const gamepixEnabled = import.meta.env.PUBLIC_GAMEPIX_ENABLED !== 'false';
+const publisherSid = import.meta.env.PUBLIC_GAMEPIX_SID || gamepixPublisherSid;
+const embedUrl = gameEmbedUrl(game, publisherSid);
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGame',
+    name: game.title,
+    description: game.description,
+    url: `https://masalnova.com/oyna/${game.slug}/`,
+    image: `https://masalnova.com${game.image}`,
+    inLanguage: 'tr-TR',
+    applicationCategory: 'Game',
+    gamePlatform: ['Web browser', 'Mobile web'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Oyunlar', item: 'https://masalnova.com/oyunlar/' },
+      { '@type': 'ListItem', position: 3, name: game.title, item: `https://masalnova.com/oyna/${game.slug}/` },
+    ],
+  },
+];
+---
+<BaseLayout
+  title={`${game.title} Oyna | MasalNova`}
+  description={`${game.shortDescription} Ücretsiz oyunu Türkçe açıklama ve güvenli yükleme adımıyla keşfet.`}
+  path={`/oyna/${game.slug}/`}
+  image={game.image}
+  imageAlt={game.imageAlt}
+  activeNav="oyunlar"
+  allowAds={false}
+  robots={gamepixEnabled ? undefined : 'noindex, follow'}
+  jsonLd={jsonLd}
+>
+  <section class="game-page">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="İçerik yolu">
+        <a href="/">Ana Sayfa</a><span aria-hidden="true">›</span>
+        <a href="/oyunlar/">Oyunlar</a><span aria-hidden="true">›</span>
+        <span>{game.title}</span>
+      </nav>
+
+      <div class="game-heading">
+        <div>
+          <div class="meta-row"><span>{game.category}</span><span>{game.age}</span></div>
+          <h1>{game.title}</h1>
+          <p>{game.shortDescription}</p>
+        </div>
+        <a class="back-link" href="/oyunlar/"><i class="ph ph-grid-four" aria-hidden="true"></i> Tüm oyunlar</a>
+      </div>
+
+      <section class="player-shell" aria-label={`${game.title} oyun alanı`}>
+        <div
+          class="game-consent"
+          data-game-loader
+          data-game-url={gamepixEnabled ? embedUrl : ''}
+          data-game-title={game.title}
+        >
+          <img src={game.image} alt="" width="640" height="394" />
+          <div class="consent-shade"></div>
+          <div class="consent-card">
+            <span class="provider"><i class="ph ph-shield-check" aria-hidden="true"></i> Harici oyun: GamePix</span>
+            {
+              gamepixEnabled ? (
+                <>
+                  <h2>Oyunu yüklemek ister misin?</h2>
+                  <p>Oyunu başlattığında GamePix ile bağlantı kurulur. IP adresi ve cihaz bilgileri işlenebilir; oyun içinde reklamlar gösterilebilir. 16 yaşından küçüksen bir ebeveyninden izin iste.</p>
+                  <button type="button" class="load-game" data-load-game>
+                    <i class="ph ph-play-circle" aria-hidden="true"></i> Oyunu ve reklamları yükle
+                  </button>
+                </>
+              ) : (
+                <>
+                  <h2>Yayın hazırlığı sürüyor</h2>
+                  <p>Bu oyun, GamePix reklam ve çocuk güvenliği kontrolleri tamamlandıktan sonra açılacak. Böylece MasalNova’daki Google reklam düzeni etkilenmeyecek.</p>
+                  <a class="load-game is-link" href="/oyunlar/"><i class="ph ph-arrow-left" aria-hidden="true"></i> Oyunlara dön</a>
+                </>
+              )
+            }
+          </div>
+        </div>
+        <div class="player-status" aria-live="polite" data-player-status></div>
+      </section>
+
+      <div class="game-info-grid">
+        <article class="info-card">
+          <span class="info-icon"><i class="ph ph-info" aria-hidden="true"></i></span>
+          <div><h2>Oyun hakkında</h2><p>{game.description}</p></div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon"><i class="ph ph-hand-tap" aria-hidden="true"></i></span>
+          <div><h2>Nasıl oynanır?</h2><p>{game.controls}</p></div>
+        </article>
+      </div>
+
+      <section class="skills-card">
+        <div><span>Bu oyunda</span><h2>Çalıştırılan beceriler</h2></div>
+        <ul>{game.skills.map((skill) => <li><i class="ph ph-check-circle" aria-hidden="true"></i>{skill}</li>)}</ul>
+      </section>
+
+      <p class="ad-separation"><i class="ph ph-shield-star" aria-hidden="true"></i> Bu oyun sayfasında MasalNova’ya ait Google AdSense reklamı gösterilmez. Oyun içindeki reklamlar GamePix tarafından yönetilir.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-game-loader]').forEach((loader) => {
+    const button = loader.querySelector<HTMLButtonElement>('[data-load-game]');
+    const status = loader.parentElement?.querySelector<HTMLElement>('[data-player-status]');
+    if (!button) return;
+
+    button.addEventListener('click', () => {
+      const url = loader.dataset.gameUrl;
+      const title = loader.dataset.gameTitle || 'Oyun';
+      if (!url) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.src = url;
+      iframe.title = `${title} — GamePix oyun alanı`;
+      iframe.allow = 'autoplay; fullscreen; gamepad; clipboard-write';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('scrolling', 'no');
+      iframe.addEventListener('load', () => {
+        if (status) status.textContent = `${title} yüklendi.`;
+      }, { once: true });
+
+      if (status) status.textContent = `${title} yükleniyor…`;
+      loader.replaceWith(iframe);
+    });
+  });
+</script>
+
+<style>
+  .game-page { padding: 32px 0 58px; }
+  .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: rgba(255,255,255,.7); font-size: .78rem; font-weight: 800; }
+  .breadcrumbs a:hover { color: #fff; text-decoration: underline; }
+  .game-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin: 24px 0 22px; color: #fff; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
+  .meta-row span { padding: 5px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.12); font-size: .73rem; font-weight: 900; }
+  h1 { font-size: clamp(2rem, 5vw, 3.65rem); letter-spacing: -.04em; }
+  .game-heading p { max-width: 700px; margin-top: 10px; color: rgba(255,255,255,.8); }
+  .back-link { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(255,255,255,.12); font-size: .8rem; font-weight: 900; }
+  .player-shell { overflow: hidden; border: 1px solid rgba(255,255,255,.2); border-radius: 26px; background: #061b4f; box-shadow: 0 28px 68px rgba(0,15,66,.38); }
+  .game-consent, .player-shell :global(iframe) { width: 100%; min-height: min(720px, calc(100dvh - 160px)); aspect-ratio: 16 / 10; }
+  .game-consent { position: relative; display: grid; place-items: center; overflow: hidden; }
+  .game-consent > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.75); }
+  .consent-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,15,55,.5), rgba(2,15,55,.88)); backdrop-filter: blur(7px); }
+  .consent-card { position: relative; z-index: 1; width: min(620px, calc(100% - 32px)); padding: clamp(22px, 4vw, 36px); border: 1px solid rgba(255,255,255,.24); border-radius: 24px; background: rgba(5,28,89,.88); color: #fff; text-align: center; box-shadow: 0 24px 70px rgba(0,0,0,.32); }
+  .provider { display: inline-flex; align-items: center; gap: 7px; color: #ffd957; font-size: .78rem; font-weight: 900; }
+  .consent-card h2 { margin-top: 11px; font-size: clamp(1.45rem, 4vw, 2.15rem); }
+  .consent-card p { margin: 12px auto 0; max-width: 58ch; color: rgba(255,255,255,.77); font-size: .9rem; }
+  .load-game { display: inline-flex; align-items: center; justify-content: center; gap: 9px; margin-top: 20px; padding: 13px 20px; border: 0; border-radius: 999px; background: linear-gradient(90deg, #ffc62e, #ff9b1f); color: #492700; font-weight: 900; box-shadow: 0 12px 28px rgba(255,169,31,.3); }
+  .load-game:hover { transform: translateY(-2px); }
+  .load-game.is-link { text-decoration: none; }
+  .player-shell :global(iframe) { display: block; border: 0; background: #07194a; }
+  .player-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .game-info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 20px; }
+  .info-card { display: flex; gap: 15px; padding: 22px; border: 1px solid rgba(255,255,255,.18); border-radius: 20px; background: rgba(255,255,255,.11); color: #fff; }
+  .info-icon { display: grid; flex: 0 0 auto; width: 42px; height: 42px; place-items: center; border-radius: 13px; background: #ffd14b; color: #173169; font-size: 1.3rem; }
+  .info-card h2 { font-size: 1.08rem; }
+  .info-card p { margin-top: 6px; color: rgba(255,255,255,.74); font-size: .88rem; }
+  .skills-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 18px; padding: 21px 24px; border-radius: 20px; background: #fff; color: var(--ink); box-shadow: var(--shadow); }
+  .skills-card span { color: #1d56c4; font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+  .skills-card h2 { margin-top: 2px; font-size: 1.2rem; }
+  .skills-card ul { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 9px 15px; list-style: none; }
+  .skills-card li { display: inline-flex; align-items: center; gap: 6px; color: #385078; font-size: .84rem; font-weight: 800; }
+  .skills-card li i { color: #16975b; font-size: 1.05rem; }
+  .ad-separation { display: flex; align-items: flex-start; gap: 9px; margin: 17px 4px 0; color: rgba(255,255,255,.62); font-size: .76rem; }
+  .ad-separation i { flex: 0 0 auto; margin-top: 2px; color: #ffd957; font-size: 1rem; }
+  @media (max-width: 760px) {
+    .game-heading { align-items: flex-start; flex-direction: column; }
+    .back-link { display: none; }
+    .game-consent, .player-shell :global(iframe) { min-height: 520px; aspect-ratio: auto; }
+    .game-info-grid { grid-template-columns: 1fr; }
+    .skills-card { align-items: flex-start; flex-direction: column; }
+    .skills-card ul { justify-content: flex-start; }
+  }
+  @media (max-width: 480px) {
+    .game-page { padding-top: 24px; }
+    .game-consent, .player-shell :global(iframe) { min-height: 470px; }
+    .consent-card { width: calc(100% - 22px); padding: 22px 17px; }
+  }
+</style>

@@ -12,6 +12,10 @@ interface Props {
   preloadImage?: string;
   /** extra JSON-LD object(s) for this page */
   jsonLd?: Record<string, any> | Record<string, any>[];
+  /** Disable all AdSense markup on gameplay and other sensitive pages. */
+  allowAds?: boolean;
+  /** Override crawler behavior for pages that are not ready to publish. */
+  robots?: string;
 }
 
 const {
@@ -25,6 +29,8 @@ const {
   modifiedTime,
   preloadImage,
   jsonLd,
+  allowAds = true,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 } = Astro.props;
 
 const site = Astro.site ?? new URL('https://masalnova.com');
@@ -74,7 +80,7 @@ const orgGraph = {
 };
 
 const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
-const adsenseEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true';
+const adsenseEnabled = allowAds && import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true';
 const serializeJsonLd = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
 ---
 <meta charset="UTF-8" />
@@ -90,25 +96,25 @@ const serializeJsonLd = (value: unknown) => JSON.stringify(value).replace(/</g, 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 
-<!-- Google AdSense -->
-<meta name="google-adsense-account" content="ca-pub-5606540854153205" />
 {
-  adsenseEnabled && (
-    <script
-      async
-      is:inline
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606540854153205"
-      crossorigin="anonymous"
-    ></script>
+  allowAds && (
+    <>
+      <meta name="google-adsense-account" content="ca-pub-5606540854153205" />
+      {adsenseEnabled && (
+        <script
+          async
+          is:inline
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606540854153205"
+          crossorigin="anonymous"
+        ></script>
+      )}
+    </>
   )
 }
 
 <title>{title}</title>
 <meta name="description" content={description} />
-<meta
-  name="robots"
-  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-/>
+<meta name="robots" content={robots} />
 <link rel="canonical" href={canonical} />
 <link rel="alternate" hreflang="tr" href={canonical} />
 <link rel="alternate" hreflang="x-default" href={canonical} />

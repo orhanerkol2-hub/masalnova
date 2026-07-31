@@ -42,7 +42,7 @@ export const imprint = {
 
 export const privacy = {
   title: 'Privacy Policy',
-  subtitle: 'Last updated: 20 July 2026',
+  subtitle: 'Last updated: 31 July 2026',
   sections: [
     {
       heading: '1. Controller',
@@ -64,12 +64,22 @@ export const privacy = {
       heading: '3. Google AdSense advertising',
       paragraphs: [
         'MasalNova uses Google AdSense to finance the free availability of the website. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. The AdSense script is loaded from Google domains and may process technical data such as IP address, page URL, referrer, browser and device information, approximate location derived from the IP address, ad delivery information and interaction signals.',
+        'MasalNova does not load its own Google AdSense code on the games overview at /oyunlar/ or on gameplay pages at /oyna/. Advertising displayed inside a loaded GamePix game is provided and controlled by GamePix and its advertising partners, not by the MasalNova AdSense account.',
         'Google may use cookies, local storage or similar technologies for ad delivery, fraud prevention, frequency capping, measurement and reporting. Depending on your location and Google settings, ads may be contextual or personalised. Where consent is legally required, the legal basis is Article 6(1)(a) GDPR and Section 25(1) TDDDG. Otherwise, the legal basis for security, fraud prevention and basic ad delivery may be Article 6(1)(f) GDPR.',
         'Google may process data in the United States and other countries. Google LLC is certified under the EU-US Data Privacy Framework; EU Standard Contractual Clauses may also apply. Further information: policies.google.com/privacy, policies.google.com/technologies/ads and support.google.com/adsense.',
       ],
     },
     {
-      heading: '4. Google Analytics 4 and local website storage',
+      heading: '4. GamePix games and in-game advertising',
+      paragraphs: [
+        'MasalNova offers selected HTML5 games supplied by GamePix S.r.l., Via Marsala 29H, 00185 Rome, Italy. The game and its advertising services are not loaded automatically. A connection to GamePix is established only after you expressly choose to load the selected game.',
+        'When a game is loaded, GamePix and its service or advertising partners may process technical and usage data such as the IP address, page URL, referrer, browser and device information, timestamps, game interactions, cookies or similar identifiers. GamePix states that it uses advertising and measurement services which may include Google Ad Manager and other advertising partners. Details and current partner information are available at gamepix.com/privacy-cookie.',
+        'By loading the selected game, you consent to the transfer and related access to or storage of information on your device for that game session (Article 6(1)(a) GDPR and Section 25(1) TDDDG). If you are under 16, consent from a parent or legal guardian is required. You can stop further use by leaving or reloading the page; data already transferred cannot be recalled in this way.',
+        'No MasalNova Google AdSense code is loaded on the games overview or gameplay pages. GamePix is responsible for the advertising delivered inside its game environment. Further information: gamepix.com/privacy-cookie.',
+      ],
+    },
+    {
+      heading: '5. Google Analytics 4 and local website storage',
       paragraphs: [
         'With your consent, MasalNova uses Google Analytics 4, a web analytics service provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. We use measurement ID G-YZYEN24W6J to understand aggregated visitor numbers, page views, approximate traffic sources, device categories and how visitors use the website.',
         'Google Analytics may process online identifiers, truncated or derived IP information, page URLs, referrers, browser and device information, approximate location, timestamps and interaction data. Google Analytics is configured through Google Consent Mode. Analytics storage is denied by default and is enabled only after you consent to analytics. The legal basis is Article 6(1)(a) GDPR and, where access to or storage of information on your device occurs, Section 25(1) TDDDG. You may withdraw your consent at any time through the cookie settings with effect for the future.',
@@ -78,7 +88,7 @@ export const privacy = {
       ],
     },
     {
-      heading: '5. YouTube videos and external links',
+      heading: '6. YouTube videos and external links',
       paragraphs: [
         'Video preview images are stored locally. A connection to YouTube is established only when you expressly click “Load YouTube” or follow an external YouTube link.',
         'When a video is loaded, Google Ireland Limited and affiliated companies may process data including your IP address, date and time, page visited, referrer, device and browser data, interactions, and cookie or storage information. The youtube-nocookie.com embedding mode does not prevent all data transfers.',
@@ -88,20 +98,20 @@ export const privacy = {
       ],
     },
     {
-      heading: '6. Contact by email',
+      heading: '7. Contact by email',
       paragraphs: [
         'If you email us, we process your email address, message content, time and technical transmission data to handle your request. The legal basis is Article 6(1)(b) GDPR for contract-related or cooperation enquiries and otherwise Article 6(1)(f) GDPR. Our legitimate interest is responding to enquiries.',
         'We delete the data once the enquiry has been resolved and no statutory retention or evidence obligations remain.',
       ],
     },
     {
-      heading: '7. Recipients and disclosure',
+      heading: '8. Recipients and disclosure',
       paragraphs: [
         'Data is received only by the technical, security, advertising and communication service providers named above and, where legally required, by public authorities or other authorised bodies. We do not sell personal data.',
       ],
     },
     {
-      heading: '8. Your rights',
+      heading: '9. Your rights',
       paragraphs: ['Subject to the requirements of the GDPR, you have in particular the following rights:'],
       bullets: [
         'Access, rectification and erasure (Articles 15 to 17 GDPR)',
@@ -116,13 +126,13 @@ export const privacy = {
       ],
     },
     {
-      heading: '9. Automated decision-making',
+      heading: '10. Automated decision-making',
       paragraphs: ['No automated decision-making or profiling takes place.'],
     },
     {
-      heading: '10. Short explanation for children',
+      heading: '11. Short explanation for children',
       paragraphs: [
-        'MasalNova does not ask children to create an account and does not ask children to send personal data. Some advertising and video services are provided by Google. Please use MasalNova together with a parent or legal guardian, especially before clicking videos, external links or advertising.',
+        'MasalNova does not ask children to create an account and does not ask children to send personal data. Some advertising, video and game services are provided by Google, YouTube or GamePix. Please use MasalNova together with a parent or legal guardian, especially before loading games, clicking videos, external links or advertising.',
       ],
     },
   ],

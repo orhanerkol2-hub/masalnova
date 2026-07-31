@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GameCard from '../../components/GameCard.astro';
+import { games } from '../../data/games.mjs';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': 'https://masalnova.com/oyunlar/#collection',
+    name: 'Çocuklar İçin Ücretsiz Oyunlar',
+    description: 'Türkçe açıklamalı, seçilmiş hafıza, dikkat, mantık ve beceri oyunları.',
+    url: 'https://masalnova.com/oyunlar/',
+    inLanguage: 'tr-TR',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: games.length,
+      itemListElement: games.map((game, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: game.title,
+        url: `https://masalnova.com/oyna/${game.slug}/`,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Oyunlar', item: 'https://masalnova.com/oyunlar/' },
+    ],
+  },
+];
+---
+<BaseLayout
+  title="Çocuklar İçin Ücretsiz Oyunlar | MasalNova"
+  description="Hafıza, dikkat, mantık ve beceri geliştiren ücretsiz çocuk oyunlarını Türkçe açıklamalarla keşfet."
+  path="/oyunlar/"
+  activeNav="oyunlar"
+  allowAds={false}
+  jsonLd={jsonLd}
+>
+  <section class="games-hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow"><i class="ph ph-sparkle" aria-hidden="true"></i> MasalNova Oyun Dünyası</span>
+        <h1>Oyna, düşün, keşfet</h1>
+        <p>Türk çocukları için seçilmiş; hafıza, dikkat ve problem çözme becerilerini çalıştıran kısa oyunlar.</p>
+      </div>
+      <aside class="family-note">
+        <i class="ph ph-shield-check" aria-hidden="true"></i>
+        <div>
+          <strong>Kontrollü oyun deneyimi</strong>
+          <p>Oyunlar otomatik başlamaz. GamePix ve oyun içi reklamlar yalnızca açık onaydan sonra yüklenir.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="games-section">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <span>Başlangıç koleksiyonu</span>
+          <h2>Seçilen oyunlar</h2>
+        </div>
+        <p>{games.length} oyun · Ücretsiz · Telefon, tablet ve bilgisayarda</p>
+      </div>
+      <div class="games-grid">
+        {games.map((game) => <GameCard game={game} />)}
+      </div>
+      <div class="partner-note">
+        <i class="ph ph-info" aria-hidden="true"></i>
+        <p>Oyunlar GamePix iş ortaklığı üzerinden sunulur. Her oyun sayfasında sağlayıcı ve reklam bilgileri başlamadan önce gösterilir.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .games-hero { padding: clamp(44px, 7vw, 76px) 0 34px; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .6fr); gap: 34px; align-items: end; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px;
+    border: 1px solid rgba(255,255,255,.3); border-radius: 999px;
+    background: rgba(255,255,255,.13); color: #fff; font-size: .8rem; font-weight: 900;
+  }
+  h1 { max-width: 780px; margin-top: 16px; color: #fff; font-size: clamp(2.35rem, 7vw, 5.1rem); letter-spacing: -.055em; }
+  .hero-grid > div > p { max-width: 660px; margin-top: 16px; color: rgba(255,255,255,.86); font-size: clamp(1rem, 2vw, 1.22rem); }
+  .family-note {
+    display: flex; gap: 14px; padding: 19px; border: 1px solid rgba(255,255,255,.24);
+    border-radius: 22px; background: rgba(4,31,106,.43); color: #fff; backdrop-filter: blur(12px);
+  }
+  .family-note > i { flex: 0 0 auto; color: #ffd44d; font-size: 1.75rem; }
+  .family-note strong { font-size: .96rem; }
+  .family-note p { margin-top: 4px; color: rgba(255,255,255,.74); font-size: .82rem; line-height: 1.45; }
+  .games-section { padding: 24px 0 58px; }
+  .section-title { display: flex; align-items: end; justify-content: space-between; gap: 22px; margin-bottom: 20px; color: #fff; }
+  .section-title span { color: #ffd44d; font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .section-title h2 { margin-top: 3px; font-size: clamp(1.7rem, 4vw, 2.45rem); }
+  .section-title > p { color: rgba(255,255,255,.74); font-size: .88rem; font-weight: 800; }
+  .games-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .partner-note {
+    display: flex; align-items: flex-start; gap: 11px; margin-top: 24px; padding: 15px 18px;
+    border: 1px solid rgba(255,255,255,.2); border-radius: 16px; background: rgba(255,255,255,.1);
+    color: rgba(255,255,255,.78); font-size: .83rem;
+  }
+  .partner-note i { margin-top: 2px; color: #ffd44d; font-size: 1.2rem; }
+  @media (max-width: 920px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .family-note { max-width: 620px; }
+    .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 600px) {
+    .games-hero { padding-top: 34px; }
+    .section-title { align-items: flex-start; flex-direction: column; gap: 7px; }
+    .games-grid { grid-template-columns: 1fr; }
+  }
+</style>
