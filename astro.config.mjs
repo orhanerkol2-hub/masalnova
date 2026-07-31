@@ -11,13 +11,6 @@ export default defineConfig({
   build: { format: 'directory' },
   image: { service: passthroughImageService() },
   integrations: [sitemap({
-    filter: (page) => ![
-      'https://masalnova.com/datenschutz/',
-      'https://masalnova.com/impressum/',
-      'https://masalnova.com/ara/',
-      'https://masalnova.com/kitapligim/',
-      'https://masalnova.com/masal-bul/',
-      'https://masalnova.com/story-index.json',
-    ].includes(page),
+    filter: (page) => page !== 'https://masalnova.com/story-index.json',
   })],
 });
