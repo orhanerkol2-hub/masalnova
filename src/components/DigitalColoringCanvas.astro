@@ -1,0 +1,606 @@
+---
+interface Props {
+  title: string;
+  imageSrc: string;
+  downloadName: string;
+  imageAlt: string;
+  mode?: 'embedded' | 'focus';
+}
+
+const { title, imageSrc, downloadName, imageAlt, mode = 'embedded' } = Astro.props;
+const isFocus = mode === 'focus';
+
+const colors = [
+  { value: '#ffd43b', label: 'Sarı' },
+  { value: '#ff922b', label: 'Turuncu' },
+  { value: '#fa5252', label: 'Kırmızı' },
+  { value: '#f783ac', label: 'Pembe' },
+  { value: '#b197fc', label: 'Mor' },
+  { value: '#5c7cfa', label: 'Mavi' },
+  { value: '#4dabf7', label: 'Açık mavi' },
+  { value: '#38d9a9', label: 'Turkuaz' },
+  { value: '#69db7c', label: 'Yeşil' },
+  { value: '#a9e34b', label: 'Açık yeşil' },
+  { value: '#a66a3f', label: 'Kahverengi' },
+  { value: '#ffc9a9', label: 'Ten rengi' },
+  { value: '#adb5bd', label: 'Gri' },
+  { value: '#ffffff', label: 'Beyaz' },
+];
+
+const visibleColors = isFocus ? colors.slice(0, 12) : colors;
+---
+
+<section
+  class:list={['digital-studio', { 'is-focus': isFocus }]}
+  id="dijital-boyama"
+  data-coloring-studio
+  data-image-src={imageSrc}
+  data-download-name={downloadName}
+  aria-labelledby="digital-coloring-title"
+>
+  {
+    !isFocus && (
+      <div class="studio-heading">
+        <div>
+          <span><i class="ph ph-palette" aria-hidden="true"></i> Tarayıcıda boya</span>
+          <h2 id="digital-coloring-title">{title} şimdi senin renklerinle</h2>
+          <p>Bir renk ve araç seç, sonra resme dokun veya fareyle boya. Çalışman yalnızca bu cihazda kalır.</p>
+        </div>
+        <div class="privacy-pill"><i class="ph ph-shield-check" aria-hidden="true"></i> Yükleme yok</div>
+      </div>
+    )
+  }
+  {isFocus && <h1 class="sr-only" id="digital-coloring-title">{title} dijital boyama alanı</h1>}
+
+  <div class="studio-layout">
+    <div class="canvas-panel">
+      <div class="canvas-loading" data-canvas-loading role="status">Boyama alanı hazırlanıyor…</div>
+      <canvas
+        width="760"
+        height="1075"
+        data-coloring-canvas
+        aria-label={`${imageAlt}. Dijital boyama alanı.`}
+      ></canvas>
+      <noscript><p>Tarayıcıda boyamak için JavaScript etkin olmalıdır.</p></noscript>
+    </div>
+
+    <aside class="tool-panel" aria-label="Boyama araçları">
+      <div class="tool-group">
+        <span class="tool-label">Araç</span>
+        <div class="tool-buttons" role="toolbar" aria-label="Boyama aracı seç">
+          <button class="tool-button is-active" type="button" data-tool="fill" aria-pressed="true">
+            <i class="ph ph-paint-bucket" aria-hidden="true"></i><span>Doldur</span>
+          </button>
+          <button class="tool-button" type="button" data-tool="brush" aria-pressed="false">
+            <i class="ph ph-paint-brush" aria-hidden="true"></i><span>Fırça</span>
+          </button>
+          <button class="tool-button" type="button" data-tool="eraser" aria-pressed="false">
+            <i class="ph ph-eraser" aria-hidden="true"></i><span>Silgi</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="tool-group">
+        <span class="tool-label">Renk</span>
+        <div class="palette" role="toolbar" aria-label="Renk seç">
+          {visibleColors.map((color, index) => (
+            <button
+              class:list={['swatch', { 'is-active': index === 0 }]}
+              type="button"
+              data-color={color.value}
+              aria-label={color.label}
+              aria-pressed={index === 0 ? 'true' : 'false'}
+              style={`--swatch: ${color.value}`}
+            ></button>
+          ))}
+        </div>
+      </div>
+
+      <label class="size-control">
+        <span><span>Fırça kalınlığı</span><output data-size-output>18</output></span>
+        <input type="range" min="6" max="42" value="18" step="2" data-brush-size />
+      </label>
+
+      <div class="studio-actions">
+        <button type="button" data-coloring-undo disabled>
+          <i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i> Geri al
+        </button>
+        <button type="button" data-coloring-reset>
+          <i class="ph ph-broom" aria-hidden="true"></i> Baştan başla
+        </button>
+        <button class="save-button" type="button" data-coloring-save>
+          <i class="ph ph-download-simple" aria-hidden="true"></i> Resmi kaydet
+        </button>
+      </div>
+
+      <p class="studio-status" data-coloring-status role="status" aria-live="polite">Önce bir renk seç, sonra beyaz bir alana dokun.</p>
+      <p class="studio-tip"><i class="ph ph-lightbulb" aria-hidden="true"></i> Kapalı alanları tek dokunuşla boyamak için “Doldur” aracını kullan.</p>
+    </aside>
+  </div>
+</section>
+
+<script>
+  type PaintTool = 'fill' | 'brush' | 'eraser';
+
+  const parseHex = (hex: string) => {
+    const value = hex.replace('#', '');
+    return [
+      Number.parseInt(value.slice(0, 2), 16),
+      Number.parseInt(value.slice(2, 4), 16),
+      Number.parseInt(value.slice(4, 6), 16),
+      255,
+    ];
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-coloring-studio]').forEach((studio) => {
+    const canvas = studio.querySelector<HTMLCanvasElement>('[data-coloring-canvas]');
+    const loading = studio.querySelector<HTMLElement>('[data-canvas-loading]');
+    const status = studio.querySelector<HTMLElement>('[data-coloring-status]');
+    const undoButton = studio.querySelector<HTMLButtonElement>('[data-coloring-undo]');
+    const resetButton = studio.querySelector<HTMLButtonElement>('[data-coloring-reset]');
+    const saveButton = studio.querySelector<HTMLButtonElement>('[data-coloring-save]');
+    const sizeInput = studio.querySelector<HTMLInputElement>('[data-brush-size]');
+    const sizeOutput = studio.querySelector<HTMLOutputElement>('[data-size-output]');
+    const toolButtons = [...studio.querySelectorAll<HTMLButtonElement>('[data-tool]')];
+    const colorButtons = [...studio.querySelectorAll<HTMLButtonElement>('[data-color]')];
+    const imageSrc = studio.dataset.imageSrc;
+    const downloadName = studio.dataset.downloadName ?? 'masalnova-boyama';
+    const context = canvas?.getContext('2d', { willReadFrequently: true });
+
+    if (!canvas || !context || !imageSrc || !undoButton || !resetButton || !saveButton || !sizeInput) return;
+
+    let currentTool: PaintTool = 'fill';
+    let currentColor = '#ffd43b';
+    let brushSize = Number(sizeInput.value);
+    let originalImage: ImageData | null = null;
+    let drawing = false;
+    let lastPoint: { x: number; y: number } | null = null;
+    const undoStack: ImageData[] = [];
+
+    const fitFocusCanvas = () => {
+      if (!studio.classList.contains('is-focus')) return;
+      const panel = canvas.closest<HTMLElement>('.canvas-panel');
+      if (!panel) return;
+      const panelStyles = window.getComputedStyle(panel);
+      const horizontalPadding = Number.parseFloat(panelStyles.paddingLeft) + Number.parseFloat(panelStyles.paddingRight);
+      const verticalPadding = Number.parseFloat(panelStyles.paddingTop) + Number.parseFloat(panelStyles.paddingBottom);
+      const availableWidth = Math.max(1, panel.clientWidth - horizontalPadding);
+      const availableHeight = Math.max(1, panel.clientHeight - verticalPadding);
+      const ratio = canvas.width / canvas.height;
+      const displayWidth = Math.min(availableWidth, availableHeight * ratio);
+      canvas.style.width = `${displayWidth}px`;
+      canvas.style.height = `${displayWidth / ratio}px`;
+    };
+
+    if (studio.classList.contains('is-focus')) {
+      const panel = canvas.closest<HTMLElement>('.canvas-panel');
+      if (panel && 'ResizeObserver' in window) {
+        const resizeObserver = new ResizeObserver(fitFocusCanvas);
+        resizeObserver.observe(panel);
+      }
+      fitFocusCanvas();
+    }
+
+    const setStatus = (message: string) => {
+      if (status) status.textContent = message;
+    };
+
+    const syncUndo = () => {
+      undoButton.disabled = undoStack.length === 0;
+    };
+
+    const pushUndo = () => {
+      undoStack.push(context.getImageData(0, 0, canvas.width, canvas.height));
+      if (undoStack.length > 8) undoStack.shift();
+      syncUndo();
+    };
+
+    const pointFromEvent = (event: PointerEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      return {
+        x: Math.max(0, Math.min(canvas.width - 1, Math.round((event.clientX - rect.left) * canvas.width / rect.width))),
+        y: Math.max(0, Math.min(canvas.height - 1, Math.round((event.clientY - rect.top) * canvas.height / rect.height))),
+      };
+    };
+
+    const restoreOutlines = () => {
+      if (!originalImage) return;
+      const painted = context.getImageData(0, 0, canvas.width, canvas.height);
+      const base = originalImage.data;
+      const pixels = painted.data;
+      for (let offset = 0; offset < pixels.length; offset += 4) {
+        if (base[offset] < 80 && base[offset + 1] < 80 && base[offset + 2] < 80) {
+          pixels[offset] = 0;
+          pixels[offset + 1] = 0;
+          pixels[offset + 2] = 0;
+          pixels[offset + 3] = 255;
+        }
+      }
+      context.putImageData(painted, 0, 0);
+    };
+
+    const floodFill = (startX: number, startY: number, hex: string) => {
+      const image = context.getImageData(0, 0, canvas.width, canvas.height);
+      const pixels = image.data;
+      const startPixel = (startY * canvas.width + startX) * 4;
+      const target = [pixels[startPixel], pixels[startPixel + 1], pixels[startPixel + 2], pixels[startPixel + 3]];
+      const replacement = parseHex(hex);
+
+      if (target[0] < 80 && target[1] < 80 && target[2] < 80) {
+        setStatus('Çizginin yerine boyamak istediğin beyaz alana dokun.');
+        return false;
+      }
+
+      if (target.every((value, index) => value === replacement[index])) return false;
+
+      const matchesTarget = (pixelIndex: number) => {
+        const offset = pixelIndex * 4;
+        return pixels[offset] === target[0]
+          && pixels[offset + 1] === target[1]
+          && pixels[offset + 2] === target[2]
+          && pixels[offset + 3] === target[3];
+      };
+
+      const paintPixel = (pixelIndex: number) => {
+        const offset = pixelIndex * 4;
+        pixels[offset] = replacement[0];
+        pixels[offset + 1] = replacement[1];
+        pixels[offset + 2] = replacement[2];
+        pixels[offset + 3] = 255;
+      };
+
+      const queue = new Int32Array(canvas.width * canvas.height);
+      let head = 0;
+      let tail = 0;
+      const startIndex = startY * canvas.width + startX;
+      paintPixel(startIndex);
+      queue[tail++] = startIndex;
+
+      while (head < tail) {
+        const pixelIndex = queue[head++];
+        const x = pixelIndex % canvas.width;
+        const y = Math.floor(pixelIndex / canvas.width);
+        const neighbours = [
+          x > 0 ? pixelIndex - 1 : -1,
+          x < canvas.width - 1 ? pixelIndex + 1 : -1,
+          y > 0 ? pixelIndex - canvas.width : -1,
+          y < canvas.height - 1 ? pixelIndex + canvas.width : -1,
+        ];
+
+        for (const neighbour of neighbours) {
+          if (neighbour >= 0 && matchesTarget(neighbour)) {
+            paintPixel(neighbour);
+            queue[tail++] = neighbour;
+          }
+        }
+      }
+
+      context.putImageData(image, 0, 0);
+      setStatus('Alan boyandı. Başka bir renk veya alan seçebilirsin.');
+      return true;
+    };
+
+    const setTool = (tool: PaintTool) => {
+      currentTool = tool;
+      toolButtons.forEach((button) => {
+        const active = button.dataset.tool === tool;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      canvas.classList.toggle('is-brush', tool !== 'fill');
+      setStatus(tool === 'fill'
+        ? 'Boyamak istediğin kapalı alana dokun.'
+        : tool === 'brush'
+          ? 'Resmin üzerinde parmağını veya fareyi sürükle.'
+          : 'Silmek istediğin rengin üzerinde sürükle.');
+    };
+
+    toolButtons.forEach((button) => {
+      button.addEventListener('click', () => setTool((button.dataset.tool ?? 'fill') as PaintTool));
+    });
+
+    colorButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        currentColor = button.dataset.color ?? currentColor;
+        colorButtons.forEach((candidate) => {
+          const active = candidate === button;
+          candidate.classList.toggle('is-active', active);
+          candidate.setAttribute('aria-pressed', String(active));
+        });
+        if (currentTool === 'eraser') setTool('brush');
+        setStatus('Renk hazır. Bir alana dokun veya fırçayla boya.');
+      });
+    });
+
+    sizeInput.addEventListener('input', () => {
+      brushSize = Number(sizeInput.value);
+      if (sizeOutput) sizeOutput.value = String(brushSize);
+    });
+
+    canvas.addEventListener('pointerdown', (event) => {
+      if (!originalImage) return;
+      const point = pointFromEvent(event);
+
+      if (currentTool === 'fill') {
+        pushUndo();
+        if (!floodFill(point.x, point.y, currentColor)) {
+          undoStack.pop();
+          syncUndo();
+        }
+        return;
+      }
+
+      pushUndo();
+      drawing = true;
+      lastPoint = point;
+      canvas.setPointerCapture(event.pointerId);
+      context.beginPath();
+      context.moveTo(point.x, point.y);
+      context.lineCap = 'round';
+      context.lineJoin = 'round';
+      context.lineWidth = brushSize;
+      context.strokeStyle = currentTool === 'eraser' ? '#ffffff' : currentColor;
+      context.lineTo(point.x + .1, point.y + .1);
+      context.stroke();
+    });
+
+    canvas.addEventListener('pointermove', (event) => {
+      if (!drawing || !lastPoint) return;
+      const point = pointFromEvent(event);
+      context.beginPath();
+      context.moveTo(lastPoint.x, lastPoint.y);
+      context.lineTo(point.x, point.y);
+      context.stroke();
+      lastPoint = point;
+    });
+
+    const finishDrawing = () => {
+      if (!drawing) return;
+      drawing = false;
+      lastPoint = null;
+      restoreOutlines();
+      setStatus(currentTool === 'eraser' ? 'Renk silindi.' : 'Fırça çizgisi eklendi.');
+    };
+
+    canvas.addEventListener('pointerup', finishDrawing);
+    canvas.addEventListener('pointercancel', finishDrawing);
+
+    undoButton.addEventListener('click', () => {
+      const previous = undoStack.pop();
+      if (!previous) return;
+      context.putImageData(previous, 0, 0);
+      syncUndo();
+      setStatus('Son işlem geri alındı.');
+    });
+
+    resetButton.addEventListener('click', () => {
+      if (!originalImage) return;
+      pushUndo();
+      context.putImageData(originalImage, 0, 0);
+      setStatus('Boyama sayfası yeniden temizlendi.');
+    });
+
+    saveButton.addEventListener('click', () => {
+      canvas.toBlob((blob) => {
+        if (!blob) return;
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${downloadName}-boyanmis.png`;
+        link.click();
+        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+        setStatus('Boyadığın resim PNG olarak kaydedildi.');
+      }, 'image/png');
+    });
+
+    const image = new Image();
+    image.addEventListener('load', () => {
+      context.imageSmoothingEnabled = false;
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+      originalImage = context.getImageData(0, 0, canvas.width, canvas.height);
+      fitFocusCanvas();
+      if (loading) loading.hidden = true;
+      canvas.classList.add('is-ready');
+      setStatus('Önce bir renk seç, sonra beyaz bir alana dokun.');
+    });
+    image.addEventListener('error', () => {
+      if (loading) loading.textContent = 'Boyama alanı yüklenemedi. Sayfayı yenileyip tekrar deneyin.';
+    });
+    image.src = imageSrc;
+  });
+</script>
+
+<style>
+  .digital-studio {
+    margin-top: clamp(44px, 7vw, 78px);
+    padding: clamp(22px, 4vw, 38px);
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 30px;
+    background: rgba(4,31,106,.52);
+    box-shadow: 0 26px 70px rgba(2,24,86,.28);
+    scroll-margin-top: calc(var(--app-nav-height) + 24px);
+    backdrop-filter: blur(14px);
+  }
+  .studio-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 22px; color: #fff; }
+  .studio-heading > div:first-child > span { display: inline-flex; align-items: center; gap: 7px; color: #ffd44d; font-size: .75rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+  .studio-heading h2 { max-width: 740px; margin-top: 6px; font-size: clamp(1.6rem, 4vw, 2.65rem); }
+  .studio-heading p { max-width: 680px; margin-top: 9px; color: rgba(255,255,255,.76); font-size: .92rem; }
+  .privacy-pill { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 7px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; background: rgba(255,255,255,.1); color: rgba(255,255,255,.86); font-size: .73rem; font-weight: 900; }
+  .studio-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 330px); gap: clamp(20px, 4vw, 34px); align-items: start; margin-top: 25px; }
+  .canvas-panel { position: relative; overflow: hidden; padding: clamp(8px, 1.5vw, 14px); border-radius: 22px; background: #edf2ff; box-shadow: inset 0 0 0 1px rgba(14,43,99,.1); }
+  .canvas-panel canvas { display: block; width: 100%; height: auto; border: 1px solid #dce3f0; border-radius: 14px; background: #fff; cursor: crosshair; opacity: 0; touch-action: none; transition: opacity .18s ease; }
+  .canvas-panel canvas.is-ready { opacity: 1; }
+  .canvas-panel canvas.is-brush { cursor: none; }
+  .canvas-loading { position: absolute; z-index: 2; inset: 0; display: grid; place-items: center; padding: 24px; color: #1b4fc4; font-weight: 900; text-align: center; }
+  .canvas-loading[hidden] { display: none; }
+  .tool-panel { position: sticky; top: calc(var(--app-nav-height) + 20px); padding: 18px; border: 1px solid rgba(255,255,255,.2); border-radius: 22px; background: #fff; color: var(--ink); box-shadow: 0 18px 45px rgba(2,24,86,.22); }
+  .tool-group + .tool-group { margin-top: 20px; }
+  .tool-label { display: block; margin-bottom: 9px; color: #596789; font-size: .7rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .tool-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+  .tool-button { display: grid; place-items: center; gap: 2px; min-height: 64px; padding: 8px 4px; border: 1px solid #dce4f5; border-radius: 13px; background: #f5f7fc; color: #4f5e82; font-size: .67rem; font-weight: 900; }
+  .tool-button i { font-size: 1.28rem; }
+  .tool-button.is-active { border-color: #8fb1ff; background: #eaf1ff; color: #1248b5; box-shadow: inset 0 0 0 1px #8fb1ff; }
+  .palette { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+  .swatch { position: relative; width: 100%; aspect-ratio: 1; border: 2px solid #fff; border-radius: 50%; background: var(--swatch); box-shadow: 0 0 0 1px #ccd5e7, 0 4px 9px rgba(14,43,99,.1); }
+  .swatch.is-active { box-shadow: 0 0 0 3px #174fd2, 0 5px 12px rgba(14,43,99,.18); transform: scale(1.04); }
+  .size-control { display: grid; gap: 8px; margin-top: 20px; }
+  .size-control > span { display: flex; justify-content: space-between; gap: 10px; color: #596789; font-size: .72rem; font-weight: 900; }
+  .size-control output { color: #174fd2; }
+  .size-control input { width: 100%; accent-color: #174fd2; }
+  .studio-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+  .studio-actions button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 9px 10px; border: 1px solid #dce4f5; border-radius: 13px; background: #f6f8fc; color: #263d78; font-size: .73rem; font-weight: 900; }
+  .studio-actions button:disabled { cursor: not-allowed; opacity: .45; }
+  .studio-actions .save-button { grid-column: 1 / -1; border-color: #ffc62e; background: #ffc62e; color: #17306d; }
+  .studio-status { min-height: 38px; margin-top: 14px; color: #5c6784; font-size: .73rem; line-height: 1.4; }
+  .studio-tip { display: flex; gap: 8px; margin-top: 9px; padding: 11px; border-radius: 12px; background: #edf3ff; color: #3b568f; font-size: .7rem; line-height: 1.4; }
+  .studio-tip i { flex: 0 0 auto; margin-top: 1px; color: #d28a00; font-size: 1rem; }
+  @media (max-width: 860px) {
+    .studio-layout { grid-template-columns: 1fr; }
+    .tool-panel { position: static; }
+    .palette { grid-template-columns: repeat(7, minmax(30px, 1fr)); }
+  }
+  @media (max-width: 600px) {
+    .digital-studio { margin-inline: -4px; padding: 18px 12px; border-radius: 24px; }
+    .studio-heading { display: block; }
+    .privacy-pill { margin-top: 13px; }
+    .studio-layout { margin-top: 18px; }
+    .tool-panel { padding: 14px; }
+    .palette { gap: 7px; }
+  }
+
+  .digital-studio.is-focus {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  .is-focus .studio-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+  }
+  .is-focus .canvas-panel {
+    display: grid;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    place-items: center;
+    overflow: hidden;
+    padding: 8px;
+    border-radius: 0;
+    background: #eaf1ff;
+    box-shadow: none;
+  }
+  .is-focus .canvas-panel canvas {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 13px;
+    box-shadow: 0 8px 24px rgba(8, 30, 80, .12);
+  }
+  .is-focus .tool-panel {
+    position: relative;
+    z-index: 5;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    border: 0;
+    border-radius: 22px 22px 0 0;
+    box-shadow: 0 -10px 30px rgba(8, 30, 80, .16);
+  }
+  .is-focus .tool-group { margin: 0; }
+  .is-focus .tool-group:first-child { order: 2; }
+  .is-focus .tool-group:nth-child(2) { order: 1; }
+  .is-focus .tool-label {
+    margin-bottom: 5px;
+    font-size: .6rem;
+  }
+  .is-focus .palette {
+    grid-template-columns: repeat(6, minmax(0, 42px));
+    justify-content: space-between;
+    gap: 6px;
+    max-width: 370px;
+    margin-inline: auto;
+  }
+  .is-focus .swatch {
+    min-width: 36px;
+    min-height: 36px;
+  }
+  .is-focus .tool-buttons {
+    max-width: 370px;
+    margin-inline: auto;
+  }
+  .is-focus .tool-button {
+    display: flex;
+    min-height: 42px;
+    gap: 6px;
+    border-radius: 12px;
+    font-size: .72rem;
+  }
+  .is-focus .tool-button i { font-size: 1.15rem; }
+  .is-focus .size-control,
+  .is-focus .studio-tip { display: none; }
+  .is-focus .studio-actions {
+    order: 3;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    max-width: 370px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .is-focus .studio-actions button {
+    min-height: 42px;
+    padding: 7px 5px;
+    font-size: .68rem;
+  }
+  .is-focus .studio-actions .save-button { grid-column: auto; }
+  .is-focus .studio-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 340px) {
+    .is-focus .palette { grid-template-columns: repeat(6, minmax(0, 38px)); gap: 5px; }
+    .is-focus .swatch { min-width: 34px; min-height: 34px; }
+    .is-focus .tool-panel { gap: 7px; padding-top: 8px; }
+  }
+
+  @media (min-width: 860px) {
+    .digital-studio.is-focus { padding: 18px; }
+    .is-focus .studio-layout {
+      grid-template-columns: minmax(0, 1fr) 330px;
+      grid-template-rows: 1fr;
+      gap: 18px;
+      max-width: 1180px;
+      margin-inline: auto;
+    }
+    .is-focus .canvas-panel { border-radius: 24px; }
+    .is-focus .tool-panel {
+      align-self: center;
+      padding: 18px;
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(2,24,86,.22);
+    }
+  }
+</style>

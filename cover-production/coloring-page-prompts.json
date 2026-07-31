@@ -1,0 +1,47 @@
+{
+  "generator": "Built-in image generation tool",
+  "referenceImage": "/public/covers/stories/keloglan-degirmen.webp",
+  "sharedPrompt": "Use case: illustration-story. Asset type: printable children's coloring page for MasalNova. Use the input image only as a character identity reference. Preserve Keloğlan's friendly face, large eyes, rounded bald head with simple pointed felt cap, long-sleeve shirt, sleeveless vest, cloth belt, loose trousers and soft village shoes. Professional black-and-white children's coloring-book line art, smooth clean closed outlines, consistent bold line weight and large enclosed coloring areas. A4 portrait composition, full body visible, centered, generous blank margins and all objects fully inside the frame. Audience: children ages 4 to 7. Pure black outlines on white, white interior fills, readable hands, anatomically coherent, no text, logo, watermark or border. Avoid color, gray, shadows, gradients, cross-hatching, sketch texture, double outlines, tiny details, solid black areas, photorealism, cropped objects, extra people and copyrighted adaptation styling.",
+  "pages": [
+    {
+      "slug": "keloglan-degirmen-ve-ekmek",
+      "primaryRequest": "Keloğlan stands happily beside a small traditional Anatolian stone watermill, holding one round loaf of bread. A simple wooden waterwheel and three large wheat stalks complete the scene."
+    },
+    {
+      "slug": "keloglan-yildizli-kuyu",
+      "primaryRequest": "Keloğlan kneels beside a round stone well and looks happily at one large shining star reflected in a small water bucket. Include a simple crescent moon, two rounded clouds and three stones."
+    },
+    {
+      "slug": "keloglan-sabirli-bahce",
+      "primaryRequest": "Keloğlan gently plants one large seedling in a cheerful garden. Include one simple watering can, three oversized tulips and a small butterfly."
+    },
+    {
+      "slug": "keloglan-kaplumbagali-kopru",
+      "primaryRequest": "Keloğlan walks across a small arched wooden bridge beside a friendly turtle. Include two large reeds and three round river stones."
+    },
+    {
+      "slug": "keloglan-golde-balik",
+      "primaryRequest": "Keloğlan sits on a simple wooden lakeside dock holding a child-safe fishing rod. A friendly large fish jumps from the water near one lily pad. Include two reeds and a small woven basket."
+    },
+    {
+      "slug": "keloglan-ve-sincap",
+      "primaryRequest": "Keloğlan crouches beneath a simple oak tree and offers one large acorn to a friendly squirrel sitting on a low stump. Include three oversized oak leaves and two mushrooms."
+    },
+    {
+      "slug": "keloglan-ucurtma-ucuruyor",
+      "primaryRequest": "Keloğlan runs happily through an open meadow flying one large diamond-shaped kite with a short ribbon tail. Include three large daisies and two rounded clouds."
+    },
+    {
+      "slug": "keloglan-gece-feneri",
+      "primaryRequest": "Keloğlan walks through a simple Anatolian village at night carrying one large old-fashioned lantern. Include one small stone house, a crescent moon, two stars and a friendly cat."
+    },
+    {
+      "slug": "keloglan-dag-kecisi",
+      "primaryRequest": "Keloğlan stands beside a friendly small goat in front of a simple mountain hut. He holds a bunch of three large wildflowers. Include two rounded mountain shapes and three stones."
+    },
+    {
+      "slug": "keloglan-nar-bahcesi",
+      "primaryRequest": "Keloğlan reaches up to pick one large pomegranate from a small fruit tree while holding a simple woven basket containing three pomegranates. Include two large leaves on the ground and one small bird on a branch."
+    }
+  ]
+}
