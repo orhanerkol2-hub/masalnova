@@ -54,6 +54,14 @@ const links = [
       <img src="/logo.webp" alt="MasalNova" width="154" height="39" />
     </a>
     <div class="topbar-actions">
+      <a
+        class:list={['games-action', { 'is-active': activeKey === 'oyunlar' }]}
+        href="/oyunlar/"
+        aria-current={activeKey === 'oyunlar' ? 'page' : undefined}
+      >
+        <i class="ph ph-game-controller" aria-hidden="true"></i>
+        <span>Oyunlar</span>
+      </a>
       <a class="top-action" href="/ara/" aria-label="Ara">
         <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
       </a>
@@ -242,6 +250,7 @@ const links = [
   .mobile-brand { display: none; }
   .topbar-actions { display: flex; align-items: center; gap: 10px; }
 
+  .games-action,
   .top-action,
   .install-action {
     min-height: 44px;
@@ -251,6 +260,20 @@ const links = [
     box-shadow: 0 8px 20px rgba(13,40,105,.08);
     transition: transform .18s ease, background .18s ease, border-color .18s ease;
   }
+
+  .games-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    border-radius: 14px;
+    font-size: .84rem;
+    font-weight: 900;
+  }
+
+  .games-action i { font-size: 1.2rem; }
+  .games-action.is-active { border-color: #f4c430; background: var(--app-yellow); color: #193068; }
 
   .top-action {
     width: 44px;
@@ -277,8 +300,10 @@ const links = [
     color: #193068;
   }
 
+  .games-action:hover,
   .top-action:hover,
   .install-action:hover { transform: translateY(-2px); background: #f3f6fc; }
+  .games-action.is-active:hover { background: #ffd65b; }
   .install-action.is-ready:hover { background: #ffd65b; }
   .mobile-nav { display: none; }
 
@@ -326,6 +351,7 @@ const links = [
     }
     .mobile-brand { display: block; width: 136px; }
     .mobile-brand img { width: 100%; height: auto; }
+    .games-action { display: none; }
     .settings-action { display: none; }
     .install-action { width: 43px; min-height: 43px; padding: 0; }
     .install-action span { display: none; }
