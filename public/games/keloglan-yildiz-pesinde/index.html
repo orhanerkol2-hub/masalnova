@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17385f">
+  <meta name="color-scheme" content="only light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Keloğlan: Yıldız Peşinde | MasalNova</title>
+  <style>
+    :root {
+      --background: #10213b;
+      --foreground: #12233d;
+      --card: #fffaf0;
+      --border: #d8b976;
+      --muted: #ead9ad;
+      --viz-series-1: #2d9f92;
+      --viz-series-4: #f4bf43;
+      color-scheme: light;
+      font-family: "Nunito", "Avenir Next", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--background);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: var(--background); }
+    body { overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
+    button { border: 0; font: inherit; cursor: pointer; }
+    img { display: block; }
+    [hidden] { display: none !important; }
+    .card { border: 1px solid var(--border); border-radius: 1rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 999px; font-weight: 800; }
+    .text-small { font-size: .78rem; font-weight: 800; letter-spacing: .04em; }
+    .viz-badge { display: inline-flex; padding: .35rem .7rem; border: 1px solid currentColor; border-radius: 999px; font-size: .7rem; font-weight: 900; letter-spacing: .08em; }
+    :focus-visible { outline: 3px solid #ffc630; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+<div id="keloglan-fair-spawn-preview">
+  <div class="game-stage" aria-label="Keloğlan Yıldız Peşinde oyunu">
+    <div class="village-layer" aria-hidden="true"></div>
+    <div class="sun-wash" aria-hidden="true"></div>
+    <div class="game-hud" data-hud hidden aria-live="polite">
+      <div class="card hud-strip">
+        <div class="hud-item">
+          <span class="text-small">PUAN</span>
+          <strong data-score>0</strong>
+        </div>
+        <div class="hud-item">
+          <span class="text-small">CAN</span>
+          <strong data-lives>♥ ♥ ♥</strong>
+        </div>
+        <div class="hud-item">
+          <span class="text-small">SEVİYE</span>
+          <strong data-level>1</strong>
+        </div>
+      </div>
+      <button type="button" class="btn btn-ghost" data-pause aria-label="Oyunu duraklat">Ⅱ</button>
+    </div>
+
+    <div class="entity-layer" data-entities aria-hidden="true"></div>
+    <img
+      class="keloglan is-menu"
+      data-hero
+      src="./assets/keloglan-runner.png"
+      alt=""
+      draggable="false"
+    >
+    <div class="dust" data-dust aria-hidden="true">
+      <i></i><i></i><i></i>
+    </div>
+    <div class="score-pop" data-score-pop aria-hidden="true">+10</div>
+
+    <div class="game-overlay" data-overlay>
+      <div class="menu-card card">
+        <span class="viz-badge">BİR ANADOLU MASALI</span>
+        <h2 data-title>KELOĞLAN</h2>
+        <p class="game-subtitle">YILDIZ PEŞİNDE</p>
+        <p data-message>Altın yıldızları topla, köy yolundaki engelleri aş!</p>
+        <p class="text-small" data-highscore>EN YÜKSEK · 0</p>
+        <button type="button" class="btn btn-primary" data-action>BAŞLA</button>
+      </div>
+    </div>
+
+    <div class="control-hint text-small" data-hint hidden>
+      ZIPLAMA 3/3 · DOKUN / BOŞLUK
+    </div>
+  </div>
+</div>
+
+<style>
+  #keloglan-fair-spawn-preview {
+    --font-size-base: clamp(13px, 1.35vw, 19px);
+    --keloglan-panel: #293045;
+    --keloglan-cream: #fff6da;
+    --keloglan-gold: #ffc630;
+    --keloglan-red: #c9473c;
+    width: 100%;
+    height: 100%;
+  }
+
+  #keloglan-fair-spawn-preview .game-stage {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    min-height: 100%;
+    overflow: hidden;
+    isolation: isolate;
+    touch-action: manipulation;
+    user-select: none;
+    background: #163b4a;
+    background: color-mix(in srgb, var(--viz-series-1) 18%, var(--background));
+  }
+
+  #keloglan-fair-spawn-preview .village-layer {
+    position: absolute;
+    inset: -2%;
+    z-index: 0;
+    background-image: url("./assets/anatolian-village-background.png");
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent 58%,
+        color-mix(in srgb, var(--background) 8%, transparent)
+      ),
+      url("./assets/anatolian-village-background.png");
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.02);
+  }
+
+  #keloglan-fair-spawn-preview .sun-wash {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        circle at 76% 18%,
+        color-mix(in srgb, var(--viz-series-4) 24%, transparent),
+        transparent 28%
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--background) 10%, transparent),
+        transparent 42%
+      );
+  }
+
+  #keloglan-fair-spawn-preview .game-hud {
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding:
+      max(0.75rem, env(safe-area-inset-top))
+      max(0.75rem, env(safe-area-inset-right))
+      0
+      max(0.75rem, env(safe-area-inset-left));
+    pointer-events: none;
+  }
+
+  #keloglan-fair-spawn-preview .game-hud[hidden] {
+    display: none;
+  }
+
+  #keloglan-fair-spawn-preview .hud-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(34rem, calc(100% - 4rem));
+    padding: 0.35rem 0.5rem;
+    border-color: rgba(216, 185, 118, .72);
+    border-color: color-mix(in srgb, var(--border) 68%, transparent);
+    background: rgba(255, 250, 240, .92);
+    background: color-mix(in srgb, var(--card) 91%, transparent);
+    backdrop-filter: blur(0.6rem);
+  }
+
+  #keloglan-fair-spawn-preview .hud-item {
+    display: grid;
+    gap: 0.1rem;
+    padding: 0.2rem 0.45rem;
+    text-align: center;
+  }
+
+  #keloglan-fair-spawn-preview .hud-item + .hud-item {
+    border-left: 1px solid color-mix(in srgb, var(--border) 62%, transparent);
+  }
+
+  #keloglan-fair-spawn-preview .hud-item strong {
+    font-weight: 500;
+  }
+
+  #keloglan-fair-spawn-preview [data-pause] {
+    margin-left: auto;
+    pointer-events: auto;
+    inline-size: 3rem;
+    block-size: 3rem;
+    padding: 0;
+    border-color: rgba(216, 185, 118, .78);
+    border-color: color-mix(in srgb, var(--border) 75%, transparent);
+    background: rgba(255, 250, 240, .92);
+    background: color-mix(in srgb, var(--card) 91%, transparent);
+    backdrop-filter: blur(0.6rem);
+  }
+
+  #keloglan-fair-spawn-preview .entity-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+  }
+
+  #keloglan-fair-spawn-preview .entity {
+    position: absolute;
+    left: 0;
+    object-fit: contain;
+    user-select: none;
+    will-change: transform;
+    filter: drop-shadow(
+      0 0.4rem 0.35rem color-mix(in srgb, var(--background) 32%, transparent)
+    );
+  }
+
+  #keloglan-fair-spawn-preview .entity.star {
+    width: 8%;
+  }
+
+  #keloglan-fair-spawn-preview .entity.obstacle {
+    width: 9%;
+  }
+
+  #keloglan-fair-spawn-preview .keloglan {
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    z-index: 5;
+    width: 14%;
+    max-height: 53%;
+    object-fit: contain;
+    object-position: center bottom;
+    user-select: none;
+    transform-origin: center bottom;
+    will-change: transform;
+    filter: drop-shadow(
+      0 0.7rem 0.55rem color-mix(in srgb, var(--background) 38%, transparent)
+    );
+  }
+
+  #keloglan-fair-spawn-preview .keloglan.is-menu {
+    left: 3%;
+    bottom: -4%;
+    width: 40%;
+    max-height: 88%;
+    transform: rotate(-2deg);
+  }
+
+  #keloglan-fair-spawn-preview .keloglan.is-hit {
+    opacity: 0.42;
+  }
+
+  #keloglan-fair-spawn-preview .dust {
+    position: absolute;
+    left: 11%;
+    bottom: 16%;
+    z-index: 3;
+    display: flex;
+    align-items: end;
+    gap: 0.25rem;
+    opacity: 0;
+  }
+
+  #keloglan-fair-spawn-preview .dust.is-running {
+    opacity: 0.7;
+  }
+
+  #keloglan-fair-spawn-preview .dust i {
+    display: block;
+    width: 0.45rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--viz-series-4) 45%, var(--muted));
+    animation: keloglan-dust 0.8s ease-out infinite;
+  }
+
+  #keloglan-fair-spawn-preview .dust i:nth-child(2) {
+    animation-delay: 0.18s;
+  }
+
+  #keloglan-fair-spawn-preview .dust i:nth-child(3) {
+    animation-delay: 0.36s;
+  }
+
+  #keloglan-fair-spawn-preview .score-pop {
+    position: absolute;
+    left: 24%;
+    top: 48%;
+    z-index: 7;
+    color: var(--keloglan-gold);
+    font-size: clamp(1.25rem, 2.2vw, 2rem);
+    font-weight: 700;
+    text-shadow: 0 0.12rem 0.35rem color-mix(in srgb, #293045 72%, transparent);
+    opacity: 0;
+    transform: translateY(0);
+    pointer-events: none;
+  }
+
+  #keloglan-fair-spawn-preview .score-pop.is-visible {
+    animation: keloglan-score-pop 0.6s ease-out;
+  }
+
+  #keloglan-fair-spawn-preview .score-pop.is-damage {
+    color: #ff705f;
+  }
+
+  #keloglan-fair-spawn-preview .game-stage.is-hit-feedback .sun-wash {
+    animation: keloglan-hit-flash 0.36s ease-out;
+  }
+
+  #keloglan-fair-spawn-preview .game-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 9;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.85fr);
+    align-items: center;
+    padding: 1rem clamp(1rem, 7vw, 7rem);
+    background: linear-gradient(90deg, transparent 24%, rgba(16, 33, 59, .48) 58%, rgba(16, 33, 59, .86));
+    background: linear-gradient(
+      90deg,
+      transparent 24%,
+      color-mix(in srgb, var(--background) 42%, transparent) 58%,
+      color-mix(in srgb, var(--background) 78%, transparent)
+    );
+  }
+
+  #keloglan-fair-spawn-preview .game-overlay[hidden] {
+    display: none;
+  }
+
+  #keloglan-fair-spawn-preview .menu-card {
+    grid-column: 2;
+    width: min(100%, 32rem);
+    justify-self: center;
+    text-align: center;
+    padding: 1.45rem 2rem;
+    color: var(--keloglan-cream);
+    border-color: color-mix(in srgb, var(--keloglan-gold) 76%, transparent);
+    background: var(--keloglan-panel);
+    box-shadow: 0 1.1rem 3rem color-mix(in srgb, var(--background) 42%, transparent);
+    backdrop-filter: blur(0.75rem);
+  }
+
+  #keloglan-fair-spawn-preview .menu-card h2 {
+    margin: 0.35rem 0 0;
+    color: var(--keloglan-gold);
+    font-size: clamp(2.25rem, 4vw, 3.2rem);
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  #keloglan-fair-spawn-preview .game-subtitle {
+    margin: 0.45rem 0 0.85rem;
+    color: var(--keloglan-cream);
+    opacity: 0.82;
+    font-size: 1.05rem;
+    letter-spacing: 0.16em;
+  }
+
+  #keloglan-fair-spawn-preview .menu-card [data-message] {
+    max-width: 27rem;
+    margin-inline: auto;
+    color: var(--keloglan-cream);
+    font-size: 1rem;
+  }
+
+  #keloglan-fair-spawn-preview .menu-card [data-highscore] {
+    color: var(--keloglan-gold);
+  }
+
+  #keloglan-fair-spawn-preview .menu-card .viz-badge {
+    color: var(--keloglan-red);
+    border-color: color-mix(in srgb, var(--keloglan-gold) 66%, transparent);
+    background: var(--keloglan-cream);
+  }
+
+  #keloglan-fair-spawn-preview .menu-card [data-action] {
+    min-width: 13rem;
+    min-height: 3.2rem;
+    color: white;
+    border-color: var(--keloglan-cream);
+    background: var(--keloglan-red);
+  }
+
+  #keloglan-fair-spawn-preview .control-hint {
+    position: absolute;
+    left: 50%;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    z-index: 8;
+    translate: -50% 0;
+    color: var(--foreground);
+    text-align: center;
+    text-shadow:
+      0 0.12rem 0.25rem color-mix(in srgb, var(--background) 72%, transparent);
+    padding: 0.35rem 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--border) 58%, transparent);
+    border-radius: 999px;
+    background: rgba(255, 250, 240, .84);
+    background: color-mix(in srgb, var(--card) 82%, transparent);
+    backdrop-filter: blur(0.55rem);
+    pointer-events: none;
+  }
+
+  #keloglan-fair-spawn-preview .control-hint[hidden] {
+    display: none;
+  }
+
+  #keloglan-fair-spawn-preview .asset-missing {
+    display: none;
+  }
+
+  @keyframes keloglan-dust {
+    from {
+      opacity: 0.8;
+      transform: translate(0, 0) scale(0.65);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-1.5rem, -0.6rem) scale(1.2);
+    }
+  }
+
+  @keyframes keloglan-score-pop {
+    0% {
+      opacity: 0;
+      transform: translateY(0.4rem) scale(0.85);
+    }
+    30% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-2rem) scale(1);
+    }
+  }
+
+  @keyframes keloglan-hit-flash {
+    0%, 100% {
+      box-shadow: inset 0 0 0 0 transparent;
+    }
+    32% {
+      box-shadow: inset 0 0 0 0.5rem color-mix(in srgb, #ff705f 68%, transparent);
+      background-color: color-mix(in srgb, #ff705f 18%, transparent);
+    }
+  }
+
+  @media (max-width: 520px) {
+    #keloglan-fair-spawn-preview .game-stage {
+      height: 100dvh;
+    }
+
+    #keloglan-fair-spawn-preview .village-layer {
+      background-position: 37% center;
+    }
+
+    #keloglan-fair-spawn-preview .game-hud {
+      gap: 0.4rem;
+      padding:
+        max(1.25rem, env(safe-area-inset-top))
+        max(0.6rem, env(safe-area-inset-right))
+        0
+        max(0.6rem, env(safe-area-inset-left));
+    }
+
+    #keloglan-fair-spawn-preview .hud-strip {
+      width: calc(100% - 3.3rem);
+      padding: 0.25rem 0.2rem;
+    }
+
+    #keloglan-fair-spawn-preview .hud-item {
+      padding: 0.15rem 0.2rem;
+    }
+
+    #keloglan-fair-spawn-preview [data-pause] {
+      inline-size: 2.9rem;
+      block-size: 2.9rem;
+    }
+
+    #keloglan-fair-spawn-preview .game-overlay {
+      grid-template-columns: 1fr;
+      align-items: end;
+      padding:
+        0.75rem
+        max(0.75rem, env(safe-area-inset-right))
+        max(0.9rem, env(safe-area-inset-bottom))
+        max(0.75rem, env(safe-area-inset-left));
+      background: linear-gradient(to bottom, transparent 12%, rgba(16, 33, 59, .48) 46%, rgba(16, 33, 59, .88) 76%);
+      background: linear-gradient(
+        to bottom,
+        transparent 12%,
+        color-mix(in srgb, var(--background) 42%, transparent) 46%,
+        color-mix(in srgb, var(--background) 80%, transparent) 76%
+      );
+    }
+
+    #keloglan-fair-spawn-preview .menu-card {
+      grid-column: 1;
+      width: 100%;
+      margin-bottom: 0;
+      padding: 1rem 1.1rem;
+    }
+
+    #keloglan-fair-spawn-preview .menu-card p {
+      margin-block: 0.55rem;
+    }
+
+    #keloglan-fair-spawn-preview .menu-card h2 {
+      font-size: 2.15rem;
+    }
+
+    #keloglan-fair-spawn-preview .menu-card [data-action] {
+      width: 100%;
+      min-width: 0;
+      min-height: 2.9rem;
+    }
+
+    #keloglan-fair-spawn-preview .keloglan.is-menu {
+      top: 7%;
+      left: -14%;
+      bottom: auto;
+      width: 80%;
+      max-height: 48%;
+    }
+
+    #keloglan-fair-spawn-preview .keloglan:not(.is-menu) {
+      left: 4%;
+      bottom: 14.5%;
+      width: 27%;
+      max-height: 34%;
+    }
+
+    #keloglan-fair-spawn-preview .entity.star {
+      width: 12%;
+    }
+
+    #keloglan-fair-spawn-preview .entity.obstacle {
+      width: 13%;
+    }
+
+    #keloglan-fair-spawn-preview .control-hint {
+      bottom: max(0.6rem, env(safe-area-inset-bottom));
+      width: auto;
+      max-width: 88%;
+    }
+  }
+
+  @media (min-width: 521px) and (max-aspect-ratio: 4 / 3) {
+    #keloglan-fair-spawn-preview .game-overlay {
+      grid-template-columns: 0.8fr minmax(19rem, 1fr);
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #keloglan-fair-spawn-preview .dust i,
+    #keloglan-fair-spawn-preview .score-pop.is-visible,
+    #keloglan-fair-spawn-preview .game-stage.is-hit-feedback .sun-wash {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  (() => {
+    const root = document.getElementById('keloglan-fair-spawn-preview');
+    const stage = root.querySelector('.game-stage');
+    const hud = root.querySelector('[data-hud]');
+    const overlay = root.querySelector('[data-overlay]');
+    const hero = root.querySelector('[data-hero]');
+    const entityLayer = root.querySelector('[data-entities]');
+    const dust = root.querySelector('[data-dust]');
+    const hint = root.querySelector('[data-hint]');
+    const scorePop = root.querySelector('[data-score-pop]');
+    const scoreLabel = root.querySelector('[data-score]');
+    const livesLabel = root.querySelector('[data-lives]');
+    const levelLabel = root.querySelector('[data-level]');
+    const pauseButton = root.querySelector('[data-pause]');
+    const actionButton = root.querySelector('[data-action]');
+    const titleLabel = root.querySelector('[data-title]');
+    const messageLabel = root.querySelector('[data-message]');
+    const highscoreLabel = root.querySelector('[data-highscore]');
+
+    const assets = {
+      star: './assets/anatolian-star.png',
+      obstacle: './assets/anatolian-testi.png',
+    };
+
+    let mode = 'menu';
+    let score = 0;
+    let lives = 3;
+    let elapsed = 0;
+    let jumpY = 0;
+    let velocityY = 0;
+    let jumpsUsed = 0;
+    let invulnerable = 0;
+    let starTimer = 0.8;
+    let obstacleTimer = 2.5;
+    let obstaclePending = false;
+    let entities = [];
+    let lastTime = performance.now();
+    let highscore = 0;
+
+    try {
+      highscore = Number.parseInt(
+        localStorage.getItem('masalnova.keloglan-star-runner.highscore.v1') || '0',
+        10,
+      ) || 0;
+    } catch {
+      highscore = 0;
+    }
+
+    const stageSize = () => stage.getBoundingClientRect();
+
+    const stageMetrics = () => {
+      const size = stageSize();
+      const portrait = size.height > size.width;
+      const designHeight = 720;
+      const designWidth = portrait
+        ? 720
+        : Math.max(
+            1024,
+            Math.min(1920, designHeight * (size.width / size.height)),
+          );
+      const scale = portrait
+        ? size.width / designWidth
+        : size.height / designHeight;
+      const speedMultiplier = portrait
+        ? 0.64
+        : Math.min(1.28, Math.max(1, designWidth / 1280));
+      return { size, portrait, scale, speedMultiplier };
+    };
+
+    const getDifficulty = (seconds) => {
+      const progress = Math.max(0, seconds) / 15;
+      return {
+        level: Math.floor(progress) + 1,
+        scrollSpeed: Math.min(700, 360 + progress * 34),
+        obstacleInterval: Math.max(1.12, 2.25 - progress * 0.12),
+        starInterval: Math.max(0.62, 1.08 - progress * 0.055),
+      };
+    };
+
+    const updateHud = () => {
+      scoreLabel.textContent = String(score);
+      livesLabel.textContent = Array.from(
+        { length: 3 },
+        (_, index) => index < lives ? '♥' : '♡',
+      ).join(' ');
+      const { portrait } = stageMetrics();
+      levelLabel.textContent = String(getDifficulty(elapsed).level);
+      const remainingJumps = Math.max(0, 3 - jumpsUsed);
+      hint.textContent = portrait
+        ? `ZIPLAMA ${remainingJumps}/3 · DOKUN`
+        : `ZIPLAMA ${remainingJumps}/3 · DOKUN / BOŞLUK`;
+    };
+
+    const clearEntities = () => {
+      for (const entity of entities) {
+        entity.element.remove();
+      }
+      entities = [];
+    };
+
+    const startRun = () => {
+      mode = 'running';
+      score = 0;
+      lives = 3;
+      elapsed = 0;
+      jumpY = 0;
+      velocityY = 0;
+      jumpsUsed = 0;
+      invulnerable = 0;
+      starTimer = 0.7;
+      obstacleTimer = 3.4;
+      obstaclePending = false;
+      clearEntities();
+      hero.classList.remove('is-menu', 'is-hit');
+      hero.style.transform = '';
+      overlay.hidden = true;
+      hud.hidden = false;
+      hint.hidden = false;
+      dust.classList.add('is-running');
+      pauseButton.textContent = 'Ⅱ';
+      pauseButton.setAttribute('aria-label', 'Oyunu duraklat');
+      lastTime = performance.now();
+      updateHud();
+    };
+
+    const showFeedback = (text, damage = false) => {
+      scorePop.textContent = text;
+      scorePop.classList.toggle('is-damage', damage);
+      scorePop.classList.remove('is-visible');
+      void scorePop.offsetWidth;
+      scorePop.classList.add('is-visible');
+    };
+
+    const showOverlay = (title, message, action) => {
+      titleLabel.textContent = title;
+      messageLabel.textContent = message;
+      actionButton.textContent = action;
+      highscoreLabel.textContent = `EN YÜKSEK · ${highscore}`;
+      overlay.hidden = false;
+    };
+
+    const togglePause = () => {
+      if (mode === 'running') {
+        mode = 'paused';
+        dust.classList.remove('is-running');
+        pauseButton.textContent = '▶';
+        pauseButton.setAttribute('aria-label', 'Oyuna devam et');
+        hud.hidden = true;
+        hint.hidden = true;
+        showOverlay('MOLA', 'Kısa bir nefes. Hazır olduğunda macera devam!', 'DEVAM ET');
+      } else if (mode === 'paused') {
+        mode = 'running';
+        overlay.hidden = true;
+        hud.hidden = false;
+        hint.hidden = false;
+        dust.classList.add('is-running');
+        pauseButton.textContent = 'Ⅱ';
+        pauseButton.setAttribute('aria-label', 'Oyunu duraklat');
+        lastTime = performance.now();
+      }
+    };
+
+    const jump = () => {
+      if (mode !== 'running' || jumpsUsed >= 3) {
+        return;
+      }
+      const { scale } = stageMetrics();
+      if (jumpsUsed === 0) {
+        velocityY = 790 * scale;
+      } else {
+        velocityY = Math.min(
+          960 * scale,
+          Math.max(620 * scale, velocityY + 90 * scale),
+        );
+      }
+      jumpsUsed += 1;
+      updateHud();
+      dust.classList.remove('is-running');
+    };
+
+    const spawnEntity = (kind, spawnX) => {
+      const { size, portrait } = stageMetrics();
+      const element = document.createElement('img');
+      element.className = `entity ${kind}`;
+      element.src = kind === 'star' ? assets.star : assets.obstacle;
+      element.alt = '';
+      element.draggable = false;
+      element.addEventListener('error', () => element.classList.add('asset-missing'));
+      entityLayer.appendChild(element);
+
+      const highStar = kind === 'star' && Math.random() > 0.58;
+      const bottom = kind === 'star'
+        ? size.height *
+          (portrait
+            ? highStar ? 0.31 : 0.2
+            : highStar ? 0.38 : 0.26)
+        : size.height * (portrait ? 0.145 : 0.15);
+      element.style.bottom = `${bottom}px`;
+
+      entities.push({
+        element,
+        kind,
+        x: spawnX,
+        bottom,
+        phase: Math.random() * Math.PI * 2,
+        hit: false,
+      });
+    };
+
+    const hasSafeGap = (kind, candidateX, requiredGap) =>
+      entities.every(
+        (entity) =>
+          entity.hit ||
+          entity.kind === kind ||
+          Math.abs(entity.x - candidateX) >= requiredGap,
+      );
+
+    const insetRect = (rect, horizontal, vertical) => ({
+      left: rect.left + rect.width * horizontal,
+      right: rect.right - rect.width * horizontal,
+      top: rect.top + rect.height * vertical,
+      bottom: rect.bottom - rect.height * vertical,
+    });
+
+    const overlaps = (first, second) =>
+      first.left < second.right &&
+      first.right > second.left &&
+      first.top < second.bottom &&
+      first.bottom > second.top;
+
+    const collect = (entity) => {
+      entity.hit = true;
+      score += 10;
+      showFeedback('+10');
+      updateHud();
+    };
+
+    const gameOver = () => {
+      mode = 'gameover';
+      highscore = Math.max(highscore, score);
+      try {
+        localStorage.setItem(
+          'masalnova.keloglan-star-runner.highscore.v1',
+          String(highscore),
+        );
+      } catch {
+        // The embedded preview may intentionally disable storage.
+      }
+      dust.classList.remove('is-running');
+      hint.hidden = true;
+      hud.hidden = true;
+      showOverlay('OYUN BİTTİ', `${score} puan topladın. Bir tur daha?`, 'TEKRAR OYNA');
+    };
+
+    const hitObstacle = (entity) => {
+      if (invulnerable > 0) {
+        return;
+      }
+      entity.hit = true;
+      lives -= 1;
+      invulnerable = 1.35;
+      hero.classList.add('is-hit');
+      velocityY = Math.max(velocityY, 350 * stageMetrics().scale);
+      showFeedback('CAN -1', true);
+      stage.classList.remove('is-hit-feedback');
+      void stage.offsetWidth;
+      stage.classList.add('is-hit-feedback');
+      updateHud();
+      if (lives <= 0) {
+        gameOver();
+      }
+    };
+
+    const update = (delta) => {
+      if (mode !== 'running') {
+        return;
+      }
+
+      const { size, scale, speedMultiplier } = stageMetrics();
+      const previousDifficulty = getDifficulty(elapsed);
+      elapsed += delta;
+      const difficulty = getDifficulty(elapsed);
+      const speed =
+        difficulty.scrollSpeed *
+        scale *
+        speedMultiplier;
+      if (previousDifficulty.level !== difficulty.level) {
+        showFeedback(`SEVİYE ${difficulty.level}`);
+        updateHud();
+      }
+
+      velocityY -= 1900 * scale * delta;
+      jumpY += velocityY * delta;
+      if (jumpY <= 0) {
+        const landedAfterJump = jumpsUsed > 0;
+        jumpY = 0;
+        velocityY = 0;
+        jumpsUsed = 0;
+        dust.classList.add('is-running');
+        if (landedAfterJump) {
+          updateHud();
+        }
+      }
+      const tilt = Math.max(-8, Math.min(7, -velocityY / size.height * 6));
+      const runScale = jumpY === 0
+        ? 1 + Math.sin(elapsed * 12) * 0.015
+        : 1;
+      hero.style.transform =
+        `translateY(${-jumpY}px) rotate(${tilt}deg) scale(${runScale})`;
+
+      invulnerable = Math.max(0, invulnerable - delta);
+      if (invulnerable <= 0) {
+        hero.classList.remove('is-hit');
+      } else if (Math.sin(invulnerable * 28) > 0) {
+        hero.classList.add('is-hit');
+      } else {
+        hero.classList.remove('is-hit');
+      }
+
+      starTimer -= delta;
+      obstacleTimer -= delta;
+      const spawnX = size.width + 48;
+      const safetyDistance = Math.min(
+        420 * scale,
+        Math.max(230 * scale, speed * 0.72),
+      );
+      if (obstacleTimer <= 0) {
+        obstaclePending = true;
+      }
+      if (obstaclePending) {
+        if (hasSafeGap('obstacle', spawnX, safetyDistance)) {
+          spawnEntity('obstacle', spawnX);
+          obstacleTimer = difficulty.obstacleInterval *
+            (0.88 + Math.random() * 0.26);
+          obstaclePending = false;
+        }
+      }
+      if (starTimer <= 0 && !obstaclePending) {
+        const starX = spawnX + Math.random() * 90 * scale;
+        if (hasSafeGap('star', starX, safetyDistance)) {
+          spawnEntity('star', starX);
+          starTimer = difficulty.starInterval *
+            (0.82 + Math.random() * 0.3);
+        } else {
+          starTimer = 0.12;
+        }
+      }
+
+      const heroRect = hero.getBoundingClientRect();
+      const collectRunnerRect = insetRect(
+        heroRect,
+        0.21,
+        0.08,
+      );
+      const damageRunnerRect = insetRect(
+        heroRect,
+        0.32,
+        0.2,
+      );
+      for (const entity of entities) {
+        if (entity.hit) {
+          continue;
+        }
+        entity.x -= speed * delta;
+        const bob = entity.kind === 'star'
+          ? Math.sin(elapsed * 5 + entity.phase) * 6
+          : 0;
+        const rotate = entity.kind === 'star' ? elapsed * 65 : 0;
+        entity.element.style.transform =
+          `translate3d(${entity.x}px, ${bob}px, 0) rotate(${rotate}deg)`;
+
+        const entityRect = insetRect(
+          entity.element.getBoundingClientRect(),
+          entity.kind === 'star' ? 0.24 : 0.22,
+          entity.kind === 'star' ? 0.24 : 0.18,
+        );
+        const runnerRect =
+          entity.kind === 'star'
+            ? collectRunnerRect
+            : damageRunnerRect;
+        if (!overlaps(runnerRect, entityRect)) {
+          continue;
+        }
+        if (entity.kind === 'star') {
+          collect(entity);
+        } else {
+          hitObstacle(entity);
+        }
+      }
+
+      entities = entities.filter((entity) => {
+        const remove = entity.hit || entity.x < -160;
+        if (remove) {
+          entity.element.remove();
+        }
+        return !remove;
+      });
+    };
+
+    const frame = (now) => {
+      const delta = Math.min(0.05, Math.max(0, (now - lastTime) / 1000));
+      lastTime = now;
+      update(delta);
+      requestAnimationFrame(frame);
+    };
+
+    hero.addEventListener('error', () => hero.classList.add('asset-missing'));
+    actionButton.addEventListener('click', () => {
+      if (mode === 'paused') {
+        togglePause();
+      } else {
+        startRun();
+      }
+    });
+    pauseButton.addEventListener('click', (event) => {
+      event.stopPropagation();
+      togglePause();
+    });
+    stage.addEventListener('pointerdown', (event) => {
+      if (!event.target.closest('button')) {
+        jump();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.code === 'Space' || event.code === 'ArrowUp' || event.code === 'KeyW') {
+        event.preventDefault();
+        jump();
+      } else if (event.code === 'KeyP' || event.code === 'Escape') {
+        togglePause();
+      } else if (event.code === 'Enter' && !overlay.hidden) {
+        actionButton.click();
+      }
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && mode === 'running') {
+        togglePause();
+      }
+    });
+
+    updateHud();
+    highscoreLabel.textContent = `EN YÜKSEK · ${highscore}`;
+    requestAnimationFrame(frame);
+  })();
+</script>
+</body>
+</html>
