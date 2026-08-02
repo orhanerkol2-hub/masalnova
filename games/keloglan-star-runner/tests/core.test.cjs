@@ -54,10 +54,15 @@ function testSessionLifecycle() {
 
 function testDifficultyBounds() {
   const start = getDifficulty(0);
+  const midpoint = getDifficulty(7.5);
   const later = getDifficulty(60);
   const farFuture = getDifficulty(60 * 60);
 
   assert.equal(start.level, 1);
+  assert.equal(midpoint.level, 1);
+  assert.equal(midpoint.scrollSpeed, 377);
+  assert.ok(Math.abs(midpoint.obstacleInterval - 2.19) < 1e-9);
+  assert.ok(Math.abs(midpoint.starInterval - 1.0525) < 1e-9);
   assert.ok(later.level > start.level);
   assert.ok(later.scrollSpeed > start.scrollSpeed);
   assert.ok(later.obstacleInterval < start.obstacleInterval);

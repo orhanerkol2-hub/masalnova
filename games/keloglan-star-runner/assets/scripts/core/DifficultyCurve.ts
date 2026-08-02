@@ -9,7 +9,9 @@ export interface DifficultySnapshot {
 
 /**
  * Returns a deterministic difficulty snapshot for a given run time.
- * Level one starts immediately; every configured time slice adds one level.
+ * Level one starts immediately. The visible level changes in configured time
+ * slices, while speed and spawn pressure ramp continuously between boundaries
+ * so the game never changes pace in a single abrupt frame.
  */
 export function getDifficulty(
   elapsedSeconds: number,
@@ -20,22 +22,22 @@ export function getDifficulty(
     : 0;
   const level =
     Math.floor(safeElapsed / config.levelDurationSeconds) + 1;
-  const completedLevels = level - 1;
+  const difficultyProgress = safeElapsed / config.levelDurationSeconds;
 
   return {
     level,
     scrollSpeed: Math.min(
       config.maximumScrollSpeed,
-      config.baseScrollSpeed + completedLevels * config.speedPerLevel,
+      config.baseScrollSpeed + difficultyProgress * config.speedPerLevel,
     ),
     obstacleInterval: Math.max(
       config.minimumObstacleInterval,
       config.initialObstacleInterval -
-        completedLevels * config.obstacleIntervalStep,
+        difficultyProgress * config.obstacleIntervalStep,
     ),
     starInterval: Math.max(
       config.minimumStarInterval,
-      config.initialStarInterval - completedLevels * config.starIntervalStep,
+      config.initialStarInterval - difficultyProgress * config.starIntervalStep,
     ),
   };
 }

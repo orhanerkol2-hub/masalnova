@@ -28,6 +28,7 @@ import { InputController } from './InputController';
 import { RunnerController, type Bounds } from './RunnerController';
 
 const { ccclass } = _decorator;
+const FEEDBACK_DURATION_SECONDS = 0.72;
 
 interface OverlayView {
   readonly root: Node;
@@ -62,6 +63,11 @@ export class GameController extends Component {
   private livesLabel: Label | null = null;
   private levelLabel: Label | null = null;
   private instructionLabel: Label | null = null;
+  private feedbackLabel: Label | null = null;
+  private feedbackOpacity: UIOpacity | null = null;
+  private feedbackTime = 0;
+  private feedbackBaseX = 0;
+  private feedbackBaseY = 0;
   private pauseButton: Node | null = null;
   private hudStatusPanel: Graphics | null = null;
   private hudHintPanel: Graphics | null = null;
@@ -158,8 +164,12 @@ export class GameController extends Component {
 
     // Large background-tab deltas would otherwise tunnel through collisions.
     const delta = Math.min(Math.max(deltaTime, 0), 0.05);
+    const previousLevel = getDifficulty(this.session.elapsedSeconds).level;
     this.session.tick(delta);
     const difficulty = getDifficulty(this.session.elapsedSeconds);
+    if (difficulty.level > previousLevel) {
+      this.showFeedback(`SEVİYE ${difficulty.level}`, PALETTE.gold);
+    }
     const speedMultiplier = this.portrait
       ? 0.64
       : Math.min(1.28, Math.max(1, this.width / GAME_CONFIG.landscapeWidth));
@@ -180,6 +190,7 @@ export class GameController extends Component {
 
     this.updateInvulnerability(delta);
     this.resolveCollisions();
+    this.updateFeedback(delta);
     this.updateHud();
   }
 
@@ -281,6 +292,19 @@ export class GameController extends Component {
       42,
       new Color(75, 61, 52, 220),
     );
+
+    this.feedbackLabel = createLabel(
+      this.hudLayer,
+      'FeedbackLabel',
+      '',
+      31,
+      280,
+      60,
+      PALETTE.gold,
+    );
+    this.feedbackLabel.isBold = true;
+    this.feedbackOpacity = this.feedbackLabel.node.addComponent(UIOpacity);
+    this.feedbackOpacity.opacity = 0;
 
     this.pauseButton = createButton(
       this.hudLayer,
@@ -527,6 +551,7 @@ export class GameController extends Component {
       !this.livesLabel ||
       !this.levelLabel ||
       !this.instructionLabel ||
+      !this.feedbackLabel ||
       !this.pauseButton ||
       !this.hudStatusPanel ||
       !this.hudHintPanel
@@ -574,6 +599,17 @@ export class GameController extends Component {
       0,
     );
     this.pauseButton.setPosition(this.width / 2 - 72, top, 0);
+    this.feedbackBaseX = this.portrait
+      ? -this.width * 0.12
+      : -this.width * 0.2;
+    this.feedbackBaseY = this.groundY + (this.portrait ? 250 : 205);
+    if (this.feedbackTime <= 0) {
+      this.feedbackLabel.node.setPosition(
+        this.feedbackBaseX,
+        this.feedbackBaseY,
+        0,
+      );
+    }
 
     if (this.portrait) {
       this.livesLabel.node.setPosition(
@@ -611,6 +647,10 @@ export class GameController extends Component {
   private startNewRun(): void {
     this.session.startNewRun();
     this.invulnerability = 0;
+    this.feedbackTime = 0;
+    if (this.feedbackOpacity) {
+      this.feedbackOpacity.opacity = 0;
+    }
     if (this.runnerOpacity) {
       this.runnerOpacity.opacity = 255;
     }
@@ -622,7 +662,9 @@ export class GameController extends Component {
 
   private handleJump(): void {
     if (this.session.phase === GamePhase.Running) {
-      this.runner?.jump();
+      if (this.runner?.jump()) {
+        this.updateHud();
+      }
     }
   }
 
@@ -659,7 +701,7 @@ export class GameController extends Component {
 
   private showPhase(phase: GamePhase): void {
     if (this.hudLayer) {
-      this.hudLayer.active = phase !== GamePhase.Menu;
+      this.hudLayer.active = phase === GamePhase.Running;
     }
     if (this.pauseButton) {
       this.pauseButton.active = phase === GamePhase.Running;
@@ -703,6 +745,13 @@ export class GameController extends Component {
     if (this.levelLabel) {
       const difficulty = getDifficulty(this.session.elapsedSeconds);
       this.levelLabel.string = `SEVİYE ${difficulty.level}`;
+    }
+    if (this.instructionLabel) {
+      const remaining =
+        this.runner?.getRemainingJumps() ?? GAME_CONFIG.maximumJumps;
+      this.instructionLabel.string = this.portrait
+        ? `ZIPLAMA ${remaining}/${GAME_CONFIG.maximumJumps} · DOKUN`
+        : `ZIPLAMA ${remaining}/${GAME_CONFIG.maximumJumps} · DOKUN / BOŞLUK`;
     }
   }
 
@@ -751,6 +800,7 @@ export class GameController extends Component {
   private collectStar(entity: WorldEntity): void {
     if (this.session.collectStar()) {
       this.spawner?.consume(entity);
+      this.showFeedback(`+${GAME_CONFIG.pointsPerStar}`, PALETTE.gold);
     }
   }
 
@@ -762,6 +812,7 @@ export class GameController extends Component {
     this.spawner?.consume(entity);
     this.runner?.knockUp();
     this.invulnerability = GAME_CONFIG.hitInvulnerabilitySeconds;
+    this.showFeedback('CAN -1', PALETTE.redDark);
 
     if (this.session.phase === GamePhase.GameOver) {
       const highScore = this.highScores.commitIfHigher(this.session.score);
@@ -784,6 +835,41 @@ export class GameController extends Component {
     if (this.gameOverHighScoreLabel) {
       this.gameOverHighScoreLabel.string = `EN YÜKSEK  ${highScore}`;
     }
+  }
+
+  private showFeedback(text: string, color: Color): void {
+    if (!this.feedbackLabel || !this.feedbackOpacity) {
+      return;
+    }
+    this.feedbackLabel.string = text;
+    this.feedbackLabel.color = color;
+    this.feedbackLabel.node.setPosition(
+      this.feedbackBaseX,
+      this.feedbackBaseY,
+      0,
+    );
+    this.feedbackOpacity.opacity = 255;
+    this.feedbackTime = FEEDBACK_DURATION_SECONDS;
+  }
+
+  private updateFeedback(deltaSeconds: number): void {
+    if (!this.feedbackLabel || !this.feedbackOpacity) {
+      return;
+    }
+    if (this.feedbackTime <= 0) {
+      this.feedbackOpacity.opacity = 0;
+      return;
+    }
+
+    this.feedbackTime = Math.max(0, this.feedbackTime - deltaSeconds);
+    const progress =
+      1 - this.feedbackTime / FEEDBACK_DURATION_SECONDS;
+    this.feedbackLabel.node.setPosition(
+      this.feedbackBaseX,
+      this.feedbackBaseY + progress * 44,
+      0,
+    );
+    this.feedbackOpacity.opacity = Math.round(255 * (1 - progress));
   }
 
   private overlaps(first: Bounds, second: Bounds): boolean {
