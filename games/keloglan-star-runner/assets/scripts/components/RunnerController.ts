@@ -119,6 +119,11 @@ export class RunnerController extends Component {
     return true;
   }
 
+  /** Remaining impulses are surfaced in the HUD to make the triple jump clear. */
+  public getRemainingJumps(): number {
+    return Math.max(0, GAME_CONFIG.maximumJumps - this.jumpsUsed);
+  }
+
   public knockUp(): void {
     this.grounded = false;
     this.verticalVelocity = Math.max(

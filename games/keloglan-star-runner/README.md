@@ -36,6 +36,10 @@ Im Hochformat werden Notch-/Touch-Ränder und eine höhere Spielfläche verwende
 im Querformat nutzt das Spiel breite Desktop- und Browserfenster ohne
 Verzerrung.
 
+Die HUD-Hilfe zeigt jederzeit die verbleibenden Sprünge. Sterne, Treffer und
+Levelanstiege erhalten direktes visuelles Feedback; die Schwierigkeit steigt
+innerhalb eines Levels kontinuierlich statt sprunghaft.
+
 ## Prüfung ohne installierten Cocos Editor
 
 Vom Repository-Stamm aus:
