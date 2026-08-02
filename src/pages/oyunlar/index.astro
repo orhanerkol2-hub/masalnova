@@ -3,11 +3,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import GameCard from '../../components/GameCard.astro';
 import { games } from '../../data/games.mjs';
 
-const exclusiveGame = {
-  title: 'Keloğlan: Yıldız Peşinde',
-  url: 'https://masalnova.com/oyna/keloglan-yildiz-pesinde/',
-};
-const collectionGames = [exclusiveGame, ...games.map((game) => ({ title: game.title, url: `https://masalnova.com/oyna/${game.slug}/` }))];
+const exclusiveGames = [
+  {
+    title: 'Keloğlan: Uçan Tohumlar',
+    url: 'https://masalnova.com/oyna/keloglan-ucan-tohumlar/',
+  },
+  {
+    title: 'Uçan Tohumlar',
+    url: 'https://masalnova.com/oyna/ucan-tohumlar/',
+  },
+  {
+    title: 'Keloğlan: Yıldız Peşinde',
+    url: 'https://masalnova.com/oyna/keloglan-yildiz-pesinde/',
+  },
+];
+const collectionGames = [...exclusiveGames, ...games.map((game) => ({ title: game.title, url: `https://masalnova.com/oyna/${game.slug}/` }))];
 
 const jsonLd = [
   {
@@ -68,33 +78,71 @@ const jsonLd = [
     <div class="container">
       <div class="exclusive-heading">
         <div>
-          <span><i class="ph ph-seal-check" aria-hidden="true"></i> MasalNova’ya özel</span>
-          <h2>Bizim masalımız, bizim oyunumuz</h2>
+          <span><i class="ph ph-seal-check" aria-hidden="true"></i> MasalNova’ya özel oyunlar</span>
+          <h2>Bizim masallarımız, bizim oyunlarımız</h2>
         </div>
-        <p>Dış bağlantı yok · Oyun içi reklam yok</p>
+        <p>GamePix bağlantısı yok · Oyun içi reklam yok</p>
       </div>
 
-      <a class="exclusive-game" href="/oyna/keloglan-yildiz-pesinde/" aria-label="Keloğlan Yıldız Peşinde oyununu oyna">
-        <div class="exclusive-visual" aria-hidden="true">
-          <img class="exclusive-background" src="/games/keloglan-yildiz-pesinde/assets/anatolian-village-background.png" alt="" width="1600" height="900" />
-          <div class="exclusive-shade"></div>
-          <img class="exclusive-hero" src="/games/keloglan-yildiz-pesinde/assets/keloglan-runner.png" alt="" width="720" height="900" />
-          <img class="exclusive-star star-one" src="/games/keloglan-yildiz-pesinde/assets/anatolian-star.png" alt="" width="512" height="512" />
-          <img class="exclusive-star star-two" src="/games/keloglan-yildiz-pesinde/assets/anatolian-star.png" alt="" width="512" height="512" />
-          <span class="exclusive-ribbon">YENİ</span>
-        </div>
-        <div class="exclusive-copy">
-          <span class="exclusive-label"><i class="ph ph-crown-simple" aria-hidden="true"></i> MasalNova Originals</span>
-          <h3>Keloğlan: Yıldız Peşinde</h3>
-          <p>Keloğlan’la Anadolu köyünde koş, altın yıldızları topla ve geleneksel testilere çarpmadan en yüksek puana ulaş.</p>
-          <ul aria-label="Oyun özellikleri">
-            <li><i class="ph ph-hand-tap" aria-hidden="true"></i> 3 kez zıpla</li>
-            <li><i class="ph ph-heart" aria-hidden="true"></i> 3 can</li>
-            <li><i class="ph ph-device-mobile" aria-hidden="true"></i> Mobil uyumlu</li>
-          </ul>
-          <span class="exclusive-cta">Hemen oyna <i class="ph ph-play-circle" aria-hidden="true"></i></span>
-        </div>
-      </a>
+      <div class="originals-grid">
+        <a class="exclusive-game seed-game keloglan-seed-game" href="/oyna/keloglan-ucan-tohumlar/" aria-label="Keloğlan Uçan Tohumlar oyununu oyna">
+          <div class="exclusive-visual" aria-hidden="true">
+            <img class="exclusive-background" src="/games/keloglan-ucan-tohumlar/cover.jpg" alt="" width="1600" height="900" />
+            <div class="exclusive-shade"></div>
+            <span class="exclusive-ribbon">YENİ</span>
+          </div>
+          <div class="exclusive-copy">
+            <span class="exclusive-label"><i class="ph ph-crown-simple" aria-hidden="true"></i> MasalNova Originals</span>
+            <h3>Keloğlan: Uçan Tohumlar</h3>
+            <p>Keloğlan’la tohum toplarını sapanla saksılara ulaştır, doğru açıyı bul ve üç Anadolu bahçesini çiçeklendir.</p>
+            <ul aria-label="Oyun özellikleri">
+              <li><i class="ph ph-smiley" aria-hidden="true"></i> Keloğlan</li>
+              <li><i class="ph ph-flower-lotus" aria-hidden="true"></i> 3 bahçe</li>
+              <li><i class="ph ph-device-mobile" aria-hidden="true"></i> Mobil uyumlu</li>
+            </ul>
+            <span class="exclusive-cta">Macera başlasın <i class="ph ph-play-circle" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
+        <a class="exclusive-game seed-game" href="/oyna/ucan-tohumlar/" aria-label="Uçan Tohumlar oyununu oyna">
+          <div class="exclusive-visual" aria-hidden="true">
+            <img class="exclusive-background" src="/games/ucan-tohumlar/cover-v3.jpg" alt="" width="1600" height="900" />
+            <div class="exclusive-shade"></div>
+          </div>
+          <div class="exclusive-copy">
+            <span class="exclusive-label"><i class="ph ph-crown-simple" aria-hidden="true"></i> MasalNova Originals</span>
+            <h3>Uçan Tohumlar</h3>
+            <p>Tohum toplarını sapanla boş saksılara ulaştır, uçuş yolunu keşfet ve üç Anadolu bahçesini rengârenk çiçeklendir.</p>
+            <ul aria-label="Oyun özellikleri">
+              <li><i class="ph ph-path" aria-hidden="true"></i> Fizik bulmacası</li>
+              <li><i class="ph ph-flower-lotus" aria-hidden="true"></i> 3 bahçe</li>
+              <li><i class="ph ph-device-mobile" aria-hidden="true"></i> Mobil uyumlu</li>
+            </ul>
+            <span class="exclusive-cta">Bahçeye başla <i class="ph ph-play-circle" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
+        <a class="exclusive-game" href="/oyna/keloglan-yildiz-pesinde/" aria-label="Keloğlan Yıldız Peşinde oyununu oyna">
+          <div class="exclusive-visual" aria-hidden="true">
+            <img class="exclusive-background" src="/games/keloglan-yildiz-pesinde/assets/anatolian-village-background.png" alt="" width="1600" height="900" />
+            <div class="exclusive-shade"></div>
+            <img class="exclusive-hero" src="/games/keloglan-yildiz-pesinde/assets/keloglan-runner.png" alt="" width="720" height="900" />
+            <img class="exclusive-star star-one" src="/games/keloglan-yildiz-pesinde/assets/anatolian-star.png" alt="" width="512" height="512" />
+            <img class="exclusive-star star-two" src="/games/keloglan-yildiz-pesinde/assets/anatolian-star.png" alt="" width="512" height="512" />
+          </div>
+          <div class="exclusive-copy">
+            <span class="exclusive-label"><i class="ph ph-crown-simple" aria-hidden="true"></i> MasalNova Originals</span>
+            <h3>Keloğlan: Yıldız Peşinde</h3>
+            <p>Keloğlan’la Anadolu köyünde koş, altın yıldızları topla ve geleneksel testilere çarpmadan en yüksek puana ulaş.</p>
+            <ul aria-label="Oyun özellikleri">
+              <li><i class="ph ph-hand-tap" aria-hidden="true"></i> 3 kez zıpla</li>
+              <li><i class="ph ph-heart" aria-hidden="true"></i> 3 can</li>
+              <li><i class="ph ph-device-mobile" aria-hidden="true"></i> Mobil uyumlu</li>
+            </ul>
+            <span class="exclusive-cta">Hemen oyna <i class="ph ph-play-circle" aria-hidden="true"></i></span>
+          </div>
+        </a>
+      </div>
 
       <div class="collection-divider"><span>GamePix seçkisi</span></div>
 
@@ -138,14 +186,17 @@ const jsonLd = [
   .exclusive-heading span { display: inline-flex; align-items: center; gap: 6px; color: #ffd44d; font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
   .exclusive-heading h2 { margin-top: 3px; font-size: clamp(1.7rem, 4vw, 2.45rem); }
   .exclusive-heading > p { color: rgba(255,255,255,.74); font-size: .86rem; font-weight: 800; }
-  .exclusive-game { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); overflow: hidden; border: 1px solid rgba(255,225,120,.72); border-radius: 28px; background: #fff9e8; color: #102a66; box-shadow: 0 28px 64px rgba(2,24,82,.32); transition: transform .2s ease, box-shadow .2s ease; }
+  .originals-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .exclusive-game { display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: 1px solid rgba(255,225,120,.72); border-radius: 28px; background: #fff9e8; color: #102a66; box-shadow: 0 28px 64px rgba(2,24,82,.32); transition: transform .2s ease, box-shadow .2s ease; }
   .exclusive-game:hover { transform: translateY(-4px); box-shadow: 0 34px 74px rgba(2,24,82,.39); }
-  .exclusive-visual { position: relative; min-height: 350px; overflow: hidden; background: #91c9d7; }
+  .exclusive-visual { position: relative; min-height: 0; aspect-ratio: 16 / 9; overflow: hidden; background: #91c9d7; }
   .exclusive-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% center; transition: transform .5s ease; }
   .exclusive-game:hover .exclusive-background { transform: scale(1.025); }
   .exclusive-shade { position: absolute; inset: 0; background: linear-gradient(90deg, transparent 48%, rgba(9,39,74,.38)), linear-gradient(0deg, rgba(6,33,67,.3), transparent 48%); }
   .exclusive-hero { position: absolute; left: 2%; bottom: -8%; width: min(42%, 310px); height: 100%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 18px 22px rgba(24,35,43,.34)); transition: transform .28s ease; }
   .exclusive-game:hover .exclusive-hero { transform: translateY(-5px) rotate(-1deg); }
+  .seed-game .exclusive-background { object-position: center; }
+  .seed-game .exclusive-shade { background: linear-gradient(0deg, rgba(6,33,67,.22), transparent 45%); }
   .exclusive-star { position: absolute; width: clamp(50px, 7vw, 86px); height: auto; filter: drop-shadow(0 8px 9px rgba(104,63,0,.28)); animation: star-float 2.6s ease-in-out infinite; }
   .star-one { top: 13%; left: 43%; }
   .star-two { top: 44%; left: 69%; width: clamp(42px, 6vw, 70px); animation-delay: -.9s; }
@@ -207,16 +258,17 @@ const jsonLd = [
   @media (max-width: 920px) {
     .hero-grid { grid-template-columns: 1fr; }
     .family-note { max-width: 620px; }
-    .exclusive-game { grid-template-columns: 1fr; }
-    .exclusive-visual { min-height: 330px; }
+    .originals-grid { grid-template-columns: 1fr; }
+    .exclusive-visual { min-height: 0; }
     .exclusive-copy { padding: 28px; }
     .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 600px) {
     .games-hero { padding-top: 34px; }
     .exclusive-heading { align-items: flex-start; flex-direction: column; gap: 7px; }
+    .originals-grid { gap: 16px; }
     .exclusive-game { border-radius: 22px; }
-    .exclusive-visual { min-height: 265px; }
+    .exclusive-visual { min-height: 0; }
     .exclusive-hero { width: 46%; }
     .star-one { left: 49%; }
     .star-two { left: 72%; }
