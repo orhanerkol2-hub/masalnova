@@ -504,3 +504,25 @@ final result: passed
    - No actionable P0, P1, or P2 fidelity, behavior, accessibility, or responsiveness issues remain.
 
 final result: passed
+
+---
+
+## Horozumu Kaçırdılar: Çatı Kaçışı
+
+Source references:
+
+- Rooster rooftop character screenshot supplied by the user.
+- Grandmother rooftop character screenshot supplied by the user.
+
+Validated implementation:
+
+- Desktop game page at 1280 × 720 browser viewport.
+- Mobile game page at 390 × 844 browser viewport.
+- Start, restart, jump, turbo, pause/resume, and sound controls.
+- Responsive HUD and touch controls.
+- Both reference characters, Anatolian rooftop setting, MasalNova branding, generated obstacle and collectible art.
+- No browser console errors or warnings during the tested flow.
+- Production build completed successfully with 679 static pages.
+- Visual comparison preserves the reference characters, colors, accessories, village setting, and playful 3D animation language.
+
+final result: passed
