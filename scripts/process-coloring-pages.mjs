@@ -1,24 +1,17 @@
 import { mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
+import { coloringPages } from '../src/data/coloring-pages.mjs';
 
 const root = process.cwd();
 const printDir = path.join(root, 'public', 'boyama', 'print');
 const previewDir = path.join(root, 'public', 'boyama', 'preview');
 const canvasDir = path.join(root, 'public', 'boyama', 'canvas');
+const qaOutput = process.env.BOYAMA_QA_OUTPUT
+  ? path.resolve(process.env.BOYAMA_QA_OUTPUT)
+  : path.join(root, 'design-qa-boyama-contact-sheet.png');
 
-const pages = [
-  'keloglan-degirmen-ve-ekmek',
-  'keloglan-yildizli-kuyu',
-  'keloglan-sabirli-bahce',
-  'keloglan-kaplumbagali-kopru',
-  'keloglan-golde-balik',
-  'keloglan-ve-sincap',
-  'keloglan-ucurtma-ucuruyor',
-  'keloglan-gece-feneri',
-  'keloglan-dag-kecisi',
-  'keloglan-nar-bahcesi',
-];
+const pages = coloringPages.map((page) => page.slug);
 
 await Promise.all([
   mkdir(printDir, { recursive: true }),
@@ -58,13 +51,13 @@ const thumbs = await Promise.all(pages.map(async (slug, index) => ({
 await sharp({
   create: {
     width: 1380,
-    height: 768,
+    height: Math.ceil(pages.length / 5) * 384,
     channels: 3,
     background: '#eef3ff',
   },
 })
   .composite(thumbs)
   .png()
-  .toFile(path.join(root, 'design-qa-boyama-contact-sheet.png'));
+  .toFile(qaOutput);
 
 console.log(`Verified ${pages.length} A4 coloring pages and rebuilt their previews and canvas files.`);

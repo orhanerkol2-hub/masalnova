@@ -95,6 +95,19 @@ const leadingOptions = [
         }
       </div>
     </fieldset>
+
+    <fieldset class="reading-settings__group" data-wake-lock-setting hidden>
+      <legend>Ekran</legend>
+      <label class="reading-settings__toggle">
+        <input type="checkbox" name="keepAwake" data-keep-awake />
+        <span class="reading-settings__toggle-copy">
+          <strong>Ekranı açık tut</strong>
+          <small>Masal açıkken ekranın kararmasını ve kilitlenmesini önler.</small>
+        </span>
+        <span class="reading-settings__switch" aria-hidden="true" />
+      </label>
+      <p class="reading-settings__status" data-wake-lock-status role="status" hidden></p>
+    </fieldset>
   </form>
 </dialog>
 
@@ -103,6 +116,7 @@ const leadingOptions = [
     position: fixed;
     inset: auto 0 0 0;
     width: min(100%, 30rem);
+    max-height: 100dvh;
     margin: 0 auto;
     border: 1px solid var(--reader-border);
     border-bottom: none;
@@ -112,6 +126,7 @@ const leadingOptions = [
     color: var(--reader-text-color);
     font-family: var(--font-body);
     box-shadow: 0 -18px 40px rgba(10, 20, 40, 0.24);
+    overflow-y: auto;
   }
 
   .reading-settings::backdrop {
@@ -222,6 +237,98 @@ const leadingOptions = [
   .reading-settings__swatch--light { background: #fff7ea; }
   .reading-settings__swatch--sepia { background: #f4ead6; }
   .reading-settings__swatch--dark { background: #0d214c; }
+
+  .reading-settings__toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 64px;
+    padding: 0.65rem 0.75rem;
+    border: 1.5px solid var(--reader-border);
+    border-radius: 16px;
+    background: var(--reader-surface);
+    cursor: pointer;
+  }
+
+  .reading-settings__toggle input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .reading-settings__toggle-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+
+  .reading-settings__toggle-copy strong {
+    color: var(--reader-text-color);
+    font-size: 0.94rem;
+  }
+
+  .reading-settings__toggle-copy small {
+    color: var(--reader-text-soft);
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+
+  .reading-settings__switch {
+    position: relative;
+    flex: 0 0 auto;
+    width: 46px;
+    height: 28px;
+    border-radius: 999px;
+    background: var(--reader-border);
+    transition: background 160ms ease;
+  }
+
+  .reading-settings__switch::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--reader-surface);
+    box-shadow: 0 1px 4px rgba(10, 20, 40, 0.22);
+    transition: transform 160ms ease;
+  }
+
+  .reading-settings__toggle:has(input:checked) {
+    border-color: var(--reader-accent);
+    background: var(--reader-surface-raised);
+  }
+
+  .reading-settings__toggle:has(input:checked) .reading-settings__switch {
+    background: var(--reader-accent);
+  }
+
+  .reading-settings__toggle:has(input:checked) .reading-settings__switch::after {
+    transform: translateX(18px);
+  }
+
+  .reading-settings__toggle:has(input:focus-visible) {
+    outline: 2px solid var(--reader-focus);
+    outline-offset: 2px;
+  }
+
+  .reading-settings__status {
+    margin: 0.45rem 0 0;
+    color: var(--reader-text-soft);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .reading-settings__status[data-tone='warning'] {
+    color: var(--reader-accent);
+  }
 </style>
 
 <script>
@@ -229,17 +336,21 @@ const leadingOptions = [
 
   const dialog = document.querySelector<HTMLDialogElement>('[data-reading-settings]');
   const openBtn = document.querySelector<HTMLButtonElement>('[data-settings-open]');
+  const wakeLockSetting = document.querySelector<HTMLFieldSetElement>('[data-wake-lock-setting]');
+  const keepAwakeInput = document.querySelector<HTMLInputElement>('[data-keep-awake]');
+  const wakeLockStatus = document.querySelector<HTMLElement>('[data-wake-lock-status]');
 
   if (dialog && openBtn) {
-    const syncRadios = () => {
+    const syncControls = () => {
       const prefs = loadPrefs();
       for (const input of dialog.querySelectorAll<HTMLInputElement>('input[type="radio"]')) {
         input.checked = prefs[input.name as keyof ReaderPrefs] === input.value;
       }
+      if (keepAwakeInput) keepAwakeInput.checked = prefs.keepAwake;
     };
 
     openBtn.addEventListener('click', () => {
-      syncRadios();
+      syncControls();
       dialog.showModal();
     });
 
@@ -255,5 +366,93 @@ const leadingOptions = [
         updatePref(input.name as keyof ReaderPrefs, input.value as never);
       }
     });
+  }
+
+  interface ScreenWakeLockSentinel extends EventTarget {
+    readonly released: boolean;
+    release: () => Promise<void>;
+  }
+
+  interface NavigatorWithWakeLock extends Navigator {
+    wakeLock?: {
+      request: (type: 'screen') => Promise<ScreenWakeLockSentinel>;
+    };
+  }
+
+  const wakeLockApi = (navigator as NavigatorWithWakeLock).wakeLock;
+
+  if (wakeLockSetting && keepAwakeInput && wakeLockApi) {
+    let wakeLock: ScreenWakeLockSentinel | null = null;
+    let requestingWakeLock = false;
+    let keepAwakeWanted = loadPrefs().keepAwake;
+
+    const setWakeLockStatus = (message: string, tone?: 'warning') => {
+      if (!wakeLockStatus) return;
+      wakeLockStatus.textContent = message;
+      wakeLockStatus.hidden = !message;
+      if (tone) wakeLockStatus.dataset.tone = tone;
+      else delete wakeLockStatus.dataset.tone;
+    };
+
+    const requestWakeLock = async () => {
+      if (!keepAwakeWanted || requestingWakeLock || document.visibilityState !== 'visible') return;
+      if (wakeLock && !wakeLock.released) return;
+      wakeLock = null;
+      requestingWakeLock = true;
+
+      try {
+        const sentinel = await wakeLockApi.request('screen');
+        if (!keepAwakeWanted) {
+          await sentinel.release();
+          return;
+        }
+
+        wakeLock = sentinel;
+        setWakeLockStatus('Ekran masal boyunca açık kalacak.');
+        sentinel.addEventListener('release', () => {
+          if (wakeLock === sentinel) wakeLock = null;
+          if (keepAwakeWanted && document.visibilityState === 'visible') {
+            setWakeLockStatus('Cihaz veya pil ayarları ekranın açık tutulmasına izin vermedi.', 'warning');
+          }
+        });
+      } catch {
+        setWakeLockStatus('Cihaz veya pil ayarları ekranın açık tutulmasına izin vermedi.', 'warning');
+      } finally {
+        requestingWakeLock = false;
+      }
+    };
+
+    const releaseWakeLock = async () => {
+      const sentinel = wakeLock;
+      wakeLock = null;
+      if (!sentinel) return;
+      try { await sentinel.release(); } catch {}
+    };
+
+    wakeLockSetting.hidden = false;
+    keepAwakeInput.checked = keepAwakeWanted;
+    if (keepAwakeWanted) void requestWakeLock();
+    else setWakeLockStatus('Ekran cihaz ayarlarına göre kapanacak.');
+
+    openBtn?.addEventListener('click', () => {
+      if (keepAwakeWanted) void requestWakeLock();
+    });
+
+    keepAwakeInput.addEventListener('change', () => {
+      keepAwakeWanted = keepAwakeInput.checked;
+      updatePref('keepAwake', keepAwakeWanted);
+      if (keepAwakeWanted) {
+        void requestWakeLock();
+      } else {
+        void releaseWakeLock();
+        setWakeLockStatus('Ekran cihaz ayarlarına göre kapanacak.');
+      }
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && keepAwakeWanted) void requestWakeLock();
+    });
+
+    window.addEventListener('pagehide', () => void releaseWakeLock());
   }
 </script>

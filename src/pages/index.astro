@@ -145,13 +145,6 @@ const homeJsonLd = [
 const homeFeedAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_FEED_SLOT;
 const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
 
-const kidNavItems = [
-  { href: '/masallar/', label: 'Masallar', image: '/nav-tiles/masallar.png', featured: true },
-  { href: '/videolar/', label: 'Videolar', image: '/nav-tiles/videolar.png' },
-  { href: '/oyunlar/', label: 'Oyunlar', image: '/nav-tiles/oyunlar.png' },
-  { href: '/boyama/', label: 'Boyama', image: '/nav-tiles/boyama.png' },
-  { href: '/kitapligim/', label: 'Kitaplığım', image: '/nav-tiles/kitapligim.png' },
-];
 ---
 
 <BaseLayout
@@ -166,27 +159,102 @@ const kidNavItems = [
 >
   <div class="home-surface">
     <div class="home-container">
-      <section class="home-kid-nav" aria-labelledby="home-kid-nav-title">
-        <h2 id="home-kid-nav-title">
-          <i class="ph-fill ph-star" aria-hidden="true"></i>
-          Ne yapmak istersin?
-        </h2>
-        <nav class="home-kid-nav-grid" aria-label="Çocuklar için ana menü">
-          {kidNavItems.map((item) => (
-            <a href={item.href} class:list={['home-kid-nav-tile', { 'is-featured': item.featured }]}>
-              <img
-                src={item.image}
-                alt=""
-                width="640"
-                height="400"
-                loading="eager"
-                decoding="async"
-              />
-              <span>{item.label}</span>
-            </a>
-          ))}
-        </nav>
-      </section>
+      <h1 class="mobile-page-title">MasalNova’da bugün hangi masalı okuyalım?</h1>
+
+      {tonightStory && (
+        <section class="home-hero-m" aria-label="Bu akşamın masalı">
+          <a class="home-hero-m-link" href={`/masallar/${tonightStory.id}/`}>
+            <img
+              src={tonightStory.data.coverImage}
+              alt={tonightStory.data.altText ?? `${tonightStory.data.title} masal kapağı`}
+              width="720"
+              height="520"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+            <div class="home-hero-m-copy">
+              <p class="home-hero-m-kicker">
+                <i class="ph-fill ph-moon-stars" aria-hidden="true"></i> Bu akşamın masalı
+              </p>
+              <h2>{tonightStory.data.title}</h2>
+              <p class="home-hero-m-meta">
+                {tonightStory.data.ageGroups[0] ? ageLabel(tonightStory.data.ageGroups[0]) : 'Her yaş'} · {tonightStory.data.readingTime} dk
+              </p>
+              <span class="home-hero-m-cta">Masalı oku <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+        </section>
+      )}
+
+      {tonightStory && (
+        <section class="desktop-editorial" aria-label="Bu akşam için MasalNova seçkisi">
+          <a class="desktop-editorial-hero" href={`/masallar/${tonightStory.id}/`}>
+            <img
+              src={tonightStory.data.coverImage}
+              alt={tonightStory.data.altText ?? `${tonightStory.data.title} masal kapağı`}
+              width="960"
+              height="720"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+            <span class="desktop-editorial-shade" aria-hidden="true"></span>
+            <div class="desktop-editorial-copy">
+              <p><i class="ph-fill ph-moon-stars" aria-hidden="true"></i> Bu akşamın masalı</p>
+              <h1>{tonightStory.data.title}</h1>
+              <span class="desktop-editorial-description">{tonightStory.data.shortDescription}</span>
+              <small>
+                {tonightStory.data.ageGroups[0] ? ageLabel(tonightStory.data.ageGroups[0]) : 'Her yaş'} · {tonightStory.data.readingTime} dk · {moodForStory(tonightStory) === 'sakin' ? 'Sakin' : 'MasalNova seçkisi'}
+              </small>
+              <strong>Masalı oku <i class="ph ph-arrow-right" aria-hidden="true"></i></strong>
+            </div>
+          </a>
+
+          <aside class="desktop-editorial-side" aria-label="Kısayollar">
+            {continueStories[0] && (
+              <a class="desktop-resume-card" href={`/masallar/${continueStories[0].id}/`} data-continue-story={continueStories[0].id}>
+                <img
+                  src={continueStories[0].data.coverImage}
+                  alt=""
+                  width="180"
+                  height="180"
+                  loading="eager"
+                />
+                <span>
+                  <small><i class="ph ph-bookmark-simple" aria-hidden="true"></i> Kaldığın yer</small>
+                  <strong>{continueStories[0].data.title}</strong>
+                  <span class="desktop-resume-progress" aria-hidden="true"><i data-story-progress></i></span>
+                  <em data-progress-label>Masalı aç</em>
+                </span>
+              </a>
+            )}
+
+            <nav class="desktop-shortcuts" aria-label="MasalNova bölümleri">
+              <a class="is-primary" href="/videolar/">
+                <i class="ph-fill ph-play-circle" aria-hidden="true"></i>
+                <strong>Videolar</strong>
+                <span>Masal videoları</span>
+              </a>
+              <a href="/oyunlar/">
+                <i class="ph ph-game-controller" aria-hidden="true"></i>
+                <strong>Oyunlar</strong>
+                <span>Mini oyunlar</span>
+              </a>
+              <a href="/boyama/">
+                <i class="ph ph-paint-brush-broad" aria-hidden="true"></i>
+                <strong>Boyama</strong>
+                <span>Yazdır veya boya</span>
+              </a>
+              <a href="/kitapligim/">
+                <i class="ph ph-book-bookmark" aria-hidden="true"></i>
+                <strong>Kitaplığım</strong>
+                <span>Favoriler, ilerleme</span>
+              </a>
+            </nav>
+          </aside>
+        </section>
+      )}
 
       <section class="welcome" aria-labelledby="welcome-title">
         <div class="welcome-heading">
@@ -380,6 +448,10 @@ const kidNavItems = [
         <div class="carousel-footer">
           <div class="carousel-track" aria-hidden="true"><span data-carousel-progress></span></div>
         </div>
+
+        <a class="mobile-all-stories-link" href="/masallar/">
+          Tüm masalları gör <i class="ph ph-arrow-right" aria-hidden="true"></i>
+        </a>
       </section>
 
       <AdSlot slot={homeFeedAdSlot} placement="home-after-latest" />
@@ -512,6 +584,9 @@ const kidNavItems = [
           <p>Favoriler ve okuma ilerlemesi yalnızca bu cihazda tutulur.</p>
         </div>
         <div class="settings-actions">
+          <button class="settings-install-action" type="button" data-install-app>
+            <i class="ph ph-download-simple" aria-hidden="true"></i> Uygulamayı yükle
+          </button>
           <button type="button" data-open-cookie-settings>
             <i class="ph ph-cookie" aria-hidden="true"></i> Çerez tercihleri
           </button>
@@ -737,10 +812,33 @@ const kidNavItems = [
     carouselFrame = window.requestAnimationFrame(runCarousel);
   }
 
+  const desktopCarouselQuery = window.matchMedia('(min-width: 721px)');
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function shouldAutoplayCarousel() {
+    return desktopCarouselQuery.matches && !reducedMotionQuery.matches;
+  }
+
+  function stopCarousel() {
+    if (carouselFrame !== undefined) window.cancelAnimationFrame(carouselFrame);
+    carouselFrame = undefined;
+    previousFrameTime = 0;
+    carouselPixelRemainder = 0;
+  }
+
   function startCarousel() {
-    if (carouselFrame !== undefined) return;
+    if (!shouldAutoplayCarousel() || carouselFrame !== undefined) return;
     previousFrameTime = 0;
     carouselFrame = window.requestAnimationFrame(runCarousel);
+  }
+
+  function syncCarouselAutoplay() {
+    if (shouldAutoplayCarousel()) {
+      startCarousel();
+      return;
+    }
+    stopCarousel();
+    if (!desktopCarouselQuery.matches && carousel) carousel.scrollLeft = 0;
   }
 
   document.querySelector('[data-carousel-next]')?.addEventListener('click', () => moveCarousel(1));
@@ -759,7 +857,11 @@ const kidNavItems = [
 
   window.addEventListener('resize', () => {
     cachedCardStep = 0;
+    syncCarouselAutoplay();
   });
+
+  desktopCarouselQuery.addEventListener('change', syncCarouselAutoplay);
+  reducedMotionQuery.addEventListener('change', syncCarouselAutoplay);
 
   function valuesForPreferences() {
     return Object.fromEntries(preferenceInputs.map((input) => [input.dataset.storyPreference, input.value]));
@@ -911,11 +1013,171 @@ const kidNavItems = [
     padding: 34px clamp(28px, 4vw, 58px) 86px;
   }
 
-  .home-kid-nav { display: none; }
+  .mobile-page-title,
+  .home-kid-nav,
+  .home-hero-m { display: none; }
+
+  .desktop-editorial {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(290px, .85fr);
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  .desktop-editorial-hero {
+    position: relative;
+    min-height: 398px;
+    overflow: hidden;
+    border-radius: 27px;
+    background: #102e78;
+    box-shadow: 0 20px 48px rgba(21,42,93,.15);
+  }
+
+  .desktop-editorial-hero > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+  }
+
+  .desktop-editorial-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(7,31,91,.94) 0%, rgba(7,31,91,.75) 46%, rgba(7,31,91,.08) 82%);
+  }
+
+  .desktop-editorial-copy {
+    position: relative;
+    z-index: 1;
+    width: min(64%, 540px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(28px, 4vw, 48px);
+    color: #fff;
+  }
+
+  .desktop-editorial-copy > p {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #ffd451;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+
+  .desktop-editorial-copy h1 {
+    margin-top: 10px;
+    font-size: clamp(2.15rem, 3.8vw, 3.3rem);
+    letter-spacing: -.055em;
+    text-wrap: pretty;
+  }
+
+  .desktop-editorial-description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 15px;
+    color: rgba(255,255,255,.88);
+    font-size: .96rem;
+    font-weight: 650;
+    line-height: 1.55;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .desktop-editorial-copy small {
+    margin-top: 13px;
+    color: rgba(255,255,255,.84);
+    font-size: .78rem;
+    font-weight: 850;
+  }
+
+  .desktop-editorial-copy > strong {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0 20px;
+    border-radius: 15px;
+    background: var(--app-yellow);
+    color: #17336d;
+    font-size: .88rem;
+    font-weight: 900;
+  }
+
+  .desktop-editorial-side { display: grid; grid-template-rows: auto 1fr; gap: 14px; }
+
+  .desktop-resume-card {
+    min-height: 112px;
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+    padding: 11px;
+    border: 1px solid #e1dccf;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(23,43,92,.08);
+  }
+
+  .desktop-resume-card > img { width: 96px; height: 88px; border-radius: 14px; object-fit: cover; }
+  .desktop-resume-card > span { min-width: 0; display: grid; }
+  .desktop-resume-card small { color: #7c8393; font-size: .66rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .desktop-resume-card small i { color: #c99516; }
+  .desktop-resume-card strong { overflow: hidden; margin-top: 4px; color: #123274; font-size: .9rem; text-overflow: ellipsis; white-space: nowrap; }
+  .desktop-resume-progress { height: 5px; overflow: hidden; margin-top: 9px; border-radius: 99px; background: #e8e6df; }
+  .desktop-resume-progress i { display: block; width: 0; height: 100%; border-radius: inherit; background: #53a45d; }
+  .desktop-resume-card em { margin-top: 4px; color: #71809a; font-size: .63rem; font-style: normal; font-weight: 800; }
+
+  .desktop-shortcuts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .desktop-shortcuts a {
+    min-height: 126px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 17px;
+    border: 1px solid #e1dccf;
+    border-radius: 20px;
+    background: #fff;
+    color: #163574;
+  }
+  .desktop-shortcuts a.is-primary { border-color: #1746c2; background: #2145bd; color: #fff; }
+  .desktop-shortcuts i { margin-bottom: 12px; color: #1749c1; font-size: 1.5rem; }
+  .desktop-shortcuts a.is-primary i { color: #ffd451; }
+  .desktop-shortcuts strong { font-size: .96rem; }
+  .desktop-shortcuts span { margin-top: 4px; color: #7b8498; font-size: .68rem; font-weight: 750; }
+  .desktop-shortcuts a.is-primary span { color: rgba(255,255,255,.72); }
 
   .welcome {
     padding-bottom: 30px;
     border-bottom: 1px solid #e6e0d4;
+  }
+
+  @media (min-width: 721px) {
+    .home-container { display: flex; flex-direction: column; }
+    .welcome { order: 1; padding-bottom: 0; border-bottom: 0; }
+    .welcome .welcome-heading { display: none; }
+    .discovery-bar {
+      position: fixed;
+      z-index: 125;
+      top: 12px;
+      right: clamp(28px, 4vw, 54px);
+      left: calc(var(--app-rail) + clamp(28px, 4vw, 54px));
+      margin-top: 0;
+    }
+    .desktop-editorial { order: 2; }
+    .latest-section { order: 3; }
+    :global(.ad-shell[data-ad-placement='home-after-latest']) { order: 4; }
+    .continue-section { order: 5; }
+    .category-section { order: 6; }
+    :global(.ad-shell[data-ad-placement='home-before-guide']) { order: 7; }
+    .home-guide { order: 8; }
+    .settings-section { order: 9; }
   }
 
   .welcome-heading {
@@ -1092,6 +1354,8 @@ const kidNavItems = [
   }
 
   .section-link:hover { color: #093cbd; }
+
+  .mobile-all-stories-link { display: none; }
 
   .carousel-controls {
     display: flex;
@@ -1566,9 +1830,24 @@ const kidNavItems = [
     .discovery-bar { grid-template-columns: 1fr; }
     .preference-bar { justify-content: flex-start; }
     .latest-card { flex-basis: 232px; }
+    .desktop-editorial { grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); }
+    .desktop-editorial-copy { width: 72%; }
+    .desktop-shortcuts a { min-height: 118px; padding: 14px; }
+  }
+
+  @media (max-width: 1099px) and (min-width: 721px) {
+    .discovery-bar {
+      left: calc(var(--app-rail-compact) + 32px);
+      right: 32px;
+      grid-template-columns: minmax(240px, 1fr) auto;
+    }
+    .preference-chip { padding-inline: 10px; }
   }
 
   @media (max-width: 900px) {
+    .desktop-editorial { grid-template-columns: 1fr; }
+    .desktop-editorial-side { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); grid-template-rows: none; }
+    .desktop-shortcuts a { min-height: 108px; }
     .category-grid { grid-template-columns: 1fr; }
     .category-card { min-height: 94px; }
     .home-guide { grid-template-columns: 1fr; gap: 26px; }
@@ -1577,8 +1856,9 @@ const kidNavItems = [
   @media (max-width: 720px) {
     .home-surface { min-height: calc(100dvh - 70px); }
     .home-container { padding: 25px 16px 52px; }
+    .desktop-editorial { display: none; }
     .home-kid-nav {
-      display: block;
+      display: none;
       margin-bottom: 26px;
       padding: 18px;
       border: 1px solid rgba(255,255,255,.36);
@@ -1644,7 +1924,90 @@ const kidNavItems = [
       color: #092b77;
       font-size: clamp(1.25rem, 6vw, 1.48rem);
     }
-    .welcome { padding-bottom: 24px; }
+    .home-hero-m {
+      display: block;
+      margin: -25px -16px 2px;
+    }
+    .home-hero-m-link {
+      position: relative;
+      display: block;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .home-hero-m-link img {
+      width: 100%;
+      height: min(62vw, 320px);
+      object-fit: cover;
+    }
+    .home-hero-m-link::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6,42,142,.5) 0%, rgba(6,42,142,0) 38%, rgba(6,30,92,.92) 100%);
+    }
+    .home-hero-m-copy {
+      position: absolute;
+      z-index: 1;
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
+      color: #fff;
+    }
+    .home-hero-m-kicker {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      color: #ffd44d;
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .home-hero-m-copy h2 {
+      margin: 6px 0 0;
+      font-size: clamp(1.45rem, 6.6vw, 1.78rem);
+      letter-spacing: -.04em;
+      text-wrap: pretty;
+    }
+    .home-hero-m-meta {
+      margin: 7px 0 0;
+      color: rgba(255,255,255,.86);
+      font-size: .77rem;
+      font-weight: 800;
+    }
+    .home-hero-m-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 54px;
+      margin-top: 13px;
+      border-radius: 17px;
+      background: var(--app-yellow);
+      color: #17336d;
+      font-size: 1rem;
+      font-weight: 900;
+      box-shadow: 0 14px 30px rgba(2,22,86,.4);
+    }
+    .home-hero-m-link:active .home-hero-m-cta { transform: scale(.99); }
+    .welcome { padding-bottom: 24px; border-bottom: 0; }
+    .mobile-page-title {
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .welcome-heading { display: none; }
+    .welcome .story-search { display: none; }
+    .discovery-bar { margin-top: 14px; }
+    .preference-chip select[name="age"],
+    .preference-chip select[name="topic"] { width: auto; }
     .welcome-heading { align-items: flex-start; gap: 12px; }
     .welcome-avatar { width: 50px; height: 50px; border-width: 3px; }
     .welcome h1 { font-size: clamp(1.72rem, 8vw, 2.3rem); }
@@ -1669,16 +2032,36 @@ const kidNavItems = [
     .section-link { font-size: .68rem; }
     .carousel-controls button { min-width: 44px; height: 44px; }
     .latest-carousel {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
-      margin-inline: -16px;
-      padding: 2px 16px 13px;
-      scroll-padding-inline: 16px;
+      padding: 2px 0 4px;
+      overflow: visible;
     }
     .latest-card {
-      flex-basis: min(79vw, 300px);
-      border-radius: 19px;
+      flex-basis: auto;
+      border-radius: 18px;
     }
-    .latest-cover { aspect-ratio: 1.08 / 1; }
+    .latest-cover { aspect-ratio: 1.14 / 1; }
+    .carousel-controls,
+    .carousel-footer { display: none; }
+    .mobile-all-stories-link {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+      border: 1px solid #d8dfed;
+      border-radius: 15px;
+      background: #fff;
+      color: #15377e;
+      font-size: .78rem;
+      font-weight: 900;
+      box-shadow: 0 7px 18px rgba(13,40,105,.06);
+    }
+    .latest-card h3 { font-size: .88rem; min-height: 2.3em; }
+    .story-meta { font-size: .64rem; }
     .latest-card-body { padding: 13px 14px 15px; }
     .evening-card {
       grid-template-columns: 86px minmax(0, 1fr) auto;
@@ -1688,13 +2071,14 @@ const kidNavItems = [
     }
     .evening-card img { width: 86px; height: 74px; border-radius: 11px; }
     .evening-copy h3 { font-size: .86rem; }
-    .read-action { width: 38px; min-height: 38px; justify-content: center; padding: 0; }
-    .read-action { font-size: 0; }
+    .read-action { min-height: 44px; padding: 0 13px; font-size: .72rem; }
     .read-action i { font-size: .95rem; }
     .category-card { min-height: 88px; padding: 14px; }
     .home-guide { margin-top: 38px; padding: 22px 19px; }
     .settings-section { display: block; padding: 21px; }
     .settings-actions { justify-content: flex-start; margin-top: 17px; }
+    .settings-actions .settings-install-action { display: inline-flex; }
+    .settings-actions button { min-height: 44px; }
     [data-settings-status] { text-align: left; }
   }
 

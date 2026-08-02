@@ -1,5 +1,5 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["docs"]
+  "exclude": ["docs", "games/keloglan-star-runner"]
 }

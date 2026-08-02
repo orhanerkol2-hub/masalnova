@@ -39,6 +39,7 @@ const cols = [
     links: [
       { label: 'Hakkımızda', href: '/hakkimizda/' },
       { label: 'İletişim', href: '/iletisim/' },
+      { label: 'Ayarlar', href: '/#ayarlar' },
       { label: 'Privacy Policy', href: '/datenschutz/' },
     ],
   },
@@ -92,6 +93,9 @@ const year = new Date().getFullYear();
   .legal a:hover { color: #fff; text-decoration: underline; }
   .copyright { margin-top: 10px; font-size: .88rem; }
 
-  @media (max-width: 760px) { .cols { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 760px) {
+    .site-footer { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+    .cols { grid-template-columns: repeat(2, 1fr); }
+  }
   @media (max-width: 420px) { .cols { grid-template-columns: 1fr; } }
 </style>

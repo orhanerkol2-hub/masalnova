@@ -27,10 +27,15 @@ const showFocusAd = adsReady;
 >
   <div class:list={['focus-shell', { 'has-top-ad': showFocusAd }]}>
     <header class="focus-header">
-      <a class="back-button" href={detailPath} aria-label={`${page.title} sayfasına dön`}>
-        <i class="ph ph-arrow-left" aria-hidden="true"></i>
-        <span>Geri</span>
-      </a>
+      <div class="focus-left">
+        <a class="back-button" href={detailPath} aria-label={`${page.title} sayfasına dön`}>
+          <i class="ph ph-arrow-left" aria-hidden="true"></i>
+          <span>Geri</span>
+        </a>
+        <a class="focus-brand" href="/" aria-label="MasalNova ana sayfa">
+          <img src="/logo.webp" alt="MasalNova" width="78" height="20" />
+        </a>
+      </div>
       <div class="focus-title">
         <span>Boyama zamanı</span>
         <strong>{page.title}</strong>
@@ -106,6 +111,25 @@ const showFocusAd = adsReady;
 
   .back-button i { font-size: 1.15rem; }
 
+  .focus-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .focus-brand {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 7px 6px;
+    border-radius: 12px;
+  }
+
+  .focus-brand img { display: block; width: 78px; height: auto; }
+
   .focus-title {
     display: grid;
     min-width: 0;
@@ -142,6 +166,7 @@ const showFocusAd = adsReady;
     color: #147451;
     font-size: .66rem;
     font-weight: 900;
+    justify-self: end;
   }
 
   .safe-badge i { font-size: 1.1rem; }
@@ -152,6 +177,13 @@ const showFocusAd = adsReady;
     .safe-badge span { display: none; }
     .back-button,
     .safe-badge { min-width: 44px; padding-inline: 8px; }
+    .focus-brand { padding-inline: 4px; }
+    .focus-brand img { width: 62px; }
+  }
+
+  @media (max-width: 340px) {
+    .focus-left { gap: 5px; }
+    .focus-brand img { width: 50px; }
   }
 
   @media (min-width: 860px) {

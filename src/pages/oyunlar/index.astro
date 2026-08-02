@@ -107,6 +107,32 @@ const jsonLd = [
     color: rgba(255,255,255,.78); font-size: .83rem;
   }
   .partner-note i { margin-top: 2px; color: #ffd44d; font-size: 1.2rem; }
+  @media (min-width: 721px) {
+    .games-hero,
+    .games-section { background: #fbf8f1; color: #102a66; }
+    .games-hero { padding: 38px 0 22px; }
+    .games-section { padding: 18px 0 68px; }
+    .games-hero .container,
+    .games-section .container { max-width: 1260px; }
+    .eyebrow { border-color: #e5d9b5; background: #fff7dc; color: #8b6307; }
+    h1 { margin-top: 10px; color: #0b2b75; font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
+    .hero-grid > div > p { margin-top: 11px; color: #667188; font-size: 1rem; }
+    .family-note {
+      border-color: #ded9ce;
+      background: #fff;
+      color: #173574;
+      box-shadow: 0 12px 30px rgba(23,43,92,.08);
+      backdrop-filter: none;
+    }
+    .family-note > i { color: #1749ae; }
+    .family-note p { color: #69748a; }
+    .section-title { color: #0b2b75; }
+    .section-title span { color: #a87906; }
+    .section-title > p { color: #6c7690; }
+    .games-grid { gap: 16px; }
+    .partner-note { border-color: #ded9ce; background: #fff; color: #68728a; }
+    .partner-note i { color: #1749ae; }
+  }
   @media (max-width: 920px) {
     .hero-grid { grid-template-columns: 1fr; }
     .family-note { max-width: 620px; }

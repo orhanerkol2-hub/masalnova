@@ -40,7 +40,7 @@ const jsonLd = [
 
 <BaseLayout
   title="Ücretsiz Keloğlan Boyama Sayfaları | MasalNova"
-  description="10 ücretsiz Keloğlan boyama sayfasını keşfet, A4 olarak indir veya hemen yazdır. 4–7 yaş çocuklar için sade ve eğlenceli çizimler."
+  description={`${coloringPages.length} ücretsiz Keloğlan boyama sayfasını keşfet, A4 olarak indir veya hemen yazdır. 4–7 yaş çocuklar için sade ve eğlenceli çizimler.`}
   path="/boyama/"
   image={coloringPages[0]?.previewImage}
   imageAlt={coloringPages[0]?.imageAlt}
@@ -52,7 +52,7 @@ const jsonLd = [
       <div>
         <span class="eyebrow"><i class="ph ph-paint-brush-broad" aria-hidden="true"></i> Yeni · Ücretsiz</span>
         <h1>Keloğlan’la boya, hayal et</h1>
-        <p>MasalNova’ya özel 10 Keloğlan boyama sayfasını ücretsiz indir veya A4 olarak yazdır. Büyük alanlar ve temiz çizgiler, küçük eller için hazırlandı.</p>
+        <p>MasalNova’ya özel {coloringPages.length} Keloğlan boyama sayfasını ücretsiz indir veya A4 olarak yazdır. Büyük alanlar ve temiz çizgiler, küçük eller için hazırlandı.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#boyamalar"><i class="ph ph-images" aria-hidden="true"></i> Boyamaları gör</a>
           <a class="btn btn-ghost" href="/masallar/kategori/keloglan/"><i class="ph ph-book-open-text" aria-hidden="true"></i> Keloğlan masalları</a>
@@ -73,7 +73,7 @@ const jsonLd = [
       <div class="section-title">
         <div>
           <span>İlk koleksiyon</span>
-          <h2 id="coloring-title">10 Keloğlan boyama sayfası</h2>
+          <h2 id="coloring-title">{coloringPages.length} Keloğlan boyama sayfası</h2>
         </div>
         <p>{coloringPages.length} sayfa · Ücretsiz · A4 baskı</p>
       </div>
@@ -118,6 +118,34 @@ const jsonLd = [
   .family-note { align-items: flex-start; margin-top: 25px; background: rgba(255,255,255,.1); font-size: .88rem; }
   .family-note p { color: rgba(255,255,255,.82); }
   .ad-area { max-width: 860px; margin: 0 auto; }
+  @media (min-width: 721px) {
+    .coloring-hero,
+    .coloring-section { background: #fbf8f1; color: #102a66; }
+    .coloring-hero { padding: 38px 0 22px; }
+    .coloring-section { padding: 18px 0 68px; }
+    .coloring-hero .container,
+    .coloring-section .container { max-width: 1260px; }
+    .eyebrow { border-color: #e5d9b5; background: #fff7dc; color: #8b6307; }
+    h1 { margin-top: 10px; color: #0b2b75; font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
+    .hero-grid > div > p { margin-top: 11px; color: #667188; font-size: 1rem; }
+    .hero-actions .btn-ghost { border-color: #d8d2c5; background: #fff; color: #1749ae; }
+    .print-note,
+    .family-note {
+      border-color: #ded9ce;
+      background: #fff;
+      color: #173574;
+      box-shadow: 0 12px 30px rgba(23,43,92,.08);
+      backdrop-filter: none;
+    }
+    .print-note > i,
+    .family-note > i { color: #1749ae; }
+    .print-note p,
+    .family-note p { color: #69748a; }
+    .section-title { color: #0b2b75; }
+    .section-title span { color: #a87906; }
+    .section-title > p { color: #6c7690; }
+    .coloring-grid { gap: 16px; }
+  }
   @media (max-width: 920px) {
     .hero-grid { grid-template-columns: 1fr; }
     .print-note { max-width: 620px; }
