@@ -165,8 +165,10 @@ explizit aktualisiert.
 - Der Lauf beginnt mit drei Leben.
 - Nach einem Treffer ist Keloğlan kurz unverwundbar.
 - Alle 15 Sekunden steigt das Level.
-- Mit jedem Level erhöht sich die Scrollgeschwindigkeit; Spawn-Abstände werden
-  bis zu definierten Mindestwerten kürzer.
+- Innerhalb jedes Levels erhöhen sich Scrollgeschwindigkeit und Spawn-Druck
+  kontinuierlich; die sichtbare Levelnummer wechselt weiterhin alle 15 Sekunden.
+- Das HUD zeigt die verbleibenden Dreifachsprung-Impulse. Sterne, Treffer und
+  Levelwechsel erhalten eine kurze, zustandsabhängige Rückmeldung.
 - Sterne und Hindernisse erhalten einen bidirektionalen, mit dem Tempo
   wachsenden Sicherheitsabstand. Ein blockierter Spawn wird kurz vertagt.
 - Der Highscore wird unter dem Schlüssel
