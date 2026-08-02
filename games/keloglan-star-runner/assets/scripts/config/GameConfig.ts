@@ -22,7 +22,8 @@ export const GAME_CONFIG = Object.freeze({
   maximumScrollSpeed: 700,
 
   initialObstacleInterval: 2.25,
-  firstObstacleDelay: 2.8,
+  // Give new players two collectible beats before the first hazard arrives.
+  firstObstacleDelay: 3.4,
   minimumObstacleInterval: 1.12,
   obstacleIntervalStep: 0.12,
 
