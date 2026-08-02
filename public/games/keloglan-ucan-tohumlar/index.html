@@ -1814,6 +1814,12 @@
       window.addEventListener('resize', resize);
       resize();
       bestLabel.textContent = `EN İYİ PUAN · ${bestScore}`;
+      if (new URLSearchParams(window.location.search).get('autostart') === '1') {
+        const cleanUrl = new URL(window.location.href);
+        cleanUrl.searchParams.delete('autostart');
+        window.history.replaceState({}, '', `${cleanUrl.pathname}${cleanUrl.search}${cleanUrl.hash}`);
+        startGame();
+      }
       if (!document.fullscreenEnabled) fullscreenButton.hidden = true;
       requestAnimationFrame(frame);
     })();
