@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17385f">
   <meta name="color-scheme" content="only light">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; media-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <title>Keloğlan: Yıldız Peşinde | MasalNova</title>
   <style>
     :root {
@@ -36,6 +36,12 @@
 </head>
 <body>
 <div id="keloglan-fair-spawn-preview">
+  <audio
+    data-music
+    src="./assets/ben-bir-garip-keloglanim.mp3"
+    preload="none"
+    loop
+  ></audio>
   <div class="game-stage" aria-label="Keloğlan Yıldız Peşinde oyunu">
     <div class="village-layer" aria-hidden="true"></div>
     <div class="sun-wash" aria-hidden="true"></div>
@@ -54,7 +60,10 @@
           <strong data-level>1</strong>
         </div>
       </div>
-      <button type="button" class="btn btn-ghost" data-pause aria-label="Oyunu duraklat">Ⅱ</button>
+      <div class="hud-actions">
+        <button type="button" class="btn btn-ghost" data-music-toggle aria-label="Müziği kapat" aria-pressed="false">🔊</button>
+        <button type="button" class="btn btn-ghost" data-pause aria-label="Oyunu duraklat">Ⅱ</button>
+      </div>
     </div>
 
     <div class="entity-layer" data-entities aria-hidden="true"></div>
@@ -72,10 +81,18 @@
 
     <div class="game-overlay" data-overlay>
       <div class="menu-card card">
+        <img
+          class="masalnova-logo"
+          data-brand-logo
+          src="./assets/masalnova-logo.webp"
+          alt="MasalNova"
+          draggable="false"
+        >
         <span class="viz-badge">BİR ANADOLU MASALI</span>
         <h2 data-title>KELOĞLAN</h2>
         <p class="game-subtitle">YILDIZ PEŞİNDE</p>
         <p data-message>Altın yıldızları topla, köy yolundaki engelleri aş!</p>
+        <p class="music-credit text-small" data-music-credit>♪ BEN BİR GARİP KELOĞLANIM</p>
         <p class="text-small" data-highscore>EN YÜKSEK · 0</p>
         <button type="button" class="btn btn-primary" data-action>BAŞLA</button>
       </div>
@@ -152,7 +169,8 @@
     position: absolute;
     inset: 0 0 auto;
     z-index: 10;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 34rem) auto;
     align-items: center;
     gap: 0.5rem;
     padding:
@@ -170,7 +188,7 @@
   #keloglan-fair-spawn-preview .hud-strip {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(34rem, calc(100% - 4rem));
+    width: 100%;
     padding: 0.35rem 0.5rem;
     border-color: rgba(216, 185, 118, .72);
     border-color: color-mix(in srgb, var(--border) 68%, transparent);
@@ -194,8 +212,15 @@
     font-weight: 500;
   }
 
-  #keloglan-fair-spawn-preview [data-pause] {
+  #keloglan-fair-spawn-preview .hud-actions {
+    display: flex;
+    gap: 0.5rem;
     margin-left: auto;
+    pointer-events: auto;
+  }
+
+  #keloglan-fair-spawn-preview [data-music-toggle],
+  #keloglan-fair-spawn-preview [data-pause] {
     pointer-events: auto;
     inline-size: 3rem;
     block-size: 3rem;
@@ -205,6 +230,10 @@
     background: rgba(255, 250, 240, .92);
     background: color-mix(in srgb, var(--card) 91%, transparent);
     backdrop-filter: blur(0.6rem);
+  }
+
+  #keloglan-fair-spawn-preview [data-music-toggle] {
+    font-size: 1.2rem;
   }
 
   #keloglan-fair-spawn-preview .entity-layer {
@@ -354,6 +383,18 @@
     backdrop-filter: blur(0.75rem);
   }
 
+  #keloglan-fair-spawn-preview .masalnova-logo {
+    display: block;
+    width: min(78%, 19rem);
+    height: auto;
+    margin: 0 auto 0.9rem;
+    filter: drop-shadow(0 0.45rem 0.4rem rgba(7, 20, 48, 0.32));
+  }
+
+  #keloglan-fair-spawn-preview .masalnova-logo[hidden] {
+    display: none;
+  }
+
   #keloglan-fair-spawn-preview .menu-card h2 {
     margin: 0.35rem 0 0;
     color: var(--keloglan-gold);
@@ -379,6 +420,11 @@
 
   #keloglan-fair-spawn-preview .menu-card [data-highscore] {
     color: var(--keloglan-gold);
+  }
+
+  #keloglan-fair-spawn-preview .music-credit {
+    color: var(--keloglan-gold);
+    letter-spacing: 0.06em;
   }
 
   #keloglan-fair-spawn-preview .menu-card .viz-badge {
@@ -477,7 +523,7 @@
     }
 
     #keloglan-fair-spawn-preview .hud-strip {
-      width: calc(100% - 3.3rem);
+      width: 100%;
       padding: 0.25rem 0.2rem;
     }
 
@@ -485,9 +531,14 @@
       padding: 0.15rem 0.2rem;
     }
 
+    #keloglan-fair-spawn-preview .hud-actions {
+      gap: 0.3rem;
+    }
+
+    #keloglan-fair-spawn-preview [data-music-toggle],
     #keloglan-fair-spawn-preview [data-pause] {
-      inline-size: 2.9rem;
-      block-size: 2.9rem;
+      inline-size: 2.7rem;
+      block-size: 2.7rem;
     }
 
     #keloglan-fair-spawn-preview .game-overlay {
@@ -512,6 +563,11 @@
       width: 100%;
       margin-bottom: 0;
       padding: 1rem 1.1rem;
+    }
+
+    #keloglan-fair-spawn-preview .masalnova-logo {
+      width: min(70%, 14rem);
+      margin-bottom: 0.6rem;
     }
 
     #keloglan-fair-spawn-preview .menu-card p {
@@ -589,7 +645,11 @@
     const livesLabel = root.querySelector('[data-lives]');
     const levelLabel = root.querySelector('[data-level]');
     const pauseButton = root.querySelector('[data-pause]');
+    const music = root.querySelector('[data-music]');
+    const musicButton = root.querySelector('[data-music-toggle]');
     const actionButton = root.querySelector('[data-action]');
+    const brandLogo = root.querySelector('[data-brand-logo]');
+    const musicCredit = root.querySelector('[data-music-credit]');
     const titleLabel = root.querySelector('[data-title]');
     const messageLabel = root.querySelector('[data-message]');
     const highscoreLabel = root.querySelector('[data-highscore]');
@@ -675,6 +735,26 @@
       entities = [];
     };
 
+    music.volume = 0.2;
+
+    const updateMusicButton = () => {
+      musicButton.textContent = music.muted ? '🔇' : '🔊';
+      musicButton.setAttribute(
+        'aria-label',
+        music.muted ? 'Müziği aç' : 'Müziği kapat',
+      );
+      musicButton.setAttribute('aria-pressed', String(music.muted));
+    };
+
+    const playMusic = () => {
+      const playback = music.play();
+      if (playback) {
+        playback.catch(() => {
+          // Browsers may postpone audio until the next direct interaction.
+        });
+      }
+    };
+
     const startRun = () => {
       mode = 'running';
       score = 0;
@@ -688,6 +768,8 @@
       obstacleTimer = 3.4;
       obstaclePending = false;
       clearEntities();
+      music.currentTime = 0;
+      playMusic();
       hero.classList.remove('is-menu', 'is-hit');
       hero.style.transform = '';
       overlay.hidden = true;
@@ -709,6 +791,8 @@
     };
 
     const showOverlay = (title, message, action) => {
+      brandLogo.hidden = true;
+      musicCredit.hidden = true;
       titleLabel.textContent = title;
       messageLabel.textContent = message;
       actionButton.textContent = action;
@@ -719,6 +803,7 @@
     const togglePause = () => {
       if (mode === 'running') {
         mode = 'paused';
+        music.pause();
         dust.classList.remove('is-running');
         pauseButton.textContent = '▶';
         pauseButton.setAttribute('aria-label', 'Oyuna devam et');
@@ -727,6 +812,7 @@
         showOverlay('MOLA', 'Kısa bir nefes. Hazır olduğunda macera devam!', 'DEVAM ET');
       } else if (mode === 'paused') {
         mode = 'running';
+        playMusic();
         overlay.hidden = true;
         hud.hidden = false;
         hint.hidden = false;
@@ -814,6 +900,7 @@
 
     const gameOver = () => {
       mode = 'gameover';
+      music.pause();
       highscore = Math.max(highscore, score);
       try {
         localStorage.setItem(
@@ -992,6 +1079,11 @@
     pauseButton.addEventListener('click', (event) => {
       event.stopPropagation();
       togglePause();
+    });
+    musicButton.addEventListener('click', (event) => {
+      event.stopPropagation();
+      music.muted = !music.muted;
+      updateMusicButton();
     });
     stage.addEventListener('pointerdown', (event) => {
       if (!event.target.closest('button')) {
