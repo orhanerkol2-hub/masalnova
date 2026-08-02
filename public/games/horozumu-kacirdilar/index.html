@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="theme-color" content="#52aef5">
+  <meta name="color-scheme" content="only light">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; media-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'self'">
+  <title>Horozumu Kaçırdılar: Çatı Kaçışı | MasalNova</title>
+  <link rel="preload" as="image" href="./assets/village-rooftops.png">
+  <link rel="preload" as="image" href="./assets/rooster-runner.png">
+  <link rel="preload" as="image" href="./assets/grandma-runner.png">
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Nunito", "Avenir Next", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #17365e;
+      --ink: #17335f;
+      --yellow: #ffc52f;
+      --orange: #f08a24;
+      --purple: #6b2d87;
+      --cream: #fff7df;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #17365e; }
+    body { overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
+    button { border: 0; font: inherit; cursor: pointer; }
+    button:focus-visible { outline: 4px solid #fff; outline-offset: 3px; }
+    [hidden] { display: none !important; }
+    .stage { position: relative; width: 100%; height: 100dvh; min-height: 100%; overflow: hidden; touch-action: none; user-select: none; isolation: isolate; background: #5ab6f3; }
+    canvas { display: block; width: 100%; height: 100%; }
+    .hud { position: absolute; z-index: 5; inset: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) auto max(10px, env(safe-area-inset-left)); display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; pointer-events: none; }
+    .hud-card { display: grid; grid-template-columns: repeat(4, minmax(68px, 1fr)); min-width: min(620px, calc(100vw - 150px)); overflow: hidden; border: 2px solid rgba(255,255,255,.76); border-radius: 18px; background: rgba(255,247,223,.92); color: var(--ink); box-shadow: 0 10px 28px rgba(24,43,74,.2); backdrop-filter: blur(10px); }
+    .stat { display: grid; gap: 1px; padding: 8px 12px; text-align: center; }
+    .stat + .stat { border-left: 1px solid rgba(23,51,95,.14); }
+    .stat span { font-size: clamp(.55rem, 1.4vw, .68rem); font-weight: 1000; letter-spacing: .08em; }
+    .stat strong { font-size: clamp(.88rem, 2.6vw, 1.15rem); line-height: 1.05; }
+    .hud-actions { display: flex; gap: 8px; pointer-events: auto; }
+    .icon-btn { min-width: 48px; min-height: 48px; padding: 8px 12px; border: 2px solid rgba(255,255,255,.78); border-radius: 16px; background: rgba(23,51,95,.9); color: #fff; box-shadow: 0 8px 20px rgba(20,41,71,.2); font-size: .65rem; font-weight: 1000; letter-spacing: .04em; }
+    .overlay { position: absolute; z-index: 8; inset: 0; display: grid; place-items: center; padding: max(18px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); background: linear-gradient(90deg, rgba(14,40,75,.64), rgba(14,40,75,.18) 52%, rgba(14,40,75,.48)); }
+    .menu { position: relative; width: min(560px, 92vw); padding: clamp(20px, 4vw, 34px); border: 2px solid rgba(255,255,255,.72); border-radius: 30px; background: rgba(255,247,223,.94); color: var(--ink); text-align: center; box-shadow: 0 28px 70px rgba(7,28,61,.38); backdrop-filter: blur(12px); }
+    .brand { display: block; width: min(250px, 62%); height: auto; margin: 0 auto 10px; }
+    .eyebrow { display: inline-flex; padding: 6px 11px; border-radius: 999px; background: #ffe299; color: #6c4100; font-size: .7rem; font-weight: 1000; letter-spacing: .09em; }
+    h1 { margin: 10px 0 0; color: #db402b; font-size: clamp(2rem, 7vw, 4.1rem); line-height: .85; letter-spacing: -.065em; text-shadow: 0 3px 0 #fff; }
+    h1 span { display: block; margin-top: 9px; color: var(--ink); font-size: .5em; letter-spacing: -.03em; }
+    .story { max-width: 450px; margin: 15px auto 0; color: #5d6878; font-size: clamp(.85rem, 2vw, 1rem); font-weight: 800; line-height: 1.45; }
+    .rules { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin: 15px 0 0; padding: 0; list-style: none; }
+    .rules li { padding: 6px 10px; border-radius: 999px; background: #edf3ff; color: #24529c; font-size: .69rem; font-weight: 1000; }
+    .best { margin: 14px 0 0; color: #79511a; font-size: .72rem; font-weight: 1000; letter-spacing: .08em; }
+    .primary { display: inline-flex; align-items: center; justify-content: center; min-width: min(300px, 90%); min-height: 54px; margin-top: 14px; padding: 14px 24px; border: 2px solid #9e4c00; border-radius: 999px; background: linear-gradient(180deg, #ffd94e, #ffad24); color: #5a3100; box-shadow: 0 8px 0 #b95712, 0 16px 26px rgba(128,66,13,.24); font-weight: 1000; letter-spacing: .05em; transform: translateY(-2px); }
+    .primary:active { box-shadow: 0 3px 0 #b95712; transform: translateY(3px); }
+    .controls { position: absolute; z-index: 6; inset: auto max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left)); display: flex; align-items: flex-end; justify-content: space-between; pointer-events: none; }
+    .control-btn { pointer-events: auto; width: clamp(82px, 17vw, 124px); height: clamp(58px, 11vw, 76px); border: 2px solid rgba(255,255,255,.86); border-radius: 22px; background: rgba(23,51,95,.9); color: #fff; box-shadow: 0 8px 0 rgba(6,29,64,.7); font-size: clamp(.75rem, 2vw, .92rem); font-weight: 1000; letter-spacing: .04em; touch-action: manipulation; }
+    .control-btn.boost { background: rgba(219,64,43,.93); }
+    .control-btn:active { box-shadow: 0 3px 0 rgba(6,29,64,.7); transform: translateY(5px); }
+    .speech { position: absolute; z-index: 7; left: 17%; bottom: 41%; max-width: 190px; padding: 9px 13px; border: 2px solid var(--ink); border-radius: 18px 18px 18px 4px; background: #fff; color: var(--ink); font-size: clamp(.68rem, 2vw, .9rem); font-weight: 1000; box-shadow: 0 8px 18px rgba(18,37,64,.18); animation: pop .22s ease-out; pointer-events: none; }
+    .toast { position: absolute; z-index: 7; left: 50%; top: 23%; transform: translateX(-50%); padding: 9px 15px; border: 2px solid #fff; border-radius: 999px; background: #db402b; color: #fff; font-size: clamp(.8rem, 2vw, 1rem); font-weight: 1000; box-shadow: 0 9px 22px rgba(18,37,64,.2); animation: pop .22s ease-out; pointer-events: none; }
+    @keyframes pop { from { opacity: 0; transform: translateX(-50%) scale(.72); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
+    .speech { animation-name: speech-pop; }
+    @keyframes speech-pop { from { opacity: 0; transform: scale(.72); } to { opacity: 1; transform: scale(1); } }
+    @media (max-width: 720px) {
+      .hud-card { grid-template-columns: repeat(4, minmax(0, 1fr)); min-width: 0; flex: 1; }
+      .stat { padding: 7px 5px; }
+      .hud-actions { flex-direction: column; }
+      .icon-btn { min-width: 46px; min-height: 42px; padding: 5px 7px; }
+      .menu { width: min(500px, 94vw); border-radius: 24px; }
+      .rules { margin-top: 10px; }
+      .controls { bottom: max(11px, env(safe-area-inset-bottom)); }
+    }
+    @media (max-height: 540px) {
+      .menu { display: grid; grid-template-columns: 130px 1fr; align-items: center; gap: 2px 18px; width: min(680px, 94vw); padding: 15px 22px; text-align: left; }
+      .brand { grid-row: 1 / 7; width: 128px; margin: 0; }
+      .eyebrow, h1, .story, .rules, .best, .primary { grid-column: 2; }
+      .eyebrow { justify-self: start; }
+      h1 { font-size: clamp(1.9rem, 8vh, 3rem); }
+      .story { margin-top: 8px; font-size: .75rem; }
+      .rules { justify-content: flex-start; margin-top: 7px; }
+      .best { margin-top: 7px; }
+      .primary { min-height: 44px; margin-top: 8px; box-shadow: 0 5px 0 #b95712; }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage" data-stage aria-label="Horozumu Kaçırdılar Çatı Kaçışı oyun alanı">
+    <audio data-background-song src="./assets/horozumu-kacirdilar.mp3" preload="metadata" loop></audio>
+    <canvas data-canvas aria-hidden="true"></canvas>
+
+    <section class="hud" data-hud hidden aria-live="polite">
+      <div class="hud-card">
+        <div class="stat"><span>PUAN</span><strong data-score>0</strong></div>
+        <div class="stat"><span>MAIS</span><strong data-corn>0</strong></div>
+        <div class="stat"><span>MESAFE</span><strong data-distance>0 m</strong></div>
+        <div class="stat"><span>TURBO</span><strong data-turbo>100%</strong></div>
+      </div>
+      <div class="hud-actions">
+        <button class="icon-btn" type="button" data-sound aria-pressed="false">SES AÇIK</button>
+        <button class="icon-btn" type="button" data-pause>DUR</button>
+      </div>
+    </section>
+
+    <div class="controls" data-controls hidden>
+      <button class="control-btn" type="button" data-jump>ZIPLA</button>
+      <button class="control-btn boost" type="button" data-boost>HIZLAN</button>
+    </div>
+
+    <div class="speech" data-speech hidden>Dur bakalım!</div>
+    <div class="toast" data-toast hidden>İKİLİ ZIPLAMA!</div>
+
+    <section class="overlay" data-overlay>
+      <div class="menu">
+        <img class="brand" src="./assets/masalnova-logo.webp" alt="MasalNova" width="600" height="147">
+        <span class="eyebrow">YENİ MASALNOVA OYUNU</span>
+        <h1 data-title>HOROZUMU KAÇIRDILAR<span>ÇATI KAÇIŞI</span></h1>
+        <p class="story" data-message>Havalı horoz çatılara kaçtı! Engellerin üzerinden zıpla, mısırları topla ve öfkeli nineden uzaklaş.</p>
+        <ul class="rules" aria-label="Oyun kontrolleri">
+          <li>Dokun veya Boşluk: zıpla</li>
+          <li>İki kez: çift zıpla</li>
+          <li>Shift veya Hızlan: turbo</li>
+        </ul>
+        <p class="best" data-best>EN İYİ MESAFE · 0 m</p>
+        <button class="primary" type="button" data-start>KAÇMAYA BAŞLA</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const stage = document.querySelector('[data-stage]');
+      const canvas = document.querySelector('[data-canvas]');
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const overlay = document.querySelector('[data-overlay]');
+      const hud = document.querySelector('[data-hud]');
+      const controls = document.querySelector('[data-controls]');
+      const startButton = document.querySelector('[data-start]');
+      const pauseButton = document.querySelector('[data-pause]');
+      const soundButton = document.querySelector('[data-sound]');
+      const jumpButton = document.querySelector('[data-jump]');
+      const boostButton = document.querySelector('[data-boost]');
+      const title = document.querySelector('[data-title]');
+      const message = document.querySelector('[data-message]');
+      const bestLabel = document.querySelector('[data-best]');
+      const scoreLabel = document.querySelector('[data-score]');
+      const cornLabel = document.querySelector('[data-corn]');
+      const distanceLabel = document.querySelector('[data-distance]');
+      const turboLabel = document.querySelector('[data-turbo]');
+      const speech = document.querySelector('[data-speech]');
+      const toast = document.querySelector('[data-toast]');
+      const backgroundSong = document.querySelector('[data-background-song]');
+      backgroundSong.volume = .26;
+
+      const files = {
+        background: './assets/village-rooftops.png',
+        rooster: './assets/rooster-runner.png',
+        grandma: './assets/grandma-runner.png',
+        chimney: './assets/chimney.png',
+        corn: './assets/corn.png'
+      };
+      const images = {};
+      Object.entries(files).forEach(([key, src]) => {
+        const image = new Image();
+        image.src = src;
+        images[key] = image;
+      });
+
+      const STORAGE_KEY = 'masalnova.horozumu-kacirdilar.best.v1';
+      let best = Number(localStorage.getItem(STORAGE_KEY) || 0);
+      let width = 0;
+      let height = 0;
+      let dpr = 1;
+      let floorY = 0;
+      let state = 'menu';
+      let lastTime = 0;
+      let elapsed = 0;
+      let backgroundOffset = 0;
+      let score = 0;
+      let cornCount = 0;
+      let distance = 0;
+      let speed = 430;
+      let turbo = 100;
+      let boostTime = 0;
+      let spawnTimer = 1.5;
+      let pickupTimer = .8;
+      let chaseGap = 178;
+      let hitCooldown = 0;
+      let objects = [];
+      let particles = [];
+      let audio = null;
+      let muted = false;
+      let speechTimer = 0;
+      let toastTimer = 0;
+
+      const player = { x: 0, lift: 0, velocity: 0, jumps: 0, duck: 0 };
+      const phrases = ['Dur bakalım!', 'Çatıdan in!', 'Geri gel, yaramaz!', 'Seni yakalayacağım!'];
+
+      function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
+      function fit() {
+        const rect = stage.getBoundingClientRect();
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = Math.max(320, rect.width);
+        height = Math.max(320, rect.height);
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        floorY = height * (width < height ? .82 : .86);
+        player.x = clamp(width * .31, 130, 380);
+      }
+
+      function gameSizes() {
+        const unit = clamp(Math.min(width, height), 360, 900);
+        return {
+          roosterW: clamp(unit * .25, 104, 205),
+          grandmaW: clamp(unit * .23, 98, 190),
+          chimneyW: clamp(unit * .13, 54, 116),
+          cornW: clamp(unit * .075, 34, 64)
+        };
+      }
+
+      function drawCover(image) {
+        if (!image.complete || !image.naturalWidth) {
+          ctx.fillStyle = '#66b9ef';
+          ctx.fillRect(0, 0, width, height);
+          return;
+        }
+        const scale = Math.max(height / image.naturalHeight, width / image.naturalWidth);
+        const drawW = image.naturalWidth * scale;
+        const drawH = image.naturalHeight * scale;
+        const x = (width - drawW) / 2;
+        const y = (height - drawH) / 2;
+        ctx.drawImage(image, x, y, drawW, drawH);
+        ctx.save();
+        ctx.globalAlpha = .08;
+        ctx.fillStyle = '#5baef0';
+        ctx.fillRect(0, 0, width, height);
+        ctx.restore();
+      }
+
+      function drawSprite(image, x, yBottom, drawW, flip = false, rotation = 0, alpha = 1) {
+        if (!image.complete || !image.naturalWidth) return;
+        const drawH = drawW * image.naturalHeight / image.naturalWidth;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        ctx.translate(x, yBottom - drawH / 2);
+        ctx.rotate(rotation);
+        ctx.scale(flip ? -1 : 1, 1);
+        ctx.shadowColor = 'rgba(20,35,50,.28)';
+        ctx.shadowBlur = 14;
+        ctx.shadowOffsetY = 8;
+        ctx.drawImage(image, -drawW / 2, -drawH / 2, drawW, drawH);
+        ctx.restore();
+        return { width: drawW, height: drawH };
+      }
+
+      function drawScene(time) {
+        ctx.clearRect(0, 0, width, height);
+        drawCover(images.background);
+        const skyShade = ctx.createLinearGradient(0, 0, 0, height);
+        skyShade.addColorStop(0, 'rgba(255,255,255,.03)');
+        skyShade.addColorStop(.7, 'rgba(16,55,91,0)');
+        skyShade.addColorStop(1, 'rgba(30,49,45,.22)');
+        ctx.fillStyle = skyShade;
+        ctx.fillRect(0, 0, width, height);
+
+        const sizes = gameSizes();
+        objects.forEach((item) => {
+          const bob = item.kind === 'corn' ? Math.sin(time * .006 + item.phase) * 7 : 0;
+          const image = item.kind === 'corn' ? images.corn : images.chimney;
+          drawSprite(image, item.x, item.y + bob, item.w, false, item.kind === 'corn' ? Math.sin(time * .004 + item.phase) * .08 : 0);
+        });
+
+        particles.forEach((particle) => {
+          ctx.save();
+          ctx.globalAlpha = particle.life;
+          ctx.fillStyle = particle.color;
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+
+        const runBob = state === 'running' ? Math.sin(elapsed * 13) * 5 : 0;
+        const grandmaX = player.x - chaseGap;
+        drawSprite(images.grandma, grandmaX, floorY + runBob, sizes.grandmaW, false, Math.sin(elapsed * 12) * .025);
+        const playerBottom = floorY - player.lift + runBob;
+        drawSprite(images.rooster, player.x, playerBottom, sizes.roosterW, false, clamp(-player.velocity / 1800, -.11, .12));
+
+        if (boostTime > 0) {
+          ctx.save();
+          ctx.globalAlpha = .55;
+          ctx.strokeStyle = '#fff5a8';
+          ctx.lineWidth = 5;
+          for (let i = 0; i < 4; i += 1) {
+            const y = floorY - sizes.roosterW * .45 + i * 18;
+            ctx.beginPath();
+            ctx.moveTo(player.x - sizes.roosterW * (.7 + i * .1), y);
+            ctx.lineTo(player.x - sizes.roosterW * (1.15 + i * .16), y + 2);
+            ctx.stroke();
+          }
+          ctx.restore();
+        }
+
+        if (state === 'menu' || state === 'gameover') {
+          const veil = ctx.createLinearGradient(0, 0, width, 0);
+          veil.addColorStop(0, 'rgba(8,32,69,.28)');
+          veil.addColorStop(.55, 'rgba(8,32,69,.02)');
+          veil.addColorStop(1, 'rgba(8,32,69,.22)');
+          ctx.fillStyle = veil;
+          ctx.fillRect(0, 0, width, height);
+        }
+      }
+
+      function rectsOverlap(a, b) {
+        return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+      }
+
+      function playerRect() {
+        const sizes = gameSizes();
+        const h = sizes.roosterW * images.rooster.naturalHeight / Math.max(1, images.rooster.naturalWidth);
+        return { x: player.x - sizes.roosterW * .28, y: floorY - player.lift - h * .69, w: sizes.roosterW * .53, h: h * .58 };
+      }
+
+      function itemRect(item) {
+        const image = item.kind === 'corn' ? images.corn : images.chimney;
+        const h = item.w * image.naturalHeight / Math.max(1, image.naturalWidth);
+        if (item.kind === 'corn') return { x: item.x - item.w * .3, y: item.y - h * .64, w: item.w * .6, h: h * .6 };
+        return { x: item.x - item.w * .31, y: item.y - h * .62, w: item.w * .62, h: h * .6 };
+      }
+
+      function spawnLaneIsClear(x) {
+        const safeGap = clamp(width * .34, 190, 330);
+        return objects.every((item) => item.taken || Math.abs(item.x - x) > safeGap);
+      }
+
+      function spawnObstacle() {
+        const sizes = gameSizes();
+        const x = width + sizes.chimneyW;
+        if (!spawnLaneIsClear(x)) return false;
+        objects.push({ kind: 'chimney', x, y: floorY + 7, w: sizes.chimneyW * (.85 + Math.random() * .23), phase: Math.random() * 6 });
+        return true;
+      }
+
+      function spawnCorn() {
+        const sizes = gameSizes();
+        const x = width + sizes.cornW;
+        if (!spawnLaneIsClear(x)) return false;
+        const high = Math.random() > .55;
+        objects.push({ kind: 'corn', x, y: floorY - (high ? sizes.roosterW * .85 : sizes.roosterW * .43), w: sizes.cornW, phase: Math.random() * 6 });
+        return true;
+      }
+
+      function burst(x, y, color, count = 10) {
+        for (let i = 0; i < count; i += 1) {
+          particles.push({ x, y, vx: (Math.random() - .5) * 180, vy: -50 - Math.random() * 190, size: 3 + Math.random() * 5, color, life: 1 });
+        }
+      }
+
+      function showToast(text) {
+        toast.textContent = text;
+        toast.hidden = false;
+        toastTimer = 1;
+      }
+
+      function grandmaTalk() {
+        speech.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+        speech.hidden = false;
+        speechTimer = 1.35;
+      }
+
+      function ensureAudio() {
+        if (!audio) audio = new (window.AudioContext || window.webkitAudioContext)();
+        if (audio.state === 'suspended') audio.resume();
+      }
+
+      function tone(frequency, duration, type = 'sine', volume = .055, delay = 0) {
+        if (muted) return;
+        ensureAudio();
+        const osc = audio.createOscillator();
+        const gain = audio.createGain();
+        const now = audio.currentTime + delay;
+        osc.type = type;
+        osc.frequency.setValueAtTime(frequency, now);
+        gain.gain.setValueAtTime(.0001, now);
+        gain.gain.exponentialRampToValueAtTime(volume, now + .015);
+        gain.gain.exponentialRampToValueAtTime(.0001, now + duration);
+        osc.connect(gain).connect(audio.destination);
+        osc.start(now);
+        osc.stop(now + duration + .03);
+      }
+
+      function sfx(kind) {
+        if (kind === 'jump') { tone(360, .12, 'triangle', .045); tone(520, .13, 'triangle', .035, .07); }
+        if (kind === 'corn') { tone(660, .08, 'sine', .05); tone(880, .12, 'sine', .045, .06); }
+        if (kind === 'hit') { tone(150, .18, 'sawtooth', .055); tone(95, .24, 'square', .035, .08); }
+        if (kind === 'boost') { tone(260, .12, 'sawtooth', .035); tone(520, .18, 'triangle', .04, .07); }
+        if (kind === 'over') { tone(260, .18, 'triangle', .05); tone(180, .3, 'triangle', .05, .15); }
+      }
+
+      function jump() {
+        if (state !== 'running') return;
+        if (player.jumps >= 2) return;
+        player.velocity = player.jumps === 0 ? 720 : 640;
+        player.jumps += 1;
+        sfx('jump');
+        if (player.jumps === 2) showToast('ÇİFT ZIPLAMA!');
+      }
+
+      function boost() {
+        if (state !== 'running' || turbo < 30 || boostTime > 0) return;
+        turbo -= 30;
+        boostTime = 1.15;
+        chaseGap = Math.min(chaseGap + 20, 210);
+        showToast('TURBO!');
+        sfx('boost');
+      }
+
+      function resetGame() {
+        score = 0;
+        cornCount = 0;
+        distance = 0;
+        speed = 430;
+        turbo = 100;
+        boostTime = 0;
+        spawnTimer = 1.3;
+        pickupTimer = .6;
+        chaseGap = clamp(width * .19, 118, 190);
+        hitCooldown = 0;
+        objects = [];
+        particles = [];
+        player.lift = 0;
+        player.velocity = 0;
+        player.jumps = 0;
+        elapsed = 0;
+        lastTime = performance.now();
+        overlay.hidden = true;
+        hud.hidden = false;
+        controls.hidden = false;
+        state = 'running';
+        startButton.textContent = 'TEKRAR KAÇ';
+        ensureAudio();
+        backgroundSong.muted = muted;
+        backgroundSong.play().catch(() => undefined);
+        updateHud();
+      }
+
+      function gameOver() {
+        state = 'gameover';
+        hud.hidden = true;
+        controls.hidden = true;
+        overlay.hidden = false;
+        const metres = Math.floor(distance);
+        if (metres > best) {
+          best = metres;
+          localStorage.setItem(STORAGE_KEY, String(best));
+          message.textContent = `Yeni rekor: ${metres} metre! Ninenin terlikleri bu hıza yetişemedi.`;
+        } else {
+          message.textContent = `${metres} metre kaçtın ve ${cornCount} mısır topladın. Nine bu kez seni yakaladı!`;
+        }
+        title.innerHTML = 'YAKALANDIN!<span>AMA ÇOK KOMİKTİ</span>';
+        bestLabel.textContent = `EN İYİ MESAFE · ${best} m`;
+        sfx('over');
+      }
+
+      function updateHud() {
+        scoreLabel.textContent = Math.floor(score).toLocaleString('tr-TR');
+        cornLabel.textContent = cornCount;
+        distanceLabel.textContent = `${Math.floor(distance)} m`;
+        turboLabel.textContent = `${Math.floor(turbo)}%`;
+      }
+
+      function update(dt) {
+        elapsed += dt;
+        speed = Math.min(760, 430 + distance * .72) + (boostTime > 0 ? 210 : 0);
+        distance += speed * dt * .032;
+        score += speed * dt * .018;
+        backgroundOffset += speed * dt;
+        boostTime = Math.max(0, boostTime - dt);
+        turbo = Math.min(100, turbo + dt * 5);
+        hitCooldown = Math.max(0, hitCooldown - dt);
+
+        player.velocity -= 1680 * dt;
+        player.lift += player.velocity * dt;
+        if (player.lift <= 0) {
+          player.lift = 0;
+          player.velocity = 0;
+          player.jumps = 0;
+        }
+
+        spawnTimer -= dt;
+        pickupTimer -= dt;
+        if (spawnTimer <= 0) {
+          if (spawnObstacle()) spawnTimer = Math.max(.72, 1.62 - distance / 1200) + Math.random() * .62;
+          else spawnTimer = .24;
+        }
+        if (pickupTimer <= 0) {
+          if (spawnCorn()) pickupTimer = 1.05 + Math.random() * 1.25;
+          else pickupTimer = .24;
+        }
+
+        const pr = playerRect();
+        objects.forEach((item) => {
+          item.x -= speed * dt;
+          if (!item.taken && rectsOverlap(pr, itemRect(item))) {
+            if (item.kind === 'corn') {
+              item.taken = true;
+              cornCount += 1;
+              score += 75;
+              turbo = Math.min(100, turbo + 18);
+              chaseGap = Math.min(chaseGap + 5, 210);
+              burst(item.x, item.y - item.w * .35, '#ffd231', 12);
+              showToast('+75 MISIR!');
+              sfx('corn');
+            } else if (hitCooldown <= 0 && boostTime <= 0) {
+              item.taken = true;
+              hitCooldown = 1.1;
+              chaseGap -= 37;
+              score = Math.max(0, score - 90);
+              burst(player.x, floorY - player.lift - 40, '#e34a2f', 14);
+              grandmaTalk();
+              sfx('hit');
+            }
+          }
+        });
+        objects = objects.filter((item) => !item.taken && item.x > -180);
+
+        particles.forEach((particle) => {
+          particle.x += particle.vx * dt;
+          particle.y += particle.vy * dt;
+          particle.vy += 420 * dt;
+          particle.life -= dt * 1.7;
+        });
+        particles = particles.filter((particle) => particle.life > 0);
+
+        speechTimer -= dt;
+        toastTimer -= dt;
+        if (speechTimer <= 0) speech.hidden = true;
+        if (toastTimer <= 0) toast.hidden = true;
+        if (chaseGap <= 55) gameOver();
+        updateHud();
+      }
+
+      function loop(now) {
+        const dt = Math.min(.035, Math.max(0, (now - lastTime) / 1000));
+        lastTime = now;
+        if (state === 'running') update(dt);
+        drawScene(now);
+        requestAnimationFrame(loop);
+      }
+
+      function togglePause() {
+        if (state === 'running') {
+          state = 'paused';
+          pauseButton.textContent = 'DEVAM';
+          backgroundSong.pause();
+          showToast('DURAKLATILDI');
+        } else if (state === 'paused') {
+          state = 'running';
+          pauseButton.textContent = 'DUR';
+          lastTime = performance.now();
+          toast.hidden = true;
+          if (!muted) backgroundSong.play().catch(() => undefined);
+        }
+      }
+
+      startButton.addEventListener('click', () => {
+        title.innerHTML = 'HOROZUMU KAÇIRDILAR<span>ÇATI KAÇIŞI</span>';
+        message.textContent = 'Havalı horoz çatılara kaçtı! Engellerin üzerinden zıpla, mısırları topla ve öfkeli nineden uzaklaş.';
+        resetGame();
+      });
+      pauseButton.addEventListener('click', togglePause);
+      soundButton.addEventListener('click', () => {
+        muted = !muted;
+        soundButton.textContent = muted ? 'SES KAPALI' : 'SES AÇIK';
+        soundButton.setAttribute('aria-pressed', String(muted));
+        backgroundSong.muted = muted;
+        if (!muted) {
+          ensureAudio();
+          if (state === 'running' || state === 'gameover') backgroundSong.play().catch(() => undefined);
+        }
+      });
+      jumpButton.addEventListener('pointerdown', (event) => { event.preventDefault(); jump(); });
+      boostButton.addEventListener('pointerdown', (event) => { event.preventDefault(); boost(); });
+      canvas.addEventListener('pointerdown', (event) => { event.preventDefault(); jump(); });
+      window.addEventListener('keydown', (event) => {
+        if (['Space', 'ArrowUp', 'KeyW'].includes(event.code)) { event.preventDefault(); jump(); }
+        if (['ShiftLeft', 'ShiftRight', 'KeyX'].includes(event.code)) { event.preventDefault(); boost(); }
+        if (event.code === 'KeyP' || event.code === 'Escape') togglePause();
+      });
+      window.addEventListener('resize', fit);
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden && state === 'running') togglePause();
+      });
+
+      fit();
+      bestLabel.textContent = `EN İYİ MESAFE · ${best} m`;
+      Promise.all(Object.values(images).map((image) => image.decode().catch(() => undefined))).then(() => drawScene(0));
+      requestAnimationFrame((now) => { lastTime = now; loop(now); });
+    })();
+  </script>
+</body>
+</html>
