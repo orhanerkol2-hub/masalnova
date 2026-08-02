@@ -155,7 +155,7 @@ const jsonLd = [
     .fullscreen-link { justify-content: center; flex: 1; min-height: 44px; }
     .back-link { display: none; }
     .player-shell { touch-action: pan-y; }
-    .player-shell iframe { height: min(660px, calc(100dvh - 184px)); min-height: 470px; pointer-events: none; }
+    .player-shell iframe { height: min(660px, calc(100dvh - 184px)); min-height: 470px; pointer-events: auto; touch-action: pan-y; }
     .player-shell:fullscreen { touch-action: none; }
     .player-shell:fullscreen iframe { height: 100%; min-height: 100%; pointer-events: auto; }
     .game-info-grid { grid-template-columns: 1fr; }
