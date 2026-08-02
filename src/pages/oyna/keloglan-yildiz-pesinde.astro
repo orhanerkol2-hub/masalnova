@@ -78,10 +78,6 @@ const jsonLd = [
           loading="eager"
           data-game-frame
         ></iframe>
-        <a class="mobile-game-launch" href="/games/keloglan-yildiz-pesinde/index.html" data-fullscreen-trigger>
-          <i class="ph ph-arrows-out" aria-hidden="true"></i>
-          <span><strong>Tam ekran oyna</strong><small>Dokun ve oyunu aç</small></span>
-        </a>
       </section>
 
       <p class="local-note">
@@ -126,10 +122,8 @@ const jsonLd = [
   .fullscreen-link:hover, .back-link:hover { transform: translateY(-2px); }
   .player-shell { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.24); border-radius: 26px; background: #10213b; box-shadow: 0 28px 68px rgba(0,15,66,.38); }
   .player-shell iframe { display: block; width: 100%; height: min(720px, calc(100dvh - 132px)); min-height: 560px; border: 0; background: #10213b; }
-  .mobile-game-launch { display: none; }
   .player-shell:fullscreen { width: 100vw; height: 100dvh; border: 0; border-radius: 0; background: #10213b; box-shadow: none; }
   .player-shell:fullscreen iframe { width: 100%; height: 100%; min-height: 100%; pointer-events: auto; }
-  .player-shell:fullscreen .mobile-game-launch { display: none; }
   :global(html.game-fullscreen-active), :global(body.game-fullscreen-active) { height: 100%; overflow: hidden !important; overscroll-behavior: none; }
   .local-note { display: flex; align-items: flex-start; gap: 9px; margin: 14px 4px 0; color: rgba(255,255,255,.74); font-size: .78rem; }
   .local-note i { flex: 0 0 auto; margin-top: 2px; color: #ffd957; font-size: 1rem; }
@@ -162,11 +156,6 @@ const jsonLd = [
     .back-link { display: none; }
     .player-shell { touch-action: pan-y; }
     .player-shell iframe { height: min(660px, calc(100dvh - 184px)); min-height: 470px; pointer-events: none; }
-    .mobile-game-launch { position: absolute; left: 50%; bottom: 22px; z-index: 4; display: inline-flex; align-items: center; gap: 10px; min-width: 210px; padding: 12px 18px; border: 1px solid rgba(255,255,255,.72); border-radius: 999px; background: #ffd45b; color: #593600; box-shadow: 0 12px 30px rgba(0,15,66,.34); translate: -50% 0; touch-action: pan-y; }
-    .mobile-game-launch > i { flex: 0 0 auto; font-size: 1.25rem; }
-    .mobile-game-launch > span { display: grid; text-align: left; line-height: 1.05; }
-    .mobile-game-launch strong { font-size: .84rem; }
-    .mobile-game-launch small { margin-top: 4px; font-size: .67rem; font-weight: 800; opacity: .72; }
     .player-shell:fullscreen { touch-action: none; }
     .player-shell:fullscreen iframe { height: 100%; min-height: 100%; pointer-events: auto; }
     .game-info-grid { grid-template-columns: 1fr; }
