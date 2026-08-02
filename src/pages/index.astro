@@ -6,8 +6,13 @@ import {
   ageLabel,
   storyCategoryLabel,
 } from '../data/taxonomy';
+import {
+  dateKeyInTimeZone,
+  dailyRotationIndex,
+} from '../lib/daily-story';
 
 const stories = await getStories();
+const buildNow = new Date();
 
 const moodForStory = (story: (typeof stories)[number]) => {
   const signals = [...story.data.categories, ...story.data.themes].join(' ').toLocaleLowerCase('tr');
@@ -36,9 +41,29 @@ const carouselFeed = storiesWithCovers.map((story) => ({
 const carouselWindowSize = Math.min(24, carouselFeed.length);
 const initialCarouselFeed = carouselFeed.slice(0, carouselWindowSize);
 const serializedCarouselFeed = JSON.stringify(carouselFeed).replaceAll('<', '\\u003c');
-const tonightStory = storiesWithCovers.find((story) => story.data.isTodayStory)
-  ?? storiesWithCovers.find((story) => moodForStory(story) === 'sakin')
-  ?? latestStories[0];
+const preferredDailyStoryId = 'keloglan-ve-yildiz-kervani';
+const preferredDailyStory = storiesWithCovers.find((story) => story.id === preferredDailyStoryId);
+const dailyStoryCandidates = [
+  ...(preferredDailyStory ? [preferredDailyStory] : []),
+  ...storiesWithCovers
+    .filter((story) => story.id !== preferredDailyStoryId)
+    .slice(0, 59),
+];
+const buildDateKey = dateKeyInTimeZone(buildNow);
+const tonightStory = dailyStoryCandidates[
+  dailyRotationIndex(buildDateKey, dailyStoryCandidates.length)
+] ?? latestStories[0];
+const dailyStoryFeed = dailyStoryCandidates.map((story) => ({
+  id: story.id,
+  title: story.data.title,
+  shortDescription: story.data.shortDescription,
+  coverImage: story.data.coverImage,
+  altText: story.data.altText ?? `${story.data.title} resimli masal kapağı`,
+  age: story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : 'Her yaş',
+  readingTime: story.data.readingTime,
+  moodLabel: moodForStory(story) === 'sakin' ? 'Sakin' : 'MasalNova seçkisi',
+}));
+const serializedDailyStoryFeed = JSON.stringify(dailyStoryFeed).replaceAll('<', '\\u003c');
 
 const classicStoryIds = [
   'kirmizi-baslikli-kiz',
@@ -90,8 +115,8 @@ const categoryLinks = [
 const buildDate = new Intl.DateTimeFormat('tr-TR', {
   day: 'numeric',
   month: 'long',
-  timeZone: 'Europe/Istanbul',
-}).format(new Date());
+  timeZone: 'Europe/Berlin',
+}).format(buildNow);
 
 const faqs = [
   {
@@ -151,9 +176,9 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
   title="MasalNova: Masal Oku, Uyku Masalları ve Çocuk Hikâyeleri"
   description="MasalNova’da çocuklar için yüzlerce ücretsiz Türkçe masal okuyun. Uyku öncesi masalları ve eğitici hikâyeleri yaşa, süreye ve ruh hâline göre keşfedin."
   path="/"
-  image={latestStories[0]?.data.coverImage}
-  imageAlt={latestStories[0] ? `${latestStories[0].data.title} resimli masal kapağı` : 'MasalNova çocuk masalları'}
-  preloadImage={latestStories[0]?.data.coverImage}
+  image={tonightStory?.data.coverImage ?? latestStories[0]?.data.coverImage}
+  imageAlt={tonightStory ? `${tonightStory.data.title} resimli masal kapağı` : 'MasalNova çocuk masalları'}
+  preloadImage={tonightStory?.data.coverImage ?? latestStories[0]?.data.coverImage}
   jsonLd={homeJsonLd}
   activeNav="home"
 >
@@ -162,8 +187,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
       <h1 class="mobile-page-title">MasalNova’da bugün hangi masalı okuyalım?</h1>
 
       {tonightStory && (
-        <section class="home-hero-m" aria-label="Bu akşamın masalı">
-          <a class="home-hero-m-link" href={`/masallar/${tonightStory.id}/`}>
+        <section class="home-hero-m" aria-label="Bu akşamın masalı" data-daily-story-root>
+          <a class="home-hero-m-link" href={`/masallar/${tonightStory.id}/`} data-daily-story-link>
             <img
               src={tonightStory.data.coverImage}
               alt={tonightStory.data.altText ?? `${tonightStory.data.title} masal kapağı`}
@@ -172,13 +197,14 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               loading="eager"
               fetchpriority="high"
               decoding="async"
+              data-daily-story-image
             />
             <div class="home-hero-m-copy">
               <p class="home-hero-m-kicker">
                 <i class="ph-fill ph-moon-stars" aria-hidden="true"></i> Bu akşamın masalı
               </p>
-              <h2>{tonightStory.data.title}</h2>
-              <p class="home-hero-m-meta">
+              <h2 data-daily-story-title>{tonightStory.data.title}</h2>
+              <p class="home-hero-m-meta" data-daily-story-meta="mobile">
                 {tonightStory.data.ageGroups[0] ? ageLabel(tonightStory.data.ageGroups[0]) : 'Her yaş'} · {tonightStory.data.readingTime} dk
               </p>
               <span class="home-hero-m-cta">Masalı oku <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
@@ -188,8 +214,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
       )}
 
       {tonightStory && (
-        <section class="desktop-editorial" aria-label="Bu akşam için MasalNova seçkisi">
-          <a class="desktop-editorial-hero" href={`/masallar/${tonightStory.id}/`}>
+        <section class="desktop-editorial" aria-label="Bu akşam için MasalNova seçkisi" data-daily-story-root>
+          <a class="desktop-editorial-hero" href={`/masallar/${tonightStory.id}/`} data-daily-story-link>
             <img
               src={tonightStory.data.coverImage}
               alt={tonightStory.data.altText ?? `${tonightStory.data.title} masal kapağı`}
@@ -198,13 +224,14 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               loading="eager"
               fetchpriority="high"
               decoding="async"
+              data-daily-story-image
             />
             <span class="desktop-editorial-shade" aria-hidden="true"></span>
             <div class="desktop-editorial-copy">
               <p><i class="ph-fill ph-moon-stars" aria-hidden="true"></i> Bu akşamın masalı</p>
-              <h1>{tonightStory.data.title}</h1>
-              <span class="desktop-editorial-description">{tonightStory.data.shortDescription}</span>
-              <small>
+              <h1 data-daily-story-title>{tonightStory.data.title}</h1>
+              <span class="desktop-editorial-description" data-daily-story-description>{tonightStory.data.shortDescription}</span>
+              <small data-daily-story-meta="desktop">
                 {tonightStory.data.ageGroups[0] ? ageLabel(tonightStory.data.ageGroups[0]) : 'Her yaş'} · {tonightStory.data.readingTime} dk · {moodForStory(tonightStory) === 'sakin' ? 'Sakin' : 'MasalNova seçkisi'}
               </small>
               <strong>Masalı oku <i class="ph ph-arrow-right" aria-hidden="true"></i></strong>
@@ -256,6 +283,13 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
         </section>
       )}
 
+      <script
+        id="home-daily-story-feed"
+        type="application/json"
+        is:inline
+        set:html={serializedDailyStoryFeed}
+      ></script>
+
       <section class="welcome" aria-labelledby="welcome-title">
         <div class="welcome-heading">
           {tonightStory?.data.coverImage && (
@@ -266,6 +300,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               width="64"
               height="64"
               loading="eager"
+              data-daily-story-image
             />
           )}
           <div>
@@ -610,6 +645,21 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     toggleFavorite,
     type AppState,
   } from '../lib/app-state';
+  import {
+    dateKeyInTimeZone,
+    dailyRotationIndex,
+  } from '../lib/daily-story';
+
+  type DailyStory = {
+    id: string;
+    title: string;
+    shortDescription: string;
+    coverImage: string;
+    altText: string;
+    age: string;
+    readingTime: number;
+    moodLabel: string;
+  };
 
   type CarouselStory = {
     id: string;
@@ -631,6 +681,51 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
   const discoveryForm = document.querySelector<HTMLFormElement>('.discovery-bar');
   const storySearchInput = document.getElementById('home-story-search') as HTMLInputElement | null;
   const carouselFeedElement = document.getElementById('home-story-carousel-feed');
+  const dailyStoryFeedElement = document.getElementById('home-daily-story-feed');
+
+  let dailyStoryFeed: DailyStory[] = [];
+  try {
+    const parsedFeed = JSON.parse(dailyStoryFeedElement?.textContent ?? '[]');
+    if (Array.isArray(parsedFeed)) dailyStoryFeed = parsedFeed;
+  } catch {
+    dailyStoryFeed = [];
+  }
+
+  let activeDailyStoryDate = '';
+
+  function renderDailyStory() {
+    const dateKey = dateKeyInTimeZone();
+    if (!dailyStoryFeed.length || activeDailyStoryDate === dateKey) return;
+
+    const story = dailyStoryFeed[dailyRotationIndex(dateKey, dailyStoryFeed.length)];
+    if (!story) return;
+
+    const href = `/masallar/${story.id}/`;
+    document.querySelectorAll<HTMLElement>('[data-daily-story-root]').forEach((root) => {
+      root.dataset.dailyStoryId = story.id;
+    });
+    document.querySelectorAll<HTMLAnchorElement>('[data-daily-story-link]').forEach((link) => {
+      link.href = href;
+    });
+    document.querySelectorAll<HTMLImageElement>('[data-daily-story-image]').forEach((image) => {
+      image.src = story.coverImage;
+      image.alt = story.altText;
+    });
+    document.querySelectorAll<HTMLElement>('[data-daily-story-title]').forEach((title) => {
+      title.textContent = story.title;
+    });
+    document.querySelectorAll<HTMLElement>('[data-daily-story-description]').forEach((description) => {
+      description.textContent = story.shortDescription;
+    });
+    document.querySelectorAll<HTMLElement>('[data-daily-story-meta]').forEach((meta) => {
+      const sharedMeta = `${story.age} · ${story.readingTime} dk`;
+      meta.textContent = meta.dataset.dailyStoryMeta === 'mobile'
+        ? sharedMeta
+        : `${sharedMeta} · ${story.moodLabel}`;
+    });
+
+    activeDailyStoryDate = dateKey;
+  }
 
   let carouselFeed: CarouselStory[] = [];
   try {
@@ -989,9 +1084,12 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     dateTarget.textContent = new Intl.DateTimeFormat('tr-TR', {
       day: 'numeric',
       month: 'long',
-      timeZone: 'Europe/Istanbul',
+      timeZone: 'Europe/Berlin',
     }).format(new Date());
   }
+
+  renderDailyStory();
+  window.setInterval(renderDailyStory, 60_000);
 
   const initialState = loadState();
   applyPreferencesFromState(initialState);
