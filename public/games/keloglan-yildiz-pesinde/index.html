@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="hud-actions">
-        <button type="button" class="btn btn-ghost" data-music-toggle aria-label="Müziği kapat" aria-pressed="false">🔊</button>
+        <button type="button" class="btn btn-ghost" data-music-toggle aria-label="Sesi kapat" aria-pressed="false">🔊</button>
         <button type="button" class="btn btn-ghost" data-pause aria-label="Oyunu duraklat">Ⅱ</button>
       </div>
     </div>
@@ -673,6 +673,7 @@
     let entities = [];
     let lastTime = performance.now();
     let highscore = 0;
+    let sfxContext = null;
 
     try {
       highscore = Number.parseInt(
@@ -741,7 +742,7 @@
       musicButton.textContent = music.muted ? '🔇' : '🔊';
       musicButton.setAttribute(
         'aria-label',
-        music.muted ? 'Müziği aç' : 'Müziği kapat',
+        music.muted ? 'Sesi aç' : 'Sesi kapat',
       );
       musicButton.setAttribute('aria-pressed', String(music.muted));
     };
@@ -753,6 +754,112 @@
           // Browsers may postpone audio until the next direct interaction.
         });
       }
+    };
+
+    const ensureSfx = () => {
+      if (music.muted) {
+        return;
+      }
+      if (sfxContext) {
+        if (sfxContext.state === 'suspended') {
+          sfxContext.resume().catch(() => {});
+        }
+        return;
+      }
+      const AudioCtor = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtor) {
+        return;
+      }
+      try {
+        sfxContext = new AudioCtor();
+      } catch {
+        sfxContext = null;
+      }
+    };
+
+    const playTone = (from, to, duration, type = 'sine', volume = 0.04, delay = 0) => {
+      if (music.muted) {
+        return;
+      }
+      ensureSfx();
+      if (!sfxContext) {
+        return;
+      }
+      const start = sfxContext.currentTime + delay;
+      const oscillator = sfxContext.createOscillator();
+      const gain = sfxContext.createGain();
+      oscillator.type = type;
+      oscillator.frequency.setValueAtTime(Math.max(40, from), start);
+      oscillator.frequency.exponentialRampToValueAtTime(Math.max(40, to), start + duration);
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.exponentialRampToValueAtTime(volume, start + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+      oscillator.connect(gain).connect(sfxContext.destination);
+      oscillator.start(start);
+      oscillator.stop(start + duration + 0.025);
+    };
+
+    const playNoise = (duration, volume, filterType, cutoff, delay = 0) => {
+      if (music.muted) {
+        return;
+      }
+      ensureSfx();
+      if (!sfxContext) {
+        return;
+      }
+      const length = Math.max(1, Math.ceil(sfxContext.sampleRate * duration));
+      const buffer = sfxContext.createBuffer(1, length, sfxContext.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let index = 0; index < length; index += 1) {
+        data[index] = (Math.random() * 2 - 1) * (1 - index / length);
+      }
+      const source = sfxContext.createBufferSource();
+      const filter = sfxContext.createBiquadFilter();
+      const gain = sfxContext.createGain();
+      const start = sfxContext.currentTime + delay;
+      source.buffer = buffer;
+      filter.type = filterType;
+      filter.frequency.setValueAtTime(cutoff, start);
+      gain.gain.setValueAtTime(volume, start);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+      source.connect(filter).connect(gain).connect(sfxContext.destination);
+      source.start(start);
+    };
+
+    const playStartSfx = () => {
+      playTone(262, 392, 0.12, 'triangle', 0.038);
+      playTone(392, 587, 0.14, 'triangle', 0.04, 0.1);
+      playTone(587, 784, 0.18, 'sine', 0.035, 0.2);
+    };
+
+    const playJumpSfx = (jumpNumber) => {
+      playTone(180 + jumpNumber * 42, 430 + jumpNumber * 72, 0.12, 'triangle', 0.045);
+      playNoise(0.055, 0.01, 'highpass', 1100);
+    };
+
+    const playLandSfx = () => {
+      playTone(135, 68, 0.09, 'sine', 0.034);
+      playNoise(0.075, 0.022, 'lowpass', 520);
+    };
+
+    const playStarSfx = () => {
+      playTone(784, 988, 0.1, 'sine', 0.04);
+      playTone(1047, 1319, 0.13, 'sine', 0.034, 0.07);
+    };
+
+    const playHitSfx = () => {
+      playNoise(0.16, 0.048, 'lowpass', 620);
+      playTone(120, 52, 0.18, 'square', 0.035);
+    };
+
+    const playLevelSfx = () => {
+      playTone(440, 554, 0.11, 'triangle', 0.035);
+      playTone(554, 740, 0.15, 'triangle', 0.038, 0.09);
+    };
+
+    const playGameOverSfx = () => {
+      playTone(330, 220, 0.18, 'triangle', 0.036);
+      playTone(220, 110, 0.3, 'sine', 0.04, 0.15);
     };
 
     const startRun = () => {
@@ -770,6 +877,7 @@
       clearEntities();
       music.currentTime = 0;
       playMusic();
+      playStartSfx();
       hero.classList.remove('is-menu', 'is-hit');
       hero.style.transform = '';
       overlay.hidden = true;
@@ -837,6 +945,7 @@
         );
       }
       jumpsUsed += 1;
+      playJumpSfx(jumpsUsed);
       updateHud();
       dust.classList.remove('is-running');
     };
@@ -894,6 +1003,7 @@
     const collect = (entity) => {
       entity.hit = true;
       score += 10;
+      playStarSfx();
       showFeedback('+10');
       updateHud();
     };
@@ -901,6 +1011,7 @@
     const gameOver = () => {
       mode = 'gameover';
       music.pause();
+      playGameOverSfx();
       highscore = Math.max(highscore, score);
       try {
         localStorage.setItem(
@@ -922,6 +1033,7 @@
       }
       entity.hit = true;
       lives -= 1;
+      playHitSfx();
       invulnerable = 1.35;
       hero.classList.add('is-hit');
       velocityY = Math.max(velocityY, 350 * stageMetrics().scale);
@@ -949,6 +1061,7 @@
         scale *
         speedMultiplier;
       if (previousDifficulty.level !== difficulty.level) {
+        playLevelSfx();
         showFeedback(`SEVİYE ${difficulty.level}`);
         updateHud();
       }
@@ -962,6 +1075,7 @@
         jumpsUsed = 0;
         dust.classList.add('is-running');
         if (landedAfterJump) {
+          playLandSfx();
           updateHud();
         }
       }
@@ -1084,6 +1198,9 @@
       event.stopPropagation();
       music.muted = !music.muted;
       updateMusicButton();
+      if (!music.muted) {
+        playTone(330, 440, 0.1, 'sine', 0.035);
+      }
     });
     stage.addEventListener('pointerdown', (event) => {
       if (!event.target.closest('button')) {

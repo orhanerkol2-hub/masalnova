@@ -462,6 +462,8 @@
       let toastTimer = 0;
       let soundOn = true;
       let audioContext = null;
+      let lastImpactSfxAt = 0;
+      let lastStretchSfxAt = 0;
       let bestScore = 0;
 
       try {
@@ -617,6 +619,7 @@
       }
 
       function startGame() {
+        playStartCue();
         score = 0;
         levelIndex = 0;
         startLevel();
@@ -777,7 +780,8 @@
         pointerId = null;
         shotsLeft -= 1;
         updateHud();
-        playTone(330, .08, 'triangle', .07);
+        playSweep(220, 720, .14, 'triangle', .065);
+        playNoise(.09, .022, 'highpass', 900);
         announce(`Tohum gönderildi. ${shotsLeft} tohum kaldı.`);
       }
 
@@ -810,6 +814,12 @@
         }
         ball.x = layout.anchor.x + dx;
         ball.y = layout.anchor.y + dy;
+        const now = performance.now();
+        if (dragging && now - lastStretchSfxAt > 110) {
+          const pull = Math.min(maximum, Math.hypot(dx, dy));
+          playTone(115 + pull * 1.25, .045, 'triangle', .014);
+          lastStretchSfxAt = now;
+        }
       }
 
       canvas.addEventListener('pointerdown', (event) => {
@@ -820,6 +830,7 @@
         if (!nearBall && !nearSling) return;
         event.preventDefault();
         ensureAudio();
+        playTone(150, .05, 'triangle', .018);
         pointerId = event.pointerId;
         dragging = true;
         canvas.setPointerCapture(event.pointerId);
@@ -935,6 +946,63 @@
         oscillator.stop(start + duration + .02);
       }
 
+      function playSweep(from, to, duration, type = 'sine', volume = .05, delay = 0) {
+        if (!soundOn) return;
+        ensureAudio();
+        if (!audioContext) return;
+        const start = audioContext.currentTime + delay;
+        const oscillator = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        oscillator.type = type;
+        oscillator.frequency.setValueAtTime(Math.max(40, from), start);
+        oscillator.frequency.exponentialRampToValueAtTime(Math.max(40, to), start + duration);
+        gain.gain.setValueAtTime(.0001, start);
+        gain.gain.exponentialRampToValueAtTime(volume, start + .012);
+        gain.gain.exponentialRampToValueAtTime(.0001, start + duration);
+        oscillator.connect(gain).connect(audioContext.destination);
+        oscillator.start(start);
+        oscillator.stop(start + duration + .025);
+      }
+
+      function playNoise(duration, volume, filterType, cutoff, delay = 0) {
+        if (!soundOn) return;
+        ensureAudio();
+        if (!audioContext) return;
+        const length = Math.max(1, Math.ceil(audioContext.sampleRate * duration));
+        const buffer = audioContext.createBuffer(1, length, audioContext.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let index = 0; index < length; index += 1) {
+          data[index] = (Math.random() * 2 - 1) * (1 - index / length);
+        }
+        const source = audioContext.createBufferSource();
+        const filter = audioContext.createBiquadFilter();
+        const gain = audioContext.createGain();
+        const start = audioContext.currentTime + delay;
+        source.buffer = buffer;
+        filter.type = filterType;
+        filter.frequency.setValueAtTime(cutoff, start);
+        gain.gain.setValueAtTime(volume, start);
+        gain.gain.exponentialRampToValueAtTime(.0001, start + duration);
+        source.connect(filter).connect(gain).connect(audioContext.destination);
+        source.start(start);
+      }
+
+      function playStartCue() {
+        playSweep(220, 330, .11, 'triangle', .035);
+        playSweep(330, 494, .13, 'triangle', .038, .09);
+        playSweep(494, 659, .17, 'sine', .035, .19);
+      }
+
+      function playImpact(speed, kind = 'ground') {
+        const now = performance.now();
+        if (speed < 120 || now - lastImpactSfxAt < 70) return;
+        lastImpactSfxAt = now;
+        const strength = clamp((speed - 120) / 850, 0, 1);
+        const base = kind === 'stone' ? 95 : kind === 'wood' ? 155 : 120;
+        playSweep(base + strength * 55, base * .58, .065 + strength * .045, 'triangle', .018 + strength * .026);
+        playNoise(.055 + strength * .06, .009 + strength * .02, 'lowpass', kind === 'stone' ? 560 : 760);
+      }
+
       function playSuccess() {
         playTone(392, .2, 'sine', .045, 0);
         playTone(523, .22, 'sine', .05, .13);
@@ -970,6 +1038,7 @@
         showToast('+100 · ÇİÇEK AÇTI!');
         playTone(523, .11, 'sine', .055);
         playTone(659, .15, 'sine', .045, .08);
+        playNoise(.08, .014, 'highpass', 1400);
         const grown = layout.targets.filter((item) => item.grown).length;
         announce(`Çiçek açtı. ${grown} / ${layout.targets.length} saksı tamamlandı.`);
         if (grown === layout.targets.length && completionTimer === 0) {
@@ -996,7 +1065,8 @@
             score += rect.kind === 'stone' ? 40 : 25;
             spawnParticles(rect.x + rect.w / 2, rect.y + rect.h / 2, rect.kind === 'stone' ? ['#9c9382', '#c8bca5'] : ['#9b6034', '#d99b4f'], 11);
             showToast(rect.kind === 'stone' ? '+40 · TAŞ YOL AÇTI' : '+25 · ÇİT AÇILDI', '#8a5a25');
-            playTone(185, .09, 'triangle', .045);
+            playSweep(rect.kind === 'stone' ? 150 : 230, 75, .12, 'triangle', .045);
+            playNoise(.13, .035, 'lowpass', rect.kind === 'stone' ? 520 : 900);
             updateHud();
             return;
           }
@@ -1027,6 +1097,7 @@
           ball.vx -= (1 + restitution) * velocityAlongNormal * nx;
           ball.vy -= (1 + restitution) * velocityAlongNormal * ny;
           ball.vx *= .96;
+          playImpact(speed, rect.kind);
         }
       }
 
@@ -1087,7 +1158,10 @@
         let grounded = false;
         if (ball.y + ball.radius > layout.ground) {
           ball.y = layout.ground - ball.radius;
-          if (ball.vy > 0) ball.vy = -ball.vy * .34;
+          if (ball.vy > 0) {
+            playImpact(ball.vy, 'ground');
+            ball.vy = -ball.vy * .34;
+          }
           ball.vx *= .965;
           grounded = true;
           if (Math.abs(ball.vy) < 22) ball.vy = 0;
