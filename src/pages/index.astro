@@ -187,6 +187,75 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
         </section>
       )}
 
+      {tonightStory && (
+        <section class="desktop-editorial" aria-label="Bu akşam için MasalNova seçkisi">
+          <a class="desktop-editorial-hero" href={`/masallar/${tonightStory.id}/`}>
+            <img
+              src={tonightStory.data.coverImage}
+              alt={tonightStory.data.altText ?? `${tonightStory.data.title} masal kapağı`}
+              width="960"
+              height="720"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+            <span class="desktop-editorial-shade" aria-hidden="true"></span>
+            <div class="desktop-editorial-copy">
+              <p><i class="ph-fill ph-moon-stars" aria-hidden="true"></i> Bu akşamın masalı</p>
+              <h1>{tonightStory.data.title}</h1>
+              <span class="desktop-editorial-description">{tonightStory.data.shortDescription}</span>
+              <small>
+                {tonightStory.data.ageGroups[0] ? ageLabel(tonightStory.data.ageGroups[0]) : 'Her yaş'} · {tonightStory.data.readingTime} dk · {moodForStory(tonightStory) === 'sakin' ? 'Sakin' : 'MasalNova seçkisi'}
+              </small>
+              <strong>Masalı oku <i class="ph ph-arrow-right" aria-hidden="true"></i></strong>
+            </div>
+          </a>
+
+          <aside class="desktop-editorial-side" aria-label="Kısayollar">
+            {continueStories[0] && (
+              <a class="desktop-resume-card" href={`/masallar/${continueStories[0].id}/`} data-continue-story={continueStories[0].id}>
+                <img
+                  src={continueStories[0].data.coverImage}
+                  alt=""
+                  width="180"
+                  height="180"
+                  loading="eager"
+                />
+                <span>
+                  <small><i class="ph ph-bookmark-simple" aria-hidden="true"></i> Kaldığın yer</small>
+                  <strong>{continueStories[0].data.title}</strong>
+                  <span class="desktop-resume-progress" aria-hidden="true"><i data-story-progress></i></span>
+                  <em data-progress-label>Masalı aç</em>
+                </span>
+              </a>
+            )}
+
+            <nav class="desktop-shortcuts" aria-label="MasalNova bölümleri">
+              <a class="is-primary" href="/videolar/">
+                <i class="ph-fill ph-play-circle" aria-hidden="true"></i>
+                <strong>Videolar</strong>
+                <span>Masal videoları</span>
+              </a>
+              <a href="/oyunlar/">
+                <i class="ph ph-game-controller" aria-hidden="true"></i>
+                <strong>Oyunlar</strong>
+                <span>Mini oyunlar</span>
+              </a>
+              <a href="/boyama/">
+                <i class="ph ph-paint-brush-broad" aria-hidden="true"></i>
+                <strong>Boyama</strong>
+                <span>Yazdır veya boya</span>
+              </a>
+              <a href="/kitapligim/">
+                <i class="ph ph-book-bookmark" aria-hidden="true"></i>
+                <strong>Kitaplığım</strong>
+                <span>Favoriler, ilerleme</span>
+              </a>
+            </nav>
+          </aside>
+        </section>
+      )}
+
       <section class="welcome" aria-labelledby="welcome-title">
         <div class="welcome-heading">
           {tonightStory?.data.coverImage && (
@@ -948,9 +1017,167 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
   .home-kid-nav,
   .home-hero-m { display: none; }
 
+  .desktop-editorial {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(290px, .85fr);
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  .desktop-editorial-hero {
+    position: relative;
+    min-height: 398px;
+    overflow: hidden;
+    border-radius: 27px;
+    background: #102e78;
+    box-shadow: 0 20px 48px rgba(21,42,93,.15);
+  }
+
+  .desktop-editorial-hero > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+  }
+
+  .desktop-editorial-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(7,31,91,.94) 0%, rgba(7,31,91,.75) 46%, rgba(7,31,91,.08) 82%);
+  }
+
+  .desktop-editorial-copy {
+    position: relative;
+    z-index: 1;
+    width: min(64%, 540px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(28px, 4vw, 48px);
+    color: #fff;
+  }
+
+  .desktop-editorial-copy > p {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #ffd451;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+
+  .desktop-editorial-copy h1 {
+    margin-top: 10px;
+    font-size: clamp(2.15rem, 3.8vw, 3.3rem);
+    letter-spacing: -.055em;
+    text-wrap: pretty;
+  }
+
+  .desktop-editorial-description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 15px;
+    color: rgba(255,255,255,.88);
+    font-size: .96rem;
+    font-weight: 650;
+    line-height: 1.55;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .desktop-editorial-copy small {
+    margin-top: 13px;
+    color: rgba(255,255,255,.84);
+    font-size: .78rem;
+    font-weight: 850;
+  }
+
+  .desktop-editorial-copy > strong {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0 20px;
+    border-radius: 15px;
+    background: var(--app-yellow);
+    color: #17336d;
+    font-size: .88rem;
+    font-weight: 900;
+  }
+
+  .desktop-editorial-side { display: grid; grid-template-rows: auto 1fr; gap: 14px; }
+
+  .desktop-resume-card {
+    min-height: 112px;
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+    padding: 11px;
+    border: 1px solid #e1dccf;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(23,43,92,.08);
+  }
+
+  .desktop-resume-card > img { width: 96px; height: 88px; border-radius: 14px; object-fit: cover; }
+  .desktop-resume-card > span { min-width: 0; display: grid; }
+  .desktop-resume-card small { color: #7c8393; font-size: .66rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .desktop-resume-card small i { color: #c99516; }
+  .desktop-resume-card strong { overflow: hidden; margin-top: 4px; color: #123274; font-size: .9rem; text-overflow: ellipsis; white-space: nowrap; }
+  .desktop-resume-progress { height: 5px; overflow: hidden; margin-top: 9px; border-radius: 99px; background: #e8e6df; }
+  .desktop-resume-progress i { display: block; width: 0; height: 100%; border-radius: inherit; background: #53a45d; }
+  .desktop-resume-card em { margin-top: 4px; color: #71809a; font-size: .63rem; font-style: normal; font-weight: 800; }
+
+  .desktop-shortcuts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .desktop-shortcuts a {
+    min-height: 126px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 17px;
+    border: 1px solid #e1dccf;
+    border-radius: 20px;
+    background: #fff;
+    color: #163574;
+  }
+  .desktop-shortcuts a.is-primary { border-color: #1746c2; background: #2145bd; color: #fff; }
+  .desktop-shortcuts i { margin-bottom: 12px; color: #1749c1; font-size: 1.5rem; }
+  .desktop-shortcuts a.is-primary i { color: #ffd451; }
+  .desktop-shortcuts strong { font-size: .96rem; }
+  .desktop-shortcuts span { margin-top: 4px; color: #7b8498; font-size: .68rem; font-weight: 750; }
+  .desktop-shortcuts a.is-primary span { color: rgba(255,255,255,.72); }
+
   .welcome {
     padding-bottom: 30px;
     border-bottom: 1px solid #e6e0d4;
+  }
+
+  @media (min-width: 721px) {
+    .home-container { display: flex; flex-direction: column; }
+    .welcome { order: 1; padding-bottom: 0; border-bottom: 0; }
+    .welcome .welcome-heading { display: none; }
+    .discovery-bar {
+      position: fixed;
+      z-index: 125;
+      top: 12px;
+      right: clamp(28px, 4vw, 54px);
+      left: calc(var(--app-rail) + clamp(28px, 4vw, 54px));
+      margin-top: 0;
+    }
+    .desktop-editorial { order: 2; }
+    .latest-section { order: 3; }
+    :global(.ad-shell[data-ad-placement='home-after-latest']) { order: 4; }
+    .continue-section { order: 5; }
+    .category-section { order: 6; }
+    :global(.ad-shell[data-ad-placement='home-before-guide']) { order: 7; }
+    .home-guide { order: 8; }
+    .settings-section { order: 9; }
   }
 
   .welcome-heading {
@@ -1604,9 +1831,24 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     .discovery-bar { grid-template-columns: 1fr; }
     .preference-bar { justify-content: flex-start; }
     .latest-card { flex-basis: 232px; }
+    .desktop-editorial { grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); }
+    .desktop-editorial-copy { width: 72%; }
+    .desktop-shortcuts a { min-height: 118px; padding: 14px; }
+  }
+
+  @media (max-width: 1099px) and (min-width: 721px) {
+    .discovery-bar {
+      left: calc(var(--app-rail-compact) + 32px);
+      right: 32px;
+      grid-template-columns: minmax(240px, 1fr) auto;
+    }
+    .preference-chip { padding-inline: 10px; }
   }
 
   @media (max-width: 900px) {
+    .desktop-editorial { grid-template-columns: 1fr; }
+    .desktop-editorial-side { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); grid-template-rows: none; }
+    .desktop-shortcuts a { min-height: 108px; }
     .category-grid { grid-template-columns: 1fr; }
     .category-card { min-height: 94px; }
     .home-guide { grid-template-columns: 1fr; gap: 26px; }
@@ -1615,6 +1857,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
   @media (max-width: 720px) {
     .home-surface { min-height: calc(100dvh - 70px); }
     .home-container { padding: 25px 16px 52px; }
+    .desktop-editorial { display: none; }
     .home-kid-nav {
       display: none;
       margin-bottom: 26px;

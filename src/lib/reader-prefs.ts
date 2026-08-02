@@ -8,6 +8,7 @@ export interface ReaderPrefs {
   size: ReaderSize;
   font: ReaderFont;
   leading: ReaderLeading;
+  keepAwake: boolean;
 }
 
 export const STORAGE_KEY = 'masalnova:reader';
@@ -17,9 +18,12 @@ export const DEFAULT_PREFS: ReaderPrefs = {
   size: 'm',
   font: 'sans',
   leading: 'comfortable',
+  keepAwake: true,
 };
 
-const VALID: Record<keyof ReaderPrefs, readonly string[]> = {
+type ReaderVisualPref = Exclude<keyof ReaderPrefs, 'keepAwake'>;
+
+const VALID: Record<ReaderVisualPref, readonly string[]> = {
   theme: ['system', 'light', 'sepia', 'dark'],
   size: ['s', 'm', 'l', 'xl'],
   font: ['sans', 'serif'],
@@ -32,11 +36,14 @@ export function loadPrefs(): ReaderPrefs {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return prefs;
     const parsed = JSON.parse(raw) as Partial<ReaderPrefs>;
-    for (const key of Object.keys(VALID) as (keyof ReaderPrefs)[]) {
+    for (const key of Object.keys(VALID) as ReaderVisualPref[]) {
       const value = parsed[key];
       if (typeof value === 'string' && VALID[key].includes(value)) {
         (prefs as Record<string, string>)[key] = value;
       }
+    }
+    if (typeof parsed.keepAwake === 'boolean') {
+      prefs.keepAwake = parsed.keepAwake;
     }
   } catch {
     /* Use defaults when storage is unavailable or corrupt. */

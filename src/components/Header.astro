@@ -19,6 +19,12 @@ const links = [
   { href: '/kitapligim/', label: 'Kitaplığım', key: 'library', icon: 'book-bookmark' },
   { href: '/#ayarlar', label: 'Ayarlar', key: 'settings', icon: 'gear' },
 ];
+
+const railCategories = [
+  { href: '/masallar/kategori/uyku/', label: 'Uyku masalları', icon: 'moon-stars' },
+  { href: '/masallar/kategori/hayvan/', label: 'Hayvan masalları', icon: 'paw-print' },
+  { href: '/masallar/kategori/egitici/', label: 'Eğitici masallar', icon: 'student' },
+];
 ---
 
 <header class:list={['app-header', { 'app-header--tile-nav': activeKey === 'today' }]} data-app-header>
@@ -29,7 +35,7 @@ const links = [
     </a>
 
     <nav class="rail-nav" aria-label="Ana menü">
-      {links.map((item) => (
+      {links.filter((item) => item.key !== 'settings').map((item) => (
         <a
           href={item.href}
           class:list={['rail-link', { 'is-active': activeKey === item.key }]}
@@ -40,6 +46,23 @@ const links = [
         </a>
       ))}
     </nav>
+
+    <div class="rail-categories">
+      <p>Kategoriler</p>
+      <nav aria-label="Masal kategorileri">
+        {railCategories.map((item) => (
+          <a href={item.href}>
+            <i class={`ph ph-${item.icon}`} aria-hidden="true"></i>
+            <span>{item.label}</span>
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <a class="rail-settings" href="/#ayarlar">
+      <i class="ph ph-gear" aria-hidden="true"></i>
+      <span>Ayarlar</span>
+    </a>
 
     <div class="rail-note">
       <i class="ph ph-moon-stars" aria-hidden="true"></i>
@@ -288,10 +311,10 @@ const links = [
     width: var(--app-rail);
     display: flex;
     flex-direction: column;
-    padding: 30px 18px 22px;
-    border-right: 1px solid rgba(255,255,255,.13);
-    background: #062a8e;
-    box-shadow: 24px 0 70px rgba(0,20,91,.18);
+    padding: 26px 14px 18px;
+    border-right: 1px solid #e7e1d4;
+    background: #f8f4ea;
+    box-shadow: 18px 0 50px rgba(18,38,86,.08);
   }
 
   .rail-brand {
@@ -306,43 +329,92 @@ const links = [
 
   .rail-nav {
     display: grid;
-    gap: 9px;
-    margin-top: 58px;
+    gap: 6px;
+    margin-top: 34px;
   }
 
   .rail-link {
     display: flex;
     align-items: center;
     gap: 15px;
-    min-height: 52px;
+    min-height: 48px;
     padding: 0 16px;
     border: 1px solid transparent;
     border-radius: 17px;
-    color: rgba(255,255,255,.72);
-    font-size: .96rem;
+    color: #244379;
+    font-size: .9rem;
     font-weight: 800;
     transition: color .18s ease, background .18s ease, transform .18s ease;
   }
 
   .rail-link i { font-size: 1.42rem; }
-  .rail-link:hover { color: #fff; background: rgba(255,255,255,.09); transform: translateX(2px); }
+  .rail-link:hover { color: #093cbd; background: #fff; transform: translateX(2px); }
   .rail-link.is-active {
     color: #fff;
-    border-color: rgba(255,255,255,.15);
-    background: rgba(255,255,255,.14);
-    box-shadow: inset 3px 0 0 var(--app-yellow), 0 12px 24px rgba(2,19,78,.22);
+    border-color: #093cbd;
+    background: #173fbe;
+    box-shadow: 0 12px 24px rgba(9,60,189,.2);
   }
+
+  .rail-categories {
+    margin: 18px 4px 0;
+    padding-top: 16px;
+    border-top: 1px solid #e2dccf;
+  }
+
+  .rail-categories > p {
+    margin: 0 8px 8px;
+    color: #7b8190;
+    font-size: .63rem;
+    font-weight: 900;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+  }
+
+  .rail-categories nav { display: grid; gap: 2px; }
+
+  .rail-categories a {
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    border-radius: 12px;
+    color: #44557a;
+    font-size: .75rem;
+    font-weight: 800;
+  }
+
+  .rail-categories a i { color: #c39016; font-size: 1rem; }
+  .rail-categories a:hover { background: #fff; color: #123d9c; }
+
+  .rail-settings {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding: 0 13px;
+    border: 1px solid #ddd7ca;
+    border-radius: 14px;
+    background: #fff;
+    color: #27477f;
+    font-size: .78rem;
+    font-weight: 850;
+  }
+
+  .rail-settings:hover { border-color: #c6d2e7; color: #093cbd; }
 
   .rail-note {
     display: flex;
     gap: 10px;
     align-items: flex-start;
-    margin-top: auto;
+    display: none;
     padding: 16px 14px;
-    border: 1px solid rgba(255,255,255,.12);
+    border: 1px solid #e2dccf;
     border-radius: 17px;
-    background: rgba(255,255,255,.07);
-    color: rgba(255,255,255,.82);
+    background: #fff;
+    color: #52617d;
     font-size: .82rem;
     font-weight: 700;
     line-height: 1.35;
@@ -355,12 +427,12 @@ const links = [
     flex-wrap: wrap;
     gap: 7px 12px;
     margin: 15px 5px 0;
-    color: rgba(255,255,255,.46);
+    color: #8b8f9b;
     font-size: .67rem;
     font-weight: 700;
   }
 
-  .rail-legal a:hover { color: #fff; }
+  .rail-legal a:hover { color: #093cbd; }
 
   .app-topbar {
     position: fixed;
@@ -462,6 +534,10 @@ const links = [
   }
 
   .install-toast.is-visible { opacity: 1; transform: none; }
+
+  @media (min-width: 721px) {
+    .app-header--tile-nav .topbar-actions { display: none; }
+  }
 
   :global(body.is-install-guide-open) { overflow: hidden; }
 
@@ -629,8 +705,10 @@ const links = [
     .rail-nav { width: 100%; margin-top: 45px; }
     .rail-link { justify-content: center; min-height: 58px; padding: 0; border-radius: 17px; }
     .rail-link i { font-size: 1.55rem; }
-    .rail-link span, .rail-note p, .rail-legal { display: none; }
+    .rail-link span, .rail-note p, .rail-legal, .rail-categories { display: none; }
     .rail-note { justify-content: center; padding: 14px; }
+    .rail-settings { width: 58px; justify-content: center; padding: 0; }
+    .rail-settings span { display: none; }
     .app-topbar { left: var(--app-rail-compact); }
   }
 

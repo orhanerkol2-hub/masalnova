@@ -167,6 +167,40 @@ const visiblePages = Array.from({ length: pageCount }, (_, index) => index + 1)
   .page-numbers a { min-width: 42px; border-radius: 12px; }
   .page-numbers a.is-current { border-color: var(--app-yellow); background: var(--app-yellow); color: #16326f; }
   .page-direction:hover, .page-numbers a:hover { background: rgba(255,255,255,.22); }
+
+  @media (min-width: 721px) {
+    .archive-page {
+      min-height: calc(100dvh - var(--app-nav-height));
+      padding: 34px 0 68px;
+      background: #fbf8f1;
+      color: #102a66;
+    }
+
+    .archive-page .container { max-width: 1260px; }
+    .crumbs { margin-bottom: 17px; color: #727c91; font-size: .8rem; }
+    .crumbs a:hover { color: #093cbd; }
+    .page-head { max-width: 900px; margin-bottom: 18px; }
+    .kicker { color: #a87906; }
+    .page-head h1 { max-width: none; color: #0b2b75; font-size: clamp(2rem, 3.4vw, 3rem); }
+    .page-head > p:last-child { margin-top: 9px; color: #667188; font-size: .94rem; }
+    .archive-search { max-width: none; border-color: #ddd8cc; box-shadow: 0 8px 22px rgba(13,40,105,.06); }
+    .topic-links { margin: 16px 0; }
+    .topic-links a { border-color: #ded9ce; background: #fff; color: #25457d; }
+    .topic-links a:hover { background: #eef3fc; }
+    .topic-links .featured { border-color: #e6c66a; background: #fff7dc; color: #79570a; }
+    .archive-summary { margin: 16px 0; color: #6c7690; }
+    .archive-summary a { color: #1749ae; }
+    .story-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .page-direction,
+    .page-numbers a { border-color: #ddd8cc; background: #fff; color: #17377c; }
+    .page-direction:hover,
+    .page-numbers a:hover { background: #eef3fc; }
+  }
+
+  @media (min-width: 721px) and (max-width: 1180px) {
+    .story-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
   @media (max-width: 640px) {
     .archive-search { border-radius: 16px; }
     .archive-search button { padding-inline: 16px; }

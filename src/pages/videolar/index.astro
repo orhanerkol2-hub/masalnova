@@ -78,6 +78,24 @@ const jsonLd = [
   .chip.is-active { background: #fff; color: var(--ink); }
   .result-count { color: var(--soft); margin-bottom: 14px; font-weight: 600; }
   .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 22px; text-align: center; }
+
+  @media (min-width: 721px) {
+    .section {
+      min-height: calc(100dvh - var(--app-nav-height));
+      padding: 38px 0 68px;
+      background: #fbf8f1;
+    }
+    .section .container { max-width: 1260px; }
+    .page-head { color: #0b2b75; }
+    .page-head h1 { font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -.045em; }
+    .page-head p { color: #68728a; }
+    .catbar { padding: 11px; border: 1px solid #e2ddd1; border-radius: 18px; background: #fff; }
+    .chip { border-color: #ded9ce; background: #fff; color: #25457d; }
+    .chip:hover { background: #eef3fc; }
+    .chip.is-active { border-color: #093cbd; background: #1744bd; color: #fff; }
+    .result-count { color: #6c7690; }
+    .empty { border-color: #ded9ce; background: #fff; color: #667188; }
+  }
 </style>
 
 <script>

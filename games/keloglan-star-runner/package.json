@@ -1,0 +1,12 @@
+{
+  "name": "keloglan-star-runner",
+  "uuid": "25872ac7-40c0-4fe7-8f36-ec708a91f0ee",
+  "version": "1.0.0",
+  "private": true,
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "verify": "node tools/verify-project.mjs"
+  }
+}

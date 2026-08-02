@@ -146,6 +146,41 @@ const category = d.categories[0] ? storyCategoryLabel(d.categories[0]) : 'Çocuk
   }
   .story-card:hover .read-link { background: #fff; color: #102a66; }
 
+  @media (min-width: 901px) {
+    .story-card {
+      border-color: #e4dfd3;
+      border-radius: 20px;
+      background: #fff;
+      color: #102a66;
+      box-shadow: 0 10px 28px rgba(23,43,92,.08);
+    }
+
+    .story-card:hover {
+      border-color: #cbd5e8;
+      box-shadow: 0 18px 38px rgba(23,43,92,.13);
+      transform: translateY(-4px);
+    }
+
+    .thumb { background: #eef2f8; }
+    .thumb::after { display: none; }
+    .category-badge,
+    .audio-badge {
+      border-color: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.92);
+      color: #15377e;
+      box-shadow: 0 5px 16px rgba(13,40,105,.12);
+    }
+
+    .body { gap: 8px; min-height: 214px; padding: 17px 18px 19px; }
+    .eyebrow { color: #8b7c5e; }
+    .body h3 { color: #0d2d73; font-size: 1.08rem; }
+    .meta { color: #68758f; }
+    .meta span + span::before { color: #b6bdca; }
+    .desc { color: #65718a; font-size: .84rem; line-height: 1.52; -webkit-line-clamp: 3; }
+    .read-link { border-color: #dce2ee; background: #f6f8fc; color: #1749ae; }
+    .story-card:hover .read-link { background: #ffc62e; color: #17336d; }
+  }
+
   /* Hoppelpop's calmer catalogue layout, adapted to MasalNova's card markup.
      Archive grids become one-column below 900px, so the available width can
      be used for an easier-to-scan horizontal card. */
