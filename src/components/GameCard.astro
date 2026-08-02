@@ -12,25 +12,30 @@ interface Game {
 
 interface Props { game: Game }
 const { game } = Astro.props;
+const normalizedCategory = game.category.toLocaleLowerCase('tr-TR');
+const filterKey = normalizedCategory.includes('hafıza')
+  ? 'hafiza'
+  : /(bulmaca|yapboz|matematik)/.test(normalizedCategory)
+    ? 'bulmaca'
+    : /(beceri|mutfak)/.test(normalizedCategory)
+      ? 'beceri'
+      : /(boyama|yaratıcı)/.test(normalizedCategory)
+        ? 'yaraticilik'
+        : 'dikkat';
 ---
-<article class="game-card">
-  <a class="game-cover" href={`/oyna/${game.slug}/`} aria-label={`${game.title} oyununu incele`}>
+<article class="game-card" data-game-card data-filter={filterKey}>
+  <a class="game-cover" href={`/oyna/${game.slug}/`} aria-label={`${game.title} oyununu oyna`}>
     <img src={game.image} alt={game.imageAlt} width="640" height="394" loading="lazy" />
-    <span class="game-badge"><i class="ph ph-game-controller" aria-hidden="true"></i> Oyun</span>
+    <span class="game-badge">{game.category}</span>
+    <span class="cover-play" aria-hidden="true"><i class="ph-fill ph-play"></i></span>
   </a>
   <div class="game-body">
-    <div class="game-meta">
-      <span>{game.category}</span>
-      <span>{game.age}</span>
-    </div>
     <h2><a href={`/oyna/${game.slug}/`}>{game.title}</a></h2>
     <p>{game.shortDescription}</p>
-    <ul aria-label="Geliştirdiği beceriler">
-      {game.skills.slice(0, 2).map((skill) => <li>{skill}</li>)}
-    </ul>
-    <a class="game-cta" href={`/oyna/${game.slug}/`}>
-      Oyunu incele <i class="ph ph-arrow-right" aria-hidden="true"></i>
-    </a>
+    <div class="game-meta">
+      <span><i class="ph ph-user" aria-hidden="true"></i>{game.age.replace('Öneri: ', '')}</span>
+      <span><i class="ph ph-sparkle" aria-hidden="true"></i>{game.skills[0]}</span>
+    </div>
   </div>
 </article>
 
@@ -40,58 +45,79 @@ const { game } = Astro.props;
     min-width: 0;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,.22);
-    border-radius: 24px;
+    border: 1px solid #e1e6f0;
+    border-radius: 18px;
     background: #fff;
     color: var(--ink);
-    box-shadow: 0 18px 42px rgba(3,26,92,.24);
+    box-shadow: 0 8px 22px rgba(23,43,92,.08);
     transition: transform .18s ease, box-shadow .18s ease;
   }
-  .game-card:hover { transform: translateY(-5px); box-shadow: 0 24px 52px rgba(3,26,92,.31); }
+  .game-card:hover { transform: translateY(-4px); box-shadow: 0 15px 32px rgba(23,43,92,.15); }
   .game-cover { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: #dce7ff; }
   .game-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .28s ease; }
-  .game-card:hover .game-cover img { transform: scale(1.035); }
+  .game-card:hover .game-cover img { transform: scale(1.045); }
   .game-badge {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 9px;
+    left: 9px;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 11px;
+    padding: 4px 8px;
     border: 1px solid rgba(255,255,255,.55);
     border-radius: 999px;
-    background: rgba(8,38,112,.88);
+    background: rgba(8,38,90,.82);
     color: #fff;
-    font-size: .76rem;
+    font-size: .66rem;
     font-weight: 900;
     backdrop-filter: blur(8px);
   }
-  .game-body { display: flex; flex: 1; flex-direction: column; padding: 18px; }
-  .game-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
-  .game-meta span, li {
-    border-radius: 999px;
-    background: #edf3ff;
-    color: #1c51bd;
-    font-size: .72rem;
-    font-weight: 900;
+  .cover-play {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 2px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    background: #ffc62e;
+    color: #5f3700;
+    box-shadow: 0 7px 18px rgba(5,25,70,.3);
+    opacity: 0;
+    transform: translateY(5px) scale(.9);
+    transition: opacity .18s ease, transform .18s ease;
   }
-  .game-meta span { padding: 4px 9px; }
-  h2 { font-size: 1.18rem; }
+  .game-card:hover .cover-play, .game-cover:focus-visible .cover-play { opacity: 1; transform: none; }
+  .game-body { display: flex; flex: 1; flex-direction: column; padding: 13px 14px 14px; }
+  h2 { font-size: 1rem; line-height: 1.2; }
   h2 a:hover { color: var(--blue-d); }
-  p { margin-top: 8px; color: var(--ink-soft); font-size: .91rem; line-height: 1.5; }
-  ul { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; list-style: none; }
-  li { padding: 4px 9px; background: #fff4dc; color: #8a5700; }
-  .game-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: auto;
-    padding-top: 17px;
-    color: #174ab7;
-    font-weight: 900;
+  p {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 6px;
+    color: #68738a;
+    font-size: .78rem;
+    line-height: 1.42;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
-  .game-cta i { transition: transform .18s ease; }
-  .game-card:hover .game-cta i { transform: translateX(3px); }
+  .game-meta { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: auto; padding-top: 10px; color: #71809a; font-size: .66rem; font-weight: 900; }
+  .game-meta span { display: inline-flex; align-items: center; gap: 4px; min-width: 0; }
+  .game-meta i { color: #1b55bd; font-size: .78rem; }
+
+  @media (max-width: 560px) {
+    .game-card { border-radius: 15px; }
+    .game-body { padding: 10px 10px 11px; }
+    h2 { font-size: .86rem; }
+    p { display: none; }
+    .game-meta { padding-top: 7px; font-size: .6rem; }
+    .game-meta span:nth-child(2) { display: none; }
+    .cover-play { right: 7px; bottom: 7px; width: 31px; height: 31px; opacity: 1; transform: none; }
+    .game-badge { top: 6px; left: 6px; max-width: calc(100% - 50px); overflow: hidden; padding: 3px 6px; font-size: .58rem; text-overflow: ellipsis; white-space: nowrap; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .game-card, .game-cover img, .cover-play { transition: none; }
+  }
 </style>
