@@ -25,7 +25,8 @@ const filterKey = normalizedCategory.includes('hafıza')
 ---
 <article class="game-card" data-game-card data-filter={filterKey}>
   <a class="game-cover" href={`/oyna/${game.slug}/`} aria-label={`${game.title} oyununu oyna`}>
-    <img src={game.image} alt={game.imageAlt} width="640" height="394" loading="lazy" />
+    <img class="cover-backdrop" src={game.image} alt="" width="640" height="394" loading="lazy" decoding="async" aria-hidden="true" />
+    <img class="cover-art" src={game.image} alt={game.imageAlt} width="640" height="394" loading="lazy" decoding="async" />
     <span class="game-badge">{game.category}</span>
     <span class="cover-play" aria-hidden="true"><i class="ph-fill ph-play"></i></span>
   </a>
@@ -46,18 +47,49 @@ const filterKey = normalizedCategory.includes('hafıza')
     flex-direction: column;
     overflow: hidden;
     border: 1px solid #e1e6f0;
-    border-radius: 18px;
+    border-radius: 20px;
     background: #fff;
     color: var(--ink);
     box-shadow: 0 8px 22px rgba(23,43,92,.08);
     transition: transform .18s ease, box-shadow .18s ease;
   }
   .game-card:hover { transform: translateY(-4px); box-shadow: 0 15px 32px rgba(23,43,92,.15); }
-  .game-cover { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: #dce7ff; }
-  .game-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .28s ease; }
-  .game-card:hover .game-cover img { transform: scale(1.045); }
+  .game-cover {
+    position: relative;
+    isolation: isolate;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border-bottom: 1px solid rgba(15,46,105,.1);
+    background: #173b76;
+  }
+  .game-cover::after {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    border: 1px solid rgba(255,255,255,.34);
+    background: linear-gradient(180deg, rgba(5,22,55,.04) 46%, rgba(5,22,55,.3) 100%);
+    box-shadow: inset 0 -26px 38px rgba(3,18,50,.08);
+    content: '';
+    pointer-events: none;
+  }
+  .game-cover img { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform .32s ease, filter .32s ease; }
+  .cover-backdrop {
+    z-index: 0;
+    object-fit: cover;
+    filter: blur(14px) saturate(1.28) brightness(.75);
+    transform: scale(1.16);
+  }
+  .cover-art {
+    z-index: 1;
+    object-fit: contain;
+    filter: saturate(1.07) contrast(1.025) drop-shadow(0 8px 16px rgba(5,22,55,.24));
+  }
+  .game-card:hover .cover-backdrop { transform: scale(1.22); }
+  .game-card:hover .cover-art { transform: scale(1.025); filter: saturate(1.13) contrast(1.035) drop-shadow(0 10px 20px rgba(5,22,55,.28)); }
   .game-badge {
     position: absolute;
+    z-index: 3;
     top: 9px;
     left: 9px;
     display: inline-flex;
@@ -73,22 +105,26 @@ const filterKey = normalizedCategory.includes('hafıza')
   }
   .cover-play {
     position: absolute;
+    z-index: 3;
     right: 10px;
     bottom: 10px;
     display: grid;
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     place-items: center;
     border: 2px solid rgba(255,255,255,.8);
     border-radius: 50%;
     background: #ffc62e;
     color: #5f3700;
     box-shadow: 0 7px 18px rgba(5,25,70,.3);
-    opacity: 0;
-    transform: translateY(5px) scale(.9);
-    transition: opacity .18s ease, transform .18s ease;
+    opacity: .96;
+    transition: opacity .18s ease, transform .18s ease, box-shadow .18s ease;
   }
-  .game-card:hover .cover-play, .game-cover:focus-visible .cover-play { opacity: 1; transform: none; }
+  .game-card:hover .cover-play, .game-cover:focus-visible .cover-play {
+    opacity: 1;
+    transform: scale(1.08);
+    box-shadow: 0 10px 22px rgba(5,25,70,.38);
+  }
   .game-body { display: flex; flex: 1; flex-direction: column; padding: 13px 14px 14px; }
   h2 { font-size: 1rem; line-height: 1.2; }
   h2 a:hover { color: var(--blue-d); }
@@ -107,13 +143,13 @@ const filterKey = normalizedCategory.includes('hafıza')
   .game-meta i { color: #1b55bd; font-size: .78rem; }
 
   @media (max-width: 560px) {
-    .game-card { border-radius: 15px; }
+    .game-card { border-radius: 17px; }
     .game-body { padding: 10px 10px 11px; }
     h2 { font-size: .86rem; }
     p { display: none; }
     .game-meta { padding-top: 7px; font-size: .6rem; }
     .game-meta span:nth-child(2) { display: none; }
-    .cover-play { right: 7px; bottom: 7px; width: 31px; height: 31px; opacity: 1; transform: none; }
+    .cover-play { right: 8px; bottom: 8px; width: 35px; height: 35px; opacity: 1; }
     .game-badge { top: 6px; left: 6px; max-width: calc(100% - 50px); overflow: hidden; padding: 3px 6px; font-size: .58rem; text-overflow: ellipsis; white-space: nowrap; }
   }
 
