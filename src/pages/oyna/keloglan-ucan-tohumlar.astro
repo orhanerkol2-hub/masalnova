@@ -82,9 +82,17 @@ const jsonLd = [
           loading="eager"
           data-game-frame
         ></iframe>
-        <a class="mobile-game-launch" href="/games/keloglan-ucan-tohumlar/index.html" data-fullscreen-trigger>
-          <i class="ph ph-arrows-out" aria-hidden="true"></i>
-          <span><strong>Tam ekran oyna</strong><small>Dokun ve oyunu aç</small></span>
+        <a
+          class="mobile-game-launch"
+          href="/games/keloglan-ucan-tohumlar/index.html"
+          aria-label="Tam ekran oyna ve macerayı başlat"
+          data-fullscreen-trigger
+          data-auto-start
+        >
+          <span class="mobile-game-launch-label">
+            <i class="ph ph-arrows-out" aria-hidden="true"></i>
+            <span><strong>Tam ekran oyna</strong><small>Dokun ve macerayı başlat</small></span>
+          </span>
         </a>
       </section>
 
@@ -181,9 +189,10 @@ const jsonLd = [
     .back-link { display: none; }
     .player-shell { touch-action: pan-y; }
     .player-shell iframe { height: min(660px, calc(100dvh - 184px)); min-height: 500px; pointer-events: none; }
-    .mobile-game-launch { position: absolute; left: 50%; bottom: 22px; z-index: 4; display: inline-flex; align-items: center; gap: 10px; min-width: 210px; padding: 12px 18px; border: 1px solid rgba(255,255,255,.72); border-radius: 999px; background: #ffd45b; color: #593600; box-shadow: 0 12px 30px rgba(0,15,66,.34); translate: -50% 0; touch-action: pan-y; }
-    .mobile-game-launch > i { flex: 0 0 auto; font-size: 1.25rem; }
-    .mobile-game-launch > span { display: grid; text-align: left; line-height: 1.05; }
+    .mobile-game-launch { position: absolute; inset: 0; z-index: 4; display: flex; align-items: flex-end; justify-content: center; padding: 22px; background: transparent; touch-action: pan-y; }
+    .mobile-game-launch-label { display: inline-flex; align-items: center; gap: 10px; min-width: 210px; padding: 12px 18px; border: 1px solid rgba(255,255,255,.72); border-radius: 999px; background: #ffd45b; color: #593600; box-shadow: 0 12px 30px rgba(0,15,66,.34); pointer-events: none; }
+    .mobile-game-launch-label > i { flex: 0 0 auto; font-size: 1.25rem; }
+    .mobile-game-launch-label > span { display: grid; text-align: left; line-height: 1.05; }
     .mobile-game-launch strong { font-size: .84rem; }
     .mobile-game-launch small { margin-top: 4px; font-size: .67rem; font-weight: 800; opacity: .72; }
     .player-shell:fullscreen { touch-action: none; }
@@ -207,6 +216,23 @@ const jsonLd = [
   if (playerShell && gameFrame && fullscreenTriggers.length > 0) {
     let wasFullscreen = false;
 
+    const startEmbeddedGame = (attempt = 0) => {
+      try {
+        const startButton = gameFrame.contentDocument?.querySelector<HTMLButtonElement>('[data-action-value="start"]');
+        if (startButton) {
+          startButton.click();
+          gameFrame.focus({ preventScroll: true });
+          return;
+        }
+      } catch {
+        // The standalone fallback below covers browsers that isolate the frame.
+      }
+
+      if (attempt < 10) {
+        window.setTimeout(() => startEmbeddedGame(attempt + 1), 100);
+      }
+    };
+
     const setFullscreenState = () => {
       const isFullscreen = document.fullscreenElement === playerShell;
       document.documentElement.classList.toggle('game-fullscreen-active', isFullscreen);
@@ -223,9 +249,11 @@ const jsonLd = [
 
     const openGame = async (event: MouseEvent) => {
       const trigger = event.currentTarget as HTMLAnchorElement;
+      const shouldAutoStart = trigger.hasAttribute('data-auto-start');
       event.preventDefault();
 
       if (document.fullscreenElement === playerShell) {
+        if (shouldAutoStart) startEmbeddedGame();
         gameFrame.focus({ preventScroll: true });
         return;
       }
@@ -234,13 +262,16 @@ const jsonLd = [
         if (playerShell.requestFullscreen) {
           await playerShell.requestFullscreen();
           setFullscreenState();
+          if (shouldAutoStart) startEmbeddedGame();
           return;
         }
       } catch {
         // iOS Safari and restricted embeds use the standalone game as fallback.
       }
 
-      window.location.assign(trigger.href);
+      const fallbackUrl = new URL(trigger.href, window.location.href);
+      if (shouldAutoStart) fallbackUrl.searchParams.set('autostart', '1');
+      window.location.assign(fallbackUrl.href);
     };
 
     fullscreenTriggers.forEach((trigger) => trigger.addEventListener('click', openGame));
