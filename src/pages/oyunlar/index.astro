@@ -5,6 +5,10 @@ import { games } from '../../data/games.mjs';
 
 const exclusiveGames = [
   {
+    title: 'Keloğlan ve On Kapılı Saray',
+    url: 'https://masalnova.com/oyna/keloglan-on-kapili-saray/',
+  },
+  {
     title: 'Horozumu Kaçırdılar: Çatı Kaçışı',
     url: 'https://masalnova.com/oyna/horozumu-kacirdilar/',
   },
@@ -85,6 +89,25 @@ const jsonLd = [
       </div>
 
       <div class="originals-grid">
+        <a class="exclusive-game palace-game" href="/oyna/keloglan-on-kapili-saray/" aria-label="Keloğlan ve On Kapılı Saray oyununu oyna">
+          <div class="exclusive-visual" aria-hidden="true">
+            <img class="exclusive-background" src="/games/keloglan-on-kapili-saray/assets/palace-story.webp" alt="" width="1600" height="900" />
+            <div class="exclusive-shade"></div>
+            <span class="exclusive-ribbon">YENİ · 10 BÖLÜM</span>
+          </div>
+          <div class="exclusive-copy">
+            <span class="exclusive-label"><i class="ph ph-crown-simple" aria-hidden="true"></i> MasalNova Originals</span>
+            <h3>Keloğlan ve On Kapılı Saray</h3>
+            <p>On gizemli kapıyı aç, her odadaki farklı bulmacayı çöz ve taht salonunda Keloğlan’ı bekleyen sırrı keşfet.</p>
+            <ul aria-label="Oyun özellikleri">
+              <li><i class="ph ph-puzzle-piece" aria-hidden="true"></i> 10 bulmaca</li>
+              <li><i class="ph ph-book-open-text" aria-hidden="true"></i> Gizemli hikâye</li>
+              <li><i class="ph ph-device-mobile" aria-hidden="true"></i> Mobil uyumlu</li>
+            </ul>
+            <span class="exclusive-cta">Saraya gir <i class="ph ph-play-circle" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
         <a class="exclusive-game chase-game" href="/oyna/horozumu-kacirdilar/" aria-label="Horozumu Kaçırdılar Çatı Kaçışı oyununu oyna">
           <div class="exclusive-visual" aria-hidden="true">
             <img class="exclusive-background" src="/games/horozumu-kacirdilar/assets/village-rooftops.png" alt="" width="1536" height="1024" />
@@ -189,7 +212,7 @@ const jsonLd = [
   .exclusive-heading span { display: inline-flex; align-items: center; gap: 6px; color: #ffd44d; font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
   .exclusive-heading h2 { margin-top: 3px; font-size: clamp(1.7rem, 4vw, 2.45rem); }
   .exclusive-heading > p { color: rgba(255,255,255,.74); font-size: .86rem; font-weight: 800; }
-  .originals-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .originals-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
   .exclusive-game { display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: 1px solid rgba(255,225,120,.72); border-radius: 28px; background: #fff9e8; color: #102a66; box-shadow: 0 28px 64px rgba(2,24,82,.32); transition: transform .2s ease, box-shadow .2s ease; }
   .exclusive-game:hover { transform: translateY(-4px); box-shadow: 0 34px 74px rgba(2,24,82,.39); }
   .exclusive-visual { position: relative; min-height: 0; aspect-ratio: 16 / 9; overflow: hidden; background: #91c9d7; }
@@ -200,6 +223,8 @@ const jsonLd = [
   .exclusive-game:hover .exclusive-hero { transform: translateY(-5px) rotate(-1deg); }
   .seed-game .exclusive-background { object-position: center; }
   .seed-game .exclusive-shade { background: linear-gradient(0deg, rgba(6,33,67,.22), transparent 45%); }
+  .palace-game .exclusive-background { object-position: center; }
+  .palace-game .exclusive-shade { background: linear-gradient(0deg, rgba(3,15,43,.42), transparent 58%); }
   .chase-game .exclusive-background { object-position: center 70%; }
   .chase-game .exclusive-shade { background: linear-gradient(0deg, rgba(9,33,64,.35), transparent 55%); }
   .chase-rooster, .chase-grandma { position: absolute; height: auto; object-fit: contain; filter: drop-shadow(0 12px 13px rgba(19,34,47,.34)); transition: transform .28s ease; }
