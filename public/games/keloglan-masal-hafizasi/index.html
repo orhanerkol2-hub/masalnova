@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102d72">
+  <title>Keloğlan’ın Masal Hafızası | MasalNova</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #08245d;
+      --blue: #1749ae;
+      --sky: #dff4ff;
+      --cream: #fff9e9;
+      --gold: #ffd34e;
+      --gold-dark: #8a5600;
+      --ink: #10275c;
+      --muted: #64728d;
+      --card-radius: clamp(13px, 2.2vw, 20px);
+    }
+
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--navy); }
+    body {
+      min-width: 280px;
+      min-height: 100dvh;
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 10% 12%, rgba(255,213,78,.28), transparent 24rem),
+        radial-gradient(circle at 92% 18%, rgba(98,211,255,.28), transparent 22rem),
+        linear-gradient(145deg, #0c2f78 0%, #174cad 48%, #102a70 100%);
+      color: #fff;
+      font-family: ui-rounded, "Avenir Next Rounded", "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    button { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+    [hidden] { display: none !important; }
+
+    .game-shell {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: min(1040px, 100%);
+      min-height: 100dvh;
+      margin: 0 auto;
+      padding: max(14px, env(safe-area-inset-top)) clamp(12px, 3vw, 28px) max(18px, env(safe-area-inset-bottom));
+      flex-direction: column;
+    }
+
+    .sparkles, .sparkles::before, .sparkles::after {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      content: "";
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,214,82,.8) 0 1.5px, transparent 2px);
+      background-position: 18px 24px, 78px 62px;
+      background-size: 92px 86px, 137px 121px;
+      opacity: .38;
+    }
+    .sparkles::before { transform: translate(31px, 17px); opacity: .42; }
+    .sparkles::after { transform: translate(-19px, 42px); opacity: .2; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 52px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+    .brand img { width: clamp(122px, 19vw, 174px); height: auto; filter: drop-shadow(0 5px 10px rgba(0,15,55,.28)); }
+    .sound-button {
+      display: inline-grid;
+      flex: 0 0 auto;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 14px;
+      background: rgba(4,26,83,.44);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(4,18,56,.2);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+    .sound-button span { font-size: 1.15rem; }
+
+    .intro {
+      display: grid;
+      flex: 1;
+      place-items: center;
+      padding: clamp(18px, 5vh, 54px) 0;
+    }
+    .intro-card {
+      position: relative;
+      overflow: hidden;
+      width: min(850px, 100%);
+      border: 1px solid rgba(255,255,255,.52);
+      border-radius: clamp(24px, 4vw, 38px);
+      background: rgba(255,249,233,.96);
+      color: var(--ink);
+      box-shadow: 0 30px 80px rgba(0,14,55,.34);
+    }
+    .intro-art { position: relative; min-height: clamp(190px, 31vw, 300px); overflow: hidden; }
+    .intro-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
+    .intro-art::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5,23,60,.78), transparent 66%); content: ""; }
+    .intro-seal {
+      position: absolute;
+      z-index: 1;
+      top: 14px;
+      left: 14px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255,255,255,.58);
+      border-radius: 999px;
+      background: rgba(8,35,91,.78);
+      color: #fff3bc;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .05em;
+      backdrop-filter: blur(9px);
+    }
+    .intro-art h1 {
+      position: absolute;
+      z-index: 1;
+      right: clamp(16px, 4vw, 34px);
+      bottom: clamp(18px, 4vw, 30px);
+      left: clamp(16px, 4vw, 34px);
+      margin: 0;
+      color: #fff;
+      font-size: clamp(1.7rem, 5vw, 3.25rem);
+      line-height: 1;
+      letter-spacing: -.045em;
+      text-shadow: 0 4px 18px rgba(0,0,0,.54);
+    }
+    .intro-copy { padding: clamp(18px, 4vw, 32px); }
+    .intro-copy > p { max-width: 68ch; margin: 0 auto; color: #52617f; font-size: clamp(.9rem, 2vw, 1.04rem); line-height: 1.58; text-align: center; }
+    .intro-tips { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 21px 0; }
+    .tip { padding: 12px 10px; border: 1px solid #e1dfd5; border-radius: 16px; background: #fff; text-align: center; }
+    .tip strong { display: block; color: var(--blue); font-size: .84rem; }
+    .tip span { display: block; margin-top: 3px; color: #72809a; font-size: .7rem; }
+    .primary-button, .secondary-button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 999px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .primary-button { width: 100%; padding: 12px 22px; background: linear-gradient(90deg, #ffd64f, #ffb82d); color: #543200; box-shadow: 0 12px 26px rgba(204,131,0,.25); }
+    .primary-button:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(204,131,0,.32); }
+    .secondary-button { padding: 10px 16px; border: 1px solid rgba(255,255,255,.32); background: rgba(4,27,84,.42); color: #fff; }
+
+    .play-screen { display: flex; flex: 1; min-height: 0; flex-direction: column; }
+    .hud {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) repeat(3, minmax(74px, .55fr)) auto;
+      gap: 8px;
+      margin: 12px 0 11px;
+    }
+    .hud-panel {
+      display: flex;
+      min-height: 50px;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.27);
+      border-radius: 15px;
+      background: rgba(4,28,87,.48);
+      box-shadow: 0 8px 20px rgba(3,18,61,.15);
+      backdrop-filter: blur(10px);
+    }
+    .hud-panel small { display: block; color: rgba(255,255,255,.68); font-size: .59rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+    .hud-panel strong { display: block; margin-top: 1px; color: #fff; font-size: clamp(.8rem, 1.7vw, 1rem); line-height: 1.05; }
+    .chapter-panel strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .hud-symbol { color: var(--gold); font-size: 1.2rem; }
+    .hud-action { min-width: 50px; justify-content: center; border: 0; color: #fff; cursor: pointer; }
+    .hud-action:disabled { cursor: default; opacity: .45; }
+
+    .progress-dots { display: flex; justify-content: center; gap: 7px; margin-bottom: 11px; }
+    .progress-dot { width: 8px; height: 8px; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; background: transparent; }
+    .progress-dot.is-done { border-color: var(--gold); background: var(--gold); }
+    .progress-dot.is-current { width: 23px; border-color: #fff; border-radius: 999px; background: #fff; }
+
+    .story-ribbon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 36px;
+      margin-bottom: 10px;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(.74rem, 1.8vw, .9rem);
+      font-weight: 800;
+      text-align: center;
+    }
+    .story-ribbon span:first-child { color: var(--gold); }
+
+    .board-wrap {
+      position: relative;
+      display: grid;
+      flex: 1;
+      min-height: 0;
+      place-items: center;
+      padding: clamp(8px, 1.5vw, 14px);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: clamp(20px, 3vw, 30px);
+      background: rgba(3,25,77,.4);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 22px 50px rgba(2,17,57,.22);
+      backdrop-filter: blur(8px);
+    }
+    .board {
+      --columns: 4;
+      --board-max: 860px;
+      display: grid;
+      width: min(100%, var(--board-max));
+      grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+      gap: clamp(7px, 1.35vw, 13px);
+    }
+    .memory-card {
+      position: relative;
+      display: block;
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      aspect-ratio: 4 / 5;
+      background: transparent;
+      cursor: pointer;
+      perspective: 900px;
+      touch-action: manipulation;
+    }
+    .card-inner { position: absolute; inset: 0; transform-style: preserve-3d; transition: transform .46s cubic-bezier(.2,.75,.25,1); }
+    .memory-card.is-flipped .card-inner, .memory-card.is-matched .card-inner, .memory-card.is-peeking .card-inner { transform: rotateY(180deg); }
+    .card-face {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,.78);
+      border-radius: var(--card-radius);
+      backface-visibility: hidden;
+      box-shadow: 0 9px 20px rgba(2,14,49,.28);
+    }
+    .card-back {
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255,220,92,.3) 0 3%, transparent 4%),
+        radial-gradient(circle at 50% 50%, transparent 0 24%, rgba(255,225,121,.2) 25% 27%, transparent 28%),
+        linear-gradient(145deg, #1c66c9, #0b317d);
+    }
+    .card-back::before { position: absolute; inset: 7px; border: 1px solid rgba(255,220,97,.65); border-radius: calc(var(--card-radius) - 5px); content: ""; }
+    .card-back-mark {
+      display: grid;
+      width: clamp(34px, 7vw, 62px);
+      aspect-ratio: 1;
+      place-items: center;
+      border: 2px solid #ffe57e;
+      border-radius: 50%;
+      background: rgba(5,37,100,.74);
+      color: #ffe57e;
+      font-size: clamp(1rem, 3vw, 1.65rem);
+      font-weight: 1000;
+      box-shadow: 0 0 0 5px rgba(255,213,73,.12);
+    }
+    .card-front { transform: rotateY(180deg); background: #fff; }
+    .card-front img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.015); }
+    .card-name {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: clamp(16px, 3.2vw, 28px) 5px 6px;
+      background: linear-gradient(0deg, rgba(4,22,62,.94), transparent);
+      color: #fff;
+      font-size: clamp(.56rem, 1.55vw, .78rem);
+      font-weight: 1000;
+      line-height: 1.05;
+      text-align: center;
+      text-shadow: 0 2px 6px rgba(0,0,0,.5);
+    }
+    .memory-card.is-matched .card-face { border-color: #ffdd5b; box-shadow: 0 0 0 3px rgba(255,217,72,.2), 0 10px 25px rgba(2,14,49,.26); }
+    .memory-card.is-matched { animation: match-pop .42s ease; }
+
+    .board-message {
+      position: absolute;
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border: 1px solid rgba(255,255,255,.46);
+      border-radius: 999px;
+      background: rgba(3,25,78,.9);
+      color: #fff;
+      box-shadow: 0 14px 34px rgba(0,12,49,.34);
+      font-size: .86rem;
+      font-weight: 900;
+      pointer-events: none;
+      backdrop-filter: blur(10px);
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .board-message.is-hidden { opacity: 0; transform: translateY(-6px); }
+
+    .modal {
+      position: fixed;
+      z-index: 20;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: rgba(2,15,52,.76);
+      backdrop-filter: blur(9px);
+    }
+    .modal-card {
+      width: min(520px, 100%);
+      padding: clamp(23px, 5vw, 38px);
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 30px;
+      background: var(--cream);
+      color: var(--ink);
+      box-shadow: 0 30px 85px rgba(0,12,48,.48);
+      text-align: center;
+    }
+    .modal-kicker { color: #aa7100; font-size: .72rem; font-weight: 1000; letter-spacing: .09em; text-transform: uppercase; }
+    .modal-card h2 { margin: 7px 0 0; font-size: clamp(1.65rem, 5vw, 2.55rem); line-height: 1.05; letter-spacing: -.04em; }
+    .stars { margin: 12px 0 7px; color: #d6d9df; font-size: clamp(1.75rem, 6vw, 2.5rem); letter-spacing: 5px; }
+    .stars .is-lit { color: #ffc82f; filter: drop-shadow(0 3px 5px rgba(180,105,0,.22)); }
+    .result-stats { color: #596985; font-size: .84rem; font-weight: 800; }
+    .story-result { margin: 16px auto 20px; max-width: 42ch; color: #4d5d79; font-size: .94rem; line-height: 1.52; }
+    .modal-actions { display: flex; gap: 9px; }
+    .modal-actions .primary-button { flex: 1; }
+    .modal-actions .secondary-button { flex: 0 0 auto; border-color: #d8dce5; background: #fff; color: var(--blue); }
+
+    .final-emblem {
+      display: grid;
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 14px;
+      place-items: center;
+      border: 2px solid #f0bd28;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #fff5b7, #ffca39);
+      color: #704400;
+      font-size: 2.2rem;
+      box-shadow: 0 13px 30px rgba(184,111,0,.22);
+      transform: rotate(-3deg);
+    }
+    .final-quote { margin: 15px auto 21px; padding: 14px; border: 1px solid #e6d8a6; border-radius: 16px; background: #fffdf5; color: #755414; font-weight: 900; line-height: 1.45; }
+
+    .confetti { position: fixed; z-index: 30; top: -20px; width: 9px; height: 14px; border-radius: 3px; pointer-events: none; animation: confetti-fall 2.4s linear forwards; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    @keyframes match-pop { 0%,100% { transform: scale(1); } 45% { transform: scale(1.055); } }
+    @keyframes confetti-fall { to { transform: translate(var(--drift), 110vh) rotate(640deg); opacity: .2; } }
+
+    @media (max-width: 720px) {
+      .game-shell { padding-inline: 10px; }
+      .hud { grid-template-columns: minmax(0,1fr) repeat(3, minmax(57px,.46fr)) auto; }
+      .hud-panel { min-height: 44px; padding: 6px 8px; border-radius: 13px; }
+      .hud-symbol, .hud-panel small { display: none; }
+      .hud-panel strong { text-align: center; }
+      .chapter-panel strong { text-align: left; }
+      .board-wrap { padding: 8px; }
+    }
+    @media (max-width: 520px) {
+      .brand img { width: 126px; }
+      .sound-button { width: 40px; height: 40px; border-radius: 13px; }
+      .intro { padding: 14px 0; }
+      .intro-tips { grid-template-columns: 1fr; gap: 7px; margin: 15px 0; }
+      .tip { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px; }
+      .tip span { margin: 0; }
+      .hud { gap: 5px; margin-top: 8px; }
+      .hud-panel { padding-inline: 5px; }
+      .chapter-panel { padding-left: 8px; }
+      .hud-action { min-width: 42px; }
+      .story-ribbon { margin-bottom: 7px; }
+      .board { gap: 7px; }
+      .card-face { border-width: 1.5px; }
+      .modal-actions { flex-direction: column; }
+      .modal-actions .secondary-button { width: 100%; }
+    }
+    @media (max-width: 350px) {
+      .game-shell { padding-inline: 7px; }
+      .chapter-panel { grid-column: 1 / -1; }
+      .hud { grid-template-columns: repeat(3, 1fr) auto; }
+      .hud-panel { min-height: 39px; }
+      .story-ribbon { font-size: .68rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true"></div>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand"><img src="/logo.webp" alt="MasalNova" width="188" height="48"></div>
+      <button class="sound-button" id="soundButton" type="button" aria-label="Sesi kapat" aria-pressed="true"><span aria-hidden="true">♪</span></button>
+    </header>
+
+    <section class="intro" id="introScreen">
+      <article class="intro-card">
+        <div class="intro-art">
+          <img src="/covers/stories/keloglanin-isiltili-saray-bilmecesi.webp" alt="Keloğlan ve masal dostları sarayın önünde" width="1024" height="576">
+          <span class="intro-seal">MASALNOVA ORIGINALS</span>
+          <h1>Keloğlan’ın<br>Masal Hafızası</h1>
+        </div>
+        <div class="intro-copy">
+          <p>Keloğlan’ın sihirli kitabından bütün kahramanlar kaçtı! Eş kartları bul, altı masal kapısını aç ve son sayfada saklanan sürprizi keşfet.</p>
+          <div class="intro-tips" aria-label="Oyun özellikleri">
+            <div class="tip"><strong>Eşleri bul</strong><span>Aynı iki kartı aç</span></div>
+            <div class="tip"><strong>6 bölüm</strong><span>Kolaydan zora ilerle</span></div>
+            <div class="tip"><strong>Süre baskısı yok</strong><span>Kendi hızında oyna</span></div>
+          </div>
+          <button class="primary-button" id="startButton" type="button">Masal kitabını aç <span aria-hidden="true">›</span></button>
+        </div>
+      </article>
+    </section>
+
+    <section class="play-screen" id="playScreen" hidden>
+      <div class="hud" aria-label="Oyun bilgileri">
+        <div class="hud-panel chapter-panel"><span class="hud-symbol" aria-hidden="true">✦</span><div><small>Bölüm</small><strong id="chapterName">Köy Kapısı</strong></div></div>
+        <div class="hud-panel"><div><small>Hamle</small><strong id="movesValue">0</strong></div></div>
+        <div class="hud-panel"><div><small>Eş</small><strong id="pairsValue">0 / 3</strong></div></div>
+        <div class="hud-panel"><div><small>Süre</small><strong id="timeValue">00:00</strong></div></div>
+        <button class="hud-panel hud-action" id="hintButton" type="button" aria-label="Kartları kısa süre göster"><strong>İpucu</strong></button>
+      </div>
+      <div class="progress-dots" id="progressDots" aria-label="Bölüm ilerlemesi"></div>
+      <div class="story-ribbon"><span aria-hidden="true">✦</span><span id="storyLine">Köy kapısındaki ilk dostları bul.</span></div>
+      <div class="board-wrap">
+        <div class="board" id="board" aria-label="Hafıza kartları"></div>
+        <div class="board-message" id="boardMessage" role="status" aria-live="polite">Kartları hatırla!</div>
+      </div>
+    </section>
+  </main>
+
+  <section class="modal" id="levelModal" role="dialog" aria-modal="true" aria-labelledby="levelTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-kicker">Bölüm tamamlandı</div>
+      <h2 id="levelTitle">Harika hafıza!</h2>
+      <div class="stars" id="resultStars" aria-label="Üç yıldız"><span>★</span><span>★</span><span>★</span></div>
+      <div class="result-stats" id="resultStats"></div>
+      <p class="story-result" id="resultStory"></p>
+      <div class="modal-actions">
+        <button class="secondary-button" id="replayButton" type="button">Tekrar oyna</button>
+        <button class="primary-button" id="nextButton" type="button">Sonraki kapı <span aria-hidden="true">›</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="finalModal" role="dialog" aria-modal="true" aria-labelledby="finalTitle" hidden>
+    <div class="modal-card">
+      <div class="final-emblem" aria-hidden="true">✦</div>
+      <div class="modal-kicker">Altın sayfanın sırrı</div>
+      <h2 id="finalTitle">Masal Ustası sensin!</h2>
+      <p class="story-result">Keloğlan son sayfayı çevirdiğinde altın ya da mücevher bulmadı. Sayfa, bütün kahramanların birlikte gülümsediği sihirli bir aynaya dönüştü.</p>
+      <div class="final-quote">“Masalları hatırlayan çocuk, kendi güzel masalını da kurabilir.”</div>
+      <button class="primary-button" id="playAgainButton" type="button">Kitabı baştan aç</button>
+    </div>
+  </section>
+
+  <p class="sr-only" id="liveStatus" aria-live="polite"></p>
+
+  <script>
+    const characters = [
+      { id: 'keloglan', name: 'Keloğlan', image: '/covers/stories/keloglanin-isiltili-saray-bilmecesi.webp', position: '30% center' },
+      { id: 'zumruduanka', name: 'Zümrüdüanka', image: '/covers/stories/zumruduankanin-uc-tuyu.webp', position: '60% center' },
+      { id: 'kirmizi-baslikli-kiz', name: 'Kırmızı Başlıklı Kız', image: '/covers/stories/kirmizi-baslikli-kiz.webp', position: '20% center' },
+      { id: 'cizmeli-kedi', name: 'Çizmeli Kedi', image: '/covers/stories/cizmeli-kedi.webp', position: '24% center' },
+      { id: 'kulkedisi', name: 'Külkedisi', image: '/covers/stories/kulkedisi.webp', position: 'center' },
+      { id: 'alice', name: 'Alice', image: '/covers/stories/alice.webp', position: 'center' },
+      { id: 'pinokyo', name: 'Pinokyo', image: '/covers/stories/pinokyo-ve-dogruluk-yildizi.webp', position: 'center' },
+      { id: 'kurbaga-prens', name: 'Kurbağa Prens', image: '/covers/stories/kurbaga-prens-ve-altin-top.webp', position: 'center' },
+      { id: 'pamuk-prenses', name: 'Pamuk Prenses', image: '/covers/stories/pamuk-prenses-ve-yedi-cuceler-v2.webp', position: 'center' },
+      { id: 'altin-kaz', name: 'Altın Kaz', image: '/covers/stories/altin-kaz.webp', position: 'center' },
+    ];
+
+    const levels = [
+      { title: 'Köy Kapısı', pairs: 3, line: 'Köy kapısındaki ilk dostları bul.', result: 'Köyün fenerleri yandı. Keloğlan, sihirli kitabın ormana uzanan yolunu gördü.' },
+      { title: 'Fısıltılı Orman', pairs: 4, line: 'Ağaçların arasındaki kahramanları eşleştir.', result: 'Yapraklar fısıldadı ve Zümrüdüanka’nın parlak tüyü yeni bir sayfayı araladı.' },
+      { title: 'Masal Çarşısı', pairs: 5, line: 'Çarşıya karışan masal dostlarını hatırla.', result: 'Çarşının saatleri yeniden çalıştı. Uzakta, renkli taşlarla örülü bir köprü belirdi.' },
+      { title: 'Renkli Köprü', pairs: 6, line: 'Köprünün üzerindeki eş kartları bul.', result: 'Son eş bulununca köprü altın gibi parladı ve Keloğlan’ı bulutların üstüne taşıdı.' },
+      { title: 'Bulut Sarayı', pairs: 8, line: 'Saray salonundaki bütün çiftleri birleştir.', result: 'Sekiz çift yan yana gelince sarayın büyük kitabı açıldı. Geriye yalnızca altın sayfa kaldı.' },
+      { title: 'Altın Sayfa', pairs: 10, line: 'Bütün kahramanları son kez bul ve sırrı aç.', result: 'Bütün masal kahramanları yerlerine döndü. Altın sayfa ışıldayarak son sırrını gösterdi.' },
+    ];
+
+    const introScreen = document.getElementById('introScreen');
+    const playScreen = document.getElementById('playScreen');
+    const board = document.getElementById('board');
+    const boardMessage = document.getElementById('boardMessage');
+    const chapterName = document.getElementById('chapterName');
+    const movesValue = document.getElementById('movesValue');
+    const pairsValue = document.getElementById('pairsValue');
+    const timeValue = document.getElementById('timeValue');
+    const storyLine = document.getElementById('storyLine');
+    const progressDots = document.getElementById('progressDots');
+    const hintButton = document.getElementById('hintButton');
+    const soundButton = document.getElementById('soundButton');
+    const levelModal = document.getElementById('levelModal');
+    const finalModal = document.getElementById('finalModal');
+    const resultStars = document.getElementById('resultStars');
+    const resultStats = document.getElementById('resultStats');
+    const resultStory = document.getElementById('resultStory');
+    const liveStatus = document.getElementById('liveStatus');
+
+    let levelIndex = 0;
+    let firstCard = null;
+    let secondCard = null;
+    let matchedPairs = 0;
+    let moves = 0;
+    let elapsedSeconds = 0;
+    let timerId = null;
+    let boardLocked = false;
+    let hintUsed = false;
+    let soundEnabled = localStorage.getItem('masal-memory-sound') !== 'off';
+    let audioContext = null;
+
+    function shuffle(items) {
+      const result = [...items];
+      for (let index = result.length - 1; index > 0; index -= 1) {
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+        [result[index], result[randomIndex]] = [result[randomIndex], result[index]];
+      }
+      return result;
+    }
+
+    function formatTime(totalSeconds) {
+      const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      return `${minutes}:${seconds}`;
+    }
+
+    function ensureAudio() {
+      if (!soundEnabled) return null;
+      if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioContext.state === 'suspended') audioContext.resume();
+      return audioContext;
+    }
+
+    function tone(frequency, duration = .09, type = 'sine', delay = 0) {
+      const context = ensureAudio();
+      if (!context) return;
+      const oscillator = context.createOscillator();
+      const gain = context.createGain();
+      oscillator.type = type;
+      oscillator.frequency.value = frequency;
+      gain.gain.setValueAtTime(.0001, context.currentTime + delay);
+      gain.gain.exponentialRampToValueAtTime(.12, context.currentTime + delay + .012);
+      gain.gain.exponentialRampToValueAtTime(.0001, context.currentTime + delay + duration);
+      oscillator.connect(gain).connect(context.destination);
+      oscillator.start(context.currentTime + delay);
+      oscillator.stop(context.currentTime + delay + duration + .02);
+    }
+
+    function playFlip() { tone(360, .07, 'triangle'); }
+    function playMatch() { tone(520, .11, 'sine'); tone(720, .14, 'sine', .08); }
+    function playMismatch() { tone(220, .12, 'triangle'); }
+    function playWin() { [440, 560, 680, 880].forEach((note, index) => tone(note, .18, 'sine', index * .09)); }
+
+    function updateSoundButton() {
+      soundButton.setAttribute('aria-pressed', String(soundEnabled));
+      soundButton.setAttribute('aria-label', soundEnabled ? 'Sesi kapat' : 'Sesi aç');
+      soundButton.querySelector('span').textContent = soundEnabled ? '♪' : '×';
+    }
+
+    function setBoardColumns(totalCards) {
+      const width = window.innerWidth;
+      let columns;
+      if (width <= 350) columns = totalCards <= 6 ? 3 : totalCards <= 12 ? 3 : 4;
+      else if (width <= 560) columns = totalCards <= 6 ? 3 : totalCards <= 16 ? 4 : 4;
+      else columns = totalCards <= 10 ? Math.min(5, totalCards / 2) : totalCards <= 16 ? 4 : 5;
+      board.style.setProperty('--columns', String(columns));
+      const maxWidth = totalCards <= 6 ? '620px' : totalCards <= 8 ? '700px' : totalCards <= 10 ? '780px' : totalCards <= 12 ? '820px' : '860px';
+      board.style.setProperty('--board-max', maxWidth);
+    }
+
+    function updateProgress() {
+      progressDots.innerHTML = levels.map((_, index) => {
+        const state = index < levelIndex ? 'is-done' : index === levelIndex ? 'is-current' : '';
+        return `<span class="progress-dot ${state}" aria-hidden="true"></span>`;
+      }).join('');
+      progressDots.setAttribute('aria-label', `6 bölümden ${levelIndex + 1}. bölüm`);
+    }
+
+    function cardMarkup(character, copyIndex) {
+      return `
+        <button class="memory-card" type="button" data-character="${character.id}" aria-label="Kapalı masal kartı">
+          <span class="card-inner">
+            <span class="card-face card-back" aria-hidden="true"><span class="card-back-mark">M</span></span>
+            <span class="card-face card-front">
+              <img src="${character.image}" alt="" draggable="false" style="object-position:${character.position}" width="1024" height="576">
+              <span class="card-name">${character.name}</span>
+            </span>
+          </span>
+          <span class="sr-only">${character.name}, kart ${copyIndex + 1}</span>
+        </button>`;
+    }
+
+    function resetSelections() {
+      firstCard = null;
+      secondCard = null;
+    }
+
+    function announce(text) { liveStatus.textContent = text; }
+
+    function startTimer() {
+      window.clearInterval(timerId);
+      timerId = window.setInterval(() => {
+        if (!document.hidden && !boardLocked) {
+          elapsedSeconds += 1;
+          timeValue.textContent = formatTime(elapsedSeconds);
+        }
+      }, 1000);
+    }
+
+    function showBoardMessage(text, duration = 1200) {
+      boardMessage.textContent = text;
+      boardMessage.classList.remove('is-hidden');
+      window.setTimeout(() => boardMessage.classList.add('is-hidden'), duration);
+    }
+
+    function previewCards() {
+      boardLocked = true;
+      const cards = [...board.querySelectorAll('.memory-card')];
+      cards.forEach((card) => card.classList.add('is-peeking'));
+      showBoardMessage('Kartları hatırla!', 1350);
+      window.setTimeout(() => {
+        cards.forEach((card) => card.classList.remove('is-peeking'));
+        boardLocked = false;
+        startTimer();
+        cards[0]?.focus({ preventScroll: true });
+      }, 1450);
+    }
+
+    function startLevel(index = levelIndex) {
+      levelIndex = index;
+      const level = levels[levelIndex];
+      matchedPairs = 0;
+      moves = 0;
+      elapsedSeconds = 0;
+      boardLocked = false;
+      hintUsed = false;
+      resetSelections();
+      window.clearInterval(timerId);
+
+      chapterName.textContent = level.title;
+      storyLine.textContent = level.line;
+      movesValue.textContent = '0';
+      pairsValue.textContent = `0 / ${level.pairs}`;
+      timeValue.textContent = '00:00';
+      hintButton.disabled = false;
+      hintButton.querySelector('strong').textContent = 'İpucu';
+      updateProgress();
+
+      const selected = characters.slice(0, level.pairs);
+      const deck = shuffle(selected.flatMap((character) => [character, character]));
+      setBoardColumns(deck.length);
+      board.innerHTML = deck.map((character, index) => cardMarkup(character, index)).join('');
+      board.querySelectorAll('.memory-card').forEach((card) => card.addEventListener('click', () => flipCard(card)));
+
+      levelModal.hidden = true;
+      finalModal.hidden = true;
+      playScreen.hidden = false;
+      introScreen.hidden = true;
+      previewCards();
+    }
+
+    function flipCard(card) {
+      if (boardLocked || card === firstCard || card.classList.contains('is-matched')) return;
+      ensureAudio();
+      playFlip();
+      card.classList.add('is-flipped');
+      const character = characters.find((item) => item.id === card.dataset.character);
+      card.setAttribute('aria-label', `${character.name} kartı açık`);
+
+      if (!firstCard) {
+        firstCard = card;
+        announce(`${character.name} kartı açıldı.`);
+        return;
+      }
+
+      secondCard = card;
+      moves += 1;
+      movesValue.textContent = String(moves);
+      boardLocked = true;
+
+      if (firstCard.dataset.character === secondCard.dataset.character) {
+        window.setTimeout(matchCards, 360);
+      } else {
+        window.setTimeout(hideCards, 820);
+      }
+    }
+
+    function matchCards() {
+      const character = characters.find((item) => item.id === firstCard.dataset.character);
+      [firstCard, secondCard].forEach((card) => {
+        card.classList.remove('is-flipped');
+        card.classList.add('is-matched');
+        card.disabled = true;
+        card.setAttribute('aria-label', `${character.name} çifti bulundu`);
+      });
+      matchedPairs += 1;
+      pairsValue.textContent = `${matchedPairs} / ${levels[levelIndex].pairs}`;
+      playMatch();
+      announce(`${character.name} çifti bulundu!`);
+      resetSelections();
+      boardLocked = false;
+      if (matchedPairs === levels[levelIndex].pairs) window.setTimeout(finishLevel, 620);
+    }
+
+    function hideCards() {
+      const firstName = characters.find((item) => item.id === firstCard.dataset.character).name;
+      const secondName = characters.find((item) => item.id === secondCard.dataset.character).name;
+      [firstCard, secondCard].forEach((card) => {
+        card.classList.remove('is-flipped');
+        card.setAttribute('aria-label', 'Kapalı masal kartı');
+      });
+      playMismatch();
+      announce(`${firstName} ile ${secondName} eşleşmedi.`);
+      resetSelections();
+      boardLocked = false;
+    }
+
+    function calculateStars() {
+      const pairs = levels[levelIndex].pairs;
+      if (!hintUsed && moves <= pairs + 2) return 3;
+      if (moves <= pairs * 2 + 2) return 2;
+      return 1;
+    }
+
+    function finishLevel() {
+      window.clearInterval(timerId);
+      boardLocked = true;
+      const level = levels[levelIndex];
+      const stars = calculateStars();
+      const bestKey = `masal-memory-best-${levelIndex}`;
+      const previousBest = Number(localStorage.getItem(bestKey) || Infinity);
+      if (moves < previousBest) localStorage.setItem(bestKey, String(moves));
+      localStorage.setItem('masal-memory-unlocked', String(Math.min(levels.length, levelIndex + 2)));
+
+      playWin();
+      resultStars.querySelectorAll('span').forEach((star, index) => star.classList.toggle('is-lit', index < stars));
+      resultStars.setAttribute('aria-label', `${stars} yıldız kazandın`);
+      resultStats.textContent = `${moves} hamle · ${formatTime(elapsedSeconds)}${hintUsed ? ' · İpucu kullanıldı' : ''}`;
+      resultStory.textContent = level.result;
+
+      if (levelIndex === levels.length - 1) {
+        createConfetti(44);
+        window.setTimeout(() => { finalModal.hidden = false; document.getElementById('playAgainButton').focus(); }, 500);
+      } else {
+        levelModal.hidden = false;
+        document.getElementById('nextButton').focus();
+      }
+    }
+
+    function useHint() {
+      if (hintUsed || boardLocked) return;
+      ensureAudio();
+      hintUsed = true;
+      boardLocked = true;
+      hintButton.disabled = true;
+      hintButton.querySelector('strong').textContent = 'Kullanıldı';
+      const cards = [...board.querySelectorAll('.memory-card:not(.is-matched)')];
+      cards.forEach((card) => card.classList.add('is-peeking'));
+      showBoardMessage('Sihirli ipucu!', 1150);
+      tone(640, .16, 'sine');
+      window.setTimeout(() => {
+        cards.forEach((card) => card.classList.remove('is-peeking'));
+        boardLocked = false;
+      }, 1250);
+    }
+
+    function createConfetti(amount) {
+      const colors = ['#ffd34e', '#67d7ff', '#ff6f76', '#7de18e', '#ffffff'];
+      for (let index = 0; index < amount; index += 1) {
+        const piece = document.createElement('span');
+        piece.className = 'confetti';
+        piece.style.left = `${Math.random() * 100}%`;
+        piece.style.background = colors[index % colors.length];
+        piece.style.setProperty('--drift', `${Math.random() * 140 - 70}px`);
+        piece.style.animationDelay = `${Math.random() * .55}s`;
+        document.body.appendChild(piece);
+        window.setTimeout(() => piece.remove(), 3200);
+      }
+    }
+
+    document.getElementById('startButton').addEventListener('click', () => { ensureAudio(); startLevel(0); });
+    document.getElementById('replayButton').addEventListener('click', () => startLevel(levelIndex));
+    document.getElementById('nextButton').addEventListener('click', () => startLevel(levelIndex + 1));
+    document.getElementById('playAgainButton').addEventListener('click', () => startLevel(0));
+    hintButton.addEventListener('click', useHint);
+    soundButton.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      localStorage.setItem('masal-memory-sound', soundEnabled ? 'on' : 'off');
+      updateSoundButton();
+      if (soundEnabled) { ensureAudio(); tone(620, .1, 'sine'); }
+    });
+    window.addEventListener('resize', () => {
+      if (!playScreen.hidden) setBoardColumns(levels[levelIndex].pairs * 2);
+    });
+
+    updateSoundButton();
+  </script>
+</body>
+</html>

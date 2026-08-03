@@ -5,6 +5,10 @@ import { games } from '../../data/games.mjs';
 
 const exclusiveGames = [
   {
+    title: 'Keloğlan’ın Masal Hafızası',
+    url: 'https://masalnova.com/oyna/keloglan-masal-hafizasi/',
+  },
+  {
     title: 'Keloğlan ve On Kapılı Saray',
     url: 'https://masalnova.com/oyna/keloglan-on-kapili-saray/',
   },
@@ -89,6 +93,25 @@ const jsonLd = [
       </div>
 
       <div class="originals-grid">
+        <a class="exclusive-game memory-game" href="/oyna/keloglan-masal-hafizasi/" aria-label="Keloğlan’ın Masal Hafızası oyununu oyna">
+          <div class="exclusive-visual" aria-hidden="true">
+            <img class="exclusive-background" src="/covers/stories/keloglanin-isiltili-saray-bilmecesi.webp" alt="" width="1024" height="576" />
+            <div class="exclusive-shade"></div>
+            <span class="exclusive-ribbon">YENİ · 6 BÖLÜM</span>
+          </div>
+          <div class="exclusive-copy">
+            <span class="exclusive-label"><i class="ph ph-crown-simple" aria-hidden="true"></i> MasalNova Originals</span>
+            <h3>Keloğlan’ın Masal Hafızası</h3>
+            <p>Masal kahramanlarını eşleştir, altı kapıyı aç ve altın sayfadaki sürprizi keşfet.</p>
+            <ul aria-label="Oyun özellikleri">
+              <li><i class="ph ph-brain" aria-hidden="true"></i> Hafıza</li>
+              <li><i class="ph ph-cards" aria-hidden="true"></i> 6 bölüm</li>
+              <li><i class="ph ph-device-mobile" aria-hidden="true"></i> Mobil uyumlu</li>
+            </ul>
+            <span class="exclusive-cta">Eşleri bul <i class="ph ph-play-circle" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
         <a class="exclusive-game palace-game" href="/oyna/keloglan-on-kapili-saray/" aria-label="Keloğlan ve On Kapılı Saray oyununu oyna">
           <div class="exclusive-visual" aria-hidden="true">
             <img class="exclusive-background" src="/games/keloglan-on-kapili-saray/assets/palace-story.webp" alt="" width="1600" height="900" />
@@ -220,7 +243,7 @@ const jsonLd = [
   .exclusive-heading span { display: inline-flex; align-items: center; gap: 6px; color: #ffd44d; font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
   .exclusive-heading h2 { margin-top: 3px; font-size: clamp(1.45rem, 3vw, 2rem); }
   .exclusive-heading > p { color: rgba(255,255,255,.74); font-size: .86rem; font-weight: 800; }
-  .originals-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+  .originals-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 13px; }
   .exclusive-game { position: relative; display: block; overflow: hidden; aspect-ratio: 4 / 3; border: 1px solid rgba(255,225,120,.72); border-radius: 20px; background: #17376c; color: #fff; box-shadow: 0 13px 30px rgba(2,24,82,.24); transition: transform .2s ease, box-shadow .2s ease; }
   .exclusive-game:hover { transform: translateY(-4px); box-shadow: 0 20px 38px rgba(2,24,82,.32); }
   .exclusive-visual { position: absolute; inset: 0; overflow: hidden; background: #91c9d7; }
@@ -231,6 +254,8 @@ const jsonLd = [
   .exclusive-game:hover .exclusive-hero { transform: translateY(-5px) rotate(-1deg); }
   .seed-game .exclusive-background { object-position: center; }
   .seed-game .exclusive-shade { background: linear-gradient(0deg, rgba(6,33,67,.22), transparent 45%); }
+  .memory-game .exclusive-background { object-position: 30% center; }
+  .memory-game .exclusive-shade { background: linear-gradient(0deg, rgba(3,17,50,.58), transparent 63%); }
   .palace-game .exclusive-background { object-position: center; }
   .palace-game .exclusive-shade { background: linear-gradient(0deg, rgba(3,15,43,.42), transparent 58%); }
   .chase-game .exclusive-background { object-position: center 70%; }
@@ -309,6 +334,9 @@ const jsonLd = [
     .family-note { display: none; }
     .originals-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .games-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (min-width: 921px) and (max-width: 1120px) {
+    .originals-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   }
   @media (max-width: 600px) {
     .games-hero { padding: 20px 0 12px; }
