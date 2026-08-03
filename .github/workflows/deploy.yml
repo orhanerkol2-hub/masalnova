@@ -30,6 +30,9 @@ jobs:
       - name: Refresh video list from YouTube
         run: node scripts/build-videos.mjs || echo "Video-Refresh fehlgeschlagen — committete videos.json wird verwendet"
       - name: Build site
+        env:
+          PUBLIC_ADSENSE_ENABLED: 'true'
+          PUBLIC_GOOGLE_CERTIFIED_CMP: 'true'
         run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

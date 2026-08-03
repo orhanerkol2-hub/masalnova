@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/reader.css';
+import AdSenseLoader from '../components/AdSenseLoader.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Consent from '../components/Consent.astro';
 import Header from '../components/Header.astro';
@@ -91,6 +92,7 @@ const useAppShell = appShell ?? !readerPage;
       robots={robots}
     />
     <Consent />
+    <AdSenseLoader allowAds={allowAds} />
   </head>
   <body class:list={[{ 'app-shell': useAppShell }]}>
     <a class="skip-link" href="#main">İçeriğe geç</a>
