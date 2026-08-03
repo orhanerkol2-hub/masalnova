@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const game = {
+  title: 'Keloğlan & Karakaçan: Masal Yolu 3D',
+  shortDescription: 'Keloğlan ve sadık eşeği Karakaçan’la yaşayan bir masal yolunda ilerle, yıldızları topla ve her koşuda değişen engelleri aş.',
+  image: '/games/keloglan-masal-yolu/cover.webp',
+  imageAlt: 'Keloğlan ve eşeği Karakaçan, dinamik Anadolu masal dünyasında 3D bir maceraya çıkıyor',
+};
+
+const gameUrl = 'https://masalnova.com/oyna/keloglan-masal-yolu/';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGame',
+    name: game.title,
+    description: game.shortDescription,
+    url: gameUrl,
+    image: `https://masalnova.com${game.image}`,
+    inLanguage: 'tr-TR',
+    applicationCategory: 'Game',
+    genre: ['3D adventure', 'Runner', "Children's game"],
+    gamePlatform: ['Web browser', 'Mobile web'],
+    playMode: 'SinglePlayer',
+    typicalAgeRange: '6-9',
+    numberOfPlayers: 1,
+    publisher: { '@type': 'Organization', name: 'MasalNova' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Oyunlar', item: 'https://masalnova.com/oyunlar/' },
+      { '@type': 'ListItem', position: 3, name: game.title, item: gameUrl },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={`${game.title} Oyna | MasalNova`}
+  description={`${game.shortDescription} MasalNova’ya özel, reklamsız ve ücretsiz Türkçe 3D tarayıcı oyununu oyna.`}
+  path="/oyna/keloglan-masal-yolu/"
+  image={game.image}
+  imageAlt={game.imageAlt}
+  activeNav="oyunlar"
+  allowAds={false}
+  jsonLd={jsonLd}
+>
+  <section class="game-page">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="İçerik yolu">
+        <a href="/">Ana Sayfa</a><span aria-hidden="true">›</span>
+        <a href="/oyunlar/">Oyunlar</a><span aria-hidden="true">›</span>
+        <span>{game.title}</span>
+      </nav>
+
+      <div class="game-heading">
+        <div>
+          <div class="meta-row">
+            <span class="exclusive-pill"><i class="ph ph-seal-check" aria-hidden="true"></i> MasalNova’ya özel</span>
+            <span>Sinematik 3D</span>
+            <span>Dinamik dünya</span>
+            <span>Öneri: 6+</span>
+          </div>
+          <h1>{game.title}</h1>
+          <p>{game.shortDescription}</p>
+        </div>
+        <div class="heading-actions">
+          <a class="fullscreen-link" href="/games/keloglan-masal-yolu/" data-fullscreen-trigger>
+            <i class="ph ph-arrows-out" aria-hidden="true"></i> Tam ekran oyna
+          </a>
+          <a class="back-link" href="/oyunlar/"><i class="ph ph-grid-four" aria-hidden="true"></i> Tüm oyunlar</a>
+        </div>
+      </div>
+
+      <section class="player-shell" aria-label="Keloğlan ve Karakaçan Masal Yolu 3D oyun alanı" data-player-shell>
+        <iframe
+          data-src="/games/keloglan-masal-yolu/"
+          title="Keloğlan & Karakaçan: Masal Yolu 3D — MasalNova oyun alanı"
+          allow="fullscreen"
+          allowfullscreen
+          loading="lazy"
+          data-game-frame
+        ></iframe>
+        <a
+          class="mobile-game-launch"
+          href="/games/keloglan-masal-yolu/"
+          aria-label="Keloğlan ve Karakaçan Masal Yolu 3D oyununu tam ekranda başlat"
+          data-fullscreen-trigger
+        >
+          <span class="mobile-game-launch-label">
+            <i class="ph ph-arrows-out" aria-hidden="true"></i>
+            <span><strong>Tam ekran oyna</strong><small>Dokun ve 3D macerayı başlat</small></span>
+          </span>
+        </a>
+      </section>
+
+      <p class="local-note">
+        <i class="ph ph-shield-check" aria-hidden="true"></i>
+        Oyun alanı MasalNova tarafından aynı alan adından sunulur; GamePix bağlantısı veya oyun içi reklam içermez.
+      </p>
+
+      <div class="game-info-grid">
+        <article class="info-card">
+          <span class="info-icon"><i class="ph ph-keyboard" aria-hidden="true"></i></span>
+          <div>
+            <h2>Nasıl oynanır?</h2>
+            <p>Bilgisayarda yön tuşları veya A–D ile Karakaçan’ı sağa sola yönlendir; boşluk tuşuyla zıpla. Telefonda ekrandaki yön ve zıplama düğmelerini kullan.</p>
+          </div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon"><i class="ph ph-star" aria-hidden="true"></i></span>
+          <div>
+            <h2>Hedefin</h2>
+            <p>Masal yıldızlarını ve altın nalları topla, üç masal mührünü bul ve Keloğlan’la yıldız çayırına ulaş.</p>
+          </div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon"><i class="ph ph-mountains" aria-hidden="true"></i></span>
+          <div>
+            <h2>Yaşayan masal dünyası</h2>
+            <p>Yolculuk ilerledikçe köy yolları, büyülü ormanlar ve gün batımı vadileri birbirine dönüşür; hava, ışık, hız ve engel düzeni dinamik olarak değişir.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import '../../scripts/keloglan-masal-yolu-shell';
+  </script>
+</BaseLayout>
+
+<style>
+  .game-page {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 100dvh;
+    padding: 28px 0 64px;
+    background:
+      radial-gradient(circle at 50% 16%, rgba(38,92,176,.34), transparent 44%),
+      linear-gradient(180deg, #07152e 0%, #040a18 64%, #07142a 100%);
+  }
+  .game-page::before {
+    position: absolute;
+    z-index: -2;
+    inset: 0 0 auto;
+    height: min(760px, 76vw);
+    background:
+      linear-gradient(180deg, rgba(4,12,30,.18), #07152e 73%, #040a18 100%),
+      linear-gradient(90deg, rgba(3,10,27,.7), transparent 48%, rgba(3,10,27,.58)),
+      url('/games/keloglan-masal-yolu/cover.webp') center 44% / cover no-repeat;
+    content: '';
+    filter: saturate(.78) contrast(1.08);
+    opacity: .46;
+    pointer-events: none;
+  }
+  .game-page::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,.11) .55px, transparent .55px);
+    background-size: 4px 4px;
+    content: '';
+    opacity: .09;
+    pointer-events: none;
+  }
+  .game-page .container { position: relative; max-width: 1260px; }
+  .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: rgba(255,255,255,.72); font-size: .78rem; font-weight: 800; }
+  .breadcrumbs a:hover { color: #fff; text-decoration: underline; }
+  .game-heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin: 22px 0 18px; color: #fff; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
+  .meta-row span { display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.12); font-size: .73rem; font-weight: 900; }
+  .meta-row .exclusive-pill { border-color: #ffe18b; background: #ffd25b; color: #5f3700; }
+  h1 { font-size: clamp(2rem, 5vw, 3.65rem); letter-spacing: -.04em; }
+  .game-heading p { max-width: 770px; margin-top: 9px; color: rgba(255,255,255,.82); }
+  .heading-actions { display: flex; flex: 0 0 auto; gap: 9px; }
+  .fullscreen-link, .back-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(255,255,255,.12); font-size: .8rem; font-weight: 900; }
+  .fullscreen-link { border-color: #ffd45b; background: #ffd45b; color: #593600; }
+  .fullscreen-link:hover, .back-link:hover { transform: translateY(-2px); }
+  .player-shell { position: relative; overflow: hidden; border: 1px solid rgba(255,218,113,.38); border-radius: 26px; background: #030916; box-shadow: 0 34px 90px rgba(0,0,0,.56), 0 0 0 7px rgba(255,255,255,.025), 0 0 58px rgba(57,115,218,.18); }
+  .player-shell::before { position: absolute; z-index: 3; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255,255,255,.09), inset 0 20px 38px rgba(0,0,0,.12); content: ''; pointer-events: none; }
+  .player-shell iframe { display: block; width: 100%; height: min(760px, calc(100dvh - 116px)); min-height: 600px; border: 0; background: #0c1d36; transition: opacity .2s ease; }
+  .player-shell iframe:not([src]) { opacity: 0; }
+  .mobile-game-launch { display: none; }
+  .player-shell:fullscreen { width: 100vw; height: 100dvh; border: 0; border-radius: 0; background: #0c1d36; box-shadow: none; }
+  .player-shell:fullscreen iframe { width: 100%; height: 100%; min-height: 100%; pointer-events: auto; }
+  .player-shell:fullscreen .mobile-game-launch { display: none; }
+  :global(html.game-fullscreen-active), :global(body.game-fullscreen-active) { height: 100%; overflow: hidden !important; overscroll-behavior: none; }
+  .local-note { display: flex; align-items: flex-start; gap: 9px; margin: 16px 4px 0; color: rgba(220,231,255,.68); font-size: .78rem; }
+  .local-note i { flex: 0 0 auto; margin-top: 2px; color: #ffd957; font-size: 1rem; }
+  .game-info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+  .info-card { display: flex; gap: 15px; padding: 22px; border: 1px solid rgba(255,255,255,.13); border-radius: 20px; background: linear-gradient(145deg, rgba(19,43,84,.76), rgba(8,23,52,.74)); color: #fff; box-shadow: 0 18px 44px rgba(0,0,0,.18); backdrop-filter: blur(12px); }
+  .info-icon { display: grid; flex: 0 0 auto; width: 42px; height: 42px; place-items: center; border-radius: 13px; background: #ffd14b; color: #173169; font-size: 1.3rem; }
+  .info-card h2 { font-size: 1.08rem; }
+  .info-card p { margin-top: 6px; color: rgba(255,255,255,.75); font-size: .88rem; }
+
+  @media (min-width: 721px) {
+    .breadcrumbs { color: rgba(226,235,255,.66); }
+    .breadcrumbs a:hover { color: #fff; }
+    .game-heading { color: #fff; text-shadow: 0 4px 26px rgba(0,0,0,.28); }
+    .game-heading p { color: rgba(228,237,255,.78); }
+    .meta-row span { border-color: rgba(255,255,255,.22); background: rgba(5,19,47,.52); color: rgba(237,243,255,.9); backdrop-filter: blur(9px); }
+    .meta-row .exclusive-pill { border-color: rgba(255,224,128,.72); background: rgba(255,213,85,.94); color: #5d3700; }
+    .back-link { border-color: rgba(255,255,255,.26); background: rgba(5,19,47,.5); color: #fff; backdrop-filter: blur(9px); }
+    .local-note i { color: #72dca7; }
+  }
+
+  @media (max-width: 980px) {
+    .game-info-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 820px) {
+    .game-heading { align-items: flex-start; flex-direction: column; }
+    .heading-actions { width: 100%; }
+    .fullscreen-link { justify-content: center; flex: 1; min-height: 44px; }
+    .back-link { display: none; }
+    .player-shell {
+      background:
+        linear-gradient(0deg, rgba(3,15,39,.72), rgba(3,15,39,.08) 58%),
+        url('/games/keloglan-masal-yolu/cover.webp') center / cover no-repeat;
+      touch-action: pan-y;
+    }
+    .player-shell iframe { height: min(680px, calc(100dvh - 174px)); min-height: 500px; pointer-events: none; }
+    .mobile-game-launch { position: absolute; inset: 0; z-index: 4; display: flex; align-items: flex-end; justify-content: center; padding: 22px; background: transparent; touch-action: pan-y; }
+    .mobile-game-launch-label { display: inline-flex; align-items: center; gap: 10px; min-width: 224px; padding: 12px 18px; border: 1px solid rgba(255,255,255,.72); border-radius: 999px; background: #ffd45b; color: #593600; box-shadow: 0 12px 30px rgba(0,15,66,.34); pointer-events: none; }
+    .mobile-game-launch-label > i { flex: 0 0 auto; font-size: 1.25rem; }
+    .mobile-game-launch-label > span { display: grid; text-align: left; line-height: 1.05; }
+    .mobile-game-launch strong { font-size: .84rem; }
+    .mobile-game-launch small { margin-top: 4px; font-size: .67rem; font-weight: 800; opacity: .72; }
+    .player-shell:fullscreen { touch-action: none; }
+    .player-shell:fullscreen iframe { height: 100%; min-height: 100%; pointer-events: auto; }
+  }
+
+  @media (max-width: 480px) {
+    .game-page { padding-top: 22px; }
+    .game-heading { gap: 18px; margin-top: 18px; }
+    .player-shell { margin-inline: -12px; border-radius: 20px; }
+    .player-shell iframe { height: min(680px, calc(100dvh - 164px)); min-height: 500px; }
+  }
+</style>
