@@ -4,29 +4,135 @@ import StoryCard from '../../../../components/StoryCard.astro';
 import { getStories } from '../../../../data/stories';
 import { ageGroups } from '../../../../data/taxonomy';
 
+type ExactAgePage = {
+  key: string;
+  age: number;
+  heading: string;
+  title: string;
+  description: string;
+  intro: string;
+  guide: string[];
+  recommendedIds: string[];
+};
+
+const exactAgePages: ExactAgePage[] = [
+  {
+    key: '3-yas',
+    age: 3,
+    heading: '3 Yaş Masalları',
+    title: '3 Yaş Masalları – Kısa ve Eğitici Hikâyeler | MasalNova',
+    description: '3 yaş için kısa, anlaşılır ve ücretsiz Türkçe masallar. Uyku, hayvan ve eğitici hikâyeleri okuma süresine göre keşfedin.',
+    intro: 'Üç yaşındaki çocuklar tekrarları, tanıdık günlük durumları ve kolay izlenen olayları sever. Bu sayfadaki masallar kısa cümleleri, sınırlı karakter sayısı ve sakin çözümleriyle birlikte okumaya uygundur. Önce kapaktaki karakter hakkında konuşabilir, ardından çocuğun ilgisi sürdüğü kadar okuyabilirsiniz. Yaş etiketi bir gelişim değerlendirmesi değildir; her çocuğun dili, ilgisi ve masal dinleme süresi farklıdır. Korkutucu ayrıntılardan uzak, hayvanlar, aile, paylaşma ve uyku rutini çevresindeki hikâyeler başlangıç için iyi seçeneklerdir.',
+    guide: ['İki ila beş dakikalık, tek bir ana olay çevresinde ilerleyen masallarla başlayın.', 'Çocuğun kapak, karakter veya tekrar eden sözler hakkında soru sormasına zaman bırakın.'],
+    recommendedIds: ['uykucu-ay', 'kucuk-bulut-pamuk', 'ay-dede-ile-uyumak-istemeyen-kuzu', 'zeynepin-kucuk-kardesi'],
+  },
+  {
+    key: '4-yas',
+    age: 4,
+    heading: '4 Yaş Masalları',
+    title: '4 Yaş Masalları – Eğitici ve Eğlenceli Hikâyeler | MasalNova',
+    description: '4 yaş çocukları için ücretsiz masallar: Duygular, arkadaşlık, hayvanlar ve uyku temalı kısa Türkçe hikâyeleri keşfedin.',
+    intro: 'Dört yaşta çocuklar bir kahramanın duygusunu ve basit neden-sonuç ilişkilerini daha rahat takip etmeye başlar. Bu seçki; kıskançlık, paylaşma, sabır ve arkadaşlık gibi tanıdık konuları doğrudan öğüt vermeden ele alan hikâyeleri öne çıkarır. Birlikte okurken “Sence şimdi ne olacak?” gibi kısa sorular sorabilir, ancak hikâyenin akışını sık sık kesmek zorunda değilsiniz. Beş dakikaya yakın masallar çoğu akşam için uygundur; yorgun günlerde kısa masal bölümünü kullanabilirsiniz.',
+    guide: ['Duygusu açık, çözümü güven veren ve az sayıda karakter içeren hikâyeleri seçin.', 'Okuma sonunda kahramanın ne hissettiğini tek bir soruyla konuşmak yeterlidir.'],
+    recommendedIds: ['zeynepin-kucuk-kardesi', 'altin-kaz', 'caliskan-karinca', 'kirmizi-baslikli-kiz'],
+  },
+  {
+    key: '5-yas',
+    age: 5,
+    heading: '5 Yaş Masalları',
+    title: '5 Yaş Masalları – Maceralı ve Eğitici Hikâyeler | MasalNova',
+    description: '5 yaş için ücretsiz Türkçe masallar. Merak, dostluk, sorumluluk ve Keloğlan temalı yaşa uygun hikâyeleri okuyun.',
+    intro: 'Beş yaşındaki çocuklar daha belirgin bir başlangıç, sorun ve çözüm yapısını takip edebilir. Bu nedenle seçkide hem sakin uyku hikâyeleri hem de merak duygusunu canlı tutan küçük maceralar bulunur. Kahramanın seçimleri üzerine konuşmak, çocuğun kendi fikrini kurmasına alan açar. Masalı yalnızca yaşa göre değil, o günkü enerjiye göre de seçin: hareketli bir zamanda macera, uykuya yaklaşırken yumuşak ritimli bir hikâye daha iyi gelebilir. Kartlardaki süre bilgisi birlikte okuma için yaklaşık bir rehberdir.',
+    guide: ['Net bir çatışma ve anlaşılır bir çözüm içeren öyküler bu yaşta ilgi çekebilir.', 'Çocuğun farklı bir son önermesine veya sevdiği bölümü yeniden anlatmasına fırsat verin.'],
+    recommendedIds: ['keloglan-ve-yildiz-kervani', 'zeynepin-kucuk-kardesi', 'pinokyo', 'caliskan-karinca'],
+  },
+  {
+    key: '6-yas',
+    age: 6,
+    heading: '6 Yaş Masalları',
+    title: '6 Yaş Masalları – Uzun ve Eğitici Hikâyeler | MasalNova',
+    description: '6 yaş çocukları için ücretsiz masallar. Daha gelişmiş olay örgülü Keloğlan, hayvan ve değerler eğitimi hikâyelerini keşfedin.',
+    intro: 'Altı yaş civarında daha uzun olay zincirleri, farklı karakterlerin niyetleri ve küçük sürprizler ilgi çekmeye başlar. Bu sayfa, dili hâlâ açık olan fakat çocuğa tahmin yürütme ve bağlantı kurma fırsatı veren hikâyeleri bir araya getirir. Okumayı yeni öğrenen çocuklar bazı bölümleri kendileri denemek isteyebilir; birlikte dönüşümlü okumak bunu baskısız bir oyuna çevirebilir. Süreyi tek oturuşta tamamlamak şart değildir. Uzun bir masalı uygun bir yerde bırakıp ertesi gün devam etmek de güçlü bir okuma alışkanlığıdır.',
+    guide: ['Karakterlerin neden farklı kararlar verdiğini konuşabileceğiniz hikâyeler seçin.', 'Yeni okurlar için kısa paragrafları dönüşümlü okumayı deneyin; hızdan çok keyfe odaklanın.'],
+    recommendedIds: ['pinokyo', 'keloglan-dev', 'keloglan-ve-yildiz-kervani', 'altin-kaz'],
+  },
+  {
+    key: '7-yas',
+    age: 7,
+    heading: '7 Yaş Masalları',
+    title: '7 Yaş Masalları – Uzun Macera ve Çocuk Hikâyeleri | MasalNova',
+    description: '7 yaş için ücretsiz uzun masallar ve çocuk hikâyeleri. Klasikler, Keloğlan maceraları ve düşündüren öyküleri keşfedin.',
+    intro: 'Yedi yaşındaki çocuklar yan olayları, daha geniş kelime dağarcığını ve kahramanın zaman içinde değişmesini takip edebilir. Bu seçkide klasik masalların yanında daha uzun Keloğlan maceraları ve sorumluluk, adalet ya da cesaret üzerine düşündüren hikâyeler öne çıkar. Çocuk kendi başına okuyorsa karttaki süre yalnızca yaklaşık bir göstergedir; durup düşünmek veya bilinmeyen bir kelimeyi sormak okumanın doğal parçasıdır. Birlikte okumada ise olayların farklı nasıl gelişebileceği üzerine konuşmak metni küçük bir aile sohbetine dönüştürebilir.',
+    guide: ['Daha uzun olay örgülerini bölümlere ayırarak okumaktan çekinmeyin.', 'Bilinmeyen kelimeleri hemen açıklamak yerine önce bağlamdan tahmin etmeyi birlikte deneyin.'],
+    recommendedIds: ['alice', 'hansel-ile-gretel', 'keloglan-dev', 'pamuk-prenses-ve-yedi-cuceler'],
+  },
+];
+
+const rangePages = ageGroups.map((age) => ({
+  key: age.key,
+  label: age.label,
+  heading: `${age.label} Masalları`,
+  title: `${age.label} Masalları Oku – Yaşa Uygun Çocuk Hikâyeleri | MasalNova`,
+  description: `${age.label} çocuklar için yaşa uygun, kısa, eğitici ve ücretsiz Türkçe çocuk masallarını MasalNova'da keşfedin.`,
+}));
+
 export async function getStaticPaths() {
-  return ageGroups.map((age) => ({ params: { age: age.key }, props: { age } }));
+  return ['3-5', '5-7', '7-9', '3-yas', '4-yas', '5-yas', '6-yas', '7-yas']
+    .map((age) => ({ params: { age } }));
 }
 
-const { age } = Astro.props;
+const page = [...rangePages, ...exactAgePages].find((candidate) => candidate.key === Astro.params.age)!;
 const allStories = await getStories();
-const stories = allStories.filter((story) => story.data.ageGroups.includes(age.key));
-const path = `/masallar/yas/${age.key}/`;
-const title = `${age.label} Masalları Oku – Yaşa Uygun Çocuk Hikâyeleri`;
-const description = `${age.label} çocuklar için masal oku: Yaşa uygun, kısa, eğitici ve ücretsiz Türkçe çocuk masallarını MasalNova'da keşfet.`;
+const exactPage = exactAgePages.find((candidate) => candidate.key === page.key);
+
+const includesExactAge = (group: string, age: number) => {
+  const [min, max = min] = group.split('-').map(Number);
+  return Number.isFinite(min) && age >= min && age <= max;
+};
+
+const matchingStories = exactPage
+  ? allStories.filter((story) => story.data.ageGroups.some((group) => includesExactAge(group, exactPage.age)))
+  : allStories.filter((story) => story.data.ageGroups.includes(page.key));
+
+const rankedStories = exactPage
+  ? [...matchingStories].sort((a, b) => {
+      const aRank = exactPage.recommendedIds.indexOf(a.id);
+      const bRank = exactPage.recommendedIds.indexOf(b.id);
+      if (aRank >= 0 || bRank >= 0) return (aRank < 0 ? 999 : aRank) - (bRank < 0 ? 999 : bRank);
+      const targetMinutes = exactPage.age <= 4 ? 3 : exactPage.age <= 6 ? 5 : 7;
+      return Math.abs(a.data.readingTime - targetMinutes) - Math.abs(b.data.readingTime - targetMinutes);
+    })
+  : matchingStories;
+
+const featured = rankedStories.slice(0, exactPage ? 8 : 24);
+const usedIds = new Set(featured.map((story) => story.id));
+const takeUnique = (predicate: (story: (typeof rankedStories)[number]) => boolean, count = 4) => {
+  const selected = rankedStories.filter((story) => !usedIds.has(story.id) && predicate(story)).slice(0, count);
+  selected.forEach((story) => usedIds.add(story.id));
+  return selected;
+};
+const shortStories = exactPage ? takeUnique((story) => story.data.readingTime <= 3) : [];
+const educationalStories = exactPage ? takeUnique((story) => story.data.categories.includes('egitici')) : [];
+const animalStories = exactPage ? takeUnique((story) => story.data.categories.includes('hayvan')) : [];
+const path = `/masallar/yas/${page.key}/`;
+const canonical = `https://masalnova.com${path}`;
+const intro = exactPage?.intro ?? `${page.label} çocukların ilgisine ve birlikte okuma alışkanlığına uygun kısa, eğitici ve hayal gücünü destekleyen Türkçe masalları keşfedin.`;
+const neighboringAges = exactPage
+  ? exactAgePages.filter((candidate) => Math.abs(candidate.age - exactPage.age) === 1)
+  : [];
 
 const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: title,
-    description,
-    url: `https://masalnova.com${path}`,
+    name: page.heading,
+    description: page.description,
+    url: canonical,
     inLanguage: 'tr-TR',
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: stories.length,
-      itemListElement: stories.slice(0, 30).map((story, index) => ({
+      numberOfItems: featured.length,
+      itemListElement: featured.map((story, index) => ({
         '@type': 'ListItem', position: index + 1, name: story.data.title,
         url: `https://masalnova.com/masallar/${story.id}/`,
       })),
@@ -38,31 +144,43 @@ const jsonLd = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
       { '@type': 'ListItem', position: 2, name: 'Masallar', item: 'https://masalnova.com/masallar/' },
-      { '@type': 'ListItem', position: 3, name: `${age.label} Masalları`, item: `https://masalnova.com${path}` },
+      { '@type': 'ListItem', position: 3, name: page.heading, item: canonical },
     ],
   },
 ];
 ---
-<BaseLayout title={`${title} | MasalNova`} description={description} path={path} jsonLd={jsonLd} activeNav="masallar">
+<BaseLayout title={page.title} description={page.description} path={path} jsonLd={jsonLd} activeNav="masallar">
   <section class="section age-page">
     <div class="container">
-      <nav class="crumbs" aria-label="Breadcrumb">
-        <a href="/">Ana Sayfa</a><span>›</span><a href="/masallar/">Masallar</a><span>›</span><span>{age.label} Masalları</span>
-      </nav>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Ana Sayfa</a><span>›</span><a href="/masallar/">Masallar</a><span>›</span><span>{page.heading}</span></nav>
       <header class="age-head">
-        <p class="kicker">Yaşa göre masal oku</p>
-        <h1>{age.label} Masalları</h1>
-        <p>{age.label} çocukların ilgisine ve birlikte okuma alışkanlığına uygun kısa, eğitici ve hayal gücünü destekleyen Türkçe masalları keşfedin.</p>
-        <strong>{stories.length} masal</strong>
+        <p class="kicker">Yaşa göre redaksiyonlu masal seçkisi</p>
+        <h1>{page.heading}</h1>
+        <p>{intro}</p>
+        <strong>{matchingStories.length} uygun masal</strong>
       </header>
-      <div class="age-links" aria-label="Diğer yaş grupları">
-        {ageGroups.filter((item) => item.key !== age.key).map((item) => (
-          <a href={`/masallar/yas/${item.key}/`}>{item.label} masalları</a>
-        ))}
-      </div>
-      <div class="grid grid-3 story-grid">
-        {stories.map((story) => <StoryCard story={story} />)}
-      </div>
+
+      <nav class="age-links" aria-label="Diğer yaş sayfaları">
+        {exactAgePages.filter((item) => item.key !== page.key).map((item) => <a href={`/masallar/yas/${item.key}/`}>{item.heading}</a>)}
+        {rangePages.map((item) => <a href={`/masallar/yas/${item.key}/`}>{item.label}</a>)}
+      </nav>
+
+      <section class="story-section" aria-labelledby="recommended-title">
+        <h2 id="recommended-title">{exactPage ? 'Editörün önerdiği masallar' : `${page.label} için masallar`}</h2>
+        <div class="grid grid-3 story-grid">{featured.map((story) => <StoryCard story={story} />)}</div>
+      </section>
+
+      {shortStories.length > 0 && <section class="story-section"><h2>Kısa masallar</h2><div class="grid grid-3 story-grid">{shortStories.map((story) => <StoryCard story={story} />)}</div></section>}
+      {educationalStories.length > 0 && <section class="story-section"><h2>Eğitici masallar</h2><div class="grid grid-3 story-grid">{educationalStories.map((story) => <StoryCard story={story} />)}</div></section>}
+      {animalStories.length > 0 && <section class="story-section"><h2>Hayvan masalları</h2><div class="grid grid-3 story-grid">{animalStories.map((story) => <StoryCard story={story} />)}</div></section>}
+
+      {exactPage && <section class="parent-guide" aria-labelledby="age-guide-title">
+        <p class="guide-kicker">Ebeveynler için</p>
+        <h2 id="age-guide-title">{exactPage.age} yaş için masal nasıl seçilir?</h2>
+        {exactPage.guide.map((paragraph) => <p>{paragraph}</p>)}
+        <p>Bu yaş önerileri tıbbi veya pedagojik değerlendirme değildir. Çocuğunuzun ilgisi ve rahatlığı her zaman en önemli seçim ölçütüdür.</p>
+        {neighboringAges.length > 0 && <div class="neighbor-links">{neighboringAges.map((neighbor) => <a href={`/masallar/yas/${neighbor.key}/`}>{neighbor.heading}</a>)}</div>}
+      </section>}
     </div>
   </section>
 </BaseLayout>
@@ -71,12 +189,31 @@ const jsonLd = [
   .age-page { color: #fff; }
   .crumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; color: rgba(255,255,255,.78); font-weight: 700; }
   .crumbs a:hover { color: #fff; text-decoration: underline; }
-  .age-head { max-width: 850px; padding: clamp(26px,5vw,48px); border: 1px solid rgba(255,255,255,.24); border-radius: 30px; background: rgba(255,255,255,.1); box-shadow: 0 26px 70px rgba(6,20,60,.22); }
-  .kicker { color: #ffd77a; font-size: .8rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+  .age-head { max-width: 900px; padding: clamp(26px,5vw,48px); border: 1px solid rgba(255,255,255,.24); border-radius: 30px; background: rgba(255,255,255,.1); box-shadow: 0 26px 70px rgba(6,20,60,.22); }
+  .kicker, .guide-kicker { color: #ffd77a; font-size: .8rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
   h1 { margin: 8px 0 14px; font-size: clamp(2.4rem,6vw,4.8rem); letter-spacing: -.055em; }
-  .age-head > p:last-of-type { max-width: 66ch; color: rgba(255,255,255,.86); font-size: 1.05rem; }
+  .age-head > p:last-of-type { max-width: 72ch; color: rgba(255,255,255,.88); font-size: 1.02rem; }
   .age-head strong { display: inline-flex; margin-top: 18px; padding: 7px 13px; border-radius: 999px; background: #fff; color: var(--blue-d); }
-  .age-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0; }
-  .age-links a { padding: 9px 15px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.12); font-weight: 750; }
-  .story-grid :global(.story-card) { box-shadow: 0 22px 55px rgba(6,20,60,.2); }
+  .age-links, .neighbor-links { display: flex; flex-wrap: wrap; gap: 9px; margin: 24px 0; }
+  .age-links a, .neighbor-links a { padding: 9px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.12); font-weight: 800; }
+  .story-section { margin-top: 34px; }
+  .story-section h2 { margin-bottom: 16px; font-size: clamp(1.45rem,3vw,2rem); }
+  .parent-guide { max-width: 900px; margin-top: 40px; padding: clamp(24px,5vw,42px); border-radius: 28px; background: #fff; color: var(--ink); }
+  .guide-kicker { color: #1752c5; }
+  .parent-guide h2 { margin: 7px 0 13px; }
+  .parent-guide p + p { margin-top: 10px; color: var(--ink-soft); }
+  .neighbor-links a { border-color: #dce2ee; background: #f5f8ff; color: #1749ae; }
+  @media (min-width: 721px) {
+    .age-page { min-height: calc(100dvh - var(--app-nav-height)); padding: 34px 0 68px; background: #fbf8f1; color: #102a66; }
+    .age-page .container { max-width: 1260px; }
+    .crumbs { color: #727c91; }
+    .age-head { max-width: none; padding: 30px; border-color: #e2ddd1; border-radius: 24px; background: #fff; box-shadow: 0 14px 38px rgba(23,43,92,.08); }
+    .kicker { color: #a87906; }
+    .age-head h1 { color: #0b2b75; font-size: clamp(2rem,3.5vw,3.1rem); }
+    .age-head > p:last-of-type { color: #667188; }
+    .age-head strong { background: #edf3ff; color: #1749ae; }
+    .age-links a { border-color: #ded9ce; background: #fff; color: #25457d; }
+    .story-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
+    .parent-guide { border: 1px solid #e2ddd1; box-shadow: 0 14px 38px rgba(23,43,92,.08); }
+  }
 </style>

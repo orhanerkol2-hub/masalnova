@@ -24,7 +24,9 @@ const stories = defineCollection({
     isPopular: z.boolean().default(false),
     isNew: z.boolean().default(false),
     isTodayStory: z.boolean().default(false),
+    editorialStatus: z.enum(['draft', 'needs_review', 'approved']).default('approved'),
     publishedAt: z.string(),
+    modifiedAt: z.string().optional(),
   }),
 });
 

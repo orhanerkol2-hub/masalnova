@@ -3,10 +3,16 @@ import { durationBucketForMinutes } from './taxonomy';
 
 export type Story = CollectionEntry<'stories'>;
 
-/** All stories, newest first. */
-export async function getStories(): Promise<Story[]> {
+/** Every story, including editorial drafts, newest first. */
+export async function getAllStories(): Promise<Story[]> {
   const all = await getCollection('stories');
   return all.sort((a, b) => b.data.publishedAt.localeCompare(a.data.publishedAt));
+}
+
+/** Only editorially approved stories for public collections and discovery. */
+export async function getStories(): Promise<Story[]> {
+  const all = await getAllStories();
+  return all.filter((story) => story.data.editorialStatus === 'approved');
 }
 
 export function storyById(stories: Story[], id: string): Story | undefined {

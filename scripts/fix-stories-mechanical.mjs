@@ -10,7 +10,7 @@
 //
 // Der eigentliche Fließtext wird nie inhaltlich geändert; nur Müll am Rand entfernt.
 // Genuin abgeschnittene Geschichten (enden mitten im Satz) werden NICHT repariert —
-// sie werden gemeldet und via expand-short-stories.mjs neu erzeugt.
+// sie werden gemeldet und anschließend manuell redaktionell überarbeitet.
 //
 //   node scripts/fix-stories-mechanical.mjs --dry-run   # zeigt nur, was sich ändern würde
 //   node scripts/fix-stories-mechanical.mjs             # wendet an
