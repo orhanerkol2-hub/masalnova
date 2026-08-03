@@ -1,0 +1,88 @@
+{
+  "generator": "Built-in image generation tool",
+  "referenceImage": "/public/boyama/print/keloglan-degirmen-ve-ekmek.png",
+  "referenceRole": "Style and layout reference only; character and scene must not be reproduced.",
+  "sharedPrompt": "Use case: illustration-story. Asset type: printable children's coloring page for MasalNova, A4 portrait. Professional black-and-white children's coloring-book line art matching the reference's friendly visual language; smooth clean closed outlines; consistent medium-bold line weight; large enclosed coloring areas. One clear central scene, full subjects visible, generous blank outer margins, every object fully inside frame. Audience: children ages 4 to 7. Pure black outlines on pure white, white interior fills, readable hands and faces, anatomically coherent, no text, logo, watermark or border. Avoid Keloğlan, bald boy, pointed felt cap, color, gray, shadows, gradients, cross-hatching, sketch texture, double outlines, tiny details, solid black areas except pupils, photorealism, cropped objects, crowded backgrounds and copyrighted character styling.",
+  "pages": [
+    {
+      "slug": "masal-perisi-dev-lale",
+      "primaryRequest": "A cheerful original little flower fairy with rounded wings gently waters one giant tulip using a simple watering can. Add three oversized leaves, one smiling ladybug and two small round stones."
+    },
+    {
+      "slug": "minik-ejderha-feneri",
+      "primaryRequest": "A friendly original baby dragon with rounded features carefully lights a large old-fashioned lantern using one tiny puff of flame. Add a small stone arch, two stars and three simple pebbles."
+    },
+    {
+      "slug": "ay-tavsani-yildiz-sepeti",
+      "primaryRequest": "A cute original moon rabbit stands on a crescent-shaped hill holding a simple basket with three large stars. Add two rounded clouds and one small telescope."
+    },
+    {
+      "slug": "deniz-kizi-mercan-bahcesi",
+      "primaryRequest": "A friendly original young mermaid tends a simple coral garden under the sea, holding one large seashell like a watering cup. Add two large corals, one smiling fish and three bubbles."
+    },
+    {
+      "slug": "balkabagi-cayi-hazirlayan-buyucu",
+      "primaryRequest": "A cheerful original young magic apprentice wearing a simple soft wide-brim hat stirs a friendly pumpkin-shaped teapot with a wooden spoon. Add two large autumn leaves, one cup and three round berries."
+    },
+    {
+      "slug": "tekboynuz-gokkusagi-koprusu",
+      "primaryRequest": "A friendly original young unicorn walks across a simple arched rainbow-shaped bridge above three rounded clouds. Add two large stars and one small crescent."
+    },
+    {
+      "slug": "baykusun-ay-kutuphanesi",
+      "primaryRequest": "A wise friendly owl librarian sits beside an open oversized storybook under a crescent moon. Add one small stack of two books, two stars and a simple lantern."
+    },
+    {
+      "slug": "tilkinin-mantar-koyu",
+      "primaryRequest": "A friendly original fox delivers a tiny basket to one round mushroom house with a door and two windows. Add two smaller mushrooms, three large leaves and a winding path."
+    },
+    {
+      "slug": "bulut-cobani",
+      "primaryRequest": "A cheerful original little cloud shepherd girl gently guides three fluffy cloud sheep with a simple curved staff. Add two stars and one small crescent."
+    },
+    {
+      "slug": "kurbaga-prens-altin-top",
+      "primaryRequest": "A friendly frog prince sits beside a round lily pond holding one large golden ball shown only as an unfilled outline. Add one simple crown, two lily pads, one flower and three reeds."
+    },
+    {
+      "slug": "ruzgari-diken-terzi",
+      "primaryRequest": "A cheerful original little tailor sews one large swirling ribbon of wind with an oversized safe blunt needle and thread. Add a simple spool, two rounded clouds and three large buttons."
+    },
+    {
+      "slug": "bal-fenerli-ayi",
+      "primaryRequest": "A friendly round storybook bear walks through a simple woodland clearing carrying a large lantern shaped like a honey jar. Add one small beehive on a branch, two oversized flowers and three round stones."
+    },
+    {
+      "slug": "nilufer-kayigindaki-fil",
+      "primaryRequest": "A cheerful original baby elephant rides in a simple boat shaped like one large lily leaf, holding a small paddle. Add two lily pads, one lotus flower and one smiling dragonfly."
+    },
+    {
+      "slug": "kuslari-besleyen-prenses",
+      "primaryRequest": "An original young fairy-tale princess with a simple crown and long modest dress gently feeds three small birds in a palace garden. Add one low birdbath, two large roses and a simple distant arch."
+    },
+    {
+      "slug": "ejderhaya-yardim-eden-sovalye",
+      "primaryRequest": "A cheerful original young girl knight kneels to help a friendly baby dragon tie a loose ribbon around its small satchel. Add one simple shield, two large flowers and a distant castle tower."
+    },
+    {
+      "slug": "salyangoz-postaci",
+      "primaryRequest": "A friendly large snail post carrier delivers one sealed envelope to a tiny round tree-stump house. Add one simple satchel, two oversized mushrooms and three leaves."
+    },
+    {
+      "slug": "kus-evi-yapan-dev",
+      "primaryRequest": "A gentle friendly giant sits in a meadow building one oversized birdhouse while three small birds watch. Add one simple hammer resting safely on the ground, two clouds and three large daisies."
+    },
+    {
+      "slug": "ay-bahcesindeki-tavus-kusu",
+      "primaryRequest": "A graceful friendly peacock stands in a simple moon garden with its large tail open in broad easy-to-color feather shapes. Add one crescent moon, two stars, two large flowers and three stones."
+    },
+    {
+      "slug": "sihirli-agacin-kapisi",
+      "primaryRequest": "A cheerful original child with curly hair opens a small round door in the trunk of a friendly ancient tree. A tiny glowing star is shown as a simple outline inside. Add two mushrooms, three large leaves and one curious squirrel."
+    },
+    {
+      "slug": "palamut-firincisi-sincap",
+      "primaryRequest": "A friendly squirrel baker stands beside a small outdoor acorn-shaped oven holding one large round loaf on a tray. Add one simple woven basket, three acorns and two oak leaves."
+    }
+  ]
+}
