@@ -11,6 +11,8 @@ export default defineConfig({
   build: { format: 'directory' },
   image: { service: passthroughImageService() },
   integrations: [sitemap({
-    filter: (page) => page !== 'https://masalnova.com/story-index.json',
+    filter: (page) =>
+      page !== 'https://masalnova.com/story-index.json' &&
+      !page.startsWith('https://masalnova.com/games/'),
   })],
 });
