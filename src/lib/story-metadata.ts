@@ -1,5 +1,7 @@
 export interface StoryMetadata {
   id: string;
+  href: string;
+  section: 'masallar' | 'islami-hikayeler';
   title: string;
   shortDescription: string;
   coverEmoji: string;
@@ -22,7 +24,7 @@ export interface StoryMetadata {
 let storyIndexPromise: Promise<StoryMetadata[]> | undefined;
 
 export function loadStoryIndex(): Promise<StoryMetadata[]> {
-  storyIndexPromise ??= fetch('/story-index.json?v=2', {
+  storyIndexPromise ??= fetch('/story-index.json?v=3', {
     headers: { Accept: 'application/json' },
   }).then(async (response) => {
     if (!response.ok) throw new Error(`Story index could not be loaded (${response.status})`);
@@ -221,6 +223,17 @@ function ageRangeIncludes(group: string, requestedAge: number): boolean {
     && requestedAge <= maximum;
 }
 
+function ageRangesOverlap(left: string, right: string): boolean {
+  const [leftMinimum, leftMaximum = leftMinimum] = left.split('-').map(Number);
+  const [rightMinimum, rightMaximum = rightMinimum] = right.split('-').map(Number);
+  return Number.isFinite(leftMinimum)
+    && Number.isFinite(leftMaximum)
+    && Number.isFinite(rightMinimum)
+    && Number.isFinite(rightMaximum)
+    && leftMinimum <= rightMaximum
+    && rightMinimum <= leftMaximum;
+}
+
 export function storyMatchesAge(story: StoryMetadata, value?: string | null): boolean {
   if (!value) return true;
 
@@ -229,7 +242,7 @@ export function storyMatchesAge(story: StoryMetadata, value?: string | null): bo
     return (story.ageGroups ?? []).some((group) => ageRangeIncludes(group, requestedAge));
   }
 
-  return (story.ageGroups ?? []).includes(value);
+  return (story.ageGroups ?? []).some((group) => ageRangesOverlap(group, value));
 }
 
 export function storyMatchesDuration(story: StoryMetadata, value?: string | null): boolean {
@@ -356,8 +369,9 @@ function element<K extends keyof HTMLElementTagNameMap>(
 
 /** Build a safe, compact story card from trusted metadata (no HTML injection). */
 export function createStoryResultCard(story: StoryMetadata): HTMLAnchorElement {
+  const isIslamic = story.section === 'islami-hikayeler';
   const card = element('a', 'story-result-card');
-  card.href = `/masallar/${encodeURIComponent(story.id)}/`;
+  card.href = story.href;
   card.style.setProperty('--card-accent', story.coverColor);
 
   const media = element('span', 'story-result-media');
@@ -380,7 +394,7 @@ export function createStoryResultCard(story: StoryMetadata): HTMLAnchorElement {
   if (story.hasAudio) media.append(element('span', 'story-result-audio', 'Sesli'));
 
   const body = element('span', 'story-result-body');
-  body.append(element('span', 'story-result-eyebrow', 'MasalNova seçkisi'));
+  body.append(element('span', 'story-result-eyebrow', isIslamic ? 'Kaynaklı İslami hikâye' : 'MasalNova seçkisi'));
   body.append(element('span', 'story-result-title', story.title));
 
   const meta = element('span', 'story-result-meta');
@@ -389,7 +403,7 @@ export function createStoryResultCard(story: StoryMetadata): HTMLAnchorElement {
   if (story.hasAudio) meta.append(element('span', undefined, 'Sesli masal'));
   body.append(meta);
   body.append(element('span', 'story-result-description', story.shortDescription));
-  body.append(element('span', 'story-result-link', 'Masalı oku'));
+  body.append(element('span', 'story-result-link', isIslamic ? 'Hikâyeyi oku' : 'Masalı oku'));
 
   card.append(media, body);
   return card;

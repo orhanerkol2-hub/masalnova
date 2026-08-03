@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getStories } from '../data/stories';
+import { getMasalStories, storyPath } from '../data/stories';
 import {
   ageLabel,
   durationBucketForMinutes,
@@ -13,28 +13,30 @@ export const prerender = true;
  * Deliberately exposes card metadata only—never the Markdown story bodies.
  */
 export const GET: APIRoute = async () => {
-  const stories = await getStories();
-  const items = stories.map(({ id, data }) => ({
-    id,
-    title: data.title,
-    shortDescription: data.shortDescription,
-    coverEmoji: data.coverEmoji,
-    coverColor: data.coverColor,
-    coverImage: data.coverImage,
-    altText: data.altText ?? data.title,
-    ageGroups: data.ageGroups,
-    ageLabel: data.ageGroups[0] ? ageLabel(data.ageGroups[0]) : '',
-    readingTime: data.readingTime,
-    duration: durationBucketForMinutes(data.readingTime),
-    categories: data.categories,
-    themes: data.themes,
-    characters: data.characters,
-    seoKeywords: data.seoKeywords,
-    publishedAt: data.publishedAt,
-    categoryLabel: data.categories[0]
-      ? storyCategoryLabel(data.categories[0])
+  const stories = await getMasalStories();
+  const items = stories.map((story) => ({
+    id: story.id,
+    href: storyPath(story),
+    section: story.data.section,
+    title: story.data.title,
+    shortDescription: story.data.shortDescription,
+    coverEmoji: story.data.coverEmoji,
+    coverColor: story.data.coverColor,
+    coverImage: story.data.coverImage,
+    altText: story.data.altText ?? story.data.title,
+    ageGroups: story.data.ageGroups,
+    ageLabel: story.data.audienceLabel ?? (story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : ''),
+    readingTime: story.data.readingTime,
+    duration: durationBucketForMinutes(story.data.readingTime),
+    categories: story.data.categories,
+    themes: story.data.themes,
+    characters: story.data.characters,
+    seoKeywords: story.data.seoKeywords,
+    publishedAt: story.data.publishedAt,
+    categoryLabel: story.data.categories[0]
+      ? storyCategoryLabel(story.data.categories[0])
       : 'Çocuk Masalı',
-    hasAudio: Boolean(data.audioUrl),
+    hasAudio: Boolean(story.data.audioUrl),
   }));
 
   return new Response(JSON.stringify(items), {

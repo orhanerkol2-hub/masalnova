@@ -10,7 +10,9 @@ const nonIndexableStoryPaths = new Set(
     .flatMap((name) => {
       const source = readFileSync(new URL(name, storyContentDirectory), 'utf8');
       const status = source.match(/^editorialStatus:\s*["']?([^\s"']+)/m)?.[1] ?? 'approved';
-      return status === 'approved' ? [] : [`https://masalnova.com/masallar/${name.replace(/\.md$/, '')}/`];
+      const section = source.match(/^section:\s*["']?([^\s"']+)/m)?.[1] ?? 'masallar';
+      const basePath = section === 'islami-hikayeler' ? '/islami-hikayeler/' : '/masallar/';
+      return status === 'approved' ? [] : [`https://masalnova.com${basePath}${name.replace(/\.md$/, '')}/`];
     }),
 );
 

@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import YouTubePlayer from '../../components/YouTubePlayer.astro';
 import RelatedVideos from '../../components/RelatedVideos.astro';
 import { videos, videoBySlug } from '../../data/videos';
-import { getStories, storyById } from '../../data/stories';
+import { getStories, storyById, storyPath } from '../../data/stories';
 import { videoCategoryLabel } from '../../data/taxonomy';
 import { compactDescription, durationToIso, formatTurkishDate, videoSeoTitle } from '../../lib/seo';
 
@@ -97,9 +97,9 @@ const jsonLd = [
           <div class="cta-cover">{relatedStories[0]!.data.coverEmoji}</div>
           <div class="cta-body">
             <p class="cta-kicker">Bu videoyu sevdiniz mi?</p>
-            <p class="cta-title">{relatedStories[0]!.data.title} masalını da okuyun.</p>
+            <p class="cta-title">{relatedStories[0]!.data.title} {relatedStories[0]!.data.section === 'islami-hikayeler' ? 'hikâyesini' : 'masalını'} da okuyun.</p>
           </div>
-          <a class="btn btn-primary" href={`/masallar/${relatedStories[0]!.id}/`}>Masalı Oku →</a>
+          <a class="btn btn-primary" href={storyPath(relatedStories[0]!)}>{relatedStories[0]!.data.section === 'islami-hikayeler' ? 'Hikâyeyi' : 'Masalı'} Oku →</a>
         </aside>
       )}
     </div>

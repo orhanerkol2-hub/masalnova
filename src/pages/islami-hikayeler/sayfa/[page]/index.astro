@@ -1,0 +1,36 @@
+---
+import CategoryListingPage from '../../../../components/CategoryListingPage.astro';
+import { getIslamicStories } from '../../../../data/stories';
+import { islamicStorySection } from '../../../../data/taxonomy';
+import { CATEGORY_PAGE_SIZE, categorySeoCopy } from '../../../../data/category-pages';
+
+export async function getStaticPaths() {
+  const allStories = await getIslamicStories();
+  const pageCount = Math.ceil(allStories.length / CATEGORY_PAGE_SIZE);
+
+  return Array.from({ length: Math.max(0, pageCount - 1) }, (_, index) => {
+    const page = index + 2;
+    const start = (page - 1) * CATEGORY_PAGE_SIZE;
+    return {
+      params: { page: String(page) },
+      props: {
+        stories: allStories.slice(start, start + CATEGORY_PAGE_SIZE),
+        totalStories: allStories.length,
+        page,
+        pageCount,
+      },
+    };
+  });
+}
+
+const { stories, totalStories, page, pageCount } = Astro.props;
+---
+
+<CategoryListingPage
+  category={islamicStorySection}
+  copy={categorySeoCopy[islamicStorySection.key]}
+  stories={stories}
+  totalStories={totalStories}
+  page={page}
+  pageCount={pageCount}
+/>

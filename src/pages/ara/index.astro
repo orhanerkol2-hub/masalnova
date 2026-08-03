@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import ContentTypeTabs from '../../components/ContentTypeTabs.astro';
-import { getStories } from '../../data/stories';
+import { getMasalStories, storyPath } from '../../data/stories';
 import {
   ageLabel,
   durationBucketForMinutes,
@@ -11,10 +11,12 @@ import {
 import { videos } from '../../data/videos';
 import type { StoryMetadata } from '../../lib/story-metadata';
 
-const indexedStories = await getStories();
+const indexedStories = await getMasalStories();
 const fallbackEntry = indexedStories.find((story) => story.data.isTodayStory) ?? indexedStories[0];
 const fallbackStory: StoryMetadata | undefined = fallbackEntry ? {
   id: fallbackEntry.id,
+  href: storyPath(fallbackEntry),
+  section: fallbackEntry.data.section,
   title: fallbackEntry.data.title,
   shortDescription: fallbackEntry.data.shortDescription,
   coverEmoji: fallbackEntry.data.coverEmoji,
@@ -22,7 +24,7 @@ const fallbackStory: StoryMetadata | undefined = fallbackEntry ? {
   coverImage: fallbackEntry.data.coverImage,
   altText: fallbackEntry.data.altText ?? fallbackEntry.data.title,
   ageGroups: fallbackEntry.data.ageGroups,
-  ageLabel: fallbackEntry.data.ageGroups[0] ? ageLabel(fallbackEntry.data.ageGroups[0]) : '',
+  ageLabel: fallbackEntry.data.audienceLabel ?? (fallbackEntry.data.ageGroups[0] ? ageLabel(fallbackEntry.data.ageGroups[0]) : ''),
   readingTime: fallbackEntry.data.readingTime,
   duration: durationBucketForMinutes(fallbackEntry.data.readingTime),
   categories: fallbackEntry.data.categories,

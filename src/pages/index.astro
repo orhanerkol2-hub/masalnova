@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
 import StoryCard from '../components/StoryCard.astro';
-import { getStories, popularStories } from '../data/stories';
+import { getIslamicStories, getMasalStories, popularStories } from '../data/stories';
 import {
   ageLabel,
   storyCategoryLabel,
@@ -12,8 +12,11 @@ import {
   dailyRotationIndex,
 } from '../lib/daily-story';
 
-const stories = await getStories();
+const stories = await getMasalStories();
+const islamicStories = await getIslamicStories();
 const buildNow = new Date();
+const audienceForStory = (story: (typeof stories)[number]) =>
+  story.data.audienceLabel ?? (story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : 'Her yaş');
 
 const moodForStory = (story: (typeof stories)[number]) => {
   const signals = [...story.data.categories, ...story.data.themes].join(' ').toLocaleLowerCase('tr');
@@ -31,7 +34,7 @@ const carouselFeed = popularSelection.map((story) => ({
   coverImage: story.data.coverImage,
   altText: story.data.altText ?? `${story.data.title} resimli masal kapağı`,
   category: story.data.categories[0] ? storyCategoryLabel(story.data.categories[0]) : 'Çocuk masalı',
-  age: story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : 'Her yaş',
+  age: audienceForStory(story),
   readingTime: story.data.readingTime,
   publishedAt: story.data.publishedAt,
   publishedLabel: new Intl.DateTimeFormat('tr-TR', {
@@ -61,7 +64,7 @@ const dailyStoryFeed = dailyStoryCandidates.map((story) => ({
   shortDescription: story.data.shortDescription,
   coverImage: story.data.coverImage,
   altText: story.data.altText ?? `${story.data.title} resimli masal kapağı`,
-  age: story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : 'Her yaş',
+  age: audienceForStory(story),
   readingTime: story.data.readingTime,
   moodLabel: moodForStory(story) === 'sakin' ? 'Sakin' : 'MasalNova seçkisi',
 }));
@@ -97,6 +100,7 @@ const categoryLinks = [
     description: 'Sakin bir gece için',
     icon: 'moon-stars',
     count: stories.filter((story) => story.data.categories.includes('uyku')).length,
+    itemLabel: 'masal',
   },
   {
     href: '/masallar/kategori/egitici/',
@@ -104,6 +108,7 @@ const categoryLinks = [
     description: 'Merakla öğrenmek için',
     icon: 'leaf',
     count: stories.filter((story) => story.data.categories.includes('egitici')).length,
+    itemLabel: 'masal',
   },
   {
     href: '/masallar/kategori/hayvan/',
@@ -111,6 +116,7 @@ const categoryLinks = [
     description: 'Sevimli dostlarla',
     icon: 'paw-print',
     count: stories.filter((story) => story.data.categories.includes('hayvan')).length,
+    itemLabel: 'masal',
   },
 ];
 
@@ -225,7 +231,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               </p>
               <h2 data-daily-story-title>{tonightStory.data.title}</h2>
               <p class="home-hero-m-meta" data-daily-story-meta="mobile">
-                {tonightStory.data.ageGroups[0] ? ageLabel(tonightStory.data.ageGroups[0]) : 'Her yaş'} · {tonightStory.data.readingTime} dk
+                {audienceForStory(tonightStory)} · {tonightStory.data.readingTime} dk
               </p>
               <span class="home-hero-m-cta">Masalı oku <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
             </div>
@@ -252,7 +258,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               <h2 data-daily-story-title>{tonightStory.data.title}</h2>
               <span class="desktop-editorial-description" data-daily-story-description>{tonightStory.data.shortDescription}</span>
               <small data-daily-story-meta="desktop">
-                {tonightStory.data.ageGroups[0] ? ageLabel(tonightStory.data.ageGroups[0]) : 'Her yaş'} · {tonightStory.data.readingTime} dk · {moodForStory(tonightStory) === 'sakin' ? 'Sakin' : 'MasalNova seçkisi'}
+                {audienceForStory(tonightStory)} · {tonightStory.data.readingTime} dk · {moodForStory(tonightStory) === 'sakin' ? 'Sakin' : 'MasalNova seçkisi'}
               </small>
               <strong>Masalı oku <i class="ph ph-arrow-right" aria-hidden="true"></i></strong>
             </div>
@@ -408,6 +414,19 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
         </form>
       </section>
 
+      <section class="islamic-section-card" aria-labelledby="islamic-section-title">
+        <div class="islamic-section-icon" aria-hidden="true"><i class="ph ph-mosque"></i></div>
+        <div class="islamic-section-copy">
+          <p>Kaynaklı anlatılar · ayrı bölüm</p>
+          <h2 id="islamic-section-title">İslami Hikâyeler</h2>
+          <span>Kur’an-ı Kerim, sahih veya hasen hadis ve güvenilir siyer kaynaklarından; çocukların yaşına göre sadeleştirilmiş, özenle resimlenmiş hikâyeler.</span>
+          <small><i class="ph ph-book-open-text" aria-hidden="true"></i> Kaynak görünür <b aria-hidden="true">·</b> <i class="ph ph-child" aria-hidden="true"></i> Yaşa uygun <b aria-hidden="true">·</b> <i class="ph ph-shield-check" aria-hidden="true"></i> Kutsal kişiler tasvir edilmez</small>
+        </div>
+        <a href="/islami-hikayeler/">
+          {islamicStories.length} hikâyeyi keşfet <i class="ph ph-arrow-right" aria-hidden="true"></i>
+        </a>
+      </section>
+
       <section class="latest-section" aria-labelledby="latest-title">
         <div class="section-heading">
           <div>
@@ -549,7 +568,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               <div class="evening-copy">
                 <span>{moodForStory(story) === 'sakin' ? 'Sakin seçim' : 'MasalNova seçkisi'}</span>
                 <h3>{story.data.title}</h3>
-                <p>{story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : 'Her yaş'} · {story.data.readingTime} dk</p>
+                <p>{audienceForStory(story)} · {story.data.readingTime} dk</p>
                 <div class="progress-track" aria-hidden="true"><span data-story-progress></span></div>
                 <small data-progress-label>Masalı oku</small>
               </div>
@@ -576,7 +595,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               <div class="evening-copy">
                 <span>Senin masalın</span>
                 <h3>{story.data.title}</h3>
-                <p>{story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : 'Her yaş'} · {story.data.readingTime} dk</p>
+                <p>{audienceForStory(story)} · {story.data.readingTime} dk</p>
                 <div class="progress-track" aria-hidden="true"><span data-story-progress></span></div>
                 <small data-progress-label>Okumaya devam et</small>
               </div>
@@ -605,7 +624,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
                 <h3>{category.label}</h3>
                 <p>{category.description}</p>
               </div>
-              <span class="category-count">{category.count} masal <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+              <span class="category-count">{category.count} {category.itemLabel} <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
             </a>
           ))}
         </div>
@@ -1329,15 +1348,16 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
       margin-top: 0;
     }
     .desktop-editorial { order: 2; }
-    .latest-section { order: 3; }
-    :global(.ad-shell[data-ad-placement='home-after-latest']) { order: 4; }
-    .continue-section { order: 5; }
-    .category-section { order: 6; }
-    .age-section { order: 7; }
-    :global(.ad-shell[data-ad-placement='home-before-guide']) { order: 8; }
-    .home-guide { order: 9; }
-    .new-stories-section { order: 10; }
-    .settings-section { order: 11; }
+    .islamic-section-card { order: 3; }
+    .latest-section { order: 4; }
+    :global(.ad-shell[data-ad-placement='home-after-latest']) { order: 5; }
+    .continue-section { order: 6; }
+    .category-section { order: 7; }
+    .age-section { order: 8; }
+    :global(.ad-shell[data-ad-placement='home-before-guide']) { order: 9; }
+    .home-guide { order: 10; }
+    .new-stories-section { order: 11; }
+    .settings-section { order: 12; }
   }
 
   .welcome-heading {
@@ -1830,6 +1850,56 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     white-space: nowrap;
   }
 
+  .islamic-section-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 20px;
+    align-items: center;
+    margin-top: 32px;
+    padding: clamp(22px, 3vw, 30px);
+    overflow: hidden;
+    border: 1px solid rgba(181, 157, 95, .5);
+    border-radius: 24px;
+    background:
+      linear-gradient(105deg, rgba(255, 253, 247, .96), rgba(240, 249, 244, .9)),
+      url('/islamic/islami-hikayeler-background.webp') center 46% / cover;
+    box-shadow: 0 18px 44px rgba(13, 51, 81, .09);
+  }
+
+  .islamic-section-icon {
+    display: grid;
+    width: 66px;
+    height: 66px;
+    place-items: center;
+    border: 1px solid rgba(27, 127, 111, .2);
+    border-radius: 20px;
+    background: linear-gradient(145deg, #e8f6f0, #fff8df);
+    color: #167b6b;
+    font-size: 2rem;
+  }
+
+  .islamic-section-copy { display: grid; gap: 5px; }
+  .islamic-section-copy > p { color: #8b6b20; font-size: .7rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+  .islamic-section-copy h2 { color: #0b2b75; font-size: clamp(1.45rem, 2.6vw, 2.1rem); letter-spacing: -.035em; }
+  .islamic-section-copy > span { max-width: 72ch; color: #53647b; font-size: .86rem; font-weight: 650; line-height: 1.55; }
+  .islamic-section-copy small { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 4px; color: #307264; font-size: .7rem; font-weight: 850; }
+  .islamic-section-copy small b { color: #9a8c69; }
+  .islamic-section-card > a {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    gap: 8px;
+    padding: 0 17px;
+    border-radius: 14px;
+    background: #167b6b;
+    color: #fff;
+    font-size: .78rem;
+    font-weight: 900;
+    white-space: nowrap;
+    box-shadow: 0 12px 24px rgba(22, 123, 107, .2);
+  }
+  .islamic-section-card > a:hover { background: #0f695c; transform: translateY(-2px); }
+
   .category-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2037,6 +2107,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     .desktop-editorial-side { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); grid-template-rows: none; }
     .desktop-shortcuts a { min-height: 108px; }
     .category-grid { grid-template-columns: 1fr; }
+    .islamic-section-card { grid-template-columns: auto minmax(0, 1fr); }
+    .islamic-section-card > a { grid-column: 2; justify-self: start; }
     .age-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .category-card { min-height: 94px; }
     .home-guide { grid-template-columns: 1fr; gap: 26px; }
@@ -2264,6 +2336,9 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     .read-action { min-height: 44px; padding: 0 13px; font-size: .72rem; }
     .read-action i { font-size: .95rem; }
     .category-card { min-height: 88px; padding: 14px; }
+    .islamic-section-card { grid-template-columns: 1fr; gap: 13px; margin-top: 28px; padding: 20px; }
+    .islamic-section-icon { width: 56px; height: 56px; border-radius: 17px; font-size: 1.7rem; }
+    .islamic-section-card > a { grid-column: 1; justify-self: stretch; justify-content: center; }
     .home-guide { margin-top: 38px; padding: 22px 19px; }
     .settings-section { display: block; padding: 21px; }
     .settings-actions { justify-content: flex-start; margin-top: 17px; }
