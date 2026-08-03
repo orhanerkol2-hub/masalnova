@@ -130,6 +130,10 @@
     background: color-mix(in srgb, var(--viz-series-1) 18%, var(--background));
   }
 
+  #keloglan-fair-spawn-preview.is-embedded .game-stage {
+    touch-action: pan-y;
+  }
+
   #keloglan-fair-spawn-preview .village-layer {
     position: absolute;
     inset: -2%;
@@ -654,6 +658,11 @@
     const titleLabel = root.querySelector('[data-title]');
     const messageLabel = root.querySelector('[data-message]');
     const highscoreLabel = root.querySelector('[data-highscore]');
+    const isEmbedded = window.self !== window.top;
+
+    if (isEmbedded) {
+      root.classList.add('is-embedded');
+    }
 
     const assets = {
       star: './assets/anatolian-star.png',
@@ -1203,11 +1212,85 @@
         playTone(330, 440, 0.1, 'sine', 0.035);
       }
     });
+    let touchPointerId = null;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchGestureMoved = false;
+    let previousTouchY = null;
+
+    const resetTouchGesture = () => {
+      touchPointerId = null;
+      touchGestureMoved = false;
+      previousTouchY = null;
+    };
+
+    const sendScrollToParent = (deltaY) => {
+      if (!isEmbedded || Math.abs(deltaY) < 1) {
+        return;
+      }
+      window.parent.postMessage(
+        {
+          type: 'masalnova:embedded-game-scroll',
+          deltaY: Math.max(-80, Math.min(80, deltaY)),
+        },
+        window.location.origin,
+      );
+    };
+
     stage.addEventListener('pointerdown', (event) => {
-      if (!event.target.closest('button')) {
-        jump();
+      if (event.target.closest('button')) {
+        return;
+      }
+      if (event.pointerType === 'touch') {
+        touchPointerId = event.pointerId;
+        touchStartX = event.clientX;
+        touchStartY = event.clientY;
+        touchGestureMoved = false;
+        return;
+      }
+      jump();
+    });
+    stage.addEventListener('pointermove', (event) => {
+      if (event.pointerId !== touchPointerId) {
+        return;
+      }
+      const distance = Math.hypot(
+        event.clientX - touchStartX,
+        event.clientY - touchStartY,
+      );
+      if (distance > 12) {
+        touchGestureMoved = true;
       }
     });
+    stage.addEventListener('pointerup', (event) => {
+      if (event.pointerId !== touchPointerId) {
+        return;
+      }
+      if (!touchGestureMoved) {
+        jump();
+      }
+      resetTouchGesture();
+    });
+    stage.addEventListener('pointercancel', resetTouchGesture);
+    stage.addEventListener('touchstart', (event) => {
+      previousTouchY = event.touches.length === 1
+        ? event.touches[0].clientY
+        : null;
+    }, { passive: true });
+    stage.addEventListener('touchmove', (event) => {
+      if (!isEmbedded || event.touches.length !== 1 || previousTouchY === null) {
+        return;
+      }
+      const currentTouchY = event.touches[0].clientY;
+      sendScrollToParent(previousTouchY - currentTouchY);
+      previousTouchY = currentTouchY;
+    }, { passive: true });
+    stage.addEventListener('touchend', () => {
+      previousTouchY = null;
+    }, { passive: true });
+    stage.addEventListener('wheel', (event) => {
+      sendScrollToParent(event.deltaY);
+    }, { passive: true });
     document.addEventListener('keydown', (event) => {
       if (event.code === 'Space' || event.code === 'ArrowUp' || event.code === 'KeyW') {
         event.preventDefault();
