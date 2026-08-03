@@ -156,7 +156,7 @@ const jsonLd = [
     .fullscreen-link { justify-content: center; flex: 1; min-height: 44px; }
     .back-link { display: none; }
     .player-shell { touch-action: auto; }
-    .player-shell iframe { height: min(660px, calc(100dvh - 184px)); min-height: 470px; pointer-events: none; touch-action: auto; }
+    .player-shell iframe { height: min(660px, calc(100dvh - 184px)); min-height: 470px; pointer-events: auto; touch-action: auto; }
     .player-shell:fullscreen { touch-action: none; }
     .player-shell:fullscreen iframe { height: 100%; min-height: 100%; pointer-events: auto; }
     .game-info-grid { grid-template-columns: 1fr; }
@@ -189,7 +189,7 @@ const jsonLd = [
         return;
       }
 
-      const deltaY = Math.max(-80, Math.min(80, event.data.deltaY));
+      const deltaY = event.data.deltaY;
       if (Number.isFinite(deltaY) && Math.abs(deltaY) >= 1) {
         window.scrollBy({ top: deltaY, left: 0, behavior: 'auto' });
       }
