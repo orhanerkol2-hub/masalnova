@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
+import StoryCard from '../components/StoryCard.astro';
 import { getStories, popularStories } from '../data/stories';
 import {
   ageLabel,
@@ -22,8 +23,9 @@ const moodForStory = (story: (typeof stories)[number]) => {
 };
 
 const storiesWithCovers = stories.filter((story) => story.data.coverImage);
-const latestStories = storiesWithCovers.slice(0, 18);
-const carouselFeed = storiesWithCovers.map((story) => ({
+const latestStories = storiesWithCovers.slice(0, 6);
+const popularSelection = popularStories(storiesWithCovers, 8);
+const carouselFeed = popularSelection.map((story) => ({
   id: story.id,
   title: story.data.title,
   coverImage: story.data.coverImage,
@@ -112,6 +114,16 @@ const categoryLinks = [
   },
 ];
 
+const ageLinks = [3, 4, 5, 6, 7].map((age) => ({
+  href: `/masallar/yas/${age}-yas/`,
+  label: `${age} Yaş Masalları`,
+  description: age <= 4
+    ? 'Kısa, yalın ve birlikte okumaya uygun'
+    : age <= 6
+      ? 'Merak ve duygu odaklı hikâyeler'
+      : 'Daha gelişmiş olay örgüleri',
+}));
+
 const buildDate = new Intl.DateTimeFormat('tr-TR', {
   day: 'numeric',
   month: 'long',
@@ -131,6 +143,14 @@ const faqs = [
     question: 'Kısa mı, uzun mu seçmeliyim?',
     answer: 'Kısa bir mola için 2–5 dakikalık hikâyeleri; daha gelişmiş bir olay örgüsü için 8–10 dakikalık uzun masalları seçebilirsiniz.',
   },
+  {
+    question: 'Uyku masalı kaç dakika olmalı?',
+    answer: 'Süre çocuğun yaşına ve akşamki dikkatine göre değişir. Küçük çocuklar için 2–5 dakika iyi bir başlangıçtır; ilgi sürüyorsa daha uzun bir masal seçilebilir.',
+  },
+  {
+    question: 'Keloğlan masalları hangi yaş için uygundur?',
+    answer: 'Her karttaki yaş etiketini kontrol edin. Kısa ve yalın Keloğlan hikâyeleri küçük yaşlara, daha ayrıntılı maceralar ise okul çağına daha uygundur.',
+  },
 ];
 
 const homeJsonLd = [
@@ -144,8 +164,8 @@ const homeJsonLd = [
     inLanguage: 'tr-TR',
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: latestStories.length,
-      itemListElement: latestStories.map((story, index) => ({
+      numberOfItems: popularSelection.length,
+      itemListElement: popularSelection.map((story, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         url: `https://masalnova.com/masallar/${story.id}/`,
@@ -173,8 +193,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
 ---
 
 <BaseLayout
-  title="MasalNova: Masal Oku, Uyku Masalları ve Çocuk Hikâyeleri"
-  description="MasalNova’da çocuklar için yüzlerce ücretsiz Türkçe masal okuyun. Uyku öncesi masalları ve eğitici hikâyeleri yaşa, süreye ve ruh hâline göre keşfedin."
+  title="Masal Oku – Ücretsiz Çocuk ve Uyku Masalları | MasalNova"
+  description="Çocuğunuzun yaşına, ayırdığınız süreye ve temaya uygun yüzlerce ücretsiz Türkçe masalı keşfedin. Uyku, kısa, eğitici ve Keloğlan masallarını okuyun."
   path="/"
   image={tonightStory?.data.coverImage ?? latestStories[0]?.data.coverImage}
   imageAlt={tonightStory ? `${tonightStory.data.title} resimli masal kapağı` : 'MasalNova çocuk masalları'}
@@ -184,7 +204,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
 >
   <div class="home-surface">
     <div class="home-container">
-      <h1 class="mobile-page-title">MasalNova’da bugün hangi masalı okuyalım?</h1>
+      <h1 class="mobile-page-title">Masal Oku: Ücretsiz Çocuk ve Uyku Masalları</h1>
 
       {tonightStory && (
         <section class="home-hero-m" aria-label="Bu akşamın masalı" data-daily-story-root>
@@ -229,7 +249,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
             <span class="desktop-editorial-shade" aria-hidden="true"></span>
             <div class="desktop-editorial-copy">
               <p><i class="ph-fill ph-moon-stars" aria-hidden="true"></i> Bu akşamın masalı</p>
-              <h1 data-daily-story-title>{tonightStory.data.title}</h1>
+              <h2 data-daily-story-title>{tonightStory.data.title}</h2>
               <span class="desktop-editorial-description" data-daily-story-description>{tonightStory.data.shortDescription}</span>
               <small data-daily-story-meta="desktop">
                 {tonightStory.data.ageGroups[0] ? ageLabel(tonightStory.data.ageGroups[0]) : 'Her yaş'} · {tonightStory.data.readingTime} dk · {moodForStory(tonightStory) === 'sakin' ? 'Sakin' : 'MasalNova seçkisi'}
@@ -308,8 +328,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               <i class="ph ph-moon-stars" aria-hidden="true"></i>
               <span data-today-date>{buildDate}</span> · Bugün
             </p>
-            <h1 id="welcome-title">MasalNova’da bugün hangi masalı okuyalım?</h1>
-            <p class="welcome-intro">Yüzlerce ücretsiz Türkçe çocuk masalı arasından yaşa, süreye ve ruh hâline uygun hikâyeyi birkaç saniyede bulun.</p>
+            <h2 id="welcome-title">MasalNova’da bugün hangi masalı okuyalım?</h2>
+            <p class="welcome-intro">MasalNova’da çocuğunuzun yaşına, ayırdığınız süreye ve o akşamki ruh hâline uygun Türkçe masalı birkaç saniyede bulun. Uyku masalları, Keloğlan hikâyeleri, kısa ve eğitici masallar ücretsiz ve üyeliksiz.</p>
           </div>
         </div>
 
@@ -391,8 +411,8 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
       <section class="latest-section" aria-labelledby="latest-title">
         <div class="section-heading">
           <div>
-            <p class="section-kicker"><i class="ph ph-sparkle" aria-hidden="true"></i> Kronolojik</p>
-            <h2 id="latest-title">Tüm masallar</h2>
+            <p class="section-kicker"><i class="ph ph-sparkle" aria-hidden="true"></i> Okur seçkisi</p>
+            <h2 id="latest-title">En Çok Okunan Masallar</h2>
           </div>
 
           <div class="carousel-controls" aria-label="Masalları kaydır">
@@ -411,7 +431,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
           tabindex="0"
           role="region"
           aria-roledescription="kesintisiz kayan masal listesi"
-          aria-label="Tüm masallar, en yeniden eskiye"
+          aria-label="En çok okunan masallar"
           aria-live="off"
           data-latest-count={carouselFeed.length}
         >
@@ -591,6 +611,24 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
         </div>
       </section>
 
+      <section class="age-section" aria-labelledby="age-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker"><i class="ph ph-child" aria-hidden="true"></i> Yaşa göre</p>
+            <h2 id="age-title">Yaşa Göre Masallar</h2>
+          </div>
+        </div>
+        <div class="age-grid">
+          {ageLinks.map((age) => (
+            <a href={age.href}>
+              <strong>{age.label}</strong>
+              <span>{age.description}</span>
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <AdSlot slot={homeContentAdSlot} placement="home-before-guide" />
 
       <section class="home-guide" aria-labelledby="guide-title">
@@ -609,6 +647,19 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
               <p>{faq.answer}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section class="new-stories-section" aria-labelledby="new-stories-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker"><i class="ph ph-clock" aria-hidden="true"></i> Son eklenenler</p>
+            <h2 id="new-stories-title">Yeni Masallar</h2>
+          </div>
+          <a class="section-link" href="/masallar/">Tüm masallar <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="grid grid-3 story-grid home-new-grid">
+          {latestStories.map((story) => <StoryCard story={story} />)}
         </div>
       </section>
 
@@ -1111,9 +1162,18 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     padding: 34px clamp(28px, 4vw, 58px) 86px;
   }
 
-  .mobile-page-title,
   .home-kid-nav,
   .home-hero-m { display: none; }
+
+  .mobile-page-title {
+    display: block;
+    max-width: 24ch;
+    margin: 0 0 10px;
+    color: #0b2b75;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -.05em;
+  }
 
   .desktop-editorial {
     display: grid;
@@ -1167,7 +1227,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     text-transform: uppercase;
   }
 
-  .desktop-editorial-copy h1 {
+  .desktop-editorial-copy h2 {
     margin-top: 10px;
     font-size: clamp(2.15rem, 3.8vw, 3.3rem);
     letter-spacing: -.055em;
@@ -1273,9 +1333,11 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     :global(.ad-shell[data-ad-placement='home-after-latest']) { order: 4; }
     .continue-section { order: 5; }
     .category-section { order: 6; }
-    :global(.ad-shell[data-ad-placement='home-before-guide']) { order: 7; }
-    .home-guide { order: 8; }
-    .settings-section { order: 9; }
+    .age-section { order: 7; }
+    :global(.ad-shell[data-ad-placement='home-before-guide']) { order: 8; }
+    .home-guide { order: 9; }
+    .new-stories-section { order: 10; }
+    .settings-section { order: 11; }
   }
 
   .welcome-heading {
@@ -1312,7 +1374,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     font-size: 1.05rem;
   }
 
-  .welcome h1 {
+  .welcome h2 {
     color: #0b2b75;
     font-size: clamp(2rem, 3.5vw, 3rem);
     letter-spacing: -.045em;
@@ -1421,7 +1483,9 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
 
   .latest-section,
   .continue-section,
-  .category-section {
+  .category-section,
+  .age-section,
+  .new-stories-section {
     padding-top: 42px;
   }
 
@@ -1772,6 +1836,31 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     gap: 12px;
   }
 
+  .age-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .age-grid a {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 10px;
+    align-items: center;
+    min-height: 112px;
+    padding: 18px;
+    border: 1px solid #e1dfd7;
+    border-radius: 18px;
+    background: #fffdf8;
+    color: #17377c;
+  }
+
+  .age-grid a:hover { border-color: #c7d2e8; background: #fff; transform: translateY(-2px); }
+  .age-grid strong { font-size: 1rem; }
+  .age-grid span { grid-column: 1 / -1; color: #6c7690; font-size: .78rem; }
+  .age-grid i { color: #1749ae; }
+  .home-new-grid { margin-top: 14px; }
+
   .category-card {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
@@ -1948,6 +2037,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     .desktop-editorial-side { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); grid-template-rows: none; }
     .desktop-shortcuts a { min-height: 108px; }
     .category-grid { grid-template-columns: 1fr; }
+    .age-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .category-card { min-height: 94px; }
     .home-guide { grid-template-columns: 1fr; gap: 26px; }
   }
@@ -2092,15 +2182,14 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     .welcome { padding-bottom: 24px; border-bottom: 0; }
     .mobile-page-title {
       display: block;
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0 0 12px;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+      font-size: clamp(1.65rem, 8vw, 2.25rem);
     }
     .welcome-heading { display: none; }
     .welcome .story-search { display: none; }
@@ -2109,7 +2198,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     .preference-chip select[name="topic"] { width: auto; }
     .welcome-heading { align-items: flex-start; gap: 12px; }
     .welcome-avatar { width: 50px; height: 50px; border-width: 3px; }
-    .welcome h1 { font-size: clamp(1.72rem, 8vw, 2.3rem); }
+    .welcome h2 { font-size: clamp(1.72rem, 8vw, 2.3rem); }
     .welcome-intro { font-size: .82rem; line-height: 1.5; }
     .discovery-bar { margin-top: 19px; }
     .story-search { min-height: 48px; border-radius: 15px; }
@@ -2125,7 +2214,9 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     .preference-chip { flex: 0 0 auto; min-height: 44px; padding-inline: 11px; }
     .latest-section,
     .continue-section,
-    .category-section { padding-top: 34px; }
+    .category-section,
+    .age-section,
+    .new-stories-section { padding-top: 34px; }
     .section-heading { align-items: center; margin-bottom: 14px; }
     .section-heading h2 { font-size: 1.4rem; }
     .section-link { font-size: .68rem; }

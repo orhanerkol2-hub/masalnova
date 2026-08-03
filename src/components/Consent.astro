@@ -95,4 +95,23 @@
       }
     }
   });
+
+  // Keep recurring cookie-interface copy out of Google result snippets.
+  const prepareConsentRoot = (root) => {
+    root.setAttribute('data-nosnippet', '');
+    root.querySelectorAll('h1').forEach((heading) => {
+      const replacement = document.createElement('h2');
+      [...heading.attributes].forEach((attribute) => replacement.setAttribute(attribute.name, attribute.value));
+      replacement.innerHTML = heading.innerHTML;
+      heading.replaceWith(replacement);
+    });
+  };
+  const consentRoot = document.getElementById('stcm-wrapper');
+  if (consentRoot) prepareConsentRoot(consentRoot);
+  const consentObserver = new MutationObserver(() => {
+    const root = document.getElementById('stcm-wrapper');
+    if (!root) return;
+    prepareConsentRoot(root);
+  });
+  consentObserver.observe(consentRoot ?? document.documentElement, { childList: true, subtree: true });
 </script>

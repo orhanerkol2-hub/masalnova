@@ -1,6 +1,18 @@
 // @ts-check
 import { defineConfig, passthroughImageService } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { readdirSync, readFileSync } from 'node:fs';
+
+const storyContentDirectory = new URL('./src/content/stories/', import.meta.url);
+const nonIndexableStoryPaths = new Set(
+  readdirSync(storyContentDirectory)
+    .filter((name) => name.endsWith('.md'))
+    .flatMap((name) => {
+      const source = readFileSync(new URL(name, storyContentDirectory), 'utf8');
+      const status = source.match(/^editorialStatus:\s*["']?([^\s"']+)/m)?.[1] ?? 'approved';
+      return status === 'approved' ? [] : [`https://masalnova.com/masallar/${name.replace(/\.md$/, '')}/`];
+    }),
+);
 
 // https://astro.build
 export default defineConfig({
@@ -13,6 +25,9 @@ export default defineConfig({
   integrations: [sitemap({
     filter: (page) =>
       page !== 'https://masalnova.com/story-index.json' &&
-      !page.startsWith('https://masalnova.com/games/'),
+      !page.startsWith('https://masalnova.com/ara/') &&
+      !page.startsWith('https://masalnova.com/masallar/kategori/kisa/') &&
+      !page.startsWith('https://masalnova.com/games/') &&
+      !nonIndexableStoryPaths.has(page),
   })],
 });

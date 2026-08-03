@@ -1,0 +1,22 @@
+---
+import CategoryListingPage from '../../../../../../components/CategoryListingPage.astro';
+import { getStories } from '../../../../../../data/stories';
+import { storyCategories } from '../../../../../../data/taxonomy';
+import { CATEGORY_PAGE_SIZE, categorySeoCopy } from '../../../../../../data/category-pages';
+
+export async function getStaticPaths() {
+  const allStories = await getStories();
+  return storyCategories.flatMap((category) => {
+    const matchingStories = allStories.filter((story) => story.data.categories.includes(category.key));
+    const pageCount = Math.ceil(matchingStories.length / CATEGORY_PAGE_SIZE);
+    return Array.from({ length: Math.max(0, pageCount - 1) }, (_, index) => {
+      const page = index + 2;
+      const start = (page - 1) * CATEGORY_PAGE_SIZE;
+      return { params: { category: category.key, page: String(page) }, props: { category, stories: matchingStories.slice(start, start + CATEGORY_PAGE_SIZE), totalStories: matchingStories.length, page, pageCount } };
+    });
+  });
+}
+
+const { category, stories, totalStories, page, pageCount } = Astro.props;
+---
+<CategoryListingPage category={category} copy={categorySeoCopy[category.key]} stories={stories} totalStories={totalStories} page={page} pageCount={pageCount} />

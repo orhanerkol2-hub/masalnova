@@ -15,6 +15,8 @@ interface Props {
   totalStories: number;
   guideTitle: string;
   guideParagraphs: string[];
+  faqs?: { question: string; answer: string }[];
+  relatedTopics?: { href: string; label: string }[];
 }
 
 const {
@@ -28,6 +30,8 @@ const {
   totalStories,
   guideTitle,
   guideParagraphs,
+  faqs = [],
+  relatedTopics = [],
 } = Astro.props;
 const canonical = `https://masalnova.com${path}`;
 
@@ -84,6 +88,7 @@ const jsonLd = [
       <nav class="topic-links" aria-label="Diğer masal seçimleri">
         <a href="/masallar/resimli/">Resimli masallar</a>
         {storyCategories.map((category) => <a href={`/masallar/kategori/${category.key}/`}>{category.label}</a>)}
+        {[3, 4, 5, 6, 7].map((age) => <a href={`/masallar/yas/${age}-yas/`}>{age} yaş masalları</a>)}
         {ageGroups.map((age) => <a href={`/masallar/yas/${age.key}/`}>{age.label}</a>)}
         {durationBuckets.map((duration) => <a href={`/masallar/sure/${duration.key}/`}>{duration.label}</a>)}
       </nav>
@@ -106,8 +111,22 @@ const jsonLd = [
         <div class="guide-actions">
           <a href="/masal-bul/">Masal Bul aracını kullan</a>
           <a href="/masallar/">Tüm çocuk masalları</a>
+          {relatedTopics.map((topic) => <a href={topic.href}>{topic.label}</a>)}
         </div>
       </section>
+
+      {faqs.length > 0 && (
+        <section class="topic-faq" aria-labelledby="topic-faq-title">
+          <p class="guide-kicker">Sık sorulan sorular</p>
+          <h2 id="topic-faq-title">Ebeveynlerin merak ettikleri</h2>
+          {faqs.map((faq, index) => (
+            <details open={index === 0}>
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </section>
+      )}
     </div>
   </section>
 </BaseLayout>
@@ -129,6 +148,11 @@ const jsonLd = [
   .archive-note { margin-top: 24px; padding: 15px 18px; border: 1px solid rgba(255,255,255,.18); border-radius: 16px; background: rgba(255,255,255,.09); color: rgba(255,255,255,.82); }
   .archive-note a { margin-left: 8px; color: #fff; font-weight: 850; }
   .topic-guide { max-width: 900px; margin-top: 38px; padding: clamp(24px, 5vw, 42px); border: 1px solid rgba(255,255,255,.18); border-radius: 28px; background: #fff; color: var(--ink); box-shadow: 0 25px 70px rgba(3,20,78,.22); }
+  .topic-faq { max-width: 900px; margin-top: 22px; padding: clamp(24px, 5vw, 42px); border: 1px solid rgba(255,255,255,.18); border-radius: 28px; background: #fff; color: var(--ink); }
+  .topic-faq h2 { margin: 7px 0 14px; }
+  .topic-faq details { padding: 14px 0; border-top: 1px solid #e4e7ee; }
+  .topic-faq summary { cursor: pointer; color: #15377e; font-weight: 850; }
+  .topic-faq details p { margin-top: 9px; color: var(--ink-soft); }
   .guide-kicker { color: #1752c5; }
   .topic-guide h2 { margin: 7px 0 13px; font-size: clamp(1.65rem, 4vw, 2.4rem); }
   .topic-guide > p:not(.guide-kicker) { max-width: 75ch; margin-top: 11px; color: var(--ink-soft); }
@@ -165,6 +189,7 @@ const jsonLd = [
     .archive-note { border-color: #ded9ce; background: #fff; color: #6c7690; }
     .archive-note a { color: #1749ae; }
     .topic-guide { border-color: #e2ddd1; box-shadow: 0 14px 38px rgba(23,43,92,.08); }
+    .topic-faq { border-color: #e2ddd1; box-shadow: 0 14px 38px rgba(23,43,92,.08); }
   }
 
   @media (min-width: 721px) and (max-width: 1180px) {

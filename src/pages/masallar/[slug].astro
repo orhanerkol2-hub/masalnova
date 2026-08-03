@@ -5,13 +5,13 @@ import CoverThumb from '../../components/CoverThumb.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import StoryCard from '../../components/StoryCard.astro';
 import ReadingToolbar from '../../components/ReadingToolbar.astro';
-import { getStories } from '../../data/stories';
+import { getAllStories, getStories } from '../../data/stories';
 import { videoById } from '../../data/videos';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
 import { compactDescription, formatTurkishDate, storySeoTitle } from '../../lib/seo';
 
 export async function getStaticPaths() {
-  const stories = await getStories();
+  const stories = await getAllStories();
   return stories.map((story) => ({ params: { slug: story.id }, props: { story } }));
 }
 
@@ -21,20 +21,37 @@ const { Content } = await render(story);
 
 const allStories = await getStories();
 const related = d.relatedVideoIds.map((id) => videoById(id)).filter(Boolean);
+const overlapCount = (left: string[], right: string[]) => {
+  const normalizedRight = new Set(right.map((value) => value.toLocaleLowerCase('tr')));
+  return left.filter((value) => normalizedRight.has(value.toLocaleLowerCase('tr'))).length;
+};
+const relevanceScore = (candidate: (typeof allStories)[number]) =>
+  overlapCount(candidate.data.characters, d.characters) * 12
+  + overlapCount(candidate.data.themes, d.themes) * 8
+  + overlapCount(candidate.data.ageGroups, d.ageGroups) * 5
+  + overlapCount(candidate.data.categories, d.categories) * 3
+  + (Math.abs(candidate.data.readingTime - d.readingTime) <= 1 ? 3 : 0)
+  + (candidate.data.isPopular ? 1 : 0);
 const moreStories = allStories
-  .filter((s) => s.id !== story.id && s.data.categories.some((c) => d.categories.includes(c)))
-  .slice(0, 3);
+  .filter((candidate) => candidate.id !== story.id && relevanceScore(candidate) > 0)
+  .sort((a, b) => relevanceScore(b) - relevanceScore(a) || b.data.publishedAt.localeCompare(a.data.publishedAt))
+  .slice(0, 4);
 const primaryCategory = d.categories[0];
 const primaryCategoryLabel = primaryCategory ? storyCategoryLabel(primaryCategory) : 'Masallar';
 const storyUrl = `https://masalnova.com/masallar/${story.id}/`;
 const storyImage = d.coverImage ? `https://masalnova.com${d.coverImage}` : 'https://masalnova.com/logo.png';
 const publishedIso = `${d.publishedAt}T00:00:00+03:00`;
+const modifiedIso = `${d.modifiedAt ?? d.publishedAt}T00:00:00+03:00`;
 const publishedLabel = formatTurkishDate(d.publishedAt);
 const seoDescription = compactDescription(d.shortDescription);
-const seoTitle = d.seoTitle ?? storySeoTitle(d.title);
 const ageRange = d.ageGroups.map(ageLabel).join(' ve ');
+const seoTitle = d.seoTitle ?? storySeoTitle(`${d.title}${ageRange ? ` (${ageRange})` : ''}`);
 const primaryTheme = d.themes[0] ?? 'hikâyenin ana fikri';
 const ageBounds = d.ageGroups[0]?.split('-').map(Number) ?? [];
+const emotionalIntensity = d.categories.includes('uyku') || d.themes.some((theme) => /sakin|huzur|şefkat|sevgi/iu.test(theme))
+  ? 'Sakin'
+  : d.themes.some((theme) => /korku|cesaret|macera|kayıp/iu.test(theme)) ? 'Orta' : 'Yumuşak';
+const storyType = primaryCategory ? storyCategoryLabel(primaryCategory) : 'Çocuk masalı';
 
 const jsonLd = [
   {
@@ -47,6 +64,7 @@ const jsonLd = [
     image: [storyImage],
     inLanguage: 'tr-TR',
     datePublished: publishedIso,
+    dateModified: modifiedIso,
     isAccessibleForFree: true,
     articleSection: d.categories.map(storyCategoryLabel),
     genre: d.categories.map(storyCategoryLabel),
@@ -88,10 +106,12 @@ const jsonLd = [
   imageAlt={d.altText ?? `${d.title} resimli masal kapağı`}
   ogType="article"
   publishedTime={publishedIso}
+  modifiedTime={modifiedIso}
   preloadImage={d.coverImage}
   jsonLd={jsonLd}
   activeNav="masallar"
   readerPage
+  robots={d.editorialStatus === 'approved' ? undefined : 'noindex, follow'}
 >
   <ReadingToolbar backHref="/masallar/" audioSrc={d.audioUrl} storyId={story.id} />
 
@@ -121,7 +141,7 @@ const jsonLd = [
               ))}
             </div>
             <p class="reader__byline">
-              <span>MasalNova Çocuk Editör Ekibi</span>
+              <a href="/hakkimizda/">MasalNova Çocuk Editör Ekibi</a>
               <span aria-hidden="true">·</span>
               <time datetime={publishedIso}>{publishedLabel} tarihinde yayınlandı</time>
             </p>
@@ -147,8 +167,8 @@ const jsonLd = [
       </div>
 
       <section class="story-guide" aria-labelledby="story-guide-title">
-        <p class="story-guide__kicker">Masal seçim notu</p>
-        <h2 id="story-guide-title">{d.title} kimler için uygun?</h2>
+        <p class="story-guide__kicker">Ebeveynler için</p>
+        <h2 id="story-guide-title">Bu masal ne anlatıyor?</h2>
         <p>
           Bu resimli masal MasalNova’da <strong>{ageRange || 'çocuklar'}</strong> için etiketlenmiştir ve birlikte okunduğunda yaklaşık <strong>{d.readingTime} dakika</strong> sürer. Hikâyede {d.themes.length ? d.themes.join(', ') : 'dostluk ve hayal gücü'} temaları öne çıkar.
         </p>
@@ -156,12 +176,15 @@ const jsonLd = [
           <div><dt>Yaş</dt><dd>{ageRange || 'Her yaş'}</dd></div>
           <div><dt>Süre</dt><dd>{d.readingTime} dakika</dd></div>
           <div><dt>Konu</dt><dd>{d.themes.slice(0, 3).join(' · ') || primaryCategoryLabel}</dd></div>
+          <div><dt>Masal türü</dt><dd>{storyType}</dd></div>
+          <div><dt>Duygusal yoğunluk</dt><dd>{emotionalIntensity}</dd></div>
         </dl>
         <div class="story-prompts">
           <h3>Okuma sonrası birlikte konuşun</h3>
           <ul>
             <li>Kahramanın yerinde olsaydın hangi kararı verirdin?</li>
             <li>Bu masalda {primaryTheme} neden önemliydi?</li>
+            <li>Hikâyenin en çok hangi bölümünü sevdin?</li>
           </ul>
         </div>
         <a class="editorial-link" href="/hakkimizda/">MasalNova’nın içerik ve seçim yaklaşımı <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
@@ -185,7 +208,7 @@ const jsonLd = [
 
       {moreStories.length > 0 && (
         <section class="more">
-          <h2>Başka Masallar</h2>
+          <h2>Teması ve yaş düzeyi benzer masallar</h2>
           <div class="grid grid-3">
             {moreStories.map((s) => <StoryCard story={s} />)}
           </div>
@@ -279,7 +302,8 @@ const jsonLd = [
     font-size: .76rem;
     font-weight: 700;
   }
-  .reader__byline span:first-child { color: var(--reader-accent); }
+  .reader__byline a { color: var(--reader-accent); }
+  .reader__byline a:hover { text-decoration: underline; }
 
   .reader__cover {
     margin: 1.5rem 0 0;
@@ -324,7 +348,7 @@ const jsonLd = [
   .story-guide__kicker { color: var(--reader-accent); font-size: .72rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
   .story-guide h2 { margin-top: 7px; color: var(--reader-text-color); font-size: 1.45rem; }
   .story-guide > p:not(.story-guide__kicker) { margin-top: 11px; color: var(--reader-text-soft); }
-  .story-guide dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: 18px; }
+  .story-guide dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 9px; margin-top: 18px; }
   .story-guide dl > div { padding: 12px 13px; border: 1px solid var(--reader-border); border-radius: 13px; background: var(--reader-surface-raised); }
   .story-guide dt { color: var(--reader-text-soft); font-size: .68rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
   .story-guide dd { margin-top: 3px; color: var(--reader-text-color); font-size: .84rem; font-weight: 850; }

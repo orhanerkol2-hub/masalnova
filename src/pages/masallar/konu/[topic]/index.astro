@@ -1,0 +1,137 @@
+---
+import StoryTopicPage from '../../../../components/StoryTopicPage.astro';
+import { getStories } from '../../../../data/stories';
+
+type TopicPage = {
+  key: string;
+  title: string;
+  heading: string;
+  description: string;
+  kicker: string;
+  intro: string;
+  storyIds: string[];
+  guideTitle: string;
+  guideParagraphs: string[];
+  faqs: { question: string; answer: string }[];
+};
+
+const topicPages: TopicPage[] = [
+  {
+    key: 'kardes-kiskancligi',
+    title: 'Kardeş Kıskançlığı Masalları – Çocuk Hikâyeleri',
+    heading: 'Kardeş Kıskançlığı Masalları',
+    description: 'Yeni kardeş ve kardeş kıskançlığı hakkında ücretsiz çocuk masalları. Yaşa uygun hikâyeler ve ebeveynler için sakin konuşma önerileri.',
+    kicker: 'Yeni kardeşe alışma ve duyguları paylaşma',
+    intro: 'Yeni bir kardeşin gelişi sevinçle birlikte özlem, öfke veya geri planda kalma hissi de yaratabilir. Bu redaksiyonlu seçki, kardeşlik duygusunu tek bir doğru tepkiye indirgemeden ele alan hikâyeleri bir araya getirir. Masallar tedavi veya davranış garantisi sunmaz; çocuğun kendi duygusunu güvenli bir hikâye üzerinden adlandırmasına yardımcı olabilecek bir sohbet başlangıcıdır.',
+    storyIds: ['zeynepin-kucuk-kardesi', 'yedi-kardesler', 'hansel-ile-gretel', 'yedi-kucuk-keci-ve-akilli-fikirleri'],
+    guideTitle: 'Kardeş kıskançlığı hakkında masal nasıl okunur?',
+    guideParagraphs: ['Çocuğun duygusunu düzeltmeye çalışmadan önce hikâyedeki kahramanın ne hissettiğini sorun. Kıskançlık, sevginin azaldığı anlamına gelmez.', 'Masaldan sonra “Sen de böyle hissettin mi?” sorusu yerine “Sence kahraman neye ihtiyaç duyuyordu?” gibi daha dolaylı bir soruyla başlayabilirsiniz.'],
+    faqs: [
+      { question: 'Kardeş kıskançlığı normal mi?', answer: 'Yeni aile düzenine alışırken karışık duygular görülebilir. Yoğun veya uzun süren kaygılarda masalın ötesinde uygun bir uzmandan destek alın.' },
+      { question: 'Masalı iki kardeş birlikte dinleyebilir mi?', answer: 'Evet; ancak hiçbir çocuğu hikâyedeki “kıskanç” veya “uslu” karakterle etiketlememek önemlidir.' },
+      { question: 'Okuma sonrası ne sorabilirim?', answer: 'Kahramanın ne hissettiğini, neye ihtiyaç duyduğunu ve aileden nasıl yardım isteyebileceğini sorabilirsiniz.' },
+    ],
+  },
+  {
+    key: 'uyumak-istemeyen-cocuklar',
+    title: 'Uyumak İstemeyen Çocuklar İçin Masallar',
+    heading: 'Uyumak İstemeyen Çocuklar İçin Masallar',
+    description: 'Uyumak istemeyen çocuklar için sakin ve ücretsiz uyku masalları. Yaşa ve okuma süresine göre yumuşak gece hikâyeleri seçin.',
+    kicker: 'Yumuşak bir gece ritüeli için',
+    intro: 'Uykuya geçiş her akşam aynı kolaylıkta olmayabilir. Bu sayfadaki sakin hikâyeler, ekranı kapatıp birlikte geçirilen öngörülebilir bir okuma anı kurmak için seçildi. Masal uyku zorunluluğu veya tıbbi çözüm değildir; düşük tempolu bir aile ritüelidir. Işığı azaltmak, aynı saatte başlamak ve çocuğa iki masal arasından seçim sunmak hikâye zamanını daha güvenli ve tanıdık kılabilir.',
+    storyIds: ['ay-dede-ile-uyumak-istemeyen-kuzu', 'uykucu-ay', 'ahirda-uyku-sirasi', 'dede-sedef-ve-uyuyan-yapraklar', 'ninemin-yildiz-defteri'],
+    guideTitle: 'Uyku masalını gece rutinine nasıl ekleyebilirsiniz?',
+    guideParagraphs: ['Kısa ve sakin bir masal seçin; hikâye bitince yeni bir etkinliğe geçmek yerine aynı kapanış cümlesini kullanın.', 'Çocuk masal sırasında hareketliyse bunu başarısızlık olarak görmeyin. Dinlemek, resme bakmak ve kısa bir bölümde durmak da birlikte okumanın parçasıdır.'],
+    faqs: [
+      { question: 'Uyku masalı kaç dakika olmalı?', answer: 'Küçük çocuklar için 2–5 dakika iyi bir başlangıçtır. Çocuğun ilgisi sürüyorsa daha uzun bir hikâye seçilebilir.' },
+      { question: 'Aynı masalı tekrar okumak uygun mu?', answer: 'Evet. Tekrar, gece rutinini öngörülebilir kılabilir ve çocuğun hikâyeye katılmasını kolaylaştırabilir.' },
+      { question: 'Masal çocuğu uyutmak zorunda mı?', answer: 'Hayır. Amaç zorla uyutmak değil, günün temposunu azaltan sakin bir ortak zaman oluşturmaktır.' },
+    ],
+  },
+  {
+    key: 'doktor-korkusu',
+    title: 'Doktor Korkusu Masalları – Çocuklar İçin',
+    heading: 'Doktor Korkusu Masalları',
+    description: 'Doktora gitme korkusunu yaşa uygun bir hikâyeyle konuşun. Ücretsiz çocuk masalları ve ebeveynler için gerçekçi hazırlık önerileri.',
+    kicker: 'Muayene öncesi merakı ve duyguları konuşmak',
+    intro: 'Doktor muayenesi çocuklar için yeni sesler, araçlar ve belirsizlik anlamına gelebilir. Bu seçkinin merkezindeki hikâye, korkuyu küçümsemeden bir muayenenin adımlarını tanıdık hâle getirir. Masal tıbbi tavsiye veya korkuyu giderme garantisi değildir. Randevu öncesinde ne olacağını dürüst ve kısa biçimde anlatmak, çocuğun sorularına alan açmak ve sağlık çalışanının yönlendirmesini izlemek için bir konuşma başlangıcı sunar.',
+    storyIds: ['tay-ruzgar-doktora-gidiyor', 'yavas-kaplumbaga-ile-korkusuz-kedi', 'kirk-kilitli-sandik', 'keloglan-ve-korkak-devin-bahcesi'],
+    guideTitle: 'Doktor randevusu öncesi masal nasıl kullanılabilir?',
+    guideParagraphs: ['Hikâyeyi randevudan hemen önce bir sınav gibi değil, birkaç gün önceden sakin bir zamanda okuyun.', 'Acımayacağına dair kesin söz vermek yerine neler olabileceğini yaşa uygun ve dürüst biçimde anlatın. Tıbbi sorular için sağlık uzmanına danışın.'],
+    faqs: [
+      { question: 'Masal doktor korkusunu geçirir mi?', answer: 'Böyle bir garanti yoktur. Masal yalnızca duyguyu konuşmak ve süreci tanıdıklaştırmak için kullanılabilir.' },
+      { question: 'Randevudan ne kadar önce okuyalım?', answer: 'Çocuğa göre değişir; birkaç gün önce sakin bir zamanda okumak, sorular için alan bırakabilir.' },
+      { question: 'Çocuğum hâlâ çok korkuyorsa ne yapmalıyım?', answer: 'Sağlık ekibine önceden bilgi verin ve çocuğunuz için uygun hazırlık konusunda profesyonel yönlendirme isteyin.' },
+    ],
+  },
+  {
+    key: 'dis-fircalama',
+    title: 'Diş Fırçalama Masalları – Eğitici Çocuk Hikâyeleri',
+    heading: 'Diş Fırçalama Masalları',
+    description: 'Diş fırçalama alışkanlığını eğlenceli bir hikâyeyle konuşun. Çocuklar için ücretsiz masallar ve ebeveynlere sade rutin önerileri.',
+    kicker: 'Günlük bakım rutinini hikâyeyle tanımak',
+    intro: 'Diş fırçalama küçük çocuklar için bazen sıkıcı, bazen de duyusal olarak zorlayıcı olabilir. Bu sayfadaki hikâyeler bakım rutinini korku veya utanç üzerinden değil, merak ve düzenli tekrar üzerinden ele alır. Masallar diş hekimi önerisinin yerini tutmaz ve sağlık sonucu vaat etmez. Ama çocuğun sırayı hatırlamasına, kendi fırçasını seçmesine ve günlük rutine katılmasına yardımcı olabilecek eğlenceli bir sohbet zemini oluşturabilir.',
+    storyIds: ['timsah-citcitin-isil-isil-disleri', 'caliskan-karinca', 'sincap-fistik-ile-kaplumbaga-toprakin-bahce-gorevi', 'keloglanin-tutumlu-testisi'],
+    guideTitle: 'Diş fırçalama masalından sonra ne yapabilirsiniz?',
+    guideParagraphs: ['Hikâyedeki sırayı gerçek rutinde kısa bir şarkı veya aynı kapanış sözüyle hatırlatabilirsiniz.', 'Diş bakımı ve uygun ürünler konusunda yaşa özel tavsiye için diş hekiminizin yönlendirmesini izleyin.'],
+    faqs: [
+      { question: 'Masal diş fırçalama alışkanlığı kazandırır mı?', answer: 'Tek başına garanti etmez; tutarlı rutin ve yetişkin desteğiyle birlikte bir hatırlatma aracı olabilir.' },
+      { question: 'Hikâyeyi ne zaman okuyalım?', answer: 'Fırçalama anındaki gerilimden ayrı, sakin bir zamanda okumak sohbeti kolaylaştırabilir.' },
+      { question: 'Diş bakımı hakkında tıbbi bilgi veriyor musunuz?', answer: 'Hayır. Sayfa genel bir okuma desteğidir; kişisel sağlık önerisi için diş hekimine danışılmalıdır.' },
+    ],
+  },
+  {
+    key: 'anaokuluna-baslama',
+    title: 'Anaokuluna Başlama Masalları – İlk Gün Hikâyeleri',
+    heading: 'Anaokuluna Başlama Masalları',
+    description: 'Anaokulunun ilk günü için yaşa uygun ücretsiz masallar. Ayrılık, yeni arkadaşlar ve okul rutinini sakin hikâyelerle konuşun.',
+    kicker: 'İlk gün, ayrılık ve yeni arkadaşlıklar',
+    intro: 'Anaokuluna başlamak hem çocuk hem aile için heyecan ve belirsizlik taşıyan büyük bir değişimdir. Bu seçkide ilk gün, yeni bir gruba katılma, yetişkinden ayrılma ve arkadaş edinme gibi durumlara yakın hikâyeler bulunur. Masalı “korkmamalısın” mesajına çevirmek yerine kahramanın merakını ve kaygısını birlikte fark etmek daha değerlidir. Okulun gerçek düzenini öğretmenden öğrenmek ve çocuğa ne zaman geri döneceğinizi somut biçimde anlatmak hikâyeyi günlük hazırlıkla bağlar.',
+    storyIds: ['yavru-geyik-benekin-ilk-gunu', 'findikin-cicekli-bardagi', 'ordek-yavrusu-paytak-suya-giriyor', 'pinokyo'],
+    guideTitle: 'Anaokulunun ilk günü için masal nasıl seçilir?',
+    guideParagraphs: ['Okulun gerçek akışına benzeyen, güven veren ama her şeyin kusursuz olacağını vaat etmeyen bir hikâye seçin.', 'Vedalaşmanın kısa ve öngörülebilir olması için öğretmenin önerdiği rutini izleyin; çocuğun duygusuna isim vermesine izin verin.'],
+    faqs: [
+      { question: 'Masalı ilk günden ne kadar önce okuyalım?', answer: 'Bir veya iki hafta önceden aralıklı okumak, soruların doğal biçimde ortaya çıkmasına zaman tanıyabilir.' },
+      { question: 'Çocuğum ağlarsa hikâye işe yaramadı mı?', answer: 'Hayır. Ağlamak ayrılığa verilen doğal bir tepki olabilir; masal duyguyu ortadan kaldırmak zorunda değildir.' },
+      { question: 'Okul hakkında ne kadar ayrıntı vermeliyim?', answer: 'Öğretmenden öğrendiğiniz gerçek ve yaşa uygun bilgileri paylaşın; kesin olmayan sözlerden kaçının.' },
+    ],
+  },
+];
+
+export function getStaticPaths() {
+  return [
+    'kardes-kiskancligi',
+    'uyumak-istemeyen-cocuklar',
+    'doktor-korkusu',
+    'dis-fircalama',
+    'anaokuluna-baslama',
+  ].map((topic) => ({ params: { topic } }));
+}
+
+const topic = topicPages.find((candidate) => candidate.key === Astro.params.topic)!;
+const allStories = await getStories();
+const selectedStories = topic.storyIds.flatMap((id: string) => {
+  const story = allStories.find((candidate) => candidate.id === id);
+  return story ? [story] : [];
+});
+const path = `/masallar/konu/${topic.key}/`;
+const relatedTopics = topicPages
+  .filter((candidate) => candidate.key !== topic.key)
+  .slice(0, 3)
+  .map((candidate) => ({ href: `/masallar/konu/${candidate.key}/`, label: candidate.heading }));
+---
+
+<StoryTopicPage
+  path={path}
+  title={topic.title}
+  description={topic.description}
+  kicker={topic.kicker}
+  heading={topic.heading}
+  intro={topic.intro}
+  stories={selectedStories}
+  totalStories={selectedStories.length}
+  guideTitle={topic.guideTitle}
+  guideParagraphs={topic.guideParagraphs}
+  faqs={topic.faqs}
+  relatedTopics={relatedTopics}
+/>
