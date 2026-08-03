@@ -1,0 +1,22 @@
+---
+interface Props {
+  /** Disable AdSense loading on gameplay and other sensitive pages. */
+  allowAds?: boolean;
+}
+
+const { allowAds = true } = Astro.props;
+const adsenseEnabled = allowAds
+  && import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true'
+  && import.meta.env.PUBLIC_GOOGLE_CERTIFIED_CMP === 'true';
+---
+
+{
+  adsenseEnabled && (
+    <script
+      async
+      is:inline
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606540854153205"
+      crossorigin="anonymous"
+    ></script>
+  )
+}
