@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getStories } from '../../data/stories';
+import { getStories, storyPath } from '../../data/stories';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
 
 const stories = await getStories();
@@ -8,30 +8,30 @@ const catalog = stories.map((story) => ({
   id: story.id,
   title: story.data.title,
   description: story.data.shortDescription,
-  href: `/masallar/${story.id}/`,
+  href: storyPath(story),
   coverImage: story.data.coverImage ?? '',
   coverEmoji: story.data.coverEmoji,
   coverColor: story.data.coverColor,
-  coverAlt: story.data.altText ?? `${story.data.title} resimli masal kapağı`,
-  age: story.data.ageGroups.map(ageLabel).join(' · ') || 'Her yaş',
+  coverAlt: story.data.altText ?? `${story.data.title} kapak görseli`,
+  age: story.data.audienceLabel ?? (story.data.ageGroups.map(ageLabel).join(' · ') || 'Her yaş'),
   minutes: story.data.readingTime,
-  category: story.data.categories[0]
-    ? storyCategoryLabel(story.data.categories[0])
-    : 'Çocuk Masalı',
+  category: story.data.section === 'islami-hikayeler'
+    ? 'İslami Hikâyeler'
+    : story.data.categories[0] ? storyCategoryLabel(story.data.categories[0]) : 'Çocuk Masalı',
 }));
 const catalogJson = JSON.stringify(catalog).replace(/</g, '\\u003c');
 ---
 
 <BaseLayout
   title="Kitaplığım – Favoriler ve Okumaya Devam Et | MasalNova"
-  description="Bu cihazda kaydettiğiniz ve okumaya başladığınız MasalNova masallarını tek yerde görün."
+  description="Bu cihazda kaydettiğiniz ve okumaya başladığınız MasalNova içeriklerini tek yerde görün."
   path="/kitapligim/"
   activeNav="library"
 >
   <section class="library-page" data-library-root data-library-state="loading">
     <div class="container">
       <header class="library-hero">
-        <p class="library-kicker">Senin küçük masal rafın</p>
+        <p class="library-kicker">Senin küçük okuma rafın</p>
         <h1>Kitaplığım</h1>
         <p>Favorilerin, son okudukların ve kaldığın yer yalnızca bu cihazda saklanır.</p>
       </header>
@@ -68,7 +68,7 @@ const catalogJson = JSON.stringify(catalog).replace(/</g, '\\u003c');
       <section class="shelf-section" data-library-favorites hidden aria-labelledby="favorites-title">
         <div class="section-heading">
           <div>
-            <p>Kaydettiğin masallar</p>
+            <p>Kaydettiğin okumalar</p>
             <h2 id="favorites-title">Favorilerin</h2>
           </div>
           <span data-favorite-count></span>
@@ -89,10 +89,10 @@ const catalogJson = JSON.stringify(catalog).replace(/</g, '\\u003c');
 
       <section class="library-empty" data-library-empty hidden aria-labelledby="empty-title">
         <div class="library-empty__icon" aria-hidden="true"><i class="ph ph-book-bookmark"></i></div>
-        <p class="library-kicker">Burada yeni masallar için yer var</p>
-        <h2 id="empty-title">Kendi masal rafını oluşturmaya başla.</h2>
-        <p>Bir masalı favorilere ekle veya okumaya başla; sonra burada kolayca bulabilirsin.</p>
-        <a href="/masallar/">Masalları keşfet <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        <p class="library-kicker">Burada yeni okumalar için yer var</p>
+        <h2 id="empty-title">Kendi okuma rafını oluşturmaya başla.</h2>
+        <p>Bir içeriği favorilere ekle veya okumaya başla; sonra burada kolayca bulabilirsin.</p>
+        <a href="/masallar/">İçerikleri keşfet <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </section>
 
       <noscript>
@@ -112,7 +112,7 @@ const catalogJson = JSON.stringify(catalog).replace(/</g, '\\u003c');
               <h3 data-card-title></h3>
               <p data-card-description></p>
               <div class="library-card__progress" aria-hidden="true"><span data-card-progress></span></div>
-              <strong data-card-cta>Masalı aç <i class="ph ph-arrow-right" aria-hidden="true"></i></strong>
+              <strong data-card-cta>İçeriği aç <i class="ph ph-arrow-right" aria-hidden="true"></i></strong>
             </div>
           </a>
           <button
@@ -226,15 +226,15 @@ const catalogJson = JSON.stringify(catalog).replace(/</g, '\\u003c');
     if (title) title.textContent = story.title;
     if (description) description.textContent = story.description;
     if (progressBar) progressBar.style.width = `${progress}%`;
-    if (cta?.firstChild) cta.firstChild.textContent = recent && progress > 0 ? 'Devam et ' : 'Masalı aç ';
+    if (cta?.firstChild) cta.firstChild.textContent = recent && progress > 0 ? 'Devam et ' : 'İçeriği aç ';
 
     const favoriteButton = card.querySelector<HTMLButtonElement>('[data-library-favorite]');
     if (favoriteButton) {
       favoriteButton.dataset.libraryFavorite = story.id;
       favoriteButton.setAttribute('aria-pressed', String(favorite));
       favoriteButton.setAttribute('aria-label', favorite
-        ? `${story.title} masalını favorilerden çıkar`
-        : `${story.title} masalını favorilere ekle`);
+        ? `${story.title} içeriğini favorilerden çıkar`
+        : `${story.title} içeriğini favorilere ekle`);
       const icon = favoriteButton.querySelector<HTMLElement>('i');
       const hiddenLabel = favoriteButton.querySelector<HTMLElement>('.sr-only');
       if (icon) icon.className = favorite ? 'ph-fill ph-heart' : 'ph ph-heart';

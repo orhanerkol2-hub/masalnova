@@ -3,6 +3,18 @@ import { durationBucketForMinutes } from './taxonomy';
 
 export type Story = CollectionEntry<'stories'>;
 
+export const ISLAMIC_STORY_SECTION = 'islami-hikayeler' as const;
+
+export function isIslamicStory(story: Story): boolean {
+  return story.data.section === ISLAMIC_STORY_SECTION;
+}
+
+export function storyPath(story: Story): string {
+  return isIslamicStory(story)
+    ? `/islami-hikayeler/${story.id}/`
+    : `/masallar/${story.id}/`;
+}
+
 /** Every story, including editorial drafts, newest first. */
 export async function getAllStories(): Promise<Story[]> {
   const all = await getCollection('stories');
@@ -13,6 +25,18 @@ export async function getAllStories(): Promise<Story[]> {
 export async function getStories(): Promise<Story[]> {
   const all = await getAllStories();
   return all.filter((story) => story.data.editorialStatus === 'approved');
+}
+
+/** Approved stories that belong to the Masallar catalogue. */
+export async function getMasalStories(): Promise<Story[]> {
+  const all = await getStories();
+  return all.filter((story) => !isIslamicStory(story));
+}
+
+/** Approved stories in the standalone İslami Hikâyeler section. */
+export async function getIslamicStories(): Promise<Story[]> {
+  const all = await getStories();
+  return all.filter(isIslamicStory);
 }
 
 export function storyById(stories: Story[], id: string): Story | undefined {

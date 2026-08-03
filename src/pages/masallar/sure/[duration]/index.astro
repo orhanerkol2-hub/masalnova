@@ -1,6 +1,6 @@
 ---
 import StoryTopicPage from '../../../../components/StoryTopicPage.astro';
-import { getStories } from '../../../../data/stories';
+import { getMasalStories } from '../../../../data/stories';
 import { durationBucketForMinutes } from '../../../../data/taxonomy';
 
 export async function getStaticPaths() {
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
 }
 
 const { duration } = Astro.props;
-const allStories = await getStories();
+const allStories = await getMasalStories();
 const matchingStories = allStories.filter((story) => durationBucketForMinutes(story.data.readingTime) === duration.key);
 const path = `/masallar/sure/${duration.key}/`;
 ---

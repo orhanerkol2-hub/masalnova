@@ -5,18 +5,21 @@ import CoverThumb from '../../components/CoverThumb.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import StoryCard from '../../components/StoryCard.astro';
 import ReadingToolbar from '../../components/ReadingToolbar.astro';
-import { getAllStories, getStories } from '../../data/stories';
+import { getAllStories, getStories, isIslamicStory, storyPath } from '../../data/stories';
 import { videoById } from '../../data/videos';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
 import { compactDescription, formatTurkishDate, storySeoTitle } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const stories = await getAllStories();
-  return stories.map((story) => ({ params: { slug: story.id }, props: { story } }));
+  return stories
+    .filter((story) => !isIslamicStory(story))
+    .map((story) => ({ params: { slug: story.id }, props: { story } }));
 }
 
 const { story } = Astro.props;
 const d = story.data;
+const isIslamic = isIslamicStory(story);
 const { Content } = await render(story);
 
 const allStories = await getStories();
@@ -33,25 +36,39 @@ const relevanceScore = (candidate: (typeof allStories)[number]) =>
   + (Math.abs(candidate.data.readingTime - d.readingTime) <= 1 ? 3 : 0)
   + (candidate.data.isPopular ? 1 : 0);
 const moreStories = allStories
-  .filter((candidate) => candidate.id !== story.id && relevanceScore(candidate) > 0)
+  .filter((candidate) => candidate.id !== story.id
+    && relevanceScore(candidate) > 0
+    && isIslamicStory(candidate) === isIslamic)
   .sort((a, b) => relevanceScore(b) - relevanceScore(a) || b.data.publishedAt.localeCompare(a.data.publishedAt))
   .slice(0, 4);
 const primaryCategory = d.categories[0];
-const primaryCategoryLabel = primaryCategory ? storyCategoryLabel(primaryCategory) : 'Masallar';
-const storyUrl = `https://masalnova.com/masallar/${story.id}/`;
+const primaryCategoryLabel = isIslamic
+  ? 'İslami Hikâyeler'
+  : primaryCategory ? storyCategoryLabel(primaryCategory) : 'Masallar';
+const storyPagePath = storyPath(story);
+const storyUrl = `https://masalnova.com${storyPagePath}`;
 const storyImage = d.coverImage ? `https://masalnova.com${d.coverImage}` : 'https://masalnova.com/logo.png';
 const publishedIso = `${d.publishedAt}T00:00:00+03:00`;
 const modifiedIso = `${d.modifiedAt ?? d.publishedAt}T00:00:00+03:00`;
 const publishedLabel = formatTurkishDate(d.publishedAt);
 const seoDescription = compactDescription(d.shortDescription);
-const ageRange = d.ageGroups.map(ageLabel).join(' ve ');
-const seoTitle = d.seoTitle ?? storySeoTitle(`${d.title}${ageRange ? ` (${ageRange})` : ''}`);
+const ageRange = d.audienceLabel ?? d.ageGroups.map(ageLabel).join(' ve ');
+const seoTitle = d.seoTitle ?? (isIslamic
+  ? `${d.title}${ageRange ? ` (${ageRange})` : ''} – Çocuklar İçin İslami Hikâye | MasalNova`
+  : storySeoTitle(`${d.title}${ageRange ? ` (${ageRange})` : ''}`));
 const primaryTheme = d.themes[0] ?? 'hikâyenin ana fikri';
-const ageBounds = d.ageGroups[0]?.split('-').map(Number) ?? [];
+const ageBounds = d.ageGroups.flatMap((group) => group.split('-').map(Number)).filter(Number.isFinite);
+const suggestedMinAge = ageBounds.length ? Math.min(...ageBounds) : undefined;
+const suggestedMaxAge = ageBounds.length ? Math.max(...ageBounds) : undefined;
 const emotionalIntensity = d.categories.includes('uyku') || d.themes.some((theme) => /sakin|huzur|şefkat|sevgi/iu.test(theme))
   ? 'Sakin'
   : d.themes.some((theme) => /korku|cesaret|macera|kayıp/iu.test(theme)) ? 'Orta' : 'Yumuşak';
-const storyType = primaryCategory ? storyCategoryLabel(primaryCategory) : 'Çocuk masalı';
+const storyType = isIslamic ? 'Kaynaklı İslami çocuk hikâyesi' : primaryCategory ? storyCategoryLabel(primaryCategory) : 'Çocuk masalı';
+const sourceTypeLabel = d.sourceType === 'quran'
+  ? "Kur'an-ı Kerim"
+  : d.sourceType === 'hadith'
+    ? 'Hadis rivayeti'
+    : d.sourceType === 'sira' ? 'Siyer kaynağı' : 'Kaynak';
 
 const jsonLd = [
   {
@@ -66,17 +83,17 @@ const jsonLd = [
     datePublished: publishedIso,
     dateModified: modifiedIso,
     isAccessibleForFree: true,
-    articleSection: d.categories.map(storyCategoryLabel),
-    genre: d.categories.map(storyCategoryLabel),
+    articleSection: isIslamic ? ['İslami Hikâyeler'] : d.categories.map(storyCategoryLabel),
+    genre: isIslamic ? ['İslami Hikâyeler'] : d.categories.map(storyCategoryLabel),
     keywords: (d.seoKeywords.length
       ? d.seoKeywords
       : [...d.themes, ...d.categories.map(storyCategoryLabel)]).join(', '),
     timeRequired: `PT${d.readingTime}M`,
     about: d.themes.map((theme) => ({ '@type': 'Thing', name: theme })),
-    audience: ageBounds.length === 2 ? {
+    audience: suggestedMinAge !== undefined && suggestedMaxAge !== undefined ? {
       '@type': 'PeopleAudience',
-      suggestedMinAge: ageBounds[0],
-      suggestedMaxAge: ageBounds[1],
+      suggestedMinAge,
+      suggestedMaxAge,
     } : undefined,
     author: {
       '@type': 'Organization',
@@ -89,56 +106,84 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Masallar', item: 'https://masalnova.com/masallar/' },
-      ...(primaryCategory ? [{ '@type': 'ListItem', position: 3, name: primaryCategoryLabel, item: `https://masalnova.com/masallar/kategori/${primaryCategory}/` }] : []),
-      { '@type': 'ListItem', position: primaryCategory ? 4 : 3, name: d.title, item: storyUrl },
-    ],
+    itemListElement: isIslamic
+      ? [
+          { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+          { '@type': 'ListItem', position: 2, name: 'İslami Hikâyeler', item: 'https://masalnova.com/islami-hikayeler/' },
+          { '@type': 'ListItem', position: 3, name: d.title, item: storyUrl },
+        ]
+      : [
+          { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Masallar', item: 'https://masalnova.com/masallar/' },
+          ...(primaryCategory ? [{ '@type': 'ListItem', position: 3, name: primaryCategoryLabel, item: `https://masalnova.com/masallar/kategori/${primaryCategory}/` }] : []),
+          { '@type': 'ListItem', position: primaryCategory ? 4 : 3, name: d.title, item: storyUrl },
+        ],
   },
 ];
 ---
 <BaseLayout
   title={seoTitle}
   description={seoDescription}
-  path={`/masallar/${story.id}/`}
+  path={storyPagePath}
   image={d.coverImage}
-  imageAlt={d.altText ?? `${d.title} resimli masal kapağı`}
+  imageAlt={d.altText ?? `${d.title} resimli ${isIslamic ? 'hikâye' : 'masal'} kapağı`}
   ogType="article"
   publishedTime={publishedIso}
   modifiedTime={modifiedIso}
   preloadImage={d.coverImage}
   jsonLd={jsonLd}
-  activeNav="masallar"
+  activeNav={isIslamic ? 'islami' : 'masallar'}
   readerPage
   robots={d.editorialStatus === 'approved' ? undefined : 'noindex, follow'}
 >
-  <ReadingToolbar backHref="/masallar/" audioSrc={d.audioUrl} storyId={story.id} />
+  <ReadingToolbar
+    backHref={isIslamic ? '/islami-hikayeler/' : '/masallar/'}
+    backLabel={isIslamic ? 'İslami hikâyelere dön' : 'Masallara dön'}
+    audioSrc={d.audioUrl}
+    storyId={story.id}
+  />
 
-  <section class="story-page">
+  <section class:list={['story-page', { 'story-page--islami': isIslamic }]}>
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb">
-        <a href="/">Ana Sayfa</a> <span>›</span> <a href="/masallar/">Masallar</a>
-        {primaryCategory && <><span>›</span><a href={`/masallar/kategori/${primaryCategory}/`}>{primaryCategoryLabel}</a></>}
+        <a href="/">Ana Sayfa</a> <span>›</span>
+        {isIslamic
+          ? <a href="/islami-hikayeler/">İslami Hikâyeler</a>
+          : <><a href="/masallar/">Masallar</a>{primaryCategory && <><span>›</span><a href={`/masallar/kategori/${primaryCategory}/`}>{primaryCategoryLabel}</a></>}</>}
         <span>›</span> <span>{d.title}</span>
       </nav>
 
       <div class="reader-shell">
         <article class="reader" data-reader-article>
           <header class="reader__header">
-            <span class="reader__eyebrow">MasalNova Reader</span>
+            <span class="reader__eyebrow">{isIslamic ? 'MasalNova · Kaynaklı İslami hikâye' : 'MasalNova Reader'}</span>
             <h1 class="reader__title">{d.title}</h1>
             <p class="reader__description">{d.shortDescription}</p>
+            {isIslamic && d.sourceCitation && (
+              <aside class="reader-source" aria-label="Hikâyenin kaynağı">
+                <i class={`ph ph-${d.sourceType === 'quran' ? 'book-open-text' : d.sourceType === 'hadith' ? 'quotes' : 'scroll'}`} aria-hidden="true"></i>
+                <div>
+                  <span>{sourceTypeLabel}</span>
+                  <strong>{d.sourceCitation}</strong>
+                  <small>Metin, çocukların yaşına göre sadeleştirilmiş kaynak anlatımıdır.</small>
+                </div>
+                {d.sourceUrl && <a href={d.sourceUrl} target="_blank" rel="noopener noreferrer">Kaynağı aç <span class="sr-only">(yeni sekmede açılır)</span> <i class="ph ph-arrow-square-out" aria-hidden="true"></i></a>}
+              </aside>
+            )}
             <div class="reader__meta">
-              {d.ageGroups.map((a) => <span>{ageLabel(a)}</span>)}
+              {d.audienceLabel
+                ? <span>{d.audienceLabel}</span>
+                : d.ageGroups.map((a) => <span>{ageLabel(a)}</span>)}
               <span aria-hidden="true">·</span>
               <span>{d.readingTime} dk okuma</span>
-              {d.categories.map((c) => (
-                <>
-                  <span aria-hidden="true">·</span>
-                  <a href={`/masallar/kategori/${c}/`}>{storyCategoryLabel(c)}</a>
-                </>
-              ))}
+              {isIslamic
+                ? <><span aria-hidden="true">·</span><a href="/islami-hikayeler/">İslami Hikâyeler</a></>
+                : d.categories.map((c) => (
+                    <>
+                      <span aria-hidden="true">·</span>
+                      <a href={`/masallar/kategori/${c}/`}>{storyCategoryLabel(c)}</a>
+                    </>
+                  ))}
             </div>
             <p class="reader__byline">
               <a href="/hakkimizda/">MasalNova Çocuk Editör Ekibi</a>
@@ -168,24 +213,30 @@ const jsonLd = [
 
       <section class="story-guide" aria-labelledby="story-guide-title">
         <p class="story-guide__kicker">Ebeveynler için</p>
-        <h2 id="story-guide-title">Bu masal ne anlatıyor?</h2>
+        <h2 id="story-guide-title">{isIslamic ? 'Bu hikâye ne anlatıyor?' : 'Bu masal ne anlatıyor?'}</h2>
         <p>
-          Bu resimli masal MasalNova’da <strong>{ageRange || 'çocuklar'}</strong> için etiketlenmiştir ve birlikte okunduğunda yaklaşık <strong>{d.readingTime} dakika</strong> sürer. Hikâyede {d.themes.length ? d.themes.join(', ') : 'dostluk ve hayal gücü'} temaları öne çıkar.
+          Bu resimli {isIslamic ? 'hikâye' : 'masal'} MasalNova’da <strong>{ageRange || 'çocuklar'}</strong> için etiketlenmiştir ve birlikte okunduğunda yaklaşık <strong>{d.readingTime} dakika</strong> sürer. Hikâyede {d.themes.length ? d.themes.join(', ') : 'dostluk ve hayal gücü'} temaları öne çıkar.
         </p>
         <dl>
           <div><dt>Yaş</dt><dd>{ageRange || 'Her yaş'}</dd></div>
           <div><dt>Süre</dt><dd>{d.readingTime} dakika</dd></div>
           <div><dt>Konu</dt><dd>{d.themes.slice(0, 3).join(' · ') || primaryCategoryLabel}</dd></div>
-          <div><dt>Masal türü</dt><dd>{storyType}</dd></div>
+          <div><dt>{isIslamic ? 'Hikâye türü' : 'Masal türü'}</dt><dd>{storyType}</dd></div>
           <div><dt>Duygusal yoğunluk</dt><dd>{emotionalIntensity}</dd></div>
         </dl>
         <div class="story-prompts">
           <h3>Okuma sonrası birlikte konuşun</h3>
-          <ul>
-            <li>Kahramanın yerinde olsaydın hangi kararı verirdin?</li>
-            <li>Bu masalda {primaryTheme} neden önemliydi?</li>
-            <li>Hikâyenin en çok hangi bölümünü sevdin?</li>
-          </ul>
+          {isIslamic
+            ? <ul>
+                <li>Bu anlatıda Allah'ın hangi nimeti veya yardımı hatırlatılıyor?</li>
+                <li>{primaryTheme} bu hikâyede nasıl gösteriliyor?</li>
+                <li>Bugün bu güzel davranıştan hangisini uygulayabiliriz?</li>
+              </ul>
+            : <ul>
+                <li>Kahramanın yerinde olsaydın hangi kararı verirdin?</li>
+                <li>Bu masalda {primaryTheme} neden önemliydi?</li>
+                <li>Hikâyenin en çok hangi bölümünü sevdin?</li>
+              </ul>}
         </div>
         <a class="editorial-link" href="/hakkimizda/">MasalNova’nın içerik ve seçim yaklaşımı <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </section>
@@ -199,7 +250,7 @@ const jsonLd = [
       {related.length > 0 && (
         <section class="watch">
           <h2>İzlemek ister misiniz?</h2>
-          <p>Bu masalı sevdiyseniz, ilgili videoyu da izleyebilirsiniz.</p>
+          <p>Bu {isIslamic ? 'hikâyeyi' : 'masalı'} sevdiyseniz, ilgili videoyu da izleyebilirsiniz.</p>
           <div class="grid grid-3">
             {related.map((v) => <VideoCard video={v!} />)}
           </div>
@@ -208,14 +259,14 @@ const jsonLd = [
 
       {moreStories.length > 0 && (
         <section class="more">
-          <h2>Teması ve yaş düzeyi benzer masallar</h2>
+          <h2>Teması ve yaş düzeyi benzer {isIslamic ? 'İslami hikâyeler' : 'masallar'}</h2>
           <div class="grid grid-3">
             {moreStories.map((s) => <StoryCard story={s} />)}
           </div>
         </section>
       )}
 
-      <div class="back"><a class="btn btn-ghost" href="/masallar/">← Tüm Masalları Oku</a></div>
+      <div class="back"><a class="btn btn-ghost" href={isIslamic ? '/islami-hikayeler/' : '/masallar/'}>← {isIslamic ? 'Tüm İslami Hikâyeler' : 'Tüm Masalları Oku'}</a></div>
     </div>
   </section>
 </BaseLayout>
@@ -225,6 +276,11 @@ const jsonLd = [
     padding: 22px 0 10px;
     background: var(--reader-background);
     color: var(--reader-text-color);
+  }
+  .story-page--islami {
+    background:
+      linear-gradient(color-mix(in srgb, var(--reader-background) 90%, transparent), color-mix(in srgb, var(--reader-background) 94%, transparent)),
+      url('/islamic/islami-hikayeler-background.webp') center top / cover fixed no-repeat;
   }
   .crumbs {
     max-width: var(--reader-content-width);
@@ -250,6 +306,12 @@ const jsonLd = [
 
   .reader {
     padding: clamp(22px, 5vw, 42px) clamp(18px, 5vw, 24px) 8px;
+  }
+  .story-page--islami .reader {
+    border: 1px solid var(--reader-border);
+    border-radius: 28px;
+    background: color-mix(in srgb, var(--reader-surface) 96%, transparent);
+    box-shadow: 0 24px 65px rgba(11,42,77,.1);
   }
 
   .reader__header {
@@ -282,6 +344,25 @@ const jsonLd = [
     font-size: 1.06rem;
     line-height: 1.55;
   }
+
+  .reader-source {
+    display: grid;
+    grid-template-columns: auto minmax(0,1fr) auto;
+    gap: 12px;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 14px 15px;
+    border: 1px solid color-mix(in srgb, var(--reader-accent) 24%, var(--reader-border));
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--reader-accent) 7%, var(--reader-surface));
+  }
+  .reader-source > i { color: var(--reader-accent); font-size: 1.55rem; }
+  .reader-source div { display: grid; gap: 1px; min-width: 0; }
+  .reader-source span { color: var(--reader-accent); font-size: .67rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .reader-source strong { color: var(--reader-text-color); font-size: .84rem; line-height: 1.4; }
+  .reader-source small { color: var(--reader-text-soft); font-size: .71rem; line-height: 1.4; }
+  .reader-source a { display:inline-flex; gap:5px; align-items:center; color:var(--reader-accent); font-size:.72rem; font-weight:850; white-space:nowrap; }
+  .reader-source a:hover { text-decoration: underline; }
 
   .reader__meta {
     display: flex;
@@ -371,5 +452,8 @@ const jsonLd = [
 
   @media (max-width: 640px) {
     .story-guide dl { grid-template-columns: 1fr; }
+    .story-page--islami .reader { border-radius: 22px; }
+    .reader-source { grid-template-columns:auto minmax(0,1fr); }
+    .reader-source a { grid-column:2; }
   }
 </style>

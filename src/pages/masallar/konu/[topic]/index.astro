@@ -1,6 +1,6 @@
 ---
 import StoryTopicPage from '../../../../components/StoryTopicPage.astro';
-import { getStories } from '../../../../data/stories';
+import { getMasalStories } from '../../../../data/stories';
 
 type TopicPage = {
   key: string;
@@ -109,7 +109,7 @@ export function getStaticPaths() {
 }
 
 const topic = topicPages.find((candidate) => candidate.key === Astro.params.topic)!;
-const allStories = await getStories();
+const allStories = await getMasalStories();
 const selectedStories = topic.storyIds.flatMap((id: string) => {
   const story = allStories.find((candidate) => candidate.id === id);
   return story ? [story] : [];

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoryCard from './StoryCard.astro';
-import type { Story } from '../data/stories';
+import { storyPath, type Story } from '../data/stories';
 import { ageGroups, durationBuckets, storyCategories } from '../data/taxonomy';
 import { STORY_ARCHIVE_PAGE_SIZE, storyArchivePath } from '../data/pagination';
 
@@ -41,7 +41,7 @@ const jsonLd = [
         '@type': 'ListItem',
         position: startPosition + index + 1,
         name: story.data.title,
-        url: `https://masalnova.com/masallar/${story.id}/`,
+        url: `https://masalnova.com${storyPath(story)}`,
       })),
     },
   },
