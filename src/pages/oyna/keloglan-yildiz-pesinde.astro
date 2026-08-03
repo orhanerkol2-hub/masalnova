@@ -177,6 +177,23 @@ const jsonLd = [
   if (playerShell && gameFrame && fullscreenTriggers.length > 0) {
     let wasFullscreen = false;
 
+    const handleEmbeddedGameScroll = (event: MessageEvent) => {
+      if (
+        event.source !== gameFrame.contentWindow ||
+        event.origin !== window.location.origin ||
+        document.fullscreenElement === playerShell ||
+        event.data?.type !== 'masalnova:embedded-game-scroll' ||
+        typeof event.data.deltaY !== 'number'
+      ) {
+        return;
+      }
+
+      const deltaY = Math.max(-80, Math.min(80, event.data.deltaY));
+      if (Number.isFinite(deltaY) && Math.abs(deltaY) >= 1) {
+        window.scrollBy({ top: deltaY, left: 0, behavior: 'auto' });
+      }
+    };
+
     const setFullscreenState = () => {
       const isFullscreen = document.fullscreenElement === playerShell;
       document.documentElement.classList.toggle('game-fullscreen-active', isFullscreen);
@@ -215,7 +232,9 @@ const jsonLd = [
 
     fullscreenTriggers.forEach((trigger) => trigger.addEventListener('click', openGame));
     document.addEventListener('fullscreenchange', setFullscreenState);
+    window.addEventListener('message', handleEmbeddedGameScroll);
     window.addEventListener('pagehide', () => {
+      window.removeEventListener('message', handleEmbeddedGameScroll);
       document.documentElement.classList.remove('game-fullscreen-active');
       document.body.classList.remove('game-fullscreen-active');
     });
