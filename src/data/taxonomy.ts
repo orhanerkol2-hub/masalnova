@@ -8,10 +8,23 @@ export const storyCategories = [
   { key: 'hayvan', label: 'Hayvan Masalları', emoji: '🦊', desc: 'Sevimli hayvan kahramanlar' },
 ] as const;
 
+export const islamicStorySection = {
+  key: 'islami-hikayeler',
+  label: 'İslami Hikâyeler',
+  emoji: '☪️',
+  desc: "Kur'an, sahih veya hasen hadis ve siyer kaynaklı hikâyeler",
+} as const;
+
 export const ageGroups = [
   { key: '3-5', label: '3-5 yaş' },
   { key: '5-7', label: '5-7 yaş' },
   { key: '7-9', label: '7-9 yaş' },
+] as const;
+
+const extendedAgeLabels = [
+  { key: '3-4', label: '3-4 yaş' },
+  { key: '6-9', label: '6-9 yaş' },
+  { key: '8-9', label: '8-9 yaş' },
 ] as const;
 
 export const durationBuckets = [
@@ -35,7 +48,7 @@ export function videoCategoryLabel(key: string): string {
   return videoCategories.find((c) => c.key === key)?.label ?? key;
 }
 export function ageLabel(key: string): string {
-  return ageGroups.find((a) => a.key === key)?.label ?? key;
+  return [...ageGroups, ...extendedAgeLabels].find((a) => a.key === key)?.label ?? key;
 }
 export function durationBucketForMinutes(min: number): string {
   if (min <= 2) return 'kisa';

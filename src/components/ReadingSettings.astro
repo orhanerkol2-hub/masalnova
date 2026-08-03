@@ -102,7 +102,7 @@ const leadingOptions = [
         <input type="checkbox" name="keepAwake" data-keep-awake />
         <span class="reading-settings__toggle-copy">
           <strong>Ekranı açık tut</strong>
-          <small>Masal açıkken ekranın kararmasını ve kilitlenmesini önler.</small>
+          <small>Okuma sırasında ekranın kararmasını ve kilitlenmesini önler.</small>
         </span>
         <span class="reading-settings__switch" aria-hidden="true" />
       </label>
@@ -408,7 +408,7 @@ const leadingOptions = [
         }
 
         wakeLock = sentinel;
-        setWakeLockStatus('Ekran masal boyunca açık kalacak.');
+        setWakeLockStatus('Ekran okuma boyunca açık kalacak.');
         sentinel.addEventListener('release', () => {
           if (wakeLock === sentinel) wakeLock = null;
           if (keepAwakeWanted && document.visibilityState === 'visible') {

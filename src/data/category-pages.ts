@@ -33,9 +33,18 @@ export const categorySeoCopy: Record<string, CategorySeoCopy> = {
     description: 'Hayvan masalları oku: Sevimli hayvan kahramanlarla dolu ücretsiz, eğlenceli ve öğretici Türkçe çocuk hikâyelerini keşfedin.',
     intro: 'Konuşan hayvanlar, renkli ormanlar ve sıcak dostluklarla dolu bir dünyaya adım atın. Hayvan masalları empati, yardımlaşma ve doğa sevgisi üzerine konuşmak için alan açar.',
   },
+  'islami-hikayeler': {
+    title: 'İslami Hikâyeler – Çocuklar İçin Kaynaklı Kıssalar | MasalNova',
+    heading: 'İslami Hikâyeler',
+    description: "Çocuklar için Kur'an-ı Kerim, sahih veya hasen hadis ve güvenilir siyer kaynaklarına dayanan, yaşa uygun ve resimli İslami hikâyeleri ücretsiz okuyun.",
+    intro: "Küçük kalplere merhamet, sabır, şükür ve Allah'a güven duygusu kazandıran kaynaklı anlatılar. Metinler çocukların yaşına göre sadeleştirildi; kaynakta bulunmayan ayrıntılar ayıklandı ve kutsal kişiler görsellerde tasvir edilmedi.",
+  },
 };
 
 export function categoryPagePath(category: string, page: number): string {
+  if (category === 'islami-hikayeler') {
+    return page <= 1 ? '/islami-hikayeler/' : `/islami-hikayeler/sayfa/${page}/`;
+  }
   return page <= 1
     ? `/masallar/kategori/${category}/`
     : `/masallar/kategori/${category}/sayfa/${page}/`;

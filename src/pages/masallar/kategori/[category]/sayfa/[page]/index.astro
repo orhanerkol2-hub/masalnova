@@ -1,11 +1,11 @@
 ---
 import CategoryListingPage from '../../../../../../components/CategoryListingPage.astro';
-import { getStories } from '../../../../../../data/stories';
+import { getMasalStories } from '../../../../../../data/stories';
 import { storyCategories } from '../../../../../../data/taxonomy';
 import { CATEGORY_PAGE_SIZE, categorySeoCopy } from '../../../../../../data/category-pages';
 
 export async function getStaticPaths() {
-  const allStories = await getStories();
+  const allStories = await getMasalStories();
   return storyCategories.flatMap((category) => {
     const matchingStories = allStories.filter((story) => story.data.categories.includes(category.key));
     const pageCount = Math.ceil(matchingStories.length / CATEGORY_PAGE_SIZE);

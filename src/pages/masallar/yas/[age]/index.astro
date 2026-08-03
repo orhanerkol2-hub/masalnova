@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import StoryCard from '../../../../components/StoryCard.astro';
-import { getStories } from '../../../../data/stories';
+import { getMasalStories } from '../../../../data/stories';
 import { ageGroups } from '../../../../data/taxonomy';
 
 type ExactAgePage = {
@@ -82,7 +82,7 @@ export async function getStaticPaths() {
 }
 
 const page = [...rangePages, ...exactAgePages].find((candidate) => candidate.key === Astro.params.age)!;
-const allStories = await getStories();
+const allStories = await getMasalStories();
 const exactPage = exactAgePages.find((candidate) => candidate.key === page.key);
 
 const includesExactAge = (group: string, age: number) => {
@@ -90,9 +90,20 @@ const includesExactAge = (group: string, age: number) => {
   return Number.isFinite(min) && age >= min && age <= max;
 };
 
+const rangesOverlap = (left: string, right: string) => {
+  const [leftMin, leftMax = leftMin] = left.split('-').map(Number);
+  const [rightMin, rightMax = rightMin] = right.split('-').map(Number);
+  return Number.isFinite(leftMin)
+    && Number.isFinite(leftMax)
+    && Number.isFinite(rightMin)
+    && Number.isFinite(rightMax)
+    && leftMin <= rightMax
+    && rightMin <= leftMax;
+};
+
 const matchingStories = exactPage
   ? allStories.filter((story) => story.data.ageGroups.some((group) => includesExactAge(group, exactPage.age)))
-  : allStories.filter((story) => story.data.ageGroups.includes(page.key));
+  : allStories.filter((story) => story.data.ageGroups.some((group) => rangesOverlap(group, page.key)));
 
 const rankedStories = exactPage
   ? [...matchingStories].sort((a, b) => {

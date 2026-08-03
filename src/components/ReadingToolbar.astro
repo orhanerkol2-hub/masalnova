@@ -3,11 +3,12 @@ import ReadingSettings from './ReadingSettings.astro';
 
 interface Props {
   backHref: string;
+  backLabel?: string;
   audioSrc?: string | undefined;
   storyId: string;
 }
 
-const { backHref, audioSrc, storyId } = Astro.props;
+const { backHref, backLabel = 'Masallara dön', audioSrc, storyId } = Astro.props;
 ---
 
 <div class="reading-toolbar" data-reading-toolbar data-story-id={storyId}>
@@ -16,7 +17,7 @@ const { backHref, audioSrc, storyId } = Astro.props;
       <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
-      <span class="reading-toolbar__back-label">Masallara dön</span>
+      <span class="reading-toolbar__back-label">{backLabel}</span>
     </a>
 
     <div class="reading-toolbar__actions">
@@ -34,7 +35,7 @@ const { backHref, audioSrc, storyId } = Astro.props;
       </button>
       {
         audioSrc && (
-          <button class="reading-toolbar__btn" type="button" data-audio-toggle aria-label="Sesli masalı oynat" aria-pressed="false">
+          <button class="reading-toolbar__btn" type="button" data-audio-toggle aria-label="Sesli okumayı oynat" aria-pressed="false">
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
               <path d="M4 6.5v5h2.8L11 15V3L6.8 6.5H4Z" />
               <path d="M13 6.2a3.5 3.5 0 0 1 0 5.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" />
@@ -259,7 +260,7 @@ const { backHref, audioSrc, storyId } = Astro.props;
   if (audioBtn && audio) {
     const syncAudioButton = () => {
       audioBtn.setAttribute('aria-pressed', String(!audio.paused));
-      audioBtn.setAttribute('aria-label', audio.paused ? 'Sesli masalı oynat' : 'Sesli masalı duraklat');
+      audioBtn.setAttribute('aria-label', audio.paused ? 'Sesli okumayı oynat' : 'Sesli okumayı duraklat');
     };
 
     audioBtn.addEventListener('click', () => {

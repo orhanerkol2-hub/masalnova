@@ -1,8 +1,8 @@
 ---
 import StoryTopicPage from '../../../components/StoryTopicPage.astro';
-import { getStories } from '../../../data/stories';
+import { getMasalStories } from '../../../data/stories';
 
-const allStories = await getStories();
+const allStories = await getMasalStories();
 const illustratedStories = allStories.filter((story) => Boolean(story.data.coverImage));
 ---
 

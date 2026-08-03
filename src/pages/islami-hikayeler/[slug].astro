@@ -1,0 +1,15 @@
+---
+import StoryPage from '../masallar/[slug].astro';
+import { getAllStories, isIslamicStory } from '../../data/stories';
+
+export async function getStaticPaths() {
+  const stories = await getAllStories();
+  return stories
+    .filter(isIslamicStory)
+    .map((story) => ({ params: { slug: story.id }, props: { story } }));
+}
+
+const { story } = Astro.props;
+---
+
+<StoryPage story={story} />

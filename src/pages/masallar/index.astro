@@ -1,9 +1,9 @@
 ---
 import StoryArchivePage from '../../components/StoryArchivePage.astro';
-import { getStories } from '../../data/stories';
+import { getMasalStories } from '../../data/stories';
 import { STORY_ARCHIVE_PAGE_SIZE } from '../../data/pagination';
 
-const allStories = await getStories();
+const allStories = await getMasalStories();
 const pageCount = Math.ceil(allStories.length / STORY_ARCHIVE_PAGE_SIZE);
 const stories = allStories.slice(0, STORY_ARCHIVE_PAGE_SIZE);
 ---

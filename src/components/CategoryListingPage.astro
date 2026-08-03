@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoryCard from './StoryCard.astro';
-import type { Story } from '../data/stories';
+import { storyPath, type Story } from '../data/stories';
 import { CATEGORY_PAGE_SIZE, categoryPagePath, type CategorySeoCopy } from '../data/category-pages';
-import { storyCategories } from '../data/taxonomy';
+import { islamicStorySection, storyCategories } from '../data/taxonomy';
 
 interface Props {
-  category: (typeof storyCategories)[number];
+  category: (typeof storyCategories)[number] | typeof islamicStorySection;
   copy: CategorySeoCopy;
   stories: Story[];
   totalStories: number;
@@ -15,6 +15,7 @@ interface Props {
 }
 
 const { category, copy, stories, totalStories, page, pageCount } = Astro.props;
+const isIslamic = category.key === islamicStorySection.key;
 const path = categoryPagePath(category.key, page);
 const canonical = `https://masalnova.com${path}`;
 const title = page === 1 ? copy.title : `${copy.heading} – Sayfa ${page} | MasalNova`;
@@ -25,27 +26,45 @@ const visiblePages = Array.from({ length: pageCount }, (_, index) => index + 1)
 const jsonLd = [
   {
     '@context': 'https://schema.org', '@type': 'CollectionPage', name: title.replace(' | MasalNova', ''), description, url: canonical, inLanguage: 'tr-TR',
-    mainEntity: { '@type': 'ItemList', numberOfItems: stories.length, itemListElement: stories.map((story, index) => ({ '@type': 'ListItem', position: startPosition + index + 1, url: `https://masalnova.com/masallar/${story.id}/`, name: story.data.title })) },
+    mainEntity: { '@type': 'ItemList', numberOfItems: stories.length, itemListElement: stories.map((story, index) => ({ '@type': 'ListItem', position: startPosition + index + 1, url: `https://masalnova.com${storyPath(story)}`, name: story.data.title })) },
   },
   {
-    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Masallar', item: 'https://masalnova.com/masallar/' },
-      { '@type': 'ListItem', position: 3, name: page === 1 ? copy.heading : `${copy.heading} – Sayfa ${page}`, item: canonical },
-    ],
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: isIslamic
+      ? [
+          { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+          { '@type': 'ListItem', position: 2, name: page === 1 ? copy.heading : `${copy.heading} – Sayfa ${page}`, item: canonical },
+        ]
+      : [
+          { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Masallar', item: 'https://masalnova.com/masallar/' },
+          { '@type': 'ListItem', position: 3, name: page === 1 ? copy.heading : `${copy.heading} – Sayfa ${page}`, item: canonical },
+        ],
   },
 ];
 ---
-<BaseLayout title={title} description={description} path={path} jsonLd={jsonLd} activeNav="masallar" robots={category.key === 'kisa' ? 'noindex, follow' : undefined}>
-  <section class="section category-page">
+<BaseLayout title={title} description={description} path={path} jsonLd={jsonLd} activeNav={isIslamic ? 'islami' : 'masallar'} robots={category.key === 'kisa' ? 'noindex, follow' : undefined}>
+  <section class:list={['section', 'category-page', { 'category-page--islami': isIslamic }]}>
     <div class="container">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Ana Sayfa</a><span>›</span><a href="/masallar/">Masallar</a><span>›</span><span>{page === 1 ? copy.heading : `Sayfa ${page}`}</span></nav>
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Ana Sayfa</a><span>›</span>
+        {!isIslamic && <><a href="/masallar/">Masallar</a><span>›</span></>}
+        <span>{page === 1 ? copy.heading : `Sayfa ${page}`}</span>
+      </nav>
       <header class="category-head">
-        <span class="category-emoji" aria-hidden="true">{category.emoji}</span>
-        <div><p class="kicker">Masal oku · ücretsiz çocuk hikâyeleri</p><h1>{page === 1 ? copy.heading : `${copy.heading} – Sayfa ${page}`}</h1><p>{page === 1 ? copy.intro : `${copy.heading} seçkisindeki diğer yaşa uygun hikâyeler.`}</p><strong>{totalStories} masal · Sayfa {page}/{pageCount}</strong></div>
+        {isIslamic
+          ? <span class="category-emoji category-emoji--icon" aria-hidden="true"><i class="ph ph-mosque"></i></span>
+          : <span class="category-emoji" aria-hidden="true">{category.emoji}</span>}
+        <div><p class="kicker">{isIslamic ? 'Kaynaklı · yaşa uygun · özenle resimlenmiş' : 'Masal oku · ücretsiz çocuk hikâyeleri'}</p><h1>{page === 1 ? copy.heading : `${copy.heading} – Sayfa ${page}`}</h1><p>{page === 1 ? copy.intro : `${copy.heading} seçkisindeki diğer yaşa uygun hikâyeler.`}</p><strong>{totalStories} {isIslamic ? 'hikâye' : 'masal'} · Sayfa {page}/{pageCount}</strong></div>
       </header>
+      {isIslamic && page === 1 && (
+        <aside class="source-standard" aria-label="İçerik ve görsel ilkeleri">
+          <div><i class="ph ph-book-open-text" aria-hidden="true"></i><span><strong>Kaynak görünür</strong><small>Her anlatıda sûre, âyet veya rivayet bilgisi</small></span></div>
+          <div><i class="ph ph-shield-check" aria-hidden="true"></i><span><strong>İhtiyatlı anlatım</strong><small>Kaynakta olmayan ayrıntılar gerçek diye sunulmaz</small></span></div>
+          <div><i class="ph ph-image-square" aria-hidden="true"></i><span><strong>Saygılı görseller</strong><small>Allah, peygamberler, melekler ve kutsal kişiler tasvir edilmez</small></span></div>
+        </aside>
+      )}
       {category.key === 'kisa' && <p class="duration-note">Okuma süresine göre ana sayfa: <a href="/masallar/sure/kisa/">1–2 Dakikalık Kısa Masallar</a></p>}
-      <nav class="category-links" aria-label="Diğer masal kategorileri">{storyCategories.filter((item) => item.key !== category.key).map((item) => <a href={`/masallar/kategori/${item.key}/`}>{item.emoji} {item.label}</a>)}</nav>
+      {!isIslamic && <nav class="category-links" aria-label="Diğer masal kategorileri">{storyCategories.filter((item) => item.key !== category.key).map((item) => <a href={`/masallar/kategori/${item.key}/`}>{item.emoji} {item.label}</a>)}</nav>}
       <div class="grid grid-3 story-grid">{stories.map((story) => <StoryCard story={story} />)}</div>
       {pageCount > 1 && <nav class="pagination" aria-label={`${copy.heading} sayfaları`}>
         {page > 1 && <a href={categoryPagePath(category.key, page - 1)} rel="prev">← Önceki</a>}
@@ -61,16 +80,25 @@ const jsonLd = [
   .crumbs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px; color:rgba(255,255,255,.78); font-weight:700; }
   .category-head { display:grid; grid-template-columns:auto minmax(0,1fr); gap:22px; max-width:900px; padding:clamp(24px,5vw,44px); border:1px solid rgba(255,255,255,.24); border-radius:30px; background:rgba(255,255,255,.1); }
   .category-emoji { font-size:clamp(3rem,8vw,5.5rem); line-height:1; }
+  .category-emoji--icon { display:grid; width:clamp(76px,12vw,112px); aspect-ratio:1; place-items:center; border:1px solid rgba(255,255,255,.32); border-radius:28px; background:rgba(255,255,255,.14); color:#ffe29a; font-size:clamp(2.8rem,7vw,4.8rem); }
   .kicker { color:#ffd77a; font-size:.78rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
   h1 { margin:8px 0 14px; font-size:clamp(2.3rem,6vw,4.7rem); letter-spacing:-.055em; }
   .category-head p:not(.kicker) { max-width:68ch; color:rgba(255,255,255,.86); }
   .category-head strong { display:inline-flex; margin-top:18px; padding:7px 13px; border-radius:999px; background:#fff; color:var(--blue-d); }
   .category-links { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0; }
   .category-links a, .pagination a { padding:9px 14px; border:1px solid rgba(255,255,255,.25); border-radius:999px; background:rgba(255,255,255,.12); font-weight:800; }
+  .category-links a { display:inline-flex; align-items:center; gap:7px; }
   .duration-note { margin-top:20px; padding:14px 16px; border-radius:15px; background:rgba(255,255,255,.12); }
   .duration-note a { font-weight:900; text-decoration:underline; }
   .pagination { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:38px; }
   .pagination a.current { border-color:var(--app-yellow); background:var(--app-yellow); color:#17336d; }
+  .source-standard { display:grid; gap:10px; margin:18px 0 4px; }
+  .source-standard div { display:flex; gap:12px; align-items:flex-start; padding:15px 16px; border:1px solid rgba(255,255,255,.24); border-radius:18px; background:rgba(4,37,102,.45); color:#fff; backdrop-filter:blur(12px); }
+  .source-standard i { color:#ffdc82; font-size:1.45rem; }
+  .source-standard span { display:grid; gap:2px; }
+  .source-standard strong { font-size:.88rem; }
+  .source-standard small { color:rgba(255,255,255,.76); font-size:.76rem; line-height:1.4; }
+  .category-page--islami { min-height:calc(100dvh - var(--app-nav-height)); background:linear-gradient(rgba(7,45,111,.72),rgba(4,68,85,.78)),url('/islamic/islami-hikayeler-background.webp') center top / cover fixed no-repeat; }
   @media (min-width:721px) {
     .category-page { min-height:calc(100dvh - var(--app-nav-height)); padding:34px 0 68px; background:#fbf8f1; color:#102a66; }
     .category-page .container { max-width:1260px; }
@@ -84,6 +112,13 @@ const jsonLd = [
     .pagination a.current { background:var(--app-yellow); }
     .duration-note { border:1px solid #e2ddd1; background:#fff; color:#667188; }
     .story-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+    .source-standard { grid-template-columns:repeat(3,minmax(0,1fr)); margin:18px 0 8px; }
+    .source-standard div { border-color:#e0d8c5; background:rgba(255,253,247,.88); color:#17376f; box-shadow:0 10px 26px rgba(15,50,94,.06); }
+    .source-standard i { color:#16816f; }
+    .source-standard small { color:#68758b; }
+    .category-page.category-page--islami { background:linear-gradient(rgba(251,248,239,.82),rgba(246,249,242,.9)),url('/islamic/islami-hikayeler-background.webp') center top / cover fixed no-repeat; color:#102a66; }
+    .category-page--islami .category-head { border-color:rgba(192,172,123,.48); background:rgba(255,253,247,.88); box-shadow:0 18px 48px rgba(17,55,92,.08); backdrop-filter:blur(14px); }
+    .category-page--islami .category-emoji--icon { border-color:rgba(27,127,111,.2); background:linear-gradient(145deg,#e8f6f0,#fff8df); color:#167b6b; }
   }
   @media (max-width:600px) { .category-head { grid-template-columns:1fr; } }
 </style>

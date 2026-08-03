@@ -1,21 +1,26 @@
 ---
-import type { Story } from '../data/stories';
+import { isIslamicStory, storyPath, type Story } from '../data/stories';
 import CoverThumb from './CoverThumb.astro';
 import { ageLabel, durationBucketForMinutes, storyCategoryLabel } from '../data/taxonomy';
 
 interface Props { story: Story }
 const { story } = Astro.props;
 const d = story.data;
-const href = `/masallar/${story.id}/`;
-const category = d.categories[0] ? storyCategoryLabel(d.categories[0]) : 'Çocuk Masalı';
+const href = storyPath(story);
+const isIslamic = isIslamicStory(story);
+const category = isIslamic
+  ? 'İslami Hikâyeler'
+  : d.categories[0] ? storyCategoryLabel(d.categories[0]) : 'Çocuk Masalı';
+const audience = d.audienceLabel ?? (d.ageGroups[0] ? ageLabel(d.ageGroups[0]) : 'Her yaş');
 ---
 <a
-  class="story-card"
+  class:list={['story-card', { 'story-card--islami': isIslamic }]}
   href={href}
   style={`--card-accent:${d.coverColor}`}
   data-title={d.title.toLowerCase()}
   data-desc={d.shortDescription.toLowerCase()}
   data-cats={d.categories.join(' ')}
+  data-section={d.section}
   data-ages={d.ageGroups.join(' ')}
   data-dur={durationBucketForMinutes(d.readingTime)}
 >
@@ -25,15 +30,15 @@ const category = d.categories[0] ? storyCategoryLabel(d.categories[0]) : 'Çocuk
     {d.audioUrl && <span class="audio-badge">Sesli</span>}
   </div>
   <div class="body">
-    <span class="eyebrow">MasalNova seçkisi</span>
+    <span class="eyebrow">{isIslamic ? 'Kaynaklı İslami hikâye' : 'MasalNova seçkisi'}</span>
     <h3>{d.title}</h3>
     <div class="meta">
       <span>{d.readingTime} dk okuma</span>
-      {d.ageGroups[0] && <span>{ageLabel(d.ageGroups[0])}</span>}
-      {d.audioUrl && <span>Sesli masal</span>}
+      <span>{audience}</span>
+      {d.audioUrl && <span>Sesli okuma</span>}
     </div>
     <p class="desc">{d.shortDescription}</p>
-    <span class="read-link">Masalı oku</span>
+    <span class="read-link">{isIslamic ? 'Hikâyeyi oku' : 'Masalı oku'}</span>
   </div>
 </a>
 <style>
@@ -145,6 +150,8 @@ const category = d.categories[0] ? storyCategoryLabel(d.categories[0]) : 'Çocuk
     transition: background .2s ease, color .2s ease;
   }
   .story-card:hover .read-link { background: #fff; color: #102a66; }
+  .story-card--islami { --islamic-teal: #177b6c; }
+  .story-card--islami .category-badge { border-color:rgba(255,226,153,.36); color:#fff4c9; }
 
   @media (min-width: 901px) {
     .story-card {
@@ -179,6 +186,11 @@ const category = d.categories[0] ? storyCategoryLabel(d.categories[0]) : 'Çocuk
     .desc { color: #65718a; font-size: .84rem; line-height: 1.52; -webkit-line-clamp: 3; }
     .read-link { border-color: #dce2ee; background: #f6f8fc; color: #1749ae; }
     .story-card:hover .read-link { background: #ffc62e; color: #17336d; }
+    .story-card--islami { border-color:#ded5be; }
+    .story-card--islami .category-badge { border-color:#d7cba9; background:rgba(255,253,246,.94); color:#167565; }
+    .story-card--islami .eyebrow { color:#7d6840; }
+    .story-card--islami .read-link { border-color:#d7e5dc; background:#edf8f3; color:#146f61; }
+    .story-card--islami:hover .read-link { background:#167b6b; color:#fff; }
   }
 
   /* Hoppelpop's calmer catalogue layout, adapted to MasalNova's card markup.
