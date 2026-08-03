@@ -1225,13 +1225,13 @@
     };
 
     const sendScrollToParent = (deltaY) => {
-      if (!isEmbedded || Math.abs(deltaY) < 1) {
+      if (!isEmbedded || !Number.isFinite(deltaY) || Math.abs(deltaY) < 1) {
         return;
       }
       window.parent.postMessage(
         {
           type: 'masalnova:embedded-game-scroll',
-          deltaY: Math.max(-80, Math.min(80, deltaY)),
+          deltaY,
         },
         window.location.origin,
       );
