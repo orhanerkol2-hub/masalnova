@@ -13,31 +13,33 @@ interface Game {
 interface Props { game: Game }
 const { game } = Astro.props;
 const normalizedCategory = game.category.toLocaleLowerCase('tr-TR');
-const filterKey = normalizedCategory.includes('hafıza')
-  ? 'hafiza'
-  : /(bulmaca|yapboz|matematik)/.test(normalizedCategory)
-    ? 'bulmaca'
-    : /(beceri|mutfak)/.test(normalizedCategory)
-      ? 'beceri'
-      : /(boyama|yaratıcı)/.test(normalizedCategory)
-        ? 'yaraticilik'
-        : 'dikkat';
+const filterKeys = [
+  normalizedCategory.includes('hafıza') && 'hafiza',
+  /(bulmaca|yapboz|matematik)/.test(normalizedCategory) && 'bulmaca',
+  /(beceri|mutfak)/.test(normalizedCategory) && 'beceri',
+  /(boyama|yaratıcı)/.test(normalizedCategory) && 'yaraticilik',
+  normalizedCategory.includes('dikkat') && 'dikkat',
+].filter(Boolean);
+
+if (filterKeys.length === 0) filterKeys.push('dikkat');
 ---
-<article class="game-card" data-game-card data-filter={filterKey}>
-  <a class="game-cover" href={`/oyna/${game.slug}/`} aria-label={`${game.title} oyununu oyna`}>
-    <img class="cover-backdrop" src={game.image} alt="" width="640" height="394" loading="lazy" decoding="async" aria-hidden="true" />
-    <img class="cover-art" src={game.image} alt={game.imageAlt} width="640" height="394" loading="lazy" decoding="async" />
-    <span class="game-badge">{game.category}</span>
-    <span class="cover-play" aria-hidden="true"><i class="ph-fill ph-play"></i></span>
-  </a>
-  <div class="game-body">
-    <h2><a href={`/oyna/${game.slug}/`}>{game.title}</a></h2>
-    <p>{game.shortDescription}</p>
-    <div class="game-meta">
-      <span><i class="ph ph-user" aria-hidden="true"></i>{game.age.replace('Öneri: ', '')}</span>
-      <span><i class="ph ph-sparkle" aria-hidden="true"></i>{game.skills[0]}</span>
+<article class="game-card" data-game-card data-filter={filterKeys.join(' ')}>
+  <a class="game-card-link" href={`/oyna/${game.slug}/`} aria-label={`${game.title} oyununu oyna`}>
+    <div class="game-cover">
+      <img class="cover-backdrop" src={game.image} alt="" width="640" height="394" loading="lazy" decoding="async" aria-hidden="true" />
+      <img class="cover-art" src={game.image} alt={game.imageAlt} width="640" height="394" loading="lazy" decoding="async" />
+      <span class="game-badge">{game.category}</span>
+      <span class="cover-play" aria-hidden="true"><i class="ph-fill ph-play"></i></span>
     </div>
-  </div>
+    <div class="game-body">
+      <h3>{game.title}</h3>
+      <p>{game.shortDescription}</p>
+      <div class="game-meta">
+        <span><i class="ph ph-user" aria-hidden="true"></i>{game.age.replace('Öneri: ', '')}</span>
+        <span><i class="ph ph-sparkle" aria-hidden="true"></i>{game.skills[0]}</span>
+      </div>
+    </div>
+  </a>
 </article>
 
 <style>
@@ -53,6 +55,10 @@ const filterKey = normalizedCategory.includes('hafıza')
     box-shadow: 0 8px 22px rgba(23,43,92,.08);
     transition: transform .18s ease, box-shadow .18s ease;
   }
+  .game-card[hidden] { display: none; }
+  .game-card-link { display: flex; flex: 1; min-width: 0; flex-direction: column; color: inherit; }
+  .game-card-link:focus-visible { outline: none; }
+  .game-card:focus-within { box-shadow: 0 0 0 3px #ffd15b, 0 15px 32px rgba(23,43,92,.15); }
   .game-card:hover { transform: translateY(-4px); box-shadow: 0 15px 32px rgba(23,43,92,.15); }
   .game-cover {
     position: relative;
@@ -120,14 +126,14 @@ const filterKey = normalizedCategory.includes('hafıza')
     opacity: .96;
     transition: opacity .18s ease, transform .18s ease, box-shadow .18s ease;
   }
-  .game-card:hover .cover-play, .game-cover:focus-visible .cover-play {
+  .game-card:hover .cover-play, .game-card-link:focus-visible .cover-play {
     opacity: 1;
     transform: scale(1.08);
     box-shadow: 0 10px 22px rgba(5,25,70,.38);
   }
   .game-body { display: flex; flex: 1; flex-direction: column; padding: 13px 14px 14px; }
-  h2 { font-size: 1rem; line-height: 1.2; }
-  h2 a:hover { color: var(--blue-d); }
+  h3 { font-size: 1rem; line-height: 1.2; }
+  .game-card-link:hover h3 { color: var(--blue-d); }
   p {
     display: -webkit-box;
     overflow: hidden;
@@ -145,10 +151,9 @@ const filterKey = normalizedCategory.includes('hafıza')
   @media (max-width: 560px) {
     .game-card { border-radius: 17px; }
     .game-body { padding: 10px 10px 11px; }
-    h2 { font-size: .86rem; }
+    h3 { font-size: .86rem; }
     p { display: none; }
-    .game-meta { padding-top: 7px; font-size: .6rem; }
-    .game-meta span:nth-child(2) { display: none; }
+    .game-meta { gap: 4px 7px; padding-top: 7px; font-size: .62rem; }
     .cover-play { right: 8px; bottom: 8px; width: 35px; height: 35px; opacity: 1; }
     .game-badge { top: 6px; left: 6px; max-width: calc(100% - 50px); overflow: hidden; padding: 3px 6px; font-size: .58rem; text-overflow: ellipsis; white-space: nowrap; }
   }

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import GameCard from '../../components/GameCard.astro';
 import { games, gameEmbedUrl, gamepixPublisherSid } from '../../data/games.mjs';
 
 export function getStaticPaths() {
@@ -10,6 +11,17 @@ const { game } = Astro.props;
 const gamepixEnabled = import.meta.env.PUBLIC_GAMEPIX_ENABLED !== 'false';
 const publisherSid = import.meta.env.PUBLIC_GAMEPIX_SID || gamepixPublisherSid;
 const embedUrl = gameEmbedUrl(game, publisherSid);
+const relatedGames = games
+  .filter((candidate) => candidate.slug !== game.slug)
+  .map((candidate) => ({
+    game: candidate,
+    score:
+      (candidate.category === game.category ? 4 : 0) +
+      candidate.skills.filter((skill) => game.skills.includes(skill)).length,
+  }))
+  .sort((a, b) => b.score - a.score || a.game.title.localeCompare(b.game.title, 'tr-TR'))
+  .slice(0, 4)
+  .map((entry) => entry.game);
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -80,6 +92,12 @@ const jsonLd = [
                   <button type="button" class="load-game" data-load-game>
                     <i class="ph ph-play-circle" aria-hidden="true"></i> Oyunu ve reklamları yükle
                   </button>
+                  <p
+                    class="load-feedback"
+                    id={`game-load-feedback-${game.slug}`}
+                    data-load-feedback
+                    hidden
+                  ></p>
                 </>
               ) : (
                 <>
@@ -111,31 +129,100 @@ const jsonLd = [
       </section>
 
       <p class="ad-separation"><i class="ph ph-shield-star" aria-hidden="true"></i> Bu oyun sayfasında MasalNova’ya ait Google AdSense reklamı gösterilmez. Oyun içindeki reklamlar GamePix tarafından yönetilir.</p>
+
+      <section class="related-games" aria-labelledby="related-games-title">
+        <div class="related-heading">
+          <div><span>Sıradaki oyun</span><h2 id="related-games-title">Benzer oyunları keşfet</h2></div>
+          <a href="/oyunlar/">Tüm oyunlar <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="related-grid">
+          {relatedGames.map((relatedGame) => <GameCard game={relatedGame} />)}
+        </div>
+      </section>
     </div>
   </section>
 </BaseLayout>
 
 <script>
+  const GAME_LOAD_TIMEOUT_MS = 20_000;
+
   document.querySelectorAll<HTMLElement>('[data-game-loader]').forEach((loader) => {
     const button = loader.querySelector<HTMLButtonElement>('[data-load-game]');
+    const feedback = loader.querySelector<HTMLElement>('[data-load-feedback]');
     const status = loader.parentElement?.querySelector<HTMLElement>('[data-player-status]');
     if (!button) return;
+
+    if (feedback?.id) button.setAttribute('aria-describedby', feedback.id);
+
+    const setButtonLabel = (label: string, iconName: string) => {
+      const icon = document.createElement('i');
+      icon.className = `ph ${iconName}`;
+      icon.setAttribute('aria-hidden', 'true');
+      button.replaceChildren(icon, document.createTextNode(` ${label}`));
+    };
 
     button.addEventListener('click', () => {
       const url = loader.dataset.gameUrl;
       const title = loader.dataset.gameTitle || 'Oyun';
       if (!url) return;
 
+      button.disabled = true;
+      setButtonLabel('Oyun yükleniyor…', 'ph-spinner-gap');
+      loader.setAttribute('aria-busy', 'true');
+      if (feedback) {
+        feedback.hidden = true;
+        feedback.textContent = '';
+      }
+
       const iframe = document.createElement('iframe');
-      iframe.src = url;
       iframe.title = `${title} — GamePix oyun alanı`;
       iframe.allow = 'autoplay; fullscreen; gamepad; clipboard-write';
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.tabIndex = 0;
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('scrolling', 'no');
-      iframe.addEventListener('load', () => {
+      let settled = false;
+
+      const finishAttempt = () => {
+        settled = true;
+        window.clearTimeout(loadTimeout);
+        iframe.removeEventListener('load', handleLoad);
+        iframe.removeEventListener('error', handleError);
+      };
+
+      const restoreConsent = (message: string) => {
+        if (settled) return;
+        finishAttempt();
+        iframe.replaceWith(loader);
+        loader.removeAttribute('aria-busy');
+        button.disabled = false;
+        setButtonLabel('Tekrar dene', 'ph-arrow-clockwise');
+        if (feedback) {
+          feedback.textContent = message;
+          feedback.hidden = false;
+        }
+        if (status) status.textContent = message;
+        window.requestAnimationFrame(() => button.focus({ preventScroll: true }));
+      };
+
+      function handleLoad() {
+        if (settled) return;
+        finishAttempt();
         if (status) status.textContent = `${title} yüklendi.`;
-      }, { once: true });
+        window.requestAnimationFrame(() => iframe.focus({ preventScroll: true }));
+      }
+
+      function handleError() {
+        restoreConsent('Oyun yüklenirken bir sorun oluştu. Lütfen tekrar dene.');
+      }
+
+      const loadTimeout = window.setTimeout(() => {
+        restoreConsent('Oyun zamanında yüklenemedi. İnternet bağlantını kontrol edip tekrar deneyebilirsin.');
+      }, GAME_LOAD_TIMEOUT_MS);
+
+      iframe.addEventListener('load', handleLoad, { once: true });
+      iframe.addEventListener('error', handleError, { once: true });
+      iframe.src = url;
 
       if (status) status.textContent = `${title} yükleniyor…`;
       loader.replaceWith(iframe);
@@ -164,7 +251,10 @@ const jsonLd = [
   .consent-card p { margin: 12px auto 0; max-width: 58ch; color: rgba(255,255,255,.77); font-size: .9rem; }
   .load-game { display: inline-flex; align-items: center; justify-content: center; gap: 9px; margin-top: 20px; padding: 13px 20px; border: 0; border-radius: 999px; background: linear-gradient(90deg, #ffc62e, #ff9b1f); color: #492700; font-weight: 900; box-shadow: 0 12px 28px rgba(255,169,31,.3); }
   .load-game:hover { transform: translateY(-2px); }
+  .load-game:disabled { cursor: wait; opacity: .78; transform: none; }
   .load-game.is-link { text-decoration: none; }
+  .consent-card .load-feedback { margin-top: 14px; padding: 10px 12px; border: 1px solid rgba(255,217,87,.38); border-radius: 12px; background: rgba(255,217,87,.1); color: #fff2bd; font-size: .82rem; font-weight: 700; }
+  .consent-card .load-feedback[hidden] { display: none; }
   .player-shell :global(iframe) { display: block; border: 0; background: #07194a; }
   .player-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .game-info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 20px; }
@@ -180,6 +270,13 @@ const jsonLd = [
   .skills-card li i { color: #16975b; font-size: 1.05rem; }
   .ad-separation { display: flex; align-items: flex-start; gap: 9px; margin: 17px 4px 0; color: rgba(255,255,255,.62); font-size: .76rem; }
   .ad-separation i { flex: 0 0 auto; margin-top: 2px; color: #ffd957; font-size: 1rem; }
+  .related-games { margin-top: 32px; }
+  .related-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 14px; color: #fff; }
+  .related-heading span { color: #ffd957; font-size: .72rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .related-heading h2 { margin-top: 3px; font-size: clamp(1.4rem, 3vw, 1.9rem); }
+  .related-heading > a { display: inline-flex; flex: 0 0 auto; min-height: 44px; align-items: center; gap: 6px; padding: 9px 13px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.1); font-size: .78rem; font-weight: 900; }
+  .related-heading > a:hover { background: rgba(255,255,255,.18); }
+  .related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
   @media (max-width: 760px) {
     .game-heading { align-items: flex-start; flex-direction: column; }
     .back-link { display: none; }
@@ -187,6 +284,8 @@ const jsonLd = [
     .game-info-grid { grid-template-columns: 1fr; }
     .skills-card { align-items: flex-start; flex-direction: column; }
     .skills-card ul { justify-content: flex-start; }
+    .related-heading { align-items: flex-start; flex-direction: column; }
+    .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   }
   @media (max-width: 480px) {
     .game-page { padding-top: 24px; }

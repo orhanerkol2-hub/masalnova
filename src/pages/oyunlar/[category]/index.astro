@@ -1,0 +1,359 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import GameCard from '../../../components/GameCard.astro';
+import { games } from '../../../data/games.mjs';
+
+type CategorySlug = 'hafiza' | 'bulmaca' | 'beceri' | 'yaraticilik' | 'dikkat';
+
+interface CategoryPage {
+  slug: CategorySlug;
+  label: string;
+  icon: string;
+  title: string;
+  h1: string;
+  description: string;
+  eyebrow: string;
+  introTitle: string;
+  introText: string;
+  matchTerms: string[];
+}
+
+const categoryPages: CategoryPage[] = [
+  {
+    slug: 'hafiza',
+    label: 'Hafıza',
+    icon: 'ph-brain',
+    title: 'Hafıza Oyunları: Çocuklar İçin Ücretsiz Oyunlar | MasalNova',
+    h1: 'Ücretsiz Hafıza Oyunları',
+    description:
+      'Çocuklar için ücretsiz hafıza oyunlarını keşfedin. Eşleştirme, sıralama ve görsel hatırlama oyunlarıyla dikkat ve belleği eğlenceli biçimde çalıştırın.',
+    eyebrow: 'Hatırla, eşleştir, ilerle',
+    introTitle: 'Hafızayı oyunla güçlendiren kısa etkinlikler',
+    introText:
+      'Kart eşleştirme, görsel sıralama ve çalışma belleği görevleri çocukların gördüklerini akılda tutmasına yardımcı olur. Yaşa uygun bir oyun seçin ve kısa turlarla başlayın.',
+    matchTerms: ['hafiza', 'calisma bellegi', 'eslestirme', 'hatirlama'],
+  },
+  {
+    slug: 'bulmaca',
+    label: 'Bulmaca',
+    icon: 'ph-puzzle-piece',
+    title: 'Bulmaca Oyunları: Çocuklar İçin Ücretsiz Oyunlar | MasalNova',
+    h1: 'Ücretsiz Bulmaca Oyunları',
+    description:
+      'Mantık, yapboz ve problem çözme içeren ücretsiz çocuk bulmaca oyunlarını keşfedin. Yaşa uygun oyunlarla planlama ve düşünme becerilerini destekleyin.',
+    eyebrow: 'Düşün, dene, çözümü bul',
+    introTitle: 'Her hamlede yeni bir çözüm yolu',
+    introText:
+      'Yapbozlar, mantık görevleri ve neden-sonuç oyunları çocukları denemeye, plan yapmaya ve farklı çözüm yolları aramaya teşvik eder. Zorluk önerisini kontrol ederek uygun oyunu seçebilirsiniz.',
+    matchTerms: [
+      'bulmaca',
+      'yapboz',
+      'matematik',
+      'mantik',
+      'problem cozme',
+      'planlama',
+      'neden-sonuc',
+      'parca-butun',
+      'mekansal dusunme',
+      'sekil algisi',
+    ],
+  },
+  {
+    slug: 'beceri',
+    label: 'Beceri',
+    icon: 'ph-hand-tap',
+    title: 'Beceri Oyunları: Çocuklar İçin Ücretsiz Oyunlar | MasalNova',
+    h1: 'Ücretsiz Beceri Oyunları',
+    description:
+      'Çocuklar için ücretsiz beceri oyunlarını keşfedin. Zamanlama, el-göz koordinasyonu ve ince motor kontrolünü destekleyen yaşa uygun oyunları hemen oynayın.',
+    eyebrow: 'Dokun, zamanla, ustalaş',
+    introTitle: 'Koordinasyon ve zamanlamayı eğlenceye dönüştürün',
+    introText:
+      'Dokunma, sürükleme ve doğru anı yakalama görevleri el-göz koordinasyonu ile ince motor kontrolünü çalıştırır. Kısa oyun turları, çocukların kendi hızında tekrar yapmasına alan açar.',
+    matchTerms: ['beceri', 'mutfak', 'el-goz', 'zamanlama', 'ince motor', 'yonerge takibi'],
+  },
+  {
+    slug: 'yaraticilik',
+    label: 'Yaratıcılık',
+    icon: 'ph-paint-brush',
+    title: 'Yaratıcılık Oyunları: Ücretsiz Çocuk Oyunları | MasalNova',
+    h1: 'Ücretsiz Yaratıcılık Oyunları',
+    description:
+      'Ücretsiz boyama ve yaratıcılık oyunlarıyla çocukların renkleri, şekilleri ve tasarım fikirlerini keşfetmesini destekleyin. Yaşa uygun oyunları hemen açın.',
+    eyebrow: 'Renkleri seç, hayal gücünü kullan',
+    introTitle: 'Doğru cevaptan çok özgün fikirlere yer açın',
+    introText:
+      'Boyama ve yaratıcı tamamlama oyunları çocukların renkleri denemesine, görsel seçimler yapmasına ve kendi sonucunu üretmesine fırsat verir. Süre baskısı olmayan oyunlarla sakin bir başlangıç yapabilirsiniz.',
+    matchTerms: ['boyama', 'yaratici', 'yaraticilik', 'renkler'],
+  },
+  {
+    slug: 'dikkat',
+    label: 'Dikkat',
+    icon: 'ph-eye',
+    title: 'Dikkat Oyunları: Çocuklar İçin Ücretsiz Oyunlar | MasalNova',
+    h1: 'Ücretsiz Dikkat Oyunları',
+    description:
+      'Çocuklar için ücretsiz dikkat oyunlarını keşfedin. Fark bulma, odaklanma ve ayrıntı yakalama görevleriyle görsel dikkati eğlenceli biçimde destekleyin.',
+    eyebrow: 'Bak, odaklan, ayrıntıyı yakala',
+    introTitle: 'Küçük ayrıntılara odaklanan eğlenceli görevler',
+    introText:
+      'Fark bulma, karşılaştırma ve odaklanma görevleri çocukların önemli görsel ipuçlarını seçmesine yardımcı olur. Kısa süreli oyunlarla başlayıp hazır oldukça yeni turlara geçebilirsiniz.',
+    matchTerms: ['dikkat', 'odaklanma', 'ayrinti', 'karsilastirma'],
+  },
+];
+
+export function getStaticPaths() {
+  return ['hafiza', 'bulmaca', 'beceri', 'yaraticilik', 'dikkat'].map((category) => ({
+    params: { category },
+  }));
+}
+
+const categorySlug = Astro.params.category as CategorySlug;
+const category = categoryPages.find((item) => item.slug === categorySlug);
+
+if (!category) {
+  throw new Error(`Bilinmeyen oyun kategorisi: ${categorySlug}`);
+}
+
+const normalizeForMatch = (value: string) =>
+  value
+    .toLocaleLowerCase('tr-TR')
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/ı/g, 'i');
+
+const categoryGames = games.filter((game) => {
+  const searchableText = normalizeForMatch([game.category, ...game.skills].join(' '));
+  return category.matchTerms.some((term) => searchableText.includes(term));
+});
+
+const canonicalPath = `/oyunlar/${category.slug}/`;
+const canonicalUrl = `https://masalnova.com${canonicalPath}`;
+const itemListId = `${canonicalUrl}#oyun-listesi`;
+const breadcrumbId = `${canonicalUrl}#sayfa-yolu`;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': canonicalUrl,
+    name: category.h1,
+    description: category.description,
+    url: canonicalUrl,
+    inLanguage: 'tr-TR',
+    breadcrumb: { '@id': breadcrumbId },
+    mainEntity: {
+      '@type': 'ItemList',
+      '@id': itemListId,
+      name: `${category.label} oyunları`,
+      numberOfItems: categoryGames.length,
+      itemListElement: categoryGames.map((game, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: game.title,
+        url: `https://masalnova.com/oyna/${game.slug}/`,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': breadcrumbId,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Oyunlar', item: 'https://masalnova.com/oyunlar/' },
+      { '@type': 'ListItem', position: 3, name: `${category.label} Oyunları`, item: canonicalUrl },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={category.title}
+  description={category.description}
+  path={canonicalPath}
+  image={categoryGames[0]?.image || '/games/masal-ipleri/assets/moon-garden-cover.webp'}
+  imageAlt={`${category.label} oyunları seçkisi`}
+  activeNav="oyunlar"
+  allowAds={false}
+  jsonLd={jsonLd}
+>
+  <section class="category-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Sayfa yolu">
+        <ol>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li><a href="/oyunlar/">Oyunlar</a></li>
+          <li aria-current="page">{category.label}</li>
+        </ol>
+      </nav>
+
+      <div class="hero-copy">
+        <span class="eyebrow"><i class={`ph ${category.icon}`} aria-hidden="true"></i>{category.eyebrow}</span>
+        <h1>{category.h1}</h1>
+        <p>{category.description}</p>
+        <div class="hero-actions">
+          <a class="back-link" href="/oyunlar/"><i class="ph ph-arrow-left" aria-hidden="true"></i>Tüm oyunlara dön</a>
+          <span class="game-count"><strong>{categoryGames.length}</strong> oyun bulundu</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-section" aria-labelledby="category-games-title">
+    <div class="container">
+      <nav class="category-nav" aria-label="Oyun kategorileri">
+        <a href="/oyunlar/"><i class="ph ph-squares-four" aria-hidden="true"></i>Tümü</a>
+        {
+          categoryPages.map((item) => (
+            <a
+              href={`/oyunlar/${item.slug}/`}
+              class:list={[{ 'is-current': item.slug === category.slug }]}
+              aria-current={item.slug === category.slug ? 'page' : undefined}
+            >
+              <i class={`ph ${item.icon}`} aria-hidden="true"></i>{item.label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <div class="content-grid">
+        <header class="collection-heading">
+          <span>Seçilmiş oyunlar</span>
+          <h2 id="category-games-title">{category.label} oyunları</h2>
+          <p>Yaş ve beceri bilgisini kontrol ederek çocuğunuz için uygun oyunu seçin.</p>
+        </header>
+
+        <aside class="category-intro" aria-labelledby="category-intro-title">
+          <i class={`ph ${category.icon}`} aria-hidden="true"></i>
+          <div>
+            <h2 id="category-intro-title">{category.introTitle}</h2>
+            <p>{category.introText}</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="games-grid" id="oyun-listesi">
+        {categoryGames.map((game) => <GameCard game={game} />)}
+      </div>
+
+      <aside class="partner-note">
+        <i class="ph ph-shield-check" aria-hidden="true"></i>
+        <div>
+          <strong>Kontrollü oyun deneyimi</strong>
+          <p>Bu seçkideki oyunlar GamePix iş ortaklığı üzerinden sunulur. Sağlayıcı ve reklam bilgileri, oyun yüklenmeden önce açıkça gösterilir.</p>
+        </div>
+      </aside>
+
+      <a class="all-games-link" href="/oyunlar/">
+        <i class="ph ph-arrow-left" aria-hidden="true"></i>
+        Tüm çocuk oyunlarını keşfet
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-hero { padding: 22px 0 25px; }
+  .breadcrumbs { margin-bottom: 24px; color: rgba(255,255,255,.74); font-size: .76rem; font-weight: 800; }
+  .breadcrumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; list-style: none; }
+  .breadcrumbs li { display: inline-flex; align-items: center; }
+  .breadcrumbs li + li::before { margin-right: 6px; content: '/'; opacity: .58; }
+  .breadcrumbs a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; }
+  .breadcrumbs a:hover { text-decoration-color: currentColor; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px;
+    border: 1px solid rgba(255,255,255,.3); border-radius: 999px;
+    background: rgba(255,255,255,.13); color: #fff; font-size: .8rem; font-weight: 900;
+  }
+  .hero-copy h1 { max-width: 850px; margin-top: 11px; color: #fff; font-size: clamp(2rem, 5vw, 3.35rem); line-height: 1.05; letter-spacing: -.045em; }
+  .hero-copy > p { max-width: 760px; margin-top: 10px; color: rgba(255,255,255,.84); font-size: .96rem; line-height: 1.55; }
+  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 18px; }
+  .back-link, .game-count {
+    display: inline-flex; min-height: 44px; align-items: center; gap: 7px; padding: 9px 13px;
+    border: 1px solid rgba(255,255,255,.28); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 900;
+  }
+  .back-link { background: rgba(255,255,255,.12); }
+  .back-link:hover { background: rgba(255,255,255,.2); }
+  .game-count { border-color: rgba(255,209,91,.55); background: rgba(255,209,91,.14); }
+  .game-count strong { color: #ffd44d; }
+
+  .category-section { padding: 4px 0 58px; }
+  .category-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .category-nav a {
+    display: inline-flex; min-height: 44px; align-items: center; gap: 6px; padding: 9px 13px;
+    border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.1);
+    color: #fff; font-size: .75rem; font-weight: 900;
+  }
+  .category-nav a:hover { background: rgba(255,255,255,.2); }
+  .category-nav a.is-current { border-color: #ffd15b; background: #ffd15b; color: #583500; box-shadow: 0 6px 16px rgba(255,177,31,.2); }
+  .content-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr); gap: 22px; align-items: end; margin-bottom: 18px; }
+  .collection-heading { color: #fff; }
+  .collection-heading > span { color: #ffd44d; font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .collection-heading h2 { margin-top: 3px; font-size: clamp(1.45rem, 3vw, 2rem); }
+  .collection-heading p { margin-top: 5px; color: rgba(255,255,255,.72); font-size: .84rem; }
+  .category-intro {
+    display: flex; gap: 12px; padding: 15px 17px; border: 1px solid rgba(255,255,255,.2);
+    border-radius: 17px; background: rgba(255,255,255,.1); color: #fff;
+  }
+  .category-intro > i { flex: 0 0 auto; color: #ffd44d; font-size: 1.35rem; }
+  .category-intro h2 { font-size: .9rem; line-height: 1.25; }
+  .category-intro p { margin-top: 4px; color: rgba(255,255,255,.74); font-size: .75rem; line-height: 1.48; }
+  .games-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .partner-note {
+    display: flex; align-items: flex-start; gap: 11px; margin-top: 24px; padding: 15px 18px;
+    border: 1px solid rgba(255,255,255,.2); border-radius: 16px; background: rgba(255,255,255,.1);
+    color: rgba(255,255,255,.78); font-size: .83rem;
+  }
+  .partner-note > i { flex: 0 0 auto; margin-top: 2px; color: #ffd44d; font-size: 1.2rem; }
+  .partner-note strong { color: #fff; }
+  .partner-note p { margin-top: 2px; line-height: 1.45; }
+  .all-games-link {
+    display: inline-flex; min-height: 44px; align-items: center; gap: 7px; margin-top: 18px; padding: 9px 13px;
+    border-radius: 999px; background: #ffd15b; color: #583500; font-size: .78rem; font-weight: 900;
+  }
+  .all-games-link:hover { background: #ffdc7d; }
+
+  @media (min-width: 721px) {
+    .category-hero, .category-section { background: #fbf8f1; color: #102a66; }
+    .category-hero .container, .category-section .container { max-width: 1260px; }
+    .breadcrumbs { color: #68748d; }
+    .eyebrow { border-color: #e5d9b5; background: #fff7dc; color: #8b6307; }
+    .hero-copy h1 { color: #0b2b75; }
+    .hero-copy > p { color: #667188; }
+    .back-link, .game-count { border-color: #dce2ef; background: #fff; color: #38527f; }
+    .back-link:hover { background: #eef3ff; }
+    .game-count { border-color: #e5d9b5; background: #fff7dc; }
+    .game-count strong { color: #8b6307; }
+    .category-nav a { border-color: #dce2ef; background: #fff; color: #38527f; }
+    .category-nav a:hover { background: #eef3ff; }
+    .category-nav a.is-current { border-color: #1749ae; background: #1749ae; color: #fff; box-shadow: 0 6px 16px rgba(23,73,174,.18); }
+    .collection-heading { color: #0b2b75; }
+    .collection-heading > span { color: #a87906; }
+    .collection-heading p { color: #6c7690; }
+    .category-intro, .partner-note { border-color: #ded9ce; background: #fff; color: #68728a; }
+    .category-intro > i, .partner-note > i { color: #1749ae; }
+    .category-intro h2, .partner-note strong { color: #173574; }
+    .category-intro p { color: #69748a; }
+  }
+
+  @media (max-width: 920px) {
+    .content-grid { grid-template-columns: 1fr; align-items: start; }
+    .games-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 600px) {
+    .category-hero { padding: 16px 0 21px; }
+    .breadcrumbs { margin-bottom: 18px; }
+    .hero-copy h1 { font-size: clamp(1.85rem, 9vw, 2.5rem); }
+    .hero-copy > p { font-size: .88rem; }
+    .hero-actions { margin-top: 15px; }
+    .category-section { padding-top: 2px; }
+    .category-nav { gap: 6px; margin-bottom: 20px; }
+    .category-nav a { flex: 1 1 auto; justify-content: center; padding-inline: 10px; }
+    .content-grid { gap: 14px; }
+    .category-intro { padding: 13px 14px; }
+    .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+    .partner-note { padding: 13px 14px; }
+  }
+</style>
