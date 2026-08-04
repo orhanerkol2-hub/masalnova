@@ -27,6 +27,7 @@ export default defineConfig({
   integrations: [sitemap({
     filter: (page) =>
       page !== 'https://masalnova.com/story-index.json' &&
+      page !== 'https://masalnova.com/oyna/masal-ipleri/' &&
       !page.startsWith('https://masalnova.com/ara/') &&
       !page.startsWith('https://masalnova.com/masallar/kategori/kisa/') &&
       !page.startsWith('https://masalnova.com/games/') &&
