@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Dev Kırkgöz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların eteğinde küçük bir köy varmış. Bu köyün kenarında, serin bir pınarın hemen yanında Keloğlan annesiyle küçük bir evde otururmuş. Keloğlan çalışkanmış ama başındaki tüyler bir türlü uzamadığı için köy çocukları onunla dalga geçermiş. Yine de Keloğlan hiç üzülmez, herkese gülümser, gördüğü her canlıya yardım etmeye çalışırmış.

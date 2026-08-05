@@ -8,11 +8,14 @@ coverColor: "#4f9a68"
 coverImage: "/covers/stories/timsah-citcitin-isil-isil-disleri.webp"
 altText: "Küçük timsah Çıtçıt, annesinin yanında ay ışığında dişlerini fırçalıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["diş fırçalama","ağız bakımı","öz bakım","rutin"]
 characters: ["Çıtçıt","Anne Timsah","Cik","kaplumbağa dostu"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Ilık bir gölün kıyısında, sazlıkların arasında küçük bir timsah yaşardı. Adı Çıtçıt'tı.

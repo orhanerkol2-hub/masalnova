@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sözünde durmak","sadakat"]
 characters: ["Kaan","Ablası Elif"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde Kaan adında cesur bir çocuk yaşarmış. Bir akşam ablası Elif, pencereden gökyüzüne bakıp içini çekmiş.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["azim","emek","alaycılığa boyun eğmemek"]
 characters: ["Keloğlan","Padişah","İplikçi Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir çarşının en gürültülü köşesinde Keloğlan yaşarmış. Keloğlan'ın ne atı ne parası varmış; sadece iki eli, bir de hiç bitmeyen umudu varmış.

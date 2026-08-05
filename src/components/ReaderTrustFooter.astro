@@ -1,0 +1,48 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="reader-trust-footer">
+  <nav aria-label="MasalNova bilgi ve yasal bağlantıları">
+    <a href="/">Ana sayfa</a>
+    <a href="/hakkimizda/">Hakkımızda</a>
+    <a href="/iletisim/">İletişim</a>
+    <a href="/impressum/">Legal Notice</a>
+    <a href="/datenschutz/">Privacy Policy</a>
+  </nav>
+  <p>© {year} MasalNova · Sunbeam Media</p>
+</footer>
+
+<style>
+  .reader-trust-footer {
+    width: min(calc(100% - 32px), var(--reader-content-width));
+    margin: 44px auto 0;
+    padding: 22px 0 calc(26px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--reader-border);
+    color: var(--reader-text-soft);
+    font-size: .86rem;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+  }
+
+  a {
+    color: var(--reader-accent);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    text-decoration: underline;
+  }
+
+  p {
+    margin: 12px 0 0;
+  }
+</style>

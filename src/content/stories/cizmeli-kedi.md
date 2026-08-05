@@ -13,6 +13,9 @@ categories: ["hayvan", "egitici", "uyku"]
 themes: ["zekâ", "cesaret", "adalet"]
 characters: ["Çizmeli Kedi", "Kaan", "Ceren", "Kral"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-28"
 ---
 Bir varmış, bir yokmuş. Bir zamanlar bir değirmenci varmış. Bu değirmencinin üç oğlu varmış.

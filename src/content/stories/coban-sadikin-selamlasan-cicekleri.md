@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["saygı","huzur","doğa sevgisi"]
 characters: ["Çoban Sadık","Küçük kuzu Pamuk","Bahçedeki çiçekler"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, tepenin eteğinde çiçekli bir bahçe varmış. Bu bahçenin yanında yaşayan Çoban Sadık, gün boyunca kuzularını otlatır, akşam olunca da bahçeden geçerek evine dönermiş.

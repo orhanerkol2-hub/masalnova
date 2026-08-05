@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["merak","dostluk","cesaret"]
 characters: ["Pamuk (kuzu)","Karabaş (köpek)","Baykuş Devrim"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın kenarında küçük bir çiftlik varmış. Bu çiftlikte Pamuk adında meraklı bir kuzu yaşarmış. Pamuk'un gözleri her zaman ormanın derinliklerine bakar, kulakları her yeni sesi dinlemek için dikilirmiş.

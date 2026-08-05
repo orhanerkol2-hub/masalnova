@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["azim","dostluk","çalışkanlık"]
 characters: ["Keloğlan","Padişah","Yaşlı Değirmenci Kadın"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde küçük bir köy varmış. Bu köyün kenarında, taşları aşınmış, çarkı paslanmış eski bir değirmen dururmuş. Yıllardır kimse onu çalıştıramazmış, çünkü çark dönmez, un öğütülmezmiş.

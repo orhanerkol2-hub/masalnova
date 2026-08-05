@@ -8,11 +8,14 @@ coverColor: "#a8794d"
 coverImage: "/covers/stories/yavru-geyik-benekin-ilk-gunu.webp"
 altText: "Yedi benekli yavru geyik Benek, orman okulunda öğretmeni ve yeni arkadaşlarıyla tanışıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["okula başlama","ayrılık kaygısı","güven","cesaret"]
 characters: ["Benek","Anne Geyik","Boynuz Nine","orman okulu arkadaşları"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Ormanın en sakin köşesinde bir geyik ailesi yaşardı. En küçükleri Benek'ti.

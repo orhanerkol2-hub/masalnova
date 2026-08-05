@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sözünde durmak","dürüstlük","paylaşma"]
 characters: ["Bahçıvan Rüştü","Küçük Ayşe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün kenarında altın başaklı bir tarla varmış. Bu tarlayı güler yüzlü bahçıvan Rüştü ekip biçermiş. Her sabah güneşle uyanır, başakları severek sulamış.

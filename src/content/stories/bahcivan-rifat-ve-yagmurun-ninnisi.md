@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["hoşgörü","paylaşma","huzur"]
 characters: ["Bahçıvan Rıfat","Küçük Kirpi","Islak Serçe"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyün kenarında yemyeşil bir bahçe varmış. Bu bahçenin bahçıvanı Rıfat Amca, güler yüzlü ve sakin bir adammış. Her akşam çiçeklerini sularken hafifçe mırıldanır, bahçesindeki her canlıya nazik nazik gülümsermiş.

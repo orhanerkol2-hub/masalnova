@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["saygı","güleryüz","dostluk"]
 characters: ["Keloğlan","Pınar Devi Bereket","Yaşlı kadın Ayşe Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların eteğinde küçük bir köy varmış. Bu köyün kenarında, çam ağaçlarının arasında serin bir pınar akar, suyu buz gibi, sesi ninni gibiymiş.

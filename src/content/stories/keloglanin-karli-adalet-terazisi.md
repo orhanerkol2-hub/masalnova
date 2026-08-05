@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["adalet","dürüstlük","akıl"]
 characters: ["Keloğlan","Padişah","Hileci Tüccar Kara Rüstem"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, karlı bir kış günüydü. Köyün üstüne kar durmadan yağıyor, dallar beyaz örtüye bürünüyordu. Keloğlan, ince paltosunu sımsıkı sararak pazar yerine doğru yürüyordu; annesine ekmek almaya gidiyordu.

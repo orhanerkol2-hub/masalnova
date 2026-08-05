@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["merak","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Yaşlı Kadın Zehra Nine","Padişahın Adamı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında meraklı bir delikanlı varmış. Bu Keloğlan, köyde ne görse sorar, ne duysa öğrenmek istermiş. Annesi bıkkınlıkla, "Kel oğlum, senin bu merakın bir gün başımıza iş açacak!" dermiş ama Keloğlan hep gülerek geçermiş.

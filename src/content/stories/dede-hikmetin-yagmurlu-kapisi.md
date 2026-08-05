@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["alçakgönüllülük","yardımseverlik","hoşgörü"]
 characters: ["Dede Hikmet","Küçük Deniz","Yorgun Yolcu"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğindeki küçük köyde Dede Hikmet adında yaşlı bir adam yaşarmış. Köylüler onu çok severmiş, çünkü Dede Hikmet her zaman herkese eşit davranır, kimseyi kendinden aşağı görmezmiş. Oysa köyde onun ne kadar bilgili olduğunu, uzak diyarları gezdiğini, hatta padişahlara akıl verdiğini bilen çok az kişi varmış.

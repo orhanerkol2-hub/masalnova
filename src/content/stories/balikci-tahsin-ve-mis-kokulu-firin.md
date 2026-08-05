@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["nezaket","sabır","paylaşma"]
 characters: ["Balıkçı Tahsin","Çırak Miray","Fırıncı Rüstem"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısındaki küçük bir köyde Tahsin adında sabırlı bir balıkçı yaşarmış. Her sabah güneş henüz doğmadan tekneyle açılır, akşama kadar ağını sabırla denize salıp çekermiş. Bazı günler ağı dolu gelir, bazı günler ise sadece bir iki küçük balıkla dönermiş. Ama Tahsin hiç sızlanmaz, her seferinde umutla yeniden denerdi.

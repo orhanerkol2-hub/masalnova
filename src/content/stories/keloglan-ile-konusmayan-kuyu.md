@@ -13,6 +13,9 @@ categories: ["keloglan", "egitici"]
 themes: ["nezaket", "dinlemek", "saygı"]
 characters: ["Keloğlan", "Konuşan Kuyu", "Köylüler"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş.

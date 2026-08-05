@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merak","huzur","doğa sevgisi"]
 characters: ["Melis","Ay Dede","Başak Ana"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının usulca süzüldüğü bir akşamda, altın başaklı bir tarlanın kenarında küçük bir ev varmış. Bu evde Melis adında meraklı, tatlı bir kız yaşarmış. Melis her akşam penceresinden tarlaya bakar, başakların nasıl uyuduğunu merak edermiş.

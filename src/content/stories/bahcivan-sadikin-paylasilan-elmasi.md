@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["adalet","paylaşma","dostluk"]
 characters: ["Bahçıvan Sadık","Tavşan Fındık","Kirpi Minnak"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir bahçenin kenarında ay ışığında uzayan bir patika varmış. Bu patikada her akşam güler yüzlü bahçıvan Sadık, elindeki fenerle dolaşır, bahçesindeki ağaçları kontrol edermiş.

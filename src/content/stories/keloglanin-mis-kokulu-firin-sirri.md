@@ -10,6 +10,9 @@ readingTime: 4
 categories: ["keloglan"]
 themes: ["merak","dürüstlük","incelik"]
 characters: ["Keloğlan","Fırıncı Nine Ayşe","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında meraklı bir delikanlı yaşarmış. Kel başını hiç dert etmez, her sabah güneşle beraber uyanır, köyün sokaklarında dolaşıp yeni şeyler öğrenmenin peşine düşermiş.

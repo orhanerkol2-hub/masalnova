@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["saygı","iyilik","alçakgönüllülük"]
 characters: ["Keloğlan","Yaşlı Dev","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan adında pır pır parlayan kel kafalı, gönlü sıcacık bir delikanlı yaşarmış. Keloğlan yoksulmuş ama kimseye kötü söz söylemez, kapısına gelen her canlıya elinden geleni yaparmış.

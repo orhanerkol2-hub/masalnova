@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["yardımlaşma","dostluk","cesaret"]
 characters: ["Keloğlan","Değirmenci Hasan Dede","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında eski, taş duvarlı bir değirmen varmış. Bu değirmeni yıllardır Hasan Dede işletirmiş ama artık kolları eskisi kadar güçlü değilmiş. Köyün en çalışkan, en gönlü geniş delikanlısı Keloğlan, her sabah değirmene uğrar, Hasan Dede'ye yardım edermiş.

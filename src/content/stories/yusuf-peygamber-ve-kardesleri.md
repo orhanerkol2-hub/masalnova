@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Yûsuf suresi, 4–101. ayetler"
 sourceUrl: "https://quran.com/12"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

@@ -8,11 +8,14 @@ coverColor: "#c74b45"
 coverImage: "/covers/stories/kirmizi-baslikli-kiz-ve-ormanin-dostu-kurt.webp"
 altText: "Kırmızı Başlıklı Kız'ın güneşli orman yolunda dost kurda kurabiye uzattığı masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 3
 categories: ["uyku", "egitici"]
 themes: ["dostluk", "nezaket", "empati"]
 characters: ["Kırmızı Başlıklı Kız", "Dost Kurt", "Büyükanne", "Anne"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Küçük bir köyde, kırmızı başlığını hiç çıkarmayan sevimli bir kız yaşardı. Herkes ona Kırmızı Başlıklı Kız derdi. Onun en sevdiği şey, ormanın öbür ucunda yaşayan büyükannesini ziyaret etmekti.

@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["dürüstlük","güven"]
 characters: ["Çoban Kerem","Köylü Ayşe Teyze"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde Kerem adında iyi kalpli bir çoban yaşarmış. Her sabah sürüsünü çayıra götürür, akşam olunca hepsini sayarak eve dönermiş.

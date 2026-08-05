@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["tutumluluk","dürüstlük","zekâ"]
 characters: ["Keloğlan","Padişah","Yaşlı kadın Ayşe Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında Keloğlan yaşarmış. Annesiyle küçük bir evde otururlar, ellerindeki azıcık şeyle geçinip gidermiş. Keloğlan'ın komşuları bazen ona takılır, "Sende hiçbir şey biriktiremezsin, elinden avucundan akıp gider!" dermiş. Keloğlan da gülerek, "Bakalım göreceğiz," diye cevap verirmiş.

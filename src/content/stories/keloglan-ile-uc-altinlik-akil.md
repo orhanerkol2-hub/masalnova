@@ -13,6 +13,9 @@ categories: ["keloglan", "egitici"]
 themes: ["akıllılık", "sabır", "özdenetim"]
 characters: ["Keloğlan", "Anası", "Ak Sakallı İhtiyar"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş. Allah'ın kulu çokmuş.

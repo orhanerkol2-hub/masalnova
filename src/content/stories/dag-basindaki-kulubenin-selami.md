@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["saygı","huzur","şefkat"]
 characters: ["Nine Havva","Kar Tanesi","Küçük Baykuş"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yüksek bir dağın başında, bulutlara çok yakın küçük bir kulübe varmış. Bu kulübede Nine Havva yaşarmış. Nine Havva'nın kalbi çok yumuşacıkmış, tıpkı yastığı gibi.
@@ -28,6 +31,6 @@ Nine Havva, yorganını çekip gözlerini kapatmadan önce fısıldarmış: "Her
 
 Dağın başındaki kulübede her şey sessizleşir, yumuşacık bir sessizlik her yeri kaplarmış. Ay ışığı battaniyenin üstünde huzurla dururmuş, yıldızlar gökyüzünde nazikçe parıldarmış.
 
-Nine Havva'nın gözkapakları ağırlaşır, nefesi yavaşlar, o da tatlı bir uykuya dalarmış. Dağ, rüzgâr, yıldızlar ve küçük baykuş, hepsi birlikte onunla uyurmuş.
+Nine Havva'nın göz kapakları ağırlaşır, nefesi yavaşlar, o da tatlı bir uykuya dalarmış. Dağ, rüzgâr, yıldızlar ve küçük baykuş, hepsi birlikte onunla uyurmuş.
 
 İyi geceler, sevgili yıldızlar. İyi geceler, küçük kar taneleri. İyi geceler.

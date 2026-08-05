@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["merak","dostluk","paylaşma"]
 characters: ["Fındık adlı sincap","Puf adlı tavşan","Vız adlı arı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarında geniş bir çayır varmış. Bu çayırın hemen yanındaki koca bir kestane ağacında Fındık adında meraklı bir sincap yaşarmış.

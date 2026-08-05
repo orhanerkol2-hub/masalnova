@@ -8,11 +8,14 @@ coverColor: "#4d956c"
 coverImage: "/covers/stories/kurbaga-prens-ve-altin-top.webp"
 altText: "Prensesin gün batımındaki saray göletinde dost kurbağadan altın topunu aldığı masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 3
 categories: ["uyku", "egitici"]
 themes: ["sözünde durmak", "dostluk", "kabul"]
 characters: ["Küçük Prenses", "Kurbağa Prens", "Kral"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Küçük bir prenses sarayın bahçesindeki berrak göletin kenarında oynamayı çok severdi. En sevdiği oyuncağı, güneşte parıldayan altın bir toptu.

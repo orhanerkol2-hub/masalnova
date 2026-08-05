@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sabır","huzur","doğa sevgisi"]
 characters: ["Bahçıvan Sadık","Ay Işığı Kelebeği"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağların eteğinde küçük bir köy varmış. Bu köyde Sadık adında güler yüzlü bir bahçıvan yaşarmış. Sadık'ın elleri toprakla dost olmuş, gözleri her zaman mavi ve yumuşak gökyüzüne bakarmış.

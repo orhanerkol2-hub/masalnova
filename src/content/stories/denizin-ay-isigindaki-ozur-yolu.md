@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["affetmek","kardeşlik","cesaret"]
 characters: ["Deniz","kardeşi Toprak"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında ay ışığında uzayan bir patika varmış. Bu patika, köylülerin gece yürüyüşe çıktığı sakin bir yolmuş.

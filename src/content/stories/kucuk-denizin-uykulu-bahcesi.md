@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["çalışkanlık","huzur","sevgi"]
 characters: ["Deniz","Ay Dede","küçük kelebek Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, çiçekli bir bahçenin kenarında küçük ve cesur bir çocuk yaşarmış. Adı Deniz'miş. Deniz her akşam güneş yavaşça batarken bahçesine gider, çiçeklerini sular, toprağı usulca kabartır, yorgun yapraklara nazikçe dokunurmuş.

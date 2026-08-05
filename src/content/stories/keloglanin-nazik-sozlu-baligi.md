@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["nezaket","yardımseverlik","dürüstlük"]
 characters: ["Keloğlan","Konuşan Balık","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan yaşarmış. Keloğlan fakirmiş ama gönlü zengin bir çocukmuş. Kimseye kötü söz söylemez, herkese güler yüz gösterirmiş.

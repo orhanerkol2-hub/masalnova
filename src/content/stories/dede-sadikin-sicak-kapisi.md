@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["nezaket","paylaşma"]
 characters: ["Dede Sadık","küçük kedi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde Dede Sadık yaşarmış. O akşam yağmur şıpır şıpır çatıya vuruyor, pencereler ıslak ışıklarla parlıyormuş.

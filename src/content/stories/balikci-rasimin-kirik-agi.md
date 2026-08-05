@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["affetmek","sabır","dostluk"]
 characters: ["Balıkçı Rasim","Küçük su perisi Zümrüt"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında küçük bir göl varmış. Bu gölde her sabah Balıkçı Rasim otururmuş, ağını suya sessizce salarmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["şükür","paylaşma","kanaat"]
 characters: ["Fındık (baştankara kuşu)","Dede Baykuş","Sincap Turna"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en kuytu köşesinde Fındık adında minicik bir baştankara kuşu yaşarmış. Fındık, kanatları küçük ama gözleri her zaman daha büyük şeyler ararmış. Komşusu bir tohum bulsa, "Ah, benimki de böyle olsaydı" diye içi burkulurmuş.

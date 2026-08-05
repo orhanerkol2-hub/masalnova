@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sözünde durmak","dostluk","güven"]
 characters: ["Kelebek Mine","Sincap Fındık"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın yüksek başında, taştan yapılmış küçük bir kulübe varmış. Bu kulübenin çatısında Sincap Fındık yaşarmış, pencere kenarındaki begonyalarda ise Kelebek Mine konaklarmış.

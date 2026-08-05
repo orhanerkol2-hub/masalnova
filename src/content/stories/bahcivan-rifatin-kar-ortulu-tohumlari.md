@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["tutumluluk","huzur","sabır"]
 characters: ["Bahçıvan Rifat","Kar Tanesi Minnak","Küçük Serçe Puf"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında sessiz bir bahçe varmış. Bu bahçenin bahçıvanı, güler yüzlü Rifat Amca'ymış. Rifat Amca'nın elleri toprağı severmiş, gözleri her zaman gülermiş.

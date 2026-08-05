@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sabır","huzur","doğa sevgisi"]
 characters: ["Dede Sedef","Küçük serçe Fındık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın en sakin köşesinde Dede Sedef yaşarmış. Uzun beyaz sakalı ay ışığında pamuk gibi parlar, gözleri her zaman sevgiyle bakarmış.

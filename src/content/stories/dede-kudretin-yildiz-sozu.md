@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sözünde durmak","aile sevgisi"]
 characters: ["Dede Kudret","torunu Selin"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında Dede Kudret adında yaşlı ve bilge bir adam yaşarmış. Her akşam damına çıkar, yıldızları seyredermiş.

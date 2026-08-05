@@ -8,11 +8,14 @@ coverColor: "#5da86f"
 coverImage: "/covers/stories/durunun-parlayan-kutusu.webp"
 altText: "Duru bahçede karıncalar için minik taş köprü yaparken kapalı tableti pencerede duruyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 4
 categories: ["uyku","egitici"]
 themes: ["ekran molası","aktif oyun","hayal gücü","doğa merakı"]
 characters: ["Duru","Anne","Baba","Yardımcı karınca"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Duru'nun bir kutusu vardı.

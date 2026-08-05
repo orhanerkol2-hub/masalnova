@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["nezaket","huzur","uyku"]
 characters: ["Bahçıvan Sait","Değirmen Kanatları","Küçük Baykuş"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün kenarında, mor sarmaşıklarla örtülü eski bir değirmen varmış. Bu değirmenin bahçesinde, güler yüzlü bir bahçıvan yaşarmış; adı Sait Amca'ymış.

@@ -10,6 +10,9 @@ readingTime: 4
 categories: ["keloglan"]
 themes: ["sabır","çalışkanlık","dürüstlük"]
 characters: ["Keloğlan","Padişah","Yaşlı kadın Ayşe Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında geniş bir çayır varmış. Bu çayırın hemen yanında da annesiyle birlikte yaşayan Keloğlan otururmuş. Keloğlan çok çalışkanmış ama bir kusuru varmış: Bir işe başladı mı hemen sonucunu görmek istermiş, beklemeye pek gelemezmiş.

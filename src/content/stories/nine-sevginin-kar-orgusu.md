@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["çalışkanlık","paylaşma"]
 characters: ["Nine Sevgi","köy çocukları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde Nine Sevgi yaşarmış. O gün kar tane tane düşüyormuş, her yer bembeyaz olmuş.

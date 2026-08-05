@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["cesaret","yardımseverlik"]
 characters: ["Çoban Aras","küçük kuzu Ben"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğinde Aras adında iyi kalpli bir çoban yaşarmış. Bir akşam sürüsünü sayarken en küçük kuzusu Ben'in olmadığını fark etmiş.

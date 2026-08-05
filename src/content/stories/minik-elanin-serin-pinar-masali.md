@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["çalışkanlık","huzur","merak"]
 characters: ["Ela","Pınar Perisi","Ay Dede"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir vadinin ortasında serin bir pınar akarmış. Bu pınarın suyu ay ışığında gümüş gibi parıldarmış, usulca şırıl şırıl şırıl akarmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","dayanışma","akıl"]
 characters: ["Keloğlan","Padişah","Deniz Devi Marmun"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, denizin hemen kıyısında küçük bir köy varmış. Bu köyde Keloğlan adında, kel kafası güneşte pırıl pırıl parlayan, gönlü ise herkesten daha parlak bir delikanlı yaşarmış.

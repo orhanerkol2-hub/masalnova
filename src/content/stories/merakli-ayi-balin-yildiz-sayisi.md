@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["merak","dostluk","paylaşma"]
 characters: ["Ayı Bal","Baykuş Ufuk","Sincap Fındık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde Bal adında meraklı bir ayı yaşarmış. Bal, gündüzleri bal peteklerinden çok, geceleri gökyüzüne bakmayı severmiş. Her akşam mağarasının önüne çıkar, başını kaldırır ve yıldızları saymaya çalışırmış.

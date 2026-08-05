@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sabır","dostluk","işbirliği"]
 characters: ["Turna adlı tilki","Puf adlı tavşan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın en derin köşesinde kimsenin girmeye cesaret edemediği gizemli bir mağara varmış. Köylüler bu mağaradan, ay ışığında parıldayan bir taşın haberini verirmiş ama içine giren kimse taşı bulamamış.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["dürüstlük","vicdan","güven"]
 characters: ["Nine Cevahir","Prenses Selin","Küçük hizmetçi Toprak"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, tepesi bulutlara dokunan ışıl ışıl bir saray varmış. Bu sarayın duvarları sedef gibi parlar, pencereleri güneşin ışığını yüz parçaya bölerek koridorlara yansıtırmış. Sarayda, herkesin sevgiyle andığı Nine Cevahir yaşarmış. Nine Cevahir, sarayın en değerli odası olan Aynalı Oda'ya bakar, oradaki kıymetli eşyaları düzenler, tozunu alır, ışıltısını korurmuş.

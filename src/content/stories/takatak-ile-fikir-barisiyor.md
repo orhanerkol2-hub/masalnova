@@ -8,11 +8,14 @@ coverColor: "#477f86"
 coverImage: "/covers/stories/takatak-ile-fikir-barisiyor.webp"
 altText: "Kunduz Takatak ile su samuru Fıkır gün batımında taş ve dallardan kuleyi birlikte onarıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["özür dilemek","barışmak","empati","dostluk"]
 characters: ["Takatak","Fıkır"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Bir ırmağın kıyısında iki dost yaşardı.

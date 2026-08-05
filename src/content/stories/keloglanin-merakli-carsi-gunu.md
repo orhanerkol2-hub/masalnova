@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["merak","akıllılık","dürüstlük"]
 characters: ["Keloğlan","Padişah","Hilekâr Tacir"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında meraklı bir delikanlı yaşarmış. Onun merakı öyle büyükmüş ki, gördüğü her şeyin ardında bir sır ararmış. Bir sepetin niçin böyle örüldüğünü, bir kuşun neden o yöne uçtuğunu sorup dururmuş.

@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["adalet","paylaşma","şefkat"]
 characters: ["Nine Sevgi","Küçük Ali","Küçük Ayşe"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yağmurlu bir akşamda küçük bir köyün pazar yerinde tek bir şemsiye kalmış. Nine Sevgi, elindeki bu son şemsiyeyi almak için tam çıkışa doğru yürürken, aynı anda iki çocuk da ona doğru koşmuş.

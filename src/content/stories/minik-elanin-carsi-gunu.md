@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["şükür","yardımlaşma","kanaat"]
 characters: ["Minik Ela","Bilge Dede Rasim","Simitçi Ahmet"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalabalık bir çarşının orta yerinde küçük bir kız yaşarmış. Adı Ela'ymış. O gün annesiyle çarşıya gelmiş, rengarenk tezgâhlara bakarken elini annesinin elinden bırakmış. Bir baktı ki annesi yok, etrafı bir anda kocaman ve gürültülü gelmiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dostluk","yardımlaşma","umut"]
 characters: ["Toprak (karınca)","Fındık (sincap)","Minik ateşböceği Işık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında küçük bir karınca yaşarmış. Adı Toprak'mış. Toprak, her akşam yuvasına dönmeden önce en sevdiği yapraktan küçük bir parça koparıp arkadaşlarına götürürmüş.

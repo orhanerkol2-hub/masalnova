@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["tutumluluk","yardımseverlik","huzur"]
 characters: ["Sedef Teyze","Deniz kızı Mira","Ay"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, mavi denizin kıyısında küçük bir kasaba varmış. Bu kasabada Sedef Teyze yaşarmış. Sedef Teyze, her akşam kumsala inip, dalgaların bıraktığı küçük deniz kabuklarını toplarmış. Hiçbir kabuğu boşa harcamaz, hepsini güzelce bir sepete koyarmış.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["tutumluluk","paylaşma"]
 characters: ["Çoban Rüstem","kuzu Beyaz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısında Rüstem adında iyi kalpli bir çoban yaşarmış. Her sabah koyunlarını kumsala götürür, dalgaların sesini dinleyerek onları otlatırmış.

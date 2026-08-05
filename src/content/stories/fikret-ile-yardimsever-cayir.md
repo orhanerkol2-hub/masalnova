@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","dostluk","paylaşma"]
 characters: ["Bahçıvan Fikret","Tavşan Ceviz","Kirpi Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında geniş bir çayır varmış. Bu çayırın ortasında küçük bir bahçe bulunurmuş ve bu bahçeye her sabah güler yüzlü bir bahçıvan gelirmiş. Adı Fikret'miş. Elinde suluğu, sırtında güneşten korunmak için hasır şapkasıyla çiçeklerini sularmış.

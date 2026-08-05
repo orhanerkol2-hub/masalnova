@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["adalet","paylaşma"]
 characters: ["Nine Feride","Deniz","Kaan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin altında uzanan altın başaklı bir tarlanın kenarında Nine Feride otururmuş. Bu tarlanın en gür köşesindeki tek bir dev başağı, köyün iki çocuğu Deniz ile Kaan aynı anda görmüş.

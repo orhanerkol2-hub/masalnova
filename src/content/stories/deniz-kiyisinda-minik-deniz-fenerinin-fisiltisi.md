@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["alçakgönüllülük","huzur","sevgi"]
 characters: ["Deniz","küçük deniz feneri Nurcan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, ay ışığının deniz üstüne serildiği bir kıyıda küçük bir çocuk yaşarmış. Adı Deniz'miş, adı gibi de denize âşıkmış. Her akşam, güneş yavaşça sulara batarken, kumların üzerine oturur, dalgaların usul usul fısıldadığı ninniyi dinlermiş.

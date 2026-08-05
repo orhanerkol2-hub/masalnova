@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["alçakgönüllülük","dostluk","paylaşma"]
 characters: ["Baykuş Ulvi","Arı Bal Damlası","Sincap Fındık"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde serin bir pınar varmış. Bu pınarın suyu öyle tatlıymış ki, ormandaki bütün hayvanlar susadıklarında oraya koşarmış.

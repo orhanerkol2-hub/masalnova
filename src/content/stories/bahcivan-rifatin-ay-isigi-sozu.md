@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sözünde durmak","huzur","doğa sevgisi"]
 characters: ["Bahçıvan Rıfat","Baykuş Hüsnü","Küçük tavşan Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında güler yüzlü bir bahçıvan yaşarmış. Adı Rıfat'mış. Her akşam, güneş yavaşça batarken, ormandaki çiçekleri sulamak için elinde küçük bir bakraçla dolaşırmış.

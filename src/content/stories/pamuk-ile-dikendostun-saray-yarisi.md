@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["çalışkanlık","dostluk","alçakgönüllülük"]
 characters: ["Pamuk (tavşan)","Dikendost (kirpi)","Saray bekçisi baykuş"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarında ışıl ışıl bir saray varmış. Sarayın duvarları güneşte pırıl pırıl parlar, bahçesindeki çeşme şırıl şırıl akarmış.

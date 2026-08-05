@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","dayanışma","paylaşma"]
 characters: ["Mercan","Değirmenci Fadıl Dede","Köy çocukları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde küçük bir köy varmış. Bu köyde Mercan adında meraklı bir kız yaşarmış. Mercan'ın en sevdiği yer, köyün kenarındaki taş duvarlı, tahta kanatlı eski değirmenmiş.

@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Enbiyâ suresi 83–84; Sâd suresi 41–43"
 sourceUrl: "https://quran.com/21/83-84"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

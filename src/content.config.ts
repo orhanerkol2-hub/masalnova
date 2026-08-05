@@ -29,7 +29,12 @@ const stories = defineCollection({
     isPopular: z.boolean().default(false),
     isNew: z.boolean().default(false),
     isTodayStory: z.boolean().default(false),
-    editorialStatus: z.enum(['draft', 'needs_review', 'approved']).default('approved'),
+    author: z.enum(['aylin-karabektas', 'muhammet-karayigit']),
+    reviewedBy: z.tuple([
+      z.literal('aylin-karabektas'),
+      z.literal('muhammet-karayigit'),
+    ]),
+    editorialStatus: z.enum(['draft', 'needs_review', 'approved']).default('draft'),
     publishedAt: z.string(),
     modifiedAt: z.string().optional(),
   }),

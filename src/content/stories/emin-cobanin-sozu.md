@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sözünde durmak","dostluk"]
 characters: ["Emin Çoban","Küçük Deve"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, geniş bir çayırda Emin adında iyi kalpli bir çoban yaşarmış. Her sabah koyunlarını çayıra götürür, akşam olunca hepsini sayıp evine getirirmiş.

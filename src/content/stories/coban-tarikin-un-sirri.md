@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["dürüstlük","güven","vicdan"]
 characters: ["Çoban Tarık","Değirmenci Rahmi Dede","Beyaz Kuzu"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde iyi kalpli bir çoban yaşarmış. Adı Tarık'mış. Sabahları güneşle beraber kalkar, koyunlarını yeşil çayırlara götürür, akşamları da onları güvenle köye geri getirirmiş.

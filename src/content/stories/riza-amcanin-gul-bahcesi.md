@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["dostluk","paylaşma","yardımlaşma"]
 characters: ["Rıza Amca","Deniz","Kelebek Sarı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün kenarında sakin bir göl varmış. Gölün kıyısında da rengârenk çiçeklerle dolu bir bahçe bulunurmuş. Bu bahçeyi Rıza Amca yetiştirirmiş; onun yüzü hep güler, elleri hep toprakla oynarmış.

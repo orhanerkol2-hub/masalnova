@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["şükür","huzur","sevgi"]
 characters: ["Kerem","Anneanne","Ay"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, bulutların hemen yanı başında, dağ başında küçük bir kulübe varmış. Bu kulübede cesur küçük bir çocuk yaşarmış, adı Kerem'miş.
@@ -32,7 +35,7 @@ Dağların en tatlı çiçeğim,
 Yıldızlar bekçin olsun,
 Ay ışığı yorganın olsun."
 
-Kerem'in gözkapakları ağırlaşırmış. Kulübenin dışında rüzgâr çok hafif esermiş, sanki bir ninni gibi fısıldarmış. İçeride ateş usulca çatırdarmış, sıcaklığını yaymaya devam edermiş.
+Kerem'in göz kapakları ağırlaşırmış. Kulübenin dışında rüzgâr çok hafif esermiş, sanki bir ninni gibi fısıldarmış. İçeride ateş usulca çatırdarmış, sıcaklığını yaymaya devam edermiş.
 
 Kerem, gözlerini yumarken içinden şöyle geçirirmiş: "Bu kulübe, bu battaniye, bu sıcaklık için ne kadar şükrediyorum." Sonra derin bir nefes alır, huzur içinde uykuya dalarmış.
 

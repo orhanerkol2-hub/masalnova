@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["dürüstlük","şefkat","huzur"]
 characters: ["Nine Ayşe","küçük Deniz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, karlı bir kış günü, küçük bir köyde Nine Ayşe yaşarmış. Penceresinden dışarı bakınca her yer beyaz bir battaniyeyle örtülü gibi görünürmüş. Kar taneleri usulca, usulca süzülür, çatının kenarlarına yumuşacık yastıklar bırakırmış.
@@ -28,7 +31,7 @@ Ay bakar pencereden usulca,
 Uyusun minik Deniz'im tatlı tatlı,
 Düşleri olsun beyaz ve sıcacık."
 
-Deniz'in gözkapakları ağırlaşmış, sobanın ışığı odayı yumuşacık bir turuncuya boyamış. Dışarıda kar, sessizce köyün üstüne örtü olmuş, her şeyi sakinleştirmiş.
+Deniz'in göz kapakları ağırlaşmış, sobanın ışığı odayı yumuşacık bir turuncuya boyamış. Dışarıda kar, sessizce köyün üstüne örtü olmuş, her şeyi sakinleştirmiş.
 
 Nine Ayşe, torununun saçlarını okşayarak fısıldamış: "Doğruyu söylemek, kar taneleri gibi hafif ama kalbi ısıtan bir şeydir, canım. Şimdi sen de bulutların üstünde uyu, yıldızlar seni izlesin."
 

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["dürüstlük","vicdan","doğruluk"]
 characters: ["Fırıncı Dede Hasan","Küçük Ali"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, kasabanın en mis kokulu fırınında yaşlı bilge Dede Hasan çalışırmış. Fırınından sabah ezanıyla birlikte taze ekmek kokusu bütün sokağa yayılırmış.

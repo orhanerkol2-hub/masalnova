@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sorumluluk","huzur","şefkat"]
 characters: ["Çoban Sedef","Beyaz koyunlar","Bulutlar"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yüksek bir dağın başında, küçük ve sımsıcak bir kulübe varmış. Bu kulübede iyi kalpli bir çoban yaşarmış, adı Sedef'miş. Sedef her akşam koyunlarını nazikçe sayar, hepsinin sıcak ve güvende olduğundan emin olurmuş.

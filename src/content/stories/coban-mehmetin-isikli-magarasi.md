@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["azim","sabır","umut"]
 characters: ["Çoban Mehmet","Küçük kuzu Benek","Yaşlı baykuş"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağların eteğinde Mehmet adında iyi kalpli bir çoban yaşarmış. Her sabah kuzularını çayıra götürür, akşam olunca hepsini tek tek sayarak köye geri dönermiş. Mehmet'in en sevdiği kuzusu Benek, küçük ve meraklı bir kuzuymuş.

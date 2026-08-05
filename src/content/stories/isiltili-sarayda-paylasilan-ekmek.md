@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","dayanışma","paylaşma"]
 characters: ["Dede Server","Minik Elif","Saray halkı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların ardında ışıl ışıl bir saray varmış. Bu sarayın duvarları güneşte pırıl pırıl parlar, pencereleri gökkuşağı renginde ışık saçarmış. Sarayda Dede Server adında yaşlı, bilge bir adam yaşarmış. Herkes ona danışır, o da herkese güler yüzle yardım edermiş.

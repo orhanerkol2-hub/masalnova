@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["alçakgönüllülük","dostluk","yardımseverlik"]
 characters: ["Aslan Volkan","Kaplumbağa Sabri"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, karlı bir ormanda Volkan adında bir aslan yaşarmış. Volkan, yelesinin en gür, kükremesinin en güçlü olduğunu bilir, bu yüzden burnu hep havada gezermiş. Ormanın bütün hayvanları ona yol verir, o da bunu çok severmiş.

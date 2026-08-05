@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merhamet","paylaşma","huzur"]
 characters: ["Balıkçı Sadık","Fırıncı Teyze Nazlı","Küçük martı Civciv"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, sahilin kıyısında küçük bir köy varmış. Bu köyde Sadık adında sabırlı bir balıkçı yaşarmış. Sadık her akşam ay yükselirken teknesiyle kıyıya dönermiş, yorgun ama gülümseyerek.

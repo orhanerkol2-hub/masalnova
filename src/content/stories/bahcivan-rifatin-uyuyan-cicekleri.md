@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["azim","huzur","sabır"]
 characters: ["Bahçıvan Rıfat","Ay Nine","Küçük Papatya"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, çiçekli bir bahçenin ortasında güler yüzlü bir bahçıvan yaşarmış. Adı Rıfat'mış. Her akşam güneş yavaşça batarken, Rıfat elindeki küçük can suyu kabıyla bahçesini dolaşırmış.

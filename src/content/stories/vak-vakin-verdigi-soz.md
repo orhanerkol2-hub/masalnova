@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sözünde durmak","dostluk","azim"]
 characters: ["Vak Vak adlı ördek","Tosbik adlı kaplumbağa","Minik tavşan Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında şirin bir gölet varmış. Bu gölette Vak Vak adında sevimli bir ördek yaşarmış. Vak Vak, sarı gagası ve parlak tüyleriyle köyün en dikkat çeken hayvanıymış.

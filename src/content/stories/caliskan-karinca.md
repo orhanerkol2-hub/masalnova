@@ -11,6 +11,9 @@ categories: ["hayvan", "egitici"]
 themes: ["çalışkanlık", "hazırlık", "yardımlaşma"]
 characters: ["Karınca", "Ağustosböceği"]
 isPopular: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-05-30"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde yemyeşil bir çayırın kenarında, koca bir çınar ağacının altında ufak bir karınca ile şarkı sevdalısı bir ağustosböceği yaşarmış.

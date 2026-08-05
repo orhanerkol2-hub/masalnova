@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["cesaret","merak","kendine güven"]
 characters: ["Nisan","Bahçıvan Ayşe Teyze","Küçük kirpi Tomur"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, rengarenk çiçeklerle dolu bir bahçenin tam ortasında, üzeri sarmaşıklarla örtülü eski bir kapı varmış. Bu bahçede yaşayan Nisan adında meraklı bir kız, her gün o kapının önünden geçer, kapının ardında ne olduğunu hayal edermiş.

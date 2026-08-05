@@ -10,6 +10,9 @@ readingTime: 4
 categories: ["keloglan"]
 themes: ["çalışkanlık","dürüstlük","azim"]
 characters: ["Keloğlan","Padişah","Pınar Perisi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında kel kafalı ama gönlü altından bir çocuk yaşarmış. Keloğlan'ın en sevdiği şey, hiçbir şey yapmadan ağaç altında uzanıp gökyüzündeki bulutları saymakmış. Annesi ne kadar 'Oğlum, bir işe yara!' dese de, Keloğlan hep bir bahane bulup işten kaçarmış.

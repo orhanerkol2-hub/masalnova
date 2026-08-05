@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sabır","dostluk","doğa sevgisi"]
 characters: ["Fil Tombik","Kelebek Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, çiçekli bir bahçenin kenarında Tombik adında iri ama sevimli bir fil yaşarmış. Tombik her şeyi hemen, o anda olsun isterdi. Su içerken hemen doysun, yürürken hemen varsın isterdi.

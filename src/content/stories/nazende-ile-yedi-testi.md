@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["paylaşma","dostluk","cömertlik"]
 characters: ["Nazende","Pınar Perisi","köy çocukları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde küçük bir köy varmış. Bu köyde Nazende adında meraklı bir kız yaşarmış. Nazende her şeyi bilmek isterdi; kuşların neden uçtuğunu, yaprakların neden sarardığını, hatta karıncaların yuvasını nereye kazdığını hep sorup dururdu.

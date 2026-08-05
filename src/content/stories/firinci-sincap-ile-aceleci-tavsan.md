@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sabır","dostluk","emek"]
 characters: ["Tavşan Tosbik","Sincap Fındık"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kıyısında küçük, taş duvarlı bir fırın varmış. Bacasından tüten dumanla birlikte mis gibi bir koku etrafa yayılır, kuşlar bile o kokuyu duyunca dallarda şarkı söylermiş. Bu fırının sahibi Fındık adında sabırlı bir sincapmış.

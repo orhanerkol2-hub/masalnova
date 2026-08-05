@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["azim","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Mağara Dedesi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında kel kafalı ama gönlü altından bir çocuk yaşarmış. Köyün suyu azalmış, tarlalar kurumuş, herkes tasa içindeymiş. Keloğlan bir gün annesine, "Ben köyün derdine bir çare bulmadan dönmeyeceğim," demiş ve dağın eteğindeki gizemli mağaraya doğru yola çıkmış.

@@ -11,6 +11,9 @@ categories: ["hayvan", "kisa"]
 themes: ["zekâ", "cesaret"]
 characters: ["Tavşan", "Aslan"]
 isPopular: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-06-20"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde upuzun ağaçların gölgelendiği yeşil bir orman varmış. Bu ormanın kralı, kabarık yeleli, iri pençeli koca bir aslanmış. Sabahtan akşama böbürlenir, gür sesiyle kükrer, bütün ormana korku salarmış.

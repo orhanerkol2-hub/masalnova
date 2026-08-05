@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sabır","çalışkanlık","dostluk"]
 characters: ["Arı Sarı","Nine Kovan","Papatya Peri"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında, güneşin ilk ışıklarını en önce gören bir bahçe varmış. Bu bahçede yaşayan Arı Sarı, kovandaki en hızlı uçan arıymış. Ama Sarı bir konuda hiç iyi değilmiş: beklemeyi sevmezmiş.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["merhamet","dostluk","zeka"]
 characters: ["Keloğlan","Değirmenci Dev","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında eski bir değirmen varmış. Bu değirmen yıllardır çalışmaz, kapısı çarpa çarpa sallanır dururmuş. Köylüler oradan geçerken hızlı hızlı yürür, kimse yaklaşmak istemezmiş.

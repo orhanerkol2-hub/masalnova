@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["dürüstlük","vicdan","cesaret"]
 characters: ["Berrin","Balıkçı Tahsin","Deniz Kızı Pırıl"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, sahilde küçük bir kasaba varmış. Bu kasabada Berrin adında meraklı bir kız yaşarmış. Berrin, her sabah güneş doğmadan kalkar, kumsala inip deniz kıyısında ne bulacağını hayal ederek dolaşırmış.

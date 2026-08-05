@@ -1,6 +1,5 @@
 ---
 import ColoringFocusLayout from '../../../layouts/ColoringFocusLayout.astro';
-import AdSlot from '../../../components/AdSlot.astro';
 import DigitalColoringCanvas from '../../../components/DigitalColoringCanvas.astro';
 import { coloringPages } from '../../../data/coloring-pages.mjs';
 
@@ -10,11 +9,6 @@ export function getStaticPaths() {
 
 const { page } = Astro.props;
 const detailPath = `/boyama/${page.slug}/`;
-const focusAdSlot = import.meta.env.PUBLIC_ADSENSE_BOYAMA_FOCUS_TOP_SLOT;
-const adsReady = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true'
-  && import.meta.env.PUBLIC_GOOGLE_CERTIFIED_CMP === 'true'
-  && Boolean(focusAdSlot);
-const showFocusAd = adsReady;
 ---
 
 <ColoringFocusLayout
@@ -23,9 +17,9 @@ const showFocusAd = adsReady;
   canonicalPath={detailPath}
   image={page.previewImage}
   imageAlt={page.imageAlt}
-  allowAds={true}
+  allowAds={false}
 >
-  <div class:list={['focus-shell', { 'has-top-ad': showFocusAd }]}>
+  <div class="focus-shell">
     <header class="focus-header">
       <div class="focus-left">
         <a class="back-button" href={detailPath} aria-label={`${page.title} sayfasına dön`}>
@@ -45,16 +39,6 @@ const showFocusAd = adsReady;
         <span>Çocuk modu</span>
       </div>
     </header>
-
-    {
-      showFocusAd && (
-        <AdSlot
-          slot={focusAdSlot}
-          placement="boyama-focus-top"
-          variant="focus-top"
-        />
-      )
-    }
 
     <div class="focus-workspace">
       <DigitalColoringCanvas
@@ -76,8 +60,6 @@ const showFocusAd = adsReady;
     height: 100%;
     min-height: 0;
   }
-
-  .focus-shell.has-top-ad { grid-template-rows: auto auto minmax(0, 1fr); }
 
   .focus-header {
     position: relative;

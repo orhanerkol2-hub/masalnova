@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["saygı","alçakgönüllülük","dürüstlük"]
 characters: ["Keloğlan","Padişah","Yaşlı Bahçıvan Nine"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında zeki ve iyi yürekli bir delikanlı yaşarmış. Köyünde işi kalmayınca, komşularının önerisiyle şehre inmiş; belki padişahın sarayında bir iş bulurum diye düşünmüş.

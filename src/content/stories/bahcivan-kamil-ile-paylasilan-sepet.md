@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["paylaşma","dostluk","cömertlik"]
 characters: ["Bahçıvan Kâmil","Küçük Aslı","Tepe köyünün çocukları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yüksek bir dağın eteğinde, taş bir kulübede Kâmil adında güler yüzlü bir bahçıvan yaşarmış. Kulübesinin önünde küçük ama bereketli bir bahçesi varmış. Domates, salatalık, çilek ve türlü türlü sebzeler yetiştirirmiş burada.

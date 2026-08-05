@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sözünde durmak","dürüstlük","akıllılık"]
 characters: ["Keloğlan","Dağ Devi Homur","Yaşlı kadın Nine Ayşe"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında zeki ve gönlü temiz bir delikanlı yaşarmış. Keloğlan fakirmiş ama hiç kimseye kötülük etmez, verdiği sözden asla dönmezmiş.

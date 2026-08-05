@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","sabır","paylaşma"]
 characters: ["Balıkçı Rahmi","Tavşan ailesi","Serçe Civciv"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarında serin bir pınar akarmış. Bu pınarın yanında küçük bir kulübede Rahmi adında sabırlı bir balıkçı yaşarmış. Rahmi her sabah pınarın biraz aşağısındaki dereye gider, akşama kadar sessizce oturup balık tutmayı beklermiş.

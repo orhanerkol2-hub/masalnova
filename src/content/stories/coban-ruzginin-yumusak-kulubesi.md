@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["paylaşma","sevgi","huzur"]
 characters: ["Çoban Rüzgin","küçük kuzu Puf","serçe Cik"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağ başında, yumuşak bulutların hemen yanında küçük bir kulübe varmış. Bu kulübede Rüzgin adında iyi kalpli bir çoban yaşarmış.

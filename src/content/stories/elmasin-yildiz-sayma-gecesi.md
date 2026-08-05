@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merak","huzur","doğa sevgisi"]
 characters: ["Elmas","Ay Dede","küçük yıldızlar"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında, penceresi gökyüzüne bakan bir evde Elmas adında meraklı bir kız yaşarmış. Her akşam yatağına yatmadan önce perdesini aralar, gökyüzüne bakar ve fısıldarmış: "Acaba bu gece kaç yıldız var?"
@@ -18,7 +21,7 @@ O gece de gökyüzü büyük bir kadife örtü gibi kararmış, üzerine minik m
 
 Ay Dede, gökyüzünün en yumuşak köşesinden ona gülümsemiş. "Merak etme küçük kızım," demiş yavaşça, sesi bir ninni gibi süzülerek. "Yıldızları saymak isteyen herkes, sonunda tatlı bir uykuya dalar."
 
-Elmas gülümsemiş ve saymaya devam etmiş. Dört, beş, altı... Her yıldız sayıldıkça gözkapakları biraz daha ağırlaşmış. Yıldızlar da onun sesini duymuş gibi usulca parlayıp sönüyor, sanki ona "buradayız, güvendesin" diyorlarmış.
+Elmas gülümsemiş ve saymaya devam etmiş. Dört, beş, altı... Her yıldız sayıldıkça göz kapakları biraz daha ağırlaşmış. Yıldızlar da onun sesini duymuş gibi usulca parlayıp sönüyor, sanki ona "buradayız, güvendesin" diyorlarmış.
 
 Bulutlar yavaşça geçmiş, yumuşacık pamuk gibi, Ay Dede'nin önünden süzülmüş. Elmas onlara bakmış ve düşünmüş: "Bulutlar da uyumak için mi geziniyor?" Ay Dede fısıldamış: "Evet canım, onlar da gökyüzünün battaniyesi gibidir, herkesi yavaşça örterler."
 

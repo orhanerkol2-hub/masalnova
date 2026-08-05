@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["çalışkanlık","dostluk","paylaşma"]
 characters: ["Ayı Homur","Tarla Kuşu Civciv","Tavşan Puf"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında altın başaklı büyük bir tarla varmış. Bu tarlanın yanında da Homur adında tombul, sevimli bir ayı yaşarmış. Homur'un en sevdiği şey, güneşli bir ağacın altında uzanıp uyuklamakmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["azim","dostluk","sabır"]
 characters: ["Pamuk (kedi)","Minik (kuzu)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir vadinin ortasında serin bir pınar varmış. Bu pınarın suyu öyle berrakmış ki, içine bakan herkes kendi yüzünü ayna gibi görürmüş.

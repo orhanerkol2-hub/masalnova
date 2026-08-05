@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["affetmek","iyilik","dostluk"]
 characters: ["Keloğlan","Dev Kabaraslan","Yaşlı kadın Zehra Nine"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların eteğinde sakin bir göl varmış. Bu gölün suyu öyle berrakmış ki, gökyüzündeki bulutlar bile içinde yıkanmaya gelirmiş. Gölün kıyısında küçük bir köy kurulmuş, köyde de Keloğlan yaşarmış annesiyle.

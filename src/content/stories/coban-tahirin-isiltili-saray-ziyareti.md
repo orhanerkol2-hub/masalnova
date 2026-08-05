@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","dostluk","alçakgönüllülük"]
 characters: ["Çoban Tahir","Sarayın Küçük Prensesi","Beyaz Koyun Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yeşil tepelerin eteğinde Tahir adında iyi kalpli bir çoban yaşarmış. Tahir, her sabah güneşle beraber kalkar, koyunlarını otlatmaya götürürmüş. Koyunları arasında en sevdiği, Pamuk adında bembeyaz bir koyun varmış.

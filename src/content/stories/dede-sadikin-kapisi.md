@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["saygı","yardımlaşma"]
 characters: ["Dede Sadık","Küçük Elif"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyün kenarında Dede Sadık adında yaşlı bir bilge yaşarmış. Yağmurlu bir akşamdı. Gökyüzü kararmış, damlalar çatılara vurmaya başlamıştı.

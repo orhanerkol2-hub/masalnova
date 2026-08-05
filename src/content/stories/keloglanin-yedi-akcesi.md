@@ -10,6 +10,9 @@ readingTime: 4
 categories: ["keloglan"]
 themes: ["tutumluluk","akıllılık","yardımseverlik"]
 characters: ["Keloğlan","Nine Havva","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, denizin hemen kıyısında küçük bir köy varmış. Bu köyde Keloğlan, annesiyle birlikte yaşarmış. Keloğlan'ın başı kel olsa da yüreği sıcacık, kafası ise fıstık gibi çalışırmış.

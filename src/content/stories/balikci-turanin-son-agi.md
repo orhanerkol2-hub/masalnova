@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["paylaşma","sabır","komşuluk"]
 characters: ["Balıkçı Turan","Küçük kız Ela","Komşu Hatun Ana"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir sahil köyünde Turan adında sabırlı bir balıkçı yaşarmış. O akşam gökyüzü kararmış, ince ince yağmur yağmaya başlamış. Turan yine de teknesine binmiş, çünkü sabahtan beri hiçbir şey tutamamış, evine boş dönmek istemiyormuş.

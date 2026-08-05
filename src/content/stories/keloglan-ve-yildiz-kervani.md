@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["yardımlaşma","dayanışma","zeka"]
 characters: ["Keloğlan","Padişah","Yaşlı Kervancı Dede"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında zeki ve gönlü geniş bir delikanlı varmış. Köyün kenarındaki küçük evinde annesiyle yaşar, gündüzleri komşularına yardım eder, akşamları da damın üstüne çıkıp yıldızları sayarmış.

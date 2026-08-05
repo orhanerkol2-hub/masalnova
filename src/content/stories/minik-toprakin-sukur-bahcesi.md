@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["şükür","huzur","doğa sevgisi"]
 characters: ["Toprak","Ay Nine","küçük ateş böceği Pırıl"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbura çevrilmiş bulutların ardında küçük bir köy varmış. Bu köyde Toprak adında cesur küçük bir çocuk yaşarmış. Toprak, gündüzleri her yere koşar, kelebekleri kovalar, ama akşam olunca en sevdiği yere giderdi: çiçekli bahçesine.
@@ -34,6 +37,6 @@ Toprak, çimenlerin üzerine uzanıp battaniyesini üstüne çekti. Pırıl da y
 
 Ay Nine ona en yumuşak ışığını gönderdi, bulutlar usulca süzülüp geçti. Bahçedeki her çiçek, her yaprak, sanki onunla birlikte uykuya dalıyordu.
 
-Toprak'ın gözkapakları ağırlaştı, nefesi yavaşladı, dudaklarında hafif bir gülümseme kaldı. Bahçe sessizleşti, yıldızlar usulca parladı, rüzgâr en yumuşak ninnisini söyledi.
+Toprak'ın göz kapakları ağırlaştı, nefesi yavaşladı, dudaklarında hafif bir gülümseme kaldı. Bahçe sessizleşti, yıldızlar usulca parladı, rüzgâr en yumuşak ninnisini söyledi.
 
 İyi geceler, küçük Toprak. İyi geceler, çiçekli bahçe. İyi geceler herkese.

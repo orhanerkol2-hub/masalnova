@@ -8,11 +8,14 @@ coverColor: "#d84b3e"
 coverImage: "/covers/stories/mertin-kaybolan-kirmizi-arabasi.webp"
 altText: "Mert annesiyle odasını toplarken yatağının altında kırmızı oyuncak arabasını buluyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici"]
 themes: ["düzen","sorumluluk","oyuncak toplama","öz bakım"]
 characters: ["Mert","Anne","kırmızı araba"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Mert'in bir odası vardı. Odasında da bir sürü oyuncağı vardı.

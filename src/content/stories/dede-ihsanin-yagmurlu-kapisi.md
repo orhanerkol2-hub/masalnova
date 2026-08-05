@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["nezaket","huzur","paylaşma"]
 characters: ["Dede İhsan","küçük serçe","yorgun kedi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında, sarmaşıklarla kaplı bir ev varmış. Bu evde Dede İhsan yaşarmış. Dışarıda yağmur usulca çatıya vururmuş, tıpır tıpır, tıpır tıpır, sanki bir ninni söylermiş gökyüzü.

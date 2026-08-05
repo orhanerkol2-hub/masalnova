@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dürüstlük","güven","doğruluk"]
 characters: ["Tavşan Fındık","Kunduz Usta","Serçe Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarındaki kalabalık bir çarşıda küçük bir tavşan yaşarmış. Adı Fındık'mış. Fındık, çarşının en küçük tezgâhında havuç, lahana ve taze yeşillikler satarmış.

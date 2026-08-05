@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merhamet","huzur","yardımseverlik"]
 characters: ["Elif","küçük kedicik","büyükanne"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde, evlerin çatıları ayışığıyla yıkanırken, meraklı bir kız yaşarmış. Adı Elif'miş. Elif her gece penceresinden gökyüzüne bakar, yıldızları sayarmış, sayarmış, ama bir türlü sayısını bilemezmiş.

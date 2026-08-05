@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["çalışkanlık","dostluk","paylaşma"]
 characters: ["Fındık (köpek)","Homur (ayı)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın en güzel köşesinde küçük bir köpek yaşarmış. Adı Fındık'mış. Fındık her sabah güneş doğmadan kalkar, ormanın yollarını süpürür, düşen dalları toplar, küçük hayvanlara yardım edermiş.

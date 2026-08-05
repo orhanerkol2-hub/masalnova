@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { storyAuthors } from '../../data/authors';
+
+const aylin = storyAuthors['aylin-karabektas'];
+const muhammet = storyAuthors['muhammet-karayigit'];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -42,12 +46,36 @@ const jsonLd = {
           Her hikâye sayfasında seçim notu ve okuma sonrası konuşma soruları bulunur.
         </p>
 
-        <h2>Editör kimliği ve düzeltmeler</h2>
+        <h2>Yazarlarımız ve editoryal inceleme</h2>
         <p>
-          Yayın sorumluluğu sayfalarda <strong>MasalNova Çocuk Editör Ekibi</strong> adıyla gösterilir.
-          Özel bir kişinin adı SEO amacıyla kullanılmaz. Bir yazım hatası, uyumsuz görsel veya
-          geliştirilmesi gereken içerik fark ederseniz <a href="/iletisim/">iletişim sayfası</a>
-          üzerinden bildirebilirsiniz; gerekli düzeltmeler içerik sayfasına işlenir.
+          Her masal, hazırlayan yazarın adıyla yayımlanır. Yayımdan önce bütün masallar
+          <strong>Aylin Karabektaş</strong> ve <strong>Muhammet Karayiğit</strong> tarafından birlikte
+          gözden geçirilir. Yazar bilgisi ve editoryal inceleme kaydı her masal sayfasında açıkça gösterilir.
+        </p>
+        <div class="author-grid">
+          <section class="author-card" aria-labelledby="aylin-title">
+            <div class="author-avatar" aria-hidden="true">AK</div>
+            <div>
+              <h3 id="aylin-title">{aylin.name}</h3>
+              <p class="author-role">{aylin.role}</p>
+              <p>{aylin.bio[0]}</p>
+              <a href={aylin.profilePath}>Aylin Karabektaş’ın yazar profili</a>
+            </div>
+          </section>
+          <section class="author-card" aria-labelledby="muhammet-title">
+            <div class="author-avatar" aria-hidden="true">MK</div>
+            <div>
+              <h3 id="muhammet-title">{muhammet.name}</h3>
+              <p class="author-role">{muhammet.role}</p>
+              <p>{muhammet.bio[0]} {muhammet.bio[1]}</p>
+              <a href={muhammet.profilePath}>Muhammet Karayiğit’in yazar profili</a>
+            </div>
+          </section>
+        </div>
+        <p>
+          Bir yazım hatası, uyumsuz görsel veya geliştirilmesi gereken içerik fark ederseniz
+          <a href="/iletisim/">iletişim sayfası</a> üzerinden bildirebilirsiniz; gerekli düzeltmeler
+          içerik sayfasına işlenir.
         </p>
 
         <h2>Üyelik, gizlilik ve reklam modeli</h2>
@@ -75,5 +103,15 @@ const jsonLd = {
   .content p { margin-bottom: 14px; color: var(--ink-soft); }
   .content p a { color: var(--blue-d); font-weight: 800; text-decoration: underline; }
   .content .brand { color: var(--ink); font-weight: 700; }
+  .author-grid { display: grid; gap: 14px; margin: 18px 0; }
+  .author-card { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 15px; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: #f8faff; }
+  .author-avatar { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(145deg, #e7efff, #fff0d9); color: var(--blue-d); font-size: 1rem; font-weight: 950; }
+  .author-card h3 { margin: 0; color: var(--ink); font-size: 1.06rem; }
+  .author-card p { margin: 5px 0 8px; font-size: .92rem; line-height: 1.6; }
+  .author-card .author-role { color: var(--blue-d); font-size: .76rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+  .author-card a { color: var(--blue-d); font-size: .86rem; font-weight: 850; }
   .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+  @media (max-width: 560px) {
+    .author-card { grid-template-columns: 1fr; }
+  }
 </style>

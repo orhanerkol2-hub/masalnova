@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Dev Kırkgöz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların eteğinde küçük bir köy varmış. Bu köyde Keloğlan adında, kel kafası güneşte pırıl pırıl parlayan, ama yüreği herkesten daha yumuşak bir delikanlı yaşarmış.

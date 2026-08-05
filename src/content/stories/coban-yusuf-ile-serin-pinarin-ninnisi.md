@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["tutumluluk","huzur","şükran"]
 characters: ["Çoban Yusuf","Beyaz Koyun Pamuk","Serin Pınar"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yumuşacık tepelerin arasında serin bir pınar varmış. Bu pınarın suyu ay ışığında gümüş gibi parlarmış, akışı da bir ninni gibi usulca mırıldanırmış.

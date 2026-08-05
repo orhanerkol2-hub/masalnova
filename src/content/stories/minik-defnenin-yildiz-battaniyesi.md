@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sorumluluk","sevgi"]
 characters: ["Minik Defne","Ay Ana","yıldızlar"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir kasabada Defne adında meraklı bir kız yaşarmış. Defne her akşam penceresinden gökyüzüne bakar, yıldızların neden hep parıldadığını düşünürmüş.

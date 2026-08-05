@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","yardımlaşma"]
 characters: ["Çoban Ali","Komşu Fadime Teyze","Küçük koyun Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Geniş bir çayırda otlayan koyunların arasında Pamuk adında küçük bir koyun vardı. Boynundaki küçük çan, her adımında çınlardı.

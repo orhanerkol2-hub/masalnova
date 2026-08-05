@@ -13,6 +13,9 @@ categories: ["uyku","hayvan","egitici"]
 themes: ["geriye sayma","sakinleşme","gece","yavaşlama"]
 characters: ["Işıltı","Kurbağa","Su Kaplumbağası"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---
 Bir nehir vardı.

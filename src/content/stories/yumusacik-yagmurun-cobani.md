@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["cesaret","sevgi","huzur"]
 characters: ["Deniz çoban","Pamuk kuzu"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yeşil bir vadide Deniz adında iyi kalpli bir çoban yaşarmış. O akşam gökyüzü yumuşacık bulutlarla örtülmüş, ince bir yağmur usulca toprağa değmeye başlamış.
@@ -28,7 +31,7 @@ Deniz, diğer kuzularına da birer birer bakmış, her birinin üstüne yumuşak
 
 "Cesur olmak," demiş Deniz fısıltıyla, "korkmamak değildir küçük Pamuk. Cesur olmak, korktuğun anda bile sevdiklerinin yanında sakince durabilmektir."
 
-Pamuk, bu sözleri dinlerken gözkapakları ağırlaşmış. Yağmurun tıpırtısı, ayın yumuşak ışığı ve çobanın sıcak sesi birleşmiş, bir ninniye dönüşmüş.
+Pamuk, bu sözleri dinlerken göz kapakları ağırlaşmış. Yağmurun tıpırtısı, ayın yumuşak ışığı ve çobanın sıcak sesi birleşmiş, bir ninniye dönüşmüş.
 
 Ahırın içi ılık ve sessizmiş artık. Yağmur damlaları çatıya usulca vuruyor, her damla bir uyku şarkısı gibi yankılanıyormuş. Deniz, en son kez kuzularına bakmış, hepsi mışıl mışıl uyumaya başlamış.
 

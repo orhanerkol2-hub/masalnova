@@ -13,6 +13,9 @@ characters: ["Keloğlan"]
 relatedVideoIds: ["Ugd4Pfgln30"]
 isFeatured: true
 isPopular: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-08"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde Keloğlan annesiyle küçük bir köyde yaşarmış. Evleri küçükmüş ama içi sevgiyle dolu, tencereleri kimi zaman boş kalsa da yürekleri hep cömertmiş.

@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["merhamet","cesaret","yardımseverlik"]
 characters: ["Deniz","Yarasa Fofo"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, kıyı köyünün kenarında karanlık bir mağara varmış. Köydeki çocuklar bu mağaraya girmeye korkarmış, çünkü içeriden garip sesler gelirmiş. Ama Deniz adında küçük bir çocuk hiç korkmazmış, çünkü kalbi her zaman meraktan ve iyilikten yana atarmış.

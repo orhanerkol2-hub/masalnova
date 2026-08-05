@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sorumluluk","şefkat","huzur"]
 characters: ["Elma","Serçe Cik","Nine Kadife"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kar taneleri gökten usulca süzülürmüş. Küçük Elma, penceresinden bu beyaz tüyleri seyredermiş, gözleri merakla parıldarmış.

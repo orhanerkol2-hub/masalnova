@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sözünde durmak","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Nine Ayşe","Padişah'ın Adamı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında zeki ve yufka yürekli bir delikanlı yaşarmış. Kel başı güneşte parlar, ama gülen gözleri ondan daha çok parlarmış. Köyün herkesi onu severmiş, çünkü Keloğlan hem şakacı hem de sözüne güvenilir bir çocukmuş.

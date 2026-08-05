@@ -8,11 +8,14 @@ coverColor: "#e4a72b"
 coverImage: "/covers/stories/ordek-yavrusu-paytak-suya-giriyor.webp"
 altText: "Ördek yavrusu Paytak, annesinin yanında sakin gölette ilk kez yüzüyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["özgüven","azim","cesaret","pes etmemek"]
 characters: ["Paytak","Anne Ördek","Vırvır","Paytak’ın kardeşleri"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Söğüt ağacının altında küçük bir gölet vardı. Göletin kenarında bir ördek ailesi yaşardı.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["şükür","kanaat","dayanışma"]
 characters: ["Turgut","Simitçi Rana Teyze","Baba"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, çok kalabalık bir çarşı varmış. Bu çarşıda tezgahlar bal gibi renklerle dolarmış; kırmızı elmalar, sarı ayvalar, mis kokulu simitler yan yana dururmuş.

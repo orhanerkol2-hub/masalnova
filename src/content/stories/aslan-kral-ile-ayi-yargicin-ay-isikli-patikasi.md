@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["adalet","paylaşma","dostluk"]
 characters: ["Aslan Kral","Ayı Bumbum","Baykuş Öğretmen"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en ucunda, ay ışığında pırıl pırıl parlayan bir patika varmış. Bu patikanın kenarında da tek bir elma ağacı büyürmüş; dallarında kıpkırmızı, tatlı elmalar sallanırmış.

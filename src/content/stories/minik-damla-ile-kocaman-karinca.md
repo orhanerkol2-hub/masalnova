@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["alçakgönüllülük","dostluk","yardımlaşma"]
 characters: ["Karınca Toprak","Böcek Badem","Pınar Perisi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en serin köşesinde küçük bir pınar varmış. Bu pınarın çevresinde birbirinden sevimli hayvanlar yaşarmış. İçlerinden biri, Toprak adında küçük ama çok çalışkan bir karıncaymış.

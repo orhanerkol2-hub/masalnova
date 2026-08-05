@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sabır","merak"]
 characters: ["Nehir","Baykuş Baba"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında Nehir adında meraklı küçük bir kız yaşarmış. Nehir her gün ormana girer, çiçekleri koklar, böcekleri izlermiş.

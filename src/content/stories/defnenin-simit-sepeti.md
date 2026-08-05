@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["paylaşma","dostluk","empati"]
 characters: ["Defne","Balıkçı Rüstem","Ördek ailesi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, ormanın kenarında öyle sakin bir göl varmış ki, suyu ayna gibi parlarmış. Bu gölün kıyısında yaşayan Defne adında meraklı bir kız, her sabah babasının pişirdiği sıcak simitlerden birkaçını sepetine koyup göle gitmeyi çok severmiş.

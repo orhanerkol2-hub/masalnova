@@ -8,11 +8,14 @@ coverColor: "#7558b8"
 coverImage: "/covers/stories/ay-dede-ile-uyumak-istemeyen-kuzu.webp"
 altText: "Kuzu Yumak annesinin yanında uyurken Ay Dede ağıldan içeri ışık saçıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["aile sevgisi","güven","uyku rutini","huzur"]
 characters: ["Yumak","Anne Koyun","Ay Dede","Işıl"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Dağın eteğinde bir ağıl vardı. Ağılda koyunlar, ağılın en köşesinde de küçük bir kuzu yaşardı. Adı Yumak'tı.

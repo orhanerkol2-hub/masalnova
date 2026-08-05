@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["çalışkanlık","sabır","dostluk"]
 characters: ["Tombik","Nilüfer Teyze Kaplumbağa","Minik Baykuş Huhu"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında öyle sakin bir göl varmış ki, suyu ayna gibi parıldarmış. Bu gölün kıyısında Tombik adında şirin bir yavru fil yaşarmış. Tombik'in en sevdiği şey, gölün kenarında uzanıp gökyüzündeki bulutları saymakmış.

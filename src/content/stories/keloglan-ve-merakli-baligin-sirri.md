@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["merak","dostluk","dürüstlük"]
 characters: ["Keloğlan","Konuşan Balık","Yaşlı Nine"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında sakin, aynadan daha parlak bir göl varmış. Bu gölün suyu o kadar duruymuş ki içine bakan herkes kendi yüzünü, gökyüzünü ve bulutları bir arada görürmüş.

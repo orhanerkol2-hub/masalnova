@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["paylaşma","dostluk"]
 characters: ["Homur (ayı)","Pamuk (kedi)"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın en tepesinde küçük bir kulübe varmış. Bu kulübede iri ama yumuşak yürekli bir ayı olan Homur ile ufacık, meraklı bir kedi olan Pamuk birlikte yaşarmış.

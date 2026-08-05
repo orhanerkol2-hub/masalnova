@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["çalışkanlık","azim"]
 characters: ["Kaya","Balıkçı Dede Hasan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarında sakin bir göl varmış. Bu gölün suyu ayna gibi parlar, kıyısında kuşlar şarkı söylermiş.

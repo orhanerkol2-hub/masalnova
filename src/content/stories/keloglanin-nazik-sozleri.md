@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["nezaket","paylaşma","dostluk"]
 characters: ["Keloğlan","yaşlı kadın","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında bir çocuk yaşarmış. Kel kafası güneşte pırıl pırıl parlar, ama gönlü kafasından da parlak olurmuş. Annesiyle küçük bir evde yaşarlar, ellerindeki azıcık ekmeği bile komşularıyla bölüşürlermiş.

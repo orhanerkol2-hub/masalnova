@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["merak","sabır"]
 characters: ["Balıkçı Tayfun","Küçük martı Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir sahil köyünde Tayfun adında sabırlı bir balıkçı yaşarmış. Tayfun her sabah güneşle beraber tekneye biner, akşama kadar sessizce oltasını sallar, hiç acele etmezmiş. Köylüler ona "En sabırlı balıkçı" derlermiş, çünkü Tayfun bir balığın ısırmasını saatlerce beklemekten hiç sıkılmazmış.

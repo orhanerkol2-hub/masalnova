@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["affetmek","huzur","sevgi"]
 characters: ["Dede Sadık","küçük Elif"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyün kenarında yıldızlı bir bahçe varmış. Bu bahçede yaşlı, bilge bir dede otururmuş; adı Dede Sadık'mış. Her akşam, torunu küçük Elif'i yanına alır, birlikte yumuşak battaniyelere sarınıp gökyüzünü seyrederlermiş.
@@ -30,7 +33,7 @@ Elif, bu sözleri dinlerken içinin ısındığını hissetmiş. Kardeşine kır
 
 Dede Sadık, Elif'in saçlarını okşamış. Gökyüzünde ay usulca kaymış, yıldızlar birer birer göz kırpmış. Rüzgâr, ağaçların yapraklarını hafifçe sallayarak bir ninni mırıldanıyormuş sanki.
 
-Elif'in gözkapakları ağırlaşmış, nefesleri sakinleşmiş. Dede Sadık, onu battaniyeye daha sıkı sarmış ve alnından öpmüş.
+Elif'in göz kapakları ağırlaşmış, nefesleri sakinleşmiş. Dede Sadık, onu battaniyeye daha sıkı sarmış ve alnından öpmüş.
 
 "Uyu bakalım yıldızım," demiş fısıltıyla. "Kalbin hep sevgiyle, gökyüzün hep yıldızlarla dolu olsun."
 

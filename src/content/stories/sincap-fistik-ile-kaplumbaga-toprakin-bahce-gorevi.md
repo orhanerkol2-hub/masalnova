@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["sorumluluk","dostluk","sabır"]
 characters: ["Fıstık (sincap)","Toprak (kaplumbağa)"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, rengarenk çiçeklerle dolu bir bahçe varmış. Bu bahçede yaşayan hayvanlar, her sabah sırayla çiçekleri sulamak, yaprakları temizlemek ve düşen tohumları toplamakla görevliymiş.

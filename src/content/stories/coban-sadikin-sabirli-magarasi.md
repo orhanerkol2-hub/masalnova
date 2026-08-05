@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sabır","huzur","dostluk"]
 characters: ["Çoban Sadık","Küçük kuzu Pamuk","Mağaranın yumuşak sesi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yumuşak tepelerin arkasında, ay ışığının sessizce süzüldüğü bir vadide iyi kalpli bir çoban yaşarmış. Adı Sadık'mış. Sadık, her akşam kuzularını toplar, onları sıcacık örtülerle örter ve yıldızların altında usulca ninni söylermiş.

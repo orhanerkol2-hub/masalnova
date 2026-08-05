@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["alçakgönüllülük","dostluk","dürüstlük"]
 characters: ["Keloğlan","Dağ Devi","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında akıllı ve şen bir çocuk varmış. Annesiyle küçük bir köyde yaşarmış, gel gelelim köylerinde para pul namına hiçbir şey bulunmazmış.

@@ -13,6 +13,9 @@ categories: ["kisa", "egitici", "hayvan"]
 themes: ["paylaşma", "merhamet", "umut"]
 characters: ["Elif", "Çil Keklik", "Köylüler"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Evvel zaman içinde, kalbur saman içinde bir köy varmış. O köyün ortasında bir kuyu, kuyunun başında da bir söğüt varmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["merak","dostluk","paylaşma"]
 characters: ["Puf the Baykuş","Fısıltı adlı tilki","Minik sincap Ceviz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, karlı bir ormanın en yüksek çam ağacında Puf adında meraklı bir baykuş yaşarmış. Puf'un gözleri tıpkı iki altın düğme gibi parlarmış, çünkü o her şeyi görmek, her şeyi bilmek istermiş.

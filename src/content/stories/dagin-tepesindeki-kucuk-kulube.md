@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["yardımlaşma","paylaşma","huzur"]
 characters: ["Bilge Dede","Küçük Tavşan","Ufak Baykuş"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağların en tepesinde, bulutların hemen altında küçücük bir kulübe varmış. Bu kulübede yaşlı ve bilge bir dede yaşarmış. Dedenin gözleri ay ışığı gibi yumuşak, sesi ise ninni gibi tatlıymış.

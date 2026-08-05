@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["dürüstlük","cesaret","sorumluluk"]
 characters: ["Toprak Ali","Bahçıvan Naciye Teyze","Sincap Fındık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarındaki küçük köyde Toprak Ali adında cesur bir çocuk yaşarmış. Ali, ormanın en gözü pek çocuğuymuş; en yüksek ağaçlara tırmanır, en derin patikalara girer, hiçbir şeyden korkmazmış.

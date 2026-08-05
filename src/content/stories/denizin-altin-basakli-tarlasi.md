@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["azim","huzur","sabır"]
 characters: ["Deniz","Dede Rüzgâr","Küçük Baykuş"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının usulca aydınlattığı bir tarlada, altın başaklar rüzgârla nazikçe sallanırmış. Bu tarlanın hemen kenarında, cesur küçük bir çocuk yaşarmış. Adı Deniz'miş.
@@ -32,6 +35,6 @@ Gökyüzündeki yıldızlar birer birer parlamaya başlamış, sanki Deniz'e nin
 
 Dede Rüzgâr son bir kez esmiş, başakları usulca sallamış. "Uyu bakalım küçük dostum," demiş fısıltıyla. "Yarın güneş yeniden doğacak, sen de yine gülümseyeceksin."
 
-Deniz'in gözkapakları ağırlaşmış, minik bir esneme daha yapmış. Küçük Baykuş son bir "huu" demiş, sonra o da sessizleşmiş. Tarla, ay ışığı altında sakin sakin uyumaya devam etmiş.
+Deniz'in göz kapakları ağırlaşmış, minik bir esneme daha yapmış. Küçük Baykuş son bir "huu" demiş, sonra o da sessizleşmiş. Tarla, ay ışığı altında sakin sakin uyumaya devam etmiş.
 
 Deniz gözlerini yavaşça kapatmış, altın başakların hışırtısını dinleyerek huzur içinde uykuya dalmış. İyi geceler, küçük dostlar, iyi geceler.

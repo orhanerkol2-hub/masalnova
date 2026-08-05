@@ -8,11 +8,14 @@ coverColor: "#355ba8"
 coverImage: "/covers/stories/serce-civil-ile-bilge-baykus.webp"
 altText: "Minik serçe Cıvıl, ay ışığındaki dut dalında Bilge Baykuş ile konuşuyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["cesaret","karanlık korkusu","güven","huzur"]
 characters: ["Cıvıl","Bilge Baykuş","Anne Serçe"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Köyün girişindeki dut ağacının en üst dalında bir yuva vardı. Yuvada minik bir serçe yaşardı. Adı Cıvıl'dı.

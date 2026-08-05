@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["alçakgönüllülük","paylaşma","emek"]
 characters: ["Nine Havva","küçük Toprak","Muhtar Kemal"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, güneşin her sabah ilk ışıklarını gönderdiği bir köyde altın başaklı kocaman bir tarla varmış. Bu tarlanın en güzel köşesinde Nine Havva yaşarmış. Nine Havva'nın buğdayları köyün en sarı, en dolgun başaklarıymış ama o bundan hiç böbürlenmezmiş.

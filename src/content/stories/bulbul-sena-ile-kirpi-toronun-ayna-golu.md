@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["alçakgönüllülük","dostluk","paylaşma"]
 characters: ["Bülbül Sena","Kirpi Toron","Kaplumbağa Tekir"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında öyle sakin bir göl varmış ki, suyu ayna gibi parlarmış. Kuşlar buraya gelip yüzlerini suda seyredermiş, balıklar aralarında fısıldaşırmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["tutumluluk","sabır","paylaşma"]
 characters: ["Balıkçı Rasim","Küçük Elif","Köy halkı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların eteğinde küçük bir köy varmış. O yıl kış çok sert geçiyormuş. Göl baştan başa buz tutmuş, tarlalar bembeyaz karla örtülüymüş.

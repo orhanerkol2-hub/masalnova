@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["dostluk","paylaşma","yardımlaşma"]
 characters: ["Çoban Reşat","Fırıncı Kâmil","köylüler"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir dağ köyünde Reşat adında iyi kalpli bir çoban yaşarmış. Reşat, her sabah koyunlarını yeşil çayıra götürür, akşam olunca yorgun adımlarla köye dönermiş. Ama köyde tanıdığı çok kişi yokmuş, çünkü sürüsüyle hep dağlarda gezermiş.

@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["şükür","paylaşma","kanaat"]
 characters: ["Nine Fadime","Küçük Ela"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğinde serin bir pınar varmış. Bu pınarın başında her sabah Nine Fadime otururmuş, testisini doldurup köyüne dönermiş.

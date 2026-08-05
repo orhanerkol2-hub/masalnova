@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","paylaşma","sabır"]
 characters: ["Balıkçı Sami","Terzi Ayşe","Küçük Deniz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, denizin kıyısında küçük bir köy varmış. Bu köyde Sami adında sabırlı bir balıkçı yaşarmış. Sami her sabah güneş doğmadan kalkar, ağını sırtına alır, tekneye biner ve saatlerce sessizce beklermiş. Bazen balık hemen gelirmiş, bazen de öğleye kadar tek bir yüzgeç bile görünmezmiş. Ama Sami hiç şikayet etmez, sabırla beklermiş.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["şükür","paylaşma","dostluk"]
 characters: ["Batu","Cıvı","Martı Deniz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısındaki kumluk tepenin eteğinde iki kirpi kardeş yaşarmış. Büyük olanının adı Batu, küçüğünün adı Cıvı'ymış. İkisi de dikenli sırtlarını güneşte ısıtmayı, sonra da yiyecek toplamaya çıkmayı çok severlermiş.

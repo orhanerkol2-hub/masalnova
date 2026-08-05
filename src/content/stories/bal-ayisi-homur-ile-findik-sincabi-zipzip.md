@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["şükür","dostluk","paylaşma"]
 characters: ["Homur (ayı)","Zipzip (sincap)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın en derin köşesinde gizemli bir mağara varmış. Bu mağaranın duvarları ay ışığında hafifçe parlar, içinden tatlı bir su sesi gelirmiş. Ormandaki hayvanlar bu mağaraya "Fısıltı Mağarası" dermiş, çünkü içeri girenler bir süre sonra kalplerinin sesini duyarmış.

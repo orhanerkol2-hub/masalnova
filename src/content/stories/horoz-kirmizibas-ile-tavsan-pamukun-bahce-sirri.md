@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["yardımlaşma","dostluk","alçakgönüllülük"]
 characters: ["Horoz Kırmızıbaş","Tavşan Pamuk","Arı Bala"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, rengarenk çiçeklerle dolu bir bahçede Horoz Kırmızıbaş yaşarmış. Kırmızıbaş, sabahları en gür sesiyle öterdi ve bahçedeki en gösterişli tüylere sahip olduğunu düşünürmüş. "Ben olmasam güneş bile doğmaz!" derdi gururla.

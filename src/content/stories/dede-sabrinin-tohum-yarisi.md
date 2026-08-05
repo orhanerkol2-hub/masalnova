@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["sabır","doğa","emek"]
 characters: ["Dede Sabri","Fındık (tavşan yavrusu)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, geniş bir çayırın kenarında Dede Sabri adında yaşlı bilge bir dede yaşarmış. Her sabah çayıra gelir, toprağa küçük tohumlar ekermiş.

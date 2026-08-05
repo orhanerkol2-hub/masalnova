@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import { STORY_AUTHOR_IDS, getStoryAuthor } from '../../data/authors';
+import { getStories } from '../../data/stories';
+
+export function getStaticPaths() {
+  return STORY_AUTHOR_IDS.map((id) => ({ params: { slug: id }, props: { author: getStoryAuthor(id) } }));
+}
+
+const { author } = Astro.props;
+const stories = (await getStories()).filter((story) => story.data.author === author.id);
+const profileUrl = `https://masalnova.com${author.profilePath}`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${profileUrl}#profile`,
+  url: profileUrl,
+  name: `${author.name} – Yazar ve Editör | MasalNova`,
+  inLanguage: 'tr-TR',
+  mainEntity: {
+    '@type': 'Person',
+    '@id': `${profileUrl}#person`,
+    name: author.name,
+    jobTitle: author.role,
+    description: author.shortBio,
+    url: profileUrl,
+    worksFor: { '@id': 'https://masalnova.com/#organization' },
+  },
+};
+---
+<BaseLayout
+  title={`${author.name} – Yazar ve Editör | MasalNova`}
+  description={`${author.name} hakkında bilgi, MasalNova’daki editoryal rolü ve hazırladığı masallar.`}
+  path={author.profilePath}
+  jsonLd={jsonLd}
+  activeNav=""
+>
+  <section class="profile-section">
+    <div class="container profile-shell">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Ana Sayfa</a><span>›</span><a href="/hakkimizda/">Hakkımızda</a><span>›</span><span>{author.name}</span>
+      </nav>
+
+      <article class="profile-card">
+        <div class="profile-avatar" aria-hidden="true">{author.name.split(' ').map((part) => part[0]).join('')}</div>
+        <div>
+          <p class="eyebrow">MasalNova · Yazar profili</p>
+          <h1>{author.name}</h1>
+          <p class="role">{author.role}</p>
+          {author.bio.map((paragraph) => <p>{paragraph}</p>)}
+          <p class="review-note">
+            <strong>Editoryal süreç:</strong> MasalNova’da yayımlanan her masal, Aylin Karabektaş ve Muhammet Karayiğit tarafından birlikte gözden geçirilir.
+          </p>
+        </div>
+      </article>
+
+      <section class="authored" aria-labelledby="authored-title">
+        <p class="eyebrow">Yazarın MasalNova çalışmaları</p>
+        <h2 id="authored-title">{author.name} tarafından hazırlanan masallar</h2>
+        <p>{stories.length} yayımlanmış masal</p>
+        <div class="grid grid-3">
+          {stories.slice(0, 12).map((story) => <StoryCard story={story} />)}
+        </div>
+        {stories.length > 12 && <a class="btn btn-secondary" href="/masallar/">Tüm masalları keşfet</a>}
+      </section>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .profile-section { padding: 26px 0 56px; }
+  .profile-shell { max-width: 1040px; }
+  .crumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; color: var(--ink-soft); font-size: .86rem; }
+  .crumbs a { color: var(--blue-d); font-weight: 800; }
+  .profile-card { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 26px; padding: clamp(24px, 5vw, 44px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-lg); }
+  .profile-avatar { display: grid; place-items: center; width: 112px; height: 112px; border-radius: 50%; background: linear-gradient(145deg, #e8efff, #fff1dc); color: var(--blue-d); font-size: 2rem; font-weight: 950; }
+  .eyebrow { margin: 0 0 6px; color: var(--blue-d); font-size: .76rem; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+  h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
+  .role { margin: 5px 0 18px; color: var(--ink); font-weight: 900; }
+  .profile-card p:not(.eyebrow, .role) { max-width: 68ch; color: var(--ink-soft); line-height: 1.75; }
+  .review-note { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: #f4f7ff; }
+  .authored { margin-top: 38px; }
+  .authored h2 { margin: 0 0 6px; }
+  .authored > p:not(.eyebrow) { margin: 0 0 18px; color: var(--ink-soft); }
+  .authored .btn { margin-top: 22px; }
+  @media (max-width: 640px) {
+    .profile-card { grid-template-columns: 1fr; }
+    .profile-avatar { width: 86px; height: 86px; font-size: 1.5rem; }
+  }
+</style>

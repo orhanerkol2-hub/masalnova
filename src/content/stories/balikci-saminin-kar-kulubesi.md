@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["yardımlaşma","sabır","paylaşma"]
 characters: ["Balıkçı Sami","Tilki Turna","Küçük Serçe Cıvık"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dondurucu bir kış gelmiş ufacık bir göl kasabasına. Kasabanın kıyısında yaşayan Balıkçı Sami, her sabah buzu delip sabırla oltasını sallarmış. Bazen saatlerce hiçbir şey yakalayamaz, ama hiç sızlanmaz, sadece gülümser ve beklermiş.

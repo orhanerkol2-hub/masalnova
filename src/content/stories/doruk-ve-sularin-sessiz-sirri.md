@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["affetmek","dostluk","empati"]
 characters: ["Doruk","Elmas","Gölün Kaplumbağası Sedef"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağların eteğinde, ağaçların arasında sakin bir göl varmış. Bu göl o kadar durgunmuş ki içine bakan herkes kendi yüzünü ayna gibi görürmüş. Köyün en cesur çocuğu Doruk, her sabah bu göle gelir, kıyıdaki büyük kayanın üstüne oturup suyu izlermiş.

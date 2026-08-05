@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["yardımlaşma","paylaşma","huzur"]
 characters: ["Değirmenci Dede Hasan","Küçük Tavşan Pamuk","Baykuş Hulki"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, uzak bir vadinin kıyısında eski bir değirmen varmış. Bu değirmende Hasan Dede yaşarmış; sakalı ay ışığı gibi beyaz, elleri un gibi yumuşakmış.

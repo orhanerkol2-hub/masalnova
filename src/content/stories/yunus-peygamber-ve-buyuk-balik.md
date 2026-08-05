@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Saffât suresi 139–148; Enbiyâ suresi 87–88"
 sourceUrl: "https://quran.com/21/87-88"
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

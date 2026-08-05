@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["affetmek","dürüstlük","iyilik"]
 characters: ["Keloğlan","Nine Ayşe","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, güneşin ışıklarını en son gören bir köyde Keloğlan yaşarmış. Bu köyde altın başaklı bir tarla varmış; başaklar rüzgârda sallandığında sanki gerçekten altından yapılmış gibi ışıldarmış. O tarla, köyün en yaşlı ve en sevecen kadınına, Nine Ayşe'ye aitmiş.

@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Enbiyâ 51–70; En'âm 76–79; Sâffât 83–98; Buhârî 4563"
 sourceUrl: "https://quran.com/21/51-70"
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

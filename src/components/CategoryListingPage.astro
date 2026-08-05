@@ -42,7 +42,14 @@ const jsonLd = [
   },
 ];
 ---
-<BaseLayout title={title} description={description} path={path} jsonLd={jsonLd} activeNav={isIslamic ? 'islami' : 'masallar'} robots={category.key === 'kisa' ? 'noindex, follow' : undefined}>
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  jsonLd={jsonLd}
+  activeNav={isIslamic ? 'islami' : 'masallar'}
+  robots={page > 1 || category.key === 'kisa' ? 'noindex, follow' : undefined}
+>
   <section class:list={['section', 'category-page', { 'category-page--islami': isIslamic }]}>
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb">

@@ -13,6 +13,9 @@ categories: ["egitici"]
 themes: ["sorumluluk", "dürüstlük", "doğayı korumak"]
 characters: ["Sedef", "Musa Reis", "Deniz Kaplumbağası", "İbrahim"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Az gittim, uz gittim; dere tepe düz gittim. Altı ay bir güz gittim, bir de dönüp arkama baktım ki bir arpa boyu yol gitmişim.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["tutumluluk","cesaret","paylaşma"]
 characters: ["Barış","Annesi","Bakkal Rıdvan Amca"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada Barış adında cesur bir çocuk yaşarmış. Barış, her hafta harçlığından biraz ayırıp masasının üstündeki cam kavanoza atarmış. Kavanoz azar azar dolarmış, o da her bozuk parayı severek içine bırakırmış.

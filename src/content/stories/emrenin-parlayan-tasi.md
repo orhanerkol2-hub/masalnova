@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["alçakgönüllülük","cesaret"]
 characters: ["Emre","Baykuş Huhu"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığında uzanan dar bir patika varmış. Bu patikadan geçmek çok cesaret istermiş, çünkü gölgeler uzun uzun sallanırmış.

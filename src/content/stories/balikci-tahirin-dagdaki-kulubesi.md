@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","sabır"]
 characters: ["Balıkçı Tahir","Küçük kız Ela"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğindeki gölün kenarında sabırlı bir balıkçı yaşarmış. Adı Tahir'miş. Her sabah gölün üstündeki dağa çıkar, oradaki küçük tahta kulübeyi kontrol edermiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merhamet","huzur","paylaşma"]
 characters: ["Bahçıvan Sadık","Küçük tavşan","Ay"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, geniş bir çayırın kenarında güler yüzlü bir bahçıvan yaşarmış. Adı Sadık'mış. Her akşam, güneş usulca batarken elinde küçük bir sulama kabıyla çayıra çıkar, çiçeklere ve otlara nazikçe su verirmiş.

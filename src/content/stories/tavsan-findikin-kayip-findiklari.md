@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dürüstlük","dostluk","özgüven"]
 characters: ["Tavşan Fındık","Sincap Civciv","Baykuş Hikmet"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın en güneşli köşesinde Fındık adında küçük bir tavşan yaşarmış. Fındık, kış için topladığı fındıkları büyük bir taşın altına saklarmış ve her sabah gidip onları sayarmış.

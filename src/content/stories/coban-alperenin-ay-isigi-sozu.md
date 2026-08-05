@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sözünde durmak","sakinlik","şükran"]
 characters: ["Çoban Alperen","Küçük kuzu Pamuk","Ay Dede"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yumuşak tepelerin arasında, ay ışığının her gece sessizce süzüldüğü bir vadi varmış. Bu vadide Alperen adında iyi kalpli bir çoban yaşarmış. Alperen, koyunlarını her akşam yavaşça vadinin ucundaki gizemli mağaraya götürür, orada dinlendirirmiş.

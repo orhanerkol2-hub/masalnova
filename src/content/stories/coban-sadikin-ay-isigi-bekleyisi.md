@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sabır","umut"]
 characters: ["Çoban Sadık","küçük kuzu"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğinde Sadık adında iyi kalpli bir çoban yaşarmış. Her akşam sürüsünü toplar, köye doğru ay ışığında uzanan patikadan geçerek evine dönermiş.

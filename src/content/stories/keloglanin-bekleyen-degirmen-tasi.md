@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sabır","çalışkanlık","dürüstlük"]
 characters: ["Keloğlan","Değirmenci Dede","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğindeki köyde Keloğlan adında bir çocuk yaşarmış. Kel kafası güneşte parıldar, ama yüreği herkesten sıcak olurmuş. Köylüler onu severmiş, çünkü Keloğlan hep yardıma koşar, kimseden bir şey esirgemezmiş.

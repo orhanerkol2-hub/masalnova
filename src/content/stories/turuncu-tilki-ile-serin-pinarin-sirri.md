@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["affetmek","dostluk","paylaşmak"]
 characters: ["Turuncu Tilki Fındık","Kaplumbağa Sarı","Baykuş Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde serin bir pınar varmış. Bu pınarın suyu öyle tatlıymış ki, ormandaki bütün hayvanlar susayınca oraya koşarmış.

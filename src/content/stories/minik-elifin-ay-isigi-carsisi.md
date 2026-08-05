@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["cesaret","merak","huzur"]
 characters: ["Minik Elif","Ay Amca","Yıldız Böceği Pır Pır"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ay ışığının her gece sessizce bastığı küçük bir kasaba varmış. Bu kasabanın ortasında, güneş batınca ışıl ışıl parlayan sakin bir çarşı kurulurmuş.

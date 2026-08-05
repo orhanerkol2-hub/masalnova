@@ -6,6 +6,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Consent from '../components/Consent.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ReaderTrustFooter from '../components/ReaderTrustFooter.astro';
 
 interface Props {
   title: string;
@@ -100,7 +101,7 @@ const useAppShell = appShell ?? !readerPage;
     <main id="main">
       <slot />
     </main>
-    {!readerPage && <Footer />}
+    {readerPage ? <ReaderTrustFooter /> : <Footer />}
     <script is:inline>
       {`
         if ('serviceWorker' in navigator && location.protocol === 'https:') {

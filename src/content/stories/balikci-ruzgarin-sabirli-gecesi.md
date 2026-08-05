@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["nezaket","sabır"]
 characters: ["Balıkçı Rüzgar","küçük gümüş balık","Ay"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında serin bir pınar varmış. Bu pınarın suyu, ay ışığında gümüş gibi parıldarmış. Pınarın kıyısında, her akşam usulca oturan sabırlı bir balıkçı yaşarmış. Adı Rüzgar'mış.
@@ -30,6 +33,6 @@ Küçük balık, suyun içinde usulca sallanmış, gözleri ağırlaşmış. Pı
 
 Rüzgar Amca da gülümsemiş, battaniyesini omzuna çekmiş. Ay ışığı, ikisinin üzerine yumuşacık bir örtü gibi inmiş. Pınarın suyu usul usul akarmış, sanki bir ninni söylüyormuş gibi.
 
-Rüzgar Amca'nın gözkapakları da ağırlaşmış, uykunun tatlı sıcaklığı onu sarmış. Yıldızlar gökyüzünde parıldarken, pınar kenarında herkes huzurla uyumuş.
+Rüzgar Amca'nın göz kapakları da ağırlaşmış, uykunun tatlı sıcaklığı onu sarmış. Yıldızlar gökyüzünde parıldarken, pınar kenarında herkes huzurla uyumuş.
 
 İyi geceler, küçük dostlarım. İyi geceler.

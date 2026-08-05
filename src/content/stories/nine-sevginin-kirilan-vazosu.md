@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["affetmek","şefkat"]
 characters: ["Nine Sevgi","Minik Ela"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, çiçekli bir bahçenin ortasında küçük bir ev varmış. Bu evde Nine Sevgi yaşarmış. Bahçesinde güller, laleler ve rengarenk papatyalar açarmış. Nine Sevgi'nin en sevdiği şey ise, annesinden kalan mavi çini vazoymuş. Bu vazoyu her sabah taze çiçeklerle doldururmuş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["cesaret","huzur","sevgi"]
 characters: ["Deniz","Ay Dede","küçük baykuş Puf"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında, yumuşak çimenlerin üstünde ay ışığında parlayan bir patika varmış. Bu patika, gece olunca gümüş rengine bürünür, üzerinde yürüyenleri usulca sallar gibi ışıldarmış.

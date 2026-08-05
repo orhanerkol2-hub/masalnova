@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["dostluk","paylaşma","işbirliği"]
 characters: ["Fırıncı Sedat","Bahçıvan Nazif","küçük kız Elmas"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabanın orta yerinde mis kokulu bir fırın varmış. Bu fırının sahibi Sedat, sabah ezanıyla birlikte kalkar, hamuru yoğurur, fırının kapağını açar açmaz bütün sokağı taze ekmek kokusu doldururmuş.

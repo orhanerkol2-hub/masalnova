@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["çalışkanlık","sabır","emek"]
 characters: ["Balıkçı Fikret","Küçük Ali","Köy halkı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, göl kenarındaki küçük bir köyde Fikret adında yaşlı bir balıkçı yaşarmış. Fikret Amca, köyün en çalışkan adamıymış. Diğer balıkçılar hava soğuyunca kulübelerine kapanır, ateşin başında otururken, o gölün buzunu delip yine oltasını sallarmış.

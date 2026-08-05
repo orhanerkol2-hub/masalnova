@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["affetmek","şefkat","dostluk"]
 characters: ["Nine Sevda","küçük Toprak"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün ortasında mis kokulu bir fırın varmış. Bu fırını şefkatli Nine Sevda işletirmiş. Her sabah hamurları yoğurur, fırının kapısını açtığında bütün sokak taze çörek kokusuyla dolarmış.

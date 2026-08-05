@@ -8,11 +8,14 @@ coverColor: "#8b5b3f"
 coverImage: "/covers/stories/bremen-mizikacilari-ve-yeni-bir-ev.webp"
 altText: "Eşek, köpek, kedi ve horozun sıcak soba başında birlikte müzik yaptığı Bremen Mızıkacıları masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 3
 categories: ["uyku", "hayvan"]
 themes: ["dostluk", "öz değer", "aidiyet"]
 characters: ["Eşek", "Köpek", "Kedi", "Horoz"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Bir çiftlikte yaşlı bir eşek vardı. Artık eskisi kadar çok çalışamadığı için üzgündü ama pes etmedi. “Belki Bremen şehrine gidip müzisyen olurum,” dedi kendi kendine ve yola çıktı.

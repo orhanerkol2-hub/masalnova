@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merak","şefkat","huzur"]
 characters: ["Nine Yasemin","küçük Deniz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, akşam olduğunda ışıkları yumuşacık parlayan bir çarşı varmış. Bu çarşıda Nine Yasemin, küçük torunu Deniz'in elini tutar, taş döşeli sokaklarda ağır ağır yürürmüş.
@@ -30,7 +33,7 @@ Nine Yasemin, yorganı Deniz'in üstüne çekmiş, saçlarını okşamış. "Ç�
 
 Fenerin ışığı yavaşça sallanıyormuş, sanki bir beşik gibi. Dışarıda çarşının sesleri de azalmış, artık sadece uzaktan gelen hafif bir rüzgâr sesi varmış.
 
-Deniz'in gözkapakları ağırlaşmış. Nine Yasemin alçak sesle bir ninni mırıldanmış, sözleri ay ışığı gibi yumuşacıkmış.
+Deniz'in göz kapakları ağırlaşmış. Nine Yasemin alçak sesle bir ninni mırıldanmış, sözleri ay ışığı gibi yumuşacıkmış.
 
 "Uyu yavrum, uyu tatlım, yıldızlar seni bekler,
 Ay sana masal fısıldar, bulutlar seni örter."

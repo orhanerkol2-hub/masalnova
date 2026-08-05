@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["dürüstlük","doğruluk","emek"]
 characters: ["Keloğlan","Değirmenci Dede","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında eski bir değirmen varmış. Bu değirmenin çarkı yıllardır dönmez, tozlu rafları örümcek ağıyla kaplıymış. Köylüler oraya "Kör Değirmen" derlermiş, çünkü kimse onu çalıştırmaya cesaret edemezmiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["dostluk","huzur","doğa sevgisi"]
 characters: ["Deniz","Ay Böceği Pırıl"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyün kenarında çiçekli bir bahçe varmış. Bu bahçede güller usulca sallanır, papatyalar ay ışığında parıldarmış.

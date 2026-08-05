@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["sorumluluk","yardımseverlik"]
 characters: ["Defne","Komşu Teyze Sultan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, sıcak bir yaz sabahında Defne, deniz kıyısında kum toplarken küçük, kırmızı bir oyuncak kayık bulmuş. Kayık suya kapılmış, yosunlara takılıp kalmış.

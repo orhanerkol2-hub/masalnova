@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["yardımlaşma","dostluk","dürüstlük"]
 characters: ["Keloğlan","Nine Fatma","Padişah'ın Ulağı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan yaşarmış. Kel başını sarı bir takke ile örter, gün boyu köylüye elinden geldiğince yardım edermiş. Kimi zaman kuyudan su çeker, kimi zaman tarlada başak toplarmış.

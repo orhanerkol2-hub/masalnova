@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["şükür","huzur","doğa sevgisi"]
 characters: ["Bahçıvan Sadık","Ay Dede","küçük kuşlar"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağların en yumuşak eteğinde, küçücük bir kulübe varmış. Bu kulübede, güler yüzlü bir bahçıvan yaşarmış; adı Sadık'mış. Her sabah güneşle uyanır, her akşam ayla uyurmuş.

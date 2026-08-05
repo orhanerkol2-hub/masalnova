@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Âl-i İmrân 35–37; Meryem suresi 16–33"
 sourceUrl: "https://quran.com/19/16-33"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

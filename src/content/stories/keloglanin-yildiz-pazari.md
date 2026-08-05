@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["hoşgörü","dostluk","farklılıklara saygı"]
 characters: ["Keloğlan","Yıldız Tüccarı Baba Recep","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında zeki ve gönlü sıcacık bir delikanlı yaşarmış. Köyünde herkes onu severmiş ama bazı kişiler, farklı kılık kıyafetli, farklı dilli yolcuları görünce hemen kapılarını kapatırmış. Keloğlan bu duruma hep içerlermiş, "Herkesin bir hikâyesi var," dermiş kendine.

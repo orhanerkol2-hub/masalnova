@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sözünde durmak","dostluk","dürüstlük"]
 characters: ["Nine Havva","Fıstık adlı sincap"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında Nine Havva yaşarmış. Nine Havva, ormandaki tüm hayvanların dostuydu; onlara her gün ekmek kırıntıları ve meyve bırakırmış.

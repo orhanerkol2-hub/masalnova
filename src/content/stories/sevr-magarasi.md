@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Tevbe suresi 40; Sahih Buhârî 3905, 3908 ve 4663"
 sourceUrl: "https://kuran.diyanet.gov.tr/mushaf/tefsir-2/tevbe-suresi-9/ayet-40/kuran-yolu-meali-5"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

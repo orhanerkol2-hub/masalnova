@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sabır","güler yüzlülük","dürüstlük"]
 characters: ["Keloğlan","Padişah","yaşlı kadın Zehra Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında kel kafalı ama yürek dolusu iyilikle dolu bir delikanlı yaşarmış. O yıl kış çok sert gelmiş; köyün üstüne kalın bir kar örtüsü inmiş, dereler donmuş, yollar bembeyaz olmuş.

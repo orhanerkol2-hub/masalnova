@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["tutumluluk","dostluk","paylaşma"]
 characters: ["Duman (köpek)","Fiske (karınca)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, sakin bir gölün kıyısında Duman adında kahverengi tüylü bir köpek yaşarmış. Duman, gölün etrafındaki söğüt ağaçlarının altında güneşlenmeyi çok severmiş. Ama en sevdiği şey, bulduğu her lezzetli kemiği hemen oracıkta yiyip bitirmekmiş.

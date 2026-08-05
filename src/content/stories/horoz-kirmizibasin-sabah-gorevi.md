@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sorumluluk","dayanışma"]
 characters: ["Horoz Kırmızıbaş","Tavuk Benekli","Köpek Tosun"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde Kırmızıbaş adında gösterişli bir horoz yaşarmış. Kırmızıbaş'ın tüyleri ateş gibi kızıl, ibiği ise güneş gibi parlakmış. Her sabah köyün damına çıkıp öyle güzel öterdi ki, bütün köy onun sesiyle uyanırdı.

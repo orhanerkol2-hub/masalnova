@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["adalet","paylaşma","dürüstlük"]
 characters: ["Terazi Dede","Kara","Deniz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağların eteğinde, suyu ayna gibi parıldayan sakin bir göl varmış. Bu gölün kıyısında, herkesin "Terazi Dede" dediği yaşlı bir bilge yaşarmış. Ona bu adı vermişler, çünkü Dede her zaman doğruyu bulmaya çalışır, hiçbir zaman acele karar vermezmiş.

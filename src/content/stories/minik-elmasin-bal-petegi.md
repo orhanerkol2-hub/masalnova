@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["çalışkanlık","merak"]
 characters: ["Elmas","Arı Sarı","Elmas'ın annesi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde meraklı bir kız yaşarmış. Adı Elmas'mış ve her gün bahçedeki elma ağacının dibine gidip bir şeyler gözlermiş.

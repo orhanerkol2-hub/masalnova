@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["merhamet","paylaşma","iyilik"]
 characters: ["Bahçıvan Neşet","Küçük Serçe","Fırıncı Ayşe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir kasabanın kenarında mis kokulu bir fırın varmış. Bu fırının yanında da güler yüzlü bir bahçıvan yaşarmış, adı Neşet'miş. Neşet Amca sabah erkenden kalkar, önce fırının bahçesindeki gülleri sular, sonra da fırıncı Ayşe Teyze'ye yardım edermiş.

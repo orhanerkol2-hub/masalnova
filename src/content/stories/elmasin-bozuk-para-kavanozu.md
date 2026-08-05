@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["tutumluluk","sabır","paranın değeri"]
 characters: ["Elmas","Annesi","Kavanoz Kedi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada meraklı bir kız yaşarmış. Adı Elmas'mış. Elmas her şeyi bilmek isterdi; gökyüzünde neden yıldızlar parlar, kediler neden mırıldanır, hepsini sorardı.

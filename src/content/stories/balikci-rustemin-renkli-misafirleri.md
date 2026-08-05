@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["hoşgörü","sabır","farklılıklara saygı"]
 characters: ["Balıkçı Rüstem","Kaz Bere","Kurbağa Vak"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarında öyle sakin bir göl varmış ki suyu ayna gibi parlarmış. Bu gölün kıyısında her sabah Balıkçı Rüstem otururmuş. Rüstem çok sabırlı bir adammış; oltasını suya salar, kuşların şarkısını dinler, hiç acele etmeden beklermiş.

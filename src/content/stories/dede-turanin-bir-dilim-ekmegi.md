@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["paylaşma","dostluk","cömertlik"]
 characters: ["Dede Turan","Küçük Ayşe","Köy Çocukları"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde Dede Turan yaşarmış. Bir gün fırından sıcacık, kocaman tek bir somun ekmek almış. Eve dönerken köyün meydanında oyun oynayan çocukları görmüş.

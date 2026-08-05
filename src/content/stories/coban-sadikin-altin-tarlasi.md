@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["yardımlaşma","huzur","dostluk"]
 characters: ["Çoban Sadık","küçük tarla kuşu","yorgun tavşan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının usulca süzüldüğü bir tarlanın kenarında Sadık adında iyi kalpli bir çoban yaşarmış. Tarlası altın başaklarla doluymuş, rüzgâr estikçe başaklar yavaşça sallanır, sanki tarla ninni söylermiş gibi hışırdarmış.

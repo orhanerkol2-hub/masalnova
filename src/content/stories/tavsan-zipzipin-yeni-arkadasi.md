@@ -8,11 +8,14 @@ coverColor: "#6eae62"
 coverImage: "/covers/stories/tavsan-zipzipin-yeni-arkadasi.webp"
 altText: "Tavşan Zıpzıp, çiçekli çayırda utangaç oğlak Boncuk’u oyuna davet ediyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["arkadaşlık","empati","dahil etme","dostluk"]
 characters: ["Zıpzıp","Boncuk","çayırdaki dostlar"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Yeşil bir çayır vardı. Çayırın kenarında bir tavşan yaşardı. Adı Zıpzıp'tı.

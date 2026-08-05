@@ -8,11 +8,14 @@ coverColor: "#6f9f46"
 coverImage: "/covers/stories/kaplumbaga-tosbikin-cilekleri.webp"
 altText: "Kaplumbağa Tosbik, Kabuk Dede ve kurbağa Şıpşıp olgunlaşan çileğe bakıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["sabır","öz denetim","emek"]
 characters: ["Tosbik","Kabuk Dede","Şıpşıp"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Derenin kenarında yumuşacık bir toprak vardı. O toprağın yanında da küçük bir kaplumbağa yaşardı. Adı Tosbik'ti.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["affetmek","huzur","şefkat"]
 characters: ["Çoban Sadık","Küçük kuzu Beyaz","Yaşlı koç Toprak"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının yumuşacık düştüğü bir vadide, Sadık adında iyi kalpli bir çoban yaşarmış. Her akşam sürüsünü serin bir pınarın başına götürür, koyunlarını orada dinlendirirmiş.

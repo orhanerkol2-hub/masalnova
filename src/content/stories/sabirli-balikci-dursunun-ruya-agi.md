@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["azim","sabır","huzur"]
 characters: ["Balıkçı Dursun","Eski Değirmen","Ay"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün kıyısında eski bir değirmen varmış. Değirmenin yanından yumuşacık akan bir göl, gölün üstünde de ipek gibi parlayan bir ay ışığı süzülürmüş.
@@ -28,7 +31,7 @@ Gece yavaşça derinleşirmiş, gökyüzü lacivert bir örtüye bürünürmüş
 
 Ay, ona ışığından bir battaniye örermiş sanki. Yıldızlar da usulca göz kırparmış, "Uyu artık, sabırlı balıkçı," dercesine.
 
-Dursun'un gözkapakları ağırlaşırmış, göldeki dalgalar da usulca sakinleşirmiş. Değirmenin sesi bir ninni gibi yavaşlarmış, gıcır... gıcır... gıcır...
+Dursun'un göz kapakları ağırlaşırmış, göldeki dalgalar da usulca sakinleşirmiş. Değirmenin sesi bir ninni gibi yavaşlarmış, gıcır... gıcır... gıcır...
 
 Ve böylece, ay ışığının altında, eski değirmenin yanında, sabırlı balıkçı Dursun tatlı bir uykuya dalarmış. Gölün üzerinde her şey yavaşça, huzurla uyurmuş.
 

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["nezaket","huzur","dostluk"]
 characters: ["Deniz","Ay Dede","Küçük Baykuş"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında yumuşacık bir patika varmış. Bu patika, akşamları ay ışığıyla parıldar, gündüzleri ise çiçeklerin arasında sessizce uyurmuş.

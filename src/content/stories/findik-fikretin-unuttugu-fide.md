@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","özen"]
 characters: ["Fındık Fikret","Küçük Fide"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında Fındık Fikret adında güler yüzlü bir bahçıvan yaşarmış. Her sabah kuşlarla beraber uyanır, ormandaki çiçeklere gülümseyerek su verirmiş.

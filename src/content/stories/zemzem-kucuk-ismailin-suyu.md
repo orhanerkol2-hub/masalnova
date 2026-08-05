@@ -17,6 +17,8 @@ sourceType: "hadith"
 sourceCitation: "Sahih Buhârî 3364"
 sourceUrl: "https://sunnah.com/bukhari:3364"
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

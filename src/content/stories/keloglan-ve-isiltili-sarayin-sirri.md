@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","zeka","dürüstlük"]
 characters: ["Keloğlan","Padişah","Yaşlı bahçıvan kadın"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında Keloğlan yaşarmış. Bir gün köye bir haber düşmüş: Padişahın ışıl ışıl sarayında bütün mumlar kendiliğinden sönüyor, kimse geceleri gözünü kırpmadan uyuyamıyormuş.

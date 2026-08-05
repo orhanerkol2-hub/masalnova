@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["azim","sabır","çalışkanlık"]
 characters: ["Zeyno (tilki)","Kral Aslan Baran"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin her sabah ilk ışığını gönderdiği geniş bir ova varmış. Bu ovanın ortasında altın başaklı bir tarla uzanır, rüzgâr estikçe başaklar sanki dans edermiş.

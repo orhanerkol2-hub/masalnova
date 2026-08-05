@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["saygı","sabır","dinlemek"]
 characters: ["Turgay Dede","Deniz (küçük çocuk)","Gölün balıkları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağların eteğinde, ağaçların arasında sakin bir göl varmış. Bu göl o kadar durgunmuş ki, üzerine eğilen herkes kendi yüzünü ayna gibi görürmüş. Gölün kıyısında, küçük bir kulübede Turgay Dede yaşarmış. Köyün en yaşlı ve en bilge insanı oymuş.

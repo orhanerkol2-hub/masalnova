@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merak","huzur","doğa sevgisi"]
 characters: ["Deniz","Ay Nine","bahçedeki papatyalar"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, çiçekli bir bahçenin ortasında küçük bir ev varmış. Bu evde, gözleri her şeye meraklı, cesur küçük bir çocuk yaşarmış. Adı Deniz'miş.
@@ -28,7 +31,7 @@ Ay ışığı yavaşça yanıtlamış: "Ben uyumam ama sen artık uyuyabilirsin,
 
 Çiçekler de bu sözlere eşlik etmiş, hafif bir rüzgârla sallanarak fısıldamışlar: "Uyu Deniz, uyu... Bahçe seni koruyacak."
 
-Deniz'in gözkapakları ağırlaştıkça ağırlaşmış. Papatyaların kokusu burnuna dolmuş, ay ışığı yüzüne serin serin değmiş. Yıldızlar gökyüzünde nöbet tutar gibi ışıldamışlar.
+Deniz'in göz kapakları ağırlaştıkça ağırlaşmış. Papatyaların kokusu burnuna dolmuş, ay ışığı yüzüne serin serin değmiş. Yıldızlar gökyüzünde nöbet tutar gibi ışıldamışlar.
 
 Ve böylece küçük meraklı çocuk, çiçekli bahçesinde, yumuşacık çimenlerin üzerinde, ay ışığının ninnisiyle tatlı bir uykuya dalmış. Bahçedeki her çiçek, her yaprak, ona eşlik eden sessiz bir ninni söylermiş sanki.
 

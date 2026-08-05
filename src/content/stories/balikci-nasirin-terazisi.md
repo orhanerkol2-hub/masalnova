@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["adalet","sabır","eşitlik"]
 characters: ["Balıkçı Nasır","Çarşı halkı","Küçük kız Elif"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, kalabalık bir çarşının ortasında Nasır adında sabırlı bir balıkçı yaşarmış. Her sabah tazecik balıklarını tezgahına dizer, herkese gülümseyerek satış yaparmış.

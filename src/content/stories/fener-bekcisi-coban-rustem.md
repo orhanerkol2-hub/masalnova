@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","dayanışma"]
 characters: ["Çoban Rüstem","Balıkçı Ahmet"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısında koyunlarını otlatan iyi kalpli bir çoban varmış. Adı Rüstem'miş. Her akşam koyunlarını sahildeki yeşil çayıra getirir, güneş batarken onları sayar, hiçbirini eksik bırakmazmış.

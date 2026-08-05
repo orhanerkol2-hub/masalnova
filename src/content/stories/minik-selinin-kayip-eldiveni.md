@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sorumluluk","dikkatli olmak","özen göstermek"]
 characters: ["Selin","Anneanne Nermin","Kardan Adam Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, karlarla kaplı küçük bir dağ köyünde Selin adında meraklı bir kız yaşarmış. Selin her şeyi merakla incelemeyi, kar tanelerini avucunda tutup saymayı, pencere camındaki buz desenlerine parmağıyla resim çizmeyi çok severmiş.

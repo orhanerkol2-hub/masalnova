@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["nezaket","dostluk","alçakgönüllülük"]
 characters: ["Vedo (ördek)","Habap (kurbağa)","Kaya Baba (kaplumbağa)"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, ormanın kenarında sakin bir göl varmış. Bu gölün suları çok berrakmış, kıyısında söğüt ağaçları sallanır, üzerinde beyaz kuğu tüyleri süzülürmüş.

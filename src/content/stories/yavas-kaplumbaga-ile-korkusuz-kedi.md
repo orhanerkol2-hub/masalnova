@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["cesaret","dostluk","sabır"]
 characters: ["Minnak (kedi)","Tosbik (kaplumbağa)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın kenarında küçük bir kedi yaşarmış. Adı Minnak'mış. Minnak çok hızlı koşar, çok yüksek zıplarmış ama bir şeyden çok korkarmış: karanlık mağaralardan.

@@ -12,6 +12,9 @@ themes: ["merak", "hayal gücü", "cesaret"]
 characters: ["Alice", "Tavşan"]
 relatedVideoIds: ["otPg1Pe39VM"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-06-17"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde Alice adında meraklı mı meraklı bir kız yaşarmış. Onun aklında hiç bitmeyen sorular varmış: "Bulutlar neden yürür? Karıncalar nereye gider? Gökkuşağı hangi renkten başlar?" Annesi ona hep, "Sen sorularınla dünyayı keşfediyorsun canım," dermiş.

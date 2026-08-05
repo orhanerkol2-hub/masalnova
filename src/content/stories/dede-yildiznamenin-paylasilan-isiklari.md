@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["paylaşma","huzur","sevgi"]
 characters: ["Dede Yıldızname","Minik Elif"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün en yüksek tepesinde küçük bir bahçe varmış. Bu bahçede yaşlı ve bilge bir dede yaşarmış. Herkes ona Dede Yıldızname dermiş, çünkü o, gökyüzündeki her yıldızın adını bilirmiş.

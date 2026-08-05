@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["adalet","dürüstlük","akıl"]
 characters: ["Keloğlan","Tilki Turan","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan köyünün kenarındaki yemyeşil ormana odun toplamaya gitmiş. Güneş ağaçların arasından süzülür, kuşlar cıvıl cıvıl şakırmış. Keloğlan sırtındaki heybeyi hafifçe sallayarak yürürken, birden bir kargaşa sesi duymuş.

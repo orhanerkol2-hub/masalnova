@@ -13,6 +13,9 @@ categories: ["keloglan", "egitici"]
 themes: ["dürüstlük", "vicdan", "sorumluluk"]
 characters: ["Keloğlan", "Doğruluk Değirmeni", "Köylüler"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Evvel zaman içinde, develer tellal iken, pireler berber iken Keloğlan ile anası bir dağ köyünde yaşarmış.

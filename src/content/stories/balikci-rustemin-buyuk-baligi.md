@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["cesaret","sabır"]
 characters: ["Balıkçı Rüstem"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın içinde küçük bir ırmak varmış. Bu ırmağın kenarında Balıkçı Rüstem her sabah oltasını atar, sessizce beklermiş.

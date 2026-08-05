@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["nezaket","yardımseverlik","paylaşma"]
 characters: ["Çoban Aras","Değirmenci Nasuh Dede","Küçük kız Elmas"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında eski bir değirmen varmış. Bu değirmen yıllar önce köyün buğdayını öğütürmüş ama artık kimse ona uğramaz olmuş. Duvarları çatlamış, çarkı paslanmış, kapısının önünde otlar boy vermiş.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sabır","emek","dürüstlük"]
 characters: ["Keloğlan","Padişah","Yaşlı Kadın Fatma Nine"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde Keloğlan adında sivri akıllı, iyi yürekli bir delikanlı yaşarmış. Kel kafasına gülenler çok olsa da, Keloğlan hiç kimseye kırılmaz, her zaman güler yüzünü kaybetmezmiş.

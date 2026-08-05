@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["azim","cesaret"]
 characters: ["Berat","Mağara Perisi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde küçük bir köy varmış. Bu köyün yakınında, kimsenin girmeye cesaret edemediği gizemli bir mağara bulunurmuş. Köylüler, mağaranın içinde parıldayan bir taş olduğunu, ama onu bulmanın çok zor olduğunu söylerlermiş.

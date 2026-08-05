@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["cesaret","kendine güven","yardımlaşma"]
 characters: ["Devrim","Baykuş Zerrin","Sincap Fıstık"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, yemyeşil bir ormanın kenarında Devrim adında küçük bir çocuk yaşarmış. Devrim, mahallenin en meraklı çocuğuymuş ama arkadaşları onunla dalga geçermiş: "Sen ormana bile giremezsin, korkaksın!" derlermiş.

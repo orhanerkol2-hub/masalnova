@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dürüstlük","dostluk","paylaşma"]
 characters: ["Tomurcuk (serçe)","Değirmenci Kirpi Fındık","Tembel Tarla Kuşu Civcivo"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında, çatısı yosun tutmuş eski bir değirmen varmış. Bu değirmende yıllardır kimse çalışmazmış, çünkü çarkı gıcırdıyor, kapısı da hep kapalıymış. Ama küçük bir serçe olan Tomurcuk, o değirmenin çatı arasını kendine yuva yapmıştı.

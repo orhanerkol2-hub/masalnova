@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["azim","sabır"]
 characters: ["Kaya","Fırıncı Dede Rasim"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada mis kokulu bir fırın varmış. Bu fırının sahibi Dede Rasim, her sabah erkenden kalkıp hamur yoğururmuş. Kaya adında cesur küçük bir çocuk, fırının önünden geçerken içeriden yayılan sıcacık kokuya bayılırmış.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["paylaşma","dostluk","empati"]
 characters: ["Defne","Nine Hatice","Kedi Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada Defne adında meraklı bir kız yaşarmış. Defne her şeyi öğrenmeyi çok severmiş; neden gökyüzü mavi, neden kuşlar uçar, neden yağmur damlaları yuvarlaktır diye sorar dururmuş.

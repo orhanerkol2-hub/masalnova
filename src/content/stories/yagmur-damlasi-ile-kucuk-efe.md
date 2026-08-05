@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["hoşgörü","şefkat","dostluk"]
 characters: ["Küçük Efe","Miki adlı kirpi","Efe'nin annesi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde, çamlı bir tepenin eteğinde Efe adında cesur bir çocuk yaşarmış. O akşam gökyüzü kapkara bulutlarla örtülmüş, yağmur usulca damlamaya başlamış. Tıpış tıpış, tıpış tıpış... Damlalar pencereye, çatıya, bahçedeki yapraklara sevgiyle dokunuyormuş.
@@ -22,7 +25,7 @@ Efe dışarı çıkmış, minik kirpiyi nazikçe bir yaprağın üstüne almış
 
 Annesi sıcak bir süt ısıtmış, Miki'ye küçük bir kapta sunmuş. Yağmur dışarıda usul usul şarkı söylerken, Efe ve Miki şöminenin önünde battaniyeye sarılmışlar. Dikenli olması hiç önemli değilmiş; Miki de tıpkı Efe gibi sevgiye, sıcaklığa ihtiyaç duyan küçük bir canlıymış.
 
-Gece ilerlerken yağmur damlaları yavaşça hafiflemiş, ninni gibi bir uğultuya dönüşmüş. Tıp, tıp, tıp... Ay, bulutların ardından son bir kez göz kırpmış, yıldızlar usulca parlamaya başlamış. Efe'nin gözkapakları ağırlaşmış, Miki de yanında kıvrılıp uyuyakalmış.
+Gece ilerlerken yağmur damlaları yavaşça hafiflemiş, ninni gibi bir uğultuya dönüşmüş. Tıp, tıp, tıp... Ay, bulutların ardından son bir kez göz kırpmış, yıldızlar usulca parlamaya başlamış. Efe'nin göz kapakları ağırlaşmış, Miki de yanında kıvrılıp uyuyakalmış.
 
 Annesi ikisinin üzerine yumuşacık bir örtü örtmüş, alınlarından öpmüş. "Farklı olan her canlı, sevgiyle daha güzel olur," diye mırıldanmış usulca, kendine ve rüzgâra.
 

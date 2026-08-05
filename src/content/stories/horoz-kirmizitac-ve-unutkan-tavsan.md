@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["merhamet","yardımlaşma","alçakgönüllülük"]
 characters: ["Horoz Kırmızıtaç","Tavşan Pamuk","Baykuş Bilge"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında Kırmızıtaç adında bir horoz yaşarmış. Kırmızıtaç, ormandaki en gür sesle öten horozmuş ve bununla öyle gurur duyarmış ki, her sabah tepesindeki kayaya çıkıp göğsünü kabartarak öterken bütün hayvanların kendisine hayranlıkla baktığını düşünürmüş.

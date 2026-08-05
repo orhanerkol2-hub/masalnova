@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","sabır"]
 characters: ["Balıkçı Temmuz","Köylüler"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Küçük bir köyde Temmuz adında sabırlı bir balıkçı yaşarmış. Her sabah gölün kıyısına gider, ağını sessizce suya salar ve akşama kadar beklermiş.

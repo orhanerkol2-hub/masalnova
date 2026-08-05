@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["saygı","huzur","doğa sevgisi"]
 characters: ["Dede Sadık","Baykuş Huhu","Küçük Tavşan Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında ay ışığında uzayıp giden bir patika varmış. Bu patikada her akşam yaşlı bilge Dede Sadık yürürmüş, elinde küçük bir fener, yüreğinde büyük bir sevgi taşırmış.

@@ -8,11 +8,14 @@ coverColor: "#6c75bd"
 coverImage: "/covers/stories/yagmurlu-gunde-ipek.webp"
 altText: "İpek ve anneannesi yağmurlu günde ışıklı battaniye mağarasında hazine oyunu oynuyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici"]
 themes: ["hayal gücü","yaratıcılık","can sıkıntısı","aile zamanı"]
 characters: ["İpek","Anneanne","oyuncak ayı"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Sabah İpek uyandı ve pencereye koştu.

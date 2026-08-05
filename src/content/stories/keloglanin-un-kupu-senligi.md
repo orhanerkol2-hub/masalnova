@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["paylaşma","dostluk","zeka"]
 characters: ["Keloğlan","Değirmenci Nine Ayşe","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan yaşarmış. Annesiyle iki gözlü kulübelerinde geçinip gidermiş ama o yıl kuraklık gelmiş, tarlalar susuz kalmış, köyün ambarları boşalmış.

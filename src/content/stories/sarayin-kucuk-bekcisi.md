@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sorumluluk","güven","emek"]
 characters: ["Deniz","Bilge Dede Server","Kraliçe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, tepelerin üzerinde ışıl ışıl bir saray varmış. Bu sarayın duvarları güneşin altında sanki elmastan yapılmış gibi parıldarmış. Sarayın bahçesinde yaşlı bilge bir dede yaşarmış; adı Server Dede'ymiş ve sarayın bütün mumlarından, fenerlerinden o sorumluymuş.

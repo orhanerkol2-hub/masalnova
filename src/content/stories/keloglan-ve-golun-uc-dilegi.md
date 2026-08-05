@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["yardımlaşma","dürüstlük","zeka"]
 characters: ["Keloğlan","Padişah","Gölün Nazik Balığı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında sapsarı güneşin altında ışıl ışıl parlayan sakin bir göl varmış. Bu köyde Keloğlan yaşarmış; başı kel, gönlü ise dünya kadar büyükmüş.

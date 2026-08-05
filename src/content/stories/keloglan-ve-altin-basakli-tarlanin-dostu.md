@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["dostluk","yardımseverlik","paylaşma"]
 characters: ["Keloğlan","Padişah","Cıvıl adlı serçe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında zeki ve iyi yürekli bir çocuk yaşarmış. Keloğlan'ın hiçbir şeyi yokmuş ama gönlü öyle geniş, öyle sıcakmış ki herkes onu severmiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["saygı","huzur","doğa sevgisi"]
 characters: ["Bahçıvan Dede","Küçük Ördek","Ay"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir bahçenin kenarında sakin bir göl varmış. Bu gölün suyu, akşam olunca ayna gibi durur, üstünde ay ile yıldızlar yavaşça sallanırmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["yardımlaşma","dostluk","dayanıklılık"]
 characters: ["Keloğlan","Sincap Fındık","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında yemyeşil bir orman varmış. Bu ormanın dibindeki küçük evde Keloğlan, annesiyle birlikte yaşarmış. Keloğlan fakirmiş ama yüreği herkesten zenginmiş; kimse ondan yardım isteyip de eli boş dönmezmiş.

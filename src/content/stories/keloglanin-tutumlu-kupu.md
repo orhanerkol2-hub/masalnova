@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["tutumluluk","dürüstlük","çalışkanlık"]
 characters: ["Keloğlan","Yaşlı Kadın","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında zeki ve kel başlı bir delikanlı yaşarmış. Annesiyle küçük bir evde otururlar, ellerine geçen az parayı hemen harcamadan biriktirmeye çalışırlarmış. Ama zaman zaman Keloğlan'ın canı sıkılır, "Bu kadar tutumlu olmak da neye yarar ki" diye söylenirmiş.

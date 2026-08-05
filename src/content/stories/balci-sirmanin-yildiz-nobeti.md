@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sorumluluk","dostluk","görev bilinci"]
 characters: ["Sırma (arı)","Baykuş Hikmet","Kovan arıları"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, çayırların en güzel kovanında Sırma adında küçük bir arı yaşarmış. Sırma, kovanın en meraklı arısıymış; özellikle geceleri gökyüzüne bakmayı çok severmiş.

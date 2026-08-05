@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["paylaşma","cesaret","dayanışma"]
 characters: ["Fırat","Değirmenci Dede Osman","Köy çocukları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında taşları yosunlarla kaplı eski bir değirmen varmış. Bu değirmen artık çalışmaz olmuş, kanatları rüzgârda gıcırdayıp dururmuş. Köylüler ondan uzak durur, çocuklar ise değirmenin etrafında koşuşturmaktan bile çekinirmiş çünkü içinde tuhaf sesler çıktığı söylenirmiş.

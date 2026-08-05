@@ -13,6 +13,9 @@ categories: ["uyku", "kisa", "hayvan"]
 themes: ["dostluk", "umut", "paylaşma"]
 characters: ["Küçük Tilki", "Ay", "Yel"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş. Allah'ın kulu çokmuş. Çok söylemesi günah, az söylemesi ayıpmış.

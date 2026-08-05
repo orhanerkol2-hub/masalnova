@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["çalışkanlık","dostluk","sabır"]
 characters: ["Kabuk (kaplumbağa)","Nare (kelebek)"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın yüksek bir yamacında küçük bir kulübe varmış. Bu kulübenin çatısı delik, kapısı gıcırtılıymış ama içinde hâlâ sıcacık bir ocak durur, kimseyi beklermiş.

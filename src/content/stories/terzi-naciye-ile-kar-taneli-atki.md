@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["nezaket","paylaşma","yardımseverlik"]
 characters: ["Küçük Damla","Terzi Naciye","Postacı Kemal"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların ardındaki küçük bir köyde beyaz bir kış gelmiş. Kar, çatılara pamuk gibi düşmüş, sokaklar upuzun bir örtüyle kaplanmış.

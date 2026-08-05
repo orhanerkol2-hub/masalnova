@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["merhamet","iyilik","paylaşma"]
 characters: ["Keloğlan","Yaşlı Kadın Zehra Nine","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında bir çocuk yaşarmış. Kel başı güneşte parlar, ama yüreği herkesten daha sıcak olurmuş.

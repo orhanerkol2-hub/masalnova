@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["sabır","azim","doğa sevgisi"]
 characters: ["Doruk","Pınar Perisi Damla","Yaşlı Çınar"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağ eteğindeki küçük bir köyde Doruk adında cesur bir çocuk yaşarmış. Doruk çok meraklı ve çok cesurmuş ama bir kusuru varmış: hiçbir şey için beklemeyi sevmezmiş. Yemeği hemen pişsin, oyuncağı hemen çalışsın, tohum ektiği anda çiçek açsın istermiş.

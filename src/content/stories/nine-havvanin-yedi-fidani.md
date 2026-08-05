@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["çalışkanlık","sabır","emek"]
 characters: ["Nine Havva","Defne","köy çocukları"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarındaki geniş bir çayırda Nine Havva yaşarmış. Bu çayır o kadar büyükmüş ki, bir ucundan öbür ucuna bakan çocuklar gökle toprağın birleştiğini düşünürmüş. Nine Havva her sabah güneşle beraber kalkar, elinde bir sepet tohumla çayıra inermiş.

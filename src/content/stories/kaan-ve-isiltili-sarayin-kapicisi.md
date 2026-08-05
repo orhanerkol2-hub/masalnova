@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["saygı","alçakgönüllülük","cesaret"]
 characters: ["Kaan","Yaşlı Kapıcı Tarık","Kraliçe Elmas"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, güneşin ışıklarını yüz kere yansıtan ışıl ışıl bir saray varmış. Bu sarayın duvarları mücevherlerle kaplıymış, pencereleri gökkuşağı renginde parıldarmış. Ama bu sarayda yaşayan Kraliçe Elmas, sarayın parıltısından çok, içindeki insanların kalbine bakarmış.

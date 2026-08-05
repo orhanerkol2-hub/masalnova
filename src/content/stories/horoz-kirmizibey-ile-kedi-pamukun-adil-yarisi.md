@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["adalet","paylaşım","dostluk"]
 characters: ["Horoz Kırmızıbey","Kedi Pamuk","Tavuk Sarıgül"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyün kenarında şirin bir çiftlik varmış. Bu çiftlikte sabahları en gür sesle öten bir horoz yaşarmış, adı Kırmızıbey'miş. Çiftliğin bahçesinde ise yumuşacık beyaz tüyleriyle dolaşan bir kedi varmış, adı Pamuk'muş.

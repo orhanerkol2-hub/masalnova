@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import GameCard from '../../components/GameCard.astro';
-import { games } from '../../data/games.mjs';
 
 const exclusiveGames = [
   {
@@ -45,7 +43,7 @@ const exclusiveGames = [
     url: 'https://masalnova.com/oyna/keloglan-yildiz-pesinde/',
   },
 ];
-const collectionGames = [...exclusiveGames, ...games.map((game) => ({ title: game.title, url: `https://masalnova.com/oyna/${game.slug}/` }))];
+const collectionGames = exclusiveGames;
 
 const jsonLd = [
   {
@@ -98,7 +96,7 @@ const jsonLd = [
         <i class="ph ph-shield-check" aria-hidden="true"></i>
         <div>
           <strong>Kontrollü oyun deneyimi</strong>
-          <p>MasalNova oyunları doğrudan ve reklamsız açılır. GamePix oyunları yalnızca açık onaydan sonra yüklenir.</p>
+          <p>MasalNova oyunları doğrudan, aynı alan adı üzerinden ve oyun içi reklam olmadan açılır.</p>
         </div>
       </aside>
     </div>
@@ -111,7 +109,7 @@ const jsonLd = [
           <span><i class="ph ph-seal-check" aria-hidden="true"></i> MasalNova’ya özel oyunlar</span>
           <h2>Bizim masallarımız, bizim oyunlarımız</h2>
         </div>
-        <p>GamePix bağlantısı yok · Oyun içi reklam yok</p>
+        <p>MasalNova yapımı · Oyun içi reklam yok</p>
       </div>
 
       <div class="originals-grid">
@@ -316,30 +314,6 @@ const jsonLd = [
         </a>
       </div>
 
-      <div class="collection-divider"><span>GamePix seçkisi</span></div>
-
-      <div class="section-title">
-        <div>
-          <span>Oyun kütüphanesi</span>
-          <h2>GamePix seçkisinden bir oyun seç</h2>
-        </div>
-        <p><strong>{games.length}</strong> oyun bulunuyor</p>
-      </div>
-      <nav class="library-tools" aria-label="Oyun kategorileri">
-        <a class="filter-chip is-active" href="/oyunlar/" aria-current="page"><i class="ph ph-squares-four" aria-hidden="true"></i> Tümü</a>
-        <a class="filter-chip" href="/oyunlar/hafiza/"><i class="ph ph-brain" aria-hidden="true"></i> Hafıza</a>
-        <a class="filter-chip" href="/oyunlar/bulmaca/"><i class="ph ph-puzzle-piece" aria-hidden="true"></i> Bulmaca</a>
-        <a class="filter-chip" href="/oyunlar/beceri/"><i class="ph ph-hand-tap" aria-hidden="true"></i> Beceri</a>
-        <a class="filter-chip" href="/oyunlar/yaraticilik/"><i class="ph ph-paint-brush" aria-hidden="true"></i> Yaratıcılık</a>
-        <a class="filter-chip" href="/oyunlar/dikkat/"><i class="ph ph-eye" aria-hidden="true"></i> Dikkat</a>
-      </nav>
-      <div class="games-grid">
-        {games.map((game) => <GameCard game={game} />)}
-      </div>
-      <div class="partner-note">
-        <i class="ph ph-info" aria-hidden="true"></i>
-        <p>Oyunlar GamePix iş ortaklığı üzerinden sunulur. Her oyun sayfasında sağlayıcı ve reklam bilgileri başlamadan önce gösterilir.</p>
-      </div>
     </div>
   </section>
 </BaseLayout>
@@ -405,26 +379,6 @@ const jsonLd = [
   .exclusive-copy > p, .exclusive-copy ul { display: none; }
   .exclusive-cta { position: absolute; right: 12px; bottom: 13px; display: grid; overflow: hidden; width: 34px; height: 34px; place-items: center; border: 2px solid rgba(255,255,255,.8); border-radius: 50%; background: #ffc62e; color: #562f00; box-shadow: 0 7px 18px rgba(0,0,0,.3); font-size: 0; }
   .exclusive-cta i { font-size: 1rem; }
-  .collection-divider { display: flex; align-items: center; gap: 14px; margin: 27px 0 18px; color: rgba(255,255,255,.68); font-size: .68rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-  .collection-divider::before, .collection-divider::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,.22); }
-  .section-title { display: flex; align-items: end; justify-content: space-between; gap: 22px; margin-bottom: 13px; color: #fff; }
-  .section-title span { color: #ffd44d; font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-  .section-title h2 { margin-top: 3px; font-size: clamp(1.45rem, 3vw, 2rem); }
-  .section-title > p { color: rgba(255,255,255,.74); font-size: .88rem; font-weight: 800; }
-  .library-tools { display: flex; gap: 7px; overflow-x: auto; margin: 0 -3px 15px; padding: 3px 3px 9px; scrollbar-color: rgba(255,255,255,.5) transparent; scrollbar-width: thin; }
-  .library-tools::-webkit-scrollbar { height: 5px; }
-  .library-tools::-webkit-scrollbar-thumb { border-radius: 999px; background: rgba(255,255,255,.5); }
-  .filter-chip { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 6px; min-height: 44px; padding: 9px 13px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.1); color: #fff; font-size: .72rem; font-weight: 900; text-decoration: none; transition: background .15s ease, color .15s ease, border-color .15s ease; }
-  .filter-chip:focus-visible { outline: 3px solid #ffd15b; outline-offset: 2px; }
-  .filter-chip:hover { background: rgba(255,255,255,.2); }
-  .filter-chip.is-active { border-color: #ffd15b; background: #ffd15b; color: #583500; box-shadow: 0 6px 16px rgba(255,177,31,.2); }
-  .games-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-  .partner-note {
-    display: flex; align-items: flex-start; gap: 11px; margin-top: 24px; padding: 15px 18px;
-    border: 1px solid rgba(255,255,255,.2); border-radius: 16px; background: rgba(255,255,255,.1);
-    color: rgba(255,255,255,.78); font-size: .83rem;
-  }
-  .partner-note i { margin-top: 2px; color: #ffd44d; font-size: 1.2rem; }
   @media (min-width: 721px) {
     .games-hero,
     .games-section { background: #fbf8f1; color: #102a66; }
@@ -449,22 +403,10 @@ const jsonLd = [
     .exclusive-heading > p { color: #6c7690; }
     .exclusive-game { border-color: #d3b855; box-shadow: 0 10px 24px rgba(23,43,92,.13); }
     .exclusive-game:hover { box-shadow: 0 18px 34px rgba(23,43,92,.2); }
-    .collection-divider { color: #788299; }
-    .collection-divider::before, .collection-divider::after { background: #dcd7cc; }
-    .section-title { color: #0b2b75; }
-    .section-title span { color: #a87906; }
-    .section-title > p { color: #6c7690; }
-    .filter-chip { border-color: #dce2ef; background: #fff; color: #38527f; }
-    .filter-chip:hover { background: #eef3ff; }
-    .filter-chip.is-active { border-color: #1749ae; background: #1749ae; color: #fff; box-shadow: 0 6px 16px rgba(23,73,174,.18); }
-    .games-grid { gap: 14px; }
-    .partner-note { border-color: #ded9ce; background: #fff; color: #68728a; }
-    .partner-note i { color: #1749ae; }
   }
   @media (max-width: 920px) {
     .hero-grid { grid-template-columns: 1fr; }
     .originals-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .games-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   }
   @media (min-width: 921px) and (max-width: 1120px) {
     .originals-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -489,11 +431,6 @@ const jsonLd = [
     .exclusive-play-cue i { width: 15px; height: 15px; font-size: .55rem; }
     .exclusive-ribbon { top: 8px; right: 8px; max-width: 50%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .exclusive-cta { right: 8px; bottom: 9px; width: 29px; height: 29px; }
-    .collection-divider { margin-top: 23px; }
-    .section-title { align-items: flex-end; gap: 10px; }
-    .section-title > p { font-size: .7rem; white-space: nowrap; }
-    .library-tools { margin-bottom: 10px; }
-    .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   }
 
   @keyframes star-float {

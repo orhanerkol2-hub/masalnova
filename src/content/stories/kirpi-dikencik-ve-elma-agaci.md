@@ -8,11 +8,14 @@ coverColor: "#b96d32"
 coverImage: "/covers/stories/kirpi-dikencik-ve-elma-agaci.webp"
 altText: "Kirpi Dikencik elmalarını salyangoz Yavaşça ve tarla faresi Kıvırcık ile paylaşıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["paylaşma","cömertlik","dostluk"]
 characters: ["Dikencik","Kıvırcık","Yavaşça","Elma Ağacı"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Ormanın kıyısında, kuru yaprakların altında küçük bir kirpi yaşardı. Adı Dikencik'ti.

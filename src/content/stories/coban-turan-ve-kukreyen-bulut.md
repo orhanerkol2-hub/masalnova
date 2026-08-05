@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["cesaret","dayanıklılık"]
 characters: ["Çoban Turan","Koyunlar","Kara Bulut"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, geniş bir çayırda Turan adında iyi kalpli bir çoban yaşarmış. Turan, koyunlarını her sabah güneşin ilk ışıklarıyla otlatmaya çıkarır, akşam olunca da güvenle ağıla geri götürürmüş.

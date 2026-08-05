@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["affetmek","dostluk","dürüstlük"]
 characters: ["Pamut adlı kuzu","Turşucu Tosun Amca","Papağan Feryat"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, rengarenk çadırlarla dolu kalabalık bir çarşı varmış. Bu çarşıda herkes birbirini tanır, herkes birbirine güler yüz gösterirmiş.

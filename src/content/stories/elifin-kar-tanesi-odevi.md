@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["çalışkanlık","huzur","aile sevgisi"]
 characters: ["Elif","Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, karlı bir kış günüymüş. Pencerelerin ardında kar taneleri yavaşça, usulca süzülüyormuş. Her biri bir tüy kadar hafif, bir pamuk kadar yumuşakmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","paylaşma","dostluk"]
 characters: ["Çoban Aras","Yorgun Tüccar Kasım","Küçük Tavşan Fındık"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yeşil tepelerin arasında Aras adında iyi kalpli bir çoban yaşarmış. Aras, koyunlarını her sabah tepenin eteğindeki serin bir pınara götürür, orada hem hayvanlarını sulaturmuş hem de kendisi dinlenirmiş.

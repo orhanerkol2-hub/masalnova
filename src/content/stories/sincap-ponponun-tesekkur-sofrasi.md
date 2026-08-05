@@ -8,11 +8,14 @@ coverColor: "#c95e2b"
 coverImage: "/covers/stories/sincap-ponponun-tesekkur-sofrasi.webp"
 altText: "Sincap Ponpon, ağaçkakan Tak Tak, köstebek Kadife ve karga Kömür teşekkür sofrasında"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["minnettarlık","teşekkür","yardımlaşma","dostluk"]
 characters: ["Ponpon","Tak Tak","Kadife","Kömür"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Çam ormanının ortasında, kocaman bir kayın ağacının kovuğunda bir sincap yaşardı. Adı Ponpon'du.

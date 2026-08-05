@@ -8,11 +8,14 @@ coverColor: "#d64550"
 coverImage: "/covers/stories/kirmizi-baslikli-kiz-v2.webp"
 altText: "Orman yolunda sepet taşıyan Kırmızı Başlıklı Kız masalı kapağı"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 3
 categories: ["egitici"]
 themes: ["dikkat", "söz dinleme", "güvenlik"]
 characters: ["Kırmızı Başlıklı Kız", "Kurt", "Büyükanne", "Oduncu"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-21"
 ---
 Bir varmış bir yokmuş, ormanın kenarındaki küçük bir köyde herkesin sevdiği küçük bir kız yaşarmış. Annesi ona kırmızı bir başlık dikmiş. O da hep bu başlığı taktığı için herkes ona “Kırmızı Başlıklı Kız” dermiş.

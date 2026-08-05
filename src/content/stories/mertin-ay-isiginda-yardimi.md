@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["merhamet","yardımlaşma","cesaret"]
 characters: ["Mert","küçük kirpi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ay ışığının aydınlattığı bir patikada küçük ve cesur bir çocuk yaşarmış. Adı Mert'miş. Her akşam annesiyle eve dönerken bu patikadan geçermiş ve ay ışığının taşlara vuran parıltısını çok severmiş.

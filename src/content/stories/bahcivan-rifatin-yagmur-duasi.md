@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["adalet","paylaşma","huzur"]
 characters: ["Bahçıvan Rifat","Papatya","Gülcan"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında, çiçeklerle dolu bir bahçe varmış. Bu bahçenin bahçıvanı Rifat Amca'ymış. Güler yüzlü, yumuşak sesli bir adammış. Her akşam çiçeklerinin yanına gider, hepsiyle ayrı ayrı, aynı sevgiyle konuşurmuş.

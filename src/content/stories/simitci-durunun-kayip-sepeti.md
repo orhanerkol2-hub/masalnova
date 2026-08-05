@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["sorumluluk","dürüstlük"]
 characters: ["Duru","Bilge Dede Hikmet"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, kalabalık bir çarşının ortasında küçük bir simit tezgahı varmış. Bu tezgahı işleten Duru, her sabah taze simitlerini sepetine doldurup satarmış.

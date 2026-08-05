@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["şükür","huzur","doğa sevgisi"]
 characters: ["Minik Azra","Dede Sabri","Ay Ana"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında altın başaklı bir tarla varmış. Rüzgâr estiğinde başaklar usulca sallanır, sanki birbirlerine ninni söylerlermiş.

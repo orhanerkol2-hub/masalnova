@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sabır","umut"]
 characters: ["Çoban Sadık","Değirmenci Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün kenarındaki eski değirmende Değirmenci Nine yaşarmış. Değirmenin çarkı bozulmuş, artık un öğütemiyormuş. Köylüler ekmeklerini pişiremedikleri için üzgünmüş.

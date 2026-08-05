@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["alçakgönüllülük","dostluk","paylaşma"]
 characters: ["Tombul (kaplumbağa)","Zerre (arı)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en gölgeli köşesinde serin bir pınar varmış. Bu pınarın suyu öyle temizmiş ki, içine bakan her hayvan kendi yüzünü ayna gibi görürmüş.

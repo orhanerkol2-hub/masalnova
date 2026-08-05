@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["merak","sabır"]
 characters: ["Balıkçı Hasan","Fırıncı Nine Sultan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir sahil kasabasında sabırlı bir balıkçı yaşarmış. Adı Hasan'mış. Her sabah erkenden denize açılır, oltasını sabırla suya sallar, saatlerce beklermiş.

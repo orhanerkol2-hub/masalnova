@@ -6,13 +6,16 @@ coverColor: "#21b6c9"
 coverImage: "/covers/stories/keloglan-dev.webp"
 altText: "Kapak görseli: Keloğlan ve Sevimli Dev"
 ageGroups: ["5-7"]
-readingTime: 10
+readingTime: 11
 categories: ["keloglan"]
 themes: ["cesaret", "dostluk", "önyargı"]
 characters: ["Keloğlan", "Dev"]
 relatedVideoIds: ["_BCOsqAVfIU"]
 isNew: true
 isPopular: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-06-27"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde; develer tellal, pireler berber iken dağların arasında Yeşilpınar adında küçük bir köy varmış. Köyün evleri beyaz badanalı, bahçeleri erik ağaçlı, insanları da çalışkanmış. Yalnız köylülerin gönlünü gölgeleyen bir korku varmış: Köyün arkasındaki Sivritepe’de bir dev yaşarmış.

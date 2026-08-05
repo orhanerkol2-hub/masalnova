@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["azim","dayanışma","iyi niyet"]
 characters: ["Keloğlan","Dev Vahap","yaşlı kadın Ayşe Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, yüksek dağların eteğinde küçük bir köy varmış. Bu köyde Keloğlan adında, başı güneşte pırıl pırıl parlayan, gönlü ise pamuk gibi yumuşak bir delikanlı yaşarmış.

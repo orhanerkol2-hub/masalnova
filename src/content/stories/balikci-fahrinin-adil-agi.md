@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["adalet","sabır","paylaşma"]
 characters: ["Balıkçı Fahri","Küçük Yengeç"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığında bir patika varmış. Bu patika, küçük bir göle kadar uzanırmış. Balıkçı Fahri her akşam bu patikadan geçer, gölün kenarına oturup sabırla ağını atarmış.

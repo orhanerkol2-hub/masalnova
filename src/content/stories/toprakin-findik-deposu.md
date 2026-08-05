@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["şükür","paylaşma","kanaat"]
 characters: ["Toprak (köpek)","Fındıkgöz (sincap)","Baykuş Devlet"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde yemyeşil bir ormanın kenarında Toprak adında sevimli bir köpek yaşarmış. Toprak'ın kahverengi tüyleri güneşte parıldar, kuyruğu her zaman mutlulukla sallanırmış. Ama Toprak'ın küçük bir huyu varmış: elindekiyle hiçbir zaman yetinmezmiş.

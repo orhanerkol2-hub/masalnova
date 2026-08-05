@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["merak","dostluk","zeka"]
 characters: ["Keloğlan","Değirmenci Dede","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında eski bir değirmen varmış. Bu değirmen yıllardır çalışmaz, kapısı kilitli dururmuş. Köylüler ondan söz açılınca başlarını sallar, "O değirmende tuhaf sesler duyulur," derlermiş.

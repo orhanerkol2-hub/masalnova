@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Hûd suresi, 36–48. ayetler"
 sourceUrl: "https://quran.com/11/36-48"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

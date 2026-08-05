@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["yardımlaşma","paylaşma","dayanışma"]
 characters: ["Nine Sevgi","küçük Toprak","Bakkal Halil"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağ eteğindeki küçük bir köyde Nine Sevgi yaşarmış. O kış öyle şiddetli bir tipi çıkmış ki, köyün üzerine adeta beyaz bir örtü inmiş. Evlerin bacalarından çıkan dumanlar bile soğuktan titrer gibiymiş.

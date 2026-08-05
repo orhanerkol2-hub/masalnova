@@ -13,6 +13,9 @@ categories: ["egitici", "kisa"]
 themes: ["sabır", "sorumluluk", "özgür seçim"]
 characters: ["Nar Kızı", "Şehzade", "Ak Sakallı Derviş"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş. Bir padişahın bir oğlu varmış. Delikanlı olmuş, boyu servi, sözü şeker; ama sabrı pek azmış.

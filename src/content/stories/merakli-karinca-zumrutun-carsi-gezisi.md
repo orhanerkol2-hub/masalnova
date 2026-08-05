@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["merak","paylaşma","dostluk"]
 characters: ["Zümrüt (karınca)","Baklava Amca (kurbağa)","İpek (kelebek)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, minicik bir bahçenin kenarında Zümrüt adında bir karınca yaşarmış. Zümrüt öyle meraklı bir karıncaymış ki, gördüğü her şeyin ne olduğunu, nereden geldiğini, nasıl çalıştığını öğrenmek istermiş.

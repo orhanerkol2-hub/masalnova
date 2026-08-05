@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["çalışkanlık","sabır"]
 characters: ["Dede Rüzgâr","küçük kız Elif"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğinde serin bir pınar varmış. Bu pınarın başında Dede Rüzgâr adında yaşlı, bilge bir dede yaşarmış.

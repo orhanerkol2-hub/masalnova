@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sözünde durmak","dostluk","azim"]
 characters: ["Yelpaze (kelebek)","Toprak (kirpi)","Papatya (arı)"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında rengarenk çiçeklerle dolu bir bahçe varmış. Bu bahçede Yelpaze adında sarı-turuncu kanatlı bir kelebek yaşarmış. Yelpaze, köydeki bütün hayvanların en meraklısı ve en sevecen olanıymış.

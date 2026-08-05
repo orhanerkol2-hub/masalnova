@@ -13,6 +13,9 @@ categories: ["keloglan", "egitici"]
 themes: ["sözünde durmak", "sorumluluk", "dürüstlük"]
 characters: ["Keloğlan", "Gölgesi", "Meryem Nine"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Evvel zaman içinde, kalbur saman içinde...

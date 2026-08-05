@@ -17,6 +17,8 @@ sourceType: "hadith"
 sourceCitation: "Sahih Buhârî 6129 ve 6203; Sahih Müslim 2150"
 sourceUrl: "https://sunnah.com/muslim:2150"
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

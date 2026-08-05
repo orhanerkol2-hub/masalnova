@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["dürüstlük","zeka","iyi kalplilik"]
 characters: ["Keloğlan","Padişah","Saray Bahçıvanı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında bir çocuk yaşarmış. Kel başı gün ışığında pırıl pırıl parlar, ama yüreği daha da pırıl pırıl parlarmış. Bir gün köye haber düşmüş: Padişahın ışıl ışıl sarayında bahçedeki altın elma ağacının tek meyvesi kaybolmuş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["azim","sabır"]
 characters: ["Nine Sevgi","küçük kız Elma"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ışıl ışıl bir sarayın en aydınlık odasında Nine Sevgi otururmuş. Elleri hep hareket eder, iğnesi hep dokurmuş; çünkü sarayın perdesine güneşi andıran büyük bir nakış işliyormuş.

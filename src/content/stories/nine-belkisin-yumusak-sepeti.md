@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["nezaket","huzur","paylaşma"]
 characters: ["Nine Belkıs","küçük kedi Puf","satıcı Dayı Rüstem"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, akşam güneşi usulca kızaran bir çarşı varmış. Bu çarşı gündüzleri çok kalabalık olurmuş ama akşam olunca herkes yavaş yavaş sakinleşirmiş, sesler alçalırmış, adımlar yumuşarmış.

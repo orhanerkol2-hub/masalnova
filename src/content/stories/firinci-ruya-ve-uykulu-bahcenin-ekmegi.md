@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sorumluluk","huzur"]
 characters: ["Bahçıvan Rüya","Fırıncı Dede Sabri"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabanın kenarında, mis kokulu bir fırın varmış. Bu fırının hemen yanında da güler yüzlü bir bahçıvan olan Rüya yaşarmış. Rüya, her akşam güneş yavaşça batarken bahçesindeki çiçekleri sular, yapraklarını nazikçe okşar, sonra da fırının önündeki minik masaya oturup ay ışığını izlermiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["paylaşma","sevgi","huzur"]
 characters: ["Dede Sadık","küçük tavşan Puf","baykuş Hoo"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağ başında küçük, taş duvarlı bir kulübe varmış. Bu kulübede Dede Sadık yaşarmış. Dede Sadık'ın gözleri yorgun ama sıcacık, elleri ise nasırlı ama her zaman yardıma açıkmış.

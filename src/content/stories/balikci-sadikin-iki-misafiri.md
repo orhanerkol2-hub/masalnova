@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["hoşgörü","dostluk","paylaşma"]
 characters: ["Balıkçı Sadık","Ayşe Teyze","Kara Hasan"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kıyısında Sadık adında sabırlı bir balıkçı yaşarmış. Her sabah gün doğarken tekneyle denize açılır, akşam olunca köylülere balık dağıtırmış.

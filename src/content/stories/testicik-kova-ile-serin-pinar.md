@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","emek"]
 characters: ["Deniz","Bilge Dede"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğinde serin bir pınar akarmış. Bu pınarın başında oturan yaşlı bilge bir dede varmış. Köy halkı ona hep akıl danışırmış.

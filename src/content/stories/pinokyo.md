@@ -8,11 +8,14 @@ coverColor: "#b86f3d"
 coverImage: "/covers/stories/pinokyo-v2.webp"
 altText: "Geppetto'nun sıcak marangoz atölyesinde canlanan tahta kukla Pinokyo"
 ageGroups: ["3-5"]
-readingTime: 7
+readingTime: 3
 categories: ["egitici"]
 themes: ["dürüstlük", "sevgi", "cesaret"]
 characters: ["Pinokyo", "Geppetto", "İyi Peri", "Cırcır Böceği", "Kurnaz Tilki"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-21"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada Mastro Geppetto adında yaşlı ve iyi yürekli bir marangoz yaşarmış. Geppetto çok yalnızmış, hiç çocuğu yokmuş. Bir gün elindeki güzel bir çam ağacı parçasından küçük bir kukla yapmaya karar vermiş.
