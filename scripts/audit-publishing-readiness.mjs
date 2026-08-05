@@ -13,6 +13,18 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const storiesDirectory = join(root, 'src', 'content', 'stories');
 const approvedAuthors = new Set(['aylin-karabektas', 'muhammet-karayigit']);
 const expectedReviewers = ['aylin-karabektas', 'muhammet-karayigit'];
+const playableGameSlugs = [
+  'ay-isigi-bahcesi',
+  'bulut-firini',
+  'horozumu-kacirdilar',
+  'keloglan-masal-hafizasi',
+  'keloglan-masal-yolu',
+  'keloglan-on-kapili-saray',
+  'keloglan-ucan-tohumlar',
+  'keloglan-yildiz-pesinde',
+  'kristal-saray',
+  'nasrettin-hoca-pizza',
+];
 const hardErrors = [];
 const warnings = [];
 const verifyBuiltOutput = process.argv.includes('--built');
@@ -263,6 +275,7 @@ const islamic = stories.filter(({ section }) => section === 'islami-hikayeler');
 
 let builtHtmlFiles = 0;
 let builtInternalReferences = 0;
+let verifiedGameGuides = 0;
 if (verifyBuiltOutput) {
   const outputDirectory = join(root, process.env.MASALNOVA_AUDIT_OUTPUT_DIR?.trim() || 'docs');
   const sitemapPath = join(outputDirectory, 'sitemap-0.xml');
@@ -331,6 +344,34 @@ if (verifyBuiltOutput) {
     const slug = story.file.replace(/\.md$/, '');
     return [`${sectionPath}/${slug}/index.html`, story];
   }));
+
+  for (const slug of playableGameSlugs) {
+    const route = `/oyna/${slug}/`;
+    let html = '';
+    try {
+      html = await readFile(join(outputDirectory, 'oyna', slug, 'index.html'), 'utf8');
+    } catch {
+      hardErrors.push(`${route}: erzeugte Spieleseite fehlt.`);
+      continue;
+    }
+    const page = html.match(/<section class="game-page"[\s\S]*?<\/main>/)?.[0] ?? '';
+    const visibleText = page
+      .replace(/<script[\s\S]*?<\/script>/g, ' ')
+      .replace(/<style[\s\S]*?<\/style>/g, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&[^;]+;/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    const wordCount = visibleText ? visibleText.split(' ').length : 0;
+    if (!html.includes(`data-game-editorial="${slug}"`)) {
+      hardErrors.push(`${route}: individueller redaktioneller Spielleitfaden fehlt.`);
+    }
+    if (wordCount < 200 || wordCount > 300) {
+      hardErrors.push(`${route}: sichtbarer redaktioneller Umfang ${wordCount} Wörter; erwartet sind 200–300.`);
+    } else {
+      verifiedGameGuides++;
+    }
+  }
   const generatedHtml = (await textFiles(outputDirectory)).filter((file) => extname(file) === '.html');
   builtHtmlFiles = generatedHtml.length;
   for (const file of generatedHtml) {
@@ -473,6 +514,7 @@ console.log(`Autorenverteilung: Aylin ${stories.filter(({ author }) => author ==
 if (verifyBuiltOutput) {
   console.log(`Erzeugte HTML-Dateien geprüft: ${builtHtmlFiles}`);
   console.log(`Interne Referenzen geprüft: ${builtInternalReferences}`);
+  console.log(`Spieleseiten mit 200–300 Wörtern geprüft: ${verifiedGameGuides}`);
 }
 
 if (warnings.length) {
