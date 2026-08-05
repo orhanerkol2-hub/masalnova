@@ -14,6 +14,29 @@ export const STORY_MINIMUM_WORDS = Object.freeze({
 });
 
 export const MIN_INDEXABLE_STORY_WORDS = STORY_MINIMUM_WORDS.regularStory;
+export const STORY_AD_MINIMUM_WORDS = 320;
+export const STORY_AD_MINIMUM_READING_MINUTES = 3;
+export const STORY_AD_EXCLUDED_CATEGORIES = Object.freeze(['kisa', 'uyku']);
+
+/**
+ * Keep initial story monetisation away from short, bedtime and sensitive
+ * reading surfaces. This is an internal rollout rule, not a Google threshold.
+ */
+export function isStoryMonetizationEligible({
+  status,
+  substantial = false,
+  section = 'masallar',
+  categories = [],
+  words = 0,
+  readingTime = 0,
+} = {}) {
+  return status === 'approved'
+    && substantial
+    && section !== 'islami-hikayeler'
+    && Number(words) >= STORY_AD_MINIMUM_WORDS
+    && Number(readingTime) >= STORY_AD_MINIMUM_READING_MINUTES
+    && !categories.some((category) => STORY_AD_EXCLUDED_CATEGORIES.includes(category));
+}
 
 export function markdownBodyFromSource(source) {
   const match = String(source ?? '').match(/^---\r?\n[\s\S]*?\r?\n---\r?\n([\s\S]*)$/);

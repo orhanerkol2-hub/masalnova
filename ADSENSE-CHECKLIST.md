@@ -31,10 +31,11 @@ PUBLIC_ADSENSE_ENABLED=false
 ```
 
 The first three values allow the publisher tag to display the CMP and support
-site review. `PUBLIC_ADSENSE_ENABLED=false`, together with empty slot IDs,
-prevents every manual `<ins class="adsbygoogle">` unit from rendering. These
-environment values merely assert settings already made in AdSense; they cannot
-configure or enforce the account-side controls.
+site review on the homepage, parent-facing colouring information pages and
+editorially approved regular story pages. `PUBLIC_ADSENSE_ENABLED=false`,
+together with empty slot IDs, prevents every manual `<ins class="adsbygoogle">`
+unit from rendering. These environment values merely assert settings already
+made in AdSense; they cannot configure or enforce the account-side controls.
 
 ## Before enabling manual ads
 
@@ -48,16 +49,17 @@ configure or enforce the account-side controls.
    advertising Consent Mode and disabled special feature 2.
 4. Keep the TFAT child-directed signal in `BaseHead.astro` before the publisher
    tag and `data-tag-for-age-treatment="1"` on every manual request.
-5. Create and review only the four allowlisted manual placements in
+5. Create and review only the five allowlisted manual placements in
    `AdSlot.astro`, then add their numeric IDs to:
    `PUBLIC_ADSENSE_HOME_FEED_SLOT`, `PUBLIC_ADSENSE_HOME_CONTENT_SLOT`,
    `PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT` and
-   `PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT`.
-6. Keep the publisher tag and any future ad units limited to the homepage,
-   `/boyama/` and parent-facing `/boyama/[slug]/` information pages. Story
-   pages and archives, İslami Hikâyeler, games, gameplay, videos, search,
-   account-like tools, legal/trust pages and `/boyama/[slug]/boya/` stay
-   entirely ad-free.
+   `PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT` and `PUBLIC_ADSENSE_STORY_GUIDE_SLOT`.
+6. Keep story monetisation limited to editorially approved regular stories:
+   exactly one unit after the complete parent guide, at least 320 words and a
+   reading time of at least three minutes. Short (`kisa`), bedtime (`uyku`) and
+   İslami stories are excluded. Never insert an ad inside the prose or beside
+   reader controls. Story archives, games, gameplay, videos, search, account-like
+   tools, legal/trust pages and `/boyama/[slug]/boya/` stay entirely ad-free.
 7. Test the CMP as a new EEA visitor: accept, refuse, open settings, close as
    refusal, and reopen the message through “Gizlilik ve çerez ayarları”. Test
    Turkish and German, keyboard use, focus, mobile layout and zoom.

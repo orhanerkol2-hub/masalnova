@@ -3,6 +3,7 @@ import { dirname, extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   isStoryContentSubstantial,
+  isStoryMonetizationEligible,
   markdownBodyFromSource,
   minimumStoryWordCount,
   storyWordCount,
@@ -29,6 +30,7 @@ const manualSlotVariables = [
   'PUBLIC_ADSENSE_HOME_CONTENT_SLOT',
   'PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT',
   'PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT',
+  'PUBLIC_ADSENSE_STORY_GUIDE_SLOT',
 ];
 if (publisherAssertions.some(Boolean) && !publisherAssertions.every(Boolean)) {
   hardErrors.push('Unvollständige Publisher-Konfiguration: Tag, veröffentlichte CMP und Manual-only müssen gemeinsam gesetzt sein.');
@@ -46,7 +48,7 @@ if (adUnitsEnabled) {
     }
   }
   if (new Set(configuredSlotIds).size !== manualSlotVariables.length) {
-    hardErrors.push('Die vier manuellen Anzeigenplätze benötigen vier unterschiedliche Slot-IDs.');
+    hardErrors.push('Die fünf manuellen Anzeigenplätze benötigen fünf unterschiedliche Slot-IDs.');
   }
 }
 const todayInIstanbul = new Intl.DateTimeFormat('sv-SE', {
@@ -138,6 +140,7 @@ for (const file of files) {
     coverImage: scalar(frontmatter, 'coverImage'),
     publishedAt: scalar(frontmatter, 'publishedAt'),
     modifiedAt: scalar(frontmatter, 'modifiedAt'),
+    readingTime: Number(scalar(frontmatter, 'readingTime', '0')),
     words: storyWordCount(body),
     minimumWords: minimumStoryWordCount(qualityContext),
     substantial: isStoryContentSubstantial(body, qualityContext),
@@ -253,6 +256,7 @@ for (const [date, group] of publicationBatches) {
 
 const approved = stories.filter(({ status }) => status === 'approved');
 const publicStories = approved.filter(({ substantial }) => substantial);
+const monetizableStories = stories.filter((story) => isStoryMonetizationEligible(story));
 const controlledShortStories = approved.filter(({ substantial }) => !substantial);
 const controlledEditorialStories = stories.filter(({ status }) => status !== 'approved');
 const islamic = stories.filter(({ section }) => section === 'islami-hikayeler');
@@ -260,7 +264,7 @@ const islamic = stories.filter(({ section }) => section === 'islami-hikayeler');
 let builtHtmlFiles = 0;
 let builtInternalReferences = 0;
 if (verifyBuiltOutput) {
-  const outputDirectory = join(root, 'docs');
+  const outputDirectory = join(root, process.env.MASALNOVA_AUDIT_OUTPUT_DIR?.trim() || 'docs');
   const sitemapPath = join(outputDirectory, 'sitemap-0.xml');
   let sitemap = '';
   try {
@@ -282,7 +286,7 @@ if (verifyBuiltOutput) {
     }
 
     const shouldBePublic = story.status === 'approved' && story.substantial;
-    const shouldAllowAds = false;
+    const shouldAllowAds = isStoryMonetizationEligible(story);
     const isInSitemap = sitemap.includes(`https://masalnova.com${route}</loc>`);
     const hasAdSenseMetadata = html.includes('google-adsense-account');
     const hasChildAgeTreatment = html.includes('google_tag_for_age_treatment = 1');
@@ -322,14 +326,23 @@ if (verifyBuiltOutput) {
     hardErrors.push('/islami-hikayeler/: erzeugte HTML-Datei fehlt.');
   }
 
+  const storyByOutputPath = new Map(stories.map((story) => {
+    const sectionPath = story.section === 'islami-hikayeler' ? 'islami-hikayeler' : 'masallar';
+    const slug = story.file.replace(/\.md$/, '');
+    return [`${sectionPath}/${slug}/index.html`, story];
+  }));
   const generatedHtml = (await textFiles(outputDirectory)).filter((file) => extname(file) === '.html');
   builtHtmlFiles = generatedHtml.length;
   for (const file of generatedHtml) {
     const source = await readFile(file, 'utf8');
     const outputPath = file.slice(outputDirectory.length + 1);
+    const storyForOutput = storyByOutputPath.get(outputPath);
+    const isMonetizableStory = Boolean(storyForOutput
+      && isStoryMonetizationEligible(storyForOutput));
     const isPublisherSurface = outputPath === 'index.html'
       || outputPath === 'boyama/index.html'
-      || /^boyama\/[^/]+\/index\.html$/.test(outputPath);
+      || /^boyama\/[^/]+\/index\.html$/.test(outputPath)
+      || isMonetizableStory;
     const hasPublisherMetadata = source.includes('google-adsense-account');
     const hasPublisherTag = source.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
     const hasChildAgeTreatment = source.includes('google_tag_for_age_treatment = 1');
@@ -338,6 +351,7 @@ if (verifyBuiltOutput) {
     const hasManualAdUnit = manualAdUnitCount > 0;
     const expectedManualAdUnits = outputPath === 'index.html'
       ? 2
+      : isMonetizableStory ? 1
       : isPublisherSurface ? 1 : 0;
     const expectedPlacements = outputPath === 'index.html'
       ? [
@@ -346,18 +360,21 @@ if (verifyBuiltOutput) {
         ]
       : outputPath === 'boyama/index.html'
         ? [['boyama-index-after-content', process.env.PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT]]
+        : isMonetizableStory
+          ? [['story-after-parent-guide', process.env.PUBLIC_ADSENSE_STORY_GUIDE_SLOT]]
         : isPublisherSurface
           ? [['boyama-detail-after-parent-guide', process.env.PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT]]
           : [];
-    const isProtectedFromAds = source.includes('content="noindex') || [
+    const isProtectedFromAds = source.includes('content="noindex')
+      || (/^masallar\//.test(outputPath) && !isMonetizableStory)
+      || [
       /^islami-hikayeler\//,
-      /^masallar\//,
       /^boyama\/[^/]+\/boya\/index\.html$/,
       /^games\//,
       /^oyna\//,
       /^videolar\//,
       /^(?:ara|kitapligim|masal-bul|oyunlar|hakkimizda|yayin-ilkeleri|iletisim|impressum|datenschutz|kullanim-kosullari|yazarlar)\//,
-    ].some((pattern) => pattern.test(outputPath));
+      ].some((pattern) => pattern.test(outputPath));
     if (isProtectedFromAds && hasAdSenseArtifacts(source)) {
       hardErrors.push(`${outputPath}: geschützte Seite enthält AdSense-Code oder Freigabesignale.`);
     }
@@ -365,7 +382,7 @@ if (verifyBuiltOutput) {
       hardErrors.push(`${outputPath}: freigegebene CMP-Oberfläche hat keine Publisher-/TFAT-Kennzeichnung.`);
     }
     if (!isPublisherSurface && (hasPublisherMetadata || hasPublisherTag || hasChildAgeTreatment || hasManualAdUnit)) {
-      hardErrors.push(`${outputPath}: AdSense-Artefakt außerhalb der drei freigegebenen Seitentypen gefunden.`);
+      hardErrors.push(`${outputPath}: AdSense-Artefakt außerhalb der freigegebenen Seitentypen gefunden.`);
     }
     if (isPublisherSurface && hasPublisherTag !== publisherTagExpected) {
       hardErrors.push(`${outputPath}: Publisher-Tag entspricht nicht dem geprüften Deployment-Zustand.`);
@@ -390,6 +407,29 @@ if (verifyBuiltOutput) {
         if (renderedPlacements.filter((value) => value === placement).length !== 1
           || !placementMarkup.includes(`data-ad-slot="${slotId}"`)) {
           hardErrors.push(`${outputPath}: Platz ${placement} fehlt, ist doppelt oder nutzt die falsche Slot-ID.`);
+        }
+      }
+      if (isMonetizableStory) {
+        const placementPosition = source.indexOf('data-ad-placement="story-after-parent-guide"');
+        const articleStart = source.indexOf('data-reader-article');
+        const articleEnd = articleStart >= 0 ? source.indexOf('</article>', articleStart) : -1;
+        const guideStart = source.indexOf('class="story-guide"');
+        const guideEnd = guideStart >= 0 ? source.indexOf('</section>', guideStart) : -1;
+        const followingContentPositions = [
+          source.indexOf('class="themes"'),
+          source.indexOf('class="watch"'),
+          source.indexOf('class="more"'),
+        ].filter((position) => position >= 0);
+        const firstFollowingContent = followingContentPositions.length
+          ? Math.min(...followingContentPositions)
+          : -1;
+        if (placementPosition < 0
+          || articleEnd < 0
+          || guideEnd < 0
+          || placementPosition <= articleEnd
+          || placementPosition <= guideEnd
+          || (firstFollowingContent >= 0 && placementPosition >= firstFollowingContent)) {
+          hardErrors.push(`${outputPath}: Story-Anzeige steht nicht sicher nach Artikel und Eltern-Guide oder vor den Empfehlungen.`);
         }
       }
     }
@@ -425,6 +465,7 @@ if (verifyBuiltOutput) {
 console.log('MasalNova Publishing Audit');
 console.log(`Geschichten gesamt: ${stories.length}`);
 console.log(`Öffentlich indexierbar/empfohlen: ${publicStories.length}`);
+console.log(`Kontrolliert monetarisierbare Stories: ${monetizableStories.length}`);
 console.log(`Kontrolliert noindex + werbefrei (unter Formatgrenze): ${controlledShortStories.length}`);
 console.log(`Kontrolliert noindex + werbefrei (Redaktionsprüfung offen): ${controlledEditorialStories.length}`);
 console.log(`İslami Hikâyeler mit Quellenprüfung: ${islamic.length}`);
