@@ -12,7 +12,7 @@ themes: ["dürüstlük","güven","vicdan"]
 characters: ["Çoban Tarık","Değirmenci Rahmi Dede","Beyaz Kuzu"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "needs_review"
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 modifiedAt: "2026-08-05"
 ---

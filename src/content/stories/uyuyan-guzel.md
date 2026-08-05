@@ -15,7 +15,7 @@ characters: ["Prenses Aurora", "Kral", "Kraliçe", "İyi Peri", "Küskün Peri",
 isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "needs_review"
+editorialStatus: "approved"
 publishedAt: "2026-07-21"
 modifiedAt: "2026-08-05"
 ---
