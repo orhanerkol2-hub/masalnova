@@ -15,12 +15,14 @@ interface LegalDocumentData {
 
 interface Props {
   document: LegalDocumentData;
+  lang?: string;
+  homeLabel?: string;
 }
 
-const { document } = Astro.props;
+const { document, lang = 'en', homeLabel = 'Home' } = Astro.props;
 ---
 
-<article class="legal-document" lang="en">
+<article class="legal-document" lang={lang}>
   <header>
     <h1>{document.title}</h1>
     <p class="legal-document__subtitle">{document.subtitle}</p>
@@ -44,7 +46,7 @@ const { document } = Astro.props;
   ))}
 
   {document.note && <p class="legal-document__note">{document.note}</p>}
-  <a class="btn btn-ghost" href="/">← Home</a>
+  <a class="btn btn-ghost" href="/">← {homeLabel}</a>
 </article>
 
 <style>

@@ -12,8 +12,9 @@ themes: ["affetmek","dürüstlük","alçakgönüllülük"]
 characters: ["Keloğlan","Padişah","Saray Bahçıvanı"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, ışıl ışıl bir saray varmış. Bu sarayın duvarları altın yaldızlı, pencereleri billur gibi parıldarmış. Sarayın en değerli eşyası ise, güneşin her sabah ilk ışığını yansıtan büyük, gümüş çerçeveli bir aynaymış.
 
@@ -42,5 +43,7 @@ Aradan zaman geçmiş, Keloğlan sarayda herkesin sevdiği, güvendiği biri olm
 Bir akşam, Padişah'ın küçük kızı, oyun oynarken kazara bir vazoyu kırmış. Küçük kız, korkudan ağlamaya başlamış. Keloğlan, onun yanına gitmiş ve gülümseyerek demiş ki: "Ağlama küçük prenses. Bil ki hata yapmak kötü değildir, önemli olan doğruyu söylemektir. Ben de bir gün aynayı kırdım, ama gerçeği söyleyince her şey düzeldi."
 
 Küçük kız, gözyaşlarını silmiş ve gidip babasına doğruyu söylemiş. Padişah, kızını sevgiyle kucaklamış ve gülümsemiş, çünkü sarayda artık dürüstlük ve affetmek, en kıymetli hazine olmuş.
+
+Prenses vazoyu onarmak için sarayın ustasından yardım istemiş. Keloğlan da parçaları güvenle toplamasına yardım etmiş; doğruyu söylemenin ardından zararı düzeltmeye çalışmak gerektiğini birlikte öğrenmişler.
 
 **Kıssadan hisse:** Hatasını dürüstçe kabul edenler, affedilmeyi her zaman hak eder.

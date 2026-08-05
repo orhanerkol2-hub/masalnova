@@ -12,8 +12,9 @@ themes: ["yardımlaşma","dostluk","dürüstlük"]
 characters: ["Keloğlan","Nine Fatma","Padişah'ın Ulağı"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan yaşarmış. Kel başını sarı bir takke ile örter, gün boyu köylüye elinden geldiğince yardım edermiş. Kimi zaman kuyudan su çeker, kimi zaman tarlada başak toplarmış.
 
@@ -46,5 +47,7 @@ Mektupta Padişah şöyle yazmış: 'Keloğlan, aklınla ve yardımseverliğinle
 Keloğlan altınları köy meydanına koymuş, herkesle beraber bir çeşme yaptırmışlar. Artık ninelerin kuyudan su taşımasına gerek kalmamış, herkes rahatça su alabiliyormuş.
 
 O geceden sonra köylü, yıldızlı gökyüzüne her bakışında Keloğlan'ın gülen yüzünü ve yardımseverliğini hatırlarmış. Keloğlan da hiçbir zaman kendi çıkarını düşünmemiş, hep başkalarına el uzatmış.
+
+Çeşmenin bakımını da köylüler sırayla üstlenmiş.
 
 **Kıssadan hisse:** Küçük bir yardım, birlikte yapıldığında büyük mutluluklara dönüşür.

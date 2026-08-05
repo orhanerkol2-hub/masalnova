@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/bahcivan-cemal-ve-yankili-magara.webp"
 altText: "Kapak görseli: Bahçıvan Cemal ve Yankılı Mağara"
 ageGroups: ["5-7"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["azim","sabır","umut"]
 characters: ["Bahçıvan Cemal","Yankı Kuşu Zeytin"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde Cemal adında güler yüzlü bir bahçıvan yaşarmış. Onun elleri toprağa değince, en cılız fideler bile gülümser gibi büyürmüş. Ama bir gün köyün çiçekleri sararmaya başlamış ve kimse sebebini bulamamış.
 
@@ -30,6 +31,8 @@ Tam otuz birinci gün, mağaranın içi altın bir ışıkla dolmuş. Tohum çat
 Köylüler koşarak mağaraya gelmiş, gördükleri manzaraya hayran kalmışlar. Cemal'in azmi sayesinde tüm köy yeniden yeşermiş. O günden sonra köylüler, işleri zorlaştığında birbirlerine "Cemal gibi ol, sulamaya devam et," dermiş.
 
 Cemal, çiçeği köyün meydanına dikmiş ve her yıl aynı günde çocuklarla birlikte onu sulamaya devam etmiş. Çünkü biliyormuş ki, sabır ve azimle sulanan her tohum, er ya da geç güzel bir şeye dönüşürmüş.
+
+Çocuklar büyümesini küçük bir deftere çizmiş; değişimi gün gün görmek sabırlarını güçlendirmiş.
 
 Peki sen de bir şeyi denerken hemen sonuç gelmeyince ne yapardın, sulamaya devam eder miydin?
 

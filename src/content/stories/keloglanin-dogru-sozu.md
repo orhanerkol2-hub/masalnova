@@ -12,8 +12,9 @@ themes: ["dürüstlük","doğruluk","emek"]
 characters: ["Keloğlan","Değirmenci Dede","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında eski bir değirmen varmış. Bu değirmenin çarkı yıllardır dönmez, tozlu rafları örümcek ağıyla kaplıymış. Köylüler oraya "Kör Değirmen" derlermiş, çünkü kimse onu çalıştırmaya cesaret edemezmiş.
 
@@ -38,5 +39,9 @@ Padişah bu sözlere çok sevinmiş. Değirmeni onarması için ustalar gönderm
 Keloğlan bu parayla değirmeni tamir ettirmiş, köye bereket getirmiş. Artık "Kör Değirmen" değil, "Dürüst Değirmen" denirmiş ona. Herkes buğdayını oraya götürür, Keloğlan'ın adil ve doğru sözlü olduğunu anlatırmış.
 
 Keloğlan büyüyünce bile bu değirmende çalışmayı sürdürmüş, ama en çok sevdiği şey, kimseye yalan söylemeden, alnı ak bir şekilde yaşamakmış.
+
+Bir gün bir müşteri yanlışlıkla iki çuvalın parasını üç çuvalmış gibi bırakmış. Keloğlan fazlasını hemen geri vermiş. Adam şaşırınca, "Doğru söz yalnız sarayda değil, her gün yaptığımız küçük işlerde de belli olur," demiş. Değirmendeki çocuklar bu sözü duyup hesapları birlikte yeniden kontrol etmişler.
+
+Bu alışkanlık değirmendeki güveni daha da büyütmüş.
 
 **Kıssadan hisse:** Doğruluk, insanı her zaman altından daha çok zenginleştirir.

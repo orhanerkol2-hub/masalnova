@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/coban-salihin-verdigi-soz.webp"
 altText: "Kapak görseli: Çoban Salih'in Verdiği Söz"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["sözünde durmak","dostluk","sorumluluk"]
 characters: ["Çoban Salih","Balıkçı Rana","Küçük kuzu Beyaz"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, deniz kıyısındaki küçük bir köyde Salih adında iyi kalpli bir çoban yaşarmış. Salih her sabah koyunlarını kayalıkların üzerindeki yemyeşil çayıra götürür, akşamları da sahilde oturup dalgaları izlermiş.
 
@@ -34,6 +35,8 @@ Rana yeni yelkenle denize açılmış, o gün bereketli bir av yapmış. Köye d
 O günden sonra köyde bir söz doğmuş: "Salih gibi söz ver, Salih gibi tut." Çocuklar birbirlerine söz verirken bu sözü hatırlar, sözlerini daha dikkatli tutmaya çalışırlarmış.
 
 Salih ise hep aynı şeyi söylermiş: "Bir söz, küçük bir tohum gibidir. Onu tutarsan güven ağacı büyür, tutmazsan tohum kurur gider."
+
+Bu yüzden Salih artık söz vermeden önce zamanını ve yapabileceklerini düşünürmüş. Yetişemeyeceğini anlarsa açıkça söylermiş. Her söze hemen "evet" dememenin de güvenilir olmanın bir parçası olduğunu öğrenmiş.
 
 Sevgili çocuk, sen de birine söz verdiğinde, o sözü zor da olsa tutmaya çalışır mısın?
 

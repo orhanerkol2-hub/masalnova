@@ -12,8 +12,9 @@ themes: ["şükür","kanaat","paylaşma"]
 characters: ["Keloğlan","Padişah","Nine Hatçe"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında kel kafalı, gönlü sıcak bir delikanlı yaşarmış. Keloğlan yoksulmuş ama hiç şikâyet etmezmiş; elinde ne varsa onunla yetinir, komşularıyla paylaşırmış.
 
@@ -34,5 +35,7 @@ Padişah bunu görünce çok etkilenmiş. "Demek ki kâsenin sırrı, içindeki 
 Keloğlan köyüne dönmüş, kâseyi meydana koymuş. Kim aç ya da susuzsa gelip şükrederek bir şeyler koyduğunda kâse çoğalırmış. Böylece köyde kimse açlık çekmemiş, herkes birbirine şükranla bakmayı öğrenmiş.
 
 Keloğlan, o günden sonra her sabah çiçekli bahçeye gider, elindeki küçük şeylere bakıp gülümsermiş. Çünkü anlamış ki, en büyük hazine, sahip olduklarımızın kıymetini bilmekmiş.
+
+Kâseyi dolduranların adını değil, paylaşılan yiyeceğin miktarını yazmışlar. Böylece kimse övünmemiş, kimse utanmamış; herkes ihtiyacı kadar alıp gücü kadar bırakmış.
 
 **Kıssadan hisse:** Az olana şükreden, çoğu zaman gönlünü ve sofrasını bereketle doldurur.

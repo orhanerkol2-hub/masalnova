@@ -12,8 +12,9 @@ themes: ["şükür","paylaşma","dürüstlük"]
 characters: ["Keloğlan","yaşlı balıkçı Dursun Baba","Padişah"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, deniz kıyısında küçük bir köy varmış. Bu köyde Keloğlan, anasıyla birlikte yaşarmış. Evleri kıyıya çok yakın olduğu için Keloğlan her sabah dalgaların sesiyle uyanırmış.
 
@@ -40,5 +41,7 @@ Ama Keloğlan, altınları görünce hemen düşünmüş. "Padişahım," demiş,
 Keloğlan köye döndüğünde altınları herkesle paylaşmış. O günden sonra köyde kimse açlık çekmemiş, herkes birbirine yardım etmeyi öğrenmiş. Deniz kıyısında hâlâ balıkçılar ağ atarken, çocuklar Keloğlan'ın hikâyesini anlatırmış.
 
 Keloğlan her akşam denize bakıp şükredermiş: "Ne kadar azımız olsa da, paylaşınca çoğalıyor."
+
+Anacığı o akşam sofraya bir tas çorba koymuş. Köyden üç çocuk kapıya gelince Keloğlan tasları çoğaltmış, ekmeği eşit parçalara bölmüş. Sofra kalabalıklaştıkça gülüşmeler de artmış. Keloğlan, şükrün yalnız sözle değil, nimeti dikkatle kullanıp başkasıyla paylaşarak da gösterildiğini anlamış.
 
 **Kıssadan hisse:** Elimizdeki azıcık nimeti paylaşmak, onu bereketlendirir ve gönülleri şükürle doldurur.

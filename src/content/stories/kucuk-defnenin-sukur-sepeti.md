@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/kucuk-defnenin-sukur-sepeti.webp"
 altText: "Kapak görseli: Küçük Defne'nin Şükür Sepeti"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["şükür","kanaat","doğa sevgisi"]
 characters: ["Defne","Dede Şükrü","Orman sakinleri"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın kenarında küçük bir köy varmış. Bu köyde Defne adında bir kız yaşarmış. Defne iyi bir çocukmuş ama sürekli sızlanırmış. Yemeği az bulur, elbisesini beğenmez, oyuncaklarını yetersiz görürmüş.
 
@@ -36,6 +37,8 @@ Dede Şükrü ona sevgiyle bakmış. "Şükür, elimizdekini görmektir kızım.
 Defne köye döndüğünde annesine koşmuş. "Anne," demiş, "bugün çok şey öğrendim. Yemeğimize, evimize, birbirimize şükretmeliyiz." Annesi kızının değiştiğini görüp mutlulukla gülümsemiş.
 
 O günden sonra Defne her akşam küçük bir şükür sepeti doldururmuş zihninde: bugün gördüğü bir çiçek, yediği bir meyve, duyduğu bir gülüş. Sızlanmayı bırakmış, yerine minnettarlığı koymuş.
+
+Zor geçen günlerde bile sepetine küçük bir güzellik ekleyebilmiş.
 
 Sevgili çocuklar, siz de bugün neye şükrettiğinizi düşünsenize; sepetiniz neyle dolardı?
 

@@ -12,8 +12,9 @@ themes: ["yardımlaşma","dayanışma","zeka"]
 characters: ["Keloğlan","Padişah","Yaşlı Kervancı Dede"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında zeki ve gönlü geniş bir delikanlı varmış. Köyün kenarındaki küçük evinde annesiyle yaşar, gündüzleri komşularına yardım eder, akşamları da damın üstüne çıkıp yıldızları sayarmış.
 
@@ -46,5 +47,7 @@ Keloğlan başını sallamış: "Padişahım, ben karşılık için yardım etme
 Padişah bu alçakgönüllü isteğe çok şaşırmış ve çok sevinmiş. Keloğlan'ın köyüne bolca tohum göndermiş. O yıl köyde öyle bereketli bir hasat olmuş ki, herkes Keloğlan'a minnettar kalmış.
 
 Keloğlan yine damın üstüne çıkmış, yıldızlara bakmış ve gülümsemiş. Çünkü bilmişki, en güzel ışık, insanların birbirine uzattığı elde parlarmış.
+
+Köylüler gelen tohumların bir bölümünü ertesi yıl için ayırmış, kalanını ortak tarlaya ekmişler. Keloğlan, yardımlaşmanın armağanı dikkatle kullanıp başkasına da ulaşacak biçimde çoğaltmak olduğunu söylemiş.
 
 **Kıssadan hisse:** Herkes elini taşın altına koyarsa, en zorlu yollar bile aydınlanır.

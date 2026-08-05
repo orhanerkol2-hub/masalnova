@@ -12,8 +12,9 @@ themes: ["paylaşma","dostluk","zeka"]
 characters: ["Keloğlan","Değirmenci Nine Ayşe","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan yaşarmış. Annesiyle iki gözlü kulübelerinde geçinip gidermiş ama o yıl kuraklık gelmiş, tarlalar susuz kalmış, köyün ambarları boşalmış.
 
@@ -44,5 +45,7 @@ Padişah bu sözlere çok sevinmiş, Keloğlan'a köyün yeniden canlanması iç
 Nine Ayşe de artık yalnız değilmiş. Keloğlan sık sık onu ziyaret eder, birlikte değirmeni işletirlermiş. Köylüler her hafta değirmenin önünde toplanır, kim ihtiyaç sahibiyse ona pay ayırırlarmış. Böylece kıtlık günleri geçmiş, köyde bolluk ve dostluk baş göstermiş.
 
 Ve o günden sonra köyde bir söz yayılmış: "Keloğlan'ın değirmeninde un bitmez, çünkü paylaşan elde bereket tükenmezmiş."
+
+Keloğlan her dağıtımdan sonra kalan unu ölçer, bir sonraki hasada yetecek tohumu ayrı tutarmış. Paylaşırken geleceği düşünmenin, bereketi koruyan önemli bir sorumluluk olduğunu köylülere göstermiş.
 
 **Kıssadan hisse:** Paylaşılan bereket asla azalmaz, tersine büyüyerek herkese yeter.

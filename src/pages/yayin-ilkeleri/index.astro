@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://masalnova.com/yayin-ilkeleri/#page',
+  url: 'https://masalnova.com/yayin-ilkeleri/',
+  name: 'MasalNova Yayın İlkeleri',
+  inLanguage: 'tr-TR',
+  about: { '@id': 'https://masalnova.com/#organization' },
+};
+---
+<BaseLayout
+  title="Yayın İlkeleri ve Editoryal Süreç | MasalNova"
+  description="MasalNova'nın yazar, editoryal inceleme, dijital araçlar, yaş etiketleri, kaynak, düzeltme ve reklam ilkeleri."
+  path="/yayin-ilkeleri/"
+  jsonLd={jsonLd}
+  activeNav=""
+  allowAds={false}
+>
+  <section class="section">
+    <div class="container">
+      <article class="policy">
+        <p class="eyebrow">Şeffaflık · Son güncelleme: 5 Ağustos 2026</p>
+        <h1>Yayın ilkeleri ve editoryal süreç</h1>
+        <p class="lead">
+          MasalNova; çocuklara uygun Türkçe anlatıları, ebeveynlerin seçim yapmasını kolaylaştıran
+          açık bilgilerle sunar. Aşağıdaki ilkeler bir hikâyenin nasıl hazırlandığını, kontrol
+          edildiğini, güncellendiğini ve hangi durumda önerildiğini açıklar.
+        </p>
+
+        <h2>1. Kimin için ve hangi amaçla yayımlıyoruz?</h2>
+        <p>
+          İçerikler çocuklarıyla birlikte okuyacak aileler ve bağımsız okumaya başlayan çocuklar
+          için hazırlanır. Yaş, süre, tema ve duygusal yoğunluk bilgileri seçim desteğidir; pedagojik
+          veya tıbbi değerlendirme değildir. Ebeveyn, kendi çocuğu için son kararı verir.
+        </p>
+
+        <h2>2. Yazar ve editör sorumluluğu</h2>
+        <p>
+          Her hikâyede hazırlayan yazar adı açıkça gösterilir. Yayınlanan metinler
+          <a href="/yazarlar/aylin-karabektas/">Aylin Karabektaş</a> ve
+          <a href="/yazarlar/muhammet-karayigit/">Muhammet Karayiğit</a> tarafından birlikte
+          incelenir. Kontrol; dil ve yazım, anlatım bütünlüğü, yaş ve süre etiketi, çocuklara
+          uygunluk, metin-kapak uyumu ve gerekli sayfa bilgilerinin tamamlığını kapsar. İçeriği
+          anlamlı biçimde değiştiren güncellemeler yeniden inceleme durumuna alınır; onay tamamlanana
+          kadar arama, öneri ve reklamdan çıkarılır.
+        </p>
+
+        <h2>3. Dijital araçlar ve görseller</h2>
+        <p>
+          İçerik planlama, dil kontrolü, meta bilgiler ve görsel üretim ya da düzenlemede dijital
+          araçlardan yararlanılabilir. Bazı kapak görselleri dijital olarak üretilmiş veya
+          düzenlenmiştir. Dijital araçlar yazar olarak gösterilmez; nihai seçim, düzeltme ve
+          yayımlama kararı adları belirtilen kişilerce verilir.
+        </p>
+
+        <h2>4. Özgünlük, yeterlilik ve kalite eşiği</h2>
+        <p>
+          Metinlerin yalnızca arama trafiği için çoğaltılmaması; başlığıyla uyumlu, tamamlanmış bir
+          olay örgüsü ve okura anlamlı bir sonuç sunması hedeflenir. MasalNova'nın mevcut iç kalite
+          kontrolünde metnin uzunluğu anlatı türüyle birlikte değerlendirilir. Kaynaklı okul öncesi
+          anlatılar, özellikle kısa masallar, uyku masalları ve normal uzunluktaki hikâyeler için
+          ayrı tamamlık sınırları kullanılır. Böylece kısa olması amaçlanan bir anlatıya sırf sayı
+          artırmak için dolgu eklenmez. Kendi formatındaki eşiği karşılamayan içerikler geliştirilene
+          kadar site içi önerilere ve XML site haritasına alınmaz, arama motorlarına
+          <code>noindex</code> olarak bildirilir ve bu sayfalarda reklam yüklenmez. Bu sınırlar
+          MasalNova'nın iç kontrolüdür; Google veya AdSense tarafından açıklanmış sabit bir kelime
+          şartı değildir.
+        </p>
+
+        <h2>5. İslami hikâyelerde kaynak</h2>
+        <p>
+          Kur'an, hadis veya siyer anlatısına dayanan içeriklerde kaynak türü ve atıf hikâye
+          sayfasında gösterilir. Metinler çocukların yaşına göre sadeleştirilebilir; sadeleştirme,
+          kaynağın yerine geçmez. Kaynak bağlantısı bulunuyorsa ayrıca sunulur.
+        </p>
+
+        <h2>6. Yaş, süre ve ebeveyn notları</h2>
+        <p>
+          Okuma süresi metin uzunluğuna göre yaklaşık olarak hesaplanır. Yaş etiketi; sözcük seçimi,
+          cümle yapısı, olay örgüsü ve duygusal yoğunluğa göre belirlenir. Her hikâyedeki ebeveyn
+          rehberi, konuşma başlatmak için hazırlanır ve uzman tavsiyesi değildir.
+        </p>
+
+        <h2>7. Düzeltme ve güncelleme</h2>
+        <p>
+          Yazım hatası, eksik kaynak, uyumsuz görsel veya çocuklara uygunluk sorunu bildirimleri
+          incelenir. Doğrulanan sorun metinde veya sayfa bilgilerinde düzeltilir; anlamlı içerik
+          değişikliklerinde güncelleme tarihi kullanılabilir. Bildirim için ilgili sayfa bağlantısıyla
+          birlikte <a href="/iletisim/">iletişim sayfamızı</a> kullanabilirsiniz.
+        </p>
+
+        <h2>8. Reklam ve içerik ayrımı</h2>
+        <p>
+          Reklam, ücretsiz erişimin finansmanına yardımcı olur; yazar veya editör kararını belirlemez.
+          Reklam alanlarının hikâyeyi kapatmaması ve gezinme öğesi gibi görünmemesi hedeflenir.
+          Oyun sayfalarında MasalNova tarafından reklam yüklenmez. Kalite eşiğini karşılamayan veya
+          editoryal onayı tamamlanmamış hikâyeler de reklamsızdır.
+        </p>
+
+        <p class="owner">
+          Yayıncı ve içerikten sorumlu kişi bilgileri <a href="/impressum/">Legal Notice</a>
+          sayfasında yer alır. MasalNova Çocuk, Sunbeam Media tarafından sunulur.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .policy { max-width: 860px; margin: 0 auto; padding: 34px clamp(20px, 5vw, 48px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-lg); color: var(--ink); }
+  .eyebrow { margin: 0 0 6px; color: var(--blue-d); font-size: .76rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  h1 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  h2 { margin: 28px 0 8px; font-size: clamp(1.15rem, 2.5vw, 1.4rem); }
+  p { margin: 9px 0 0; color: var(--ink-soft); line-height: 1.78; }
+  .lead { margin-top: 16px; color: var(--ink); font-size: 1.04rem; }
+  a { color: var(--blue-d); font-weight: 800; text-decoration: underline; }
+  code { padding: 1px 5px; border-radius: 5px; background: var(--paper-2); color: var(--ink); }
+  .owner { margin-top: 30px; padding: 17px; border-radius: 14px; background: #f4f7ff; color: var(--ink); }
+</style>

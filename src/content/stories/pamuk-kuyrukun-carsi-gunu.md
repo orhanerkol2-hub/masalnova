@@ -12,8 +12,9 @@ themes: ["cesaret","dostluk","yardımlaşma"]
 characters: ["Pamuk Kuyruk (tavşan)","Minik Serçe Zilli","Baharatçı Kaplumbağa Kâzım"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, orman kenarındaki köyün pazar yerinde Pamuk Kuyruk adında bir tavşan yaşarmış. Pamuk Kuyruk çok tatlı bir tavşanmış ama en küçük sesten bile ürker, kalabalık yerlere yaklaşmaya çekinirmiş.
 
@@ -38,5 +39,7 @@ Pamuk Kuyruk gülümsemiş: "Korkuyordum, ama seni bulmak korkumdan daha önemli
 Kâzım Amca da onları görünce çok sevinmiş ve ikisine birer taze havuç ile mısır vermiş. Çarşıdaki herkes küçük tavşanın cesaretini duymuş, ona "Küçük Kahraman" demeye başlamışlar.
 
 O günden sonra Pamuk Kuyruk artık kalabalıktan o kadar da korkmazmış. Çünkü öğrenmiş ki, sevdiklerimiz için attığımız adımlar bizi güçlü kılarmış.
+
+Yine de çarşıya giderken Kâzım Amca'yla bir buluşma yeri belirler, kalabalıkta birbirlerini kaybederlerse orada beklerlermiş. Cesaretin yanında hazırlıklı olmak da Pamuk'un içini rahatlatmış.
 
 **Kıssadan hisse:** Sevdiklerimiz için korkularımızı yenmeye çalıştığımızda, cesaret zaten içimizde büyümeye başlar.

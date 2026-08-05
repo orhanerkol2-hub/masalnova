@@ -12,8 +12,9 @@ themes: ["dürüstlük","güven","doğruluk"]
 characters: ["Tavşan Fındık","Kunduz Usta","Serçe Nine"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarındaki kalabalık bir çarşıda küçük bir tavşan yaşarmış. Adı Fındık'mış. Fındık, çarşının en küçük tezgâhında havuç, lahana ve taze yeşillikler satarmış.
 
@@ -34,5 +35,7 @@ O günden sonra çarşıdaki herkes Fındık'ın tezgâhına gitmeye başlamış
 Ama Fındık için en güzel şey, satışlarının artması değilmiş. En güzel şey, herkesin gözünde güvenilir biri olmasıymış. Çünkü bazen kimsenin görmediği küçük anlarda verdiğimiz doğru kararlar, bizi en çok değerli kılan şeylermiş.
 
 Aradan yıllar geçmiş, Fındık büyümüş, çarşının en saygın tüccarı olmuş. Ama hâlâ her sabah terazisini kontrol edermiş, çünkü doğruluk ona hiçbir zaman ağır gelmemiş, tam tersine yüreğini hep hafif tutmuş.
+
+Ölçü taşlarını da ayda bir komşu esnafla karşılaştırırmış. Güvenin dikkatli kontrolle korunduğunu bilirmiş.
 
 **Kıssadan hisse:** Kimse görmese de doğruyu söylemek, en büyük güveni kazandırır.

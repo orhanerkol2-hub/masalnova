@@ -12,8 +12,9 @@ themes: ["merak","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Yaşlı Kadın Zehra Nine","Padişahın Adamı"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında meraklı bir delikanlı varmış. Bu Keloğlan, köyde ne görse sorar, ne duysa öğrenmek istermiş. Annesi bıkkınlıkla, "Kel oğlum, senin bu merakın bir gün başımıza iş açacak!" dermiş ama Keloğlan hep gülerek geçermiş.
 
@@ -40,5 +41,7 @@ Zehra Nine hemen Keloğlan'ı işaret etmiş. "Bu meraklı ve iyi yürekli çocu
 Keloğlan altınları alınca hemen düşünmüş. "Bunun yarısı Zehra Nine'ye kalsın, kalan kışlık odun ve yiyecek almaya yeter bana da," demiş. Nine gözyaşlarını tutamamış, "Sen hem meraklı hem de gönlü bol bir çocukmuşsun," demiş.
 
 Keloğlan köyüne döndüğünde herkese bu hikâyeyi anlatmış. Annesi bu kez gülümseyerek, "Demek merakın bazen iyi işlere de yarıyor," demiş. Keloğlan başını kaşımış, "Merak etmek kötü değilmiş anne, önemli olan onu iyilik için kullanmakmış," demiş.
+
+Sonra altınla alınan odunları Zehra Nine'nin evine birlikte taşımışlar. Keloğlan, merakın bir soruyu bulmakla bitmediğini; öğrendiğini gerçek bir yardıma dönüştürünce değer kazandığını anlamış.
 
 **Kıssadan hisse:** Merak, iyilikle birleşince insana hem bilgi hem de gönül zenginliği kazandırır.

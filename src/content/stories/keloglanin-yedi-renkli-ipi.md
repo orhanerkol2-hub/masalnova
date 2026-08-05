@@ -12,8 +12,9 @@ themes: ["azim","emek","alaycılığa boyun eğmemek"]
 characters: ["Keloğlan","Padişah","İplikçi Nine"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir çarşının en gürültülü köşesinde Keloğlan yaşarmış. Keloğlan'ın ne atı ne parası varmış; sadece iki eli, bir de hiç bitmeyen umudu varmış.
 
@@ -34,6 +35,8 @@ Padişah bu haberi alınca Keloğlan'ı saraya çağırmış. "Duydum ki çarş�
 Padişah çok etkilenmiş. "Sen gerçek bir ustasın evladım. Kel kafan değil, azimli yüreğin seni bu noktaya getirdi" demiş ve ona çarşının en güzel dükkanını hediye etmiş.
 
 O günden sonra Keloğlan'ın dükkanı çarşının gözbebeği olmuş. Eskiden onunla alay edenler bile şimdi kapısında sıraya giriyormuş. Keloğlan hiç kibirlenmemiş, herkese güler yüzle hizmet etmiş ve İplikçi Nine'yi hiç unutmamış, her hafta ona ziyarete gitmiş.
+
+Keloğlan dükkânına öğrenmek isteyen iki çırak da almış. Onlara önce ipleri ayırmayı, sonra sabırla aynı ilmeği tekrar etmeyi öğretmiş. Kendi başarısını saklamak yerine paylaşınca çarşıda yeni ustaların yetişmesine sevinmiş.
 
 Çarşıdaki herkes anlamış ki, gerçek değer görünüşte değil, azimde ve emekte saklıymış.
 

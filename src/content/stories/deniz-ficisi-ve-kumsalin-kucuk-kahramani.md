@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/deniz-ficisi-ve-kumsalin-kucuk-kahramani.webp"
 altText: "Kapak görseli: Deniz Fıçısı ve Kumsalın Küçük Kahramanı"
 ageGroups: ["5-7"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["merhamet","cesaret","yardımseverlik"]
 characters: ["Doruk","Martı Sedef","Balıkçı Kaptan Vahit"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, mavi denizin kıyısında küçük bir köy varmış. Bu köyde Doruk adında cesur bir çocuk yaşarmış. Doruk her sabah güneş doğmadan kalkar, kumsalda yürür, dalgaların sesini dinlermiş.
 
@@ -32,6 +33,8 @@ Köyün yaşlı balıkçısı Kaptan Vahit, bir gün Doruk'un bahçesindeki mart
 Doruk şaşırmış ve sevinmiş. Sedef martısı her gün biraz daha iyileşmiş, kanatları eski gücüne kavuşmuş. Bir sabah, Doruk kumsala çıktığında Sedef'in gökyüzünde süzüldüğünü görmüş. Martı, Doruk'un başının üstünde üç kez daireler çizmiş, sanki teşekkür ediyormuş gibi.
 
 O günden sonra Sedef, her sabah Doruk'un evinin üstünden geçer, kanat çırparak selam verirmiş. Doruk, küçük bir canlıya gösterdiği şefkatin ona nasıl büyük bir mutluluk getirdiğini anlamış. Köydeki diğer çocuklar da onun cesaretini ve iyi yürekliliğini örnek almışlar.
+
+Doruk yaralı bir hayvan gördüklerinde hemen dokunmak yerine bir yetişkine haber vermeleri gerektiğini arkadaşlarına anlatmış. Sedef'e yardım ederken öğrendiği güvenli yolu böylece bütün çocuklarla paylaşmış.
 
 Sevgili çocuk, sence bir canlıya yardım ederken korkularımızı yenmek neden önemlidir?
 

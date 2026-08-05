@@ -12,8 +12,9 @@ themes: ["saygı","güleryüz","dostluk"]
 characters: ["Keloğlan","Pınar Devi Bereket","Yaşlı kadın Ayşe Nine"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların eteğinde küçük bir köy varmış. Bu köyün kenarında, çam ağaçlarının arasında serin bir pınar akar, suyu buz gibi, sesi ninni gibiymiş.
 
@@ -42,5 +43,7 @@ Keloğlan hemen kollarını sıvamış. "Yardım edeyim mi sana, Bereket?" diye 
 Keloğlan tohumu köye getirmiş, kendi bahçesine ekmiş. Her sabah pınardan getirdiği suyla, güzel sözlerle sulamış. Kısa süre içinde kocaman, tatlı kokulu bir kabak yetişmiş, o kadar büyükmüş ki bütün köy onunla karnını doyurmuş.
 
 Köyün yaşlısı Ayşe Nine, Keloğlan'ın alnından öpmüş. "Sen bize saygının ne kadar değerli olduğunu gösterdin evladım," demiş. O günden sonra köylüler pınara gittiklerinde hep saygıyla, teşekkür ederek su almışlar. Pınar hiç kurumamış, dev de zaman zaman gelip Keloğlan'la sohbet etmiş.
+
+Suyu ihtiyaçları kadar kullanmaya özellikle dikkat etmişler.
 
 **Kıssadan hisse:** Saygıyla yaklaşılan her kapı, gönülde bereket kapısı açar.

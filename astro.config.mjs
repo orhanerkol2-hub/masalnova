@@ -2,6 +2,11 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { readdirSync, readFileSync } from 'node:fs';
+import {
+  isStoryContentSubstantial,
+  markdownBodyFromSource,
+  storyQualityContextFromSource,
+} from './src/lib/story-quality.mjs';
 
 const storyContentDirectory = new URL('./src/content/stories/', import.meta.url);
 const nonIndexableStoryPaths = new Set(
@@ -12,7 +17,12 @@ const nonIndexableStoryPaths = new Set(
       const status = source.match(/^editorialStatus:\s*["']?([^\s"']+)/m)?.[1] ?? 'draft';
       const section = source.match(/^section:\s*["']?([^\s"']+)/m)?.[1] ?? 'masallar';
       const basePath = section === 'islami-hikayeler' ? '/islami-hikayeler/' : '/masallar/';
-      return status === 'approved' ? [] : [`https://masalnova.com${basePath}${name.replace(/\.md$/, '')}/`];
+      const isIndexable = status === 'approved'
+        && isStoryContentSubstantial(
+          markdownBodyFromSource(source),
+          storyQualityContextFromSource(source),
+        );
+      return isIndexable ? [] : [`https://masalnova.com${basePath}${name.replace(/\.md$/, '')}/`];
     }),
 );
 

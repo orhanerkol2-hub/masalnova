@@ -12,8 +12,9 @@ themes: ["paylaşma","dostluk","cömertlik"]
 characters: ["Nazende","Pınar Perisi","köy çocukları"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde küçük bir köy varmış. Bu köyde Nazende adında meraklı bir kız yaşarmış. Nazende her şeyi bilmek isterdi; kuşların neden uçtuğunu, yaprakların neden sarardığını, hatta karıncaların yuvasını nereye kazdığını hep sorup dururdu.
 
@@ -34,6 +35,8 @@ O an pınardan tuhaf bir şey olmuş. Su birden köpürmüş ve pınarın içind
 Nazende çok sevinmiş. Testileri çocuklarla birlikte doldurmuşlar ve köye dönerken herkese su dağıtmışlar. Yolda karşılaştıkları yaşlı bir amcaya, susamış bir köpeğe, hatta tarlada çalışan bir çiftçiye bile su vermişler.
 
 O günden sonra Nazende, sadece merak eden değil, aynı zamanda paylaşmayı seven bir kız olarak tanınmış. Köylüler onun adını andıkça "Paylaşan Nazende" derlermiş. Pınar da hiç kurumamış, çünkü paylaşan gönüller oldukça suyu hep bereketli akmış.
+
+Testileri doldururken suyu dökmemeye de özen göstermiş.
 
 Sevgili küçük dinleyici, sen de elindeki bir şeyi paylaştığında nasıl hissedersin?
 

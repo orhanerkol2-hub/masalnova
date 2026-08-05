@@ -12,8 +12,9 @@ themes: ["tutumluluk","paylaşma","öngörü"]
 characters: ["Baykuş Huhu","Sincap Fıstık","Tavşan Pamuk"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, ormanın en yaşlı meşe ağacında Huhu adında bir baykuş yaşarmış. Huhu, her gece ay ışığında uzanan ince bir patikada dolaşır, yolda bulduğu fındıkları, meşe palamutlarını ve tohumları küçük torbasına koyarmış.
 
@@ -40,5 +41,7 @@ Huhu, kovuktaki deposunun kapağını açmış. İçi fındık, palamut ve kuru 
 O kıştan sonra Fıstık ile Pamuk da Huhu'yu örnek almışlar. Baharın gelmesini beklerken her buldukları fazlalığı biriktirmeyi, gereksiz yere harcamamayı öğrenmişler. Ay ışığındaki patika, artık üç dostun birlikte yürüdüğü, kahkahalarla dolu bir yol olmuş.
 
 Ve o günden sonra ormanda herkes bilirmiş: Küçük baykuş Huhu, en akıllı ve en cömert dostlarıymış.
+
+Huhu baharda boşalan depoyu arkadaşlarıyla temizlemiş, yalnız ihtiyaçları kadarını yeniden biriktirmişler. Hazırlık yaparken doğadaki diğer canlıların payını da unutmamışlar.
 
 **Kıssadan hisse:** Bugün elindekini akıllıca kullanan, yarın darda kalmaz ve paylaştıkça çoğalır.

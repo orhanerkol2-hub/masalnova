@@ -12,8 +12,9 @@ themes: ["paylaşma","sevgi","huzur"]
 characters: ["Çoban Rüzgin","küçük kuzu Puf","serçe Cik"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, dağ başında, yumuşak bulutların hemen yanında küçük bir kulübe varmış. Bu kulübede Rüzgin adında iyi kalpli bir çoban yaşarmış.
 
@@ -41,5 +42,7 @@ Battaniye üçünü de örtmüş, ocağın hafif sıcaklığı kulübeyi doldurm
 Dışarıda bulutlar yavaşça süzülüyormuş, sanki onlar da uykuya hazırlanıyormuş. Ay, kulübenin üstünde nöbet tutmuş, yıldızlar usulca parlamış.
 
 Ve böylece, dağ başındaki küçük kulübede, paylaşılan bir battaniye ve bir kap sıcak sütle, üçü de birbirine sokulmuş, huzur içinde uykuya dalmışlar.
+
+Ocağın son koru küçük bir yıldız gibi parlamış, sonra yavaşça sönmüş. Kulübenin ahşap duvarları rüzgârı dışarıda tutarken içeride yalnız üç dostun sakin nefesi duyulmuş.
 
 İyi geceler.

@@ -12,8 +12,9 @@ themes: ["şükür","huzur","sevgi"]
 characters: ["Çoban Sadık","Beyaz kuzu Pamuk","Ay Dede"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, geniş bir çayırın ortasında iyi kalpli bir çoban yaşarmış. Adı Sadık'mış. Her akşam koyunlarını yavaşça toplar, çayırın yumuşak otları üzerinde onlarla otururmuş.
 
@@ -34,5 +35,7 @@ Sadık da sırtını yumuşak bir kayaya yaslar, gökyüzündeki yıldızları s
 Çayırda her şey sakinmiş. Koyunlar uyumuş, rüzgâr hafifçe esiyormuş, yıldızlar sessizce parlıyormuş. Sadık, kalbinde bir şükür duygusuyla gözlerini kapatmış.
 
 Çayır, ay ışığı altında ninni söyler gibi sakin sakin uyurmuş. Her şey huzur içindeymiş, her şey güvendeymiş.
+
+Uzakta bir çıngırak son kez hafifçe çınlamış. Sadık koyunların sıcak yün kokusunu ve çayırın serinliğini duymuş; günün küçük güzelliklerini düşünürken nefesi usulca yavaşlamış.
 
 İyi geceler, sevgili küçük dinleyici. Sen de Sadık gibi, bugünün güzelliklerine şükrederek gözlerini kapatabilirsin. İyi geceler.

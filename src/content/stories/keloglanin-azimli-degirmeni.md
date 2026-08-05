@@ -12,8 +12,9 @@ themes: ["azim","dostluk","çalışkanlık"]
 characters: ["Keloğlan","Padişah","Yaşlı Değirmenci Kadın"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde küçük bir köy varmış. Bu köyün kenarında, taşları aşınmış, çarkı paslanmış eski bir değirmen dururmuş. Yıllardır kimse onu çalıştıramazmış, çünkü çark dönmez, un öğütülmezmiş.
 
@@ -48,5 +49,7 @@ Padişah, Keloğlan'ın azmine hayran kalmış. "Böyle bir yürek, böyle bir s
 O günden sonra değirmen gece gündüz dönmüş, köylüler bolca ekmek yemiş. Keloğlan'ı küçümseyenler bile ona teşekkür etmek için sıraya girmiş. Keloğlan ise hiç kimseye kızmamış, sadece "Önemli olan denemek," demiş.
 
 Köyün çocukları, yıllar sonra bile o eski değirmenin yanından geçerken Keloğlan'ın hikayesini anlatırlarmış.
+
+Keloğlan her başarısız denemede neyin işe yaramadığını küçük bir deftere yazmış. Yeni çarkı bu notlara bakarak düzeltmiş; azmin aynı hatayı yinelemek değil, her denemeden öğrenmek olduğunu göstermiş.
 
 **Kıssadan hisse:** Azimle çalışan, imkansız görünen işleri bile başarır.

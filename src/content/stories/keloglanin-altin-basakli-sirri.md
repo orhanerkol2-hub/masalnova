@@ -12,8 +12,9 @@ themes: ["affetmek","dürüstlük","iyilik"]
 characters: ["Keloğlan","Nine Ayşe","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, güneşin ışıklarını en son gören bir köyde Keloğlan yaşarmış. Bu köyde altın başaklı bir tarla varmış; başaklar rüzgârda sallandığında sanki gerçekten altından yapılmış gibi ışıldarmış. O tarla, köyün en yaşlı ve en sevecen kadınına, Nine Ayşe'ye aitmiş.
 
@@ -36,5 +37,7 @@ Keloğlan bu teklife hem şaşırmış hem sevinmiş. Ama önce Nine Ayşe'ye d�
 Nine Ayşe başını sallamış. "Affetmek, kızgınlığı taşımaktan daha hafiftir evladım. Sen de bir gün başka birinin hatasını gördüğünde bunu unutma."
 
 O günden sonra Keloğlan köyün muhtarı olmuş, ama en çok öğrendiği ders, altın başaklardan daha değerliymiş: bir hatayı kabul etmenin cesaret, bağışlamanın ise büyüklük gerektirdiğini hiç unutmamış. Köyde kim bir yanlış yapsa, hemen gidip özür dilermiş, çünkü Keloğlan'ın hikâyesini herkes bilirmiş.
+
+Muhtar olarak ilk işi tarladaki zararı komşularla birlikte onarmak olmuş. Özürden sonra sorumluluk almanın, kırılanı düzeltmeye emek vermek anlamına geldiğini herkese kendi davranışıyla göstermiş.
 
 **Kıssadan hisse:** Hatasını dürüstçe kabul eden ve bağışlamayı bilen kalpler, en altın başaklardan daha kıymetlidir.

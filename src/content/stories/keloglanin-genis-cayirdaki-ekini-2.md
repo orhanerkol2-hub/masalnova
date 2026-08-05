@@ -12,8 +12,9 @@ themes: ["çalışkanlık","dürüstlük","azim"]
 characters: ["Keloğlan","Padişah","Tembel Hasan"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında uçsuz bucaksız geniş bir çayır varmış. Bu çayır yıllardır boş dururmuş, çünkü köylüler onu işlemeyi göze alamazmış. Toprağı taşlıymış, otları sertmiş, kimse başlayıp bitirmeye cesaret edemezmiş.
 
@@ -36,5 +37,7 @@ Keloğlan sevinmiş ama kendi payına düşeni komşularıyla paylaşmayı düş
 Birlikte çalışmışlar, günler geçmiş, çayırın her köşesi başaklarla dolmuş. O yıl köyde bereketli bir hasat olmuş, herkesin ambarı dolmuş. Köylüler artık Keloğlan'ı görünce gülmez, tam tersine ondan öğüt almaya gelirmiş.
 
 Keloğlan hep şöyle dermiş: "Büyük bir iş, küçük adımlarla ve sabırla mutlaka bitirilir."
+
+Yeni ekim zamanı gelince işleri günlere bölmüşler: bir gün toprağı havalandırmış, ertesi gün tohumları ayırmış, sonra sulama sırası hazırlamışlar. Hasan, küçük görevleri tamamladıkça gözünde büyüyen işin aslında yapılabilir olduğunu anlamış.
 
 **Kıssadan hisse:** Sabırla ve düzenli çalışmayla en zorlu iş bile küçük adımlarla başarıyla tamamlanır.
