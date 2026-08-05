@@ -1,9 +1,9 @@
 ---
-// Google Privacy & messaging is the only consent interface on ad-capable
-// pages. Analytics stays disabled so visitors never see a second banner.
+// Google Consent Mode v2 is kept at a deny-by-default setting. GA4 is loaded
+// only after the visitor explicitly accepts the optional analytics category.
+// Advertising choices remain under the separately configured Google CMP.
 ---
 
-{/* Establish conservative defaults before the Google publisher tag runs. */}
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -21,15 +21,45 @@
   window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
 </script>
 
+{/* Silktide presents a separate, voluntary choice for GA4 analytics. */}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link
+  rel="stylesheet"
+  id="silktide-consent-manager-css"
+  href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.css"
+  integrity="sha384-EdMq+R+YOnsbelo08wPenoTlnxbAyxI11NMIxzugx/qAsbh64KcOkqxYqq6pfvO/"
+  crossorigin="anonymous"
+/>
+<style is:inline>
+  #stcm-wrapper {
+    --boxShadow: 0 18px 40px rgba(8, 30, 80, 0.35);
+    --fontFamily: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    --primaryColor: #ffb01f;
+    --backgroundColor: #2f74e8;
+    --textColor: #ffffff;
+    --backdropBackgroundColor: rgba(16, 42, 102, 0.4);
+    --backdropBackgroundBlur: 2px;
+    --iconColor: #2f74e8;
+    --iconBackgroundColor: #ffb01f;
+  }
+  #stcm-wrapper .stcm-button-primary { color: #102a66; }
+  #stcm-wrapper .stcm-preferences-button { color: #ffffff; }
+  @media (max-width: 720px) {
+    #stcm-wrapper #stcm-icon { display: none !important; }
+  }
+</style>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js"
+  integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq"
+  crossorigin="anonymous"></script>
+
 <script is:inline>
   (function () {
-    var LEGACY_STORAGE_KEY = 'masalnova:cookie-consent:v2';
+    var MEASUREMENT_ID = 'G-YZYEN24W6J';
+    var analyticsStarted = false;
 
-    function removeLegacyAnalyticsData() {
-      try {
-        localStorage.removeItem(LEGACY_STORAGE_KEY);
-      } catch (error) {}
-
+    function removeAnalyticsCookies() {
       try {
         document.cookie.split(';').forEach(function (entry) {
           var name = entry.split('=')[0].trim();
@@ -40,14 +70,28 @@
       } catch (error) {}
     }
 
-    function isCmpSurface() {
-      return Boolean(document.querySelector('meta[name="masalnova-cmp-surface"]'));
+    function startAnalytics() {
+      if (analyticsStarted) return;
+      analyticsStarted = true;
+      window['ga-disable-' + MEASUREMENT_ID] = false;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', MEASUREMENT_ID);
     }
 
-    function showRevocationMessage() {
-      if (typeof window.googlefc.showRevocationMessage === 'function') {
-        window.googlefc.callbackQueue.push(window.googlefc.showRevocationMessage);
-      }
+    function stopAnalytics() {
+      window['ga-disable-' + MEASUREMENT_ID] = true;
+      gtag('consent', 'update', { analytics_storage: 'denied' });
+      removeAnalyticsCookies();
+    }
+
+    function isCmpSurface() {
+      return Boolean(document.querySelector('meta[name="masalnova-cmp-surface"]'));
     }
 
     function requestPrivacySettings() {
@@ -60,7 +104,7 @@
         if (typeof window.googlefc.showRevocationMessage !== 'function') return;
         completed = true;
         window.clearTimeout(fallbackTimer);
-        showRevocationMessage();
+        window.googlefc.showRevocationMessage();
       }
 
       if (typeof window.googlefc.showRevocationMessage === 'function') {
@@ -70,15 +114,21 @@
       window.googlefc.callbackQueue.push({ CONSENT_API_READY: showWhenReady });
     }
 
-    function openPrivacySettings(event) {
-      if (!isCmpSurface()) return;
-      event.preventDefault();
-      requestPrivacySettings();
-    }
-
-    function bindPrivacySettings() {
+    function bindSettingsLinks() {
       document.querySelectorAll('[data-open-cookie-settings]').forEach(function (trigger) {
-        trigger.addEventListener('click', openPrivacySettings);
+        trigger.addEventListener('click', function (event) {
+          if (!isCmpSurface()) return;
+          event.preventDefault();
+          requestPrivacySettings();
+        });
+      });
+
+      document.querySelectorAll('[data-open-analytics-settings]').forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          event.preventDefault();
+          var icon = document.getElementById('stcm-icon');
+          if (icon) icon.click();
+        });
       });
 
       var parameters = new URLSearchParams(window.location.search);
@@ -89,12 +139,76 @@
       requestPrivacySettings();
     }
 
-    removeLegacyAnalyticsData();
+    window.silktideConsentManager.init({
+      backdrop: { show: true },
+      icon: { position: 'bottomRight' },
+      prompt: { position: 'bottomRight' },
+      consentTypes: [
+        {
+          id: 'essential',
+          label: 'Zorunlu',
+          description: '<p>Bu çerezler web sitesinin düzgün çalışması için gereklidir ve kapatılamaz.</p>',
+          required: true
+        },
+        {
+          id: 'analytics',
+          label: 'Analitik',
+          description: "<p>Bu isteğe bağlı çerezler, hangi sayfaların popüler olduğunu ve ziyaretçilerin sitede nasıl gezindiğini ölçerek MasalNova'yı geliştirmemize yardımcı olur.</p>",
+          gtag: 'analytics_storage',
+          onAccept: startAnalytics,
+          onReject: stopAnalytics
+        }
+      ],
+      text: {
+        prompt: {
+          description: "<p>MasalNova'yı geliştirmek için isteğe bağlı analitik çerezleri kullanmak ister misiniz?</p>",
+          acceptAllButtonText: 'Tümünü kabul et',
+          acceptAllButtonAccessibleLabel: 'Tüm çerezleri kabul et',
+          rejectNonEssentialButtonText: 'Zorunlu olmayanları reddet',
+          rejectNonEssentialButtonAccessibleLabel: 'Zorunlu olmayan tüm çerezleri reddet',
+          preferencesButtonText: 'Tercihler',
+          preferencesButtonAccessibleLabel: 'Tercihleri aç veya kapat'
+        },
+        preferences: {
+          title: 'Çerez tercihlerinizi özelleştirin',
+          description: "<p>Buradan MasalNova'nın site analitiği tercihini yönetebilirsiniz. Reklam tercihleri, reklam etkinleştirildiğinde Google'ın sertifikalı onay arayüzünde ayrıca yönetilir.</p>",
+          saveButtonText: 'Kaydet ve kapat',
+          saveButtonAccessibleLabel: 'Çerez tercihlerini kaydet',
+          creditLinkText: '',
+          creditLinkAccessibleLabel: ''
+        }
+      }
+    });
+
+    window.setTimeout(function () {
+      var manager = window.silktideConsentManager.getInstance();
+      if (manager && manager.getConsentChoice('analytics') === true) startAnalytics();
+    }, 0);
+
+    function prepareConsentRoot(root) {
+      root.setAttribute('data-nosnippet', '');
+      root.querySelectorAll('h1').forEach(function (heading) {
+        var replacement = document.createElement('h2');
+        Array.prototype.forEach.call(heading.attributes, function (attribute) {
+          replacement.setAttribute(attribute.name, attribute.value);
+        });
+        replacement.innerHTML = heading.innerHTML;
+        heading.replaceWith(replacement);
+      });
+    }
+
+    var consentRoot = document.getElementById('stcm-wrapper');
+    if (consentRoot) prepareConsentRoot(consentRoot);
+    var consentObserver = new MutationObserver(function () {
+      var root = document.getElementById('stcm-wrapper');
+      if (root) prepareConsentRoot(root);
+    });
+    consentObserver.observe(consentRoot || document.documentElement, { childList: true, subtree: true });
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', bindPrivacySettings, { once: true });
+      document.addEventListener('DOMContentLoaded', bindSettingsLinks, { once: true });
     } else {
-      bindPrivacySettings();
+      bindSettingsLinks();
     }
   })();
 </script>

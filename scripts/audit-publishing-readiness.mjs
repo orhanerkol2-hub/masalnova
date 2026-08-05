@@ -243,8 +243,16 @@ if (loaderSource.includes('import.meta.env.PUBLIC_ADSENSE_ENABLED')) {
 }
 
 const consentSource = await readFile(join(root, 'src/components/Consent.astro'), 'utf8');
-if (consentSource.includes('googletagmanager.com/gtag/js') || consentSource.includes('analytics_storage: \'granted\'')) {
-  hardErrors.push('src/components/Consent.astro: eigenständiges Analytics-Tracking ist noch aktiv.');
+const analyticsConsentGuard = [
+  "window['ga-disable-G-YZYEN24W6J'] = true",
+  "analytics_storage: 'denied'",
+  'function startAnalytics()',
+  'onAccept: startAnalytics',
+  "gtag('consent', 'update', { analytics_storage: 'granted' })",
+  "script.src = 'https://www.googletagmanager.com/gtag/js?id='",
+].every((signal) => consentSource.includes(signal));
+if (!analyticsConsentGuard) {
+  hardErrors.push('src/components/Consent.astro: Analytics muss bis zur freiwilligen Einwilligung deaktiviert bleiben und darf erst danach geladen werden.');
 }
 for (const requiredSignal of [
   'ga-disable-G-YZYEN24W6J',
