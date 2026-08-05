@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import GameEditorial from './GameEditorial.astro';
 
 interface Props {
   slug: string;
@@ -77,6 +78,7 @@ const jsonLd = [
         <article class="info-card"><span class="info-icon"><i class="ph ph-star"></i></span><div><h2>Her yıldızı bul</h2><p>Her bölümde üç yıldızı topla. Rüzgârları, zıplama yüzeylerini ve hareketli engelleri kullan.</p></div></article>
         <article class="info-card"><span class="info-icon"><i class="ph ph-sparkle"></i></span><div><h2>{game.friend} için masal</h2><p>{game.mission}</p></div></article>
       </div>
+      <GameEditorial slug={game.slug} title={game.title} />
     </div>
   </section>
   <script>import '../scripts/masal-ipleri-shell';</script>
