@@ -12,8 +12,9 @@ themes: ["çalışkanlık","huzur","aile sevgisi"]
 characters: ["Elif","Nine"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, karlı bir kış günüymüş. Pencerelerin ardında kar taneleri yavaşça, usulca süzülüyormuş. Her biri bir tüy kadar hafif, bir pamuk kadar yumuşakmış.
 
@@ -38,5 +39,7 @@ Nine, Elif'i kucağına almış, yavaşça sallanan sandalyede ikisi birlikte sa
 Elif yatağına yatmış, yorganı çenesine kadar çekmiş. Pencereden içeri süzülen ay ışığı, odasını hafifçe aydınlatıyormuş. Dışarıda kar taneleri hâlâ sessizce iniyormuş, tıpkı bir ninni gibi.
 
 Elif'in gözleri ağırlaşmış, yavaşça kapanmış. Uykuya dalarken içi huzurla dolmuş, tamamlanmış küçük işlerin sıcaklığıyla.
+
+Defteri masanın üstünde kapalı duruyormuş. Elif artık hiçbir şeyi yetiştirmek zorunda değilmiş; gecenin sessizliği onu dinlenmeye çağırıyormuş.
 
 İyi geceler, sevgili Elif. İyi geceler, kar taneleri. İyi geceler, herkese.

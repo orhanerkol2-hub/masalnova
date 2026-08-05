@@ -12,8 +12,9 @@ themes: ["hoşgörü","dostluk","huzur"]
 characters: ["küçük Ali","yengeç Sedef","martı Bulut"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ay ışığının denize düştüğü sakin bir kıyıda küçük Ali yaşarmış. Ali, küçük ama çok cesur bir çocukmuş; her akşam kumsala inip dalgaları dinlermiş.
 
@@ -38,5 +39,7 @@ Ay, gökyüzünde yavaşça yükselmiş, ışığını suyun üzerine yumuşacı
 Ali, Sedef ve Bulut, kumların üzerinde, denizin ninnisini dinleyerek göz kapaklarını yavaşça kapatmışlar. Rüzgâr da usulca esmiş, sanki onları örten yumuşak bir yorgan gibi.
 
 Deniz hâlâ fısıldıyormuş: şşşh... şşşh... uyu artık, uyu...
+
+Üç dostun nefesi dalgalarla aynı sakin ritimdeymiş.
 
 İyi geceler, küçük dostlar. İyi geceler.

@@ -12,8 +12,9 @@ themes: ["merak","dostluk","huzur"]
 characters: ["Minik Elif","Komşu Fatma Teyze","Ay"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, küçük bir mahallenin en köşesinde mis kokulu bir fırın varmış. Bu fırından her akşam, güneş yavaşça yorganını çekip yatağına girerken, sıcacık bir koku yükselirmiş sokaklara.
 
@@ -32,5 +33,7 @@ Eve dönerlerken bulutlar yumuşacık bir battaniye gibi ayın üzerine örtülm
 Yatağına girdiğinde, mis kokulu fırının sıcaklığını hâlâ hissedermiş gibi hissetmiş. Yıldızlar pencereden içeri süzülen ışıklarıyla ona ninni söylüyormuş sanki.
 
 Gözlerini yumdu, derin bir nefes aldı, o güzel ekmek kokusunu hayal ederek yavaşça uykuya daldı.
+
+Fırındaki hamur sessizce kabarırken Elif'in yorganı da nefesiyle usulca yükselip alçalmış. Ay pencerenin kenarında beklemiş; gece, acele etmeden olgunlaşan ekmek kadar sakinmiş.
 
 İyi geceler, küçük meraklılar. İyi geceler.

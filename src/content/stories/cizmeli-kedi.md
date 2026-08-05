@@ -15,8 +15,9 @@ characters: ["Çizmeli Kedi", "Kaan", "Ceren", "Kral"]
 isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-28"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış, bir yokmuş. Bir zamanlar bir değirmenci varmış. Bu değirmencinin üç oğlu varmış.
 
@@ -153,5 +154,9 @@ Zamanla Kaan ile Ceren çok iyi arkadaş olmuşlar ve yıllar sonra evlenmişler
 Kedi ise? Kedi şatonun en güneşli penceresinin önüne bir minder koydurmuş. Çizmelerini yanına dizmiş. Ve her gün orada uzanıp mışıl mışıl uyumuş. Bazen de gözünü açıp gülümsermiş — çünkü bir kedi, akıllıca düşünmenin kaba kuvvetten hep daha güçlü olduğunu bilirmiş.
 
 Onlar ermiş muradına, biz çıkalım kerevetine. Gökten üç elma düşmüş: biri düşünmeyi bilene, biri paylaşmayı bilene, biri de bu masalı dinlerken gözlerini kapatana.
+
+## Masaldan Çıkan Ders
+
+Zekâ en değerli hâline başkasını kandırmak için değil, haksızlığı durdurmak ve herkes için adil bir çözüm bulmak amacıyla kullanıldığında ulaşır.
 
 **İyi geceler.**

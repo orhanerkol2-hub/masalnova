@@ -12,8 +12,9 @@ themes: ["cesaret","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Dev Kırkgöz"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların eteğinde küçük bir köy varmış. Bu köyün kenarında, serin bir pınarın hemen yanında Keloğlan annesiyle küçük bir evde otururmuş. Keloğlan çalışkanmış ama başındaki tüyler bir türlü uzamadığı için köy çocukları onunla dalga geçermiş. Yine de Keloğlan hiç üzülmez, herkese gülümser, gördüğü her canlıya yardım etmeye çalışırmış.
 
@@ -36,5 +37,7 @@ Keloğlan kaleye girmiş, yedi kapıyı sırayla açmış. Her kapının ardınd
 Keloğlan köye dönünce herkes şaşkın şaşkın bakmış. Padişah da gelmiş, olanları dinlemiş. "Sen hem cesur hem de dürüst bir çocuksun Keloğlan, korkudan değil, merakla ve iyilikle hareket ettin" demiş. Devi de köye davet etmişler, artık kimse ondan korkmuyormuş, aksine tohumları ekmesine yardım ediyormuş.
 
 O yıl köyde bereketli bir hasat olmuş. Herkes Keloğlan'a ve dev Kırkgöz'e minnettar kalmış. Keloğlan, serin pınarın başında Fatma Ana'ya teşekkür etmiş: "Sözlerin bana yol gösterdi" demiş.
+
+Tohumları ekmeden önce Kırkgöz'e hangi bitkileri bildiğini sormuşlar. Onu dinledikçe korkularının yerini merak ve saygı almış; birlikte çalışma gerçek tanışmayla başlamış.
 
 **Kıssadan hisse:** Gerçek cesaret, korkulanı tanımaya cesaret etmektir.

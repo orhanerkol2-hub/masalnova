@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/balikci-sadikin-ay-isikli-agi.webp"
 altText: "Kapak görseli: Balıkçı Sadık'ın Ay Işıklı Ağı"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["azim","sabır","emek"]
 characters: ["Balıkçı Sadık","Küçük Elin","Ay Balığı Nurtan"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, denizin kıyısında küçük bir köy varmış. Bu köyde Sadık adında sabırlı bir balıkçı yaşarmış. Sadık her sabah erkenden kalkar, teknesini hazırlar ve denize açılırmış. Ama son zamanlarda ağına balık düşmüyormuş, herkes ona şaşkın şaşkın bakıyormuş.
 
@@ -32,6 +33,8 @@ Ertesi sabah, Sadık ağını denize attığında, ağı her zamankinden daha a�
 Sadık, Elin'e gülümseyerek, "Gördün mü? Sabırla ve azimle çalışmak, sonunda güzel şeyler getirir. Önemli olan asla umudunu kaybetmemek," demiş.
 
 O günden sonra Sadık'ın adı köyde azmin sembolü olmuş. Her ay ışıklı gecede, patikada yürüyen çocuklar, onun hikâyesini anlatırmış birbirlerine.
+
+Sadık yakaladığı balıkların yalnız ihtiyaç duyduğu kadarını ayırmış, küçüklerini yeniden suya bırakmış. Ağını da her dönüşte onarmış. Böylece azmin, aynı işi körü körüne sürdürmek değil; dikkatle öğrenmek ve doğaya saygı göstermek olduğunu anlatmış.
 
 Sevgili çocuk, sen de bir işte zorlanınca hemen bırakır mısın, yoksa sabırla denemeye devam eder misin?
 

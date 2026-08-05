@@ -2,13 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StoryCard from '../../components/StoryCard.astro';
 import { STORY_AUTHOR_IDS, getStoryAuthor } from '../../data/authors';
-import { getStories } from '../../data/stories';
+import { getAllStories, getStories } from '../../data/stories';
 
 export function getStaticPaths() {
   return STORY_AUTHOR_IDS.map((id) => ({ params: { slug: id }, props: { author: getStoryAuthor(id) } }));
 }
 
 const { author } = Astro.props;
+const allAuthoredStories = (await getAllStories()).filter((story) => story.data.author === author.id);
 const stories = (await getStories()).filter((story) => story.data.author === author.id);
 const profileUrl = `https://masalnova.com${author.profilePath}`;
 const jsonLd = {
@@ -35,6 +36,7 @@ const jsonLd = {
   path={author.profilePath}
   jsonLd={jsonLd}
   activeNav=""
+  allowAds={false}
 >
   <section class="profile-section">
     <div class="container profile-shell">
@@ -50,15 +52,17 @@ const jsonLd = {
           <p class="role">{author.role}</p>
           {author.bio.map((paragraph) => <p>{paragraph}</p>)}
           <p class="review-note">
-            <strong>Editoryal süreç:</strong> MasalNova’da yayımlanan her masal, Aylin Karabektaş ve Muhammet Karayiğit tarafından birlikte gözden geçirilir.
+            <strong>Editoryal süreç:</strong> MasalNova’nın arama ve önerilere açık seçkisindeki her masal, Aylin Karabektaş ve Muhammet Karayiğit tarafından birlikte gözden geçirilir. Güncellenen metinler yeniden incelemeye alınır.
+            İncelemede dil, anlatım bütünlüğü, yaş ve süre etiketleri ile metin-kapak uyumu kontrol edilir.
+            <a href="/yayin-ilkeleri/">Yayın sürecinin tamamını okuyun.</a>
           </p>
         </div>
       </article>
 
       <section class="authored" aria-labelledby="authored-title">
         <p class="eyebrow">Yazarın MasalNova çalışmaları</p>
-        <h2 id="authored-title">{author.name} tarafından hazırlanan masallar</h2>
-        <p>{stories.length} yayımlanmış masal</p>
+        <h2 id="authored-title">{author.name} tarafından hazırlanan seçili masallar</h2>
+        <p>{allAuthoredStories.length} yayımlanmış masal · {stories.length} kalite seçkisinde</p>
         <div class="grid grid-3">
           {stories.slice(0, 12).map((story) => <StoryCard story={story} />)}
         </div>
@@ -80,6 +84,7 @@ const jsonLd = {
   .role { margin: 5px 0 18px; color: var(--ink); font-weight: 900; }
   .profile-card p:not(.eyebrow, .role) { max-width: 68ch; color: var(--ink-soft); line-height: 1.75; }
   .review-note { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: #f4f7ff; }
+  .review-note a { color: var(--blue-d); font-weight: 850; }
   .authored { margin-top: 38px; }
   .authored h2 { margin: 0 0 6px; }
   .authored > p:not(.eyebrow) { margin: 0 0 18px; color: var(--ink-soft); }

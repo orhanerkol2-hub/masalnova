@@ -12,8 +12,9 @@ themes: ["azim","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Mağara Dedesi"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında kel kafalı ama gönlü altından bir çocuk yaşarmış. Köyün suyu azalmış, tarlalar kurumuş, herkes tasa içindeymiş. Keloğlan bir gün annesine, "Ben köyün derdine bir çare bulmadan dönmeyeceğim," demiş ve dağın eteğindeki gizemli mağaraya doğru yola çıkmış.
 
@@ -36,5 +37,7 @@ Köylüler sevinçten bağırmış, çocuklar suyun içinde koşup oynamış. Pa
 Padişah, Keloğlan'a köyün en güzel tarlalarından birini hediye etmiş. Keloğlan bu tarlayı da köylülerle paylaşmış, hep birlikte ekip biçmişler. O günden sonra köyde su hiç kesilmemiş, bereket eksik olmamış.
 
 Keloğlan'ın hikâyesi köy köy anlatılırmış: kel kafalı ama azimli bir çocuğun, yorulsa da hiç durmadan tırmandığı gizemli bir merdivenin hikâyesi.
+
+Her basamakta dinlenip yolunu yeniden kontrol ettiği de unutulmazmış.
 
 **Kıssadan hisse:** Azimle atılan her adım, en zorlu yolları bile berekete çevirir.

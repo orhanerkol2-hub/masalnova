@@ -12,8 +12,9 @@ themes: ["sorumluluk","dürüstlük","emek"]
 characters: ["Keloğlan","Yaşlı Recep Dede","Padişahın Adamları"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında kel kafalı ama akıllı bir delikanlı yaşarmış. Bir gün köyün kenarında oduna giderken, yaşlı bir adamın yolda düşüp bacağını incittiğini görmüş.
 
@@ -46,5 +47,7 @@ Bir hafta sonra Recep Dede, bacağı sargılı ama gülümseyerek geri dönmüş
 Keloğlan başını sallamış. "Dede, altına gerek yok. Bana verdiğin şey bir emanetti, ben de emanete sahip çıktım. Bu bana yeter."
 
 Ancak Recep Dede ısrar etmiş ve Keloğlan'a küçük bir keçi yavrusu hediye etmiş, "Bu senin olsun, kendi emanetine sahip çık," demiş. Keloğlan da bu hediyeyi büyük bir sevinçle kabul etmiş ve köyüne, başında artık kendi küçük sürüsüyle dönmüş.
+
+Keçinin yemini, suyunu ve barınağını her gün kontrol etmiş. Emanetin, hediye olduktan sonra da düzenli bakım isteyen bir sorumluluk olduğunu anlamış.
 
 **Kıssadan hisse:** Verdiğin söze sahip çıkmak, aldığın en büyük ödülden daha değerlidir.

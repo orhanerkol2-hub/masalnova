@@ -12,8 +12,9 @@ themes: ["sorumluluk","dostluk","güven"]
 characters: ["Baykuş Huhu","Tavşan Fındık","Kirpi Minnak"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, ormanın en yüksek çınar ağacında Huhu adında bir baykuş yaşarmış. Huhu çok akıllıymış ama bir kusuru varmış: verdiği sözleri sık sık unuturmuş.
 
@@ -38,5 +39,7 @@ Sabah olduğunda tüm ormanı toplamış. "Mağarayı buldum! Bal küpleri orada
 O günden sonra Huhu, verdiği her sözü küçük bir yıldız gibi aklının bir köşesine asmış ve hiç unutmamış. Ormanın hayvanları artık ona "Sözünün Eri Huhu" demeye başlamışlar.
 
 Kış geldiğinde herkesin kilerleri doluymuş, geceler soğuk olsa da yürekler sıcacıkmış. Huhu, ağacının tepesinden yıldızlara bakarken kendisiyle gurur duyuyormuş.
+
+Ertesi görevini de küçük defterine dikkatle yazmış.
 
 **Kıssadan hisse:** Verdiğimiz sözleri tutmak, başkalarının bize duyduğu güveni büyütür.

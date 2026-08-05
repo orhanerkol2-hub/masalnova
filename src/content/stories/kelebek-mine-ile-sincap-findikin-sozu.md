@@ -12,8 +12,9 @@ themes: ["sözünde durmak","dostluk","güven"]
 characters: ["Kelebek Mine","Sincap Fındık"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, dağın yüksek başında, taştan yapılmış küçük bir kulübe varmış. Bu kulübenin çatısında Sincap Fındık yaşarmış, pencere kenarındaki begonyalarda ise Kelebek Mine konaklarmış.
 
@@ -50,5 +51,7 @@ Mine başını sallamış:
 "Doğru söylüyorsun. Bir söz, küçük de olsa, iki dost arasında en güçlü köprüdür."
 
 O günden sonra dağdaki herkes bilirmiş: Kelebek Mine ile Sincap Fındık'ın sözü, dağın kayaları gibi sağlamdır.
+
+Mine de ertesi gün boş sepetleri katlayıp Fındık'a yardım etmiş. İki dost, bir daha gecikecek olurlarsa birbirlerine önceden haber vermeye karar vermişler. Çünkü güven, yalnız yetişmekle değil, bekleyeni düşünmekle de güçlenirmiş.
 
 **Kıssadan hisse:** Verilen söz, ne kadar küçük görünse de, tutulduğunda en büyük dostlukları büyütür.

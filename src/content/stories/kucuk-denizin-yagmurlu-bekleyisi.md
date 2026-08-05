@@ -12,8 +12,9 @@ themes: ["sabır","huzur","umut"]
 characters: ["Deniz","Büyükanne","Yağmur Bulutu"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada Deniz adında cesur bir çocuk yaşarmış. O akşam gökyüzü kararmış, yumuşacık bulutlar pencerenin önünden geçmeye başlamış. Tik tik tik... Yağmur damlaları cama usulca vuruyormuş, sanki minik bir ninni söylüyormuş.
 
@@ -30,5 +31,7 @@ Yağmur azalmış, damlalar yavaşça sessizliğe bürünmüş. Tik... tik... De
 Büyükanne alçak sesle bir ninni mırıldanmış, sözleri yağmur damlaları gibi usulca akmış. Deniz, sıcacık battaniyenin içinde, yıldızların ışığıyla sarılı, huzurla gözlerini kapamış.
 
 Dışarıda son yağmur damlaları da sessizce toprağa karışmış, gökyüzü yavaşça durulmuş. Deniz'in nefesi sakinleşmiş, rüyalarında yıldızlar ve yumuşacık bulutlar arasında süzülmeye başlamış.
+
+Pencerenin önündeki saksıda bir damla, yaprağın ucunda biraz daha beklemiş. Sonra usulca toprağa düşmüş. Deniz'in odasında yalnız yağmurun uzaklaşan fısıltısı ve büyükannenin yumuşak ninnisi kalmış; her ses biraz daha yavaşlamış.
 
 İyi geceler, küçük Deniz. İyi geceler, tüm yıldızlar. İyi geceler.

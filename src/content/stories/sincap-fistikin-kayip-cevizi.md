@@ -12,8 +12,9 @@ themes: ["dürüstlük","dostluk","paylaşma"]
 characters: ["Fıstık (sincap)","Kalkan (kaplumbağa)"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, rengarenk çiçeklerle dolu bir bahçede Fıstık adında çevik bir sincap yaşarmış. Bu bahçede ayrıca Kalkan adında yavaş ama akıllı bir kaplumbağa da varmış. İkisi çok iyi arkadaşmış, her gün papatyaların arasında buluşup sohbet ederlermiş.
 
@@ -32,5 +33,7 @@ Biraz sonra bahçenin öbür ucunda, güneş çiçeklerinin altında Fıstık'ı
 O akşam bahçede küçük bir kutlama yapmışlar. Diğer hayvanlar da gelmiş, cevizini kaybeden küçük bir sincap yavrusu ortaya çıkmış ve laleler arasındaki cevizin kendisinin olduğunu söylemiş. Fıstık, cevizi hemen ona vermiş, hiç düşünmeden.
 
 O günden sonra bahçedeki tüm hayvanlar, Fıstık'ın dürüstlüğünü ve Kalkan'ın sabrını örnek almışlar. Çiçekli bahçe, artık sadece güzel kokularla değil, güzel kalplerle de anılırmış.
+
+Bulunan eşyalar için meşe ağacının altına küçük bir sepet koymuşlar. Herkes bulduğunu oraya bırakmış, sahibi de tarif ederek almış. Böylece dürüst davranmak bütün bahçe için kolaylaşmış.
 
 **Kıssadan hisse:** Doğru olanı yapmak, bulduğumuz her şeyden daha değerlidir.

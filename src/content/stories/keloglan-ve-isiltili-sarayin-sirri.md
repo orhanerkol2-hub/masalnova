@@ -12,8 +12,9 @@ themes: ["cesaret","zeka","dürüstlük"]
 characters: ["Keloğlan","Padişah","Yaşlı bahçıvan kadın"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında Keloğlan yaşarmış. Bir gün köye bir haber düşmüş: Padişahın ışıl ışıl sarayında bütün mumlar kendiliğinden sönüyor, kimse geceleri gözünü kırpmadan uyuyamıyormuş.
 
@@ -44,5 +45,7 @@ Söz verdiği hazineyi vermek istemiş ama Keloğlan başını sallamış: "Bana
 Padişah bu alçakgönüllü isteğe çok şaşırmış ve yine de Keloğlan'a bir çuval altın ile köyüne dönmesi için güzel bir at hediye etmiş. Keloğlan köye döndüğünde, bahçıvan kadına da bir kese altın vermiş, "Bu nane sayesinde başardım," demiş.
 
 O günden sonra köyde herkes, karanlıktan değil bilgisizlikten korkulması gerektiğini anlatan bu hikâyeyi anlatırmış.
+
+Keloğlan öğrendiklerini çocuklarla da açıkça paylaşmış.
 
 **Kıssadan hisse:** Gerçek cesaret, bilinmeyenden kaçmak değil, onu anlamaya çalışmaktır.

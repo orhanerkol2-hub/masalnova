@@ -12,8 +12,9 @@ themes: ["paylaşma","dostluk","dürüstlük"]
 characters: ["Keloğlan","Padişah","yaşlı kestaneci kadın"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir kasabada Keloğlan yaşarmış. Annesiyle birlikte küçük bir evde otururlar, kıt kanaat geçinirlermiş. Bir gün annesi Keloğlan'a elindeki son üç kuruşu vermiş.
 
@@ -52,5 +53,7 @@ Sarayda Padişah, Keloğlan'ın iyi yürekliliğini herkese anlatmış. "Bu çoc
 Padişah, Keloğlan'a bir kese altın ve sarayın bahçesinde küçük bir dükkân açması için izin vermiş. Keloğlan bu dükkânda kestane satmaya başlamış, ama her gün mutlaka birkaçını fakir çocuklara ve ihtiyarlara bedava dağıtmayı hiç unutmamış.
 
 Zamanla Keloğlan'ın adı çarşıda "Paylaşan Keloğlan" olarak anılmış. Annesiyle birlikte artık rahat bir hayat sürmüşler, ama en çok sevindikleri şey, hâlâ herkesle bir şeyler paylaşabilmekmiş.
+
+Dükkânın kapısında küçük bir sepet dururmuş. Keloğlan her sabah içine yedi sıcak kestane koyar, ihtiyacı olanın çekinmeden alabileceğini yazarmış. Sepet boşaldığında bazı müşteriler de ertesi gün için bir kestane bırakırmış.
 
 **Kıssadan hisse:** Elindekini paylaşan, kalbini de büyütür.

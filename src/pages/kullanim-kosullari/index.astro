@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LegalDocument from '../../components/LegalDocument.astro';
+import { terms } from '../../data/legal.mjs';
+---
+<BaseLayout
+  title="Kullanım Koşulları | MasalNova"
+  description="MasalNova Çocuk web sitesinin içerik, oyun, dış bağlantı ve kullanım koşulları."
+  path="/kullanim-kosullari/"
+  allowAds={false}
+>
+  <section class="section">
+    <div class="container">
+      <LegalDocument document={terms} lang="tr" homeLabel="Ana sayfa" />
+    </div>
+  </section>
+</BaseLayout>

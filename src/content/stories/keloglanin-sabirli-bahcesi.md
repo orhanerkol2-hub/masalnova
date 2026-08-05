@@ -12,8 +12,9 @@ themes: ["sabır","emek","dürüstlük"]
 characters: ["Keloğlan","Padişah","Yaşlı Kadın Fatma Nine"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde Keloğlan adında sivri akıllı, iyi yürekli bir delikanlı yaşarmış. Kel kafasına gülenler çok olsa da, Keloğlan hiç kimseye kırılmaz, her zaman güler yüzünü kaybetmezmiş.
 
@@ -52,5 +53,7 @@ Padişah çok memnun kalmış, keseyi Keloğlan'a uzatmış:
 Keloğlan altınları köye getirmiş, ama kendisi için değil, köyün ortak kuyusunu onarmak için kullanmış. Böylece hem kendisi hem de köylüler mutlu olmuş.
 
 O günden sonra köyde herkes, bir işe acele etmeden, sabırla ve emekle yaklaşmayı öğrenmiş. Keloğlan'ın küçük ama sağlam fidanı, yıllar sonra köyün en gölgeli, en güzel ağacı olmuş.
+
+Keloğlan ağacın gölgesine bir sulama çizelgesi asmış. Çocuklar sırayla su vermiş, ama toprağın ıslak olduğu günlerde beklemeyi de öğrenmişler. Sabır, bazen çalışmak kadar doğru zamanı gözlemekmiş.
 
 **Kıssadan hisse:** Sabırla ve emekle yapılan işler, acelenin asla ulaşamayacağı güzel sonuçlar doğurur.

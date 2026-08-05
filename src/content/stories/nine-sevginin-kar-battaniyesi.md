@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/nine-sevginin-kar-battaniyesi.webp"
 altText: "Kapak görseli: Nine Sevgi'nin Kar Battaniyesi"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","paylaşma","dayanışma"]
 characters: ["Nine Sevgi","küçük Toprak","Bakkal Halil"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağ eteğindeki küçük bir köyde Nine Sevgi yaşarmış. O kış öyle şiddetli bir tipi çıkmış ki, köyün üzerine adeta beyaz bir örtü inmiş. Evlerin bacalarından çıkan dumanlar bile soğuktan titrer gibiymiş.
 
@@ -34,5 +35,7 @@ Toprak da başını sallamış: "Demek ki iyilik, kar gibi düşer düşer ve he
 Nine Sevgi gülmüş: "Aynen öyle evladım. Kar nasıl herkesin üstüne aynı beyazlıkla iner, iyilik de öyle, kimseyi ayırmadan herkese ulaşır."
 
 O kış boyunca köy halkı birbirine kol kanat germiş, hiç kimse üşümemiş, hiç kimse açıkta kalmamış. Peki sence sen de çevrende üşüyen ya da yardıma ihtiyacı olan birini görsen, ona nasıl bir iyilik yapabilirsin?
+
+Önce bir büyüğe haber verip birlikte güvenli bir yardım yolu bulabilirsin.
 
 **Kıssadan hisse:** Paylaşılan her iyilik, kar taneleri gibi çoğalarak bütün bir köyü ısıtabilir.

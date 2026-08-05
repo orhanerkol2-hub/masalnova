@@ -12,8 +12,9 @@ themes: ["saygı","sabır","doğaya değer verme"]
 characters: ["Balıkçı Rüstem","Orman Perisi Yeşim","Küçük Baykuş Huhu"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında küçük bir dere akarmış. Bu derenin başında Rüstem adında sabırlı bir balıkçı yaşarmış. Rüstem her sabah güneşle beraber kalkar, ağını nazikçe suya bırakır ve sessizce beklermiş.
 
@@ -36,6 +37,8 @@ O günden sonra Rüstem'in ağına hep en güzel, en parlak balıklar takılırm
 Zamanla köylüler de Rüstem'i örnek almış. Acele etmeyi bırakıp ormana, hayvanlara ve birbirlerine saygı göstermeyi öğrenmişler. Dere hep bereketli akmış, orman hep yemyeşil kalmış.
 
 Küçük baykuş Huhu ise her akşam Rüstem'in evinin penceresine konar, ona iyi geceler dilermiş. İkisi arasındaki bu saygılı dostluk, ormanın en güzel hikayesi olarak nesilden nesile anlatılırmış.
+
+Rüstem ağını her kullanım sonrası dikkatle onarırmış.
 
 Sevgili çocuk, sen de çevrendeki insanlara ve doğaya nasıl saygı gösterebilirsin?
 

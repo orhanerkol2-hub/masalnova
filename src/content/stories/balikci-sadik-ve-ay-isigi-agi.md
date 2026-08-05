@@ -12,8 +12,9 @@ themes: ["sabır","huzur","sakinlik"]
 characters: ["Balıkçı Sadık","Küçük kedi Pamuk"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, denizin kıyısında küçük bir köy varmış. Bu köyde Sadık adında sabırlı bir balıkçı yaşarmış. Sadık her akşam, gün batıp ay yükselince sahile inermiş.
 
@@ -30,6 +31,8 @@ Sonra Sadık, ağını sessizce kumların üstüne serer, elini Pamuk'un sırtı
 Köyün ışıkları teker teker sönermiş, evler uykuya dalarmış. Sadık da yumuşak battaniyesine sarınır, penceresinden ay ışığını izlermiş. Pamuk, ayaklarının dibinde kıvrılır, mırıl mırıl uyurmuş.
 
 Gökyüzündeki yıldızlar, sanki Sadık'ın ördüğü ağın ilmekleri gibi parlarmış. Rüzgâr çok hafif eserken, deniz de ninni söylermiş, şşşşş, şşşşş diye.
+
+Sadık ertesi sabah kullanacağı ipi küçük bir sepete yerleştirmiş. Pamuk sepetin yanına kıvrılmış, kuyruğunu burnuna dolamış. Ağın son ilmeği de ay ışığında sessizce parlamış; odada acele edecek hiçbir şey kalmamış.
 
 Şimdi sen de gözlerini yavaşça kapat. Sadık gibi sabırlı ol, Pamuk gibi rahat uyu. Ay senin de üstüne ışığını serpiyor, yıldızlar senin için parlıyor.
 

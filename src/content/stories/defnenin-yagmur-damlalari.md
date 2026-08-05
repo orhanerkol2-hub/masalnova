@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/defnenin-yagmur-damlalari.webp"
 altText: "Kapak görseli: Defne'nin Yağmur Damlaları"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["paylaşma","dostluk","empati"]
 characters: ["Defne","Nine Hatice","Kedi Pamuk"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada Defne adında meraklı bir kız yaşarmış. Defne her şeyi öğrenmeyi çok severmiş; neden gökyüzü mavi, neden kuşlar uçar, neden yağmur damlaları yuvarlaktır diye sorar dururmuş.
 
@@ -32,6 +33,8 @@ Nine Hatice çok duygulanmış. "Sağ ol yavrum, bu kadar küçük yaşta bu kad
 Defne o gece eve dönerken annesine sormuş: "Anne, neden paylaşmak bu kadar güzel bir duygu?" Annesi gülümsemiş ve "Çünkü paylaştığında, hem verenin hem alanın içi ısınır kızım," demiş.
 
 O günden sonra Defne, her fırsatta çevresindekilerle küçük şeyler paylaşmayı öğrenmiş; bir gülümseme, bir dilim ekmek, bir yardım eli... Ve her paylaşımda kalbinin biraz daha büyüdüğünü hissetmiş.
+
+Ertesi yağmurlu günde çantasına iki küçük mendil koymuş. Birini kendisi kullanmış, diğerini ıslanan arkadaşına uzatmış. Paylaşmanın bazen önceden düşünmekle başladığını fark etmiş.
 
 Sevgili küçük dostum, sen de birine bir şey paylaştığında nasıl hissedersin?
 

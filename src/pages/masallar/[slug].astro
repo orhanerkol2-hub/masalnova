@@ -10,6 +10,7 @@ import { videoById } from '../../data/videos';
 import { getStoryAuthor, storyReviewers } from '../../data/authors';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
 import { compactDescription, formatTurkishDate, storySeoTitle } from '../../lib/seo';
+import { isStoryContentSubstantial, minimumStoryWordCount, storyWordCount } from '../../lib/story-quality.mjs';
 
 export async function getStaticPaths() {
   const stories = await getAllStories();
@@ -22,6 +23,10 @@ const { story } = Astro.props;
 const d = story.data;
 const author = getStoryAuthor(d.author);
 const isIslamic = isIslamicStory(story);
+const wordCount = storyWordCount(story.body);
+const minimumWordCount = minimumStoryWordCount(d);
+const isPubliclyEligible = d.editorialStatus === 'approved'
+  && isStoryContentSubstantial(story.body, d);
 const { Content } = await render(story);
 
 const allStories = await getStories();
@@ -140,10 +145,11 @@ const jsonLd = [
   publishedTime={publishedIso}
   modifiedTime={modifiedIso}
   preloadImage={d.coverImage}
-  jsonLd={jsonLd}
+  jsonLd={isPubliclyEligible ? jsonLd : undefined}
   activeNav={isIslamic ? 'islami' : 'masallar'}
   readerPage
-  robots={d.editorialStatus === 'approved' ? undefined : 'noindex, follow'}
+  allowAds={isPubliclyEligible}
+  robots={isPubliclyEligible ? undefined : 'noindex, follow'}
 >
   <ReadingToolbar
     backHref={isIslamic ? '/islami-hikayeler/' : '/masallar/'}
@@ -197,11 +203,15 @@ const jsonLd = [
             <p class="reader__byline">
               <span>Yazan: <a href={author.profilePath}>{author.name}</a></span>
               <span aria-hidden="true">·</span>
-              <span>
-                Editoryal inceleme:
-                {' '}<a href="/yazarlar/aylin-karabektas/">Aylin Karabektaş</a>
-                {' '}ve{' '}<a href="/yazarlar/muhammet-karayigit/">Muhammet Karayiğit</a>
-              </span>
+              {d.editorialStatus === 'approved'
+                ? <span>
+                    Editoryal inceleme:
+                    {' '}<a href="/yazarlar/aylin-karabektas/">Aylin Karabektaş</a>
+                    {' '}ve{' '}<a href="/yazarlar/muhammet-karayigit/">Muhammet Karayiğit</a>
+                  </span>
+                : <span data-nosnippet>
+                    Güncel metin yeniden editoryal inceleme bekliyor
+                  </span>}
               <span aria-hidden="true">·</span>
               <time datetime={publishedIso}>{publishedLabel} tarihinde yayınlandı</time>
             </p>
@@ -223,6 +233,14 @@ const jsonLd = [
           <section class="reader__content">
             <Content />
           </section>
+          {!isPubliclyEligible && (
+            <aside class="archive-note" data-nosnippet>
+              <strong>{d.editorialStatus === 'approved' ? 'Kısa arşiv anlatımı' : 'Güncel metin incelemede'}</strong>
+              {d.editorialStatus === 'approved'
+                ? <p>Bu {isIslamic ? 'hikâye' : 'masal'} ({wordCount}/{minimumWordCount} kelime) editoryal olarak yeniden geliştiriliyor. Bu süreçte arama dizinine ve reklamlara kapalıdır.</p>
+                : <p>Bu {isIslamic ? 'hikâyenin' : 'masalın'} güncellenen metni Aylin Karabektaş ve Muhammet Karayiğit’in yeniden incelemesini bekliyor. Bu süreçte arama dizinine, önerilere ve reklamlara kapalıdır.</p>}
+            </aside>
+          )}
         </article>
       </div>
 
@@ -253,7 +271,7 @@ const jsonLd = [
                 <li>Hikâyenin en çok hangi bölümünü sevdin?</li>
               </ul>}
         </div>
-        <a class="editorial-link" href="/hakkimizda/">MasalNova’nın içerik ve seçim yaklaşımı <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        <a class="editorial-link" href="/yayin-ilkeleri/">MasalNova’nın yayın ve içerik ilkeleri <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </section>
 
       {d.themes.length > 0 && (
@@ -432,6 +450,19 @@ const jsonLd = [
   .reader__content :global(strong) {
     color: var(--reader-accent);
   }
+
+  .archive-note {
+    margin: 24px 0 8px;
+    padding: 15px 17px;
+    border: 1px solid var(--reader-border);
+    border-radius: 14px;
+    background: var(--reader-surface-raised);
+    color: var(--reader-text-soft);
+    font-size: .84rem;
+    line-height: 1.55;
+  }
+  .archive-note strong { color: var(--reader-text-color); }
+  .archive-note p { margin: 4px 0 0; }
 
   .story-guide {
     margin-top: 28px;

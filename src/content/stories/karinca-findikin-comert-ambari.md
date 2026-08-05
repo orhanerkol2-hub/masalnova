@@ -12,8 +12,9 @@ themes: ["paylaşma","dostluk","cömertlik"]
 characters: ["Fındık","Cırcır Böceği Zilo","Kırlangıç Pamuk"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, güneşin altın gibi ışıldadığı bir tarlanın kıyısında küçük bir karınca yaşarmış. Adı Fındık'mış. Fındık, tarladaki bütün başakları tek tek tanır, hangi başağın en tatlı taneleri sakladığını bilirmiş.
 
@@ -30,5 +31,7 @@ O günden sonra Fındık'ın ambarına başka misafirler de gelmeye başlamış.
 Kış geldiğinde Fındık'ın yuvası, tarladaki en kalabalık ve en mutlu yermiş. Zilo kış boyunca minik şarkılar mırıldanmış, Pamuk ise renkli tüylerini süsleyerek herkese gökyüzünden gördüğü hikâyeleri anlatmış. Hep birlikte gülmüşler, hep birlikte ısınmışlar.
 
 Bahar geldiğinde tarla yeniden yeşermiş, altın başaklar güneşte parıldamaya başlamış. Fındık, arkadaşlarına bakıp içi ısınarak düşünmüş: Tek başına topladığı taneler onu hiçbir zaman bu kadar mutlu etmemiş. Asıl zenginlik, paylaştığı her tanede saklıymış.
+
+Havalar ısınınca Zilo ile Pamuk da ambara yeni taneler taşımış. Fındık, paylaştığı iyiliğin bir borç gibi değil, dostların birbirini düşünmesiyle kendiliğinden geri döndüğünü görmüş. Birlikte gelecek kış için ölçülü bir hazırlık yapmışlar.
 
 **Kıssadan hisse:** Paylaşılan bir tane, saklanan bir ambardan daha değerlidir.

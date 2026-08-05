@@ -12,8 +12,9 @@ themes: ["hoşgörü","paylaşma","dostluk"]
 characters: ["Keloğlan","Değirmenci Nine","Köy Halkı"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağın eteğinde eski bir değirmen varmış. Bu değirmen artık pek çalışmaz, çatısından güvercinler geçer, duvarlarından sarmaşıklar sarkarmış. Köyün delişmen ama iyi yürekli oğlu Keloğlan, bir gün annesine "Ana," demiş, "şu terk edilmiş değirmeni onarsam da köye yararlı olsam mı?"
 
@@ -34,5 +35,7 @@ Keloğlan saygıyla eğilmiş ama geri adım atmamış: "Muhtar Amca, bak şu de
 Muhtar bir süre düşünmüş, sonra değirmenin içine girip herkesin birlikte çalıştığını, güldüğünü, aynı sofrada ekmek böldüğünü görmüş. Yüreği yumuşamış. "Haklısın Keloğlan," demiş, "ben yanlış düşünmüşüm. Herkes bu köyün bir parçası olabilir."
 
 O günden sonra değirmen sadece un öğütmekle kalmamış, köyün buluşma yeri olmuş. Farklı diyarlardan gelenler burada dostluk kurmuş, herkes birbirinden bir şey öğrenmiş. Keloğlan'ın kel başı parlarken, yüreği daha da parlamış.
+
+Değirmenin duvarına herkes kendi dilinde bir karşılama sözü yazmış. Gelen çocuklar sözcükleri birbirinden öğrenmiş; farklılıkların uzaklık değil, yeni bir sohbet başlatan kapılar olduğunu görmüşler.
 
 **Kıssadan hisse:** Farklı olan herkese kapımızı açarsak, hayatımız daha da güzelleşir.

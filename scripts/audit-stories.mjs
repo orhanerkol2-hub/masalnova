@@ -21,7 +21,7 @@ const OUT = process.env.AUDIT_OUT
   || join(__dirname, '..', 'src', 'content', '.story-audit.json');
 
 // Regex für geleakte JSON-/Markdown-Artefakte am Textende.
-export const ARTIFACT_TAIL = /["'“”’]?\s*[}\]]+\s*$|(?<=[.!?"“”’])\s*\*{1,2}\s*$/;
+export const ARTIFACT_TAIL = /["'“”’]?\s*[}\]]+\s*$/;
 // Editier-/Meta-Notizen in eckigen Klammern.
 export const META_NOTE = /\[[^\]]*(Not|Note|düzelt|internal|tag|Anmerk|Hinweis|fixed|corrected)[^\]]*\]/i;
 // Bekannte Kategorie-Keys mit Wortbereich.
@@ -46,7 +46,7 @@ function fmCategories(fm) {
 
 // Textende bereinigt um Artefakte prüfen: endet es „sauber"?
 function endsCleanly(body) {
-  const stripped = body.replace(ARTIFACT_TAIL, '').trimEnd();
+  const stripped = body.replace(ARTIFACT_TAIL, '').replace(/\*{1,2}\s*$/, '').trimEnd();
   const last = stripped.slice(-1);
   return /[.!?"“”…»]/.test(last);
 }
@@ -100,9 +100,10 @@ export async function auditAll() {
 
     // Moral-Regel: uyku darf KEIN "Kıssadan hisse:" haben, andere sollten.
     if (cat) {
-      const hasMoral = /\*\*Kıssadan hisse:\*\*/.test(body);
-      if (cat === 'uyku' && hasMoral) report.moralIssue.push({ f, cat, issue: 'uyku hat Moral' });
-      if (cat !== 'uyku' && CATEGORIES[cat].moral && !hasMoral) report.moralIssue.push({ f, cat, issue: 'Moral fehlt' });
+      const hasExplicitMoral = /\*\*Kıssadan hisse:\*\*/.test(body);
+      const hasLesson = hasExplicitMoral || /^## Masaldan Çıkan Ders$/m.test(body);
+      if (cat === 'uyku' && hasExplicitMoral) report.moralIssue.push({ f, cat, issue: 'uyku hat Moral' });
+      if (cat !== 'uyku' && CATEGORIES[cat].moral && !hasLesson) report.moralIssue.push({ f, cat, issue: 'Moral fehlt' });
     }
   }
 

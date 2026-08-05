@@ -12,8 +12,9 @@ themes: ["çalışkanlık","sabır","dürüstlük"]
 characters: ["Keloğlan","Padişah","Bahçıvan Nine Ayşe"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan adında zeki ve iyi yürekli bir delikanlı yaşarmış. Kel kafası güneşte parıldar, ama gönlü herkesten daha sıcak parlardı.
 
@@ -36,5 +37,7 @@ Kırkıncı gün Padişah bahçeye girdiğinde gözlerine inanamamış. Bahçe, 
 "Bunu nasıl yaptın Keloğlan?" diye sormuş Padişah hayretle. Keloğlan tevazuyla eğilmiş: "Büyülü bir sırrım yok Padişahım. Sadece her gün erken kalktım, sabırla çalıştım ve çiçekleri sevgiyle suladım."
 
 Padişah, sözünü tutmuş ve Keloğlan'ı baş bahçıvan yapmış. Ama Keloğlan bu unvanla değil, bahçenin yeniden hayat bulmasıyla mutlu olmuş. Köyüne döndüğünde herkese demiş ki: "Görünüşe bakmayın, emeğe bakın. Çalışkanlık her kapıyı açar."
+
+Bahçenin güzel kalması için saray çalışanlarıyla haftalık bakım sırası hazırlamış. Kuruyan yaprakları gübreye dönüştürmüş, suyu boşa akıtmamış. Herkes, bir bahçeyi canlandırmak kadar onu özenle korumanın da emek istediğini görmüş.
 
 **Kıssadan hisse:** Sabırla ve sevgiyle çalışan eller, en kurak toprakları bile çiçek bahçesine çevirir.

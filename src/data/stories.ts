@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { durationBucketForMinutes } from './taxonomy';
+import { isStoryContentSubstantial } from '../lib/story-quality.mjs';
 
 export type Story = CollectionEntry<'stories'>;
 
@@ -21,10 +22,14 @@ export async function getAllStories(): Promise<Story[]> {
   return all.sort((a, b) => b.data.publishedAt.localeCompare(a.data.publishedAt));
 }
 
-/** Only editorially approved stories for public collections and discovery. */
+/**
+ * Only approved and sufficiently complete stories for public collections.
+ * Short archive pages remain reachable, but stay out of discovery until revised.
+ */
 export async function getStories(): Promise<Story[]> {
   const all = await getAllStories();
-  return all.filter((story) => story.data.editorialStatus === 'approved');
+  return all.filter((story) => story.data.editorialStatus === 'approved'
+    && isStoryContentSubstantial(story.body, story.data));
 }
 
 /** Approved stories that belong to the Masallar catalogue. */

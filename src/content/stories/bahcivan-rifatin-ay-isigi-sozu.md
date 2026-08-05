@@ -12,8 +12,9 @@ themes: ["sözünde durmak","huzur","doğa sevgisi"]
 characters: ["Bahçıvan Rıfat","Baykuş Hüsnü","Küçük tavşan Pamuk"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında güler yüzlü bir bahçıvan yaşarmış. Adı Rıfat'mış. Her akşam, güneş yavaşça batarken, ormandaki çiçekleri sulamak için elinde küçük bir bakraçla dolaşırmış.
 
@@ -30,5 +31,7 @@ Orman yavaşça sessizleşmiş. Rüzgâr hafifçe esmiş, bulutlar yumuşacık b
 Baykuş Hüsnü, usulca göz kırpmış. "İyi geceler, Rıfat," demiş yavaşça. "İyi geceler, küçük Pamuk. İyi geceler, tüm orman."
 
 Yıldızlar gökyüzünde parıl parıl parlamış, ay yumuşacık ışığını her yaprağa, her çiçeğe usulca yaymış. Orman, sessiz ve sıcak bir battaniyeye sarınmış gibi uykuya dalmış.
+
+Rıfat boş sulama kabını kapının yanına bırakmış, sabah doldurmayı unutmamak için üzerine küçük bir papatya koymuş. Sonra ellerini yıkayıp yatağına uzanmış. Papatyaların güvende olduğunu düşününce omuzları gevşemiş, nefesi sakinleşmiş.
 
 İyi geceler, küçük dinleyicim. Sen de gözlerini yavaşça kapat, yıldızların ninnisini dinle. İyi geceler.
