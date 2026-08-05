@@ -1,0 +1,43 @@
+---
+import { gameEditorial } from '../data/game-editorial';
+
+interface Props { slug: string; title: string; }
+const { slug, title } = Astro.props;
+const content = gameEditorial[slug];
+if (!content) throw new Error(`Game editorial content missing for ${slug}`);
+---
+
+<section class="game-editorial" aria-labelledby={`${slug}-guide`} data-game-editorial={slug}>
+  <header>
+    <span class="eyebrow">Oyun rehberi</span>
+    <h2 id={`${slug}-guide`}>{title} nasıl bir oyun?</h2>
+  </header>
+  <p>{content.overview}</p>
+  <h3>Nasıl oynanır?</h3>
+  <p>{content.play}</p>
+  <h3>Daha iyi oynamak için ipuçları</h3>
+  <ul>{content.tips.map((tip) => <li>{tip}</li>)}</ul>
+  <aside aria-label="Ebeveynler için kısa bilgi">
+    <h3>Ebeveynler için</h3>
+    <p>{content.parent}</p>
+  </aside>
+</section>
+
+<style>
+  .game-editorial { max-width: 900px; margin: 28px auto 0; padding: clamp(22px,4vw,38px); border: 1px solid rgba(255,255,255,.16); border-radius: 24px; background: rgba(255,255,255,.1); color: #fff; }
+  .game-editorial header { margin-bottom: 14px; }
+  .eyebrow { color: #ffd85f; font-size: .75rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .game-editorial h2 { margin-top: 4px; font-size: clamp(1.45rem,3vw,2rem); }
+  .game-editorial h3 { margin-top: 20px; font-size: 1.05rem; }
+  .game-editorial p, .game-editorial li { color: rgba(255,255,255,.78); line-height: 1.75; }
+  .game-editorial ul { margin: 8px 0 0; padding-left: 1.25rem; }
+  .game-editorial li + li { margin-top: 5px; }
+  .game-editorial aside { margin-top: 22px; padding: 18px 20px; border-left: 4px solid #ffd85f; border-radius: 0 14px 14px 0; background: rgba(5,20,52,.28); }
+  .game-editorial aside h3 { margin-top: 0; }
+  @media (min-width:721px) {
+    .game-editorial { border-color:#ded9ce; background:#fff; color:#173574; box-shadow:0 12px 30px rgba(23,43,92,.07); }
+    .game-editorial p, .game-editorial li { color:#5f6f89; }
+    .game-editorial aside { background:#fff8dd; }
+    .eyebrow { color:#987000; }
+  }
+</style>
