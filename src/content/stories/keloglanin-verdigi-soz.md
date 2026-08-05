@@ -12,8 +12,9 @@ themes: ["sözünde durmak","dürüstlük","akıl"]
 characters: ["Keloğlan","Padişah","Yaşlı Bahçıvan Kadın"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında kel kafalı ama zeki bir çocuk yaşarmış. Köyünde kimsenin çözemediği bilmeceleri o çözer, kimsenin bulamadığı çözümleri o bulurmuş.
 
@@ -52,5 +53,7 @@ Padişah onlara dönmüş: "Ben söz verdim. Söz veren, sözünü tutar. Yoksa 
 Keloğlan bu sözleri duyunca içi ısınmış. Altın keseyi almış ama parasının yarısını nineye vermiş. "Bu gülü sen büyüttün nine, hakkın benden çok senin," demiş.
 
 O günden sonra sarayın bahçesi eskisinden daha güzel çiçek açmış. Keloğlan da köyüne dönmüş, ama her yıl bahara doğru sarayı ziyarete gider, nineyle çay içip gülleri birlikte kokularmış.
+
+Her ziyarette bahçedeki gençlere gül fidanlarının bakımını öğretmişler. Böylece verilen söz yalnız bir ödülle bitmemiş; nineye duyulan saygı ve emek, yıllarca yaşayan bir geleneğe dönüşmüş.
 
 **Kıssadan hisse:** Verilen söz, ne kadar küçük görünse de tutulduğunda büyük güven ve mutluluk getirir.

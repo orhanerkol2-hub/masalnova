@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/dorukun-bekleme-tasi.webp"
 altText: "Kapak görseli: Doruk'un Bekleme Taşı"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["sabır","azim","doğa sevgisi"]
 characters: ["Doruk","Pınar Perisi Damla","Yaşlı Çınar"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağ eteğindeki küçük bir köyde Doruk adında cesur bir çocuk yaşarmış. Doruk çok meraklı ve çok cesurmuş ama bir kusuru varmış: hiçbir şey için beklemeyi sevmezmiş. Yemeği hemen pişsin, oyuncağı hemen çalışsın, tohum ektiği anda çiçek açsın istermiş.
 
@@ -32,6 +33,8 @@ Güneş tam tepeye gelince, pınarın perisi Damla, ışıltılı bir damla gibi
 Doruk testisini doldurmuş, sevinçle köyüne koşmuş. Komşusuna suyu verdiğinde kadın gülümsemiş ve kısa süre içinde iyileşmiş. Ama Doruk için en değerli şey su değil, öğrendiği dersmiş.
 
 O günden sonra Doruk, her şeyin kendi zamanında olacağını öğrenmiş. Tohum ektiğinde beklemiş, ödev yaparken acele etmemiş, arkadaşlarıyla oyun kurarken sırasını sabırla beklemiş. Köylüler onun bu değişimini görünce "Doruk artık gerçekten büyümüş," demişler.
+
+Beklerken yapabileceği küçük hazırlıkları da ihmal etmemiş.
 
 Sevgili çocuklar, siz de bir şey için beklemek zorunda kaldığınızda, o beklemenin içinde ne güzel şeyler saklı olabilir, hiç düşündünüz mü?
 

@@ -15,8 +15,9 @@ characters: ["Musa Usta", "Ayşe Teyze", "Küçük Yardımcılar"]
 isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-28"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış, bir yokmuş. Küçük bir kasabanın dar bir sokağında, minicik bir ayakkabı dükkânı varmış. Bu dükkânın sahibi Musa Usta ile karısı Ayşe Teyze'ymiş.
 
@@ -95,5 +96,9 @@ Ve bir daha hiç gelmemişler.
 Ama Musa Usta'nın elleri o günden sonra hep hızlı, hep düzgün çalışmış. Dükkân hiç boş kalmamış. Ve her yeni bir çift ayakkabı bitirdiğinde Musa Usta gülümseyip, "Bu da onlar için," dermiş.
 
 Onlar ermiş muradına, biz çıkalım kerevetine. Sana yapılan iyiliği unutma; sen de birine bir iyilik yap. İyilik, tıpkı o küçük ayakkabılar gibi, hep yeni bir yol bulur.
+
+## Masaldan Çıkan Ders
+
+Gördüğümüz yardım için teşekkür etmek ve bize destek olan kişinin ihtiyacını da fark etmek, iyiliği karşılıklı bir dostluğa dönüştürür.
 
 **İyi geceler.**

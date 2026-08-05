@@ -12,8 +12,9 @@ themes: ["yardımlaşma","paylaşma","dostluk"]
 characters: ["Keloğlan","Anası","Dağ Devi Hantal"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan ile anası yaşarmış. Kış yaklaşınca köyde odun azalmış, herkes birbirine yardım etmenin yollarını aramaya başlamış.
 
@@ -54,5 +55,7 @@ Keloğlan odun çuvalını sırtlayıp köyün yolunu tutmuş. Köye vardığın
 Keloğlan gülümseyerek anlatmış: "Dağda yardıma ihtiyacı olan bir dost buldum, ona yardım ettim, o da bana yardım etti."
 
 O günden sonra köylüler zaman zaman dağa çıkıp devi ziyaret etmeye başlamışlar. Dev artık yalnız değilmiş, köyün bir dostu olmuş. Kışın en soğuk günlerinde bile kulübesinde sıcacık bir ocak yanarmış, çünkü paylaşmanın sıcaklığı her yeri ısıtırmış.
+
+Ziyarete gidenler önceden haber verir, odunları birlikte dikkatle istiflerlermiş. Dostlukları karşılıklı özenle güçlenmiş.
 
 **Kıssadan hisse:** Bir elin nesi var, iki elin sesi var; yardımlaşan gönüller hiçbir kışta üşümez.

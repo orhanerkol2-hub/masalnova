@@ -12,8 +12,9 @@ themes: ["dürüstlük","arkadaşlık","sorumluluk"]
 characters: ["Toprak (ayı)","Fıstık (sincap)","Baykuş Devrim"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde Toprak adında iri, tüylü bir ayı yaşarmış. Toprak'ın en sevdiği şey, akşam olup gökyüzü yıldızlarla dolduğunda ormanın kenarındaki tepeye çıkıp yukarıya bakmakmış.
 
@@ -34,5 +35,7 @@ Fıstık şaşkınlıkla, "Doğruyu söyleyince hiç ceza almadın, üstüne her
 Toprak gülümseyerek gökyüzüne bakmış. "Belki de yıldızlar, dürüst olanları hep izliyor ve ödüllendiriyordur," demiş.
 
 O geceden sonra Toprak ve Fıstık, her ne olursa olsun birbirlerine hep doğruyu söylemeye söz vermişler. Ormanın üzerindeki yıldızlar da, sanki bu sözü onaylarcasına, o gece her zamankinden daha parlak ışıldamış.
+
+Toprak yardım gördüğü için sorumluluğunu unutmamış. Ertesi sabah Fıstık'la birlikte devrilen küpün çevresini temizlemiş ve kapağı daha sağlam bir yere koymuş. Böylece dürüstlüğün yalnız hatayı söylemek değil, verdiği zararı düzeltmeye çalışmak olduğunu da öğrenmişler.
 
 **Kıssadan hisse:** Dürüstlük bazen zor görünse de, sonunda hem kalbi hem de dostlukları en parlak yıldızlar kadar aydınlatır.

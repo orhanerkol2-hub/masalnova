@@ -12,8 +12,9 @@ themes: ["çalışkanlık","sabır","dostluk"]
 characters: ["Tombik","Nilüfer Teyze Kaplumbağa","Minik Baykuş Huhu"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, ormanın kenarında öyle sakin bir göl varmış ki, suyu ayna gibi parıldarmış. Bu gölün kıyısında Tombik adında şirin bir yavru fil yaşarmış. Tombik'in en sevdiği şey, gölün kenarında uzanıp gökyüzündeki bulutları saymakmış.
 
@@ -32,5 +33,7 @@ Haftalar geçmiş, Tombik'in ektiği tohumlar filizlenmeye başlamış. Her saba
 Sonunda güzel bir yaz sabahı, Tombik'in kıyısında da pembemsi nilüferler açmış. Koku o kadar tatlıymış ki bütün orman hayvanları oraya toplanmış. Herkes Tombik'i kutlamış, sırtını sıvazlamış.
 
 O gün Tombik anlamış ki, güzel şeyler kendiliğinden olmuyor; onlar sabır ve emekle büyüyormuş. Artık her sabah güneşle birlikte kalkıp gölün etrafındaki çiçeklere bakıyor, çalışmanın verdiği mutluluğu hissediyormuş.
+
+Nilüferlerin çevresini temizlerken kurbağa yumurtalarına ve küçük böceklere zarar vermemeye dikkat etmiş. Bahçenin yalnız kendisine değil, göldeki bütün canlılara ait olduğunu öğrenmiş.
 
 **Kıssadan hisse:** Emekle büyüyen her çiçek, tembellikle geçen günlerden daha güzel kokar.

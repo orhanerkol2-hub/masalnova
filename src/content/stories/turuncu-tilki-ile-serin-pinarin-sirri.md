@@ -12,8 +12,9 @@ themes: ["affetmek","dostluk","paylaşmak"]
 characters: ["Turuncu Tilki Fındık","Kaplumbağa Sarı","Baykuş Nine"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde serin bir pınar varmış. Bu pınarın suyu öyle tatlıymış ki, ormandaki bütün hayvanlar susayınca oraya koşarmış.
 
@@ -36,5 +37,7 @@ Sarı uzun bir süre sessiz kalmış. Sonra başını kabuğundan çıkarıp gü
 İkisi birlikte pınara dönmüşler. Fındık, kırdığı taşları tek tek yerine koymuş, suyu temizlemiş. Sarı da ona gölgeli bir yer göstermiş, birlikte oturup suyun berraklaşmasını izlemişler.
 
 O günden sonra Fındık, sabırsızlandığında derin bir nefes alıp Sarı'yı hatırlarmış. Sarı da Fındık'ın hızından ders alıp bazen biraz daha çabuk davranmaya çalışırmış. Pınar başında her buluştuklarında, suyun sesi sanki onlara "affetmek, dostluğu suyun berraklığı gibi korumaktır" dermiş.
+
+İkisi de aynı hatayı yinelememek için pınarın kaygan taşlarının yanına küçük bir uyarı işareti koymuşlar.
 
 **Kıssadan hisse:** Gerçek dostluk, hatayı fark edip özür dileyen ve gönülden affeden yürekler arasında büyür.

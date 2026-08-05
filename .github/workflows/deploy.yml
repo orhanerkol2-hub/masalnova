@@ -31,8 +31,10 @@ jobs:
         run: node scripts/build-videos.mjs || echo "Video-Refresh fehlgeschlagen — committete videos.json wird verwendet"
       - name: Build site
         env:
-          PUBLIC_ADSENSE_ENABLED: 'true'
-          PUBLIC_GOOGLE_CERTIFIED_CMP: 'true'
+          # Keep advertising disabled until a Google-certified CMP is actually
+          # configured for EEA, UK and Swiss traffic in the AdSense account.
+          PUBLIC_ADSENSE_ENABLED: 'false'
+          PUBLIC_GOOGLE_CERTIFIED_CMP: 'false'
         run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

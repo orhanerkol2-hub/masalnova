@@ -12,8 +12,9 @@ themes: ["affetmek","dostluk","dürüstlük"]
 characters: ["Pamut adlı kuzu","Turşucu Tosun Amca","Papağan Feryat"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, rengarenk çadırlarla dolu kalabalık bir çarşı varmış. Bu çarşıda herkes birbirini tanır, herkes birbirine güler yüz gösterirmiş.
 
@@ -36,5 +37,7 @@ Tosun Amca, Pamut'un çalışkanlığına bakıp gülümsemiş. "Sen gerçekten 
 Pamut mutlulukla gülümsemiş. O günden sonra çarşıda herkes ona "Küçük Pamut, dürüst kuzu" demeye başlamış. Feryat da her sabah tezgahların üstünden geçerken bu güzel hikayeyi anlatırmış.
 
 Çarşıdaki herkes, küçük bir hatanın affedilebileceğini, önemli olanın kalpten özür dilemek ve yardım etmek olduğunu öğrenmiş.
+
+Pamut daha sonra tezgâhların arasından geçerken kuyruğunu ve sepetini dikkatle toplamış. Özür dilemenin ardından aynı hatayı önlemek için davranışını değiştirmesi gerektiğini de anlamış.
 
 **Kıssadan hisse:** Bir hata yapınca kalpten özür dilemek ve yardım etmek, kaybedilen güveni yeniden kazandırır.

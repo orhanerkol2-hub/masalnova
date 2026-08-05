@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/dede-fikretin-kar-beyazi-sali.webp"
 altText: "Kapak görseli: Dede Fikret'in Kar Beyazı Şalı"
 ageGroups: ["5-7"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["nezaket","paylaşma","yardımseverlik"]
 characters: ["Dede Fikret","Küçük Elmas","Kar Kuşu"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğindeki küçük köyde Dede Fikret adında yaşlı ve bilge bir adam yaşarmış. Köylüler her sorunlarında ona koşar, o da her zaman tatlı bir gülümsemeyle onlara yol gösterirmiş.
 
@@ -40,6 +41,8 @@ O gün köylüler bu güzel hikâyeyi duymuşlar. Ertesi sabah herkes evinden fa
 Dede Fikret, meydanda oturup bu güzel manzarayı izlerken gözleri parlamış. "Bir küçük iyilik, büyük bir sıcaklığa dönüşebilirmiş," diye mırıldanmış kendine.
 
 O kıştan sonra köyde her kar yağdığında, çocuklar birbirlerine şal, eldiven, sıcak çorba taşırlarmış. Buna "Elmas'ın Kuşu Günü" adını vermişler ve her yıl kutlarlarmış.
+
+Dağıtım yapmadan önce hangi evin neye ihtiyacı olduğunu sorarlarmış. Böylece yardımları rastgele değil, karşılarındaki kişiyi dinleyerek ulaştırmışlar. Nezaketin, iyi niyet kadar dikkat de istediğini öğrenmişler.
 
 Peki sen, birine küçük bir iyilik yaptığında içinin nasıl ısındığını fark ettin mi?
 

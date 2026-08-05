@@ -12,8 +12,9 @@ themes: ["çalışkanlık","azim","paylaşma"]
 characters: ["Keloğlan","Padişah","Nine Ayşe"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan yaşarmış. Keloğlan çok çalışkan bir çocukmuş ama köyün diğer gençleri tembelmiş, hep gölgede oturup vakit geçirirlermiş.
 
@@ -50,5 +51,7 @@ Zamanla köyün bütün tarlaları bereketli hale gelmiş. Köylüler bir araya 
 "Bak," demiş Keloğlan gülümseyerek, "yıldızlar bize hep aynı şeyi öğretiyor: sabırla, durmadan çalışırsak, biz de parlayabiliriz."
 
 O günden sonra köyde herkes çalışkanlığın değerini öğrenmiş ve köy, çevredeki en mutlu, en bereketli köy olmuş.
+
+Keloğlan ertesi yıl yalnız hasadı değil, suyu da paylaşmaları gerektiğini söylemiş. Köylüler tarlalar arasında küçük kanallar açıp sırayla sulama yapmışlar. Böylece çalışkanlığın, herkesin emeğine ve hakkına dikkat edildiğinde daha güzel sonuç verdiğini öğrenmişler.
 
 **Kıssadan hisse:** Sabırla ve durmadan çalışan, yıldızlar gibi parlar.

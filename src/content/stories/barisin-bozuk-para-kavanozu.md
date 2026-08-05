@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/barisin-bozuk-para-kavanozu.webp"
 altText: "Kapak görseli: Barış'ın Bozuk Para Kavanozu"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["tutumluluk","cesaret","paylaşma"]
 characters: ["Barış","Annesi","Bakkal Rıdvan Amca"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada Barış adında cesur bir çocuk yaşarmış. Barış, her hafta harçlığından biraz ayırıp masasının üstündeki cam kavanoza atarmış. Kavanoz azar azar dolarmış, o da her bozuk parayı severek içine bırakırmış.
 
@@ -42,6 +43,8 @@ Rıdvan Amca başını sallamış. "İşte bu gerçek bir bilgelik, küçük dos
 Eve dönerlerken yağmur hafiflemiş, hatta bir gökkuşağı belirmiş. Ustayı çağırmışlar, çatı en kısa zamanda onarılmış. O gece Barış, sıcacık yatağında yatarken kendini çok mutlu hissetmiş. Çünkü biriktirdiği küçük paralar, ailesine büyük bir iyilik olarak geri dönmüş.
 
 Ev, yağmurdan korunmuş; kalpler ise sevgiyle dolmuş. Barış artık yeni bir kavanoz almış ve tekrar biriktirmeye başlamış. Çünkü bilmiş ki, tutumlu olmak sadece kendisi için değil, sevdikleri için de bir güvenceymiş.
+
+Yeni kavanozunun üzerine üç küçük etiket yapıştırmış: "ihtiyaç", "iyilik" ve "hayal". Eline geçen parayı hemen harcamadan önce hangi amaca ayıracağını düşünmüş. Böylece biriktirmenin yalnızca para saklamak değil, öncelik belirlemek olduğunu da öğrenmiş.
 
 Sevgili çocuklar, siz de küçük paralarınızı biriktirseniz, gelecekte kime ya da neye yardımcı olmak isterdiniz?
 

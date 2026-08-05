@@ -12,8 +12,9 @@ themes: ["cesaret","dürüstlük","güleryüzlülük"]
 characters: ["Keloğlan","Dev Kumsal","Nine Ayşe"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğindeki küçük bir köyde Keloğlan yaşarmış. Köy küçük ama sıcacık bir yermiş; herkes birbirini tanır, herkes birbirine yardım edermiş. Ama son zamanlarda köyün üstündeki tepede kocaman bir devin yaşadığı söylenir, kimse o tepeye çıkmaya cesaret edemezmiş.
 
@@ -42,5 +43,7 @@ Köylüler birer birer yaklaşmışlar. Dev onlara yardım etmeye başlamış: a
 O akşam köy meydanında büyük bir şölen yapılmış. Keloğlan gururla anlatmış: "Görüyorsunuz, korktuğumuz şeyin aslında bizden daha çok korktuğunu öğrendik. Cesaret, hiç korkmamak değil, korkuyla yüzleşip yürümektir."
 
 Herkes gülmüş, alkışlamış. Dev Kumsal artık köyün bir parçasıymış, Keloğlan da köyün en cesur çocuğu olarak anılırmış.
+
+Köylüler devi tanımadan önce anlattıkları korkutucu söylentiler için de özür dilemişler. Birbirlerini dinledikçe korkuları azalmış.
 
 **Kıssadan hisse:** Cesaret, korkulan şeyle yüzleşip onu anlamaya çalışmaktır.

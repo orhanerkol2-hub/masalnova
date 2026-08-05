@@ -12,8 +12,9 @@ themes: ["dürüstlük","iyilik","alçakgönüllülük"]
 characters: ["Keloğlan","Padişah","Yaşlı kadın"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında zeki ve gönlü temiz bir delikanlı yaşarmış. Fakirmiş ama hiç kimseye kötülük etmez, herkese yardım elini uzatırmış.
 
@@ -46,5 +47,7 @@ Keloğlan hem şaşırmış hem de mutlu olmuş. Ama hemen eklemiş: "Padişahı
 Padişah gülümseyerek izin vermiş. Keloğlan sevinç içinde eve koşmuş, annesine her şeyi anlatmış. Anacığı onu kucaklamış: "Oğlum, sen zaten en büyük hazineye sahipsin: temiz bir yürek."
 
 O günden sonra Keloğlan sarayda görev almış, ama hiç değişmemiş. Yine herkese yardım eder, yine dürüstçe yaşarmış. Köylüler onun hikâyesini anlattıkça, çocuklara hep şu sözü söylermiş: Ay ışığında bulduğun şey senin değilse, sahibini bulmak en doğrusudur.
+
+Hazine emini olduğunda her sandığı iki görevliyle açmış, giren ve çıkanları deftere yazmış. Keloğlan, dürüstlüğün yalnız iyi niyetle değil, herkesin görebileceği açık ve dikkatli bir çalışma düzeniyle de korunacağını bilirmiş.
 
 **Kıssadan hisse:** Dürüstlük, karşılığını er ya da geç mutlaka bulur.

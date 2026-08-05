@@ -12,8 +12,9 @@ themes: ["yardımlaşma","paylaşma","dayanışma"]
 characters: ["Çoban Emre","Nine Sultan","Küçük Ali"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların eteğinde küçük bir köy varmış. Bu köyde Emre adında iyi kalpli bir çoban yaşarmış. Emre her sabah güneşle beraber kalkar, koyunlarını yeşil çayırlara götürürmüş.
 
@@ -34,6 +35,8 @@ Günler geçmiş, kuraklık sürse de köylü artık birlikte hareket etmeyi ö�
 Sonunda yağmurlar yeniden yağmış, çayırlar eski yeşilliğine dönmüş. Ama köylü artık eskisi gibi değilmiş; birbirlerine daha sıkı sarılmış, her zorlukta beraber olmayı öğrenmişler.
 
 Nine Sultan bir akşam Emre'ye şöyle demiş: "Sen bize sadece bir vadiyi göstermedin evladım, bize birlikte olmanın gücünü öğrettin." Emre mütevazı bir şekilde başını sallamış ve koyunlarının arasına dönmüş.
+
+Paylaşım sırasını herkesin ihtiyacına göre birlikte belirlemişler.
 
 Sevgili çocuklar, siz de bir şeye sahip olduğunuzda, onu çevrenizdekilerle paylaşır mısınız?
 

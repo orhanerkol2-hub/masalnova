@@ -12,8 +12,9 @@ themes: ["sözünde durmak","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Dev Gürbüz","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında Keloğlan adında zeki ve iyi yürekli bir delikanlı yaşarmış. Köyün dışında, iki kayanın arasından fokur fokur kaynayan serin bir pınar varmış. Köylüler bu pınardan su içer, yorgunluklarını orada dinlendirirlermiş.
 
@@ -46,5 +47,7 @@ Dev Gürbüz gülümsemiş: "Keloğlan yıllardır sözünü tuttu. Bu yüzden o
 Padişah bu sözlerden çok etkilenmiş. Ülkesine dönünce bütün pınarların, derelerin korunmasını buyurmuş. Halkına da sözünde durmanın önemini öğretmiş.
 
 O günden sonra Keloğlan'ın köyü hep bereketli, hep bolluk içinde yaşamış. Dev Gürbüz ile dostlukları hiç bitmemiş, her bahar aynı pınarın başında buluşup çorbalarını içmişler.
+
+Köylüler de pınarın çevresini temiz tutmak için sırayla nöbetleşmiş. Keloğlan, bir sözün yalnız söylendiği gün değil, onu izleyen her gün gösterilen özenle tutulduğunu anlatmış.
 
 **Kıssadan hisse:** Verilen söz, ne kadar küçük görünse de tutulduğunda hayatı bereketlendirir.

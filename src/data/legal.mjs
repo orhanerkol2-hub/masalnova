@@ -118,7 +118,9 @@ export const privacy = {
     },
     {
       heading: '9. Automated decision-making',
-      paragraphs: ['No automated decision-making or profiling takes place.'],
+      paragraphs: [
+        'MasalNova itself does not make decisions about users that produce legal or similarly significant effects. If advertising is enabled with the required consent, Google may use advertising signals for ad personalisation or measurement as described in Section 3 and in Google’s privacy information.',
+      ],
     },
     {
       heading: '10. Short explanation for children',
@@ -127,6 +129,68 @@ export const privacy = {
       ],
     },
   ],
+};
+
+export const terms = {
+  title: 'Kullanım Koşulları',
+  subtitle: 'Son güncelleme: 5 Ağustos 2026',
+  sections: [
+    {
+      heading: '1. Kapsam ve sağlayıcı',
+      paragraphs: [
+        'Bu koşullar masalnova.com üzerindeki ücretsiz hikâye, video bağlantısı, boyama içeriği ve oyunların kullanımını düzenler. Hizmet, Orhan Erkol tarafından Sunbeam Media işletme adıyla sunulur. Sağlayıcı ve iletişim bilgileri Legal Notice sayfasında yer alır.',
+      ],
+    },
+    {
+      heading: '2. Çocuklar ve ebeveyn gözetimi',
+      paragraphs: [
+        'MasalNova çocuklara yönelik içerik sunar; ancak kullanım, özellikle dış bağlantılar, videolar ve reklamlarla etkileşim, bir ebeveyn veya yasal vasinin gözetiminde olmalıdır. Yaş etiketleri yalnızca seçim desteğidir ve pedagojik, psikolojik veya tıbbi uzman görüşünün yerine geçmez.',
+      ],
+    },
+    {
+      heading: '3. İçeriklerin kullanımı',
+      paragraphs: [
+        'Metinler, tasarım, logolar, özgün görseller ve oyun öğeleri aksi belirtilmedikçe telif ve diğer fikrî mülkiyet haklarıyla korunur. İçerikleri kişisel ve ticari olmayan amaçla görüntüleyebilirsiniz. Önceden yazılı izin olmadan toplu kopyalama, yeniden yayımlama, satma, otomatik çekme veya başka bir içerik hizmeti oluşturmak için kullanma yasaktır. Kanundan doğan alıntı ve diğer zorunlu kullanım hakları saklıdır.',
+      ],
+    },
+    {
+      heading: '4. Oyunlar ve cihazda saklanan veriler',
+      paragraphs: [
+        'MasalNova oyunları eğlence amaçlıdır. Bazı tercihler, ilerleme veya yüksek skor bilgileri yalnızca tarayıcınızın yerel depolama alanında tutulabilir. Tarayıcı verilerini silmek bu bilgileri geri döndürülemez biçimde kaldırabilir. Kesintisiz çalışma veya belirli bir cihazla sürekli uyumluluk garanti edilmez.',
+      ],
+    },
+    {
+      heading: '5. Dış hizmetler ve bağlantılar',
+      paragraphs: [
+        'YouTube gibi üçüncü taraf hizmetlerine yalnızca kullanıcı işlemiyle bağlantı kurulabilir. Dış sitelerin içeriği, kullanılabilirliği veya veri işleme uygulamaları üzerinde kontrolümüz yoktur. Dış hizmetler kendi koşullarına ve gizlilik kurallarına tabidir.',
+      ],
+    },
+    {
+      heading: '6. Kullanılabilirlik ve değişiklikler',
+      paragraphs: [
+        'İçerikleri düzeltme, geliştirme, kaldırma veya hizmetin bölümlerini teknik ve editoryal nedenlerle değiştirme hakkımız saklıdır. Bakım, güvenlik sorunları veya üçüncü taraf altyapısı nedeniyle geçici kesintiler yaşanabilir.',
+      ],
+    },
+    {
+      heading: '7. Sorumluluk',
+      paragraphs: [
+        'Kasıt, ağır ihmal, yaşam-vücut-sağlık zararları ve zorunlu ürün sorumluluğu gibi kanunen sınırlandırılamayan hallerde yasal hükümler geçerlidir. Hafif ihmalde, temel sözleşme yükümlülüklerinin ihlali dışında sorumluluk kabul edilmez; temel yükümlülük ihlalinde sorumluluk öngörülebilir ve sözleşmeye özgü zararla sınırlıdır. Zorunlu tüketici hakları etkilenmez.',
+      ],
+    },
+    {
+      heading: '8. Bildirim ve düzeltme',
+      paragraphs: [
+        'Hatalı, hak ihlali oluşturduğunu düşündüğünüz veya çocuklara uygunluk açısından incelenmesi gereken bir içerik fark ederseniz, ilgili sayfanın bağlantısıyla birlikte orhan.erkol@masalnova.com adresine bildirebilirsiniz. Bildirimler makul sürede incelenir.',
+      ],
+    },
+    {
+      heading: '9. Uygulanacak hukuk',
+      paragraphs: [
+        'Zorunlu tüketici koruma hükümleri saklı kalmak üzere Alman hukuku uygulanır. Tüketicilerin yerleşim yerlerindeki zorunlu yetki kuralları etkilenmez.',
+      ],
+    },
+  ],
+  note: 'Gizlilik ve veri işleme ayrıntıları Privacy Policy sayfasında açıklanır.',
 };
 
 export function legalPlainText(document) {

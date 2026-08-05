@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/umutun-ay-isikli-patikasi.webp"
 altText: "Kapak görseli: Umut'un Ay Işıklı Patikası"
 ageGroups: ["5-7"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["nezaket","cesaret","yardımseverlik"]
 characters: ["Umut","Baykuş Sarman","Kirpi Fındık"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarında küçük bir köy varmış. Bu köyde Umut adında cesur bir çocuk yaşarmış. Umut, gece karanlığından hiç korkmaz, aksine ay ışığında yürümeyi çok severmiş.
 
@@ -32,6 +33,8 @@ Eve dönerken, yardım ettiği baykuş, kirpi ve tavşan onunla birlikte yürüm
 Annesi onu kapıda karşılamış ve olanları dinlerken gülümsemiş. "Gördün mü Umut," demiş, "küçük bir nezaket, en karanlık yolları bile aydınlatabilir."
 
 Umut o geceden sonra her ay ışıklı patikada yürürken, karşılaştığı herkese küçük bir iyilik yapmayı hiç unutmamış. Çünkü biliyormuş ki, gerçek cesaret bazen sadece bir başkasına yardım eli uzatmaktır.
+
+Yardıma başlamadan önce karşısındakine neye ihtiyacı olduğunu sormayı da öğrenmiş. Nezaket, dinlemekle başlarmış.
 
 Sevgili küçük dostum, sen de bugün birine küçük bir iyilik yapabilir misin?
 

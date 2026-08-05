@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/coban-mehmetin-isikli-magarasi.webp"
 altText: "Kapak görseli: Çoban Mehmet'in Işıklı Mağarası"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["azim","sabır","umut"]
 characters: ["Çoban Mehmet","Küçük kuzu Benek","Yaşlı baykuş"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, dağların eteğinde Mehmet adında iyi kalpli bir çoban yaşarmış. Her sabah kuzularını çayıra götürür, akşam olunca hepsini tek tek sayarak köye geri dönermiş. Mehmet'in en sevdiği kuzusu Benek, küçük ve meraklı bir kuzuymuş.
 
@@ -34,6 +35,8 @@ Baykuş başıyla onaylamış ve Mehmet'i ışığın kaynağına götürmüş. 
 "Işık nedir biliyor musun?" demiş baykuş. "Bu mağarada yüzyıllardır parıldayan özel bir kristaldir. Sadece azimle, yorulduğunda bile devam edenler ona ulaşabilir. Çünkü ışık, kolay yoldan gelenlere değil, direnenlere görünür."
 
 Mehmet, baykuşa teşekkür etmiş ve Benek'i kucağına alıp mağaradan çıkmış. Köye döndüğünde herkese bu gizemli mağaradan ve öğrendiği dersten bahsetmiş. O günden sonra Mehmet, hayatında zorlukla karşılaştığında hep şunu hatırlarmış: Bir kayaya tırmanamasa bile, denemeye devam edenler er ya da geç tepeye ulaşırmış.
+
+Yine de her denemeden önce güvenli bir yol arar, gerekiyorsa yardım istermiş. Azmin, düşünmeden tehlikeye atılmak değil; hatadan ders çıkararak daha iyi bir yöntemle yeniden başlamak olduğunu öğrenmiş.
 
 Sevgili dinleyici, sen de zor bir şeyi yapmaya çalışırken hemen vazgeçmek mi istersin, yoksa Çoban Mehmet gibi bir kez daha denemeyi mi seçersin?
 

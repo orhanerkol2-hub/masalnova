@@ -21,6 +21,7 @@ const jsonLd = {
   path="/hakkimizda/"
   jsonLd={jsonLd}
   activeNav=""
+  allowAds={false}
 >
   <section class="section">
     <div class="container">
@@ -31,6 +32,13 @@ const jsonLd = {
           <strong>MasalNova Çocuk</strong>, ailelerin ücretsiz Türkçe masalları yaşa, okuma süresine
           ve konuya göre bulabildiği; resimli hikâyeler ile çocuk videolarını bir araya getiren
           çevrimiçi bir okuma platformudur.
+        </p>
+
+        <h2>Neden MasalNova?</h2>
+        <p>
+          Amacımız, ebeveynlerin çocuklarına uygun bir anlatıyı yüzlerce başlık arasında daha kolay
+          seçebilmesidir. Bu nedenle yalnızca metin yayımlamıyor; yaş, yaklaşık okuma süresi, tema,
+          duygusal yoğunluk ve okuma sonrası konuşma soruları gibi seçim bilgilerini de sunuyoruz.
         </p>
 
         <h2>Masallar nasıl sunuluyor?</h2>
@@ -48,9 +56,10 @@ const jsonLd = {
 
         <h2>Yazarlarımız ve editoryal inceleme</h2>
         <p>
-          Her masal, hazırlayan yazarın adıyla yayımlanır. Yayımdan önce bütün masallar
+          Her masal, hazırlayan yazarın adıyla yayımlanır. Arama, öneri ve reklama açık seçkideki masallar
           <strong>Aylin Karabektaş</strong> ve <strong>Muhammet Karayiğit</strong> tarafından birlikte
-          gözden geçirilir. Yazar bilgisi ve editoryal inceleme kaydı her masal sayfasında açıkça gösterilir.
+          gözden geçirilir. Metin değişiklikleri yeniden inceleme sürecine alınır; bu sırada ilgili sayfa
+          dizine ve reklama kapatılır. Yazar bilgisi ve güncel inceleme durumu her masal sayfasında açıkça gösterilir.
         </p>
         <div class="author-grid">
           <section class="author-card" aria-labelledby="aylin-title">
@@ -78,12 +87,26 @@ const jsonLd = {
           içerik sayfasına işlenir.
         </p>
 
+        <h2>Dijital araçlar ve insan denetimi</h2>
+        <p>
+          İçerik planlama, dil kontrolü, sayfa bilgileri ve görsel üretiminde dijital araçlardan
+          yararlanılabilir. Bazı kapak görselleri dijital olarak üretilmiş veya düzenlenmiştir.
+          Bu araçlar yazar olarak gösterilmez ve tek başlarına yayımlama kararı vermez.
+        </p>
+        <p>
+          Başlık, metin, yaş ve süre etiketleri, kapak uyumu ve çocuklara uygunluk yayımdan önce
+          adları belirtilen editörler tarafından kontrol edilir. İç kalite eşiğini henüz karşılamayan
+          kısa arşiv anlatımları geliştirilene kadar önerilerden, arama dizininden ve reklamdan çıkarılır.
+          Ayrıntılar için <a href="/yayin-ilkeleri/">yayın ilkelerimizi</a> inceleyebilirsiniz.
+        </p>
+
         <h2>Üyelik, gizlilik ve reklam modeli</h2>
         <p>
           MasalNova hesap açmayı gerektirmez. Favoriler ve okuma yüzdesi yalnızca cihazda küçük
           kimlikler olarak tutulur; masal metinleri çevrimdışı arşivlenmez. Platformun gelir modeli
           reklamdır. Reklam alanlarını ana okuma akışını kapatmayacak ve çocukların hikâyeye erişimini
-          engellemeyecek biçimde konumlandırmayı hedefliyoruz.
+          engellemeyecek biçimde konumlandırmayı hedefliyoruz. Oyun sayfalarımızda MasalNova tarafından
+          yüklenen reklam bulunmaz.
         </p>
         <p class="brand">MasalNova Çocuk, bir <strong>Sunbeam Media</strong> markasıdır.</p>
         <div class="cta">

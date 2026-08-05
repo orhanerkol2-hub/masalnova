@@ -12,8 +12,9 @@ themes: ["yardımlaşma","dürüstlük","zeka"]
 characters: ["Keloğlan","Padişah","Gölün Nazik Balığı"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında sapsarı güneşin altında ışıl ışıl parlayan sakin bir göl varmış. Bu köyde Keloğlan yaşarmış; başı kel, gönlü ise dünya kadar büyükmüş.
 
@@ -44,5 +45,7 @@ Padişah bu isteğe çok sevinmiş ve emretmiş: hemen ustalar gelmiş, göl ken
 O günden sonra köylüler her sabah çeşmeden su almaya gelirken Keloğlan'ı ve balığı hatırlarmış. Keloğlan da kel başını güneşe tutup gölün kıyısında oturur, suyun şırıltısını dinlermiş.
 
 Köyde artık kuraklık sözü bile edilmezmiş, çünkü herkes bilirmiş ki elbirliğiyle her sorun çözülür.
+
+Keloğlan yine de çeşmeyi kendi hâline bırakmamış. Her hafta iki köylü su yolunu kontrol etmiş, çocuklar çevresine çöp atılmaması için küçük işaretler hazırlamış. Böylece bulunan su korunmuş; iyilik, düzenli sorumlulukla kalıcı olmuş.
 
 **Kıssadan hisse:** Küçük bir iyilik, birlik olunca büyük bir mucizeye dönüşebilir.

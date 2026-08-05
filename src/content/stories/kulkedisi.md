@@ -8,15 +8,16 @@ coverColor: "#3d6ab3"
 coverImage: "/covers/stories/kulkedisi-v2.webp"
 altText: "Cam ayakkabıyı tutan Külkedisi ve büyülü bal kabağı arabası"
 ageGroups: ["3-5"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["sabır", "iyilik", "umut"]
 characters: ["Külkedisi", "Üvey Anne", "Üvey Kız Kardeşler", "Peri Anne", "Prens"]
 isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-21"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, küçük bir evde, annesini kaybettikten sonra babasıyla yaşayan iyi kalpli bir kız varmış. Babası yeniden evlenmiş ama üvey annesi ve iki üvey kız kardeşi ona hiç iyi davranmamışlar. Bütün ev işlerini ona yaptırırlarmış. Üstü başı hep kül tozu içinde kaldığından ona “Külkedisi” demişler.
 
@@ -37,6 +38,8 @@ Prens kaybolan ayakkabıyı bulmuş. “Bu ayakkabının sahibi kim olursa olsun
 Prens mutfakta duran Külkedisi'ni görmüş. “Sen de dener misin?” demiş nazikçe. Külkedisi ayakkabıyı giyince tam oturmuş; sanki onun için yapılmış gibi.
 
 Prens onu tanımış, gülümsemiş. Külkedisi'ni saraya davet etmiş. Kısa süre sonra büyük bir düğünle evlenmişler. Külkedisi iyilik ve sabrının karşılığını almış; üvey ailesine bile kırgınlık duymadan herkese iyilikle davranmaya devam etmiş.
+
+Sarayda kendisine yardım edenleri hiç unutmamış. Çalışanların dinlenebileceği aydınlık bir oda hazırlatmış ve herkesin emeğine teşekkür etmiş. İyi kalpli olmak kadar, başkasına yapılan haksızlığı fark edip daha adil bir düzen kurmanın da önemli olduğunu göstermiş.
 
 ## Masaldan Çıkan Ders
 

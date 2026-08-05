@@ -12,8 +12,9 @@ themes: ["dürüstlük","paylaşma","doğruluk"]
 characters: ["Tırtıl adlı karınca","Baykuş Öğretmen","Fare Fındık"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, güneşin bal rengine boyadığı bir tarlada, başaklar rüzgârda usulca sallanırmış. Bu tarlada Tırtıl adında küçük, çalışkan bir karınca yaşarmış. Tırtıl her sabah yuvasından çıkar, arkadaşlarıyla birlikte kış için yiyecek toplarmış.
 
@@ -32,5 +33,7 @@ O günden sonra tarladaki hayvanlar, birbirlerinin eşyalarını bulduklarında 
 Tırtıl, kışın geldiğinde kendi yuvasında rahatça otururken, arkadaşlarının kendisine getirdiği yiyeceklerle karnını doyurmuş. Çünkü herkes, ona olan güvenini göstermek istiyormuş. Tırtıl küçücük bir karınca olsa da, tüm tarlanın en sevilen sakini olmuş.
 
 Güneş her battığında, altın başaklar rüzgârda hafifçe sallanır, sanki Tırtıl'ın hikâyesini fısıldarmış birbirlerine. Ve tarlada yaşayan herkes bilirmiş ki, en küçük canlı bile en büyük iyiliği yapabilirmiş.
+
+Tırtıl daha sonra kendi tanesini kaybettiğinde arkadaşları izleri birlikte aramış. Tane kısa sürede bulunmuş. O zaman güvenin bir ödül değil, herkesin birbirine dürüst davranmasıyla büyüyen karşılıklı bir bağ olduğunu anlamış.
 
 **Kıssadan hisse:** Bulduğumuz şey bize ait değilse, onu sahibine geri vermek en büyük mutluluğu getirir.

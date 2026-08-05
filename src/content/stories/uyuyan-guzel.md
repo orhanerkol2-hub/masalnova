@@ -8,15 +8,16 @@ coverColor: "#b06ab3"
 coverImage: "/covers/stories/uyuyan-guzel-v2.webp"
 altText: "Prenses Aurora'yı ve gül sarılı sarayı gösteren Uyuyan Güzel masalı kapağı"
 ageGroups: ["3-5"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["iyilik", "sevgi", "umut"]
 characters: ["Prenses Aurora", "Kral", "Kraliçe", "İyi Peri", "Küskün Peri", "Prens"]
 isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-21"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, bir kral ile kraliçenin uzun zaman sonra bir kızları olmuş. O kadar mutlu olmuşlar ki krallıktaki bütün perileri saraya davet edip büyük bir şölen düzenlemişler.
 
@@ -33,6 +34,8 @@ Yıllar, on yıllar geçmiş. Bir gün uzak bir diyardan genç bir prens bu esra
 Onun huzurlu yüzünü görünce kalbi ısınmış. Yavaşça yanına oturmuş, ona nazikçe seslenmiş. Tam o anda prenses gözlerini açmış! Aynı anda bütün saray da uyanmış, sanki hiç zaman geçmemiş gibi.
 
 Kral ve kraliçe kızlarına sarılmış, sevinç gözyaşları dökmüşler. Prenses, prensle tanışmış, kısa sürede sevgi dolu bir dostluk kurmuşlar. Bütün krallık günlerce şenlik yapmış, mutlu bir düğünle bu güzel hikâye taçlanmış.
+
+Prenses uyandığında başına gelenleri dinlemiş. Saraydaki çalışma odalarını güvenli hâle getirmiş, iğ ve diğer keskin araçların yalnız onları kullanmayı bilen yetişkinlerin yanında bulunmasını istemiş. Böylece geçmişteki tehlikeden herkes için dikkatli bir ders çıkarmış.
 
 ## Masaldan Çıkan Ders
 

@@ -1,5 +1,7 @@
 ---
-// Google Consent Mode v2 + GA4 + Silktide cookie banner.
+// Google Consent Mode v2 + GA4 + analytics consent banner.
+// Advertising consent is handled separately by the Google-certified CMP that
+// must be configured in AdSense before PUBLIC_GOOGLE_CERTIFIED_CMP is enabled.
 // Ported 1:1 from the previous static site (Mess-ID G-YZYEN24W6J).
 ---
 {/* Google Consent Mode v2 — default: everything denied until the user consents */}
@@ -77,7 +79,7 @@
     ],
     text: {
       prompt: {
-        description: "<p>Deneyiminizi iyileştirmek ve trafiğimizi analiz etmek için sitemizde çerezler kullanıyoruz.</p>",
+        description: "<p>Site kullanımını ölçmek ve MasalNova'yı geliştirmek için isteğe bağlı analitik çerezleri kullanıyoruz.</p>",
         acceptAllButtonText: "Tümünü kabul et",
         acceptAllButtonAccessibleLabel: "Tüm çerezleri kabul et",
         rejectNonEssentialButtonText: "Zorunlu olmayanları reddet",
@@ -87,7 +89,7 @@
       },
       preferences: {
         title: "Çerez tercihlerinizi özelleştirin",
-        description: "<p>Gizlilik hakkınıza saygı duyuyoruz. Bazı çerez türlerine izin vermemeyi seçebilirsiniz. Tercihleriniz tüm sitede geçerli olur.</p>",
+        description: "<p>Buradan MasalNova'nın site analitiği tercihini yönetebilirsiniz. Reklam tercihleri, reklam etkinleştirildiğinde Google'ın sertifikalı onay arayüzünde ayrıca yönetilir.</p>",
         saveButtonText: "Kaydet ve kapat",
         saveButtonAccessibleLabel: "Çerez tercihlerini kaydet",
         creditLinkText: "",

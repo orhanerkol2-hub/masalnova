@@ -12,8 +12,9 @@ themes: ["sabır","dostluk","doğa sevgisi"]
 characters: ["Fil Tombik","Kelebek Pamuk"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, çiçekli bir bahçenin kenarında Tombik adında iri ama sevimli bir fil yaşarmış. Tombik her şeyi hemen, o anda olsun isterdi. Su içerken hemen doysun, yürürken hemen varsın isterdi.
 
@@ -40,5 +41,7 @@ Pamuk kanatlarını çırparak gülmüş. "Gördün mü Tombik? Beklemek, sabır
 Tombik o günden sonra her şeyi acele etmemeyi öğrenmiş. Bahçedeki her çiçeğe, her ağaca zaman tanımış. Pamuk ile birlikte çiçeklerin arasında dolaşırlarken, Tombik artık biliyormuş ki en güzel şeyler, sabırla beklenince gelirmiş.
 
 Ve böylece Fil Tombik ile Kelebek Pamuk, çiçekli bahçede birlikte huzur içinde yaşamışlar, her mevsim yeni çiçekleri sabırla beklemişler.
+
+Beklerken bahçenin bakımını birlikte sürdürmüşler.
 
 **Kıssadan hisse:** Güzel şeyler, sabırla beklendiğinde daha da değerli olur.

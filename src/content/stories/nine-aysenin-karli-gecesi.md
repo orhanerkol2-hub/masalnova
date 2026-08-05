@@ -12,8 +12,9 @@ themes: ["dürüstlük","şefkat","huzur"]
 characters: ["Nine Ayşe","küçük Deniz"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, karlı bir kış günü, küçük bir köyde Nine Ayşe yaşarmış. Penceresinden dışarı bakınca her yer beyaz bir battaniyeyle örtülü gibi görünürmüş. Kar taneleri usulca, usulca süzülür, çatının kenarlarına yumuşacık yastıklar bırakırmış.
 
@@ -36,5 +37,7 @@ Deniz'in göz kapakları ağırlaşmış, sobanın ışığı odayı yumuşacık
 Nine Ayşe, torununun saçlarını okşayarak fısıldamış: "Doğruyu söylemek, kar taneleri gibi hafif ama kalbi ısıtan bir şeydir, canım. Şimdi sen de bulutların üstünde uyu, yıldızlar seni izlesin."
 
 Deniz derin bir nefes almış, gözleri kapanmış. Pencerenin ardında ay, ona göz kırpmış gibi ışıldamış. Kar taneleri hâlâ usulca süzülüyormuş, sanki bütün dünyaya "İyi geceler" diyorlarmış.
+
+Nine Ayşe sobanın kapağını kontrol etmiş, lambayı kısmış ve Deniz'in yorganını düzeltmiş. Oda sessizleşirken karın yumuşak beyazlığı duvarlara sakin bir ışık bırakmış.
 
 İyi geceler, küçük Deniz. İyi geceler, karlı gece. İyi geceler herkese.

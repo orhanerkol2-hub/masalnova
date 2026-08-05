@@ -12,8 +12,9 @@ themes: ["sorumluluk","şefkat"]
 characters: ["Nine Havva","küçük Deniz"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyde Nine Havva yaşarmış. Yağmurlu bir akşamdı. Damlalar pencereye usulca vuruyor, tık... tık... tık diye sakin bir şarkı söylüyordu.
 
@@ -38,5 +39,7 @@ Deniz mırıldanmış: "Ben de büyüyünce çiçekleri sularım nine."
 Soba usulca çatırdamış, şal yumuşacık kokusuyla Deniz'i sarmış. Yağmur, tık... tık... tık, sakin sakin devam ediyormuş.
 
 Deniz'in göz kapakları ağırlaşmış, ninesinin kucağında yavaşça uykuya dalmış. Dışarıda ay, bulutları örtü gibi üzerine çekmiş; yıldızlar parıl parıl, gökyüzünün battaniyesinde uyumaya hazırlanmış.
+
+Nine Havva örgüsünü sepete bırakmış, sıcak şalı Deniz'in omuzlarına biraz daha çekmiş. Sobanın çıtırtıları seyrekleşmiş; yağmurun düzenli sesi odadaki her şeyi yavaşlatmış.
 
 Nine Havva, Deniz'in alnından öpmüş ve fısıldamış: "İyi geceler, küçük yıldızım. İyi geceler."

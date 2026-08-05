@@ -12,8 +12,9 @@ themes: ["sözünde durmak","dostluk","azim"]
 characters: ["Yelpaze (kelebek)","Toprak (kirpi)","Papatya (arı)"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında rengarenk çiçeklerle dolu bir bahçe varmış. Bu bahçede Yelpaze adında sarı-turuncu kanatlı bir kelebek yaşarmış. Yelpaze, köydeki bütün hayvanların en meraklısı ve en sevecen olanıymış.
 
@@ -32,5 +33,7 @@ Güneş batmadan Toprak'ın yanına ulaştığında, kirpi arkadaşının gözle
 O günden sonra köydeki bütün hayvanlar Yelpaze'nin adını sözünde duran kelebek olarak anmaya başlamış. Papatya ile Toprak, her baharda o çayırdan gelen tohumları ekip, minik bir bahçe yapmışlar. Bu bahçeye "Söz Bahçesi" adını vermişler ve her çiçek açtığında Yelpaze'yi hatırlarlarmış.
 
 Yelpaze ise küçük kanatlarıyla köyün üzerinde uçarken hep aynı düşünceyle gururlanırmış: verdiği sözü, ne kadar zor olsa da tutmuş olmanın mutluluğuyla.
+
+Bir dahaki yolculuk için hava durumunu önceden sormuş.
 
 **Kıssadan hisse:** Verdiğimiz sözleri zor da olsa tutmak, en büyük dostluk armağanıdır.

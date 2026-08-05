@@ -15,8 +15,9 @@ characters: ["Ali", "Altın Kaz", "Nilay", "Yaşlı Amca"]
 isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-28"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış, bir yokmuş. Evvel zaman içinde, yeşil bir ormanın kıyısında küçük, tahta bir ev varmış. Bu evde üç kardeş yaşarmış. En büyüğünün adı Emre, ortancanın adı Kerem, en küçüğünün adı ise Ali'ymiş.
 
@@ -91,5 +92,9 @@ Ali gülümsemiş. "Gelin, oturun. Yer çok."
 Ali eve dönmüş. O günden sonra kimse ona "sen küçüksün" dememiş. Çünkü herkes anlamış ki, en küçük yürek bile paylaşmayı bildiği zaman en büyüğüdür.
 
 Onlar ermiş muradına, biz çıkalım kerevetine. Gökten üç elma düşmüş: biri paylaşana, biri gülene, biri de bu masalı uykuya dalarken dinleyene.
+
+## Masaldan Çıkan Ders
+
+Birini küçük görmek yerine onun iyi yönlerini fark etmek; elindekini paylaşmak ve içten bir özrü kabul etmek dostluğu büyütür.
 
 **İyi geceler.**

@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/firtinali-aksamda-kapi-calininca.webp"
 altText: "Kapak görseli: Fırtınalı Akşamda Kapı Çalınınca"
 ageGroups: ["7-9"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["saygı","cesaret","misafirperverlik"]
 characters: ["Deniz","Yaşlı Yolcu","Deniz'in Annesi"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, küçük bir dağ köyünde Deniz adında cesur bir çocuk yaşarmış. O akşam gökyüzü kapkara bulutlarla kaplanmış, şimşekler art arda çakıp yağmur şiddetle yağmaya başlamış.
 
@@ -36,6 +37,8 @@ Yaşlı adam gülümsemiş ve cebinden küçük, parlak bir taş çıkarmış. "
 Deniz taşı minnetle almış ve gülümsemiş. Sabah olduğunda yağmur dinmiş, gökyüzü aydınlanmış. Yaşlı adam yoluna devam etmek için kalkmış, ama gitmeden önce Deniz'in annesine dönmüş: "Böyle güzel bir çocuk yetiştirdiniz. Onun kalbindeki saygı, bu köyün her köşesine ışık saçacak."
 
 Deniz o günden sonra herkese, tanıdığı ya da tanımadığı herkese aynı sıcaklıkla davranmış. Çünkü öğrenmiş ki, saygı göstermek için büyük olmaya gerek yok, sadece iyi bir yürek yeterli.
+
+Yabancı biri kapıyı çaldığında önce annesine haber vermeyi de unutmamış. Saygı ile güvenliği birlikte gözetmiş.
 
 Peki sen de bir gün kapını çalan birine, onu tanımasan bile, nasıl saygı gösterebilirsin?
 

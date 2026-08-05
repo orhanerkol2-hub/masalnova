@@ -12,8 +12,9 @@ themes: ["sorumluluk","şefkat","huzur"]
 characters: ["Elma","Serçe Cik","Nine Kadife"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kar taneleri gökten usulca süzülürmüş. Küçük Elma, penceresinden bu beyaz tüyleri seyredermiş, gözleri merakla parıldarmış.
 
@@ -30,5 +31,7 @@ Akşam olduğunda, ay usulca gökyüzünde belirmiş, yıldızlar birer birer pa
 "Herkes şimdi rahat mı?" diye mırıldanmış kendi kendine. "Çiçekler sıcak, Cik güvende, Nine Kadife'nin yolu tertemiz..." Gözleri ağırlaşmış, yorganın yumuşaklığında kaybolmuş.
 
 Dışarıda kar taneleri sessizce dans ederken, ay Elma'nın penceresinden içeri usulca bakmış, sanki ona "Sen de şimdi uyu küçük bekçi" diyormuş gibi.
+
+Elma, başucundaki küçük eldivenlerini sandalyeye bıraktı. Sabah olunca Cik'in yuvasına biraz yem götürmeyi düşündü. Sonra bu düşünceyi yumuşacık bir yastık gibi başının altına koydu; odadaki saat sakin sakin tik tak ederken nefesi de aynı ritme uydu.
 
 İyi geceler, tatlı rüyalar.

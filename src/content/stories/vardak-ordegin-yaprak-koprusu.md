@@ -12,8 +12,9 @@ themes: ["yardımlaşma","dayanışma","paylaşma"]
 characters: ["Vardak (ördek)","Fındık (sincap)","Toparlak (kirpi)"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde yemyeşil bir ormanın kıyısında küçük bir dere akarmış. Bu derede Vardak adında sarı gagalı, sevimli bir ördek yaşarmış. Vardak, her sabah derede yüzer, sonra ormanın içinde dolaşıp arkadaşlarını ziyaret edermiş.
 
@@ -30,5 +31,7 @@ Vardak da suyun içinde durup yaprakların kaymaması için onları gagasıyla t
 O günden sonra yaprak köprü, ormanın en sevilen yeri olmuş. Her hayvan oradan geçerken Vardak'ı ve onun küçük ama etkili çabasını hatırlarmış. Vardak, tek başına yapamayacağı bir işi, arkadaşlarıyla birlikte nasıl başardığını hiç unutmamış.
 
 Ormanın hayvanları artık her sorunla karşılaştıklarında hemen birbirlerine soruyorlarmış: "Bunu birlikte nasıl çözebiliriz?" Ve hep bir çözüm buluyorlarmış, çünkü biliyorlarmış ki birlik olunca en zor işler bile kolaylaşıyormuş.
+
+Köprüyü her yağmurdan sonra birlikte kontrol etmiş, gevşeyen yaprakları yenilemişler. Ortak işin bakımını da ortaklaşa üstlenmişler.
 
 **Kıssadan hisse:** Birlikte çalışmak, en büyük engelleri bile küçültür.

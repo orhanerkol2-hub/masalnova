@@ -12,8 +12,9 @@ themes: ["merak","dostluk","zeka"]
 characters: ["Keloğlan","Değirmenci Dede","Padişah"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında eski bir değirmen varmış. Bu değirmen yıllardır çalışmaz, kapısı kilitli dururmuş. Köylüler ondan söz açılınca başlarını sallar, "O değirmende tuhaf sesler duyulur," derlermiş.
 
@@ -38,5 +39,7 @@ Keloğlan altınları almış ama hepsini değirmenin onarımına, Dede'nin evin
 Değirmen yeniden dönmeye başlamış, çarkları eskisinden daha gür sesle ötmüş. Köylüler artık geceleri o sesi duyduklarında korkmuyor, tersine gülümsüyorlarmış. Çünkü biliyorlarmış ki o ses, bir dostluğun ve bir merakın hikâyesiymiş.
 
 Keloğlan sık sık değirmene uğrar, Dede ile çay içip sohbet edermiş. Dede ona hep şöyle dermiş: "Sen meraklı bir çocuksun Keloğlan, ama merakını iyilikle birleştirdin. İşte bu yüzden köyün en akıllı delikanlısı oldun."
+
+Keloğlan çocuklara geceleri tek başlarına yola çıkmamalarını da öğütlermiş. Merak ettikleri bir şey olduğunda önce bir büyüğe haber vermelerini, yanlarına fener almalarını söylermiş. Böylece merak, dikkatsizliğe değil güvenli bir araştırmaya dönüşürmüş.
 
 **Kıssadan hisse:** Merak, iyilikle birleşince insanı korkudan değil, dostluktan ve akıldan geçirir.

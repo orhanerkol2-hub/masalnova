@@ -8,15 +8,16 @@ coverColor: "#d59b18"
 coverImage: "/covers/stories/ari-kralicesi.webp"
 altText: "Umut'un omzundaki Arı Kraliçesi ile inci taşıyan karıncaları ve anahtar getiren ördekleri gösteren masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 6
 categories: ["egitici", "hayvan", "uyku"]
 themes: ["merhamet", "yardımlaşma", "doğayı koruma"]
 characters: ["Umut", "Arı Kraliçesi", "Karıncalar", "Ördekler"]
 isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-28"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış, bir yokmuş. Bir zamanlar üç kardeş varmış. En büyüğünün adı Barış, ortancanın adı Deniz, en küçüğünün adı ise Umut'muş.
 
@@ -113,5 +114,9 @@ Umut gülümsemiş. "Ben akıllı değilim," demiş. "Ben sadece kimseye zarar v
 O akşam şatoda büyük bir şölen kurulmuş. Masaya bal konmuş — ama arılardan çalınan bal değil, arıların kendi hediye ettiği bal.
 
 Onlar ermiş muradına, biz çıkalım kerevetine. Gökten üç elma düşmüş: biri karıncalara, biri ördeklere, biri de arılara.
+
+## Masaldan Çıkan Ders
+
+Canlılara zarar vermeden yaklaşmak ve yaşam alanlarını korumak merhamettir. Yardım gereken bir hayvan gördüğümüzde güvenli davranır, bir yetişkinden destek isteriz.
 
 **İyi geceler.**

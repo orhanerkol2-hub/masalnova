@@ -6,14 +6,15 @@ coverColor: "#3bb98b"
 coverImage: "/covers/stories/coban-tarikin-un-sirri.webp"
 altText: "Kapak görseli: Çoban Tarık'ın Un Sırrı"
 ageGroups: ["5-7"]
-readingTime: 2
+readingTime: 3
 categories: ["egitici"]
 themes: ["dürüstlük","güven","vicdan"]
 characters: ["Çoban Tarık","Değirmenci Rahmi Dede","Beyaz Kuzu"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde iyi kalpli bir çoban yaşarmış. Adı Tarık'mış. Sabahları güneşle beraber kalkar, koyunlarını yeşil çayırlara götürür, akşamları da onları güvenle köye geri getirirmiş.
 
@@ -32,6 +33,8 @@ Rahmi Dede, Tarık'a minnetle bakmış ve altınlardan birkaçını ona hediye e
 Bu söz üzerine Rahmi Dede, Tarık'ın omzuna elini koymuş: "Böyle dürüst bir yürek her hediyeden daha değerlidir. Bundan sonra değirmenimin kapısı sana hep açık olsun."
 
 O günden sonra köyde herkes Çoban Tarık'ın adını dürüstlükle anmış. Kayıp eşyasını bulan herkes önce onu düşünür, "Tarık gibi ol, doğruyu söyle" derlermiş. Beyaz Kuzu da her akşam onun yanında, sanki bu güzel hikâyeyi hatırlatırcasına, mutlu mutlu yürürmüş.
+
+Rahmi Dede daha sonra değirmenin eski kayıtlarını Tarık'la birlikte düzenlemiş. Hangi çuvalın kime ait olduğunu açıkça yazmışlar. Tarık, dürüstlüğün yalnız bulunanı geri vermek değil, yeni karışıklıkları önleyecek bir düzen kurmak olduğunu da görmüş.
 
 Sevgili küçük dinleyici, sence Tarık altınları kendine alsaydı ne olurdu? Sen olsaydın, sen de aynı şeyi yapar mıydın?
 

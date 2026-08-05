@@ -12,8 +12,9 @@ themes: ["yardımlaşma","huzur","dostluk"]
 characters: ["Ceylan","Tarla Kuşu Civciv","Yaşlı Öküz Boncuk"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "approved"
+editorialStatus: "needs_review"
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-05"
 ---
 Bir varmış bir yokmuş, ayın yumuşacık ışığının düştüğü altın başaklı bir tarlada, meraklı küçük bir kız yaşarmış. Adı Ceylan'mış. Her akşam, güneş yavaşça batarken tarlaya gidip başakların nasıl fısıldaştığını dinlermiş.
 
@@ -36,5 +37,7 @@ Altın başaklar rüzgârda usulca sallanmış, hışırtıları bir ninni gibi 
 Ceylan eve dönmüş, sıcak yatağına girmiş. Battaniyesini çekmiş, gözlerini yavaşça kapatmış. Tarladaki başaklar, Civciv'in minik cıvıltıları ve Boncuk'un sakin nefesi zihninde hafifçe yankılanmış.
 
 Her şey sakinmiş, her şey huzurluymuş. Yardımlaşmanın verdiği sıcaklıkla, Ceylan'ın gözleri ağırlaştıkça ağırlaşmış.
+
+Penceresinin önünde bir başak, gece rüzgârıyla yavaşça sağa sola eğilmiş. Ceylan'ın nefesi de aynı ritimde uzayıp sakinleşmiş; yastığı ona altın tarladaki yumuşak otlar kadar rahat gelmiş.
 
 İyi geceler, küçük dostlar. İyi geceler.
