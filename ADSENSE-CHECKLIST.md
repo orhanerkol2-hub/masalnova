@@ -1,54 +1,94 @@
-# MasalNova AdSense activation checklist
+# MasalNova AdSense and Google CMP checklist
 
-AdSense remains disabled unless `PUBLIC_ADSENSE_ENABLED`,
-`PUBLIC_GOOGLE_CERTIFIED_CMP` and `PUBLIC_ADSENSE_MANUAL_ONLY` are all set to
-`true`.
+## Current safe deployment state (5 August 2026)
 
-Before activation:
+Google Privacy & messaging is the selected Google-certified CMP. The account
+message is published for `masalnova.com` with Turkish as the default language
+and German among the additional languages. The message provides consent,
+refusal and settings choices; closing the message also refuses consent.
 
-1. Configure a Google-certified TCF CMP for EEA, UK and Swiss visitors (Google
-   Privacy & messaging is one option).
-2. Mark MasalNova as child-directed for age-restricted treatment in Google's
-   site-level controls. The code also sets `google_tag_for_age_treatment = 1`
-   before the AdSense loader and every manual ad request sends
-   `data-tag-for-age-treatment="1"`. Do not offer ad personalisation in the CMP;
-   keep both safeguards in place and migrate to Google's unified TFAT API when
-   AdSense supports it for this integration.
-3. Disable Auto ads and every overlay format account-wide. MasalNova permits
-   only the four reviewed manual placements listed in `AdSlot.astro`. Set
-   `PUBLIC_ADSENSE_MANUAL_ONLY=true` only after confirming that account-side
-   setting; the environment flag cannot disable Auto ads by itself.
-4. Keep the Google CMP's optional Consent Mode integration from overwriting
-   the separate analytics choice, or migrate analytics into the certified CMP
-   before activation. Test both acceptance and rejection paths.
-5. Add the Boyama slot IDs to `PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT` and
+The following account settings were verified before enabling the publisher
+tag:
+
+- Auto ads, in-page automatic formats and all overlay formats are off.
+- Limited ads, user-based advertising and Google first-party advertising cookies are
+  blocked; sharing the full IP address with ad buyers is blocked.
+- Consent optimisation and advertising Consent Mode integration are off.
+- Legitimate interest and special feature 2 (device scanning) are off.
+- Creative consent verification is on.
+- The provider list contains only the mandatory Google Advertising Products
+  entry.
+- Future sites default to Google's three-choice CMP message.
+- Child-directed treatment remains forced in code with TFAT `1`.
+
+The production build deliberately uses this split state:
+
+```text
+PUBLIC_ADSENSE_TAG_ENABLED=true
+PUBLIC_GOOGLE_CMP_PUBLISHED=true
+PUBLIC_ADSENSE_MANUAL_ONLY=true
+PUBLIC_ADSENSE_ENABLED=false
+```
+
+The first three values allow the publisher tag to display the CMP and support
+site review. `PUBLIC_ADSENSE_ENABLED=false`, together with empty slot IDs,
+prevents every manual `<ins class="adsbygoogle">` unit from rendering. These
+environment values merely assert settings already made in AdSense; they cannot
+configure or enforce the account-side controls.
+
+## Before enabling manual ads
+
+1. Wait for AdSense site approval. Do not infer approval from a successful CMP
+   test or from the publisher tag being present.
+2. Reconfirm in AdSense that Auto ads and every overlay format are still off.
+   Also reconfirm that limited ads, user-based advertising, Google first-party advertising
+   cookies and full-IP sharing with buyers remain blocked.
+3. Reconfirm the published Google CMP message, its three choices, Turkish and
+   German text, minimal provider list, disabled legitimate interest, disabled
+   advertising Consent Mode and disabled special feature 2.
+4. Keep the TFAT child-directed signal in `BaseHead.astro` before the publisher
+   tag and `data-tag-for-age-treatment="1"` on every manual request.
+5. Create and review only the four allowlisted manual placements in
+   `AdSlot.astro`, then add their numeric IDs to:
+   `PUBLIC_ADSENSE_HOME_FEED_SLOT`, `PUBLIC_ADSENSE_HOME_CONTENT_SLOT`,
+   `PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT` and
    `PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT`.
-6. Keep `/boyama/[slug]/boya/` entirely ad-free. The interactive canvas and
-   its colors, tools and action buttons must never be surrounded by, overlaid
-   with or interrupted by ads.
-7. Enable all three environment flags only after the CMP, manual-only and slot
-   setup is live.
-8. Review the site in Google's Ad Experience Report before launch and after
-   meaningful layout changes.
-9. Keep drafts, `needs_review`, undersized/noindex pages, games, search,
-   account-like tools, trust/legal pages and İslami Hikâyeler ad-free. The
-   publishing audit fails if a protected story or the İslami index exposes
-   any AdSense loader, request, container or eligibility signal.
-10. Use numeric AdSense slot IDs only. Unknown placements and malformed slot
-   IDs fail closed and do not render an ad container.
-11. Run `npm run build:optimized` and `npm run audit:publishing -- --built`
-   before every advertising release. The optimized build also regenerates the
-   responsive homepage images. Do not activate ads if either command fails.
+6. Keep the publisher tag and any future ad units limited to the homepage,
+   `/boyama/` and parent-facing `/boyama/[slug]/` information pages. Story
+   pages and archives, İslami Hikâyeler, games, gameplay, videos, search,
+   account-like tools, legal/trust pages and `/boyama/[slug]/boya/` stay
+   entirely ad-free.
+7. Test the CMP as a new EEA visitor: accept, refuse, open settings, close as
+   refusal, and reopen the message through “Gizlilik ve çerez ayarları”. Test
+   Turkish and German, keyboard use, focus, mobile layout and zoom.
+8. Confirm that refusal never blocks stories, colouring downloads or games,
+   and that no ad appears near interactive controls or as an overlay.
+9. Run a production-like build and audit before changing the final switch:
 
-The technical safeguards reduce policy risk but do not guarantee AdSense
-approval. Account-level CMP, age-treatment, content and traffic reviews remain
-Google-controlled requirements.
+   ```sh
+   PUBLIC_ADSENSE_TAG_ENABLED=true \
+   PUBLIC_GOOGLE_CMP_PUBLISHED=true \
+   PUBLIC_ADSENSE_MANUAL_ONLY=true \
+   PUBLIC_ADSENSE_ENABLED=false \
+   npm run build:optimized && npm run audit:publishing -- --built
+   ```
+
+10. Only after all checks and approval, change `PUBLIC_ADSENSE_ENABLED` to
+    `true`. Repeat the audit and browser tests. Unknown placements, blank or
+    malformed slot IDs continue to fail closed.
+
+These safeguards reduce accidental policy and privacy risk; they do not
+guarantee AdSense approval or replace an individual legal review.
 
 Official references:
 
 - https://support.google.com/adsense/answer/13554116
-- https://support.google.com/adsense/answer/3248194
+- https://support.google.com/adsense/answer/16918505
+- https://support.google.com/adsense/answer/12226986
+- https://support.google.com/adsense/answer/9804260
+- https://support.google.com/adsense/answer/10960768
+- https://support.google.com/adsense/answer/16053245
+- https://support.google.com/adsense/answer/16878447
 - https://support.google.com/adsense/answer/17042704
 - https://support.google.com/adsense/answer/9261805
-- https://support.google.com/adsense/answer/1346295
-- https://support.google.com/publisherpolicies/answer/11035030
+- https://support.google.com/adsense/answer/14210870

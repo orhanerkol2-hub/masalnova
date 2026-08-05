@@ -693,9 +693,9 @@ const tonightMediumCover = tonightStory
           <button class="settings-install-action" type="button" data-install-app>
             <i class="ph ph-download-simple" aria-hidden="true"></i> Uygulamayı yükle
           </button>
-          <button type="button" data-open-cookie-settings>
-            <i class="ph ph-cookie" aria-hidden="true"></i> Çerez tercihleri
-          </button>
+          <a href="/?privacy-settings=1#ayarlar" data-open-cookie-settings>
+            <i class="ph ph-shield-check" aria-hidden="true"></i> Gizlilik ve çerez ayarları
+          </a>
           <button type="button" data-clear-app-state>
             <i class="ph ph-trash" aria-hidden="true"></i> Yerel verileri temizle
           </button>
@@ -2056,7 +2056,7 @@ const tonightMediumCover = tonightStory
     gap: 8px;
   }
 
-  .settings-actions button {
+  .settings-actions :is(button, a) {
     min-height: 41px;
     display: inline-flex;
     align-items: center;
@@ -2071,7 +2071,7 @@ const tonightMediumCover = tonightStory
     font-weight: 850;
   }
 
-  .settings-actions button:hover { background: #edf2fa; }
+  .settings-actions :is(button, a):hover { background: #edf2fa; }
   [data-settings-status] {
     flex-basis: 100%;
     color: #4b8d55;
@@ -2342,7 +2342,7 @@ const tonightMediumCover = tonightStory
     .settings-section { display: block; padding: 21px; }
     .settings-actions { justify-content: flex-start; margin-top: 17px; }
     .settings-actions .settings-install-action { display: inline-flex; }
-    .settings-actions button { min-height: 44px; }
+    .settings-actions :is(button, a) { min-height: 44px; }
     [data-settings-status] { text-align: left; }
   }
 

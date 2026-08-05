@@ -15,6 +15,40 @@ const expectedReviewers = ['aylin-karabektas', 'muhammet-karayigit'];
 const hardErrors = [];
 const warnings = [];
 const verifyBuiltOutput = process.argv.includes('--built');
+const publisherTagExpected = process.env.PUBLIC_ADSENSE_TAG_ENABLED === 'true'
+  && process.env.PUBLIC_GOOGLE_CMP_PUBLISHED === 'true'
+  && process.env.PUBLIC_ADSENSE_MANUAL_ONLY === 'true';
+const adUnitsEnabled = process.env.PUBLIC_ADSENSE_ENABLED === 'true';
+const publisherAssertions = [
+  process.env.PUBLIC_ADSENSE_TAG_ENABLED === 'true',
+  process.env.PUBLIC_GOOGLE_CMP_PUBLISHED === 'true',
+  process.env.PUBLIC_ADSENSE_MANUAL_ONLY === 'true',
+];
+const manualSlotVariables = [
+  'PUBLIC_ADSENSE_HOME_FEED_SLOT',
+  'PUBLIC_ADSENSE_HOME_CONTENT_SLOT',
+  'PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT',
+  'PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT',
+];
+if (publisherAssertions.some(Boolean) && !publisherAssertions.every(Boolean)) {
+  hardErrors.push('Unvollständige Publisher-Konfiguration: Tag, veröffentlichte CMP und Manual-only müssen gemeinsam gesetzt sein.');
+}
+if (adUnitsEnabled && !publisherTagExpected) {
+  hardErrors.push('Anzeigenfreigabe ist aktiv, obwohl Publisher-Tag, CMP oder Manual-only nicht vollständig bestätigt sind.');
+}
+if (adUnitsEnabled) {
+  const configuredSlotIds = [];
+  for (const variable of manualSlotVariables) {
+    const slotId = process.env[variable] ?? '';
+    configuredSlotIds.push(slotId);
+    if (!/^\d{6,20}$/.test(slotId)) {
+      hardErrors.push(`${variable}: gültige numerische AdSense-Slot-ID fehlt.`);
+    }
+  }
+  if (new Set(configuredSlotIds).size !== manualSlotVariables.length) {
+    hardErrors.push('Die vier manuellen Anzeigenplätze benötigen vier unterschiedliche Slot-IDs.');
+  }
+}
 const todayInIstanbul = new Intl.DateTimeFormat('sv-SE', {
   timeZone: 'Europe/Istanbul',
   year: 'numeric',
@@ -167,13 +201,48 @@ for (const directory of ['src', 'public']) {
   }
 }
 
-for (const [file, requiredSignal] of [
-  ['src/components/AdSenseLoader.astro', 'PUBLIC_ADSENSE_MANUAL_ONLY'],
-  ['src/components/AdSlot.astro', 'PUBLIC_ADSENSE_MANUAL_ONLY'],
+for (const [file, requiredSignals] of [
+  ['src/components/AdSenseLoader.astro', [
+    'PUBLIC_ADSENSE_TAG_ENABLED',
+    'PUBLIC_GOOGLE_CMP_PUBLISHED',
+    'PUBLIC_ADSENSE_MANUAL_ONLY',
+  ]],
+  ['src/components/AdSlot.astro', [
+    'PUBLIC_ADSENSE_ENABLED',
+    'PUBLIC_ADSENSE_TAG_ENABLED',
+    'PUBLIC_GOOGLE_CMP_PUBLISHED',
+    'PUBLIC_ADSENSE_MANUAL_ONLY',
+  ]],
 ]) {
   const source = await readFile(join(root, file), 'utf8');
-  if (!source.includes(requiredSignal)) {
-    hardErrors.push(`${file}: Schutz gegen versehentlich aktivierte Auto Ads fehlt.`);
+  for (const requiredSignal of requiredSignals) {
+    if (!source.includes(requiredSignal)) {
+      hardErrors.push(`${file}: Schutzsignal ${requiredSignal} fehlt.`);
+    }
+  }
+}
+
+const loaderSource = await readFile(join(root, 'src/components/AdSenseLoader.astro'), 'utf8');
+if (loaderSource.includes('import.meta.env.PUBLIC_ADSENSE_ENABLED')) {
+  hardErrors.push('src/components/AdSenseLoader.astro: CMP-Tag ist fälschlich an die Anzeigenfreigabe gekoppelt.');
+}
+
+const consentSource = await readFile(join(root, 'src/components/Consent.astro'), 'utf8');
+if (consentSource.includes('googletagmanager.com/gtag/js') || consentSource.includes('analytics_storage: \'granted\'')) {
+  hardErrors.push('src/components/Consent.astro: eigenständiges Analytics-Tracking ist noch aktiv.');
+}
+for (const requiredSignal of [
+  'ga-disable-G-YZYEN24W6J',
+  'CONSENT_API_READY',
+  'showRevocationMessage',
+  "ad_storage: 'denied'",
+  "ad_user_data: 'denied'",
+  "ad_personalization: 'denied'",
+  "analytics_storage: 'denied'",
+  "gtag('set', 'ads_data_redaction', true)",
+]) {
+  if (!consentSource.includes(requiredSignal)) {
+    hardErrors.push(`src/components/Consent.astro: CMP-/Analytics-Schutzsignal ${requiredSignal} fehlt.`);
   }
 }
 
@@ -213,7 +282,7 @@ if (verifyBuiltOutput) {
     }
 
     const shouldBePublic = story.status === 'approved' && story.substantial;
-    const shouldAllowAds = shouldBePublic && story.section !== 'islami-hikayeler';
+    const shouldAllowAds = false;
     const isInSitemap = sitemap.includes(`https://masalnova.com${route}</loc>`);
     const hasAdSenseMetadata = html.includes('google-adsense-account');
     const hasChildAgeTreatment = html.includes('google_tag_for_age_treatment = 1');
@@ -258,8 +327,31 @@ if (verifyBuiltOutput) {
   for (const file of generatedHtml) {
     const source = await readFile(file, 'utf8');
     const outputPath = file.slice(outputDirectory.length + 1);
+    const isPublisherSurface = outputPath === 'index.html'
+      || outputPath === 'boyama/index.html'
+      || /^boyama\/[^/]+\/index\.html$/.test(outputPath);
+    const hasPublisherMetadata = source.includes('google-adsense-account');
+    const hasPublisherTag = source.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+    const hasChildAgeTreatment = source.includes('google_tag_for_age_treatment = 1');
+    const manualAdUnitCount = (source.match(/class="adsbygoogle"/g) ?? []).length;
+    const childRequestCount = (source.match(/data-tag-for-age-treatment="1"/g) ?? []).length;
+    const hasManualAdUnit = manualAdUnitCount > 0;
+    const expectedManualAdUnits = outputPath === 'index.html'
+      ? 2
+      : isPublisherSurface ? 1 : 0;
+    const expectedPlacements = outputPath === 'index.html'
+      ? [
+          ['home-after-latest', process.env.PUBLIC_ADSENSE_HOME_FEED_SLOT],
+          ['home-before-guide', process.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT],
+        ]
+      : outputPath === 'boyama/index.html'
+        ? [['boyama-index-after-content', process.env.PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT]]
+        : isPublisherSurface
+          ? [['boyama-detail-after-parent-guide', process.env.PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT]]
+          : [];
     const isProtectedFromAds = source.includes('content="noindex') || [
       /^islami-hikayeler\//,
+      /^masallar\//,
       /^boyama\/[^/]+\/boya\/index\.html$/,
       /^games\//,
       /^oyna\//,
@@ -268,6 +360,50 @@ if (verifyBuiltOutput) {
     ].some((pattern) => pattern.test(outputPath));
     if (isProtectedFromAds && hasAdSenseArtifacts(source)) {
       hardErrors.push(`${outputPath}: geschützte Seite enthält AdSense-Code oder Freigabesignale.`);
+    }
+    if (isPublisherSurface && (!hasPublisherMetadata || !hasChildAgeTreatment)) {
+      hardErrors.push(`${outputPath}: freigegebene CMP-Oberfläche hat keine Publisher-/TFAT-Kennzeichnung.`);
+    }
+    if (!isPublisherSurface && (hasPublisherMetadata || hasPublisherTag || hasChildAgeTreatment || hasManualAdUnit)) {
+      hardErrors.push(`${outputPath}: AdSense-Artefakt außerhalb der drei freigegebenen Seitentypen gefunden.`);
+    }
+    if (isPublisherSurface && hasPublisherTag !== publisherTagExpected) {
+      hardErrors.push(`${outputPath}: Publisher-Tag entspricht nicht dem geprüften Deployment-Zustand.`);
+    }
+    if (!adUnitsEnabled && hasManualAdUnit) {
+      hardErrors.push(`${outputPath}: manuelle Anzeige trotz deaktivierter Anzeigenfreigabe gefunden.`);
+    }
+    if (adUnitsEnabled && manualAdUnitCount !== expectedManualAdUnits) {
+      hardErrors.push(`${outputPath}: ${manualAdUnitCount} statt ${expectedManualAdUnits} erwarteten manuellen Anzeigen gefunden.`);
+    }
+    if (adUnitsEnabled) {
+      const renderedPlacements = [...source.matchAll(/data-ad-placement="([^"]+)"/g)].map((match) => match[1]);
+      if (renderedPlacements.length !== expectedPlacements.length) {
+        hardErrors.push(`${outputPath}: Anzahl der benannten Anzeigenplätze ist nicht korrekt.`);
+      }
+      for (const [placement, slotId] of expectedPlacements) {
+        const placementPosition = source.indexOf(`data-ad-placement="${placement}"`);
+        const placementEnd = placementPosition >= 0 ? source.indexOf('</aside>', placementPosition) : -1;
+        const placementMarkup = placementPosition >= 0
+          ? source.slice(placementPosition, placementEnd >= 0 ? placementEnd : undefined)
+          : '';
+        if (renderedPlacements.filter((value) => value === placement).length !== 1
+          || !placementMarkup.includes(`data-ad-slot="${slotId}"`)) {
+          hardErrors.push(`${outputPath}: Platz ${placement} fehlt, ist doppelt oder nutzt die falsche Slot-ID.`);
+        }
+      }
+    }
+    if (manualAdUnitCount !== childRequestCount) {
+      hardErrors.push(`${outputPath}: manuelle Anzeige ohne vollständige TFAT-Kennzeichnung gefunden.`);
+    }
+    if (hasPublisherTag) {
+      const publisherTagPosition = source.indexOf('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+      const ageTreatmentPosition = source.indexOf('google_tag_for_age_treatment = 1');
+      const deniedConsentPosition = source.indexOf("ad_storage: 'denied'");
+      if (ageTreatmentPosition < 0 || deniedConsentPosition < 0
+        || ageTreatmentPosition > publisherTagPosition || deniedConsentPosition > publisherTagPosition) {
+        hardErrors.push(`${outputPath}: TFAT oder verweigerte Consent-Defaults stehen nicht vor dem Publisher-Tag.`);
+      }
     }
     for (const match of source.matchAll(/(?:href|src)="([^"]+)"/g)) {
       let reference = match[1];

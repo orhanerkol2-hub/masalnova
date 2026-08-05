@@ -31,15 +31,16 @@ jobs:
         run: node scripts/build-videos.mjs || echo "Video-Refresh fehlgeschlagen — committete videos.json wird verwendet"
       - name: Build site
         env:
-          # Keep advertising disabled until a Google-certified CMP is actually
-          # configured for EEA, UK and Swiss traffic in the AdSense account.
+          # Google Privacy & messaging is published and Auto ads are disabled.
+          # Load the publisher tag for CMP/review, but keep all ad units off.
+          PUBLIC_ADSENSE_TAG_ENABLED: 'true'
+          PUBLIC_GOOGLE_CMP_PUBLISHED: 'true'
           PUBLIC_ADSENSE_ENABLED: 'false'
-          PUBLIC_GOOGLE_CERTIFIED_CMP: 'false'
-          PUBLIC_ADSENSE_MANUAL_ONLY: 'false'
+          PUBLIC_ADSENSE_MANUAL_ONLY: 'true'
         # The first pass discovers every cover used by the rotating homepage,
         # then Sharp creates the responsive WebP variants and the second pass
         # emits markup that points at those generated files.
-        run: npm run build:optimized
+        run: npm run build:optimized && npm run audit:publishing -- --built
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs

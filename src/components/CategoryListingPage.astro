@@ -48,7 +48,7 @@ const jsonLd = [
   path={path}
   jsonLd={jsonLd}
   activeNav={isIslamic ? 'islami' : 'masallar'}
-  allowAds={!isIslamic && page === 1 && category.key !== 'kisa'}
+  allowAds={false}
   robots={page > 1 || category.key === 'kisa' ? 'noindex, follow' : undefined}
 >
   <section class:list={['section', 'category-page', { 'category-page--islami': isIslamic }]}>

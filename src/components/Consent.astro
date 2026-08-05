@@ -1,10 +1,9 @@
 ---
-// Lightweight, first-party analytics consent UI.
-// Advertising consent remains separate: AdSenseLoader stays fail-closed until
-// a Google-certified CMP is enabled in the AdSense account and environment.
+// Google Privacy & messaging is the only consent interface on ad-capable
+// pages. Analytics stays disabled so visitors never see a second banner.
 ---
 
-{/* Consent Mode must be defined before any optional Google script can run. */}
+{/* Establish conservative defaults before the Google publisher tag runs. */}
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -16,407 +15,86 @@
     wait_for_update: 500
   });
   gtag('set', 'ads_data_redaction', true);
-</script>
+  window['ga-disable-G-YZYEN24W6J'] = true;
 
-<style is:inline>
-  #stcm-wrapper {
-    --mn-consent-blue: #174fc7;
-    --mn-consent-blue-dark: #123a97;
-    --mn-consent-yellow: #ffc62e;
-    --mn-consent-text: #102a66;
-    position: fixed;
-    z-index: 1000;
-    inset: 0;
-    pointer-events: none;
-    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
-  #stcm-wrapper [hidden] { display: none !important; }
-  .mn-consent-layer,
-  .mn-consent-backdrop {
-    position: absolute;
-    inset: 0;
-  }
-  .mn-consent-layer { pointer-events: auto; }
-  .mn-consent-backdrop { background: rgba(8, 30, 80, .5); }
-  .mn-consent-dialog {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: min(440px, calc(100% - 40px));
-    max-height: calc(100dvh - 40px);
-    overflow: auto;
-    padding: 24px;
-    border: 1px solid rgba(255, 255, 255, .3);
-    border-radius: 22px;
-    background: var(--mn-consent-blue);
-    color: #fff;
-    box-shadow: 0 20px 52px rgba(8, 30, 80, .36);
-  }
-  .mn-consent-dialog h2 {
-    margin: 0;
-    color: #fff;
-    font-size: 1.28rem;
-    line-height: 1.25;
-  }
-  .mn-consent-dialog p {
-    margin: 10px 0 0;
-    color: rgba(255, 255, 255, .9);
-    font-size: .91rem;
-    line-height: 1.55;
-  }
-  .mn-consent-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  .mn-consent-actions button,
-  .mn-consent-back-button,
-  #stcm-icon {
-    min-height: 48px;
-    border: 0;
-    border-radius: 14px;
-    font: inherit;
-    font-weight: 900;
-    cursor: pointer;
-  }
-  .mn-consent-primary {
-    background: var(--mn-consent-yellow);
-    color: var(--mn-consent-text);
-  }
-  .mn-consent-secondary {
-    border: 1px solid rgba(255, 255, 255, .5) !important;
-    background: rgba(255, 255, 255, .12);
-    color: #fff;
-  }
-  .mn-consent-preferences-button {
-    grid-column: 1 / -1;
-    background: transparent;
-    color: #fff;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-  .mn-consent-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    margin-top: 18px;
-    padding: 16px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, .12);
-  }
-  .mn-consent-toggle strong,
-  .mn-consent-toggle small { display: block; }
-  .mn-consent-toggle small {
-    margin-top: 3px;
-    color: #fff;
-    font-size: .76rem;
-    line-height: 1.4;
-  }
-  .mn-consent-confirmation {
-    display: flex;
-    align-items: flex-start;
-    gap: 11px;
-    margin-top: 12px;
-    padding: 14px 16px;
-    border: 1px solid rgba(255, 255, 255, .42);
-    border-radius: 15px;
-    color: #fff;
-    font-size: .82rem;
-    font-weight: 750;
-    line-height: 1.45;
-  }
-  .mn-consent-confirmation input {
-    flex: 0 0 auto;
-    width: 22px;
-    height: 22px;
-    margin-top: 1px;
-    accent-color: var(--mn-consent-yellow);
-  }
-  .mn-consent-toggle input {
-    flex: 0 0 auto;
-    width: 24px;
-    height: 24px;
-    accent-color: var(--mn-consent-yellow);
-  }
-  .mn-consent-back-button {
-    width: 100%;
-    margin-top: 10px;
-    background: transparent;
-    color: #fff;
-  }
-  #stcm-icon {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    min-height: 50px;
-    pointer-events: auto;
-    background: var(--mn-consent-yellow);
-    color: var(--mn-consent-text);
-    box-shadow: 0 12px 28px rgba(8, 30, 80, .28);
-    font-size: 1.25rem;
-  }
-  .mn-consent-actions button:focus-visible,
-  .mn-consent-back-button:focus-visible,
-  .mn-consent-toggle input:focus-visible,
-  .mn-consent-confirmation input:focus-visible,
-  #stcm-icon:focus-visible {
-    outline: 3px solid #fff;
-    outline-offset: 3px;
-  }
-  html.mn-consent-open,
-  html.mn-consent-open body { overflow: hidden; }
-  @media (max-width: 720px) {
-    .mn-consent-dialog {
-      right: 12px;
-      bottom: calc(12px + env(safe-area-inset-bottom));
-      width: calc(100% - 24px);
-      max-height: calc(100dvh - 24px - env(safe-area-inset-bottom));
-      padding: 20px;
-    }
-    .mn-consent-actions { grid-template-columns: 1fr; }
-    .mn-consent-preferences-button { grid-column: auto; }
-    #stcm-icon {
-      right: 12px;
-      bottom: calc(12px + env(safe-area-inset-bottom));
-    }
-    body.app-shell #stcm-icon {
-      bottom: calc(82px + env(safe-area-inset-bottom));
-    }
-    body.coloring-focus-body #stcm-icon {
-      top: 12px;
-      bottom: auto;
-    }
-  }
-  .mn-consent-actions button:disabled {
-    cursor: not-allowed;
-    opacity: .55;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .mn-consent-dialog { scroll-behavior: auto; }
-  }
-</style>
+  window.googlefc = window.googlefc || {};
+  window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+</script>
 
 <script is:inline>
   (function () {
-    var STORAGE_KEY = 'masalnova:cookie-consent:v2';
-    var MAX_AGE_MS = 180 * 24 * 60 * 60 * 1000;
-    var MEASUREMENT_ID = 'G-YZYEN24W6J';
-    var analyticsConfigured = false;
-    var lastFocusedElement = null;
-    window['ga-disable-' + MEASUREMENT_ID] = true;
+    var LEGACY_STORAGE_KEY = 'masalnova:cookie-consent:v2';
 
-    function readChoice() {
+    function removeLegacyAnalyticsData() {
       try {
-        var choice = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
-        if (!choice || typeof choice.analytics !== 'boolean' || !choice.updatedAt) return null;
-        if (choice.analytics && choice.guardianConfirmed !== true) return null;
-        var updatedAt = Date.parse(choice.updatedAt);
-        if (!Number.isFinite(updatedAt) || updatedAt > Date.now() + 5 * 60 * 1000) return null;
-        if (Date.now() - updatedAt > MAX_AGE_MS) return null;
-        return choice;
-      } catch (error) {
-        return null;
-      }
-    }
+        localStorage.removeItem(LEGACY_STORAGE_KEY);
+      } catch (error) {}
 
-    function writeChoice(analytics) {
       try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify({
-          analytics: analytics,
-          guardianConfirmed: Boolean(analytics),
-          updatedAt: new Date().toISOString()
-        }));
+        document.cookie.split(';').forEach(function (entry) {
+          var name = entry.split('=')[0].trim();
+          if (name !== '_ga' && name.indexOf('_ga_') !== 0) return;
+          document.cookie = name + '=; Max-Age=0; Path=/; SameSite=Lax';
+          document.cookie = name + '=; Max-Age=0; Path=/; Domain=.masalnova.com; SameSite=Lax';
+        });
       } catch (error) {}
     }
 
-    function loadAnalytics() {
-      window['ga-disable-' + MEASUREMENT_ID] = false;
-      gtag('consent', 'update', { analytics_storage: 'granted' });
-      if (analyticsConfigured) return;
-      analyticsConfigured = true;
-      gtag('js', new Date());
-      gtag('config', MEASUREMENT_ID, { anonymize_ip: true });
-
-      var script = document.createElement('script');
-      script.id = 'mn-ga4-script';
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
-      document.head.appendChild(script);
+    function isCmpSurface() {
+      return Boolean(document.querySelector('meta[name="masalnova-cmp-surface"]'));
     }
 
-    function deleteAnalyticsCookies() {
-      var host = location.hostname;
-      var domains = host ? [host, '.' + host] : [];
-      var parts = host.split('.');
-      if (parts.length > 2) domains.push('.' + parts.slice(-2).join('.'));
-      document.cookie.split(';').forEach(function (cookie) {
-        var name = cookie.split('=')[0].trim();
-        if (!/^_ga(?:_|$)/.test(name)) return;
-        document.cookie = name + '=; Max-Age=0; Path=/; SameSite=Lax';
-        domains.forEach(function (domain) {
-          document.cookie = name + '=; Max-Age=0; Path=/; Domain=' + domain + '; SameSite=Lax';
-        });
-      });
+    function showRevocationMessage() {
+      if (typeof window.googlefc.showRevocationMessage === 'function') {
+        window.googlefc.callbackQueue.push(window.googlefc.showRevocationMessage);
+      }
     }
 
-    function denyAnalytics() {
-      window['ga-disable-' + MEASUREMENT_ID] = true;
-      gtag('consent', 'update', { analytics_storage: 'denied' });
-      deleteAnalyticsCookies();
+    function requestPrivacySettings() {
+      var completed = false;
+      var fallbackTimer = window.setTimeout(function () {
+        if (!completed) window.location.assign('/datenschutz/');
+      }, 2500);
+
+      function showWhenReady() {
+        if (typeof window.googlefc.showRevocationMessage !== 'function') return;
+        completed = true;
+        window.clearTimeout(fallbackTimer);
+        showRevocationMessage();
+      }
+
+      if (typeof window.googlefc.showRevocationMessage === 'function') {
+        showWhenReady();
+        return;
+      }
+      window.googlefc.callbackQueue.push({ CONSENT_API_READY: showWhenReady });
     }
 
-    var existingChoice = readChoice();
-    if (existingChoice && existingChoice.analytics) loadAnalytics();
+    function openPrivacySettings(event) {
+      if (!isCmpSurface()) return;
+      event.preventDefault();
+      requestPrivacySettings();
+    }
 
-    function mountConsentUi() {
-      if (document.getElementById('stcm-wrapper')) return;
-
-      var root = document.createElement('div');
-      root.id = 'stcm-wrapper';
-      root.setAttribute('data-nosnippet', '');
-      root.innerHTML = '\
-        <button id="stcm-icon" type="button" aria-label="Çerez tercihlerini aç" title="Çerez tercihleri" hidden>🍪</button>\
-        <div class="mn-consent-layer" data-consent-layer hidden>\
-          <div class="mn-consent-backdrop" data-consent-backdrop></div>\
-          <section class="mn-consent-dialog" role="dialog" aria-modal="true" aria-labelledby="mn-consent-title" tabindex="-1">\
-            <div data-consent-prompt>\
-              <h2 id="mn-consent-title">Ebeveynler için çerez tercihleri</h2>\
-              <p>Bu ayarı bir ebeveyn veya yasal vasi yapmalıdır. MasalNova, yalnızca ebeveyn onayıyla site kullanımını ölçen analitik çerezleri kullanır. Reklam etkinleştirilirse reklam tercihleri Google’ın sertifikalı onay ekranında ayrıca yönetilir.</p>\
-              <div class="mn-consent-actions">\
-                <button class="mn-consent-primary" type="button" data-consent-preferences>Ebeveyn olarak ayarla</button>\
-                <button class="mn-consent-secondary" type="button" data-consent-reject>Analitiği reddet</button>\
-              </div>\
-            </div>\
-            <div data-consent-settings hidden>\
-              <h2 id="mn-consent-settings-title">Ebeveyn onayı</h2>\
-              <p>Gerekli yerel depolama site işlevleri için kullanılır. Analitik isteğe bağlıdır ve seçiminizi istediğiniz zaman değiştirebilirsiniz.</p>\
-              <label class="mn-consent-toggle">\
-                <span><strong>Analitik</strong><small>Hangi sayfaların kullanıldığını toplu kullanım istatistikleriyle anlamamıza yardımcı olur.</small></span>\
-                <input type="checkbox" data-consent-analytics aria-label="Analitik çerezlere izin ver">\
-              </label>\
-              <label class="mn-consent-confirmation">\
-                <input type="checkbox" data-consent-guardian>\
-                <span>Bu tercihi çocuk adına ebeveyn veya yasal vasi olarak yaptığımı onaylıyorum.</span>\
-              </label>\
-              <div class="mn-consent-actions">\
-                <button class="mn-consent-primary" type="button" data-consent-save>Kaydet ve kapat</button>\
-                <button class="mn-consent-back-button" type="button" data-consent-back>Geri</button>\
-              </div>\
-            </div>\
-          </section>\
-        </div>';
-      document.body.appendChild(root);
-
-      var layer = root.querySelector('[data-consent-layer]');
-      var dialog = root.querySelector('.mn-consent-dialog');
-      var prompt = root.querySelector('[data-consent-prompt]');
-      var settings = root.querySelector('[data-consent-settings]');
-      var analyticsInput = root.querySelector('[data-consent-analytics]');
-      var guardianInput = root.querySelector('[data-consent-guardian]');
-      var saveButton = root.querySelector('[data-consent-save]');
-      var opener = root.querySelector('#stcm-icon');
-      var choice = readChoice();
-
-      function updateSaveState() {
-        saveButton.disabled = Boolean(analyticsInput.checked && !guardianInput.checked);
-      }
-
-      function showPrompt() {
-        prompt.hidden = false;
-        settings.hidden = true;
-        dialog.setAttribute('aria-labelledby', 'mn-consent-title');
-        root.querySelector('[data-consent-preferences]').focus();
-      }
-
-      function showSettings() {
-        prompt.hidden = true;
-        settings.hidden = false;
-        dialog.setAttribute('aria-labelledby', 'mn-consent-settings-title');
-        var currentChoice = readChoice();
-        analyticsInput.checked = Boolean(currentChoice && currentChoice.analytics);
-        guardianInput.checked = false;
-        updateSaveState();
-        analyticsInput.focus();
-      }
-
-      function openManager(useSettings) {
-        lastFocusedElement = document.activeElement;
-        layer.hidden = false;
-        opener.hidden = true;
-        document.documentElement.classList.add('mn-consent-open');
-        if (useSettings) showSettings();
-        else showPrompt();
-      }
-
-      function closeManager() {
-        layer.hidden = true;
-        opener.hidden = false;
-        document.documentElement.classList.remove('mn-consent-open');
-        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-          lastFocusedElement.focus();
-        }
-      }
-
-      function applyChoice(analytics) {
-        writeChoice(analytics);
-        if (analytics) loadAnalytics();
-        else denyAnalytics();
-        choice = readChoice();
-        closeManager();
-      }
-
-      root.querySelector('[data-consent-reject]').addEventListener('click', function () { applyChoice(false); });
-      root.querySelector('[data-consent-preferences]').addEventListener('click', showSettings);
-      analyticsInput.addEventListener('change', updateSaveState);
-      guardianInput.addEventListener('change', updateSaveState);
-      saveButton.addEventListener('click', function () {
-        if (analyticsInput.checked && !guardianInput.checked) return;
-        applyChoice(analyticsInput.checked);
-      });
-      root.querySelector('[data-consent-back]').addEventListener('click', function () {
-        if (choice) closeManager();
-        else showPrompt();
-      });
-      opener.addEventListener('click', function () { openManager(true); });
+    function bindPrivacySettings() {
       document.querySelectorAll('[data-open-cookie-settings]').forEach(function (trigger) {
-        trigger.addEventListener('click', function () { openManager(true); });
-      });
-      root.querySelector('[data-consent-backdrop]').addEventListener('click', function () {
-        if (choice) closeManager();
+        trigger.addEventListener('click', openPrivacySettings);
       });
 
-      dialog.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-          if (choice) closeManager();
-          else if (!settings.hidden) showPrompt();
-          return;
-        }
-        if (event.key !== 'Tab') return;
-        var focusable = Array.prototype.slice.call(dialog.querySelectorAll('button:not([hidden]), input:not([hidden])'))
-          .filter(function (element) { return element.offsetParent !== null; });
-        if (!focusable.length) return;
-        var first = focusable[0];
-        var last = focusable[focusable.length - 1];
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      });
-
-      if (choice) opener.hidden = false;
-      else openManager(false);
+      var parameters = new URLSearchParams(window.location.search);
+      if (parameters.get('privacy-settings') !== '1' || !isCmpSurface()) return;
+      parameters.delete('privacy-settings');
+      var cleanQuery = parameters.toString();
+      window.history.replaceState(null, '', window.location.pathname + (cleanQuery ? '?' + cleanQuery : '') + window.location.hash);
+      requestPrivacySettings();
     }
+
+    removeLegacyAnalyticsData();
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', mountConsentUi, { once: true });
+      document.addEventListener('DOMContentLoaded', bindPrivacySettings, { once: true });
     } else {
-      mountConsentUi();
+      bindPrivacySettings();
     }
   })();
 </script>
