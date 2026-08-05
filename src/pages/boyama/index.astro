@@ -45,6 +45,7 @@ const jsonLd = [
   image={coloringPages[0]?.previewImage}
   imageAlt={coloringPages[0]?.imageAlt}
   activeNav="boyama"
+  allowAds={true}
   jsonLd={jsonLd}
 >
   <section class="coloring-hero">
@@ -85,7 +86,7 @@ const jsonLd = [
         <p>İpucu: Bir boyama sayfası seçin, önce ilgili Keloğlan masalını okuyun, sonra çocuğunuzdan sahneyi kendi hayalindeki renklerle tamamlamasını isteyin.</p>
       </div>
       <div class="ad-area">
-        <AdSlot slot={boyamaIndexAdSlot} placement="boyama-index-after-content" />
+        <AdSlot slot={boyamaIndexAdSlot} placement="boyama-index-after-content" eligible={true} />
       </div>
     </div>
   </section>

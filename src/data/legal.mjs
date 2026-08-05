@@ -63,19 +63,21 @@ export const privacy = {
     {
       heading: '3. Google AdSense advertising',
       paragraphs: [
-        'MasalNova uses Google AdSense to finance the free availability of the website. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. The AdSense script is loaded from Google domains and may process technical data such as IP address, page URL, referrer, browser and device information, approximate location derived from the IP address, ad delivery information and interaction signals.',
-        'MasalNova does not load its own Google AdSense code on the games overview at /oyunlar/ or on gameplay pages at /oyna/. MasalNova games are delivered directly from the same domain and do not contain in-game advertising.',
-        'Google may use cookies, local storage or similar technologies for ad delivery, fraud prevention, frequency capping, measurement and reporting. Depending on your location and Google settings, ads may be contextual or personalised. Where consent is legally required, the legal basis is Article 6(1)(a) GDPR and Section 25(1) TDDDG. Otherwise, the legal basis for security, fraud prevention and basic ad delivery may be Article 6(1)(f) GDPR.',
+        'MasalNova has prepared Google AdSense as a possible way to finance the free availability of the website. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. AdSense remains disabled until the site has been approved and the required consent and child-age safeguards are active. While it is disabled, MasalNova does not load the AdSense script or request ads.',
+        'MasalNova does not load its own Google AdSense code on the games overview at /oyunlar/, game pages at /games/ or gameplay pages at /oyna/. MasalNova games are delivered directly from the same domain and do not contain in-game advertising.',
+        'If AdSense is activated, account-wide Auto ads and overlay formats are kept disabled. MasalNova uses only explicitly reviewed manual placements outside story reading, gameplay, full-screen colouring, video, search, account-like, legal and other protected pages.',
+        'If AdSense is activated, the script is loaded from Google domains and may process technical data such as IP address, page URL, referrer, browser and device information, approximate location derived from the IP address, ad delivery information and interaction signals. Google may use cookies, local storage or similar technologies for ad delivery, fraud prevention, frequency capping, measurement and reporting. Where consent is legally required, the legal basis is Article 6(1)(a) GDPR and Section 25(1) TDDDG. Otherwise, the legal basis for security, fraud prevention and basic ad delivery may be Article 6(1)(f) GDPR.',
         'Google may process data in the United States and other countries. Google LLC is certified under the EU-US Data Privacy Framework; EU Standard Contractual Clauses may also apply. Further information: policies.google.com/privacy, policies.google.com/technologies/ads and support.google.com/adsense.',
       ],
     },
     {
       heading: '4. Google Analytics 4 and local website storage',
       paragraphs: [
-        'With your consent, MasalNova uses Google Analytics 4, a web analytics service provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. We use measurement ID G-YZYEN24W6J to understand aggregated visitor numbers, page views, approximate traffic sources, device categories and how visitors use the website.',
-        'Google Analytics may process online identifiers, truncated or derived IP information, page URLs, referrers, browser and device information, approximate location, timestamps and interaction data. Google Analytics is configured through Google Consent Mode. Analytics storage is denied by default and is enabled only after you consent to analytics. The legal basis is Article 6(1)(a) GDPR and, where access to or storage of information on your device occurs, Section 25(1) TDDDG. You may withdraw your consent at any time through the cookie settings with effect for the future.',
+        'With consent confirmed by a parent or legal guardian, MasalNova uses Google Analytics 4, a web analytics service provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. We use measurement ID G-YZYEN24W6J to understand aggregated visitor numbers, page views, approximate traffic sources, device categories and how visitors use the website.',
+        'Google Analytics may process online identifiers, truncated or derived IP information, page URLs, referrers, browser and device information, approximate location, timestamps and interaction data. Google Analytics is configured through Google Consent Mode. Analytics storage is denied by default and is enabled only after a parent or legal guardian actively selects analytics and confirms that role. The legal basis is Article 6(1)(a) GDPR and, where access to or storage of information on your device occurs, Section 25(1) TDDDG. Consent may be withdrawn at any time through the cookie settings with effect for the future.',
         'Google may process data in the United States and other countries. Google LLC is certified under the EU-US Data Privacy Framework; EU Standard Contractual Clauses may also apply. Retention is governed by the settings of the Google Analytics property and Google\'s applicable retention rules. Further information: policies.google.com/privacy and support.google.com/analytics.',
-        'MasalNova does not operate its own user account system and does not create its own reading profiles. Reader display settings and high scores or progress from MasalNova’s own local games may be stored in your browser so that your preferred reading view and game results can be restored. This local storage remains on your device and is not transmitted to us.',
+        'MasalNova does not operate a user account system and does not create server-side reading profiles. The browser entry masalnova:app-state may contain opaque IDs for favourites and recently opened stories, numeric reading progress, and age, duration or mood filter preferences. Reader display settings, bedtime mode and progress from MasalNova’s local games may also be stored in the browser. These entries remain on the device, are not transmitted to MasalNova and persist until they are cleared through the site controls or browser settings.',
+        'The browser entry masalnova:cookie-consent:v2 stores only the analytics choice, confirmation that the choice was made by a parent or legal guardian, and the time of the choice. It is requested again after no more than 180 days. Withdrawing analytics consent disables further Analytics collection, requests denied Consent Mode and removes accessible Google Analytics cookies.',
       ],
     },
     {
@@ -119,13 +121,13 @@ export const privacy = {
     {
       heading: '9. Automated decision-making',
       paragraphs: [
-        'MasalNova itself does not make decisions about users that produce legal or similarly significant effects. If advertising is enabled with the required consent, Google may use advertising signals for ad personalisation or measurement as described in Section 3 and in Google’s privacy information.',
+        'MasalNova itself does not make decisions about users that produce legal or similarly significant effects. If advertising is enabled, MasalNova will request child age-restricted treatment and will not enable advertising personalisation. Google may process restricted signals for ad delivery, security and measurement as described in Section 3 and in Google’s privacy information.',
       ],
     },
     {
-      heading: '10. Short explanation for children',
+      heading: '10. Çocuklar için kısa açıklama / Short explanation for children',
       paragraphs: [
-        'MasalNova does not ask children to create an account and does not ask children to send personal data. Some advertising and video services are provided by Google or YouTube. Please use MasalNova together with a parent or legal guardian, especially before clicking videos, external links or advertising.',
+        'MasalNova senden hesap açmanı veya bize kişisel bilgi göndermeni istemez. Çerez kararını, videoları, dış bağlantıları ve ileride gösterilebilecek reklamları bir ebeveynin ya da yasal vasinle birlikte kullan. Emin değilsen hiçbir şeyi kabul etme ve bir yetişkine sor.',
       ],
     },
   ],

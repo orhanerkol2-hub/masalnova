@@ -29,7 +29,7 @@ const {
   modifiedTime,
   preloadImage,
   jsonLd,
-  allowAds = true,
+  allowAds = false,
   robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 } = Astro.props;
 
@@ -88,6 +88,13 @@ const serializeJsonLd = (value: unknown) => JSON.stringify(value).replace(/</g, 
 {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 
 {allowAds && <meta name="google-adsense-account" content="ca-pub-5606540854153205" />}
+{
+  allowAds && (
+    <script is:inline>
+      window.google_tag_for_age_treatment = 1;
+    </script>
+  )
+}
 
 <title>{title}</title>
 <meta name="description" content={description} />

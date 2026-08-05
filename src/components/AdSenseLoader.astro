@@ -4,12 +4,14 @@ interface Props {
   allowAds?: boolean;
 }
 
-const { allowAds = true } = Astro.props;
-// The CMP flag may be enabled only after the certified CMP is active in the
-// AdSense account. It is a deployment safeguard, not a technical certification.
+const { allowAds = false } = Astro.props;
+// These flags may be enabled only after the certified CMP is active and
+// account-wide Auto ads are disabled. They are deployment assertions, not a
+// technical certification or a substitute for the account-side settings.
 const adsenseEnabled = allowAds
   && import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true'
-  && import.meta.env.PUBLIC_GOOGLE_CERTIFIED_CMP === 'true';
+  && import.meta.env.PUBLIC_GOOGLE_CERTIFIED_CMP === 'true'
+  && import.meta.env.PUBLIC_ADSENSE_MANUAL_ONLY === 'true';
 ---
 
 {

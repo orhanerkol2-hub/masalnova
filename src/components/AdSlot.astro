@@ -2,30 +2,44 @@
 interface Props {
   slot?: string;
   placement: string;
-  variant?: 'content' | 'focus-top';
+  /** Fail closed when the surrounding page is not approved for advertising. */
+  eligible?: boolean;
 }
 
-const { slot, placement, variant = 'content' } = Astro.props;
+const { slot, placement, eligible = false } = Astro.props;
 const adsenseEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true'
-  && import.meta.env.PUBLIC_GOOGLE_CERTIFIED_CMP === 'true';
-const showAd = adsenseEnabled && Boolean(slot);
+  && import.meta.env.PUBLIC_GOOGLE_CERTIFIED_CMP === 'true'
+  && import.meta.env.PUBLIC_ADSENSE_MANUAL_ONLY === 'true';
+const approvedPlacements = new Set([
+  'home-after-latest',
+  'home-before-guide',
+  'boyama-index-after-content',
+  'boyama-detail-after-parent-guide',
+]);
+const normalizedSlot = slot?.trim();
+const hasValidSlot = Boolean(normalizedSlot && /^\d{6,20}$/.test(normalizedSlot));
+const showAd = eligible
+  && adsenseEnabled
+  && approvedPlacements.has(placement)
+  && hasValidSlot;
 ---
 
 {
   showAd && (
-    <aside class:list={['ad-slot', { 'is-focus-top': variant === 'focus-top' }]} aria-label="Reklam" data-ad-placement={placement} data-ad-safety={variant === 'focus-top' ? 'above-interaction' : 'content-only'}>
+    <aside class="ad-slot" aria-label="Reklam" data-ad-placement={placement} data-ad-safety="content-only">
       <p class="ad-label">Reklam</p>
       <ins
         class="adsbygoogle"
         style="display:block"
         data-ad-client="ca-pub-5606540854153205"
-        data-ad-slot={slot}
-        data-ad-format={variant === 'focus-top' ? 'horizontal' : 'auto'}
+        data-ad-slot={normalizedSlot}
+        data-ad-format="auto"
         data-full-width-responsive="true"
         data-tag-for-age-treatment="1"
       ></ins>
       <script is:inline>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.push({});
       </script>
     </aside>
   )
@@ -51,35 +65,11 @@ const showAd = adsenseEnabled && Boolean(slot);
     text-transform: uppercase;
   }
 
-  .ad-slot.is-focus-top {
-    align-self: start;
-    width: min(100%, 760px);
-    min-height: 90px;
-    margin: 0 auto 18px;
-    padding: 7px 12px 10px;
-    border: 0;
-    border-bottom: 1px solid #dce5f7;
-    border-radius: 0 0 16px 16px;
-    background: #fff;
-    box-shadow: 0 6px 18px rgba(8,30,80,.07);
-  }
-
-  .ad-slot.is-focus-top .ad-label {
-    margin-bottom: 4px;
-    text-align: center;
-  }
-
   @media (max-width: 720px) {
     .ad-slot {
       min-height: 100px;
       margin-block: 60px;
       padding: 18px 14px;
-    }
-
-    .ad-slot.is-focus-top {
-      min-height: 82px;
-      margin: 0 auto 14px;
-      padding: 5px 10px 8px;
     }
 
   }

@@ -111,14 +111,14 @@ const jsonLd = [
         <h2 id="parent-guide-title">Bu boyama sayfasını nasıl kullanabilirsiniz?</h2>
         <p><strong>{page.title}</strong>, {page.theme.toLocaleLowerCase('tr-TR')} temasını renkler ve küçük ayrıntılar üzerinden konuşmak için sakin bir etkinlik sunar. Çocuğunuzdan sahnede ilk fark ettiği üç şeyi göstermesini ve kendi renklerini seçmesini isteyebilirsiniz.</p>
         <ul>
-          <li><strong>Ekranda:</strong> “Tam ekran boya” düğmesi resmi ve büyük boyama araçlarını açar. Reklam gösterilirse yalnızca sayfanın üstündeki ayrı alanda bulunur; araçların yanında başka görseller yer almaz.</li>
+          <li><strong>Ekranda:</strong> “Tam ekran boya” düğmesi reklamsız çocuk modunu ve büyük boyama araçlarını açar. Bu tanıtım sayfasında reklam gösterilirse yalnızca aşağıdaki ebeveyn rehberinden sonra, boyama araçlarından ayrı bir alanda bulunur.</li>
           <li><strong>Kâğıtta:</strong> A4, dikey yön ve “sayfaya sığdır” seçeneğiyle yazdırın. Kalın boya kalemleri küçük eller için daha rahattır.</li>
           <li><strong>Birlikte:</strong> Boyama bittikten sonra <a href={`/masallar/${page.relatedStory.slug}/`}>{page.relatedStory.title}</a> masalını okuyup çocuğunuzdan resmine kısa bir isim vermesini isteyin.</li>
         </ul>
       </section>
 
       <div class="ad-area">
-        <AdSlot slot={boyamaDetailAdSlot} placement="boyama-detail-after-parent-guide" />
+        <AdSlot slot={boyamaDetailAdSlot} placement="boyama-detail-after-parent-guide" eligible={true} />
       </div>
     </div>
   </div>

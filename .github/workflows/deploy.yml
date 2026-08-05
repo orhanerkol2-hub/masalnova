@@ -35,7 +35,11 @@ jobs:
           # configured for EEA, UK and Swiss traffic in the AdSense account.
           PUBLIC_ADSENSE_ENABLED: 'false'
           PUBLIC_GOOGLE_CERTIFIED_CMP: 'false'
-        run: npm run build
+          PUBLIC_ADSENSE_MANUAL_ONLY: 'false'
+        # The first pass discovers every cover used by the rotating homepage,
+        # then Sharp creates the responsive WebP variants and the second pass
+        # emits markup that points at those generated files.
+        run: npm run build:optimized
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs

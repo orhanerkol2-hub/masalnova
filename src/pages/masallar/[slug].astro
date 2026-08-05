@@ -55,9 +55,13 @@ const primaryCategoryLabel = isIslamic
 const storyPagePath = storyPath(story);
 const storyUrl = `https://masalnova.com${storyPagePath}`;
 const storyImage = d.coverImage ? `https://masalnova.com${d.coverImage}` : 'https://masalnova.com/logo.png';
-const publishedIso = `${d.publishedAt}T00:00:00+03:00`;
-const modifiedIso = `${d.modifiedAt ?? d.publishedAt}T00:00:00+03:00`;
+// Keep editorial dates as the exact calendar dates stored in frontmatter.
+// Adding a synthetic midnight/timezone can shift the visible date in Google,
+// and falling back to publishedAt would claim an update that never happened.
+const publishedIso = d.publishedAt;
+const modifiedIso = d.modifiedAt;
 const publishedLabel = formatTurkishDate(d.publishedAt);
+const modifiedLabel = d.modifiedAt ? formatTurkishDate(d.modifiedAt) : undefined;
 const seoDescription = compactDescription(d.shortDescription);
 const ageRange = d.audienceLabel ?? d.ageGroups.map(ageLabel).join(' ve ');
 const seoTitle = d.seoTitle ?? (isIslamic
@@ -148,7 +152,7 @@ const jsonLd = [
   jsonLd={isPubliclyEligible ? jsonLd : undefined}
   activeNav={isIslamic ? 'islami' : 'masallar'}
   readerPage
-  allowAds={isPubliclyEligible}
+  allowAds={isPubliclyEligible && !isIslamic}
   robots={isPubliclyEligible ? undefined : 'noindex, follow'}
 >
   <ReadingToolbar
@@ -213,7 +217,13 @@ const jsonLd = [
                     Güncel metin yeniden editoryal inceleme bekliyor
                   </span>}
               <span aria-hidden="true">·</span>
-              <time datetime={publishedIso}>{publishedLabel} tarihinde yayınlandı</time>
+              <span>Yayınlandı: <time datetime={publishedIso}>{publishedLabel}</time></span>
+              {modifiedIso && modifiedLabel && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <span>Güncellendi: <time datetime={modifiedIso}>{modifiedLabel}</time></span>
+                </>
+              )}
             </p>
             <figure class="reader__cover">
               <CoverThumb

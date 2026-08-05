@@ -39,7 +39,7 @@ const {
   activeNav,
   readerPage = false,
   appShell,
-  allowAds = true,
+  allowAds = false,
   robots,
 } = Astro.props;
 const useAppShell = appShell ?? !readerPage;
@@ -106,8 +106,15 @@ const useAppShell = appShell ?? !readerPage;
       {`
         if ('serviceWorker' in navigator && location.protocol === 'https:') {
           window.addEventListener('load', function () {
-            navigator.serviceWorker.register('/sw.js').catch(function () {});
-          });
+            var registerServiceWorker = function () {
+              navigator.serviceWorker.register('/sw.js').catch(function () {});
+            };
+            if ('requestIdleCallback' in window) {
+              window.requestIdleCallback(registerServiceWorker, { timeout: 3000 });
+            } else {
+              window.setTimeout(registerServiceWorker, 1000);
+            }
+          }, { once: true });
         }
       `}
     </script>

@@ -15,6 +15,12 @@ const expectedReviewers = ['aylin-karabektas', 'muhammet-karayigit'];
 const hardErrors = [];
 const warnings = [];
 const verifyBuiltOutput = process.argv.includes('--built');
+const todayInIstanbul = new Intl.DateTimeFormat('sv-SE', {
+  timeZone: 'Europe/Istanbul',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+}).format(new Date());
 
 function scalar(frontmatter, key, fallback = '') {
   const value = frontmatter.match(new RegExp(`^${key}:\\s*(.+?)\\s*$`, 'm'))?.[1];
@@ -33,6 +39,21 @@ function list(frontmatter, key) {
 
 function frontmatterFromSource(source) {
   return source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/)?.[1] ?? '';
+}
+
+function isCalendarDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  return new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
+}
+
+function hasAdSenseArtifacts(source) {
+  return [
+    'google-adsense-account',
+    'google_tag_for_age_treatment',
+    'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+    'class="adsbygoogle"',
+    'data-ad-client="ca-pub-',
+  ].some((signal) => source.includes(signal));
 }
 
 function groupBy(items, keyFor) {
@@ -82,6 +103,7 @@ for (const file of files) {
     ...qualityContext,
     coverImage: scalar(frontmatter, 'coverImage'),
     publishedAt: scalar(frontmatter, 'publishedAt'),
+    modifiedAt: scalar(frontmatter, 'modifiedAt'),
     words: storyWordCount(body),
     minimumWords: minimumStoryWordCount(qualityContext),
     substantial: isStoryContentSubstantial(body, qualityContext),
@@ -94,7 +116,18 @@ for (const file of files) {
     hardErrors.push(`${file}: Redaktionelle Prüfung muss Aylin Karabektaş und Muhammet Karayiğit enthalten.`);
   }
   if (!['approved', 'needs_review', 'draft'].includes(story.status)) hardErrors.push(`${file}: Ungültiger Redaktionsstatus.`);
-  if (!story.publishedAt) hardErrors.push(`${file}: Veröffentlichungsdatum fehlt.`);
+  if (!isCalendarDate(story.publishedAt)) {
+    hardErrors.push(`${file}: Veröffentlichungsdatum fehlt oder ist kein echter Kalendertag im Format YYYY-MM-DD.`);
+  } else if (story.publishedAt > todayInIstanbul) {
+    hardErrors.push(`${file}: Veröffentlichungsdatum ${story.publishedAt} liegt in der Zukunft.`);
+  }
+  if (story.modifiedAt && !isCalendarDate(story.modifiedAt)) {
+    hardErrors.push(`${file}: Änderungsdatum ist kein echter Kalendertag im Format YYYY-MM-DD.`);
+  } else if (story.modifiedAt && story.modifiedAt < story.publishedAt) {
+    hardErrors.push(`${file}: Änderungsdatum liegt vor dem Veröffentlichungsdatum.`);
+  } else if (story.modifiedAt && story.modifiedAt > todayInIstanbul) {
+    hardErrors.push(`${file}: Änderungsdatum ${story.modifiedAt} liegt in der Zukunft.`);
+  }
   if (story.section === 'islami-hikayeler' && (!story.sourceCitation || !story.sourceUrl)) {
     hardErrors.push(`${file}: Quellenangabe oder Quellenlink für İslami Hikâye fehlt.`);
   }
@@ -134,9 +167,19 @@ for (const directory of ['src', 'public']) {
   }
 }
 
+for (const [file, requiredSignal] of [
+  ['src/components/AdSenseLoader.astro', 'PUBLIC_ADSENSE_MANUAL_ONLY'],
+  ['src/components/AdSlot.astro', 'PUBLIC_ADSENSE_MANUAL_ONLY'],
+]) {
+  const source = await readFile(join(root, file), 'utf8');
+  if (!source.includes(requiredSignal)) {
+    hardErrors.push(`${file}: Schutz gegen versehentlich aktivierte Auto Ads fehlt.`);
+  }
+}
+
 const publicationBatches = groupBy(stories, (story) => story.publishedAt);
 for (const [date, group] of publicationBatches) {
-  if (date && group.length >= 50) warnings.push(`${group.length} Geschichten teilen das Veröffentlichungsdatum ${date}; Datum nicht künstlich ändern, sondern bei echten Überarbeitungen modifiedAt pflegen.`);
+  if (date && group.length >= 50) warnings.push(`${group.length} Geschichten teilen das Veröffentlichungsdatum ${date}; historische Daten unverändert lassen und modifiedAt ausschließlich nach einer echten Überarbeitung ergänzen.`);
 }
 
 const approved = stories.filter(({ status }) => status === 'approved');
@@ -170,23 +213,62 @@ if (verifyBuiltOutput) {
     }
 
     const shouldBePublic = story.status === 'approved' && story.substantial;
+    const shouldAllowAds = shouldBePublic && story.section !== 'islami-hikayeler';
     const isInSitemap = sitemap.includes(`https://masalnova.com${route}</loc>`);
     const hasAdSenseMetadata = html.includes('google-adsense-account');
+    const hasChildAgeTreatment = html.includes('google_tag_for_age_treatment = 1');
     const hasNoindex = html.includes('content="noindex, follow"');
     const hasArticleData = html.includes('"@type":"Article"');
+    const hasExactPublishedData = html.includes(`"datePublished":"${story.publishedAt}"`)
+      && html.includes(`property="article:published_time" content="${story.publishedAt}"`)
+      && html.includes(`<time datetime="${story.publishedAt}"`);
+    const hasSyntheticPublishedTime = html.includes(`"datePublished":"${story.publishedAt}T`)
+      || html.includes(`property="article:published_time" content="${story.publishedAt}T`);
+    const hasModifiedData = html.includes('"dateModified"')
+      || html.includes('property="article:modified_time"')
+      || html.includes('Güncellendi:');
+    const hasExactModifiedData = story.modifiedAt
+      ? html.includes(`"dateModified":"${story.modifiedAt}"`)
+        && html.includes(`property="article:modified_time" content="${story.modifiedAt}"`)
+        && html.includes(`<time datetime="${story.modifiedAt}"`)
+      : !hasModifiedData;
 
-    if (shouldBePublic && (!isInSitemap || !hasAdSenseMetadata || hasNoindex || !hasArticleData)) {
+    if (shouldBePublic && (!isInSitemap || hasNoindex || !hasArticleData || !hasExactPublishedData || hasSyntheticPublishedTime || !hasExactModifiedData)) {
       hardErrors.push(`${route}: öffentliche Story ist in HTML/Sitemap nicht konsistent.`);
     }
-    if (!shouldBePublic && (isInSitemap || hasAdSenseMetadata || !hasNoindex || hasArticleData)) {
+    if (shouldAllowAds !== hasAdSenseMetadata || shouldAllowAds !== hasChildAgeTreatment) {
+      hardErrors.push(`${route}: Anzeigenfreigabe und Alterskennzeichnung sind nicht konsistent.`);
+    }
+    if (!shouldBePublic && (isInSitemap || !hasNoindex || hasArticleData)) {
       hardErrors.push(`${route}: kontrollierte Story ist nicht vollständig noindex/werbefrei.`);
     }
+  }
+
+  try {
+    const islamicIndex = await readFile(join(outputDirectory, 'islami-hikayeler', 'index.html'), 'utf8');
+    if (hasAdSenseArtifacts(islamicIndex)) {
+      hardErrors.push('/islami-hikayeler/: sensibler Themenbereich ist nicht vollständig werbefrei.');
+    }
+  } catch {
+    hardErrors.push('/islami-hikayeler/: erzeugte HTML-Datei fehlt.');
   }
 
   const generatedHtml = (await textFiles(outputDirectory)).filter((file) => extname(file) === '.html');
   builtHtmlFiles = generatedHtml.length;
   for (const file of generatedHtml) {
     const source = await readFile(file, 'utf8');
+    const outputPath = file.slice(outputDirectory.length + 1);
+    const isProtectedFromAds = source.includes('content="noindex') || [
+      /^islami-hikayeler\//,
+      /^boyama\/[^/]+\/boya\/index\.html$/,
+      /^games\//,
+      /^oyna\//,
+      /^videolar\//,
+      /^(?:ara|kitapligim|masal-bul|oyunlar|hakkimizda|yayin-ilkeleri|iletisim|impressum|datenschutz|kullanim-kosullari|yazarlar)\//,
+    ].some((pattern) => pattern.test(outputPath));
+    if (isProtectedFromAds && hasAdSenseArtifacts(source)) {
+      hardErrors.push(`${outputPath}: geschützte Seite enthält AdSense-Code oder Freigabesignale.`);
+    }
     for (const match of source.matchAll(/(?:href|src)="([^"]+)"/g)) {
       let reference = match[1];
       if (!reference.startsWith('/') || reference.startsWith('//') || /[${}]/.test(reference)) continue;
