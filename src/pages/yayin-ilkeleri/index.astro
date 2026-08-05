@@ -47,6 +47,11 @@ const jsonLd = {
           anlamlı biçimde değiştiren güncellemeler yeniden inceleme durumuna alınır; onay tamamlanana
           kadar arama, öneri ve reklamdan çıkarılır.
         </p>
+        <p>
+          Yazar adı, metnin sorumluluğunu taşıyan kişiyi belirtir; yayın sayısını dengelemek veya
+          sayısal bir dağılım oluşturmak için değiştirilmez. Bir metin iki editör tarafından
+          incelense de, hazırlayan yazar ile editoryal inceleme rolleri ayrı gösterilir.
+        </p>
 
         <h2>3. Dijital araçlar ve görseller</h2>
         <p>
@@ -69,6 +74,13 @@ const jsonLd = {
           MasalNova'nın iç kontrolüdür; Google veya AdSense tarafından açıklanmış sabit bir kelime
           şartı değildir.
         </p>
+        <p>
+          Onaydan önce her hikâye; başlığın metni doğru yansıtması, olay örgüsünün tamamlanmış
+          olması, yaş grubuna uygun dil ve duygusal yoğunluk taşıması, yazım ve anlatım
+          bütünlüğü ile kapak ve açıklamasının metinle uyumu açısından okunur. Bu kontrol,
+          birbirinin küçük varyasyonu olan anlatıları veya yalnızca arama trafiği amacıyla
+          hazırlanan sayfaları yayımlamak için kullanılmaz.
+        </p>
 
         <h2>5. İslami hikâyelerde kaynak</h2>
         <p>
@@ -90,6 +102,13 @@ const jsonLd = {
           incelenir. Doğrulanan sorun metinde veya sayfa bilgilerinde düzeltilir; anlamlı içerik
           değişikliklerinde güncelleme tarihi kullanılabilir. Bildirim için ilgili sayfa bağlantısıyla
           birlikte <a href="/iletisim/">iletişim sayfamızı</a> kullanabilirsiniz.
+        </p>
+        <p>
+          Bir güncelleme bekleyen hikâye önce <code>needs_review</code> durumuna alınır. Bu
+          durumda sayfa okunabilir kalır; ancak arama dizinine, site haritasına, önerilere ve
+          reklama kapalıdır. Metin ve sayfa bilgileri yeniden kontrol edilip onaylandığında
+          <code>approved</code> durumuna döner. Güncelleme tarihi yalnızca gerçek bir içerik veya
+          editoryal değişiklik olduğunda yenilenir.
         </p>
 
         <h2>8. Reklam ve içerik ayrımı</h2>
