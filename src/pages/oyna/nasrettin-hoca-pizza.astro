@@ -172,7 +172,8 @@ const jsonLd = [
     .heading-actions { width: 100%; }
     .fullscreen-link { justify-content: center; flex: 1; min-height: 44px; }
     .back-link { display: none; }
-    .player-shell iframe { height: min(730px, calc(100dvh - 155px)); min-height: 600px; }
+    .player-shell iframe { height: min(730px, calc(100dvh - 155px)); min-height: 600px; pointer-events: none; }
+    .player-shell:fullscreen iframe { pointer-events: auto; }
   }
   @media (max-width: 480px) {
     .game-page { padding-top: 22px; }
