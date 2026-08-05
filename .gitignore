@@ -7,6 +7,7 @@ node_modules/
 !.env.example
 .claude/
 docs/
+.ads-test/
 cover-production/premium-cover-prompts.jsonl
 cover-production/premium-cover-run.jsonl
 

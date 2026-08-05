@@ -16,6 +16,7 @@ const approvedPlacements = new Set([
   'home-before-guide',
   'boyama-index-after-content',
   'boyama-detail-after-parent-guide',
+  'story-after-parent-guide',
 ]);
 const normalizedSlot = slot?.trim();
 const hasValidSlot = Boolean(normalizedSlot && /^\d{6,20}$/.test(normalizedSlot));
