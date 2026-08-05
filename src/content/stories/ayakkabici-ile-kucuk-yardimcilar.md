@@ -15,7 +15,7 @@ characters: ["Musa Usta", "Ayşe Teyze", "Küçük Yardımcılar"]
 isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
-editorialStatus: "needs_review"
+editorialStatus: "approved"
 publishedAt: "2026-07-28"
 modifiedAt: "2026-08-05"
 ---
