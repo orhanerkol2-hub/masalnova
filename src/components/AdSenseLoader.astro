@@ -5,17 +5,17 @@ interface Props {
 }
 
 const { allowAds = false } = Astro.props;
-// These flags may be enabled only after the certified CMP is active and
-// account-wide Auto ads are disabled. They are deployment assertions, not a
-// technical certification or a substitute for the account-side settings.
-const adsenseEnabled = allowAds
-  && import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true'
-  && import.meta.env.PUBLIC_GOOGLE_CERTIFIED_CMP === 'true'
+// The publisher tag displays Google's certified CMP and allows AdSense to
+// review eligible surfaces. It does not render a manual ad unit by itself;
+// PUBLIC_ADSENSE_ENABLED remains a separate, fail-closed switch in AdSlot.
+const publisherTagEnabled = allowAds
+  && import.meta.env.PUBLIC_ADSENSE_TAG_ENABLED === 'true'
+  && import.meta.env.PUBLIC_GOOGLE_CMP_PUBLISHED === 'true'
   && import.meta.env.PUBLIC_ADSENSE_MANUAL_ONLY === 'true';
 ---
 
 {
-  adsenseEnabled && (
+  publisherTagEnabled && (
     <script
       async
       is:inline
