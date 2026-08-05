@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","paylaşma","dostluk"]
 characters: ["Çoban Tahir","Sincap Fındık","Tavşan Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın kenarında Tahir adında iyi kalpli bir çoban yaşarmış. Tahir her sabah koyunlarını alır, ormanın kıyısındaki çayırlara götürürmüş. Koyunları otlarken o da bir ağacın altına oturur, torbasından çıkardığı peyniri, ekmeği ve kurutulmuş üzümleri yermiş.

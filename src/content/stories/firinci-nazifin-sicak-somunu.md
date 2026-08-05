@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["nezaket","paylaşma"]
 characters: ["Fırıncı Nazif","Küçük Ela"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün ortasında mis kokulu bir fırın varmış. Fırıncı Nazif her sabah erkenden kalkar, sıcacık somunlar pişirirmiş. Kokusu tüm sokağa yayılır, herkesin burnunu kıvırtırmış.

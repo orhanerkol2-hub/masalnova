@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sorumluluk","şefkat","güvenilirlik"]
 characters: ["Nine Zümrüt","Toprak","küçük bir kırlangıç"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğindeki küçük bir köyde Nine Zümrüt yaşarmış. Evinin damı düzmüş ve her gece o düz damda oturup yıldızları seyredermiş. Köylüler ona "Yıldız Bekçisi Nine" derlermiş, çünkü o hangi yıldızın hangi gece daha parlak olduğunu bilirmiş.

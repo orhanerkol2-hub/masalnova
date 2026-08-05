@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["şükür","dostluk","paylaşma"]
 characters: ["Fındık adlı sincap","Homur adlı ayı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, sakin bir gölün kıyısında yemyeşil bir orman varmış. Bu ormanda Fındık adında bir sincap yaşarmış. Fındık, kışa hazırlanmak için sabahtan akşama kadar fındık toplar, ama topladığı hiçbir şeyden memnun olmazmış. 'Bu fındıklar çok küçük, komşumun ağacındakiler daha büyüktü,' diye söylenir dururmuş.

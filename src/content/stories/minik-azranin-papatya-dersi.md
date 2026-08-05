@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["saygı","doğa sevgisi"]
 characters: ["Azra","Uğur Böceği Benek"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin bol bol parladığı geniş bir çayırda Azra adında meraklı küçük bir kız yaşarmış. Azra her sabah çayıra gelir, otların arasında koşar, çiçekleri koklar, böcekleri izlermiş.

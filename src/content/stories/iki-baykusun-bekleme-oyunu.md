@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["sabır","dostluk","paylaşma"]
 characters: ["Huhu (yaşlı baykuş)","Tik (küçük baykuş)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en sakin köşesinde, ayna gibi duran bir göl varmış. Bu gölün kıyısındaki yaşlı bir söğüt ağacında iki baykuş yaşarmış: yaşlı ve sakin Huhu ile onun genç, meraklı yeğeni Tik.

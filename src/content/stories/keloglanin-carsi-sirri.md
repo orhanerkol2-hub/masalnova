@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["çalışkanlık","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Bakkal Hasan Usta"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan adında bir çocuk yaşarmış. Annesiyle birlikte küçük bir evde otururlarmış ama para pek yok, un çuvalı sık sık boşalırmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["yardımlaşma","paylaşma","dostluk"]
 characters: ["Keloğlan","Nine Kadriye","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçücük bir köyde Keloğlan yaşarmış. Keloğlan yoksulmuş ama yüreği herkesten geniş, kafası herkesten çalışkanmış.

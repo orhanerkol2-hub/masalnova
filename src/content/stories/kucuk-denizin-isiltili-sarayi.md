@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["çalışkanlık","azim","alçakgönüllülük"]
 characters: ["Deniz","Kraliçe Sena","Saray Bahçıvanı Turan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların ardında ışıl ışıl bir saray varmış. Bu sarayın duvarları güneşte altın gibi parlar, pencereleri gökkuşağı renginde ışıldarmış.

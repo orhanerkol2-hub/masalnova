@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sorumluluk","sevgi","huzur"]
 characters: ["Bahçıvan Rıfat","Küçük fener Miço","Çarşı kedisi Puf"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalabalık bir çarşı varmış. Gün boyu insanlar gelir gider, tezgâhlar açılır kapanır, sepetler dolar boşalırmış. Ama akşam olunca çarşı yorulur, esner ve yavaşça uykuya hazırlanırmış.

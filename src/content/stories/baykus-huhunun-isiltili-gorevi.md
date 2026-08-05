@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sorumluluk","dostluk","güven"]
 characters: ["Baykuş Huhu","Tavşan Fındık","Kirpi Minnak"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en yüksek çınar ağacında Huhu adında bir baykuş yaşarmış. Huhu çok akıllıymış ama bir kusuru varmış: verdiği sözleri sık sık unuturmuş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["adalet","doğruluk","paylaşma"]
 characters: ["Karınca Pare","Yengeç Kerim","Martı Deniz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, deniz kıyısındaki kumların arasında Pare adında küçük ama çok akıllı bir karınca yaşarmış. Pare, her sabah kıyıya gelir, dalgaların bıraktığı ufak taneleri toplar, kendine ve arkadaşlarına saklarmış.

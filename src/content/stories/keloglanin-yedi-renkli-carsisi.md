@@ -10,6 +10,9 @@ readingTime: 4
 categories: ["keloglan"]
 themes: ["hoşgörü","dostluk","zeka"]
 characters: ["Keloğlan","Padişah","Tüccar Ahmet"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan'ın köyünün yanı başında kocaman bir çarşı varmış. Bu çarşıya dünyanın dört bir yanından tüccarlar gelirmiş; kimi uzak dağlardan, kimi deniz aşırı diyarlardan. Herkesin dili başka, kıyafeti başka, yemeği başkaymış.

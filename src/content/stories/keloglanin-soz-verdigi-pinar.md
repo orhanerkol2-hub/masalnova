@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sözünde durmak","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Dev Gürbüz","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, bir köyün kenarında Keloğlan adında zeki ve iyi yürekli bir delikanlı yaşarmış. Köyün dışında, iki kayanın arasından fokur fokur kaynayan serin bir pınar varmış. Köylüler bu pınardan su içer, yorgunluklarını orada dinlendirirlermiş.

@@ -5,9 +5,9 @@ import { videos } from '../../data/videos';
 import { ageGroups, durationBuckets, storyCategories } from '../../data/taxonomy';
 
 const questions = [
-  { group: 'yas', label: 'Çocuğunuzun yaşı?', options: [{ v: '', l: 'Farketmez' }, ...ageGroups.map((a) => ({ v: a.key, l: a.label }))] },
-  { group: 'sure', label: 'Ne kadar zamanınız var?', options: [{ v: '', l: 'Farketmez' }, ...durationBuckets.map((d) => ({ v: d.key, l: d.label }))] },
-  { group: 'tur', label: 'Nasıl bir masal?', options: [{ v: '', l: 'Farketmez' }, ...storyCategories.map((c) => ({ v: c.key, l: `${c.emoji} ${c.label}` }))] },
+  { group: 'yas', label: 'Çocuğunuzun yaşı?', options: [{ v: '', l: 'Fark etmez' }, ...ageGroups.map((a) => ({ v: a.key, l: a.label }))] },
+  { group: 'sure', label: 'Ne kadar zamanınız var?', options: [{ v: '', l: 'Fark etmez' }, ...durationBuckets.map((d) => ({ v: d.key, l: d.label }))] },
+  { group: 'tur', label: 'Nasıl bir masal?', options: [{ v: '', l: 'Fark etmez' }, ...storyCategories.map((c) => ({ v: c.key, l: `${c.emoji} ${c.label}` }))] },
 ];
 ---
 <BaseLayout
@@ -15,6 +15,7 @@ const questions = [
   description="Çocuğunuzun yaşına, elinizdeki zamana ve ilgisine göre en uygun masalı saniyeler içinde bulun. MasalNova Masal Bul asistanı."
   path="/masal-bul/"
   activeNav="masal-bul"
+  allowAds={false}
 >
   <section class="section">
     <div class="container">

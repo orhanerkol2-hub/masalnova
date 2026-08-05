@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["cesaret","iyilik","dostluk"]
 characters: ["Minik Efe","Komşu Kadir Amca"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde Efe adında bir çocuk yaşarmış. Efe, geceleri bahçeye çıkmaktan çok korkarmış; karanlığı hiç sevmezmiş.

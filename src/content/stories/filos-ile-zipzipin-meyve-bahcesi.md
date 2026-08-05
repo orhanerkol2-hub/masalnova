@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["nezaket","paylaşma","dostluk"]
 characters: ["Filoş","Zıpzıp"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde yemyeşil bir ormanın en güzel köşesinde Filoş adında iri, sevimli bir fil yaşarmış. Filoş'un hortumu öyle uzunmuş ki, ormanın en yüksek ağaçlarındaki meyveleri bile kolayca koparabilirmiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["azim","umut"]
 characters: ["Fındık Baba","küçük fide"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, karlı bir kış gününde küçük bir köyün bahçesinde Fındık Baba adında güler yüzlü bir bahçıvan yaşarmış. Kar tüm bahçeyi beyaz bir örtüyle kaplamış, ağaçlar bile üşümüş gibi büzülmüş.

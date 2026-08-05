@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["yardımlaşma","paylaşma","komşuluk"]
 characters: ["Fırıncı Dede Hasan","Küçük Ayşe","Komşular"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün ortasında mis kokulu bir fırın varmış. Bu fırında yaşlı bilge Fırıncı Dede Hasan çalışırmış. Her sabah erkenden kalkar, hamuru yoğurur, fırının içine ekmekleri dizerdi.

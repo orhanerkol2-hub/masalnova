@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dostluk","paylaşma","birlikte çalışma"]
 characters: ["Baykuş Hulki","Köpek Cesur"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarındaki küçük çiftlikte Cesur adında bir köpek yaşarmış. Cesur, gündüzleri çiftliği bekler, geceleri ise yıldızlara bakıp içini çekermiş. Çünkü herkes uyurken o hep tek başına kalırmış.

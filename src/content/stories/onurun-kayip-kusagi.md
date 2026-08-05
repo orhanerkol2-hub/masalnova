@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["yardımlaşma","dostluk"]
 characters: ["Çoban Onur","Küçük tavşan Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, rengarenk çiçeklerle dolu bir bahçenin kenarında Onur adında iyi kalpli bir çoban yaşarmış. Her sabah koyunlarını bu çiçekli bahçenin yanındaki çayıra götürür, akşam olunca da yorgun ama mutlu bir şekilde eve dönermiş.

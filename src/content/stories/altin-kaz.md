@@ -13,6 +13,9 @@ categories: ["egitici", "uyku", "hayvan"]
 themes: ["paylaşma", "iyilik", "neşe"]
 characters: ["Ali", "Altın Kaz", "Nilay", "Yaşlı Amca"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-28"
 ---
 Bir varmış, bir yokmuş. Evvel zaman içinde, yeşil bir ormanın kıyısında küçük, tahta bir ev varmış. Bu evde üç kardeş yaşarmış. En büyüğünün adı Emre, ortancanın adı Kerem, en küçüğünün adı ise Ali'ymiş.

@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["yardımlaşma","paylaşma"]
 characters: ["Sevgi Amca","Küçük Ela","Köylüler"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde Sevgi Amca adında güler yüzlü bir bahçıvan yaşarmış. Bahçesinde kocaman, tombul kabaklar yetiştirirmiş. O yıl bahçesi öyle bereketli olmuş ki, sepeti taşımaya gücü yetmemiş.

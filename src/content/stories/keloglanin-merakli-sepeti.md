@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["merak","dürüstlük","paylaşma"]
 characters: ["Keloğlan","Padişah","Yaşlı Sepet Satıcısı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında meraklı bir çocuk yaşarmış. Bu çocuk, gördüğü her şeyin içini, arkasını, altını üstünü bilmek isterdi. Annesi ona hep, "Keloğlan, merakın seni bir gün başına dert açacak, ama merak da iyi bir şeydir, sadece dikkatli ol," derdi.

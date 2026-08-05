@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sabır","zeka","dürüstlük"]
 characters: ["Keloğlan","Padişah","Yaşlı çoban Dede Hasan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan yaşarmış. Yoksul olsa da yüreği zengin, kafası her zaman işleyen bir delikanlıymış. Köylüler ona güler, "Keloğlan yine bir şey uydurdu!" derlermiş ama derdi olan herkes önce ona gelirmiş.

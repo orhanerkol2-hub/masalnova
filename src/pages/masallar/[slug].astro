@@ -7,6 +7,7 @@ import StoryCard from '../../components/StoryCard.astro';
 import ReadingToolbar from '../../components/ReadingToolbar.astro';
 import { getAllStories, getStories, isIslamicStory, storyPath } from '../../data/stories';
 import { videoById } from '../../data/videos';
+import { getStoryAuthor, storyReviewers } from '../../data/authors';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
 import { compactDescription, formatTurkishDate, storySeoTitle } from '../../lib/seo';
 
@@ -19,6 +20,7 @@ export async function getStaticPaths() {
 
 const { story } = Astro.props;
 const d = story.data;
+const author = getStoryAuthor(d.author);
 const isIslamic = isIslamicStory(story);
 const { Content } = await render(story);
 
@@ -96,10 +98,17 @@ const jsonLd = [
       suggestedMaxAge,
     } : undefined,
     author: {
-      '@type': 'Organization',
-      name: 'MasalNova Çocuk Editör Ekibi',
-      url: 'https://masalnova.com/hakkimizda/',
+      '@type': 'Person',
+      '@id': `https://masalnova.com${author.profilePath}#person`,
+      name: author.name,
+      url: `https://masalnova.com${author.profilePath}`,
     },
+    editor: storyReviewers.map((reviewer) => ({
+      '@type': 'Person',
+      '@id': `https://masalnova.com${reviewer.profilePath}#person`,
+      name: reviewer.name,
+      url: `https://masalnova.com${reviewer.profilePath}`,
+    })),
     publisher: { '@id': 'https://masalnova.com/#organization' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': storyUrl },
   },
@@ -186,7 +195,13 @@ const jsonLd = [
                   ))}
             </div>
             <p class="reader__byline">
-              <a href="/hakkimizda/">MasalNova Çocuk Editör Ekibi</a>
+              <span>Yazan: <a href={author.profilePath}>{author.name}</a></span>
+              <span aria-hidden="true">·</span>
+              <span>
+                Editoryal inceleme:
+                {' '}<a href="/yazarlar/aylin-karabektas/">Aylin Karabektaş</a>
+                {' '}ve{' '}<a href="/yazarlar/muhammet-karayigit/">Muhammet Karayiğit</a>
+              </span>
               <span aria-hidden="true">·</span>
               <time datetime={publishedIso}>{publishedLabel} tarihinde yayınlandı</time>
             </p>

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["dostluk","dürüstlük","zeka"]
 characters: ["Keloğlan","Padişah","Saray Bahçıvanı Osman"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan yaşarmış. Annesiyle birlikte küçük bir evde otururlar, komşularının işlerine yardım ederek geçinirlermiş. Keloğlan kel kafasına hiç aldırmaz, herkesle dost olmaya bayılırmış.

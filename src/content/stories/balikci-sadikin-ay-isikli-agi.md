@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["azim","sabır","emek"]
 characters: ["Balıkçı Sadık","Küçük Elin","Ay Balığı Nurtan"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, denizin kıyısında küçük bir köy varmış. Bu köyde Sadık adında sabırlı bir balıkçı yaşarmış. Sadık her sabah erkenden kalkar, teknesini hazırlar ve denize açılırmış. Ama son zamanlarda ağına balık düşmüyormuş, herkes ona şaşkın şaşkın bakıyormuş.

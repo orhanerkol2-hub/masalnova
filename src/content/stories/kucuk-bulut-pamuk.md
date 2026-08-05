@@ -8,11 +8,14 @@ coverColor: "#78aee8"
 coverImage: "/covers/stories/kucuk-bulut-pamuk.webp"
 altText: "Küçük beyaz bulut Pamuk, susayan sarı papatyaya yağmur damlaları bırakıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici"]
 themes: ["yardımseverlik","iyilik","doğa sevgisi","huzur"]
 characters: ["Pamuk","Sarı Baş","büyük bulutlar"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Gökyüzünde kocaman bulutlar dolaşırdı. Kimi dağ gibiydi. Kimi gemi gibiydi. Aralarında bir de küçücük bir bulut vardı. Adı Pamuk'tu.

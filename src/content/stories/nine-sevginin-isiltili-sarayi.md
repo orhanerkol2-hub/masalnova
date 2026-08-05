@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["dostluk","paylaşma","alçakgönüllülük"]
 characters: ["Nine Sevgi","Prenses Damla","Küçük Kedi Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, tepelerin en yüksekinde ışıl ışıl bir saray varmış. Bu sarayın pencereleri güneşle buluştuğunda, tüm vadi altın rengine bürünürmüş. Sarayda yaşayan Prenses Damla, güzel elbiseleri ve parlak tacıyla övünürmüş ama kimseyle oyun oynamazmış.

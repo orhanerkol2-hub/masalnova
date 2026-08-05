@@ -12,6 +12,9 @@ themes: ["uyku", "dostluk", "huzur"]
 characters: ["Ay", "Yıldız"]
 isTodayStory: true
 isFeatured: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-11"
 ---
 Gökyüzünün gündüzden geceye döndüğü saatlerde, bulutlar usulca renk değiştirirmiş. Önce kayısı gibi turuncu, sonra menekşe gibi mor, en sonunda da derin denizler kadar mavi olurlarmış. Bu, gökteki herkes için uyku hazırlığının başladığını anlatan sessiz bir işaretmiş.
@@ -90,7 +93,7 @@ Küçük yıldız nefes almış. Denizin tuzlu kokusunu, ağaçların serinliği
 
 “Bir daha,” demiş Ay.
 
-İkinci nefeste gözkapakları ağırlaşmış. Üçüncüsünde, sanki yumuşak bir salıncakta sallanıyormuş gibi olmuş.
+İkinci nefeste göz kapakları ağırlaşmış. Üçüncüsünde, sanki yumuşak bir salıncakta sallanıyormuş gibi olmuş.
 
 “Sen giderken yanımda kim kalacak?” diye mırıldanmış.
 

@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["nezaket","yardımseverlik"]
 characters: ["Çoban Sadık","küçük tavşan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının gümüş gibi parladığı bir gecede, Çoban Sadık koyunlarını köye geri götürüyormuş. Patika ışıl ışıl parlıyor, taşlar bile aydan gelen ışıkla gümüşten gibi görünüyormuş.

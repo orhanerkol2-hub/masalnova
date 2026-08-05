@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["affetmek","huzur","sevgi"]
 characters: ["Kerem","Dede Sabri","Ay"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında altın başaklı bir tarla varmış. Bu tarla, akşam olunca ay ışığında pırıl pırıl parlarmış, sanki içinde binlerce küçük yıldız uyurmuş gibi.
@@ -30,6 +33,6 @@ O gece, Kerem eve dönerken gökyüzüne bakmış. Yıldızlar, sanki ona teşek
 
 Kerem yatağına uzanmış, yorganını üstüne çekmiş. Pencereden içeri giren ay ışığı, odasını hafifçe aydınlatmış. Rüzgâr, uzaktaki tarlada usulca başakları sallıyormuş, sanki bir ninni söylüyormuş gibi.
 
-Kerem'in gözkapakları ağırlaşmış, nefesi yavaşlamış. Ay, ona sessizce göz kırpmış, yıldızlar usulca parıldamış. Tarladaki başaklar da huzur içinde, ay ışığında uyumaya devam etmiş.
+Kerem'in göz kapakları ağırlaşmış, nefesi yavaşlamış. Ay, ona sessizce göz kırpmış, yıldızlar usulca parıldamış. Tarladaki başaklar da huzur içinde, ay ışığında uyumaya devam etmiş.
 
 İyi geceler, küçük dostlarım. Sizler de Kerem gibi yumuşacık yorganınıza sarılıp, ay ışığının sıcaklığında güzel düşlere dalın.

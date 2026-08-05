@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["tutumluluk","sabır"]
 characters: ["Bahçıvan Fındık","Küçük Tarla Kuşu"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında Fındık adında güler yüzlü bir bahçıvan yaşarmış. Elinde bir avuç tohumu varmış ama torbasının dibinde son bir tane tohum kalmış. Fındık, o tohumu hemen toprağa saçmamış, dikkatle avucunda tutmuş.

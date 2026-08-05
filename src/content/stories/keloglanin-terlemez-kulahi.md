@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["çalışkanlık","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Bahçıvan Hasan"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ışıl ışıl bir sarayın yakınında küçük bir köy varmış. Bu köyde Keloğlan diye, kel kafalı ama yüreği bir o kadar sıcak bir delikanlı yaşarmış. Keloğlan tembel değilmiş ama iş bulmak için köyden köye dolaşırmış.

@@ -8,11 +8,14 @@ coverColor: "#a76a42"
 coverImage: "/covers/stories/tatli-lapa-kazani.webp"
 altText: "İyi kalpli kızın annesiyle birlikte sihirli kazandan doldurduğu tatlı lapayı yaşlı komşusuyla paylaştığı masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 3
 categories: ["uyku", "egitici"]
 themes: ["cömertlik", "paylaşma", "sorumluluk"]
 characters: ["İyi Kalpli Kız", "Anne", "Yaşlı Kadın", "Komşu"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Ormanın kenarındaki küçük bir kulübede, annesiyle yaşayan iyi kalpli bir kız çocuğu vardı. Bazı günler yiyecekleri azdı ama kız hiç şikâyet etmezdi; elindeki azıcık yemeği bile komşularıyla paylaşırdı.

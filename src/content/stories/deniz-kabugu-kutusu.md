@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["tutumluluk","paylaşma"]
 characters: ["Dede Hasan","Minik Ela"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısında küçük bir taş evde Dede Hasan yaşarmış. Her sabah kıyıya iner, dalgaların bıraktığı en güzel deniz kabuklarını toplar, tahta kutusuna koyarmış.

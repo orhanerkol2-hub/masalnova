@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["yardımlaşma","dostluk","dayanışma"]
 characters: ["Keloğlan","Yıldız Devi","Nine Sultan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağın eteğinde küçük bir köy varmış. Bu köyde Keloğlan, annesiyle küçük bir kulübede yaşarmış. Fakir olsalar da Keloğlan'ın yüreği güneş gibi sıcakmış.

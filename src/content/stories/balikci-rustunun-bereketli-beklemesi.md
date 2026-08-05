@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sabır","emek","doğayla uyum"]
 characters: ["Balıkçı Rüştü","Tarla Sahibi Nine Sultan","Küçük Kız Elmas"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, bir köyün kenarında küçük bir dere akarmış. Bu derenin hemen yanında, güneşte parıldayan altın başaklı bir tarla varmış. Tarlanın yanı başında oturan Rüştü, köyün en sabırlı balıkçısıymış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["adalet","zeka","dürüstlük"]
 characters: ["Keloğlan","Padişah","Tefeci Hasan Ağa"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan yaşarmış. Köyün ortasında ay ışığında parlayan uzun bir patika varmış; herkes gece işinden dönerken o patikadan geçermiş.

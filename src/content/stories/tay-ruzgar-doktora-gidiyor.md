@@ -8,11 +8,14 @@ coverColor: "#b88758"
 coverImage: "/covers/stories/tay-ruzgar-doktora-gidiyor.webp"
 altText: "Tay Rüzgâr annesiyle Doktor Leylek’in sıcak yuva kliniğinde kalp sesini dinliyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["doktor korkusu","sağlık","güven","cesaret"]
 characters: ["Rüzgâr","Anne At","Doktor Leylek","kuzu"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Geniş bir çayırda atlar yaşardı. En küçükleri bir taydı. Adı Rüzgâr'dı.

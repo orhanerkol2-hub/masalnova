@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["şükür","kanaat","doğaya sevgi"]
 characters: ["Çoban Rüzgin","Bilge Baykuş Huhu","Küçük kuzu Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil tepelerin arasında Rüzgin adında iyi kalpli bir çoban yaşarmış. Rüzgin, koyunlarına çok iyi bakar, onları hiç üşütmez, hiç açıkta bırakmazmış. Ama Rüzgin'in bir huyu varmış: elindekilerle asla yetinmez, hep daha fazlasını istermiş.

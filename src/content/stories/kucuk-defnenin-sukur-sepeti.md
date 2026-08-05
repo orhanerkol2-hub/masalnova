@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["şükür","kanaat","doğa sevgisi"]
 characters: ["Defne","Dede Şükrü","Orman sakinleri"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın kenarında küçük bir köy varmış. Bu köyde Defne adında bir kız yaşarmış. Defne iyi bir çocukmuş ama sürekli sızlanırmış. Yemeği az bulur, elbisesini beğenmez, oyuncaklarını yetersiz görürmüş.

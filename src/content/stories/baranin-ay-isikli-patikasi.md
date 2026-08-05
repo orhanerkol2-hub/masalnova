@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["dostluk","cesaret","yardımseverlik"]
 characters: ["Baran","Elmas adında bir tilki yavrusu","Baran'ın dedesi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde küçük bir köy varmış. Bu köyde Baran adında meraklı ve yüreği cesaretle dolu bir çocuk yaşarmış. Baran, her akşam dedesinin anlattığı hikâyeleri dinlemeyi çok severmiş; en çok da ay ışığında parıldayan patikanın hikâyesini.

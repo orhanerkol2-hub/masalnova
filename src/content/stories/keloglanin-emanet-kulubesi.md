@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sorumluluk","dürüstlük","emek"]
 characters: ["Keloğlan","Yaşlı Recep Dede","Padişahın Adamları"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında kel kafalı ama akıllı bir delikanlı yaşarmış. Bir gün köyün kenarında oduna giderken, yaşlı bir adamın yolda düşüp bacağını incittiğini görmüş.

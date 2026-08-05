@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["nezaket","paylaşma","dostluk"]
 characters: ["Pati adlı ördek","Kaplumbağa Tosbik","Kurbağa Vırvır"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, ormanın kenarında sakin bir göl varmış. Bu gölde yaşayan hayvanların en neşelisi Pati adında sarı gagalı bir ördekmiş. Pati'nin en sevdiği şey, her sabah suyun üzerinde süzülerek dolaşmak ve arkadaşlarına gülümsemekmiş.

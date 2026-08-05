@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","paylaşma","yardımseverlik"]
 characters: ["Defne","Komşu Turan Amca"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, karlı bir kış günüymüş. Kar taneleri usulca düşerken küçük Defne, penceresinden dışarıyı seyrediyormuş.

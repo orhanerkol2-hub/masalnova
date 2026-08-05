@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["affetmek","hoşgörü","dostluk"]
 characters: ["Nazlı","Nine Sevgi","Nazlı'nın annesi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın yamacında küçük ve meraklı bir kız yaşarmış. Adı Nazlı'ymış. Nazlı, köyün en meraklı çocuğuymuş; her taşın altına bakar, her patikanın nereye gittiğini öğrenmek istermiş.

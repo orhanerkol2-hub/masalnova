@@ -8,11 +8,14 @@ coverColor: "#8c7656"
 coverImage: "/covers/stories/yedi-kucuk-keci-ve-akilli-fikirleri.webp"
 altText: "Yedi küçük keçinin güvenli evlerinden dışarıdaki flüt çalan dost kurdu dinlediği masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 3
 categories: ["uyku", "hayvan", "egitici"]
 themes: ["güvenlik", "dikkat", "nezaket"]
 characters: ["Yedi Küçük Keçi", "Anne Keçi", "Dost Kurt"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Bir çiftlikte Anne Keçi ve onun yedi sevimli yavrusu yaşardı. Bir sabah Anne Keçi'nin ormana yiyecek toplamaya gitmesi gerekti.

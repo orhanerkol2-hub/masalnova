@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["saygı","misafirperverlik"]
 characters: ["Çoban Duran","Yaşlı Yolcu"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağ başında küçük bir kulübede Duran adında iyi kalpli bir çoban yaşarmış. Kulübesi taştan yapılmış, penceresinden bütün vadi görünürmüş. Duran her akşam koyunlarını toplar, ocağının başında ısınırmış.

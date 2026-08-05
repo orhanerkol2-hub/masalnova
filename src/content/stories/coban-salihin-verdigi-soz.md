@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["sözünde durmak","dostluk","sorumluluk"]
 characters: ["Çoban Salih","Balıkçı Rana","Küçük kuzu Beyaz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısındaki küçük bir köyde Salih adında iyi kalpli bir çoban yaşarmış. Salih her sabah koyunlarını kayalıkların üzerindeki yemyeşil çayıra götürür, akşamları da sahilde oturup dalgaları izlermiş.

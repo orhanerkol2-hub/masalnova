@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["dostluk","huzur","paylaşma"]
 characters: ["Bahçıvan Rıfat","Tosun adlı koyun","Minik serçe Poyraz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, geniş bir çayırın kenarında güler yüzlü bir bahçıvan yaşarmış. Adı Rıfat'mış. Rıfat Amca her akşam çayırdaki çiçekleri sularken yumuşacık bir ninni mırıldanırmış.

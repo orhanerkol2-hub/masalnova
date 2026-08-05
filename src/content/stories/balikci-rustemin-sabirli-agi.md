@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["saygı","sabır","doğaya değer verme"]
 characters: ["Balıkçı Rüstem","Orman Perisi Yeşim","Küçük Baykuş Huhu"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında küçük bir dere akarmış. Bu derenin başında Rüstem adında sabırlı bir balıkçı yaşarmış. Rüstem her sabah güneşle beraber kalkar, ağını nazikçe suya bırakır ve sessizce beklermiş.

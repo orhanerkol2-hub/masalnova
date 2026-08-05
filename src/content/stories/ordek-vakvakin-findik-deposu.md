@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["tutumluluk","paylaşma","kış hazırlığı"]
 characters: ["Vakvak","Kaplumbağa Sarman","Sincap Fıstık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, sakin bir gölün kıyısında Vakvak adında küçük bir ördek yaşarmış. Vakvak, güneşli günlerde göl kenarında yüzer, arkadaşlarıyla oynar ve her gün gölete gelen tanelerden biraz biraz toplarmış.

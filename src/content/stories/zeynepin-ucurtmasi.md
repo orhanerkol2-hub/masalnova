@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["azim","sabır","çaba"]
 characters: ["Zeynep","Rüzgar Kuşu Tita"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, geniş bir çayırın kenarında Zeynep adında meraklı bir kız yaşarmış. Zeynep, babasıyla birlikte kağıttan bir uçurtma yapmış. Uçurtmasının üzerine parlak sarı güneşler çizmişler.

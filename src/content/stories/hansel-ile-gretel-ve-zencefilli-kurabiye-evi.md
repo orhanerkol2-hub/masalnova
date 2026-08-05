@@ -8,11 +8,14 @@ coverColor: "#a96542"
 coverImage: "/covers/stories/hansel-ile-gretel-ve-zencefilli-kurabiye-evi.webp"
 altText: "Hansel ile Gretel'in ay ışıklı ormanda iyi kalpli kadının zencefilli kurabiye evine ulaştığı masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 2
 categories: ["uyku", "egitici"]
 themes: ["kardeşlik", "cesaret", "akıllı düşünme"]
 characters: ["Hansel", "Gretel", "İyi Kalpli Kadın", "Anne", "Baba"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Ormanın kenarındaki küçük bir kulübede Hansel ve Gretel adında iki kardeş yaşardı. Bir gün ormanda böğürtlen toplarken dalıp gittiler ve yolu şaşırdılar.

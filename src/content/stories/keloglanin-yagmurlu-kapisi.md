@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["affetmek","iyilik","dostluk"]
 characters: ["Keloğlan","Nine Havva","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan yaşarmış. Kel kafası güneşte parlar, gülümsemesi ise herkesin yüzünü aydınlatırmış. Fakirmiş ama gönlü zenginmiş.

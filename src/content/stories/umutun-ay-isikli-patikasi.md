@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["nezaket","cesaret","yardımseverlik"]
 characters: ["Umut","Baykuş Sarman","Kirpi Fındık"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ormanın kenarında küçük bir köy varmış. Bu köyde Umut adında cesur bir çocuk yaşarmış. Umut, gece karanlığından hiç korkmaz, aksine ay ışığında yürümeyi çok severmiş.

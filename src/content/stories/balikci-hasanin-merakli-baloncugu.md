@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["merak","sabır"]
 characters: ["Balıkçı Hasan","Küçük Balık Mavi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kıyısında Hasan adında sabırlı bir balıkçı yaşarmış. Her sabah oltasını suya atar, kıyıda oturup güneşin doğuşunu izlermiş.

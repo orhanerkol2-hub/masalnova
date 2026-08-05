@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["şükür","huzur","doğa sevgisi"]
 characters: ["Minik Elmas","Yaşlı Kaplumbağa Sedef","Ay Ana"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir vadinin ortasında sakin bir göl varmış. Bu gölün suyu ipek gibi durgun, ayna gibi berrakmış. Akşam olunca gölün üzerinde yıldızlar yavaşça belirir, sonra ay usulca gelip suyun içine yerleşirmiş.

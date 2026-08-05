@@ -8,11 +8,14 @@ coverColor: "#3d6ab3"
 coverImage: "/covers/stories/kulkedisi-v2.webp"
 altText: "Cam ayakkabıyı tutan Külkedisi ve büyülü bal kabağı arabası"
 ageGroups: ["3-5"]
-readingTime: 7
+readingTime: 2
 categories: ["egitici"]
 themes: ["sabır", "iyilik", "umut"]
 characters: ["Külkedisi", "Üvey Anne", "Üvey Kız Kardeşler", "Peri Anne", "Prens"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-21"
 ---
 Bir varmış bir yokmuş, küçük bir evde, annesini kaybettikten sonra babasıyla yaşayan iyi kalpli bir kız varmış. Babası yeniden evlenmiş ama üvey annesi ve iki üvey kız kardeşi ona hiç iyi davranmamışlar. Bütün ev işlerini ona yaptırırlarmış. Üstü başı hep kül tozu içinde kaldığından ona “Külkedisi” demişler.

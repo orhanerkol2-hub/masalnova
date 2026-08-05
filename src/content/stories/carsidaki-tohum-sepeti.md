@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["merak","paylaşma","doğa sevgisi"]
 characters: ["Bahçıvan Sabri","Küçük Elmas"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, kalabalık bir çarşının ortasında güler yüzlü bir bahçıvan varmış. Adı Sabri'ymiş. Elinde her zaman içi tohumla dolu bir sepet taşırmış ama tohumların üzerinde hiç isim yazmazmış.

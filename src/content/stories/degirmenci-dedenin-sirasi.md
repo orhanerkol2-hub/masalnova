@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["saygı","sabır","paylaşma"]
 characters: ["Dede Hasan","Tavşan Fıscık","Köylü çocuklar"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında eski bir değirmen varmış. Bu değirmeni, herkesin "Dede Hasan" dediği yaşlı ve bilge bir dede işletirmiş. Köyün hayvanları buğdaylarını öğütmek için sırayla değirmene gelirlermiş.

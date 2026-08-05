@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["çalışkanlık","sabır"]
 characters: ["Nine Sevgi","serçe Cik"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, çiçekli bir bahçenin ortasında Nine Sevgi yaşarmış. Bahçesindeki güller, laleler ve papatyalar onun elinden çıkan emekle her sabah güneşe gülermiş.

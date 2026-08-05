@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["saygı","hoşgörü","dostluk"]
 characters: ["Fırfır (kelebek)","Fısfıs (fare)","Baykuş Devrim"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında eski bir değirmen varmış. Değirmenin tekerleği artık dönmez, taşları tozdan beyazlaşmış ama içinde küçük bir dünya kurulmuş. Bu dünyanın en gururlu sakini Fısfıs adında bir fareymiş.

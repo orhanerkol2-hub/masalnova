@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["hoşgörü","farklılıklara saygı"]
 characters: ["Bilge Dede Rasim","Yeşil Kurbağa Fıstık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ışıl ışıl bir sarayda yaşlı bilge bir dede yaşarmış. Adı Dede Rasim'miş. Sarayın büyük bahçesinde her yıl bir şölen düzenlenirmiş, tüm hayvanlar oraya davet edilirmiş.

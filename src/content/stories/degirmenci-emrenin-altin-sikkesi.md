@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["dürüstlük","cesaret"]
 characters: ["Emre","Değirmenci Hasan"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün kenarında eski bir değirmen varmış. Değirmenin taşları gıcırdar, çatısından tozlu ışıklar süzülürmüş. Köyün en meraklı çocuğu Emre, her gün oradan geçer, içeri girip etrafı incelermiş.

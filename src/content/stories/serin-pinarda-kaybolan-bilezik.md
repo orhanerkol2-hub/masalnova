@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["dürüstlük","yardımseverlik"]
 characters: ["Deniz","Komşu Teyze Sultan"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün kenarında serin bir pınar varmış. Sıcak günlerde köylüler orada su doldurur, biraz oturup dinlenirmiş.

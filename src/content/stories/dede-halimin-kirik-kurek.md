@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["merhamet","yardımlaşma"]
 characters: ["Dede Halim","Küçük Ali"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, sakin bir gölün kenarında Dede Halim yaşarmış. Her sabah küçük kayığıyla göle açılır, balık tutar, sonra köyün çocuklarına dağıtırmış.

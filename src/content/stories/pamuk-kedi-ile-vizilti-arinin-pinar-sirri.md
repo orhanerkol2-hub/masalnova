@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dostluk","yardımlaşma","farklılıklara saygı"]
 characters: ["Pamuk (kedi)","Vızıltı (arı)"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın kenarında serin bir pınar varmış. Bu pınarın suyu öyle berrakmış ki içinde bulutların yansıması bile görünürmüş.

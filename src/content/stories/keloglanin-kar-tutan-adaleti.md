@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["adalet","dürüstlük","akıl"]
 characters: ["Keloğlan","Padişah","Değirmenci Osman"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, karlı bir kış günü Keloğlan köyün yolunda yürürmüş. Kar dizleri boyuna yığılmış, her adımda ayakları gıcır gıcır ses çıkarırmış. Keloğlan üşümüş ama neşesini hiç kaybetmemiş, çünkü o hep gülümsemeyi severmiş.

@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["paylaşma","dostluk"]
 characters: ["Çoban Salih","Balıkçı çocuk Deniz","Martı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısında koyunlarını otlatan iyi kalpli bir çoban varmış. Adı Salih'miş. Her sabah sepetine peynir, zeytin ve sıcacık ekmek koyar, koyunlarıyla birlikte kumsala inerdi.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["çalışkanlık","dürüstlük","azim"]
 characters: ["Keloğlan","Padişah","Nine Ayşe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında upuzun, yemyeşil geniş bir çayır varmış. Bu çayırın hemen yanında da Keloğlan, annesiyle küçük bir evde otururmuş. Köylüler Keloğlan'a bakıp gülerlermiş: "Bu çocuk elini eline vurmaz, bütün gün çayırda yatar!" derlermiş.

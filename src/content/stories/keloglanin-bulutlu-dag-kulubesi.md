@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["yardımlaşma","paylaşma","dostluk"]
 characters: ["Keloğlan","Anası","Dağ Devi Hantal"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan ile anası yaşarmış. Kış yaklaşınca köyde odun azalmış, herkes birbirine yardım etmenin yollarını aramaya başlamış.

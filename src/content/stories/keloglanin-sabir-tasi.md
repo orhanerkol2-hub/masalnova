@@ -10,6 +10,9 @@ readingTime: 4
 categories: ["keloglan"]
 themes: ["sabır","iyilik","emek"]
 characters: ["Keloğlan","Nine Ayşe","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında pırıl pırıl gözlü, kel kafalı ama yüreği sıcacık bir delikanlı yaşarmış. Keloğlan çalışkan olmasına çalışkanmış ama bir türlü sabırlı olamazmış. Bir işe başlar, hemen bitmesini istermiş; bitmeyince de öfkelenip bırakırmış.

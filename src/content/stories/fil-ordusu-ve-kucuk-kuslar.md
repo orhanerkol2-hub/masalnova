@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Fîl suresi, 1–5. ayetler"
 sourceUrl: "https://quran.com/105"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

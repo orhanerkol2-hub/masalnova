@@ -13,6 +13,9 @@ categories: ["uyku","hayvan","egitici"]
 themes: ["uyku rutini","güven","sakinleşme","tekrar"]
 characters: ["Tomurcuk","Anne İnek"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---
 Akşam olmuştu.

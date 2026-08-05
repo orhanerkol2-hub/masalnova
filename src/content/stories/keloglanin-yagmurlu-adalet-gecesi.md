@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["adalet","dürüstlük","akıl"]
 characters: ["Keloğlan","Nine Ayşe","Tüccar Kirmen"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan yolu bir köye düşmüş. Gökyüzü kapkara bulutlarla örtülmüş, yağmur tan yeri ağarırken başlamış ve akşama kadar durmadan yağmış. Keloğlan sırılsıklam, sığınacak bir çatı ararken küçük bir evin kapısını çalmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["alçakgönüllülük","dostluk","paylaşma"]
 characters: ["Kükrem (horoz)","Düriye (baykuş)","Çiftlik hayvanları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir çiftlikte Kükrem adında bir horoz yaşarmış. Kükrem'in sesi çiftliğin en gür sesiymiş ve o bunu her fırsatta herkese hatırlatırmış.

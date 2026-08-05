@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["paylaşma","dostluk","cömertlik"]
 characters: ["Fındık Zıpzıp","Ayı Baldo"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde serin bir pınar varmış. Bu pınarın kenarında büyük bir fındık ağacı yetişirmiş ve bu ağaçta Fındık Zıpzıp adında bir sincap yaşarmış.

@@ -8,11 +8,14 @@ coverColor: "#b85f3d"
 coverImage: "/covers/stories/ayakkabici-ile-kucuk-yardimcilar.webp"
 altText: "İki küçük yardımcının kırmızı ayakkabılar yaptığı sıcak ayakkabıcı dükkânı masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["egitici", "uyku"]
 themes: ["iyilik", "yardımlaşma", "şükran"]
 characters: ["Musa Usta", "Ayşe Teyze", "Küçük Yardımcılar"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-28"
 ---
 Bir varmış, bir yokmuş. Küçük bir kasabanın dar bir sokağında, minicik bir ayakkabı dükkânı varmış. Bu dükkânın sahibi Musa Usta ile karısı Ayşe Teyze'ymiş.

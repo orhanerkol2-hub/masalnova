@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sorumluluk","emek","dayanışma"]
 characters: ["Bahçıvan Sadık","Değirmenci Nine Havva","Kırlangıç Fısfıs"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyün kenarında, artık kimsenin işletmediği eski bir değirmen dururmuş. Değirmenin taşları paslanmış, kanatları rüzgârda gıcırdayıp dururmuş. Köylüler değirmenin yanından geçerken başlarını sallar, "Ne yazık, bir zamanlar bu değirmen tüm köyün ekmeğini ununu öğütürdü" derlermiş.

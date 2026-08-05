@@ -8,11 +8,14 @@ coverColor: "#8b3f5d"
 coverImage: "/covers/stories/pamuk-prenses-ve-yedi-iyi-kalpli-dost.webp"
 altText: "Pamuk Prenses'in ay ışığı alan kulübede yedi dostundan birinin battaniyesini örttüğü masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 3
 categories: ["uyku", "egitici"]
 themes: ["yardımlaşma", "paylaşma", "şefkat"]
 characters: ["Pamuk Prenses", "Yedi İyi Kalpli Dost"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Ormanın derinliklerinde, çiçeklerle çevrili küçük bir ev vardı. Bu evde yedi arkadaş yaşardı; her sabah madenlere gider, orada parlak taşlar toplarlardı. Akşam olunca eve döner, birlikte yemek yer, şarkılar söylerlerdi.

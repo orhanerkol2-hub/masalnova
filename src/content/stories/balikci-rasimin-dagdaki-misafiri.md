@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["affetmek","sabır","dostluk"]
 characters: ["Balıkçı Rasim","Komşu Hasan"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağ başında küçük bir kulübede sabırlı bir balıkçı yaşarmış. Adı Rasim'miş. Her sabah gölete gider, akşama kadar sessizce oltasını sallar, yakaladığı balıkları komşularıyla paylaşırmış.

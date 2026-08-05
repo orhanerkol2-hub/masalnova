@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["merhamet","cesaret","yardımseverlik"]
 characters: ["Doruk","Martı Sedef","Balıkçı Kaptan Vahit"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, mavi denizin kıyısında küçük bir köy varmış. Bu köyde Doruk adında cesur bir çocuk yaşarmış. Doruk her sabah güneş doğmadan kalkar, kumsalda yürür, dalgaların sesini dinlermiş.

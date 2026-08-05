@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","dürüstlük","güleryüzlülük"]
 characters: ["Keloğlan","Dev Kumsal","Nine Ayşe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğindeki küçük bir köyde Keloğlan yaşarmış. Köy küçük ama sıcacık bir yermiş; herkes birbirini tanır, herkes birbirine yardım edermiş. Ama son zamanlarda köyün üstündeki tepede kocaman bir devin yaşadığı söylenir, kimse o tepeye çıkmaya cesaret edemezmiş.

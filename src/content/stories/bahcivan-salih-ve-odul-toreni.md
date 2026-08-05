@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["alçakgönüllülük","paylaşma","işbirliği"]
 characters: ["Bahçıvan Salih","Muhtar Necati","Küçük Ayşe"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde Salih adında güler yüzlü bir bahçıvan yaşarmış. Salih'in bahçesi köyün en güzel bahçesiymiş; kırmızı güller, sarı papatyalar ve mis kokulu laleler sıra sıra dizilirmiş.

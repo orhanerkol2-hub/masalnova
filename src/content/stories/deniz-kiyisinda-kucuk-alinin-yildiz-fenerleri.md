@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["hoşgörü","dostluk","huzur"]
 characters: ["küçük Ali","yengeç Sedef","martı Bulut"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ay ışığının denize düştüğü sakin bir kıyıda küçük Ali yaşarmış. Ali, küçük ama çok cesur bir çocukmuş; her akşam kumsala inip dalgaları dinlermiş.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","merak","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Yaşlı kadın Fadime Nine"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağın eteğinde küçük bir köy varmış. Bu köyde Keloğlan adında, kel kafalı ama yüreği bal gibi tatlı bir delikanlı yaşarmış. Herkes onu severmiş, çünkü Keloğlan hem çok zeki hem de çok yardımsevermiş.

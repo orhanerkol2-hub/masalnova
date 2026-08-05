@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["nezaket","paylaşma","yardımseverlik"]
 characters: ["Dede Fikret","Küçük Elmas","Kar Kuşu"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğindeki küçük köyde Dede Fikret adında yaşlı ve bilge bir adam yaşarmış. Köylüler her sorunlarında ona koşar, o da her zaman tatlı bir gülümsemeyle onlara yol gösterirmiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["şükür","huzur","doğa sevgisi"]
 characters: ["Minik Elif","Pınar Perisi","Ay Dede"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir vadinin ucunda serin bir pınar varmış. Bu pınarın suyu ay ışığında incecik parlar, gece olunca usulca mırıldanırmış: şırıl, şırıl, şırıl.
@@ -28,7 +31,7 @@ Tam o anda gökyüzünden Ay Dede gülümseyerek bakmış. "Doğru söylüyor," 
 
 Elif, gökyüzündeki yıldızları saymaya başlamış: bir, iki, üç... Her yıldız için küçük bir şükür fısıldamış: annesine, pınara, serin suya, parıldayan aya.
 
-Annesi onu kucaklamış, yumuşacık battaniyeye sarmış. Pınarın şırıltısı, Ay Dede'nin ışığı ve yıldızların pırıltısı, Elif'in gözkapaklarını ağırlaştırmış.
+Annesi onu kucaklamış, yumuşacık battaniyeye sarmış. Pınarın şırıltısı, Ay Dede'nin ışığı ve yıldızların pırıltısı, Elif'in göz kapaklarını ağırlaştırmış.
 
 "Şükürle dolu bir kalp, en tatlı uykuları getirir," diye fısıldamış Pınar Perisi son bir kez, sesi giderek uzaklaşan bir ninni gibi hafiflemiş.
 

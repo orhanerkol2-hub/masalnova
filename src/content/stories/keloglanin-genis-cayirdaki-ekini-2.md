@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["çalışkanlık","dürüstlük","azim"]
 characters: ["Keloğlan","Padişah","Tembel Hasan"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında uçsuz bucaksız geniş bir çayır varmış. Bu çayır yıllardır boş dururmuş, çünkü köylüler onu işlemeyi göze alamazmış. Toprağı taşlıymış, otları sertmiş, kimse başlayıp bitirmeye cesaret edemezmiş.

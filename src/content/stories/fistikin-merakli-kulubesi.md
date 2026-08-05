@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["merak","dostluk","sabır"]
 characters: ["Fıstık","Baykuş Devrim","Tarla Faresi Nine Nazlı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın yüksek yamaçlarında Fıstık adında meraklı bir sincap yaşarmış. Fıstık'ın gözleri her zaman parıl parıl olurmuş, çünkü etrafındaki her şeyi öğrenmek istermiş.

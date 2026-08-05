@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["saygı","merak","incelik"]
 characters: ["Elmas","Saray Bekçisi Nine Sultan","Kraliçe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında meraklı küçük bir kız yaşarmış. Adı Elmas'mış. Bir gün köyün üstündeki tepede ışıl ışıl bir saray gördüğünde, gözleri fal taşı gibi açılmış.

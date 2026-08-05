@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["affetmek","empati","dostluk"]
 characters: ["Defne","Emir","Kardan Adam"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, kar taneleri gökten pamuk gibi süzülürmüş. Bu köyde Defne adında meraklı küçük bir kız yaşarmış. Defne her şeyi bilmek isterdi; kuşların nereye uçtuğunu, karın neden beyaz olduğunu, hatta rüzgârın ne konuştuğunu merak ederdi.

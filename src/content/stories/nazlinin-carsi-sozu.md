@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sözünde durmak","dürüstlük","sorumluluk"]
 characters: ["Nazlı","Baharatçı Rüstem Dede","Kedi Fındık"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, taşı toprağı bereketli bir şehirde meraklı küçük bir kız yaşarmış. Adı Nazlı'ymış. Nazlı'nın en sevdiği yer, şehrin ortasındaki kalabalık çarşıymış. Orada rengarenk halılar, kokulu baharatlar, cıvıl cıvıl kuşlar satılırmış.

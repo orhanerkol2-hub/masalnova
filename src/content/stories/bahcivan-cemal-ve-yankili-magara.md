@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["azim","sabır","umut"]
 characters: ["Bahçıvan Cemal","Yankı Kuşu Zeytin"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde Cemal adında güler yüzlü bir bahçıvan yaşarmış. Onun elleri toprağa değince, en cılız fideler bile gülümser gibi büyürmüş. Ama bir gün köyün çiçekleri sararmaya başlamış ve kimse sebebini bulamamış.

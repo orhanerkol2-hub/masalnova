@@ -8,11 +8,14 @@ coverColor: "#9b6b9f"
 coverImage: "/covers/stories/uyuyan-guzel-ve-sevgi-dolu-uyku.webp"
 altText: "Prenses Rüzgâr Çiçeği'nin anne ve babası yanında, altın rüya ışığı altında huzurla uyuduğu masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 3
 categories: ["uyku"]
 themes: ["uyku", "aile sevgisi", "dinlenme"]
 characters: ["Prenses Rüzgâr Çiçeği", "Anne", "Baba", "İyi Kalpli Peri"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Küçük bir krallıkta, Rüzgâr Çiçeği adında sevimli bir küçük prenses yaşardı. Rüzgâr Çiçeği çok enerjikti; sabahtan akşama kadar koşar, bahçede oynar, kelebekleri kovalar, arkadaşlarıyla saklambaç oynardı.

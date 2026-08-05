@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sabır","huzur","sakinlik"]
 characters: ["Balıkçı Sadık","Küçük kedi Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, denizin kıyısında küçük bir köy varmış. Bu köyde Sadık adında sabırlı bir balıkçı yaşarmış. Sadık her akşam, gün batıp ay yükselince sahile inermiş.

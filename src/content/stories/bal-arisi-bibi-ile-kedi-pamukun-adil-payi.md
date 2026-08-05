@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["adalet","paylaşma","dostluk"]
 characters: ["Bibi (arı)","Pamuk (kedi)","Martı Deniz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısında küçük bir köy varmış. Bu köyün kumsalında Bibi adında çalışkan bir arı ile Pamuk adında tembel ama tatlı bir kedi yaşarmış. İkisi de kumsalın aynı köşesinde otururlar, dalgaların sesini dinlerlermiş.

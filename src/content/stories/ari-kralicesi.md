@@ -8,11 +8,14 @@ coverColor: "#d59b18"
 coverImage: "/covers/stories/ari-kralicesi.webp"
 altText: "Umut'un omzundaki Arı Kraliçesi ile inci taşıyan karıncaları ve anahtar getiren ördekleri gösteren masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["egitici", "hayvan", "uyku"]
 themes: ["merhamet", "yardımlaşma", "doğayı koruma"]
 characters: ["Umut", "Arı Kraliçesi", "Karıncalar", "Ördekler"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-28"
 ---
 Bir varmış, bir yokmuş. Bir zamanlar üç kardeş varmış. En büyüğünün adı Barış, ortancanın adı Deniz, en küçüğünün adı ise Umut'muş.

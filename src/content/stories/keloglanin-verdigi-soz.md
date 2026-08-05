@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sözünde durmak","dürüstlük","akıl"]
 characters: ["Keloğlan","Padişah","Yaşlı Bahçıvan Kadın"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında kel kafalı ama zeki bir çocuk yaşarmış. Köyünde kimsenin çözemediği bilmeceleri o çözer, kimsenin bulamadığı çözümleri o bulurmuş.

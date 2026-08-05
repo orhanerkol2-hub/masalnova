@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["hoşgörü","dostluk","farklılıklara saygı"]
 characters: ["Turuncu tilki Fındık","Baykuş Hikmet","Kirpi Minnak"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en ucunda, ay ışığında gümüş gibi parlayan bir patika varmış. Bu patikadan her gece farklı hayvanlar geçer, ama hepsi kendi yolunda yürümek isterdi.

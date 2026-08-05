@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dostluk","yardımlaşma","paylaşma"]
 characters: ["Fındık (fil)","Tombik (tavşan)","Cıvıl (kuş)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, hayvanlar diyarının en kalabalık çarşısında Fındık adında iri ve nazik bir fil yaşarmış. Fındık'ın hortumu o kadar uzunmuş ki, en yüksek tezgahtaki elmaları bile kimseden yardım almadan alabilirmiş. Ama Fındık'ın en sevdiği şey, çarşıda dost ziyaret etmekmiş.

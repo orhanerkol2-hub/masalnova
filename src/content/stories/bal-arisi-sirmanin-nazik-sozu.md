@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["nezaket","paylaşma","dostluk"]
 characters: ["Sırma (Arı)","Köstebek Bodo","Tavşan Filiz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, yemyeşil bir ormanın kenarında serin bir pınar akarmış. Bu pınarın çevresi, ormanın en canlı buluşma yeriymiş; kuşlar, tavşanlar, köstebekler hep oraya gelip su içermiş.

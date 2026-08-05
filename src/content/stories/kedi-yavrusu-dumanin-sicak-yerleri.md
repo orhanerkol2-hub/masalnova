@@ -13,6 +13,9 @@ categories: ["uyku","hayvan","egitici"]
 themes: ["beden farkındalığı","gevşeme","güven","dinlenme"]
 characters: ["Duman","Tarçın"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---
 Bir evin salonunda bir soba yanardı.

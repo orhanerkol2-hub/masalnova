@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["merhamet","dostluk","yardımlaşma"]
 characters: ["Rana (kaplumbağa)","Fıstık (sincap)","Kelebek Sema"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, rengarenk çiçeklerle dolu bir bahçede Rana adında yaşlıca bir kaplumbağa yaşarmış. Rana yavaş yürürmüş ama kalbi her zaman koşar gibi çabuk atarmış; çünkü etrafındaki herkese yardım etmeyi çok severmiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["dürüstlük","yardımseverlik","huzur"]
 characters: ["Küçük Elmas","Komşu Rana Teyze"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kar taneleri usulca gökten süzülürmüş bir kış akşamında.

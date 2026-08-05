@@ -13,6 +13,9 @@ characters: ["Keloğlan"]
 relatedVideoIds: ["Yrt45W_743A"]
 isNew: true
 isPopular: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-01"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyde Keloğlan adında pırıl pırıl gözlü, güler yüzlü bir çocuk yaşarmış. Başı keldir diye ona Keloğlan derlermiş ama onun kalbi köyün en yumuşak, en iyi kalbiymiş.

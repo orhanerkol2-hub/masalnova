@@ -17,6 +17,8 @@ sourceType: "hadith"
 sourceCitation: "Ahmed b. Hanbel, el-Müsned 23737 — hasen rivayet"
 sourceUrl: "https://hadithweb.com/ahmad:23737"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

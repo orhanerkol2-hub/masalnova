@@ -8,11 +8,14 @@ coverColor: "#b56f32"
 coverImage: "/covers/stories/pinokyo-ve-dogruluk-yildizi.webp"
 altText: "Baba Cepetto ile Pinokyo'nun marangoz atölyesinde parlayan doğruluk yıldızına baktığı gece sahnesi"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 3
 categories: ["uyku", "egitici"]
 themes: ["dürüstlük", "sevgi", "sorumluluk"]
 characters: ["Pinokyo", "Baba Cepetto", "Doğruluk Yıldızı"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Bir zamanlar, küçük bir dağ köyünde Marangoz Baba Cepetto yaşardı. Baba Cepetto'nun elleri çok ustaydı; masalar, sandalyeler, oyuncak atlar yapardı. Ama en çok istediği şey bir çocuğu olmasıydı.

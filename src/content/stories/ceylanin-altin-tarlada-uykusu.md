@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["yardımlaşma","huzur","dostluk"]
 characters: ["Ceylan","Tarla Kuşu Civciv","Yaşlı Öküz Boncuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ayın yumuşacık ışığının düştüğü altın başaklı bir tarlada, meraklı küçük bir kız yaşarmış. Adı Ceylan'mış. Her akşam, güneş yavaşça batarken tarlaya gidip başakların nasıl fısıldaştığını dinlermiş.

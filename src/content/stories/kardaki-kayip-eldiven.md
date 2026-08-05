@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["dürüstlük","yardımseverlik"]
 characters: ["Ela","Komşu Teyze Handan","Küçük Bora"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir dağ kasabasında Ela adında meraklı bir kız yaşarmış. O kış, kasabaya öyle bol kar düşmüş ki, sokaklar bembeyaz bir örtüyle kaplanmış. Ela her sabah kardan adam yapmak için bahçeye koşarmış.

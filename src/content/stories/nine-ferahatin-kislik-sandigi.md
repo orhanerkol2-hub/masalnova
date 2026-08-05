@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["tutumluluk","paylaşma","emek"]
 characters: ["Nine Ferahat","Deniz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın en yüksek yerinde küçük ve sıcacık bir kulübe varmış. Bu kulübede Nine Ferahat yaşarmış. Nine Ferahat'ın elleri hem çok becerikli hem de çok şefkatliymiş.

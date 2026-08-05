@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["affetmek","hoşgörü","dostluk"]
 characters: ["Bahçıvan Rasim","Küçük Elmas","Kırlangıç Familya"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında geniş bir çayır varmış. Bu çayırın ortasında küçük bir bahçe kurmuş, güler yüzlü bir bahçıvan yaşarmış. Adı Rasim'miş. Her sabah gül fidanlarını sularken kuşlara şarkı söyler, çayırdaki çocuklarla gülüşürmüş.

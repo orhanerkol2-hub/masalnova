@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dürüstlük","doğruluk","güven"]
 characters: ["Kuzu Beyaz","Tilki Cengaver","Çarşı Bekçisi Baykuş"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalabalık bir çarşının hemen kenarında Kuzu Beyaz adında yumuşacık, beyaz yünlü bir kuzu yaşarmış. Beyaz her sabah annesiyle çarşıya gelir, tezgahların arasında dolaşır, satıcıların gülüşmelerini dinlerdi.

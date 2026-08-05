@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sabır","merak","doğayı gözlemleme"]
 characters: ["Mira","Dede Kerim","Gökkuyusu Kuşu"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların eteğinde küçük bir köy varmış. Bu köyde Mira adında meraklı bir kız yaşarmış. Mira'nın en büyük merakı gökyüzü olurmuş; her akşam evinin bahçesine çıkar, yıldızları sayar, isimlerini uydururmuş.

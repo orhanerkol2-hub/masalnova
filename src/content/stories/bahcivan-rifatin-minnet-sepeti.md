@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["şükür","paylaşma"]
 characters: ["Bahçıvan Rıfat","küçük kız Elma"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, kalabalık bir çarşının ortasında güler yüzlü bir bahçıvan varmış. Adı Rıfat'mış. Her sabah bahçesinden topladığı kırmızı elmaları, sarı ayvaları büyük bir sepete doldurur, çarşıya götürürmüş.

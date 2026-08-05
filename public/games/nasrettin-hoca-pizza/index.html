@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="theme-color" content="#143e45">
+  <meta name="color-scheme" content="only light">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'self'">
+  <title>Nasrettin Hoca'nın Pizzahanesi | MasalNova</title>
+  <link rel="preload" as="image" href="./assets/nasrettin-hoca-pizza-kitchen.webp">
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Nunito", "Avenir Next", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --cream: #fff7dc;
+      --paper: #fffaf0;
+      --ink: #18353a;
+      --teal: #0b5960;
+      --teal-dark: #073c43;
+      --tomato: #e94b2d;
+      --tomato-dark: #a82e1d;
+      --gold: #ffd359;
+      --green: #397d4d;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #102f34; }
+    body { overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
+    button { border: 0; font: inherit; cursor: pointer; }
+    button:focus-visible { outline: 4px solid #fff; outline-offset: 3px; }
+    [hidden] { display: none !important; }
+
+    .game {
+      position: relative;
+      width: 100%;
+      height: 100dvh;
+      min-height: 100%;
+      overflow: hidden;
+      isolation: isolate;
+      user-select: none;
+      touch-action: none;
+      background: #173f43;
+    }
+    .scene {
+      position: absolute;
+      z-index: -3;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(5,29,31,.2), transparent 38%, rgba(5,29,31,.1)),
+        url('./assets/nasrettin-hoca-pizza-kitchen.webp') 50% 50% / cover no-repeat;
+      transform: scale(1.012);
+    }
+    .scene::after {
+      position: absolute;
+      inset: 0;
+      content: '';
+      background: linear-gradient(180deg, rgba(6,26,29,.42), transparent 23%, transparent 62%, rgba(6,25,28,.46));
+      pointer-events: none;
+    }
+    .ember-field { position: absolute; z-index: -1; inset: 0; overflow: hidden; pointer-events: none; }
+    .ember {
+      position: absolute;
+      bottom: 28%;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #ffd56a;
+      box-shadow: 0 0 10px #ff8b31;
+      animation: float-ember 4.8s linear infinite;
+      opacity: 0;
+    }
+    .ember:nth-child(1) { left: 32%; animation-delay: -.4s; }
+    .ember:nth-child(2) { left: 37%; animation-delay: -2.2s; animation-duration: 5.6s; }
+    .ember:nth-child(3) { left: 30%; animation-delay: -3.4s; animation-duration: 4.2s; }
+    .ember:nth-child(4) { left: 41%; animation-delay: -1.5s; animation-duration: 6.2s; }
+    @keyframes float-ember {
+      0% { opacity: 0; transform: translate(0, 0) scale(.6); }
+      20% { opacity: .9; }
+      100% { opacity: 0; transform: translate(38px, -260px) scale(1.1); }
+    }
+
+    .hud {
+      position: absolute;
+      z-index: 10;
+      inset: max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) auto max(12px, env(safe-area-inset-left));
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      pointer-events: none;
+    }
+    .brand-chip,
+    .stat-card,
+    .time-card,
+    .icon-button {
+      border: 2px solid rgba(255,255,255,.68);
+      background: rgba(255,250,235,.94);
+      box-shadow: 0 10px 28px rgba(8,29,31,.24);
+      backdrop-filter: blur(12px);
+    }
+    .brand-chip {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 54px;
+      padding: 8px 14px;
+      border-radius: 18px;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .brand-chip .mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 11px; background: var(--tomato); font-size: 1.25rem; }
+    .brand-chip span { display: block; font-size: .56rem; font-weight: 1000; letter-spacing: .12em; text-transform: uppercase; }
+    .brand-chip strong { display: block; margin-top: 3px; color: var(--teal); font-size: .82rem; font-weight: 1000; }
+    .stats { display: flex; flex: 1; justify-content: center; gap: 8px; }
+    .stat-card { min-width: 92px; min-height: 54px; padding: 7px 13px; border-radius: 18px; color: var(--ink); text-align: center; }
+    .stat-card span { display: block; font-size: .55rem; font-weight: 1000; letter-spacing: .11em; }
+    .stat-card strong { display: block; margin-top: 2px; font-size: 1.17rem; line-height: 1; }
+    .stat-card.combo strong { color: var(--tomato); }
+    .time-card { width: min(230px, 24vw); min-height: 54px; padding: 7px 12px; border-radius: 18px; color: var(--ink); }
+    .time-line { display: flex; align-items: center; justify-content: space-between; font-size: .64rem; font-weight: 1000; letter-spacing: .08em; }
+    .time-line strong { color: var(--tomato); font-size: 1rem; }
+    .meter { height: 7px; margin-top: 5px; overflow: hidden; border-radius: 99px; background: #decfb4; }
+    .meter span { display: block; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #49a85e, #ffd159 68%, #ef4d32); transform-origin: left; transition: transform .15s linear; }
+    .hud-actions { display: flex; gap: 7px; pointer-events: auto; }
+    .icon-button { display: grid; min-width: 54px; min-height: 54px; place-items: center; border-radius: 18px; color: var(--teal); font-size: 1.18rem; font-weight: 1000; }
+    .icon-button:active { transform: translateY(2px); }
+
+    .ticket {
+      position: absolute;
+      z-index: 6;
+      top: 82px;
+      right: max(18px, env(safe-area-inset-right));
+      width: min(330px, 28vw);
+      padding: 15px 16px 14px;
+      border: 2px solid rgba(103,67,29,.24);
+      border-radius: 9px 9px 22px 22px;
+      background: linear-gradient(180deg, #fffdf3, #fff3cf);
+      color: var(--ink);
+      box-shadow: 0 18px 42px rgba(34,20,8,.32);
+      transform: rotate(.5deg);
+    }
+    .ticket::before {
+      position: absolute;
+      top: -8px;
+      left: 20px;
+      width: 48px;
+      height: 16px;
+      border-radius: 3px;
+      background: rgba(218,182,109,.7);
+      content: '';
+      transform: rotate(-4deg);
+    }
+    .ticket-top { display: flex; align-items: center; gap: 10px; }
+    .avatar { display: grid; flex: 0 0 auto; width: 43px; height: 43px; place-items: center; border-radius: 50%; background: #fee39b; font-size: 1.5rem; box-shadow: inset 0 0 0 2px rgba(111,66,14,.12); }
+    .ticket-kicker { display: block; color: var(--tomato); font-size: .57rem; font-weight: 1000; letter-spacing: .13em; text-transform: uppercase; }
+    .ticket h2 { margin: 2px 0 0; font-size: 1rem; line-height: 1.1; }
+    .order-name { margin: 10px 0 7px; color: #6f4a1a; font-size: .73rem; font-weight: 1000; }
+    .order-list { display: flex; flex-wrap: wrap; gap: 5px; margin: 0; padding: 0; list-style: none; }
+    .order-list li { display: inline-flex; align-items: center; gap: 4px; padding: 5px 8px; border: 1px solid #ead7ad; border-radius: 999px; background: #fff; font-size: .67rem; font-weight: 1000; }
+    .patience { margin-top: 10px; }
+    .patience-label { display: flex; justify-content: space-between; margin-bottom: 3px; color: #7a6a4c; font-size: .56rem; font-weight: 1000; letter-spacing: .08em; }
+    .patience .meter { height: 6px; margin: 0; background: #e7d8bc; }
+    .patience .meter span { background: linear-gradient(90deg, #48a65d, #ffd156 62%, #ef4932); }
+
+    .speech {
+      position: absolute;
+      z-index: 5;
+      top: 45%;
+      left: clamp(20px, 22vw, 355px);
+      max-width: 220px;
+      padding: 10px 14px;
+      border: 3px solid var(--ink);
+      border-radius: 19px 19px 19px 4px;
+      background: #fffdf4;
+      color: var(--ink);
+      font-size: clamp(.7rem, 1.2vw, .86rem);
+      font-weight: 1000;
+      line-height: 1.25;
+      box-shadow: 0 10px 26px rgba(10,30,31,.24);
+      animation: speech-pop .22s ease-out;
+      pointer-events: none;
+    }
+    @keyframes speech-pop { from { opacity: 0; transform: scale(.72); } to { opacity: 1; transform: scale(1); } }
+
+    .hoca-portrait { display: none; }
+
+    .pizza-zone {
+      position: absolute;
+      z-index: 4;
+      left: 55%;
+      top: 56%;
+      width: clamp(250px, 31vw, 420px);
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%) perspective(800px) rotateX(7deg);
+      transition: filter .2s, transform .2s;
+    }
+    .pizza-zone.drag-over { filter: drop-shadow(0 0 28px #ffe176); transform: translate(-50%, -50%) perspective(800px) rotateX(3deg) scale(1.035); }
+    .board {
+      position: absolute;
+      inset: -7%;
+      border: 5px solid rgba(95,52,21,.55);
+      border-radius: 50%;
+      background:
+        repeating-radial-gradient(ellipse at 38% 22%, transparent 0 15px, rgba(91,47,19,.08) 16px 18px),
+        radial-gradient(circle at 42% 35%, #dfa966, #9b5d2c 76%);
+      box-shadow: 0 26px 42px rgba(40,18,8,.42), inset 0 0 0 4px rgba(255,224,162,.18), inset 0 -15px 28px rgba(70,30,9,.2);
+    }
+    .board::after { position: absolute; inset: 6%; border: 2px dashed rgba(94,54,24,.32); border-radius: inherit; content: ''; box-shadow: 0 0 0 1px rgba(255,231,183,.1); }
+    .pizza {
+      position: absolute;
+      z-index: 1;
+      inset: 10%;
+      isolation: isolate;
+      border-radius: 50%;
+      background: radial-gradient(circle at 42% 34%, #f7d98f, #e2a747 78%);
+      box-shadow: inset 0 0 0 3px rgba(255,245,193,.42), 0 10px 17px rgba(64,29,8,.34);
+    }
+    .pizza::before {
+      position: absolute;
+      z-index: -1;
+      inset: clamp(-23px, -2vw, -14px);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 16% 31%, #a85e23 0 2.3%, transparent 2.7%),
+        radial-gradient(circle at 75% 20%, #b96e29 0 2%, transparent 2.5%),
+        radial-gradient(circle at 88% 58%, #9f561f 0 2.2%, transparent 2.8%),
+        radial-gradient(circle at 62% 90%, #b96d28 0 2.3%, transparent 2.8%),
+        radial-gradient(circle at 25% 82%, #a85b20 0 1.8%, transparent 2.4%),
+        radial-gradient(circle at 45% 6%, #d88f3a 0 3.5%, transparent 4%),
+        radial-gradient(circle at 42% 34%, #f6cc73 0, #e9a94c 61%, #c9782d 88%, #9c501e 100%);
+      box-shadow: inset 0 0 0 3px rgba(255,231,154,.45), inset 0 -11px 16px rgba(116,50,11,.24), 0 7px 10px rgba(62,25,6,.28);
+      content: '';
+    }
+    .pizza::after { position: absolute; z-index: 20; inset: -2px; border-radius: 50%; box-shadow: inset 0 0 18px rgba(111,48,10,.17); content: ''; pointer-events: none; }
+    .sauce-layer,
+    .cheese-layer { position: absolute; inset: 0; overflow: hidden; border-radius: 50%; opacity: 0; transform: scale(.82); transition: opacity .2s, transform .22s cubic-bezier(.2,.8,.3,1.3); }
+    .sauce-layer {
+      background:
+        radial-gradient(circle at 18% 33%, rgba(255,184,111,.28) 0 1.3%, transparent 1.8%),
+        radial-gradient(circle at 68% 72%, rgba(255,184,111,.24) 0 1.5%, transparent 2%),
+        radial-gradient(circle at 72% 22%, rgba(111,21,13,.18) 0 1.2%, transparent 1.7%),
+        radial-gradient(circle at 40% 38%, #ef6844, #b92c1e 78%);
+      box-shadow: inset 0 0 14px rgba(85,20,10,.27);
+    }
+    .cheese-layer {
+      z-index: 2;
+      inset: 3%;
+      background:
+        radial-gradient(ellipse at 22% 28%, #fff2a5 0 7%, transparent 7.5%),
+        radial-gradient(ellipse at 73% 35%, #ffe88c 0 6%, transparent 6.5%),
+        radial-gradient(ellipse at 49% 74%, #ffe994 0 8%, transparent 8.5%),
+        radial-gradient(circle at 38% 33%, #ffdf67, #e9a928 82%);
+      box-shadow: inset 0 0 15px rgba(155,78,9,.24);
+    }
+    .cheese-layer::after {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background:
+        radial-gradient(circle at 30% 22%, rgba(177,89,16,.36) 0 1.8%, transparent 2.3%),
+        radial-gradient(circle at 67% 28%, rgba(177,89,16,.3) 0 1.5%, transparent 2%),
+        radial-gradient(circle at 78% 68%, rgba(177,89,16,.32) 0 2%, transparent 2.5%),
+        radial-gradient(circle at 34% 73%, rgba(177,89,16,.26) 0 1.4%, transparent 1.9%);
+      content: '';
+      mix-blend-mode: multiply;
+    }
+    .pizza.has-sos .sauce-layer,
+    .pizza.has-peynir .cheese-layer { opacity: 1; transform: scale(1); }
+    .pieces { position: absolute; z-index: 3; inset: 0; border-radius: 50%; }
+    .piece { position: absolute; display: grid; place-items: center; transform: translate(-50%, -50%); animation: topping-drop .22s cubic-bezier(.2,.9,.3,1.35) both; }
+    @keyframes topping-drop { from { opacity: 0; transform: translate(-50%, -50%) scale(1.8) rotate(-20deg); } to { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(var(--turn, 0deg)); } }
+    .piece.sucuk { width: 12%; aspect-ratio: 1; border: 2px solid #92271e; border-radius: 50%; background: radial-gradient(circle at 31% 30%, #f5a06e 0 5%, transparent 6%), radial-gradient(circle at 67% 36%, #f7b17b 0 4%, transparent 5%), radial-gradient(circle at 48% 70%, #f18b5d 0 5%, transparent 6%), linear-gradient(145deg, #da5a3d, #a92b26); box-shadow: inset 0 0 0 2px rgba(255,165,111,.2), inset 0 -3px 4px rgba(100,20,13,.2), 0 3px 4px rgba(85,25,12,.25); }
+    .piece.mantar { width: 14%; height: 12%; filter: drop-shadow(0 2px 1px rgba(70,35,13,.24)); }
+    .piece.mantar::before { position: absolute; z-index: 2; top: 0; left: 5%; width: 90%; height: 63%; border: 2px solid #a66c38; border-radius: 70% 70% 38% 38%; background: linear-gradient(145deg, #fff1c8, #c99359); box-shadow: inset 0 2px 2px rgba(255,255,255,.55); content: ''; }
+    .piece.mantar::after { position: absolute; bottom: 0; left: 39%; width: 25%; height: 58%; border: 2px solid #a66c38; border-top: 0; border-radius: 0 0 40% 40%; background: #ead3a5; content: ''; }
+    .piece.zeytin { width: 8%; aspect-ratio: 1; border: clamp(3px, .55vw, 7px) solid #252922; border-radius: 50%; background: transparent; box-shadow: 0 2px 2px rgba(45,35,20,.22); }
+    .piece.biber { width: 15%; height: 9%; border: clamp(2px, .35vw, 4px) solid #2f7d3d; border-top: 0; border-radius: 0 0 999px 999px; background: transparent; box-shadow: inset 0 -2px 0 rgba(255,255,255,.18), 0 2px 2px rgba(40,74,28,.18); }
+    .piece.misir { width: 6%; aspect-ratio: .72; border: 1px solid #d58b17; border-radius: 50%; background: #ffd63e; box-shadow: inset 1px 1px 0 #fff09d; }
+    .piece.aci { width: 16%; height: 5%; border: 2px solid #9e211b; border-radius: 999px 35% 35% 999px; background: linear-gradient(180deg, #f86645, #d72f28); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 2px 2px rgba(87,20,15,.2); }
+    .empty-copy { position: absolute; z-index: 6; inset: 0; display: none; place-items: center; color: rgba(105,58,18,.64); font-size: clamp(.73rem, 1.6vw, 1rem); font-weight: 1000; text-align: center; transform: rotate(-4deg); }
+    .pizza.empty-hint .empty-copy { display: grid; }
+
+    .ingredient-dock {
+      position: absolute;
+      z-index: 9;
+      right: max(14px, env(safe-area-inset-right));
+      bottom: max(12px, env(safe-area-inset-bottom));
+      left: max(14px, env(safe-area-inset-left));
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      padding: 10px;
+      border: 2px solid rgba(255,255,255,.62);
+      border-radius: 24px;
+      background: rgba(7,50,54,.88);
+      box-shadow: 0 18px 44px rgba(5,24,26,.38);
+      backdrop-filter: blur(13px);
+    }
+    .ingredients { display: grid; grid-template-columns: repeat(8, minmax(62px, 1fr)); gap: 7px; }
+    .ingredient {
+      position: relative;
+      min-height: 66px;
+      padding: 6px 4px 5px;
+      border: 2px solid rgba(255,255,255,.26);
+      border-radius: 17px;
+      background: rgba(255,255,255,.1);
+      color: #fff;
+      transition: transform .15s, background .15s, border-color .15s;
+      touch-action: none;
+    }
+    .ingredient:hover { transform: translateY(-3px); background: rgba(255,255,255,.17); }
+    .ingredient[aria-pressed="true"] { border-color: var(--gold); background: #fff6d0; color: var(--ink); box-shadow: 0 0 0 3px rgba(255,211,89,.22); transform: translateY(-3px); }
+    .ingredient .icon { display: block; font-size: 1.55rem; line-height: 1; }
+    .ingredient .label { display: block; margin-top: 4px; font-size: .59rem; font-weight: 1000; }
+    .ingredient .key { position: absolute; top: 4px; right: 5px; width: 16px; height: 16px; border-radius: 5px; background: rgba(0,0,0,.2); color: inherit; font-size: .5rem; font-weight: 1000; line-height: 16px; }
+    .dock-actions { display: flex; gap: 8px; }
+    .clear-button,
+    .serve-button { min-height: 58px; border-radius: 17px; font-size: .71rem; font-weight: 1000; letter-spacing: .03em; }
+    .clear-button { width: 74px; border: 2px solid rgba(255,255,255,.4); background: rgba(255,255,255,.12); color: #fff; }
+    .serve-button { min-width: 145px; padding: 8px 16px; border: 2px solid #fff0a5; background: linear-gradient(180deg, #ffd759, #f29e24); color: #573000; box-shadow: 0 6px 0 #a84f17, 0 12px 18px rgba(0,0,0,.23); }
+    .serve-button span { display: block; font-size: 1.35rem; line-height: .9; }
+    .serve-button:active { box-shadow: 0 2px 0 #a84f17; transform: translateY(4px); }
+
+    .toast {
+      position: absolute;
+      z-index: 20;
+      top: 18%;
+      left: 50%;
+      min-width: 220px;
+      padding: 10px 18px;
+      border: 2px solid #fff;
+      border-radius: 999px;
+      background: var(--teal);
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(5,27,29,.3);
+      font-size: clamp(.75rem, 1.7vw, .96rem);
+      font-weight: 1000;
+      text-align: center;
+      transform: translateX(-50%);
+      animation: toast-pop .25s cubic-bezier(.2,.9,.2,1.3);
+      pointer-events: none;
+    }
+    .toast.good { background: #278254; }
+    .toast.bad { background: #c73e2b; }
+    @keyframes toast-pop { from { opacity: 0; transform: translateX(-50%) scale(.7); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
+    .drag-ghost { position: fixed; z-index: 50; display: grid; width: 64px; height: 64px; place-items: center; border: 3px solid #fff; border-radius: 50%; background: #fff5cb; box-shadow: 0 12px 28px rgba(0,0,0,.3); font-size: 2rem; transform: translate(-50%, -50%); pointer-events: none; }
+    .confetti { position: absolute; z-index: 18; width: 9px; height: 16px; border-radius: 3px; animation: confetti 1s ease-out forwards; pointer-events: none; }
+    @keyframes confetti { to { opacity: 0; transform: translate(var(--x), var(--y)) rotate(560deg); } }
+
+    .overlay {
+      position: absolute;
+      z-index: 30;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: max(18px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
+      background: linear-gradient(90deg, rgba(5,29,31,.48), rgba(5,29,31,.16) 46%, rgba(5,29,31,.46));
+      backdrop-filter: blur(2px);
+    }
+    .menu {
+      position: relative;
+      width: min(590px, 94vw);
+      padding: clamp(22px, 4vw, 38px);
+      border: 3px solid rgba(255,255,255,.72);
+      border-radius: 30px;
+      background: linear-gradient(150deg, rgba(255,251,235,.97), rgba(255,237,192,.95));
+      color: var(--ink);
+      text-align: center;
+      box-shadow: 0 32px 90px rgba(4,23,25,.48);
+    }
+    .menu::before { position: absolute; inset: 8px; border: 2px dashed rgba(129,75,25,.18); border-radius: 22px; content: ''; pointer-events: none; }
+    .menu-kicker { position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 999px; background: var(--teal); color: #fff; font-size: .62rem; font-weight: 1000; letter-spacing: .11em; }
+    .menu h1 { position: relative; max-width: 510px; margin: 12px auto 0; color: var(--tomato); font-size: clamp(2.2rem, 7vw, 4.5rem); line-height: .78; letter-spacing: -.07em; text-shadow: 0 3px 0 #fff; }
+    .menu h1 span { display: block; margin-top: 10px; color: var(--teal); font-size: .5em; letter-spacing: -.035em; }
+    .menu-message { position: relative; max-width: 470px; margin: 16px auto 0; color: #55686a; font-size: clamp(.83rem, 2vw, 1rem); font-weight: 800; line-height: 1.45; }
+    .menu-features { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin: 17px 0 0; padding: 0; list-style: none; }
+    .menu-features li { padding: 7px 10px; border: 1px solid #e5ce9e; border-radius: 999px; background: rgba(255,255,255,.72); color: #6c4d1c; font-size: .67rem; font-weight: 1000; }
+    .result-grid { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 17px; }
+    .result-grid div { padding: 10px 7px; border: 1px solid #e4cea2; border-radius: 15px; background: rgba(255,255,255,.75); }
+    .result-grid span { display: block; color: #7b6b4f; font-size: .54rem; font-weight: 1000; letter-spacing: .09em; }
+    .result-grid strong { display: block; margin-top: 3px; color: var(--teal); font-size: 1.2rem; }
+    .best-label { position: relative; margin: 14px 0 0; color: #7e5a1d; font-size: .7rem; font-weight: 1000; letter-spacing: .08em; }
+    .primary {
+      position: relative;
+      min-width: min(320px, 90%);
+      min-height: 58px;
+      margin-top: 15px;
+      padding: 13px 24px;
+      border: 2px solid #8f391c;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffdb5c, #f39a27);
+      color: #563000;
+      box-shadow: 0 8px 0 #a9471d, 0 16px 26px rgba(111,57,16,.24);
+      font-weight: 1000;
+      letter-spacing: .04em;
+      transform: translateY(-2px);
+    }
+    .primary:active { box-shadow: 0 3px 0 #a9471d; transform: translateY(3px); }
+    .secondary { position: relative; display: block; margin: 16px auto 0; background: transparent; color: var(--teal); font-size: .75rem; font-weight: 1000; text-decoration: underline; }
+
+    @media (max-width: 1050px) {
+      .brand-chip { display: none; }
+      .ticket { width: min(300px, 32vw); }
+      .ingredients { grid-template-columns: repeat(8, minmax(52px, 1fr)); }
+      .ingredient .label { font-size: .53rem; }
+      .serve-button { min-width: 122px; }
+    }
+    @media (max-width: 760px) {
+      .scene { background-position: 18% center; }
+      .hud { gap: 5px; }
+      .stats { justify-content: flex-start; gap: 5px; }
+      .stat-card { min-width: 62px; min-height: 47px; padding: 6px 7px; border-radius: 14px; }
+      .stat-card span { font-size: .46rem; }
+      .stat-card strong { font-size: .94rem; }
+      .time-card { width: 112px; min-height: 47px; padding: 6px 8px; border-radius: 14px; }
+      .time-line { font-size: .49rem; }
+      .time-line strong { font-size: .82rem; }
+      .icon-button { min-width: 45px; min-height: 47px; border-radius: 14px; font-size: 1rem; }
+      .hud-actions .icon-button:first-child { display: none; }
+      .hoca-portrait {
+        position: absolute;
+        z-index: 8;
+        top: 70px;
+        left: 9px;
+        display: block;
+        width: 108px;
+        height: 108px;
+        border: 4px solid #fff5cd;
+        border-radius: 28px 28px 28px 8px;
+        background: url('./assets/nasrettin-hoca-pizza-kitchen.webp') 11% 3% / 500% auto no-repeat;
+        box-shadow: 0 12px 28px rgba(4,28,30,.38), 0 0 0 2px rgba(255,186,60,.48);
+      }
+      .hoca-portrait::after { position: absolute; right: -7px; bottom: -7px; display: grid; width: 35px; height: 35px; place-items: center; border: 3px solid #fff5cd; border-radius: 50%; background: #e8492d; content: '🍕'; font-size: 1rem; }
+      .ticket { top: 70px; right: 9px; width: calc(100vw - 132px); max-width: 260px; padding: 10px 11px; }
+      .avatar { width: 35px; height: 35px; font-size: 1.18rem; }
+      .ticket h2 { font-size: .8rem; }
+      .order-name { margin: 7px 0 5px; font-size: .61rem; }
+      .order-list { gap: 3px; }
+      .order-list li { padding: 3px 5px; font-size: .54rem; }
+      .patience { margin-top: 6px; }
+      .speech { top: 184px; left: 13px; max-width: 145px; padding: 7px 9px; border-width: 2px; font-size: .62rem; }
+      .pizza-zone { top: 53%; left: 50%; width: min(61vw, 340px); }
+      .ingredient-dock { display: block; padding: 7px; border-radius: 19px; }
+      .ingredients { grid-template-columns: repeat(4, 1fr); gap: 5px; }
+      .ingredient { min-height: 45px; padding: 4px 2px; border-radius: 12px; }
+      .ingredient .icon { font-size: 1.15rem; }
+      .ingredient .label { margin-top: 2px; font-size: .47rem; }
+      .ingredient .key { display: none; }
+      .dock-actions { position: absolute; right: 7px; bottom: calc(100% + 8px); }
+      .clear-button, .serve-button { min-height: 46px; border-radius: 14px; }
+      .clear-button { width: 59px; font-size: .57rem; background: rgba(7,50,54,.9); }
+      .serve-button { min-width: 115px; padding: 6px 10px; font-size: .62rem; }
+      .serve-button span { font-size: 1.05rem; }
+      .toast { top: 16%; min-width: 180px; }
+      .overlay { place-items: end center; padding: 10px; background: linear-gradient(180deg, rgba(5,29,31,.05) 0 30%, rgba(5,29,31,.38) 53%, rgba(5,29,31,.68)); backdrop-filter: none; }
+      .menu { width: 100%; padding: 20px 16px 22px; border-radius: 26px; box-shadow: 0 18px 55px rgba(4,23,25,.44); }
+      .menu::before { inset: 6px; border-radius: 20px; }
+      .menu h1 { margin-top: 8px; font-size: clamp(2rem, 10vw, 2.8rem); }
+      .menu h1 span { margin-top: 7px; }
+      .menu-message { margin-top: 11px; font-size: .78rem; line-height: 1.35; }
+      .menu-features { gap: 4px; margin-top: 10px; }
+      .menu-features li { padding: 5px 7px; font-size: .57rem; }
+      .best-label, .primary { margin-top: 10px; }
+      .primary { min-height: 51px; }
+    }
+    @media (max-height: 640px) and (orientation: landscape) {
+      .ticket { top: 70px; width: 260px; padding: 9px 11px; }
+      .ticket .avatar { width: 34px; height: 34px; }
+      .order-name { margin: 6px 0 4px; }
+      .patience { margin-top: 5px; }
+      .pizza-zone { top: 52%; left: 55%; width: min(35vw, 290px); }
+      .ingredient-dock { padding: 7px; border-radius: 18px; }
+      .ingredient { min-height: 48px; }
+      .ingredient .icon { font-size: 1.2rem; }
+      .serve-button, .clear-button { min-height: 47px; }
+      .menu { width: min(680px, 94vw); padding: 17px 28px; }
+      .menu h1 { font-size: clamp(2rem, 10vh, 3.6rem); }
+      .menu-message { margin-top: 10px; font-size: .76rem; }
+      .menu-features { margin-top: 10px; }
+      .best-label, .primary { margin-top: 10px; }
+      .primary { min-height: 46px; box-shadow: 0 5px 0 #a9471d; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="game" data-game aria-label="Nasrettin Hoca'nın Pizzahanesi oyun alanı">
+    <div class="scene" aria-hidden="true"></div>
+    <div class="ember-field" aria-hidden="true"><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i></div>
+
+    <header class="hud" data-hud hidden aria-live="polite">
+      <div class="brand-chip"><span class="mark">🍕</span><div><span>MasalNova</span><strong>Hoca'nın Fırını</strong></div></div>
+      <div class="stats">
+        <div class="stat-card"><span>PUAN</span><strong data-score>0</strong></div>
+        <div class="stat-card combo"><span>KOMBO</span><strong data-combo>—</strong></div>
+        <div class="stat-card"><span>PİZZA</span><strong data-orders>0</strong></div>
+      </div>
+      <div class="time-card">
+        <div class="time-line"><span>KAPANIŞA</span><strong data-time>75 sn</strong></div>
+        <div class="meter"><span data-time-meter></span></div>
+      </div>
+      <div class="hud-actions">
+        <button class="icon-button" type="button" data-sound aria-label="Sesi kapat" aria-pressed="false">♪</button>
+        <button class="icon-button" type="button" data-pause aria-label="Oyunu duraklat">Ⅱ</button>
+      </div>
+    </header>
+
+    <section class="ticket" data-ticket hidden aria-label="Müşteri siparişi">
+      <div class="ticket-top">
+        <span class="avatar" data-avatar>👧</span>
+        <div><span class="ticket-kicker" data-order-number>Sipariş 1</span><h2 data-customer>Ayşe'nin siparişi</h2></div>
+      </div>
+      <p class="order-name" data-order-name>Anadolu Klasiği</p>
+      <ul class="order-list" data-order-list></ul>
+      <div class="patience">
+        <div class="patience-label"><span>MÜŞTERİ SABRI</span><span data-patience-label>24 sn</span></div>
+        <div class="meter"><span data-patience-meter></span></div>
+      </div>
+    </section>
+
+    <div class="hoca-portrait" data-hoca-portrait hidden aria-hidden="true"></div>
+    <div class="speech" data-speech hidden>Önce siparişi iyi dinle!</div>
+
+    <section class="pizza-zone" data-pizza-zone hidden aria-label="Pizza hazırlama tahtası">
+      <div class="board"></div>
+      <div class="pizza empty-hint" data-pizza>
+        <div class="sauce-layer"></div>
+        <div class="cheese-layer"></div>
+        <div class="pieces" data-pieces></div>
+        <span class="empty-copy">Malzemeleri<br>ekle</span>
+      </div>
+    </section>
+
+    <section class="ingredient-dock" data-dock hidden aria-label="Pizza malzemeleri">
+      <div class="ingredients" data-ingredients></div>
+      <div class="dock-actions">
+        <button class="clear-button" type="button" data-clear aria-label="Pizzadaki bütün malzemeleri temizle">TEMİZLE<br>R</button>
+        <button class="serve-button" type="button" data-serve><span>🔥</span>FIRINA VER</button>
+      </div>
+    </section>
+
+    <div class="toast" data-toast hidden></div>
+
+    <section class="overlay" data-overlay>
+      <div class="menu">
+        <span class="menu-kicker" data-menu-kicker>🍕 YENİ MASALNOVA OYUNU</span>
+        <h1 data-menu-title>NASRETTİN HOCA'NIN<span>PİZZAHANESİ</span></h1>
+        <p class="menu-message" data-menu-message>Köy meydanında akşam pazarı başladı! Siparişi ezberle, doğru malzemeleri seç ve pizzayı müşteri sabrını kaybetmeden fırına ver.</p>
+        <ul class="menu-features" data-menu-features>
+          <li>🖱️ Dokun veya sürükle</li><li>🔥 75 saniyelik servis</li><li>⚡ Kusursuz kombo</li>
+        </ul>
+        <div class="result-grid" data-results hidden>
+          <div><span>PUAN</span><strong data-final-score>0</strong></div>
+          <div><span>PİZZA</span><strong data-final-orders>0</strong></div>
+          <div><span>KUSURSUZ</span><strong data-final-perfect>0</strong></div>
+        </div>
+        <p class="best-label" data-best>EN İYİ PUAN · 0</p>
+        <button class="primary" type="button" data-primary>MUTFAĞI AÇ</button>
+        <button class="secondary" type="button" data-secondary hidden>Ana menüye dön</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const game = document.querySelector('[data-game]');
+      const hud = document.querySelector('[data-hud]');
+      const ticket = document.querySelector('[data-ticket]');
+      const hocaPortrait = document.querySelector('[data-hoca-portrait]');
+      const dock = document.querySelector('[data-dock]');
+      const pizzaZone = document.querySelector('[data-pizza-zone]');
+      const pizza = document.querySelector('[data-pizza]');
+      const pieces = document.querySelector('[data-pieces]');
+      const ingredientsRoot = document.querySelector('[data-ingredients]');
+      const overlay = document.querySelector('[data-overlay]');
+      const primary = document.querySelector('[data-primary]');
+      const secondary = document.querySelector('[data-secondary]');
+      const menuTitle = document.querySelector('[data-menu-title]');
+      const menuMessage = document.querySelector('[data-menu-message]');
+      const menuKicker = document.querySelector('[data-menu-kicker]');
+      const menuFeatures = document.querySelector('[data-menu-features]');
+      const results = document.querySelector('[data-results]');
+      const scoreLabel = document.querySelector('[data-score]');
+      const comboLabel = document.querySelector('[data-combo]');
+      const ordersLabel = document.querySelector('[data-orders]');
+      const timeLabel = document.querySelector('[data-time]');
+      const timeMeter = document.querySelector('[data-time-meter]');
+      const patienceLabel = document.querySelector('[data-patience-label]');
+      const patienceMeter = document.querySelector('[data-patience-meter]');
+      const speech = document.querySelector('[data-speech]');
+      const toast = document.querySelector('[data-toast]');
+      const soundButton = document.querySelector('[data-sound]');
+      const pauseButton = document.querySelector('[data-pause]');
+      const clearButton = document.querySelector('[data-clear]');
+      const serveButton = document.querySelector('[data-serve]');
+
+      const ingredients = [
+        { id: 'sos', label: 'Domates sosu', short: 'Sos', icon: '🍅' },
+        { id: 'peynir', label: 'Peynir', short: 'Peynir', icon: '🧀' },
+        { id: 'sucuk', label: 'Sucuk', short: 'Sucuk', icon: '🔴' },
+        { id: 'mantar', label: 'Mantar', short: 'Mantar', icon: '🍄' },
+        { id: 'zeytin', label: 'Zeytin', short: 'Zeytin', icon: '🫒' },
+        { id: 'biber', label: 'Yeşil biber', short: 'Biber', icon: '🫑' },
+        { id: 'misir', label: 'Mısır', short: 'Mısır', icon: '🌽' },
+        { id: 'aci', label: 'Acı biber', short: 'Acı', icon: '🌶️' }
+      ];
+      const ingredientMap = Object.fromEntries(ingredients.map((item) => [item.id, item]));
+      const orders = [
+        { name: 'Anadolu Klasiği', customer: "Ayşe'nin", avatar: '👧', wants: ['sos', 'peynir', 'sucuk', 'biber'], phrase: 'Bol sucuklu olsun Hoca!' },
+        { name: 'Bahçe Şenliği', customer: "Bahçıvan Cemil'in", avatar: '🧑‍🌾', wants: ['sos', 'peynir', 'mantar', 'zeytin', 'biber'], phrase: 'Bahçe gibi rengârenk olsun!' },
+        { name: 'Ateşli Testi', customer: "Demirci Bekir'in", avatar: '🧔', wants: ['sos', 'peynir', 'sucuk', 'aci'], phrase: 'Acısı örsü bile eritsin!' },
+        { name: 'Beyaz Bulut', customer: "Sultan Nine'nin", avatar: '👵', wants: ['peynir', 'mantar', 'zeytin'], phrase: 'Domates olmasın evladım.' },
+        { name: 'Karakaçan Neşesi', customer: "Karakaçan'ın", avatar: '🫏', wants: ['sos', 'peynir', 'misir', 'biber'], phrase: 'Aii! Mısırı bol olsun!' },
+        { name: 'Gece Pazarı', customer: "Kervancı Hasan'ın", avatar: '👳', wants: ['sos', 'peynir', 'sucuk', 'mantar', 'zeytin'], phrase: 'Uzun yola doyurucu bir pizza!' },
+        { name: 'Altın Harman', customer: "Çiftçi Elif'in", avatar: '👩‍🌾', wants: ['sos', 'peynir', 'misir', 'mantar'], phrase: 'Tarlanın bereketi üstünde olsun!' }
+      ];
+      const positions = [
+        [23,28,-13],[48,20,8],[72,29,18],[34,45,25],[61,43,-22],[78,55,11],
+        [20,58,-28],[45,64,14],[66,71,-9],[36,79,28],[54,34,-18],[28,68,5]
+      ];
+      const pieceCounts = { sucuk: 7, mantar: 6, zeytin: 8, biber: 7, misir: 11, aci: 6 };
+      const STORAGE_KEY = 'masalnova.nasrettin-hoca-pizza.best.v1';
+      const GAME_DURATION = 75;
+      let best = 0;
+      try { best = Number(localStorage.getItem(STORAGE_KEY) || 0); } catch {}
+      let state = 'menu';
+      let score = 0;
+      let combo = 0;
+      let completed = 0;
+      let perfect = 0;
+      let gameTime = GAME_DURATION;
+      let orderTime = 24;
+      let orderMax = 24;
+      let orderNumber = 0;
+      let currentOrder = null;
+      let previousOrderIndex = -1;
+      let selected = new Set();
+      let transitioning = false;
+      let lastFrame = performance.now();
+      let speechTimer = 0;
+      let toastTimer = 0;
+      let audioContext = null;
+      let muted = false;
+      let drag = null;
+      let skipClick = false;
+
+      document.querySelector('[data-best]').textContent = `EN İYİ PUAN · ${best.toLocaleString('tr-TR')}`;
+
+      function buildIngredientButtons() {
+        ingredientsRoot.innerHTML = ingredients.map((item, index) => `
+          <button class="ingredient" type="button" data-ingredient="${item.id}" aria-label="${item.label} ekle veya çıkar" aria-pressed="false">
+            <span class="icon" aria-hidden="true">${item.icon}</span><span class="label">${item.short}</span><span class="key">${index + 1}</span>
+          </button>
+        `).join('');
+        ingredientsRoot.querySelectorAll('[data-ingredient]').forEach((button) => {
+          button.addEventListener('click', () => {
+            if (skipClick) return;
+            toggleIngredient(button.dataset.ingredient);
+          });
+          button.addEventListener('pointerdown', beginDrag);
+        });
+      }
+
+      function tone(kind = 'tap') {
+        if (muted) return;
+        try {
+          audioContext ||= new (window.AudioContext || window.webkitAudioContext)();
+          const now = audioContext.currentTime;
+          const oscillator = audioContext.createOscillator();
+          const gain = audioContext.createGain();
+          const settings = {
+            tap: [420, .035, .035], add: [520, .05, .05], perfect: [660, .16, .08],
+            fail: [170, .16, .06], start: [340, .22, .06], clear: [240, .08, .04]
+          }[kind] || [420, .04, .04];
+          oscillator.frequency.setValueAtTime(settings[0], now);
+          if (kind === 'perfect') oscillator.frequency.exponentialRampToValueAtTime(990, now + settings[1]);
+          if (kind === 'fail') oscillator.frequency.exponentialRampToValueAtTime(110, now + settings[1]);
+          gain.gain.setValueAtTime(settings[2], now);
+          gain.gain.exponentialRampToValueAtTime(.001, now + settings[1]);
+          oscillator.connect(gain).connect(audioContext.destination);
+          oscillator.start(now);
+          oscillator.stop(now + settings[1]);
+        } catch {}
+      }
+
+      function setPlayUi(visible) {
+        hud.hidden = !visible;
+        ticket.hidden = !visible;
+        hocaPortrait.hidden = !visible;
+        dock.hidden = !visible;
+        pizzaZone.hidden = !visible;
+        if (!visible) speech.hidden = true;
+      }
+
+      function startGame() {
+        score = 0;
+        combo = 0;
+        completed = 0;
+        perfect = 0;
+        gameTime = GAME_DURATION;
+        orderNumber = 0;
+        previousOrderIndex = -1;
+        selected.clear();
+        transitioning = false;
+        state = 'playing';
+        overlay.hidden = true;
+        setPlayUi(true);
+        nextOrder();
+        updateHud();
+        tone('start');
+        showSpeech('Sipariş hazırsa fırın da hazır!', 2400);
+        lastFrame = performance.now();
+      }
+
+      function nextOrder() {
+        if (state !== 'playing') return;
+        let index = Math.floor(Math.random() * orders.length);
+        if (orders.length > 1 && index === previousOrderIndex) index = (index + 1 + Math.floor(Math.random() * (orders.length - 1))) % orders.length;
+        previousOrderIndex = index;
+        currentOrder = orders[index];
+        orderNumber += 1;
+        orderMax = Math.max(14, 24 - Math.floor(completed / 2));
+        orderTime = orderMax;
+        selected.clear();
+        transitioning = false;
+        renderPizza();
+        renderTicket();
+        updateIngredientButtons();
+        showSpeech(currentOrder.phrase, 2200);
+      }
+
+      function renderTicket() {
+        document.querySelector('[data-avatar]').textContent = currentOrder.avatar;
+        document.querySelector('[data-order-number]').textContent = `Sipariş ${orderNumber}`;
+        document.querySelector('[data-customer]').textContent = `${currentOrder.customer} siparişi`;
+        document.querySelector('[data-order-name]').textContent = currentOrder.name;
+        document.querySelector('[data-order-list]').innerHTML = currentOrder.wants.map((id) => {
+          const item = ingredientMap[id];
+          return `<li><span aria-hidden="true">${item.icon}</span>${item.short}</li>`;
+        }).join('');
+      }
+
+      function toggleIngredient(id, forceAdd = false) {
+        if (state !== 'playing' || transitioning || !ingredientMap[id]) return;
+        if (forceAdd) selected.add(id);
+        else if (selected.has(id)) selected.delete(id);
+        else selected.add(id);
+        tone(selected.has(id) ? 'add' : 'tap');
+        renderPizza();
+        updateIngredientButtons();
+      }
+
+      function updateIngredientButtons() {
+        ingredientsRoot.querySelectorAll('[data-ingredient]').forEach((button) => {
+          button.setAttribute('aria-pressed', String(selected.has(button.dataset.ingredient)));
+        });
+      }
+
+      function renderPizza() {
+        pizza.classList.toggle('has-sos', selected.has('sos'));
+        pizza.classList.toggle('has-peynir', selected.has('peynir'));
+        pizza.classList.toggle('empty-hint', selected.size === 0);
+        const toppings = [...selected].filter((id) => !['sos', 'peynir'].includes(id));
+        pieces.innerHTML = toppings.map((id, toppingIndex) => {
+          const count = pieceCounts[id] || 6;
+          return positions.slice(0, count).map((position, index) => {
+            const shifted = positions[(index + toppingIndex * 2) % positions.length];
+            const icon = '';
+            const delay = (index * .018).toFixed(3);
+            return `<i class="piece ${id}" style="left:${shifted[0]}%;top:${shifted[1]}%;--turn:${position[2]}deg;animation-delay:${delay}s">${icon}</i>`;
+          }).join('');
+        }).join('');
+      }
+
+      function clearPizza() {
+        if (state !== 'playing' || transitioning || selected.size === 0) return;
+        selected.clear();
+        renderPizza();
+        updateIngredientButtons();
+        tone('clear');
+        showToast('Tahta tertemiz!', '');
+      }
+
+      function servePizza() {
+        if (state !== 'playing' || transitioning) return;
+        if (selected.size === 0) {
+          showToast('Önce pizzayı hazırla!', 'bad');
+          showSpeech('Boş hamurla müşteri doymaz!', 1800);
+          tone('fail');
+          return;
+        }
+        transitioning = true;
+        const wanted = new Set(currentOrder.wants);
+        const correct = [...selected].filter((id) => wanted.has(id)).length;
+        const missing = [...wanted].filter((id) => !selected.has(id));
+        const extra = [...selected].filter((id) => !wanted.has(id));
+        const exact = missing.length === 0 && extra.length === 0;
+
+        if (exact) {
+          combo += 1;
+          completed += 1;
+          perfect += 1;
+          const multiplier = Math.min(3, 1 + (combo - 1) * .25);
+          const points = Math.round((140 + orderTime * 6) * multiplier);
+          score += points;
+          showToast(`KUSURSUZ! +${points} PUAN · ${combo}x KOMBO`, 'good');
+          showSpeech(combo >= 3 ? 'Ye kürküm ye… Bu kombo dilden dile gezer!' : 'İşte fırından çıkan hikmet!', 2100);
+          burstConfetti();
+          tone('perfect');
+        } else {
+          completed += 1;
+          combo = 0;
+          const points = Math.max(0, correct * 22 - missing.length * 16 - extra.length * 12);
+          score += points;
+          const note = missing.length ? `${ingredientMap[missing[0]].short} eksik!` : `${ingredientMap[extra[0]].short} fazla!`;
+          showToast(`${note} +${points} puan`, 'bad');
+          showSpeech('Acele işe pizza karışır!', 1900);
+          tone('fail');
+        }
+        updateHud();
+        pizzaZone.animate([
+          { transform: 'translate(-50%, -50%) perspective(800px) rotateX(7deg) scale(1)' },
+          { transform: 'translate(-50%, -50%) perspective(800px) rotateX(7deg) scale(.25) translateY(-160px)', opacity: .35 },
+          { transform: 'translate(-50%, -50%) perspective(800px) rotateX(7deg) scale(1)', opacity: 1 }
+        ], { duration: 680, easing: 'cubic-bezier(.3,.8,.2,1)' });
+        window.setTimeout(nextOrder, 760);
+      }
+
+      function expireOrder() {
+        if (transitioning || state !== 'playing') return;
+        transitioning = true;
+        combo = 0;
+        score = Math.max(0, score - 35);
+        showToast('Müşteri bekleyemedi! −35 puan', 'bad');
+        showSpeech('Geç gelen pizza, soğuk nasihat gibidir!', 2100);
+        tone('fail');
+        updateHud();
+        window.setTimeout(nextOrder, 820);
+      }
+
+      function updateHud() {
+        scoreLabel.textContent = score.toLocaleString('tr-TR');
+        comboLabel.textContent = combo > 0 ? `${combo}x` : '—';
+        ordersLabel.textContent = completed;
+        timeLabel.textContent = `${Math.max(0, Math.ceil(gameTime))} sn`;
+        timeMeter.style.transform = `scaleX(${Math.max(0, gameTime / GAME_DURATION)})`;
+        patienceLabel.textContent = `${Math.max(0, Math.ceil(orderTime))} sn`;
+        patienceMeter.style.transform = `scaleX(${Math.max(0, orderTime / orderMax)})`;
+      }
+
+      function endGame() {
+        if (state === 'result') return;
+        state = 'result';
+        transitioning = false;
+        setPlayUi(false);
+        if (score > best) {
+          best = score;
+          try { localStorage.setItem(STORAGE_KEY, String(best)); } catch {}
+        }
+        menuKicker.textContent = score >= 1800 ? '🏆 KÖYÜN USTA PİZZACISI' : '🔥 FIRIN KAPANDI';
+        menuTitle.innerHTML = score >= 1800 ? `EFSANE SERVİS!<span>HOCA GURUR DUYDU</span>` : `SERVİS BİTTİ!<span>YİNE BEKLERİZ</span>`;
+        menuMessage.textContent = score >= 1800 ? 'Müşteriler meydanda senin pizzalarını konuşuyor. Bu hız ve dikkatle Nasrettin Hoca’nın altın küreğini hak ettin!' : 'Akşam pazarı sona erdi. Bir sonraki serviste siparişlere daha hızlı bakıp kusursuz kombonu büyütebilirsin.';
+        menuFeatures.hidden = true;
+        results.hidden = false;
+        document.querySelector('[data-final-score]').textContent = score.toLocaleString('tr-TR');
+        document.querySelector('[data-final-orders]').textContent = completed;
+        document.querySelector('[data-final-perfect]').textContent = perfect;
+        document.querySelector('[data-best]').textContent = `EN İYİ PUAN · ${best.toLocaleString('tr-TR')}`;
+        primary.textContent = 'YENİDEN SERVİS AÇ';
+        secondary.hidden = false;
+        overlay.hidden = false;
+      }
+
+      function showMainMenu() {
+        state = 'menu';
+        setPlayUi(false);
+        menuKicker.textContent = '🍕 YENİ MASALNOVA OYUNU';
+        menuTitle.innerHTML = `NASRETTİN HOCA'NIN<span>PİZZAHANESİ</span>`;
+        menuMessage.textContent = 'Köy meydanında akşam pazarı başladı! Siparişi ezberle, doğru malzemeleri seç ve pizzayı müşteri sabrını kaybetmeden fırına ver.';
+        menuFeatures.hidden = false;
+        results.hidden = true;
+        primary.textContent = 'MUTFAĞI AÇ';
+        secondary.hidden = true;
+        overlay.hidden = false;
+      }
+
+      function pauseGame() {
+        if (state !== 'playing') return;
+        state = 'paused';
+        menuKicker.textContent = '☕ KISA BİR MOLA';
+        menuTitle.innerHTML = `FIRIN BEKLİYOR<span>PİZZAN SOĞUMADI</span>`;
+        menuMessage.textContent = 'Hazır olduğunda servise kaldığın yerden devam edebilirsin.';
+        menuFeatures.hidden = true;
+        results.hidden = true;
+        primary.textContent = 'SERVİSE DEVAM ET';
+        secondary.hidden = false;
+        overlay.hidden = false;
+      }
+
+      function resumeGame() {
+        state = 'playing';
+        overlay.hidden = true;
+        lastFrame = performance.now();
+      }
+
+      function showSpeech(message, duration = 1700) {
+        speech.textContent = message;
+        speech.hidden = false;
+        window.clearTimeout(speechTimer);
+        speechTimer = window.setTimeout(() => { speech.hidden = true; }, duration);
+      }
+
+      function showToast(message, type = '') {
+        toast.textContent = message;
+        toast.className = `toast ${type}`;
+        toast.hidden = false;
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(() => { toast.hidden = true; }, 1700);
+      }
+
+      function burstConfetti() {
+        const colors = ['#ffd359', '#e94b2d', '#3ca36b', '#fff4c8', '#28aab4'];
+        for (let i = 0; i < 24; i += 1) {
+          const bit = document.createElement('i');
+          bit.className = 'confetti';
+          bit.style.left = `${48 + Math.random() * 14}%`;
+          bit.style.top = `${42 + Math.random() * 12}%`;
+          bit.style.background = colors[i % colors.length];
+          bit.style.setProperty('--x', `${(Math.random() - .5) * 420}px`);
+          bit.style.setProperty('--y', `${-80 - Math.random() * 260}px`);
+          game.appendChild(bit);
+          window.setTimeout(() => bit.remove(), 1050);
+        }
+      }
+
+      function beginDrag(event) {
+        if (state !== 'playing' || transitioning) return;
+        const button = event.currentTarget;
+        drag = { id: button.dataset.ingredient, startX: event.clientX, startY: event.clientY, moved: false, ghost: null };
+        button.setPointerCapture?.(event.pointerId);
+        window.addEventListener('pointermove', moveDrag);
+        window.addEventListener('pointerup', endDrag, { once: true });
+      }
+
+      function moveDrag(event) {
+        if (!drag) return;
+        if (!drag.moved && Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) > 8) {
+          drag.moved = true;
+          drag.ghost = document.createElement('div');
+          drag.ghost.className = 'drag-ghost';
+          drag.ghost.textContent = ingredientMap[drag.id].icon;
+          document.body.appendChild(drag.ghost);
+        }
+        if (!drag.moved) return;
+        drag.ghost.style.left = `${event.clientX}px`;
+        drag.ghost.style.top = `${event.clientY}px`;
+        const rect = pizza.getBoundingClientRect();
+        const over = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+        pizzaZone.classList.toggle('drag-over', over);
+      }
+
+      function endDrag(event) {
+        window.removeEventListener('pointermove', moveDrag);
+        if (!drag) return;
+        const wasMoved = drag.moved;
+        if (wasMoved) {
+          const rect = pizza.getBoundingClientRect();
+          const over = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+          if (over) toggleIngredient(drag.id, true);
+          skipClick = true;
+          window.setTimeout(() => { skipClick = false; }, 30);
+        }
+        drag.ghost?.remove();
+        pizzaZone.classList.remove('drag-over');
+        drag = null;
+      }
+
+      function frame(now) {
+        const delta = Math.min(.1, (now - lastFrame) / 1000);
+        lastFrame = now;
+        if (state === 'playing') {
+          gameTime -= delta;
+          if (!transitioning) orderTime -= delta;
+          if (orderTime <= 0) expireOrder();
+          if (gameTime <= 0) {
+            gameTime = 0;
+            updateHud();
+            endGame();
+          } else updateHud();
+        }
+        requestAnimationFrame(frame);
+      }
+
+      primary.addEventListener('click', () => {
+        if (state === 'paused') resumeGame();
+        else startGame();
+      });
+      secondary.addEventListener('click', showMainMenu);
+      pauseButton.addEventListener('click', pauseGame);
+      soundButton.addEventListener('click', () => {
+        muted = !muted;
+        soundButton.textContent = muted ? '×' : '♪';
+        soundButton.setAttribute('aria-pressed', String(muted));
+        soundButton.setAttribute('aria-label', muted ? 'Sesi aç' : 'Sesi kapat');
+        if (!muted) tone('tap');
+      });
+      clearButton.addEventListener('click', clearPizza);
+      serveButton.addEventListener('click', servePizza);
+      window.addEventListener('keydown', (event) => {
+        if (event.repeat) return;
+        if (event.key === 'Escape') {
+          if (state === 'playing') pauseGame();
+          else if (state === 'paused') resumeGame();
+          return;
+        }
+        if (state !== 'playing') return;
+        if (/^[1-8]$/.test(event.key)) toggleIngredient(ingredients[Number(event.key) - 1].id);
+        if (event.key.toLowerCase() === 'r') clearPizza();
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          servePizza();
+        }
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden && state === 'playing') pauseGame();
+      });
+
+      buildIngredientButtons();
+      renderPizza();
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>

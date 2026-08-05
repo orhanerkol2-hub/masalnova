@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["yardımlaşma","paylaşma","dostluk"]
 characters: ["Vardo (ördek)","Pare (yengeç)","Sisu (martı)"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin sabah erken uyandığı bir deniz kıyısında Vardo adında bir ördek yaşarmış. Vardo'nun tüyleri pırıl pırıl parlarmış, ama içindeki en parlak şey aslında biraz bencillik dolu bir kalp olurmuş. O, kıyıda bulduğu her güzel taşı, her renkli deniz kabuğunu kendine ayırır, kimseyle paylaşmazmış.

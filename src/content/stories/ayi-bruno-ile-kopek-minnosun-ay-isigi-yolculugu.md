@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["hoşgörü","dostluk","farklılıklara saygı"]
 characters: ["Ayı Bruno","Köpek Minnoş"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarındaki köyde Bruno adında büyük, tombul bir ayı yaşarmış. Bruno yavaş yürür, yavaş konuşur, her şeyi ağır ağır düşünürmüş. Köyün girişinde ise Minnoş adında küçük, hareketli bir köpek yaşarmış. Minnoş her zaman koşar, zıplar, etrafı hızlı hızlı koklarmış.

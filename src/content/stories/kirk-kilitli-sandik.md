@@ -13,6 +13,9 @@ categories: ["egitici"]
 themes: ["iyilik", "alçakgönüllülük", "aile"]
 characters: ["Derya", "Anası", "Şehir Halkı"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş. Bir zamanlar ovanın ortasında bir şehir varmış. O şehrin meydanında, dört mermer sütunun arasında kocaman bir sandık dururmuş.

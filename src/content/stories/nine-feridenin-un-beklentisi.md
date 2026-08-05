@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sabır","şefkat"]
 characters: ["Nine Feride","küçük Toprak"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün kenarında taşları yosun tutmuş eski bir değirmen varmış. Değirmenin taşı ağır ağır dönermiş, tıpkı zamanın kendisi gibi yavaş ve sakinmiş.

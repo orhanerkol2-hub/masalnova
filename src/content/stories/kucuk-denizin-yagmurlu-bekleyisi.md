@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sabır","huzur","umut"]
 characters: ["Deniz","Büyükanne","Yağmur Bulutu"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada Deniz adında cesur bir çocuk yaşarmış. O akşam gökyüzü kararmış, yumuşacık bulutlar pencerenin önünden geçmeye başlamış. Tik tik tik... Yağmur damlaları cama usulca vuruyormuş, sanki minik bir ninni söylüyormuş.
@@ -22,7 +25,7 @@ Büyükanne yanına oturmuş, elini Deniz'in saçlarında gezdirmiş. "Bak," dem
 
 Yavaşça bulutlar aralanmış, ince bir ay ışığı pencereden içeri süzülmüş. Deniz gözlerini hafifçe aralamış ve uzaktan bir yıldızın parladığını görmüş. "İşte," demiş büyükanne fısıltıyla, "sabrın meyvesi."
 
-Yağmur azalmış, damlalar yavaşça sessizliğe bürünmüş. Tik... tik... Deniz'in gözkapakları ağırlaşmış, battaniyesinin yumuşaklığında kendini güvende hissetmiş. Ay ışığı odayı yumuşak bir gümüş rengine boyamış.
+Yağmur azalmış, damlalar yavaşça sessizliğe bürünmüş. Tik... tik... Deniz'in göz kapakları ağırlaşmış, battaniyesinin yumuşaklığında kendini güvende hissetmiş. Ay ışığı odayı yumuşak bir gümüş rengine boyamış.
 
 Büyükanne alçak sesle bir ninni mırıldanmış, sözleri yağmur damlaları gibi usulca akmış. Deniz, sıcacık battaniyenin içinde, yıldızların ışığıyla sarılı, huzurla gözlerini kapamış.
 

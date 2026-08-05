@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["sorumluluk","özen"]
 characters: ["Fındık Kemal","Minik Sincap Fındık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında güler yüzlü bir bahçıvan yaşarmış. Adına Fındık Kemal derlermiş, çünkü diktiği her fidanı bir fındık tanesi kadar küçükken toprağa gömermiş.

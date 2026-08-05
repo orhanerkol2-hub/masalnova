@@ -8,11 +8,14 @@ coverColor: "#6d8fb2"
 coverImage: "/covers/stories/fil-yavrusu-damla-ve-kopuk-bulutu.webp"
 altText: "Fil yavrusu Damla, Fındıkkabuğu ve annesinin yanında hortumunu sabun köpüğüyle yıkıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["el yıkama","hijyen","öz bakım","sağlıklı alışkanlıklar"]
 characters: ["Damla","Fındıkkabuğu","Anne Fil","fil yavruları"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Geniş bir ovada bir fil sürüsü yaşardı. Sürünün en küçüğü Damla'ydı.

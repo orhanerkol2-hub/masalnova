@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["sözünde durmak","dostluk","dayanışma"]
 characters: ["Minnoş (kedi)","Puf (kuzu)"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, köyün en mis kokulu fırınında Minnoş adında çalışkan bir kedi yaşarmış. Minnoş her sabah erkenden kalkar, fırıncı dedeye yardım eder, ekmeklerin üzerine düşen unları temizler, kapıyı bekleyen köylülere gülümserdi.

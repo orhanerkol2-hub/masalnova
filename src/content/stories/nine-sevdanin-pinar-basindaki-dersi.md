@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["nezaket","paylaşma","empati"]
 characters: ["Nine Sevda","Doruk","Pınar kuşları"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğinde serin bir pınar varmış. Bu pınarın suyu öyle tatlıymış ki, köyün bütün çocukları oradan su içmeye giderlermiş. Pınarın hemen yanında da küçük bir taş ev varmış; orada Nine Sevda yaşarmış.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sözünde durmak","dostluk","azim"]
 characters: ["Karınca Toprak","Baykuş Devrim","Tavşan Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanda Toprak adında küçük bir karınca yaşarmış. Toprak, ormandaki bütün hayvanların en çalışkanı olarak bilinirmiş. Küçük ayaklarıyla sabahtan akşama kadar koşuşturur, gördüğü herkese yardım etmeye çalışırmış.

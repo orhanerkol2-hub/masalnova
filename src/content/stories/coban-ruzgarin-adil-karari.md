@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["adalet","doğruluk"]
 characters: ["Çoban Rüzgar","Kaya","Deniz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kıyısında Rüzgar adında iyi kalpli bir çoban yaşarmış. Sürüsünü her sabah ormanın en taze otlarının bittiği çayıra götürür, akşam olunca da güvenle köye geri getirirmiş.

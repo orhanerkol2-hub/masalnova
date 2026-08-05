@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["cesaret","şefkat","huzur"]
 characters: ["Nine Ayşe","küçük kedi Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyün kenarında sevgi dolu bir nine yaşarmış. Adı Ayşe Nine'ymiş. O akşam pencereye yavaşça yağmur damlaları düşüyormuş, tip tip tip, tıp tıp tıp.

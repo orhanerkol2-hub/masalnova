@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["alçakgönüllülük","merak"]
 characters: ["Duru","Nine Sevgi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyde Duru adında meraklı bir kız yaşarmış. Duru, köyün 'en değerli hazinesini' bulan kişiye muhtar tarafından altın bir kolye verileceğini duymuş. Hemen sokağa fırlamış, evleri, bahçeleri, ambarları didik didik aramaya başlamış.

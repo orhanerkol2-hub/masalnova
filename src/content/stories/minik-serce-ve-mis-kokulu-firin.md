@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["cesaret","dostluk","yardımlaşma"]
 characters: ["Cıvık (serçe)","Fırıncı Tembel Kedi Boncuk","Arı Sürüsü"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabanın kenar mahallesinde mis kokulu bir fırın varmış. Bu fırının bacasından her sabah taze ekmek kokusu yükselir, kokuyu duyan herkesin karnı guruldarmış.

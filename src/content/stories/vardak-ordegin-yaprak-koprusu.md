@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["yardımlaşma","dayanışma","paylaşma"]
 characters: ["Vardak (ördek)","Fındık (sincap)","Toparlak (kirpi)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde yemyeşil bir ormanın kıyısında küçük bir dere akarmış. Bu derede Vardak adında sarı gagalı, sevimli bir ördek yaşarmış. Vardak, her sabah derede yüzer, sonra ormanın içinde dolaşıp arkadaşlarını ziyaret edermiş.

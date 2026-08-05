@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["paylaşma","dostluk","huzur"]
 characters: ["Komşu Rana Teyze","Küçük Deniz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının usulca süzüldüğü bir vadide, altın başaklı bir tarla varmış. Başaklar akşam esintisiyle yavaşça sallanır, sanki uykuya hazırlanır gibi hafifçe fısıldarmış.
@@ -26,7 +29,7 @@ Deniz, sıcak kâseyi elleriyle tutmuş. İçi buğulu, kokusu tatlıymış. Pen
 
 "Bak," demiş Rana Teyze usulca, "tarladaki her başak, güneşin ışığını paylaşarak büyümüş. Rüzgâr onları sallarken bile birbirlerine yaslanırlar."
 
-Deniz gülümsemiş, gözkapakları ağırlaşmaya başlamış. Bulutlar gökyüzünde yavaşça süzülüyor, yıldızlar bir bir açılıyormuş. Her yıldız, bir öncekine gülümser gibi parlıyormuş.
+Deniz gülümsemiş, göz kapakları ağırlaşmaya başlamış. Bulutlar gökyüzünde yavaşça süzülüyor, yıldızlar bir bir açılıyormuş. Her yıldız, bir öncekine gülümser gibi parlıyormuş.
 
 Rana Teyze, Deniz'i yumuşak yorganına sarmış. "Şimdi uyku vakti," demiş sakin bir sesle. "Tarladaki başaklar da uyuyacak, ay da onları usulca örtecek."
 

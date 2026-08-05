@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sabır","dostluk","emek"]
 characters: ["Kirpi Miniş","Baykuş Ata","Saray Bahçıvanı Leylek"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ışıl ışıl bir sarayın bahçesinde küçük bir kirpi yaşarmış. Bu kirpinin adı Miniş'miş. Miniş'in dikenleri güneşte pırıl pırıl parlarmış ama Miniş'in en büyük derdi hiçbir şeyi bekleyememesiymiş.

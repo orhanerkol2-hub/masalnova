@@ -8,11 +8,14 @@ coverColor: "#d86b32"
 coverImage: "/covers/stories/findikin-cicekli-bardagi.webp"
 altText: "Minik tilki Fındık ve annesi, mavi çiçekli bardaktaki papatyaya bakıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["dürüstlük","sorumluluk","huzur"]
 characters: ["Fındık","Anne Tilki","komşu sincap"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Ihlamur ağacının dibinde küçücük bir ev vardı. Bacasından her sabah mis gibi çorba kokusu yükselirdi. O evde minik bir tilki yaşardı. Adı Fındık'tı.

@@ -8,11 +8,14 @@ coverColor: "#c95f62"
 coverImage: "/covers/stories/zeynepin-kucuk-kardesi.webp"
 altText: "Zeynep annesinin yanında bebek kardeşi Ege ile el ele tutuşuyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici"]
 themes: ["kardeş sevgisi","kıskançlık","duyguları paylaşma","aile sevgisi"]
 characters: ["Zeynep","Ege","Anne","Baba"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Zeynep dört yaşındaydı. İki örgü saçı vardı. Kırmızı bir yağmur çizmesi vardı ve onu yağmur yağmasa da giyerdi.

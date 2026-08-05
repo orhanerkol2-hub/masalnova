@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["nezaket","sabır"]
 characters: ["Balıkçı Fikret","Minik Su Perisi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın içinde küçük, berrak bir dere varmış. Bu derenin kıyısında her sabah Balıkçı Fikret otururmuş. Fikret çok sabırlı bir adammış; oltasını suya salar, saatlerce sessizce beklermiş.

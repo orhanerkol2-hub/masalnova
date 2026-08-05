@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["yardımlaşma","paylaşma","dayanışma"]
 characters: ["Çoban Emre","Nine Sultan","Küçük Ali"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların eteğinde küçük bir köy varmış. Bu köyde Emre adında iyi kalpli bir çoban yaşarmış. Emre her sabah güneşle beraber kalkar, koyunlarını yeşil çayırlara götürürmüş.

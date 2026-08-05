@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["dürüstlük","huzur","şefkat"]
 characters: ["Dede Sadık","Minik tavşan Pamuk","Ay Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, çiçekli bir bahçenin ortasında Dede Sadık yaşarmış. Bu bahçede güller pembe pembe açar, papatyalar beyaz beyaz sallanır, laleler de kırmızı kadifeden şapkalar giyermiş.
@@ -30,6 +33,6 @@ Dede Sadık, bahçesindeki her çiçeğe gece dileği vermiş: "Sen de uyu papat
 
 Ay Nine gökyüzünden gülümsemiş, yıldızlar birer birer gözlerini kapatır gibi sönükleşmiş. Bahçe sessizleşmiş, sadece yumuşak bir rüzgâr sesi kalmış.
 
-Pamuk, güllerin arasında derin bir nefes almış, gözkapakları ağırlaşmış. Dede Sadık da bankında usulca gözlerini kapatmış, elleri kucağında, kalbi huzurlu.
+Pamuk, güllerin arasında derin bir nefes almış, göz kapakları ağırlaşmış. Dede Sadık da bankında usulca gözlerini kapatmış, elleri kucağında, kalbi huzurlu.
 
 Bahçe, ay ışığında sessizce parlarken, herkes birer birer uykuya dalmış. İyi geceler, tatlı rüyalar.

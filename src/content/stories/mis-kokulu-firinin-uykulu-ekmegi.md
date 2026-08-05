@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["tutumluluk","huzur","paylaşma"]
 characters: ["Bahçıvan Rıfat","Fırıncı Teyze Nazlı","Küçük Serçe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının yumuşacık düştüğü küçük bir köyde, güler yüzlü bir bahçıvan yaşarmış. Adı Rıfat'mış. Gündüzleri bahçesindeki çiçekleri sularmış, akşamları da köyün mis kokulu fırınına uğrarmış.

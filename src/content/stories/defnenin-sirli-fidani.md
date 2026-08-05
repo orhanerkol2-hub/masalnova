@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["azim","sabır"]
 characters: ["Defne","Orman Perisi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın kenarında Defne adında meraklı bir kız yaşarmış. Defne bir gün ormanda gezerken toprağın altından ürkek ürkek başını uzatan minicik bir fidan görmüş.

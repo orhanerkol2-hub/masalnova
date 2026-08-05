@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["yardımlaşma","alçakgönüllülük","dostluk"]
 characters: ["Horoz Kırmızıgül","Tilki Turuncu","Tavşan Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin her sabah ilk önce uğradığı geniş bir çayırda Horoz Kırmızıgül yaşarmış. Sesi öyle gürmüş ki, öttüğünde çayırdaki bütün papatyalar başını kaldırıp ona bakarmış. Kırmızıgül bu yüzden burnu büyükmüş; kimseden yardım istemezmiş, hep kendi başının çaresine bakarmış.

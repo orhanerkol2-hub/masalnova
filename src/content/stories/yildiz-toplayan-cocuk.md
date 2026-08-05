@@ -10,6 +10,9 @@ readingTime: 9
 categories: ["uyku"]
 themes: ["hayal gücü", "paylaşma", "huzur"]
 characters: ["Küçük çocuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-05-18"
 ---
 Bir varmış bir yokmuş, dağların bulutlara değdiği bir yerde, mavi pencereli küçük bir ev varmış. Bu evde annesiyle birlikte Deniz adında bir çocuk yaşarmış. Evin çatısı öyle yüksekmiş ki akşam olunca bacasından çıkan duman, yıldızların ayaklarını gıdıklarmış.

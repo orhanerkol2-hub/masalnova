@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["yardımlaşma","dostluk","paylaşma"]
 characters: ["Turuncu tilki Fındık","Beyaz kuzu Pamuk"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın kenarında küçük bir çayır varmış. Bu çayırda Pamuk adında beyaz bir kuzu yaşarmış. Pamuk çok sevimli ama biraz da unutkan bir kuzuymuş.

@@ -8,11 +8,14 @@ coverColor: "#a8683b"
 coverImage: "/covers/stories/yemek-secen-ayi-kestane.webp"
 altText: "Ayı Kestane dağ keçisi Sekmen ile dağ bahçesinde çilek tadıyor"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku","egitici","hayvan"]
 themes: ["yeni tatlar","merak","sağlıklı beslenme","özgüven"]
 characters: ["Kestane","Sekmen","Anne Ayı","Kestane'nin ablası"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Dağın yamacında bir mağara vardı. Mağarada kahverengi bir ayı ailesi yaşardı. En küçükleri Kestane'ydi.

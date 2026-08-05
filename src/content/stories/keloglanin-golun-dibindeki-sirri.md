@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","dürüstlük","yardımseverlik"]
 characters: ["Keloğlan","Padişah","Nine Ayşe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların eteğinde küçük bir köy varmış. Bu köyün kenarında öyle sakin bir göl varmış ki, suyu ayna gibi parlar, kimse onun dibinde ne olduğunu bilmezmiş. Köylüler bu göle "Sessiz Göl" derlermiş, çünkü sularına bir taş atsan bile hiç ses çıkmazmış.

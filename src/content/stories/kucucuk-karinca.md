@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Neml suresi, 16–19. ayetler"
 sourceUrl: "https://kuran.diyanet.gov.tr/tefsir/Neml-suresi/3177/18-19-ayet-tefsiri"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

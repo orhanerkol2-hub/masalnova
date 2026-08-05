@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["affetmek","dostluk","anlayış"]
 characters: ["Fındık","Cıvı","Baharatçı Tosun Amca"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, rengarenk bir çarşı varmış. Bu çarşıda tezgahlar birbirine sokulmuş, baharat kokuları sokaklara yayılmış, herkes bir şeyler alıp satarmış.

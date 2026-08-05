@@ -13,6 +13,9 @@ categories: ["uyku","hayvan","egitici"]
 themes: ["nefes ritmi","sakinleşme","güven","anne sevgisi"]
 characters: ["Mavi","Anne Balina","Deniz Kaplumbağası"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---
 Denizin derin ve sakin bir yeri vardı.

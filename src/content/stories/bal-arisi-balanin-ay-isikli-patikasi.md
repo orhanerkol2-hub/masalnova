@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["alçakgönüllülük","dostluk","paylaşma"]
 characters: ["Bala the arı","Işık the ateş böceği","Nine Papatya"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, çiçek kokulu bir vadide Bala adında küçük bir bal arısı yaşarmış. Bala, kovanının en hızlı uçan, en çok bal taşıyan arısıymış. Bu yüzden burnu biraz havada, göğsü kabarık gezerdi.

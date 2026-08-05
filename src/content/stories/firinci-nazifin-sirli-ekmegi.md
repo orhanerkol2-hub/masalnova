@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["alçakgönüllülük","yardımseverlik"]
 characters: ["Fırıncı Nazif","Muhtar Ahmet","Küçük Elif"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçücük bir köyde Nazif adında bir fırıncı yaşarmış. Her sabah fırınından taze ekmek kokuları yayılır, köylüler kapısında sıra beklermiş.

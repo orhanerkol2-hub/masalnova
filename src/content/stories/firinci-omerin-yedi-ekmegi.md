@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["hoşgörü","paylaşma","dostluk"]
 characters: ["Çoban Vedat","Fırıncı Ömer","Yolcular"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir kasabanın meydanında mis kokulu bir fırın varmış. Fırıncı Ömer, her sabah taş ocağında sımsıcak ekmekler pişirirmiş. Kokusu öyle güzelmiş ki, kuşlar bile pencereye konup içeri bakarmış.

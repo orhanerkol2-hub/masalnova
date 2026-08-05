@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["alçakgönüllülük","dürüstlük","paylaşma"]
 characters: ["Keloğlan","Padişah","Yaşlı kadın Fadime Nine"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların eteğinde, sakin bir gölün kıyısında Keloğlan adında bir delikanlı yaşarmış. Kel kafası güneşte parlar, ama gülüşü gölün suyundan daha berrak parlarmış. Keloğlan, o köyde kimsenin bilmediği bir şeyi bilirmiş: Gölün kıyısındaki söğüt ağacının altında oturup düşünmenin insana akıl verdiğini.

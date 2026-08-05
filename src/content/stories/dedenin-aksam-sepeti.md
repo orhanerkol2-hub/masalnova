@@ -13,6 +13,9 @@ categories: ["uyku","egitici"]
 themes: ["duyguları adlandırma","günü kapatma","güven","güzel anılar"]
 characters: ["Aras","Dede"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---
 Aras dört yaşındaydı.

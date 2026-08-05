@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["azim","umut","sabır"]
 characters: ["Nine Feride","küçük Toprak"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Küçük bir köyün kenarında, taş bir evde Nine Feride yaşarmış. Bahçesinde bir gün rüzgârın getirdiği küçücük bir ceviz tohumu, taşların arasına sıkışmış kalmış.

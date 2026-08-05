@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["cesaret","şefkat","huzur"]
 characters: ["Nine Sevgi","küçük Deniz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yağmurlu bir akşamda küçük bir evin penceresine damlalar usulca vuruyormuş. İçeride, sıcacık bir battaniyenin altında küçük Deniz, şefkatli Nine Sevgi'nin yanına sokulmuş oturuyormuş.

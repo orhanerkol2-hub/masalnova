@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["alçakgönüllülük","sabır","huzur"]
 characters: ["Balıkçı Sadık","Küçük Kızılca Balık","Ay Dede"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, geniş bir çayırın kenarında küçük bir dere akarmış. Bu derenin başında, her akşam sessizce oturan sabırlı bir balıkçı yaşarmış. Adı Sadık'mış.

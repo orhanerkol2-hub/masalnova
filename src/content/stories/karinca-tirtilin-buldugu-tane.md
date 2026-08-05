@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dürüstlük","paylaşma","doğruluk"]
 characters: ["Tırtıl adlı karınca","Baykuş Öğretmen","Fare Fındık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin bal rengine boyadığı bir tarlada, başaklar rüzgârda usulca sallanırmış. Bu tarlada Tırtıl adında küçük, çalışkan bir karınca yaşarmış. Tırtıl her sabah yuvasından çıkar, arkadaşlarıyla birlikte kış için yiyecek toplarmış.

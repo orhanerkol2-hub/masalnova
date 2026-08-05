@@ -13,6 +13,9 @@ categories: ["egitici"]
 themes: ["cesaret", "sorumluluk", "umut"]
 characters: ["Yusuf", "Zümrüdüanka", "Üç Yavru Kuş"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Evvel zaman içinde, kalbur saman içinde, ben babamın beşiğini tıngır mıngır sallar iken bir padişahın üç oğlu varmış.

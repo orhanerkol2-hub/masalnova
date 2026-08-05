@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sabır","huzur","merak"]
 characters: ["Elmas Öniz","Ay Nine","Küçük İpek Kedi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ışıl ışıl bir sarayda meraklı küçük bir kız yaşarmış. Adı Elmas Öniz'miş. Sarayın duvarları yumuşacık bir ışıkla parıldar, pencereleri her gece yıldızları içeri davet edermiş.
@@ -26,7 +29,7 @@ Sonunda Ay Nine gökyüzünün ortasına ulaşmış, ışığını yavaşça sar
 
 "Bak," demiş Ay Nine yumuşak bir sesle, "her yıldız kendi zamanında parlar. Sen de öyle, küçük Elmas'ım."
 
-Elmas Öniz başını sallamış, gözkapakları ağırlaşmaya başlamış. İpek kedi kucağına sokulmuş, ikisi birlikte battaniyenin altına yuvalanmışlar.
+Elmas Öniz başını sallamış, göz kapakları ağırlaşmaya başlamış. İpek kedi kucağına sokulmuş, ikisi birlikte battaniyenin altına yuvalanmışlar.
 
 Saray sessizce nefes alıp verirmiş gibi hafifçe ışıldarmış. Bulutlar yavaşça süzülür, yıldızlar usul usul göz kırparmış. Her şey sakin, her şey yumuşacıkmış.
 

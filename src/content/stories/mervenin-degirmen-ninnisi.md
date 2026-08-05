@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sorumluluk","huzur","şefkat"]
 characters: ["Merve","Değirmenci Dede","Küçük Baykuş"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, uzak bir köyün kenarında, buğday tarlalarının arasında eski bir değirmen varmış. Değirmenin kanatları rüzgârla ağır ağır dönermiş, tıpkı bir ninni gibi: vızzz... vızzz... vızzz...
@@ -26,7 +29,7 @@ Merve, Baykuş'un yanına oturmuş, değirmenin kanatlarının dönüşünü izl
 
 Değirmenci Dede, sıcak bir örtü getirip Merve'nin sırtına koymuş. "Bugün de güzel bir gün geçirdin küçüğüm," demiş yavaşça. "Her küçük özenin, bu değirmeni ve seni büyütüyor."
 
-Merve gülümsemiş, gözkapakları ağırlaşmaya başlamış. Değirmenin kanatları hâlâ ağır ağır dönüyormuş, rüzgâr yumuşak bir şarkı mırıldanıyormuş. Buğday tarlaları ay ışığında sallanırken, Küçük Baykuş da gözlerini yavaşça kapatmış.
+Merve gülümsemiş, göz kapakları ağırlaşmaya başlamış. Değirmenin kanatları hâlâ ağır ağır dönüyormuş, rüzgâr yumuşak bir şarkı mırıldanıyormuş. Buğday tarlaları ay ışığında sallanırken, Küçük Baykuş da gözlerini yavaşça kapatmış.
 
 Merve, Dede'nin sıcak örtüsüne sarınmış, değirmenin ninnisiyle uykuya dalmış. Yıldızlar gökyüzünde nöbet tutmuş, ay usulca ışığını yaymış.
 

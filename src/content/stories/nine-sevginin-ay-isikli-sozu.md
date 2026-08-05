@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sözünde durmak","şefkat","huzurlu uyku"]
 characters: ["Nine Sevgi","Küçük Deniz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyün kenarında yumuşacık bir patika varmış. Bu patika, ay ışığı düştüğünde gümüş bir kurdele gibi parlarmış. Patikanın başında da Nine Sevgi yaşarmış.

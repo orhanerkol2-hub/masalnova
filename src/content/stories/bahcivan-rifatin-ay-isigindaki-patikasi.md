@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sabır","huzur","doğa sevgisi"]
 characters: ["Bahçıvan Rıfat","Küçük kirpi Puf","Ay"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığında uzanan yumuşak bir patikanın kenarında küçük bir bahçe varmış. Bu bahçede güler yüzlü bir bahçıvan yaşarmış, adı Rıfat'mış.

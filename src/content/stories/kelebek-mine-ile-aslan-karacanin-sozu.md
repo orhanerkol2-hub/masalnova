@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sözünde durmak","dostluk","güven"]
 characters: ["Kelebek Mine","Aslan Karaca"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en ucunda, ay ışığının gümüş bir şerit gibi uzandığı bir patika varmış. Bu patikadan geceleri sadece cesur hayvanlar geçermiş, çünkü patika dik kayaların arasından kıvrılıp giderdi.

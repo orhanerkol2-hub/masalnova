@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sorumluluk","emek","sabır"]
 characters: ["Fıstık (sincap)","Dede Kerim","Orman sakinleri"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın en derin köşesinde Dede Kerim adında yaşlı ve bilge bir adam yaşarmış. Bu ormanda kuşlar şarkı söyler, dereler mırıldanır, ağaçlar rüzgârda dans edermiş. Dede Kerim, ormanın en yaşlı çınarının dibindeki küçük ahşap evinde yaşar, her sabah ormanın canlılarına yardım edermiş.

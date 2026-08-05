@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["şükür","paylaşma","dostluk"]
 characters: ["Keloğlan","yaşlı kadın Ayşe Nine","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan yaşarmış. O yıl kış öyle sert gelmiş ki köyün önündeki dere buz tutmuş, dağlar bembeyaz örtünmüş. Keloğlan, annesinin bıraktığı küçük evde tek başına yaşarmış, ama yüreği hep sıcacık olurmuş.

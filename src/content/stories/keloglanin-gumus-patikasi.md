@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["dürüstlük","iyilik","alçakgönüllülük"]
 characters: ["Keloğlan","Padişah","Yaşlı kadın"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında zeki ve gönlü temiz bir delikanlı yaşarmış. Fakirmiş ama hiç kimseye kötülük etmez, herkese yardım elini uzatırmış.

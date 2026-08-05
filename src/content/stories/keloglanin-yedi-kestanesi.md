@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["paylaşma","dostluk","dürüstlük"]
 characters: ["Keloğlan","Padişah","yaşlı kestaneci kadın"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir kasabada Keloğlan yaşarmış. Annesiyle birlikte küçük bir evde otururlar, kıt kanaat geçinirlermiş. Bir gün annesi Keloğlan'a elindeki son üç kuruşu vermiş.

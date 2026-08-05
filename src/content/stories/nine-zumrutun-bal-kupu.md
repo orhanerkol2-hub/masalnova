@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["çalışkanlık","sabır","emek"]
 characters: ["Nine Zümrüt","Tarık","Arılar"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın kenarında Nine Zümrüt yaşarmış. Küçük ahşap evinin bahçesinde kocaman bir bal küpü dururmuş ve bu küpün balı, ormandaki en tatlı bal olarak bilinirmiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merhamet","huzur","dostluk"]
 characters: ["Deniz","minik kuş Civciv","Ay"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, ay ışığının usulca süzüldüğü altın başaklı bir tarla varmış. Başaklar, hafif esen rüzgârla yavaşça sallanır, sanki gökyüzüne ninni söylermiş gibi hışırdarmış.

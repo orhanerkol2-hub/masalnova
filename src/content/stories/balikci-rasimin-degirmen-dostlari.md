@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["merhamet","sabır","paylaşma"]
 characters: ["Balıkçı Rasim","Değirmenci Ali Dede","Serçeler"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarındaki derenin başında eski bir değirmen varmış. Bu değirmenin çarkı artık dönmez, taşları ise yosun tutmuş olsa da, değirmenin içi hâlâ sıcacık ve huzurluymuş.

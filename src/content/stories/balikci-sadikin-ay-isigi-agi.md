@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["tutumluluk","kanaat","huzur"]
 characters: ["Balıkçı Sadık","Ay","Küçük martı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kıyısında Sadık adında sabırlı bir balıkçı yaşarmış. Her akşam güneş yavaşça denize doğru kayarken, Sadık küçük tekneli sandalına biner, kürekleri usulca suya batırırmış.

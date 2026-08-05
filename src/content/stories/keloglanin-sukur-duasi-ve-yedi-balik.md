@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["şükür","paylaşma","dürüstlük"]
 characters: ["Keloğlan","yaşlı balıkçı Dursun Baba","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, deniz kıyısında küçük bir köy varmış. Bu köyde Keloğlan, anasıyla birlikte yaşarmış. Evleri kıyıya çok yakın olduğu için Keloğlan her sabah dalgaların sesiyle uyanırmış.

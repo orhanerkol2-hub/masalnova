@@ -159,12 +159,14 @@ const faqs = [
   },
 ];
 
+const homeSeoTitle = 'Masal Oku – Ücretsiz Çocuk ve Uyku Masalları | MasalNova';
+
 const homeJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     '@id': 'https://masalnova.com/#masal-koleksiyonu',
-    name: 'MasalNova: Masal Oku, Uyku Masalları ve Çocuk Hikâyeleri',
+    name: homeSeoTitle,
     description: 'MasalNova’da çocuklar için yüzlerce ücretsiz Türkçe masal, uyku öncesi masalları ve eğitici hikâyeler.',
     url: 'https://masalnova.com/',
     inLanguage: 'tr-TR',
@@ -199,7 +201,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
 ---
 
 <BaseLayout
-  title="Masal Oku – Ücretsiz Çocuk ve Uyku Masalları | MasalNova"
+  title={homeSeoTitle}
   description="Çocuğunuzun yaşına, ayırdığınız süreye ve temaya uygun yüzlerce ücretsiz Türkçe masalı keşfedin. Uyku, kısa, eğitici ve Keloğlan masallarını okuyun."
   path="/"
   image={tonightStory?.data.coverImage ?? latestStories[0]?.data.coverImage}
@@ -2187,7 +2189,7 @@ const homeContentAdSlot = import.meta.env.PUBLIC_ADSENSE_HOME_CONTENT_SLOT;
     }
     .home-hero-m {
       display: block;
-      margin: -25px -16px 2px;
+      margin: 0 -16px 2px;
     }
     .home-hero-m-link {
       position: relative;

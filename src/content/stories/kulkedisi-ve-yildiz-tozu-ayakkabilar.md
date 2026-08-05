@@ -8,11 +8,14 @@ coverColor: "#6752a6"
 coverImage: "/covers/stories/kulkedisi-ve-yildiz-tozu-ayakkabilar.webp"
 altText: "Külkedisi'nin ay ışıklı bahçede peri, kedisi Minnoş ve yıldız tozundan ayakkabılarla buluştuğu masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 5
+readingTime: 2
 categories: ["uyku", "egitici"]
 themes: ["iyilik", "öz değer", "çalışkanlık"]
 characters: ["Külkedisi", "Minnoş", "İyi Kalpli Peri"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-22"
 ---
 Külkedisi küçük bir evde yaşardı ve her gün severek çalışırdı. Sabahları yerleri süpürür, çiçekleri sular, kedisi Minnoş'a sevgiyle yemek verirdi. İşi bitince bahçede oturur, kuşları izler ve şarkı mırıldanırdı.

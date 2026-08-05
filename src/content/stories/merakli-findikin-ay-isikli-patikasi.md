@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["merak","dostluk","doğayı keşfetmek"]
 characters: ["Fındık (köpek)","Baykuş Tomris","Ateşböceği Civciv"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında Fındık adında meraklı bir köpek yaşarmış. Fındık'ın kulakları hep dikilir, burnu hep havaya kalkarmış; çünkü her gölge, her ses ona bir sır gibi gelirmiş.

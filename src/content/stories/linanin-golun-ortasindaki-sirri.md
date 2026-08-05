@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["cesaret","merak","kendine güven"]
 characters: ["Lina","Balıkçı Dede Selim","Yeşil Kaplumbağa Tona"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların eteğinde küçük bir köy varmış. Bu köyün kenarında ayna gibi duran, sabahları sisle örtülen sakin bir göl bulunurmuş. Köydeki çocuklar göle bakar, ama kimse gölün ortasındaki ufacık adaya gitmeye cesaret edemezmiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["sözünde durmak","dostluk","sabır"]
 characters: ["Toprak (fil)","Minnos (kelebek)","Papatya Ana"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, rengarenk çiçeklerle dolu bir bahçenin kenarında Toprak adında iri, sevimli bir fil yaşarmış. Toprak, bahçedeki bütün hayvanların en güçlüsü olduğu için herkes ondan yardım istermiş.

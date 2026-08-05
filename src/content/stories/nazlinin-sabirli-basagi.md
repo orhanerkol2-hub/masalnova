@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["azim","sabır","merak"]
 characters: ["Nazlı","Dede Osman"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin altın ışıklar saçtığı bir tarlanın kenarında Nazlı adında meraklı küçük bir kız yaşarmış. Her sabah tarlaya gider, başakların arasında dolaşır, hangisinin en büyük ve en sarı olduğunu bulmaya çalışırmış.

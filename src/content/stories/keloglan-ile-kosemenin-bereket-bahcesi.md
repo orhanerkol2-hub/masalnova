@@ -13,6 +13,9 @@ categories: ["keloglan", "egitici"]
 themes: ["paylaşma", "adalet", "yardımlaşma"]
 characters: ["Keloğlan", "Kösemen", "Köylüler"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş.

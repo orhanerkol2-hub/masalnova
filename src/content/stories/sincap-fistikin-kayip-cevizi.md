@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dürüstlük","dostluk","paylaşma"]
 characters: ["Fıstık (sincap)","Kalkan (kaplumbağa)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, rengarenk çiçeklerle dolu bir bahçede Fıstık adında çevik bir sincap yaşarmış. Bu bahçede ayrıca Kalkan adında yavaş ama akıllı bir kaplumbağa da varmış. İkisi çok iyi arkadaşmış, her gün papatyaların arasında buluşup sohbet ederlermiş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["cesaret","huzur","dostluk"]
 characters: ["Çoban Sadık","Küçük kuzu Pamuk","Ay"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yüksek tepelerin ardında, sessiz bir vadide iyi kalpli bir çoban yaşarmış. Adı Sadık'mış. Sadık her akşam koyunlarını yavaşça toplar, onları yumuşacık çayırlara götürürmüş.

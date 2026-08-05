@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["çalışkanlık","dostluk","sabır"]
 characters: ["Aslan Barut","Kuzu Sedef"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, mavi denizin kenarında güneşli bir kıyı varmış. Bu kıyıda Barut adında kocaman, yeleli bir aslan yaşarmış. Barut, gücüyle övünür ama çalışmaktan hoşlanmazmış. Her sabah kumların üzerine uzanır, gölgesinde uyuklar dururmuş.

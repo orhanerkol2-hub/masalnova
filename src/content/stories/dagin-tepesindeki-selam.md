@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["saygı","nezaket","paylaşma"]
 characters: ["Çoban Deniz","küçük Elmas","yaşlı arı avcısı Hasan Dede"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın en tepesinde, bulutlara komşu küçük bir kulübede Çoban Deniz yaşarmış. Deniz, koyunlarını her sabah güneşle beraber otlatmaya çıkarır, karşılaştığı her canlıya güler yüzle 'Günaydın' dermiş.

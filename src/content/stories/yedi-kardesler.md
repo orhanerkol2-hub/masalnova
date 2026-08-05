@@ -13,6 +13,9 @@ categories: ["egitici"]
 themes: ["kardeşlik", "dayanışma", "umut"]
 characters: ["Zeliha", "Altı Kardeşi", "Babaları"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş. Uzak bir ovada, kerpiç bir evde yedi kardeş yaşarmış. Anneleri çevre köylerde hastalara yardım eden bir ebeymiş; o yaz uzun bir yolculuktaymış. Babaları da bir kış hastalanıp yatağa düşmüş.

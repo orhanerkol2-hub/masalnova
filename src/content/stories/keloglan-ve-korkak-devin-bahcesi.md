@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["cesaret","dostluk","dürüstlük"]
 characters: ["Keloğlan","Padişah","Dev Gürbüz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan yaşarmış. Keloğlan fakirmiş ama gönlü zengin, kafası da her zaman çalışırmış.

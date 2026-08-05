@@ -17,6 +17,8 @@ sourceType: "hadith"
 sourceCitation: "Buhârî 3754; Tirmizî 189; Hucurât 13; TDV İA ‘Bilâl-i Habeşî’"
 sourceUrl: "https://islamansiklopedisi.org.tr/bilal-i-habesi"
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

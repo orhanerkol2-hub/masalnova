@@ -17,6 +17,8 @@ sourceType: "hadith"
 sourceCitation: "Nesâî 1141, sahih"
 sourceUrl: "https://sunnah.com/nasai:1141"
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

@@ -17,6 +17,8 @@ sourceType: "hadith"
 sourceCitation: "Sahih Buhârî 6009; Sahih Müslim 2244"
 sourceUrl: "https://sunnah.com/bukhari:6009"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

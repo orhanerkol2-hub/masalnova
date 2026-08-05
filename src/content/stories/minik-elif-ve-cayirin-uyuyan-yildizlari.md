@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["dostluk","huzur","doğa sevgisi"]
 characters: ["Elif","Ateş Böceği Karo","Ay"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, geniş bir çayırın kenarında küçük bir ev varmış. Bu evde, meraklı ve tatlı bir kız yaşarmış, adı Elif'miş.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["hoşgörü","paylaşma","dostluk"]
 characters: ["Keloğlan","Değirmenci Nine","Köy Halkı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağın eteğinde eski bir değirmen varmış. Bu değirmen artık pek çalışmaz, çatısından güvercinler geçer, duvarlarından sarmaşıklar sarkarmış. Köyün delişmen ama iyi yürekli oğlu Keloğlan, bir gün annesine "Ana," demiş, "şu terk edilmiş değirmeni onarsam da köye yararlı olsam mı?"

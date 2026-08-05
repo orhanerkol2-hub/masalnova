@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["sözünde durmak","dürüstlük","akıllılık"]
 characters: ["Keloğlan","Fırıncı Dede Hasan","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir kasabanın kenarında mis kokulu bir fırın varmış. Bu fırının sahibi Dede Hasan, kasabanın en lezzetli simitlerini ve çöreklerini pişirirmiş. Fırının bacasından tüten koku, sokağın öbür ucundaki Keloğlan'ın burnuna kadar gelir, onu hemen oraya çekermiş.

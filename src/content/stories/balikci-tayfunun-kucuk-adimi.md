@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["cesaret","sabır"]
 characters: ["Balıkçı Tayfun","küçük kaplumbağa"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, sakin bir gölün kenarında Tayfun adında sabırlı bir balıkçı yaşarmış. Her sabah gölün kıyısına gelir, oltasını suya salar ve sessizce beklermiş. Tayfun hiç acele etmezmiş, çünkü sabır onun en büyük hazinesiymiş.

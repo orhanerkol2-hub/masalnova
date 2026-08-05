@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["şükür","dostluk","kanaat"]
 characters: ["Tosbik","Minnak","Değirmenci Baykuş"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kıyısında, artık kimsenin kullanmadığı eski bir değirmen varmış. Kanatları rüzgârda ağır ağır dönerdi, çatısında sarmaşıklar büyürdü. Bu değirmenin yanındaki gölette Tosbik ile Minnak adında iki kaplumbağa yaşarmış.

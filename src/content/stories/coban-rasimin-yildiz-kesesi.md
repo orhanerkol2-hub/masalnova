@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["tutumluluk","paylaşma"]
 characters: ["Çoban Rasim","Küçük kuzu Benek"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğinde iyi kalpli bir çoban yaşarmış. Adı Rasim'miş. Rasim her akşam koyunlarını otlattıktan sonra, bulduğu küçük şeyleri bez bir kesede toplarmış: bir düğme, bir tutam yün, bir avuç kuru üzüm.

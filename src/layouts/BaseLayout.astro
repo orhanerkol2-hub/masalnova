@@ -1,10 +1,12 @@
 ---
 import '../styles/global.css';
 import '../styles/reader.css';
+import AdSenseLoader from '../components/AdSenseLoader.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Consent from '../components/Consent.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ReaderTrustFooter from '../components/ReaderTrustFooter.astro';
 
 interface Props {
   title: string;
@@ -91,6 +93,7 @@ const useAppShell = appShell ?? !readerPage;
       robots={robots}
     />
     <Consent />
+    <AdSenseLoader allowAds={allowAds} />
   </head>
   <body class:list={[{ 'app-shell': useAppShell }]}>
     <a class="skip-link" href="#main">İçeriğe geç</a>
@@ -98,7 +101,7 @@ const useAppShell = appShell ?? !readerPage;
     <main id="main">
       <slot />
     </main>
-    {!readerPage && <Footer />}
+    {readerPage ? <ReaderTrustFooter /> : <Footer />}
     <script is:inline>
       {`
         if ('serviceWorker' in navigator && location.protocol === 'https:') {

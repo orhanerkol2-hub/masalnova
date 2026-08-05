@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["saygı","cesaret","alçakgönüllülük"]
 characters: ["Ekin","Kapıcı Dede Salim","Kraliçe Deniznur"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, denizin kıyısında, güneş her doğduğunda camları pırıl pırıl parlayan ışıl ışıl bir saray varmış. Bu sarayda yaşayan Kraliçe Deniznur, ülkesinin en akıllı ve en nazik insanını arıyormuş. Bu yüzden bütün çocukları saraya davet etmiş.

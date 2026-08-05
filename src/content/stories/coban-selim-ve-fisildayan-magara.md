@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merak","huzur","doğa sevgisi"]
 characters: ["Çoban Selim","Küçük koyun Pamuk","Mağaranın Ay Işığı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, yumuşak tepelerin ardında, iyi kalpli bir çoban yaşarmış. Adı Selim'miş. Selim, akşamları koyunlarını sakin sakin ağıla götürür, sonra yıldızları izlermiş.

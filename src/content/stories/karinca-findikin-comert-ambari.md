@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["paylaşma","dostluk","cömertlik"]
 characters: ["Fındık","Cırcır Böceği Zilo","Kırlangıç Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin altın gibi ışıldadığı bir tarlanın kıyısında küçük bir karınca yaşarmış. Adı Fındık'mış. Fındık, tarladaki bütün başakları tek tek tanır, hangi başağın en tatlı taneleri sakladığını bilirmiş.

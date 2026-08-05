@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["affetmek","huzur","sevgi"]
 characters: ["Bilge Dede Sadık","Küçük Yıldız Elin"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, bulutların üstünde, ışıl ışıl bir saray varmış. Bu sarayın duvarları ay ışığından, pencereleri yumuşak bulut pamuklarından yapılmış. Sarayda yaşlı bilge bir dede yaşarmış, adı Dede Sadık'mış.

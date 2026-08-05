@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sözünde durmak","dürüstlük","sorumluluk"]
 characters: ["Çoban Turaç","Bakkal Server","Küçük kız Elmas"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların eteğinde Turaç adında iyi kalpli bir çoban yaşarmış. Turaç, koyunlarını her sabah yeşil çayıra götürür, akşam olunca da köyüne geri dönerdi. Onu herkes severdi çünkü verdiği sözü asla unutmazdı.

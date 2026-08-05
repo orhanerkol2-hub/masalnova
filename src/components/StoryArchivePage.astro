@@ -70,6 +70,7 @@ const visiblePages = Array.from({ length: pageCount }, (_, index) => index + 1)
   path={path}
   jsonLd={jsonLd}
   activeNav="masallar"
+  robots={page > 1 ? 'noindex, follow' : undefined}
 >
   <section class="section archive-page">
     <div class="container">

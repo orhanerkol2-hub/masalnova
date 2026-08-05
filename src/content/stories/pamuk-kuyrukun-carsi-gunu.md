@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["cesaret","dostluk","yardımlaşma"]
 characters: ["Pamuk Kuyruk (tavşan)","Minik Serçe Zilli","Baharatçı Kaplumbağa Kâzım"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, orman kenarındaki köyün pazar yerinde Pamuk Kuyruk adında bir tavşan yaşarmış. Pamuk Kuyruk çok tatlı bir tavşanmış ama en küçük sesten bile ürker, kalabalık yerlere yaklaşmaya çekinirmiş.

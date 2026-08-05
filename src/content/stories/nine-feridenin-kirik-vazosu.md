@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["affetmek","şefkat","dostluk"]
 characters: ["Nine Feride","Deniz","Kerem"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, rengarenk çiçeklerle dolu bir bahçenin ortasında küçük bir ev varmış. Bu evde Nine Feride yaşarmış. Bahçesindeki güller, laleler ve papatyalar onun elinden su içer, güneşten önce onun gülümsemesini görürlermiş.

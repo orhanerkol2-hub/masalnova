@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["cesaret","sabır"]
 characters: ["Balıkçı Sadık","Yıldız Balığı","Ay Nine"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, çiçekli bir bahçenin ortasında küçük, sakin bir göletçik varmış. Bu göletin başında, her akşam yavaşça oturup oltasını suya sarkıtan Sadık adında sabırlı bir balıkçı yaşarmış.

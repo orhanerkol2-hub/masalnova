@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Kehf suresi 60–82; Sahih Buhârî 3401 ve 4725–4727"
 sourceUrl: "https://quran.com/18/60-82"
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

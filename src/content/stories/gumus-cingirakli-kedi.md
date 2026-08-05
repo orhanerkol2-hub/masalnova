@@ -13,6 +13,9 @@ categories: ["kisa", "hayvan", "egitici"]
 themes: ["barış", "sorumluluk", "dostluk"]
 characters: ["Tekir", "Yaşlı Fare", "Değirmenci"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş. Bir değirmenci varmış, bir de değirmencinin Tekir adında kedisi.

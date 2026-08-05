@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["paylaşma","dostluk","cömertlik"]
 characters: ["Dede Kerim","Ela","Burak"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında rengarenk çiçeklerle dolu bir bahçe varmış. Bu bahçenin sahibi, herkesin "Dede Kerim" diye sevgiyle çağırdığı yaşlı ve bilge bir adammış. Bahçesinde laleler, güller, papatyalar ve daha adını bile bilmediğimiz nice çiçekler açarmış.

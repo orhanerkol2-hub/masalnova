@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["affetmek","cesaret","empati"]
 characters: ["Onur","Şeftalici Rıfat Amca","Deniz"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, rengarenk tezgahların kurulduğu kocaman bir çarşı varmış. Bu çarşı her sabah horoz sesiyle uyanır, akşama kadar insan kaynayan bir ırmak gibi çağıldarmış.

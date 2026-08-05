@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dürüstlük","arkadaşlık","sorumluluk"]
 characters: ["Toprak (ayı)","Fıstık (sincap)","Baykuş Devrim"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde Toprak adında iri, tüylü bir ayı yaşarmış. Toprak'ın en sevdiği şey, akşam olup gökyüzü yıldızlarla dolduğunda ormanın kenarındaki tepeye çıkıp yukarıya bakmakmış.

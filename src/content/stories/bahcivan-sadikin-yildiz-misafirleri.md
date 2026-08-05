@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["hoşgörü","sevgi","dostluk"]
 characters: ["Bahçıvan Sadık","Baykuş Huhu","Kirpi Minnak"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyün kenarında sessiz bir bahçe varmış. Bu bahçede Sadık adında güler yüzlü bir bahçıvan yaşarmış. Sadık, gündüzleri çiçeklerini sularmış, akşamları ise bahçesinde oturup yıldızları izlermiş.

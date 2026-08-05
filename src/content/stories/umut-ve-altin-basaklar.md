@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["yardımlaşma","paylaşma","dayanışma"]
 characters: ["Toprak","Ayşe Teyze","köy çocukları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, altın başaklı bir tarlanın kenarında küçük bir köy varmış. Bu köyde Toprak adında cesur, meraklı bir çocuk yaşarmış. Toprak, güneş her doğduğunda tarlaya koşar, başakların rüzgârda dans etmesini seyrederek gün doğumunu izlermiş.

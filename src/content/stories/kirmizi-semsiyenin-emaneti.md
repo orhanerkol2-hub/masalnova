@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","yardımseverlik"]
 characters: ["Tavşan Pati","Komşu Kirpi Deniz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, geniş bir çayırın kenarında Kirpi Deniz yaşarmış. Her sabah çayırı gezer, çiçekleri koklar, kimseye zarar vermeden yürürmüş.

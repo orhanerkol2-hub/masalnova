@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["paylaşma","huzur","dostluk"]
 characters: ["Dede Sadık","Küçük Ela","Değirmen"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, uzak bir vadinin kıyısında eski bir değirmen varmış. Bu değirmen çoktan yorulmuş taşlarıyla, yıllardır tıkır tıkır dönerek köy halkına un yapar dururmuş. Değirmenin içinde, sakalı ay ışığı gibi beyaz, gözleri sıcacık Dede Sadık yaşarmış.

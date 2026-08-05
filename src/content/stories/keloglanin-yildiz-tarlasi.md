@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["çalışkanlık","azim","paylaşma"]
 characters: ["Keloğlan","Padişah","Nine Ayşe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyde Keloğlan yaşarmış. Keloğlan çok çalışkan bir çocukmuş ama köyün diğer gençleri tembelmiş, hep gölgede oturup vakit geçirirlermiş.

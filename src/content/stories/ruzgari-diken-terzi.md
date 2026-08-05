@@ -13,6 +13,9 @@ categories: ["egitici", "kisa"]
 themes: ["yaratıcılık", "sabır", "yardımlaşma"]
 characters: ["Terzi Nuri", "Meryem Nine", "Çayır Kuşu"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Evvel zaman içinde, dağın eteğinde bir kasaba varmış. Bu kasabada Nuri adında bir terzi yaşarmış. Nuri'nin iğnesi öyle inceymiş ki kelebeğin kanadına yama yapar da kelebek fark etmezmiş derler.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["saygı","yardımseverlik","alçakgönüllülük"]
 characters: ["Keloğlan","Yaşlı Yolcu","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağların ardındaki küçük bir köyde Keloğlan yaşarmış. Annesiyle küçük bir kulübede otururlar, kış geldiğinde odunları paylaşır, ellerindeki azıcık ekmeği bile bölüşürlermiş.

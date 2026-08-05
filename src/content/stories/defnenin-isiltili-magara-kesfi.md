@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["paylaşma","merak","arkadaşlık"]
 characters: ["Defne","Mağara Perisi","Köy çocukları"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğinde küçük bir köy varmış. Bu köyde Defne adında meraklı bir kız yaşarmış. Defne her gün dağa çıkar, taşların altına, ağaçların arkasına bakarmış.

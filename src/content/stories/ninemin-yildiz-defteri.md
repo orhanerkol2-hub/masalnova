@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["sorumluluk","şefkat"]
 characters: ["Nine Havva","küçük Toprak"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağın eteğindeki küçük evde şefkatli bir nine yaşarmış. Adı Havva Nine'ymiş. Bir akşam kızı işe gidince, küçük torunu Toprak'a bakma sorumluluğu ona kalmış.

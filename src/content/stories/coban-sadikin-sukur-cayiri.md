@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["şükür","huzur","sevgi"]
 characters: ["Çoban Sadık","Beyaz kuzu Pamuk","Ay Dede"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, geniş bir çayırın ortasında iyi kalpli bir çoban yaşarmış. Adı Sadık'mış. Her akşam koyunlarını yavaşça toplar, çayırın yumuşak otları üzerinde onlarla otururmuş.
@@ -26,7 +29,7 @@ Koyunlar birer birer otların arasına kıvrılır, gözlerini kaparmış. Pamuk
 
 Rüzgâr çayırdaki otları usulca sallar, sanki "uyu, uyu" diye fısıldarmış. Bulutlar gökyüzünde yavaşça süzülür, Ay Dede'nin ışığını yumuşak bir örtü gibi her yere yayarmış.
 
-Sadık da sırtını yumuşak bir kayaya yaslar, gökyüzündeki yıldızları sayarmış: "Bir yıldız, iki yıldız, üç yıldız..." Sesi gitgide alçalır, gözkapakları ağırlaşırmış.
+Sadık da sırtını yumuşak bir kayaya yaslar, gökyüzündeki yıldızları sayarmış: "Bir yıldız, iki yıldız, üç yıldız..." Sesi gitgide alçalır, göz kapakları ağırlaşırmış.
 
 Çayırda her şey sakinmiş. Koyunlar uyumuş, rüzgâr hafifçe esiyormuş, yıldızlar sessizce parlıyormuş. Sadık, kalbinde bir şükür duygusuyla gözlerini kapatmış.
 

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["merak","yardımseverlik","zeka"]
 characters: ["Keloğlan","Meraklı Tavşan","Unutkan Dev"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında geniş bir çayır varmış. Bu çayır o kadar büyükmüş ki, bir ucundan bakan öbür ucunu göremezmiş. Rüzgâr estikçe otlar dalga dalga sallanır, sanki yeşil bir deniz gibi görünürmüş.

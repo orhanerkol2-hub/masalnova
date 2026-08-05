@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["yardımlaşma","paylaşma"]
 characters: ["Elif","Tarla kuşu","Köylü çocuklar"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin altında uzayıp giden, altın başaklı bir tarla varmış. Bu tarlada meraklı küçük bir kız olan Elif, her sabah gezinir, başakların arasında saklanan böcekleri, kuşları izlermiş.

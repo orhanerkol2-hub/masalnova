@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["tutumluluk","paylaşma","öngörü"]
 characters: ["Baykuş Huhu","Sincap Fıstık","Tavşan Pamuk"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en yaşlı meşe ağacında Huhu adında bir baykuş yaşarmış. Huhu, her gece ay ışığında uzanan ince bir patikada dolaşır, yolda bulduğu fındıkları, meşe palamutlarını ve tohumları küçük torbasına koyarmış.

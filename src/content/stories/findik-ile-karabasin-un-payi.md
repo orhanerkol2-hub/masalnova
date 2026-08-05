@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["adalet","dostluk","paylaşım"]
 characters: ["Fındık (tavşan)","Karabaş (köpek)","Değirmenci Baba Rüzgar"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kıyısında eski bir değirmen varmış. Bu değirmenin çarkı yıllardır gıcırdayarak dönerdi, ama içindeki un hâlâ tatlı bir kokuyla köyün her yanına yayılırdı. Değirmenin bekçiliğini yumuşak huylu bir köpek olan Karabaş yapardı. Karabaş'ın en yakın arkadaşı ise komşu tarladaki uzun kulaklı, çevik bir tavşan olan Fındık'tı.

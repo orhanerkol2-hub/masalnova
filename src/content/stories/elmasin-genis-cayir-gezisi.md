@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["hoşgörü","dostluk","huzur"]
 characters: ["Elmas","Kırlangıç Miço","Kaplumbağa Sarı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının usulca süzüldüğü geniş bir çayırda, meraklı küçük bir kız yaşarmış. Adı Elmas'mış. Her akşam, güneş yavaşça yorgunluğunu bırakırken, o da çayırın ortasına gider, yumuşacık otların üstüne uzanırmış.
@@ -28,6 +31,6 @@ Elmas başını sallamış. "Hızlı olan da, yavaş olan da, bu çayırda yerin
 
 Ay, gökyüzünde yumuşak bir battaniye gibi ışığını yaymış. Yıldızlar, birer birer göz kırpmış, sanki Elmas'a "uyu bakalım" diyormuş. Miço kanatlarını katlamış, Sarı kabuğuna sokulmuş, üçü de çayırın ortasında, birbirlerine yaslanarak sessizce dinlenmişler.
 
-Çayır, gecenin serinliğinde derin bir nefes almış. Otlar, yıldızların ışığında usulca parlarken, Elmas'ın gözkapakları da ağırlaşmış. Rüzgâr son bir ninni mırıldanmış, bulutlar ayı yavaşça sarmış.
+Çayır, gecenin serinliğinde derin bir nefes almış. Otlar, yıldızların ışığında usulca parlarken, Elmas'ın göz kapakları da ağırlaşmış. Rüzgâr son bir ninni mırıldanmış, bulutlar ayı yavaşça sarmış.
 
 Ve böylece, geniş çayırda, farklı canlılar bir arada, sıcacık bir uykuya dalmışlar. İyi geceler, küçük Elmas. İyi geceler, tatlı çayır.

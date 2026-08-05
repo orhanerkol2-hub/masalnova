@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["affetmek","dürüstlük","alçakgönüllülük"]
 characters: ["Keloğlan","Padişah","Saray Bahçıvanı"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, ışıl ışıl bir saray varmış. Bu sarayın duvarları altın yaldızlı, pencereleri billur gibi parıldarmış. Sarayın en değerli eşyası ise, güneşin her sabah ilk ışığını yansıtan büyük, gümüş çerçeveli bir aynaymış.

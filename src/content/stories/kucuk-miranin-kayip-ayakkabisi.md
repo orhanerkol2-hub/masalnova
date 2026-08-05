@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["azim","yardımseverlik"]
 characters: ["Mira","Nazlı Teyze"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşli bir günde küçük Mira, annesiyle kalabalık bir çarşıya gitmiş. Çarşı öyle kalabalıkmış ki, tezgahlar yan yana dizilmiş, insanlar oradan oraya koşuşturuyormuş.

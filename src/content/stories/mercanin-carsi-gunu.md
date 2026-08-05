@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["cesaret","yardımseverlik","kendine güven"]
 characters: ["Mercan","Nine Havva","Baharatçı Kadir"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, rengarenk bir çarşının kenarında Mercan adında küçük bir çocuk yaşarmış. Mercan, çarşının gürültüsünden, kalabalığından ve bağıra çağıra satılan sebzelerden biraz çekinirmiş. Annesiyle çarşıya her gittiğinde onun eteğinden hiç ayrılmazmış.

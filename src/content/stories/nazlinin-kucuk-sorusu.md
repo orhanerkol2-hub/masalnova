@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["kisa"]
 themes: ["alçakgönüllülük","merak"]
 characters: ["Nazlı","Tarlanın En Uzun Başağı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin altın gibi parladığı bir tarlada, başaklar rüzgârda usulca sallanırmış. Bu tarlaya her gün gelen meraklı küçük bir kız varmış, adı Nazlı'ymış.

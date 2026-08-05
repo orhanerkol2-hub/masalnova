@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dostluk","yardımlaşma","farklılıklara saygı"]
 characters: ["Baykuş Huri","Arı Bal Damla","Sincap Fındık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, yemyeşil bir ormanın en yaşlı meşe ağacında Huri adında bir baykuş yaşarmış. Huri gündüzleri uyur, geceleri gözlerini parlata parlata ormanı gözetlermiş.

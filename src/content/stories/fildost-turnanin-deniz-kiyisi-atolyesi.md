@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["çalışkanlık","dostluk","azim"]
 characters: ["Turna adlı yavru fil","Midye Mira","Yengeç Kerem"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, masmavi bir denizin kıyısında Turna adında sevimli bir yavru fil yaşarmış. Turna'nın hortumu çok güçlüymüş, ama o bu gücünü sadece oyun oynamak için değil, işe yaramak için kullanmayı severmiş.

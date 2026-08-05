@@ -8,11 +8,14 @@ coverColor: "#6f5ad7"
 coverImage: "/covers/stories/yildiz-paralari.webp"
 altText: "Elif'in yıldız biçimli gümüş ışıkların altında sıcak köy yolunda durduğu uyku masalı kapağı"
 ageGroups: ["3-5"]
-readingTime: 6
+readingTime: 5
 categories: ["uyku", "egitici"]
 themes: ["cömertlik", "paylaşma", "şefkat"]
 characters: ["Elif", "Yaşlı Amca", "Nine", "Çocuklar"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-28"
 ---
 Bir varmış, bir yokmuş. Küçük bir köyde Elif adında küçücük bir kız yaşarmış.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merak","huzur","doğa sevgisi"]
 characters: ["Bahçıvan Rüzgâr","Küçük Baykuş Puf"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, dağ başındaki küçük bir kulübede güler yüzlü bir bahçıvan yaşarmış. Adı Rüzgâr'mış. Her akşam güneş yavaşça dağın ardına çekilirken, Rüzgâr elindeki sulama kabıyla bahçesindeki çiçekleri usulca sularmış.

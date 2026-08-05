@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["nezaket","dostluk","paylaşma"]
 characters: ["Fıstık","Midye Mine","Martı Civciv"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında, dalgaların usul usul kıyıya vurduğu bir yerde küçük bir sincap yaşarmış. Adı Fıstık'mış. Fıstık, kışa hazırlık yapmak için topladığı fındıklarını küçük bir çuvala doldurmuş ve kıyı boyunca yürüyerek eve dönüyormuş.

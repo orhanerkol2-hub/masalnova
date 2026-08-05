@@ -8,11 +8,14 @@ coverColor: "#447a42"
 coverImage: "/covers/stories/koca-cinarin-sirri.webp"
 altText: "Elif ile Poyraz, köy meydanındaki Koca Çınar ağacının altında parlayan yaprağı inceliyor"
 ageGroups: ["3-5"]
-readingTime: 7
+readingTime: 5
 categories: ["uyku","egitici"]
 themes: ["doğa sevgisi","merak","çevre bilinci","huzur"]
 characters: ["Elif","Poyraz","Koca Çınar","Küçük Çınar"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-31"
 ---
 Küçük bir köy vardı. Köyün ortasında bir meydan, meydanın ortasında da kocaman bir çınar ağacı vardı.

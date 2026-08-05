@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout
   title="İletişim — MasalNova Çocuk"
-  description="MasalNova Çocuk ile iletişime geçin. Öneri ve görüşleriniz için YouTube kanalımızdan bize ulaşabilirsiniz."
+  description="MasalNova Çocuk ile e-posta veya YouTube üzerinden iletişime geçin. Görüş, düzeltme ve iş birliği taleplerinizi bize iletin."
   path="/iletisim/"
   activeNav=""
 >
@@ -17,13 +17,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
         <ul class="channels">
           <li>
+            <span class="ic ic--email" aria-hidden="true">@</span>
+            <div>
+              <strong>E-posta</strong>
+              <a href="mailto:orhan.erkol@masalnova.com">orhan.erkol@masalnova.com</a>
+            </div>
+          </li>
+          <li>
             <span class="ic">▶</span>
             <div>
               <strong>YouTube</strong>
               <a href="https://www.youtube.com/@masalnovacocuk" target="_blank" rel="noopener">@masalnovacocuk</a>
             </div>
           </li>
-          <!-- E-posta adresinizi eklemek isterseniz buraya ekleyebiliriz. -->
         </ul>
         <a class="btn btn-primary" href="https://www.youtube.com/@masalnovacocuk?sub_confirmation=1" target="_blank" rel="noopener">▶ Kanalımıza Abone Ol</a>
       </article>
@@ -38,6 +44,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .channels { list-style: none; display: grid; gap: 12px; margin-bottom: 22px; }
   .channels li { display: flex; align-items: center; gap: 14px; background: var(--paper-2); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
   .channels .ic { width: 42px; height: 42px; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; font-size: 1.1rem; }
+  .channels .ic--email { background: var(--blue); font-weight: 900; }
   .channels div { display: flex; flex-direction: column; }
   .channels a { color: var(--blue-d); font-weight: 700; }
 </style>

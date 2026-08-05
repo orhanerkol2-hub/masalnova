@@ -8,11 +8,14 @@ coverColor: "#8e44ad"
 coverImage: "/covers/stories/pamuk-prenses-ve-yedi-cuceler-v2.webp"
 altText: "Pamuk Prenses ve ormandaki yedi cüceleri gösteren masal kapağı"
 ageGroups: ["3-5"]
-readingTime: 7
+readingTime: 3
 categories: ["egitici"]
 themes: ["iyilik", "dostluk", "kıskançlık"]
 characters: ["Pamuk Prenses", "Üvey Anne Kraliçe", "Avcı", "Yedi Cüceler", "Prens"]
 isNew: true
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-21"
 ---
 Bir varmış bir yokmuş, uzak bir krallıkta teni kar gibi beyaz, dudakları kiraz gibi kırmızı, saçları abanoz gibi siyah bir prenses yaşarmış. Adı Pamuk Prensesmiş, kalbi de tıpkı adı gibi tertemiz ve safmış.

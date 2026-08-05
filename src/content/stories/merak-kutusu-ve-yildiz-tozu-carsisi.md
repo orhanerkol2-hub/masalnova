@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merak","huzur","şükran"]
 characters: ["Dede Sadık","küçük Elmas"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, akşamın en yumuşak saatinde, kalabalık bir çarşı yavaşça sessizliğe bürünürmüş. Gündüz vakti orada bağıra çağıra alışveriş yapan insanlar gitmiş, tezgahlar örtülmüş, sokak lambaları birer birer sarı bir ışıkla parlamaya başlamış.
@@ -32,7 +35,7 @@ Dede Sadık başını sallamış. "Merak etmek güzel bir şeydir, kızım. Ama 
 
 Birlikte eski bir tezgahın kenarına oturmuşlar. Dede, cebinden yumuşak bir battaniye çıkarmış, Elmas'ın üzerine örtmüş. Uzaktan, minik bir çeşmenin şırıltısı bir ninni gibi yankılanıyormuş.
 
-Elmas'ın gözkapakları ağırlaşmış, nefesi yavaşlamış. Ay ışığı, çarşının damlarını gümüş rengine boyamış, yıldızlar gökyüzünde usulca titremiş.
+Elmas'ın göz kapakları ağırlaşmış, nefesi yavaşlamış. Ay ışığı, çarşının damlarını gümüş rengine boyamış, yıldızlar gökyüzünde usulca titremiş.
 
 "İyi geceler, meraklı kızım," demiş Dede Sadık fısıltıyla, ve Elmas, huzur dolu bir gülümsemeyle uykuya dalmış.
 

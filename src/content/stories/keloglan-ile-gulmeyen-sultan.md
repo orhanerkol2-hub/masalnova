@@ -13,6 +13,9 @@ categories: ["keloglan", "egitici"]
 themes: ["empati", "dinlemek", "umut"]
 characters: ["Keloğlan", "Gülnihal Sultan", "Padişah"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-29"
 ---
 Evvel zaman içinde, develer tellal iken, pireler berber iken bir padişahın Gülnihal adında bir kızı varmış.

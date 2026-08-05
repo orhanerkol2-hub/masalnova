@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["dostluk","yardımseverlik","azim"]
 characters: ["Keloğlan","Padişah","Nazlı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan adında sevimli, kel kafalı ama yüreği güneş gibi sıcak bir çocuk yaşarmış. Keloğlan fakirmiş ama hep gülümsermiş, çünkü annesi ona hep şöyle dermiş: "Gönlü zengin olan, hiçbir şeye muhtaç değildir evladım."

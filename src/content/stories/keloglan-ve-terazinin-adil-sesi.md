@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["adalet","dürüstlük","akıl"]
 characters: ["Keloğlan","Değirmenci Dede","İki komşu köylü"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında taşları yosun tutmuş eski bir değirmen varmış. Bu değirmeni işleten yaşlı bir dede, köyün buğdaylarını öğütür, karşılığında ufacık bir un payı alırmış.

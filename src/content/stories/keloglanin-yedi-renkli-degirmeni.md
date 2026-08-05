@@ -10,6 +10,9 @@ readingTime: 4
 categories: ["keloglan"]
 themes: ["hoşgörü","dostluk","akıl"]
 characters: ["Keloğlan","Değirmenci Nine","Padişah"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, dağın eteğinde küçük bir köy varmış. Bu köyün kenarında, taşları yosun tutmuş, kanatları gıcırdayan eski bir değirmen dururmuş. Köylüler bu değirmene "Yeşil Değirmen" derlermiş, çünkü çatısını sarmaşıklar örtermiş.

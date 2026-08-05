@@ -8,11 +8,14 @@ coverColor: "#b06ab3"
 coverImage: "/covers/stories/uyuyan-guzel-v2.webp"
 altText: "Prenses Aurora'yı ve gül sarılı sarayı gösteren Uyuyan Güzel masalı kapağı"
 ageGroups: ["3-5"]
-readingTime: 7
+readingTime: 2
 categories: ["egitici"]
 themes: ["iyilik", "sevgi", "umut"]
 characters: ["Prenses Aurora", "Kral", "Kraliçe", "İyi Peri", "Küskün Peri", "Prens"]
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-21"
 ---
 Bir varmış bir yokmuş, bir kral ile kraliçenin uzun zaman sonra bir kızları olmuş. O kadar mutlu olmuşlar ki krallıktaki bütün perileri saraya davet edip büyük bir şölen düzenlemişler.

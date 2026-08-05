@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["dostluk","yardımseverlik"]
 characters: ["Mert","küçük serçe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, güneşin altında uzayıp giden, altın başaklı bir tarla varmış. Bu tarlanın kenarında Mert adında cesur küçük bir çocuk yaşarmış.

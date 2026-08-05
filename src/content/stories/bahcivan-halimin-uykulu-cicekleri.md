@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["çalışkanlık","yardımseverlik","huzur"]
 characters: ["Halim Amca","Elif","Kırlangıç"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir sokağın sonunda çiçekli bir bahçe varmış. Bu bahçede Halim Amca yaşarmış. Halim Amca, komşularının en yardımsever insanıymış; kimin bahçesinde bir iş kalsa, hemen elini uzatırmış.

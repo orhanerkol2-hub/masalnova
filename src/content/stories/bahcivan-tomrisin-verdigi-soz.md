@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sözünde durmak","dostluk","sabır"]
 characters: ["Bahçıvan Tomris","küçük kız Ela","serçe Fifi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğinde küçük bir köy varmış. Bu köyde Tomris adında güler yüzlü bir bahçıvan yaşarmış. Tomris'in bahçesi köyün en güzel bahçesiymiş; güller pespembe, elmalar kıpkırmızı açarmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["tutumluluk","sabır","emek"]
 characters: ["Balıkçı Sadık","Küçük Elma","Bahçıvan Rüya Teyze"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısındaki küçük bir köyde Sadık adında sabırlı bir balıkçı yaşarmış. Sadık her sabah şafakla beraber kayığına biner, akşama kadar sabırla ağlarını beklermiş. Bazı günler bol balık tutar, bazı günler eli boş dönermiş ama hiç şikayet etmezmiş.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["şükür","kanaat","paylaşma"]
 characters: ["Keloğlan","Padişah","Nine Hatçe"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında kel kafalı, gönlü sıcak bir delikanlı yaşarmış. Keloğlan yoksulmuş ama hiç şikâyet etmezmiş; elinde ne varsa onunla yetinir, komşularıyla paylaşırmış.

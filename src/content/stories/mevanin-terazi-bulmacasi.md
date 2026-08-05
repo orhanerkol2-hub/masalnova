@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["adalet","dürüstlük","empati"]
 characters: ["Meva","Turunçlu Kadın Sare","Terzi Fikri"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalabalık bir çarşının en gürültülü köşesinde küçük Meva yaşarmış. Meva öyle meraklı bir kızmış ki, çarşıdaki her tezgahın önünde durur, tüccarların tartılarını, kumaşlarını, sepetlerini inceler dururmuş.

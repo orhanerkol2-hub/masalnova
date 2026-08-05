@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["affetmek","dostluk","özür dilemek"]
 characters: ["Fifi (kelebek)","Turuncu (sincap)","Fırıncı Baba Rıfat"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında mis kokulu bir fırın varmış. Fırıncı Baba Rıfat her sabah taze çörekler pişirir, kokusu bütün ormana yayılırmış.

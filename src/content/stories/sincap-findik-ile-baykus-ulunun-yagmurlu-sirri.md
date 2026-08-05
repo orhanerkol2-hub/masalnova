@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["dürüstlük","dostluk","cesaret"]
 characters: ["Fındık (sincap)","Ulu (baykuş)","Minnak (sincap)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en yaşlı meşe ağacında Ulu adında bilge bir baykuş yaşarmış. Ağacın dallarından birinde ise Fındık adlı küçük, hareketli bir sincap otururmuş. Fındık, kış için topladığı fındıkları küçük bir torbada saklarmış ve bu torbayı her akşam gururla sayarmış.

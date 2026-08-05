@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["saygı","alçakgönüllülük","dostluk"]
 characters: ["Keloğlan","Padişah","Yaşlı Bahçıvan Dede"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, küçük bir köyde Keloğlan adında bir çocuk yaşarmış. Keloğlan fakirmiş ama yüreği o kadar temizmiş ki, gördüğü her canlıya güler yüzle davranırmış.

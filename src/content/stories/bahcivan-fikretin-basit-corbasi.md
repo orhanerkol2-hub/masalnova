@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["alçakgönüllülük","sadelik"]
 characters: ["Bahçıvan Fikret","Padişah"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ışıl ışıl bir sarayın bahçesinde güler yüzlü bir bahçıvan yaşarmış. Adı Fikret'miş. Sabahtan akşama kadar gülleri sular, toprağı çevirir, kuşlara tane atarmış.

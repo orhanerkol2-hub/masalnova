@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["şükür","dostluk","kanaat"]
 characters: ["Aslan Sultan","Serçe Cici","Tavşan Fındık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde geniş bir çayırda Sultan adında bir aslan yaşarmış. Sultan çayırın en güçlü hayvanıymış ama hiçbir şeyden hoşnut olmazmış.

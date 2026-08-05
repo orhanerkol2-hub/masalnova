@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["cesaret","yardımlaşma","öz güven"]
 characters: ["Nine Sultan","Deniz","Karga Kara"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, altın başaklı bir tarlanın kenarında küçük bir köy varmış. Bu köyde Nine Sultan adında şefkatli, yaşlı bir kadın yaşarmış. Tarlasındaki buğday başakları güneşte parıl parıl ışıldarmış.

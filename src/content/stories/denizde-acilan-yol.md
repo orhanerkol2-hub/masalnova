@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Şuarâ suresi, 52–68. ayetler"
 sourceUrl: "https://quran.com/26/52-68"
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

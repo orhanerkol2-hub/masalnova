@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["sorumluluk","yardımseverlik","söz tutmak"]
 characters: ["Toprak","Hasan Amca","Deniz kuşu Cık Cık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, mavi bir denizin kıyısında küçük bir köy varmış. Bu köyde Toprak adında meraklı bir çocuk yaşarmış. Toprak her sabah kıyıya inip renkli deniz kabukları toplarmış, sonra bunları evine götürüp raflarına dizermiş.

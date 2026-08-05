@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["merak","dostluk","sabır"]
 characters: ["Vak Vak (ördek)","Minnak (kaplumbağa)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, gölün kıyısında Vak Vak adında meraklı bir ördek yaşarmış. Vak Vak'ın gözleri her zaman parıl parıl parlarmış, çünkü her şeyi bilmek istermiş: Yıldızlar neden düşmez, ay neden bazen ince bazen yuvarlaktır, patikanın sonunda ne varmış?

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["egitici"]
 themes: ["saygı","cesaret","misafirperverlik"]
 characters: ["Deniz","Yaşlı Yolcu","Deniz'in Annesi"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir dağ köyünde Deniz adında cesur bir çocuk yaşarmış. O akşam gökyüzü kapkara bulutlarla kaplanmış, şimşekler art arda çakıp yağmur şiddetle yağmaya başlamış.

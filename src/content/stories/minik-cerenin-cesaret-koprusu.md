@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["egitici"]
 themes: ["cesaret","yardımseverlik","komşuluk"]
 characters: ["Ceren (tavşan yavrusu)","Baykuş Sabri (yardımsever komşu)","Küçük Fındık (kirpi)"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın kenarında sakin bir göl varmış. Bu gölün suları öyle durgunmuş ki, üzerine eğilen her yaprak kendi yüzünü aynada gibi görürmüş. Gölün kıyısında yaşayan Ceren adında küçük bir tavşan yavrusu, gölün karşı kıyısına geçmekten çok korkarmış. Çünkü karşıya geçmek için ince, ahşap bir köprüden yürümek gerekirmiş.

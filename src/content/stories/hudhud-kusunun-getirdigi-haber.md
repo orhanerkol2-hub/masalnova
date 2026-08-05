@@ -17,6 +17,8 @@ sourceType: "quran"
 sourceCitation: "Neml suresi, 20–44. ayetler"
 sourceUrl: "https://quran.com/27/20-44"
 isNew: true
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
 publishedAt: "2026-08-03"
 ---

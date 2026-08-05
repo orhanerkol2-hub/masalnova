@@ -10,6 +10,9 @@ readingTime: 1
 categories: ["kisa"]
 themes: ["tutumluluk","sabır"]
 characters: ["Balıkçı Sadık","Saray Bekçisi"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, deniz kıyısında Sadık adında sabırlı bir balıkçı yaşarmış. Her gün küçük teknesiyle denize açılır, tuttuğu balıkların bir kısmını satar, bir kısmını da küçük bir çömleğe koyarmış. "Bugün az olsun, yarın çok olsun," dermiş kendine.

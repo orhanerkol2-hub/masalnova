@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["nezaket","huzur","paylaşma"]
 characters: ["Dede Hikmet","küçük kedi Pamuk","serçe Civciv"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir mahallede Dede Hikmet yaşarmış. Evi tahta kapılı, pencereleri mis kokulu güllerle çevrili küçük bir evmiş. Dede Hikmet, her akşam ocağın başında otururken usulca ninni mırıldanırmış.

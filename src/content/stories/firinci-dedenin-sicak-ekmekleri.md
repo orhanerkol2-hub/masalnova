@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["merhamet","paylaşma","huzur"]
 characters: ["Fırıncı Dede İhsan","Küçük tarla faresi","Ay ışığı"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, küçük bir köyün kenarında, mis kokulu bir fırın varmış. Bu fırında yaşlı ve bilge Dede İhsan, her akşam yavaşça hamurunu yoğururmuş. Fırının bacasından yükselen duman, gökyüzündeki yıldızlara doğru usulca süzülürmüş.

@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["hayvan"]
 themes: ["dürüstlük","paylaşma","özür dilemenin gücü"]
 characters: ["Sırma the Arı","Midye Nine","Martı Poyraz"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, deniz kıyısındaki kum tepeciklerinin arasında sarı papatyalar açarmış. Bu papatyaların arasında Sırma adında küçük, çalışkan bir bal arısı yaşarmış. Sırma her sabah güneşle beraber uyanır, kıyı boyunca uçar, çiçeklerden çiçeğe konarak bal toplarmış.

@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["hayvan"]
 themes: ["tutumluluk","paylaşma","öngörü"]
 characters: ["Ayı Baldıran","Tavşan Fındık"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ormanın en derin köşesinde, ay ışığının gümüş bir şerit gibi uzandığı bir patika varmış. Bu patikanın bir ucunda Ayı Baldıran, öbür ucunda ise Tavşan Fındık yaşarmış.

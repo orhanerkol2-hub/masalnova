@@ -10,6 +10,9 @@ readingTime: 2
 categories: ["uyku"]
 themes: ["sorumluluk","huzur","şefkat"]
 characters: ["Bahçıvan Sadık","Ay Çiçeği","Küçük Yarasa Mırmır"]
+author: "aylin-karabektas"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, ay ışığının usulca süzüldüğü bir vadide, güler yüzlü bir bahçıvan yaşarmış. Adı Sadık'mış. Sadık, gündüzleri bahçesindeki çiçekleri sularmış, akşam olunca da yorgun ama mutlu bir şekilde vadinin ucundaki gizemli mağaraya doğru yürürmüş.
@@ -26,7 +29,7 @@ Mağarada yaşayan küçük bir yarasa varmış, adı Mırmır'mış. Mırmır, 
 
 Sadık, çiçeklere su verdikten sonra mağaranın girişindeki yumuşak taşa otururmuş. Vadiden esen ılık rüzgâr, yaprakları hafifçe sallar, uzaktan hafif bir dere sesi gelirmiş. Bu ses, tıpkı bir ninni gibi kulaklara dokunurmuş.
 
-Gökyüzünde yıldızlar bir bir belirir, ay usulca bulutların arasından süzülürmüş. Sadık, bu manzarayı seyrederken gözkapakları ağırlaşırmış. Çünkü her gün çiçeklere baktıktan sonra, bu huzurlu anın tadını çıkarmak, onun en sevdiği alışkanlığıymış.
+Gökyüzünde yıldızlar bir bir belirir, ay usulca bulutların arasından süzülürmüş. Sadık, bu manzarayı seyrederken göz kapakları ağırlaşırmış. Çünkü her gün çiçeklere baktıktan sonra, bu huzurlu anın tadını çıkarmak, onun en sevdiği alışkanlığıymış.
 
 Mırmır omzunda kıvrılmış, çiçekler örtülerinin altında sessizce uyumuş, mağaranın taşları yumuşak bir ışıltıyla parıldamayı sürdürmüş. Sadık da gözlerini yavaşça kapatmış, derin ve tatlı bir uykuya dalmış.
 

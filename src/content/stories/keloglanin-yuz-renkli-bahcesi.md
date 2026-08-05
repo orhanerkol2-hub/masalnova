@@ -10,6 +10,9 @@ readingTime: 3
 categories: ["keloglan"]
 themes: ["çalışkanlık","sabır","dürüstlük"]
 characters: ["Keloğlan","Padişah","Bahçıvan Nine Ayşe"]
+author: "muhammet-karayigit"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-07-12"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, küçük bir köyün kenarında Keloğlan adında zeki ve iyi yürekli bir delikanlı yaşarmış. Kel kafası güneşte parıldar, ama gönlü herkesten daha sıcak parlardı.
