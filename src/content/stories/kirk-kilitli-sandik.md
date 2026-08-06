@@ -16,6 +16,14 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "Bu masal 7–9 yaş grubuna, iyiliğin sonucu ile yapılma niyeti arasındaki farkı konuşabilecekleri için önerilir. Kırk kilidin yıllar içinde açılması, Derya’nın büyümesi ve son kilidin annesine bakım verdiği sırada açılması zaman geçişlerini takip etmeyi gerektirir. ‘Gizli iyilik’, ‘gösteriş’ ve ‘karşılık beklemek’ gibi soyut kavramlar küçük çocuklar için kolayca siyah-beyaz bir kurala dönüşebilir; bu nedenle metni bir yetişkinle okuyup örnekleri birlikte ayırmak daha yararlıdır."
+parentEmotionalNotes: "Soğukta kalan köpek yavrusu, kimsesiz komşu ve hastalanan anne kısa süreli kaygı uyandırabilir; olayların hiçbirinde şiddet yoktur ve yardım güvenli biçimde ulaşır. Annenin hastalığı konuşulurken bakım sorumluluğunun çocuklara ait olduğu izlenimi verilmemelidir. Derya’nın yaptığı çorba ve serin bez, hikâyedeki sevgi göstergeleridir; gerçek yaşamda hasta bir yetişkin için başka bir yetişkinden yardım istemenin doğru olduğu ayrıca söylenebilir."
+parentMessage: "Masal, görünür yapılan yardımın değersiz olduğunu söylemez: Tüccarın dağıttığı unun birçok sofrayı doyurduğu özellikle belirtilir. Sandığın ölçtüğü şey yardımın işe yarayıp yaramaması değil, insanın yalnızca alkış veya ödül için hareket edip etmemesidir. Son hazinenin ayna çıkması da iyiliği tek bir kahramana ait kılmaz; şehirdeki herkesin küçük ve gerçek bir ihtiyaca karşılık verebileceğini gösterir. Böylece çocukla hem yardımın etkisini hem de niyeti, kimseyi utandırmadan ayrı ayrı konuşabilirsiniz."
+parentEverydayUse: "Çocuğunuzla ‘yardım etmeden önce ihtiyacı sormak’ üzerine küçük örnekler kurun. Bir arkadaşın çantasını izinsiz taşımak yerine ‘Yardım ister misin?’ demek; evde su isteyen birine bardak getirmek; ortak oyundan sonra parçaları toplamak gibi somut durumlar seçin. İyiliği bir puan yarışına çevirmeyin. Akşam yalnızca ‘Bugün birinin işini kolaylaştıran ne oldu?’ diye sorun ve yardım alan kişinin neye ihtiyaç duyduğunu nasıl anladığınızı konuşun."
+discussionQuestions: ["Tüccarın un dağıtması kilidi açmadığı hâlde neden yine de değerliydi?", "Derya annesine bakarken sandığı neden hiç düşünmedi ve son kilit tam o sırada neden açıldı?", "Sandığın içinde altın yerine ayna bulunması şehir halkına ne anlatıyordu?"]
+activity: "Üç küçük durum kartı hazırlayın: üşüyen bir köpek, ağır bir çanta taşıyan arkadaş ve oyundan sonra dağınık kalan masa. Her kart için önce ‘Gerçek ihtiyaç ne olabilir?’, sonra ‘Yardım etmeden önce ne sorabiliriz?’ ve son olarak ‘Bunu ödül beklemeden nasıl yaparız?’ sorularını cevaplayın. Amaç en çok iyiliği saymak değil, ihtiyacı dikkatle fark etmektir."
+modifiedAt: "2026-08-06"
 publishedAt: "2026-07-29"
 ---
 Bir varmış, bir yokmuş. Bir zamanlar ovanın ortasında bir şehir varmış. O şehrin meydanında, dört mermer sütunun arasında kocaman bir sandık dururmuş.

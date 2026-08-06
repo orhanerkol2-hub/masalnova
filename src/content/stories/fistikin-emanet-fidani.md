@@ -13,36 +13,46 @@ characters: ["Fıstık (sincap)","Dede Kerim","Orman sakinleri"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: >-
+  7–9 yaş etiketi, Fıstık'ın bir görevi heyecanla kabul edip günlük yaşamında unutmasını, fidanın sararan yapraklarından ihtiyacı fark etmesini ve bakım planını yeniden düzenlemesini anlamaya uygundur. Canlı bir fidanın çocuğa “emanet” edilmesi daha küçük yaşlarda aşırı sorumluluk hissi yaratabilir. Yetişkin, bitkinin bakımından son kertede kendisinin sorumlu olduğunu ve çocuk unuttuğunda canlının zarar görmesine izin vermeden hatırlatma veya birlikte bakım sağlaması gerektiğini açıkça belirtmelidir.
+parentEmotionalNotes: >-
+  Fidanın yapraklarının sararması, hata sonucu bir canlının kaybedileceği korkusunu tetikleyebilir. Metinde fidan canlanır; ancak her bitkinin iyileşeceği garantisi verilmez. Çocuğu unutkan, tembel veya sorumsuz diye etiketlemeyin. Unutmak, görev çocuğun kapasitesine uymadığında ya da destek planı işlemediğinde görülebilir. Bir bitki zarar görürse suçluluk üretmek yerine ne öğrendiğinizi ve yetişkinin bundan sonra nasıl destek vereceğini konuşun.
+parentMessage: >-
+  Sorumluluk, sevdiğimiz her şeyi tek başımıza kurtarmak değildir. Bir görevi kabul etmeden önce zamanını, gereken bilgiyi ve kimden yardım alınacağını değerlendirmek de sorumluluğa dahildir. Güncellenen anlatıda Dede Kerim baştan ortak plan kurar, yetişkin takibini üstlenir ve aksaklığı erken fark eder. Fıstık'ın katkısı sürekli kusursuz bakım değil, sorunu konuşması ve rutini Dede'yle gerçekçi biçimde değiştirmesidir. Ağacın büyümesi emeğin kesin ödülü değil, bakım ile doğal koşulların birlikte sonucudur.
+parentEverydayUse: >-
+  Çocuk bir bitkiye bakmak isterse yetişkinle iki sütunlu plan yapın: “Çocuğun seçebileceği küçük iş” ve “Yetişkinin takip edeceği güvenlik/bakım işi”. Sulama miktarını yetişkin belirlesin; telefon alarmı veya resimli kart yalnızca hatırlatıcı olsun. Bir gün unutulduğunda ceza vermeyin, planın neden işlemediğini birlikte değiştirin. Bitki istemeyen çocuk bir oyuncak ağacın mevsim yapraklarını düzenleyerek aynı planlama fikrine katılabilir.
+discussionQuestions:
+  - "Fıstık fındık toplama mevsimi başlayınca hangi işaret ortak planın işlemediğini gösterdi; Fıstık ile Dede Kerim planı nasıl değiştirebilirdi?"
+  - "Fidanın sararan yaprakları Fıstık'a hangi ihtiyacı gösterdi ve Fıstık yardım almak için kime gitti?"
+  - "Toprağı ve yaprakları birlikte kontrol etmek, her sabah otomatik olarak sulamaktan neden farklıdır?"
+activity: >-
+  Bir fidan resmi ve yedi boş gün kutusu çizin. Çocuk yalnızca iki kolay bakım simgesi seçsin; yetişkin kendi kontrol simgesini ayrı renkte eklesin. Güneş, toprak nemi ve sulama ihtiyacının her bitkide farklı olabileceğini söyleyin. Gerçek bitki kullanılacaksa türün bakım bilgisini yetişkin doğrulasın; etkinlikte unutulan kutular kırmızıyla işaretlenmesin veya ödül çizelgesine çevrilmesin.
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, yemyeşil bir ormanın en derin köşesinde Dede Kerim adında yaşlı ve bilge bir adam yaşarmış. Bu ormanda kuşlar şarkı söyler, dereler mırıldanır, ağaçlar rüzgârda dans edermiş. Dede Kerim, ormanın en yaşlı çınarının dibindeki küçük ahşap evinde yaşar, her sabah ormanın canlılarına yardım edermiş.
 
-Bir gün, sincapların en meraklısı ve en telaşlısı olan Fıstık, Dede Kerim'in kapısına gelmiş. Fındık toplamaktan başka hiçbir şeye vakti olmayan bu küçük sincap, dedenin elindeki fidanı görünce gözleri parlamış.
+Bir gün Fıstık adındaki genç sincap Dede Kerim'in kapısına gelmiş. O sıralar fındık toplamaya çok zaman ayırıyormuş; yine de dedenin elindeki fidanı görünce gözleri parlamış.
 
 "Dede Kerim, bu ne kadar güzel bir fidan!" demiş Fıstık heyecanla.
 
-Dede Kerim gülümsemiş. "Bu fidan çok özel, Fıstık. Onu sana emanet etmek istiyorum. Her gün suyunu vereceksin, güneşe doğru döndüreceksin ve ona sevgiyle bakacaksın. Bir gün büyüyüp koca bir ağaç olacak."
+Dede Kerim gülümsemiş. "Bu fidan çok özel, Fıstık. Bakımına benimle birlikte katılmak ister misin? Suyu ne zaman ve ne kadar istediğini beraber kontrol ederiz. Sen yapraklarına bakar, unutursan benden yardım istersin. Onun güvenli bakımından ben de sorumlu olacağım."
 
 Fıstık önce sevinmiş, sonra biraz düşünmüş. "Peki ama ben her gün fındık toplamalıyım, arkadaşlarımla oynamalıyım... Fidana bakmaya vaktim olur mu?"
 
-Dede Kerim nazikçe başını sallamış. "Sorumluluk, sevdiğimiz şeylere zaman ayırmaktır, Fıstık. Bir işi üstlendiğimizde, onu unutmamalıyız."
+Dede Kerim nazikçe başını sallamış. "Öyleyse görevi tek başına taşımayacaksın. Her akşam kapındaki yaprak işaretine bakarız; ben de toprağı iki günde bir kontrol ederim. Plan yetmezse birlikte değiştiririz."
 
-Fıstık fidanı almış ve eve götürmüş. İlk günler heyecanla suyunu vermiş, güneşe çevirmiş. Ama bir hafta sonra fındık toplama mevsimi başlayınca, fidanı unutmuş. Günler geçmiş, fidan susuz kalmış, yaprakları sararmaya başlamış.
+Fıstık fidanı almış ve eve götürmüş. İlk günler Dede Kerim'le toprağı kontrol etmiş, gerektiğinde uygun miktarda su vermiş ve ışığını ayarlamış. Ama fındık toplama mevsimi başlayınca kapıdaki işareti birkaç kez fark etmeden geçmiş. Dede Kerim yaprakların sararmaya başladığını erken görüp Fıstık'a haber vermiş.
 
-Bir sabah Fıstık, fidanın solmuş yapraklarını görünce çok üzülmüş. Hızla Dede Kerim'e koşmuş. "Dede Kerim, fidanım ölüyor! Ne yapmalıyım?"
+Fıstık yaprakları görünce üzülmüş. "Dede Kerim, planımız işlememiş. Şimdi ne yapabiliriz?" diye sormuş.
 
-Dede Kerim sakin bir sesle sormuş. "Ona her gün bakmayı unuttun mu, küçük dostum?"
+Dede Kerim sakin bir sesle, "Sorumluluk almak, bir plan işlemediğinde bunu fark edip yardım istemeyi de içerir," demiş. "Ben bakımın yetişkin sorumluluğunu taşıyorum; şimdi toprağı birlikte inceleyip hatırlatıcımızı değiştirelim. Fidanın toparlanıp toparlanmayacağını zaman gösterecek."
 
-Fıstık başını eğmiş. "Fındık toplamak çok önemliydi, unuttum..."
+Fıstık o günden sonra Dede Kerim'le toprağı ve yaprakları kontrol etmiş; ihtiyaç varsa uygun miktarda suyu birlikte vermiş. Fındık toplama günlerinde işareti daha görünür bir yere taşımışlar. Günler, haftalar geçmiş. Uygun bakım ve elverişli koşullar birleşince fidan yavaş yavaş canlanmış, yeni yapraklar açmış.
 
-"Sorumluluk almak, bazen zor kararlar vermek demektir," demiş Dede Kerim. "Ama unutma, her canlı senin ilgine değer. Şimdi ona bakmaya devam et, belki hâlâ kurtarabiliriz."
+Aylar sonra fidan küçük bir ağaç olmuş. Fıstık gölgesinde otururken Dede Kerim gülümsemiş. "Bakım, yardım ve uygun koşullar birleşince fidan toparlandı. En önemlisi, planımız işlemediğinde birlikte değiştirebilmemizdi," demiş.
 
-Fıstık o günden sonra her sabah erkenden kalkıp fidana su vermiş, öğleden sonra fındık toplamış, akşam yine fidanın yanına gidip ona şarkı söylemiş. Günler, haftalar geçmiş. Fidan yavaş yavaş canlanmış, yeni yapraklar açmış.
+Fıstık daha sonra ormanın diğer hayvanlarıyla fidan bakımı hakkında öğrendiklerini paylaşmış; Dede Kerim de her fidan için gereken yetişkin takibini sürdürmüş.
 
-Aylar sonra fidan küçük bir ağaç olmuş. Fıstık, gölgesinde oturup gurur duyan bir sincapmış artık. Dede Kerim gelip ağacı görünce gülümsemiş. "İşte bu, sorumluluğun meyvesi, Fıstık. Emek verdiğin her şey, sana geri döner."
-
-Fıstık o günden sonra ormanın diğer hayvanlarına da fidan dikmeyi ve onlara bakmayı öğretmiş. Orman, Fıstık'ın emeğiyle daha da yemyeşil olmuş.
-
-Sevgili çocuklar, siz de üstlendiğiniz küçük görevleri unutmadan, sevgiyle yapmaya çalışır mısınız?
-
-**Kıssadan hisse:** Üstlendiğimiz her sorumluluğa sevgiyle ve sabırla bakarsak, emeğimiz güzel meyveler verir.
+**Kıssadan hisse:** Sorumluluk; gerçekçi bir plan kurmayı, destek istemeyi ve koşullara göre bakımı değiştirmeyi de içerir.

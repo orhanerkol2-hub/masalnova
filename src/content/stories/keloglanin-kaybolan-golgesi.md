@@ -16,7 +16,15 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "Bu masal, söz vermek ile bir işi gerçekten yapabilecek olmak arasındaki farkı tartışabildiği için 7-9 yaşa uygundur. Keloğlan'ın Meryem Nine'nin odunlarını unutması, özür dilemesi, odunları yağmurdan koruyacak biçimde istiflemesi ve sonra örtüyü yeniden bağlaması; sorumluluğu tek bir “özür” cümlesinden daha somut gösterir. Konuşan gölge fantastik bir vicdan imgesidir; çocukla gölgenin gerçek olmadığı, Keloğlan'ın kendi rahatsızlığını temsil ettiği konuşulabilir."
+parentEmotionalNotes: "Gölgenin kaybolması ve annenin “gölgesiz insan yarım insan gibidir” sözü bazı çocuklarda bir hata yüzünden eksik ya da sevilmez olma kaygısı doğurabilir. Okurken “Keloğlan yanlış yaptı ama değeri azalmadı; neyi onarabileceğini düşündü” diye açıklayın. Meryem Nine'nin onu başkalarına “sözünde durmaz” diye anlatması da utandırıcı gelebilir; bir insanı tek davranışla etiketlememenin önemini vurgulayın. Çocuk gölgenin kaybolduğu bölümde durmak isterse önce gölgenin geri döneceğini söyleyebilir veya sahneyi atlayabilirsiniz."
+parentMessage: "Güven, hiç unutmamak veya her isteğe evet demek değildir. Keloğlan'ın asıl gelişimi daha çok yardım yapmasında değil, söz vermeden önce kapasitesini tartmasında, gecikince haber vermeyi öğrenmesinde ve bahaneye sığınmadan zararı gidermesindedir. Yardımın gönüllü olması, verilen sözün de gerektiğinde yeniden konuşulabilmesi mesajın önemli parçasıdır."
+parentEverydayUse: "Çocuğunuzla o haftaki küçük sözlerden birini seçin: oyuncağı yerine koymak, bir kitabı geri vermek ya da birine haber etmek gibi. “Bunu tek başına yapabilir misin, ne zaman yapacaksın, yardıma ihtiyaç olursa kime söyleyeceksin?” diye birlikte planlayın. Bu çalışmayı geçmiş hataları saymak veya çocuğu suçlamak için kullanmayın."
+discussionQuestions: ["Keloğlan odunları taşıdıktan sonra neden örtüyü bağlamak için yeniden Meryem Nine'ye uğradı?","Gölge, Keloğlan'a söz vermeden önce hangi soruyu sormayı önerdi; sen bu soruya ne eklerdin?","Fadime Teyze, Keloğlan hakkındaki ilk sözünü nasıl düzeltti ve bu neden önemliydi?"]
+activity: "Bir kâğıdı üçe bölüp “yapabilirim”, “yardımla yapabilirim” ve “şimdi söz veremem” başlıklarını yazın. Üç küçük günlük iş kartı hazırlayın ve çocuk kartları istediği bölüme koysun. Bir kart için zaman ve yardım planı belirleyin; istemediği kartı seçmeye zorlamayın."
 publishedAt: "2026-07-29"
+modifiedAt: "2026-08-06"
 ---
 Evvel zaman içinde, kalbur saman içinde...
 

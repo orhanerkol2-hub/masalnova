@@ -13,8 +13,15 @@ characters: ["Keloğlan","Padişah","Yaşlı Kadın Fatma Nine"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: "Tohumun haftalar ve aylar içinde değişmesi, fazla sulamanın zarar vermesi ve bakım çizelgesi 7-9 yaşta süreç takibine uygundur. Çocuklar Keloğlan'ın toprağı ve güneşi incelemesini, komşuların küçük fideyle alay etmesini ve padişahın köklere bakmasını karşılaştırabilir. Metin masalsı bir yarışmadır; her tohumun aynı hızda ve aynı koşulda büyümediği, sonuçların yalnız sabra bağlı olmadığı açıklanmalıdır."
+parentEmotionalNotes: "Keloğlan'ın kel kafası ve küçük fidesi üzerinden alay edilmesi, görünüşü ya da gelişim hızı karşılaştırılan çocuklara dokunabilir. “Hiç kırılmaz” ifadesi dayanıklılık ölçüsü değildir; üzülmek ve destek istemek de uygundur. Padişahın tek kazanan seçmesi rekabet baskısı yaratabilir. Başarısız filizlerin sahiplerini sabırsız veya kötü diye etiketlemeyin; bakım hataları bilgiyle düzeltilebilir. Yarışma veya alay bölümü çocuğu sıkarsa okumayı bırakmak ya da doğrudan sulama çizelgesine geçmek uygundur."
+parentMessage: "Sabır, edilgen biçimde beklemek değil; toprağı gözlemek, uygun miktarda bakım yapmak ve bazen müdahale etmemektir. Keloğlan'ın küçük fidanı “büyük olan kötüdür” mesajı vermez; görünüş yerine kök ve sağlık gibi ilgili ölçütlere bakmayı önerir. Altın kesesini ortak kuyuya ayırması da ödülü kişisel üstünlükten toplumsal faydaya çevirir."
+parentEverydayUse: "Çocuğunuzla bir saksı veya penceredeki bitkiyi haftada iki kez gözlemleyin. Boyunu yarıştırmak yerine yaprak rengi, toprağın nemi ve yeni değişikliği çizin. Bakım yetişkinle planlansın; çocuk o gün ilgilenmek istemezse görevi erteleyebilir veya paylaşabilir."
+discussionQuestions: ["Keloğlan tohumu ekmeden önce toprağı ve güneşi neden inceledi?","Köylülerin fideleri sararınca yalnız sabırsızlık dışında hangi koşullar etkili olmuş olabilir?","Keloğlan altınla ortak kuyuyu onarınca yarışmanın sonucu kimlere yarar sağladı?"]
+activity: "Üç resim çizin: kuru toprak, çok ıslak toprak ve uygun nemli toprak. Çocuk her biri için “su ver”, “bekle” veya “yetişkine sor” kartını seçsin. Bir hafta sonra kararın bitkinin görünümüne göre değişebileceğini konuşun. Kart seçimi gönüllüdür; çocuk yalnız resimlere bakmayı ya da etkinliği bitirmeyi seçebilir."
 publishedAt: "2026-07-12"
-modifiedAt: "2026-08-05"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde küçük bir köyde Keloğlan adında sivri akıllı, iyi yürekli bir delikanlı yaşarmış. Kel kafasına gülenler çok olsa da, Keloğlan hiç kimseye kırılmaz, her zaman güler yüzünü kaybetmezmiş.
 

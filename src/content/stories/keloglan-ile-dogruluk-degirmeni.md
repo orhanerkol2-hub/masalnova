@@ -16,7 +16,15 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: "Konuşan değirmen, gizli hata, mahremiyet ve onarma adımlarını aynı anda ele aldığı için 7-9 yaş okuruna uygundur. Tombul Hasan'ın komşu buğdayını geri vermesi ile Ayşe Nine'nin izinsiz aldığı nanenin yerine fidan dikmesi, farklı ölçekte zararların aynı olmadığını ama ikisinde de sahibine dönüp konuşmanın gerektiğini gösterir. Değirmenin fısıltıyı yalnız ilgili kişiye söylemesi özellikle tartışılabilir."
+parentEmotionalNotes: "Taşın durması, yüz kızarması ve köyün merakı çocukta “hatalarım ortaya çıkarsa herkes öğrenir” kaygısı yaratabilir. Değirmenin kişiyi kalabalık önünde utandırmadığını ve Keloğlan'ın kimseyi sorgulamadığını belirtin. Bununla birlikte çocuğa zarar veren, onu korkutan veya güvensiz hissettiren bir sırrın saklanması gerekmediğini; güvenilir bir yetişkine anlatabileceğini açıkça söyleyin. Çalışan değirmen çevresinde gerçek hayatta yetişkin gözetimi gerekir. Değirmen taşı durduğunda çocuk gerilirse fısıltı bölümünü atlamak veya onarım sahnesinden sürdürmek mümkündür."
+parentMessage: "Dürüstlük bir makinenin insanları kusursuz diye ayırması değildir. Masalın güçlü yanı, yanlışın adını koyduktan sonra iade, özür, telafi ve zaman tanıma göstermesidir. Kapıdaki “bir günlük un payı” kuralı, temel ihtiyacı itirafa karşı ödül veya ceza yapmaz. Vicdan, başkalarının özelini araştırmaktan çok kendi davranışımıza bakmayı gerektirir."
+parentEverydayUse: "Evde küçük bir onarma dili deneyin: “Ne oldu?”, “Kim veya ne etkilendi?”, “Şimdi ne yardımcı olur?” Bir bardak suyun dökülmesi ya da ödünç kalemin unutulması gibi düşük riskli bir örnek seçin. Çocuğun konuşmak istemediği kişisel ayrıntıları zorlamayın; amaç itiraf toplamak değil, güvenli çözüm üretmektir."
+discussionQuestions: ["Doğruluk Değirmeni neden Hasan'ın yanlışını bütün köye değil yalnız onun kulağına söyledi?","Ayşe Nine bir tutam naneyi küçük görse de neden iki fidan dikmeye karar verdi?","Keloğlan'ın kapıya astığı günlük un payı kuralı olmasaydı insanlar nasıl hissedebilirdi?"]
+activity: "Üç kart hazırlayın: “geri ver”, “onar”, “özür ve yeni plan”. Oyuncak bir kürek, kopmuş kâğıt yaprak ve yanlış tartılmış üç düğme için uygun kartı seçin. Çocuk isterse başka bir telafi yolu eklesin; gerçek bir hatasını anlatması istenmesin."
 publishedAt: "2026-07-29"
+modifiedAt: "2026-08-06"
 ---
 Evvel zaman içinde, develer tellal iken, pireler berber iken Keloğlan ile anası bir dağ köyünde yaşarmış.
 

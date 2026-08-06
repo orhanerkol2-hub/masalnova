@@ -5,7 +5,7 @@ coverEmoji: "🌳"
 coverColor: "#ffb01f"
 coverImage: "/covers/stories/keloglan-ve-yesil-ormanin-adalet-kusu.webp"
 altText: "Kapak görseli: Keloğlan ve Yeşil Ormanın Adalet Kuşu"
-ageGroups: ["5-7"]
+ageGroups: ["7-9"]
 readingTime: 3
 categories: ["keloglan"]
 themes: ["adalet","dürüstlük","akıl"]
@@ -13,7 +13,15 @@ characters: ["Keloğlan","Tilki Turan","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: "Havuçların sahipliği, iki tarafı dinleme ve yetersiz kanıtla karar verme sorunu 7-9 yaşta daha anlamlı bir adalet konuşması açar. Keloğlan tavşanın iddiasını ve Tilki Turan'ın açıklamasını ayrı ayrı dinler, sonra olay yerine gider. Ancak ayak izlerinin bahçenin ortasına uzanmaması tek başına kesin kanıt değildir; bu ayrıntı, “Bir karar vermeden başka hangi bilgi gerekir?” sorusuyla eleştirel düşünmeye çevrilmelidir."
+parentEmotionalNotes: "Havuçların izinsiz alınması, tavşanın ağlaması ve tilkinin kalabalık önünde yüzünün kızarması çocukta kayıp veya suçlanma duygusu uyandırabilir. Kimsenin tek bir iddia üzerine suçlu ilan edilmemesi, yanlış yapanın da aşağılanmaması gerektiğini söyleyin. Gerçek anlaşmazlıklarda çocukların hâkim rolü üstlenmesi beklenmez; güvenilir bir yetişkin tarafları dinlemeli ve güvenliği sağlamalıdır. Tavşanın ağladığı ya da Turan’ın utandığı yerde çocuk isterse durup taraflardan yalnız birinin bakışını konuşabilirsiniz."
+parentMessage: "Adalet yalnız “doğru kişiyi bulmak” değil; karar sürecinin de açık, tarafsız ve düzeltilebilir olmasıdır. Keloğlan'ın Turan'a tohum önerisi gelecekte farklı davranma yolu açar, fakat tavşanın kaybının telafisi de konuşulmalıdır. Merhamet, sorumluluğu ortadan kaldırmaz; sorumluluk da utandırmayı gerektirmez. Padişahın unvan vermesi, Keloğlan'ın her konuda tek yetkili olduğu anlamına gelmemelidir."
+parentEverydayUse: "İki kişinin aynı oyuncağı kendisinin sandığı düşük gerilimli bir örnek kurun. Önce iki tarafın anlatımını, sonra oyuncak üzerindeki işaret veya sıra kaydını inceleyin. Kanıt yetmiyorsa “bilmiyoruz” demenin ve geçici paylaşım planı yapmanın mümkün olduğunu gösterin; çocuğun gerçek çatışmasını canlandırmaya zorlamayın."
+discussionQuestions: ["Keloğlan tavşanın bahçesindeki kök izlerinden ne anladı, hangi bilgileri hâlâ bilmiyordu?","Tilki Turan'ın kendi bahçesini kurması, alınan havuçlar için özür ve telafi yerine geçer mi?","Adalet Kuşu kararı Keloğlan'a vermek yerine iki tarafın da katıldığı nasıl bir yol önerebilirdi?"]
+activity: "Bir tabağa üç kâğıt havuç, yanına iki farklı ayak izi kartı koyun. Çocuk “bildiğimiz”, “tahmin ettiğimiz” ve “sormamız gereken” başlıklı üç sütuna ayrıntıları yerleştirsin. Sonunda kesin karar vermek zorunda olmadığını özellikle belirtin. Sütunları doldurmak isteğe bağlıdır; yalnızca bir kart seçmek veya hiç seçim yapmamak da kabul edilir."
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan köyünün kenarındaki yemyeşil ormana odun toplamaya gitmiş. Güneş ağaçların arasından süzülür, kuşlar cıvıl cıvıl şakırmış. Keloğlan sırtındaki heybeyi hafifçe sallayarak yürürken, birden bir kargaşa sesi duymuş.
 

@@ -13,11 +13,27 @@ characters: ["Tombul (kaplumbağa)","Zerre (arı)"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: >-
+  3–5 yaş çocukları Zerre'nin parlak süsü, Tombul'un sade çemberi ve iki parçanın birleşmesi gibi görünür ayrıntılar üzerinden yarışma ile işbirliğini ayırt edebilir. Balmumu süsün kayması kısa bir gerilim yaratır, ardından hemen güvenli biçimde tutulur. Pınar kenarı ve balmumu masal sahnesidir; gerçek su yanında yakın yetişkin gözetimi gerekir, sıcak balmumu kullanılmamalıdır.
+parentEmotionalNotes: >-
+  “Pınarın Yıldızı” seçilme fikri ve Zerre'nin tek başına öne çıkmak istemesi, kazanma konusunda hassas çocuklarda hayal kırıklığı yaratabilir. Takdir görmek istemenin ayıp olmadığını söyleyin. Zerre'nin gururunu “boş” diye aşağılamak yerine, süsünün değerini korurken Tombul'un katkısını da fark ettiğini anlatın. Çocuğu kendi çalışmasını hemen ortaklaştırmaya veya paylaşmaya zorlamayın.
+parentMessage: >-
+  Alçakgönüllülük kişinin yaptığı güzel işi küçültmesi değil, başkasının katkısına da yer açabilmesidir. Zerre'nin parlak peteği ile Tombul'un sağlam çemberi ayrı ayrı değerlidir; birleşince başka bir iş görür. Hikâye “tek başına parlamak kötüdür” demez. Rekabetin yanında ortak üretim seçeneğini ve yardımın görünür biçimde takdir edilmesini gösterir.
+parentEverydayUse: >-
+  İki aile üyesi ayrı küçük desen çizsin; sonra isterlerse üçüncü bir kâğıtta desenlerden birer parçayı birleştirsin. İlk resimler sahiplerinde kalır. “Hangisi daha güzel?” yerine “Her birinde hangi ayrıntıyı fark ettin?” diye sorun. Çocuk ortak çalışma istemezse yan yana sergilemek de işbirliği sayılabilir.
+discussionQuestions:
+  - "Zerre petek biçimli süsünün tek başına Pınarın Yıldızı olmasını neden istemiş olabilir?"
+  - "Rüzgâr balmumu süsü kaydırınca Tombul'un sade taş ve yaprak çemberi nasıl yeni bir işe yaradı?"
+  - "Baykuş Reis tek bir yıldız seçmek yerine şenlikteki farklı katkıları nasıl adlandırabilirdi?"
+activity: >-
+  Altın renkli kâğıttan bir petek, yeşil kâğıttan bir çember kesin; çocuk parçaları ayrı, yan yana veya üst üste yerleştirerek üç tasarım denesin. Makası yetişkin kullansın. Su, taş, sıcak balmumu ve yarış puanı kullanmayın. Çocuk hangi düzeni seçerse seçsin yalnızca seçiminin hikâyesini anlatmaya davet edin.
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, ormanın en gölgeli köşesinde serin bir pınar varmış. Bu pınarın suyu öyle temizmiş ki, içine bakan her hayvan kendi yüzünü ayna gibi görürmüş.
 
-Pınarın kenarında yaşlı bir kaplumbağa yaşarmış, adı Tombul'muş. Tombul yavaş yürürmüş ama her adımını sağlam atarmış. Pınarın üstünde uçuşan küçük bir arı da varmış, onun adı Zerre'ymiş. Zerre çok çalışkanmış, sabahtan akşama kadar çiçekten çiçeğe konar, bal toplarmış.
+Pınarın kenarında yaşlı bir kaplumbağa yaşarmış, adı Tombul'muş. Tombul o günlerde yürürken zaman ayırıp bastığı yeri kontrol edermiş. Pınarın üstünde uçuşan küçük bir arı da varmış, onun adı Zerre'ymiş. Zerre günün serin saatlerinde çiçekleri gezer, aralarda dinlenir, sonra bal toplarmış.
 
 Bir gün orman hayvanları pınarın kenarında bir şenlik düzenlemeye karar vermişler. Şenlikte en güzel süsü kim yaparsa, o gün 'Pınarın Yıldızı' seçilecekmiş. Tavşanlar çiçek taçları örmüş, kurbağalar yaprak flütler yapmış.
 
@@ -29,7 +45,7 @@ Zerre şaşkınlıkla, "Ah, süsüm suya düşecek!" diye bağırmış. Tombul h
 
 Herkes alkışlamış. Baykuş Reis, "Bu şenliğin yıldızı Zerre'nin süsü kadar, onu koruyan Tombul'un çemberidir!" demiş. Zerre önce biraz üzülmüş, çünkü kendi süsünün tek başına en güzel olmasını istemişti. Ama sonra Tombul'a dönüp, "Sen olmasan süsüm pınara düşerdi. Asıl yıldız sensin," demiş.
 
-Tombul gülümsemiş ve yavaşça, "Benim çemberim sade, senin süsün parlak. İkisi birlikte olunca güzel oldu, tek başına değil," demiş. Zerre bu sözleri dinlerken kendi gururunun ne kadar boş olduğunu anlamış.
+Tombul gülümsemiş ve yavaşça, "Benim çemberim sade, senin süsün parlak. İkisi birlikte olunca başka bir güzellik ortaya çıktı," demiş. Zerre bu sözleri dinlerken kendi emeğiyle gurur duyarken Tombul'un katkısına da yer açabileceğini anlamış.
 
 O günden sonra Zerre her şenlikte önce çevresine bakar, kimsenin yardımına ihtiyacı var mı diye sorarmış. Tombul ile Zerre, pınarın kenarında en iyi arkadaş olmuşlar. Her yaz birlikte küçük süsler yapıp, kimin en parlak olduğuna değil, birlikte ne kadar güzel bir şey yarattıklarına bakarlarmış.
 

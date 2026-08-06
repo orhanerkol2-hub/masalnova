@@ -15,7 +15,23 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: >-
+  7–9 yaş etiketi, bilmecelerin mecazlı dilini, Alice'in iki kez yanıldıktan sonra yeniden düşünmesini ve bahçeyi bir öğrenme simgesi olarak yorumlamayı destekler. Tavşanın peşinden düşünmeden gizli bir kapıdan geçmesi ile sallanan köprü sahnesi gerçek yaşam davranışı olarak örnek alınmamalıdır. Okurken, harikalar bahçesinin düşsel bir alan olduğunu ve gerçek hayatta bilinmeyen bir yere giderken bakım verenine haber vermenin, kapı veya köprü güvenliğini bir yetişkinle kontrol etmenin gerekli olduğunu açıkça ayırın.
+parentEmotionalNotes: >-
+  Papatyanın “kolay mı sanırdın” sözü, art arda yanlış cevap veren veya okul görevlerinde zorlanan bir çocukta sınanma hissi yaratabilir. Alice'in içinin cız etmesi kısa sürer ve hikâye ona yeniden deneme alanı verir; yine de çocuğun bilmeceyi çözmesini beklemeyin. Cevabı söylemek, başka bir tahmin üretmek veya yalnızca çiçekleri izlemek eşit derecede kabul edilebilir. Sallanan köprü korku yaratırsa sahnenin güvenli biçimde sona erdiğini önceden söyleyin ve çocuğun gerçek bir köprüden geçmek istememesini “cesaretsizlik” olarak adlandırmayın.
+parentMessage: >-
+  Merak, her dürtünün peşinden gitmek değildir; soru sormak, bilgi toplamak ve gerektiğinde durmak da merakın parçasıdır. Alice'in ikinci bilmecede yanılması başarısızlık değil, düşüncesini değiştirebilme fırsatıdır. Gülün övgüsü sonuçtan çok sürece yöneltilebilir: Alice cevapları tek seferde bildiği için değil, nezaketle yardım istediği ve farklı yollar denediği için ilerler. “Pes etme” mesajını zorla sürdürmek şeklinde değil, mola verme veya başka birinden ipucu isteme hakkıyla birlikte konuşun.
+parentEverydayUse: >-
+  Çocuğun günlük bir sorusunu seçip üç kutuya ayırın: “Bildiğimiz”, “Tahmin ettiğimiz”, “Nasıl araştırabiliriz?” Örneğin “Rüzgâr neden görünmüyor?” sorusunda yaprakların hareketini gözlemleyebilir, güvenilir bir çocuk kitabına bakabilir ve tahminleri değiştirebilirsiniz. Çocuk cevap bulamazsa etkinlik başarısız sayılmaz. Gerçek bir bahçede gezerken kapalı kapıları açmama, tabelaları izleme ve yetişkin görüş alanında kalma sınırını da Alice'in macerasıyla karşılaştırın.
+discussionQuestions:
+  - "Alice mor menekşenin bilmecesinde iki kez yanıldığında üçüncü denemeye hazırlanmak için ne yaptı?"
+  - "Sarmaşıklar yolu kapattığında Alice'in nazikçe izin istemesi ile sallanan köprüde tek başına ilerlemesi arasında nasıl bir güvenlik farkı var?"
+  - "Pembe gül, Alice'in merakını överken sence hangi davranışını en çok fark etmiş olabilir?"
+activity: >-
+  Evde görülebilen bir nesneyi seçip Alice'in bahçesine uygun, tek cevabı olmak zorunda olmayan bir bilmece uydurun. Yetişkin önce bilerek farklı bir tahmin söylesin ve “Bir ipucu isteyebilir miyim?” desin. Sonra çocuk isterse kendi bilmecesini kurar, isterse bir çiçek resmi çizer. Puan, süre veya doğru cevap yarışı kullanmayın; amaç yanılmayı güvenli ve eğlenceli bir düşünme adımı hâline getirmektir.
 publishedAt: "2026-06-17"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde Alice adında meraklı mı meraklı bir kız yaşarmış. Onun aklında hiç bitmeyen sorular varmış: "Bulutlar neden yürür? Karıncalar nereye gider? Gökkuşağı hangi renkten başlar?" Annesi ona hep, "Sen sorularınla dünyayı keşfediyorsun canım," dermiş.
 

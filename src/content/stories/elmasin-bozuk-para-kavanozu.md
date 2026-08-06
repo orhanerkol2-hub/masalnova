@@ -13,7 +13,23 @@ characters: ["Elmas","Annesi","Kavanoz Kedi"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "sakin"
+parentAgeGuidance: >-
+  5–7 yaş etiketi, küçük miktarların zaman içinde birikmesini, Elmas'ın “bir tanesiyle bir şey alınmaz” düşüncesini ve resim defteri için beklemeyi somutlaştırmak açısından uygundur. Sayma bölümü temel sayı kavramlarıyla ilişkilidir; ancak çocuğun hesap yapması veya kendi parasını biriktirmesi zorunlu değildir. Para konuşmaları ailenin ekonomik koşullarına göre hassas olabilir. Kavanozdaki paranın anneye ait olduğu ve kullanma kararının yetişkinle birlikte verildiği vurgulanmalıdır.
+parentEmotionalNotes: >-
+  Hikâye sakin ilerler; belirgin tehlike veya kayıp yoktur. Yine de “şekeri hemen alma” örneği, isteklerini ertelemekte zorlanan bir çocukta utanma hissi yaratmamalıdır. Tutumluluk karakter değeri, harcama ise kusur değildir. Bazı ailelerin birikim yapacak artan parası olmayabilir; bunu çalışkanlık ya da yeterlilik eksikliği gibi sunmayın. Çocuk para konusuna ilgi duymuyorsa damlaların nehir olması, çıkartma veya çizim biriktirmek gibi parasız bir örnek kullanılabilir.
+parentMessage: >-
+  Masal, küçük ve düzenli adımların görünür bir sonuca dönüşmesini anlatır; “para biriktiren iyi, harcayan kötü” karşıtlığı kurmaz. Elmas'ın resim defteri hedefi kendisi için anlamlıdır ve annesiyle birlikte seçilir. Birikim kadar ihtiyaç için harcama, paylaşma ve bazen planı değiştirme de geçerli kararlardır. Kavanozun dolması çocuğun özdeğerini ölçmez. Ebeveyn, aile bütçesinin yükünü çocuğa aktarmadan yaşa uygun seçim alanı sunabilir.
+parentEverydayUse: >-
+  Para kullanmadan bir hedef kavanozu deneyin: ailece okunacak beş masal için her okumadan sonra bir renkli kâğıt damla ekleyin. Kavanoz dolduğunda yeni bir resim çizmek veya kütüphaneye gitmek gibi ücretsiz bir etkinlik seçin. Para öğretmek isterseniz üç şeffaf kap “şimdi”, “sonra” ve “paylaş” olarak etiketlenebilir; miktarı ve katılımı çocuk belirlesin. Harçlığı kaldırma, karşılaştırma veya zorunlu bağış yapmayın.
+discussionQuestions:
+  - "Elmas kedi biçimli kavanozu ilk gördüğünde küçük paraların işe yaramayacağını neden düşündü?"
+  - "Paraları annesiyle birlikte saymak, Elmas'ın kavanoz hakkındaki fikrini nasıl değiştirdi?"
+  - "Elmas resim defteri dışında 'şimdi', 'sonra' ve 'paylaş' kapları için hangi seçimleri yapabilirdi?"
+activity: >-
+  On kâğıt damla kesin ve boş bir nehir resmi çizin. Her damlaya tamamlanabilecek küçük, parasız bir adım yazın: bir sayfa okumak, bir kalemi yerine koymak veya bir bitkiyi yetişkinle kontrol etmek. Çocuk istediği damlaları nehre eklesin; hepsini bitirme şartı olmasın. Sonunda damlaların tek başına da değerli olduğunu, nehrin yalnızca değişimi görünür kıldığını konuşun.
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, küçük bir kasabada meraklı bir kız yaşarmış. Adı Elmas'mış. Elmas her şeyi bilmek isterdi; gökyüzünde neden yıldızlar parlar, kediler neden mırıldanır, hepsini sorardı.
 
@@ -41,8 +57,8 @@ O geceden sonra Elmas kendi küçük bir kavanoz edinmiş. Kendisine harçlık v
 
 Aylar sonra Elmas'ın kavanozu dolmuş. O parayla kendi resim defterini almış ve annesine büyük bir gülümsemeyle göstermiş. "Bak anne, ben de bir nehir yaptım!" demiş.
 
-Annesi onu kucaklamış ve gururla başını okşamış. O yağmurlu akşam, Elmas için sadece bir hikâye değil, hayat boyu unutmayacağı bir ders olmuş.
+Annesi Elmas'a sarılmak isteyip istemediğini sormuş; Elmas gülümseyerek kollarını açmış. O yağmurlu akşam ikisi küçük adımların zaman içinde nasıl görünür olabildiğini konuşmuş.
 
-Sevgili küçük dostum, sen de her gün küçük bir şeyi biriktirsen, zamanla neler yapabileceğini hiç düşündün mü?
+Elmas, bazı hedefler için biriktirmenin; bazı durumlarda ise ihtiyaca harcamanın, paylaşmanın veya planı değiştirmenin de anlamlı olabileceğini öğrenmiş.
 
-**Kıssadan hisse:** Küçük damlalar birleşince büyük nehirler oluşturur, tutumlu olmak sabırla büyüyen bir hazinedir.
+**Kıssadan hisse:** Küçük ve düzenli adımlar bir hedefe yardım edebilir; neyin şimdi, sonra veya paylaşım için ayrılacağı koşullara göre değişebilir.

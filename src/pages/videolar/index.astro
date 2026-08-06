@@ -63,7 +63,6 @@ const jsonLd = [
       <div class="grid grid-4" id="video-grid">
         {videos.map((v) => <VideoCard video={v} />)}
       </div>
-      <p class="empty" id="vempty" hidden>Bu kategoride henüz video yok.</p>
     </div>
   </section>
 </BaseLayout>
@@ -78,7 +77,6 @@ const jsonLd = [
   .chip:hover { background: rgba(255,255,255,.22); }
   .chip.is-active { background: #fff; color: var(--ink); }
   .result-count { color: var(--soft); margin-bottom: 14px; font-weight: 600; }
-  .empty { color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 22px; text-align: center; }
 
   @media (min-width: 721px) {
     .section {
@@ -95,7 +93,6 @@ const jsonLd = [
     .chip:hover { background: #eef3fc; }
     .chip.is-active { border-color: #093cbd; background: #1744bd; color: #fff; }
     .result-count { color: #6c7690; }
-    .empty { border-color: #ded9ce; background: #fff; color: #667188; }
   }
 </style>
 
@@ -104,7 +101,6 @@ const jsonLd = [
   const cards = Array.from(grid.querySelectorAll<HTMLElement>('.video-card'));
   const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.catbar .chip'));
   const countEl = document.getElementById('vcount')!;
-  const emptyEl = document.getElementById('vempty') as HTMLElement;
 
   function filter(cat: string) {
     let shown = 0;
@@ -114,7 +110,6 @@ const jsonLd = [
       if (ok) shown++;
     });
     countEl.textContent = `${shown} video`;
-    emptyEl.hidden = shown !== 0;
   }
   chips.forEach((chip) => chip.addEventListener('click', () => {
     chips.forEach((c) => c.classList.toggle('is-active', c === chip));

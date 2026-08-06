@@ -1,6 +1,6 @@
 # MasalNova AdSense and Google CMP checklist
 
-## Current safe deployment state (5 August 2026)
+## Current safe deployment state (6 August 2026)
 
 Google Privacy & messaging is the selected Google-certified CMP. The account
 message is published for `masalnova.com` with Turkish as the default language
@@ -28,11 +28,13 @@ PUBLIC_ADSENSE_TAG_ENABLED=true
 PUBLIC_GOOGLE_CMP_PUBLISHED=true
 PUBLIC_ADSENSE_MANUAL_ONLY=true
 PUBLIC_ADSENSE_ENABLED=false
+PUBLIC_QUALITY_CORE_REVIEWED=false
 ```
 
 The first three values allow the publisher tag to display the CMP and support
-site review on the homepage, parent-facing colouring information pages and
-editorially approved regular story pages. `PUBLIC_ADSENSE_ENABLED=false`,
+site review on the homepage and parent-facing colouring information pages.
+Story pages remain outside the publisher-tag allowlist until the separate
+quality-core review is complete. `PUBLIC_ADSENSE_ENABLED=false`,
 together with empty slot IDs, prevents every manual `<ins class="adsbygoogle">`
 unit from rendering. These environment values merely assert settings already
 made in AdSense; they cannot configure or enforce the account-side controls.
@@ -54,12 +56,25 @@ made in AdSense; they cannot configure or enforce the account-side controls.
    `PUBLIC_ADSENSE_HOME_FEED_SLOT`, `PUBLIC_ADSENSE_HOME_CONTENT_SLOT`,
    `PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT` and
    `PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT` and `PUBLIC_ADSENSE_STORY_GUIDE_SLOT`.
-6. Keep story monetisation limited to editorially approved regular stories:
-   exactly one unit after the complete parent guide, at least 320 words and a
-   reading time of at least three minutes. Short (`kisa`), bedtime (`uyku`) and
-   İslami stories are excluded. Never insert an ad inside the prose or beside
-   reader controls. Story archives, games, gameplay, videos, search, account-like
-   tools, legal/trust pages and `/boyama/[slug]/boya/` stay entirely ad-free.
+6. Complete the manual A/B/C inventory first. Only 60–100 stories explicitly
+   marked `qualityTier: core`, each with a page-specific parent guide, three
+   questions and an activity, form the monetisation core. Set
+   `PUBLIC_QUALITY_CORE_REVIEWED=true` only after the audit confirms this. A
+   balanced 60-story candidate set is already recorded in
+   `src/data/quality-core-candidates.mjs` and has complete draft guidance;
+   candidate status is not final human approval. The reviewer must still read
+   every full story against `PEDAGOGICAL-QUALITY-STANDARD.md`, confirm its
+   manually set emotional intensity and add a real `qualityReviewedAt` date.
+   Enabling `PUBLIC_QUALITY_CORE_REVIEWED=true` also ends the temporary indexing
+   fallback: unclassified regular stories become `noindex` and leave sitemap
+   and discovery surfaces; sourced Islamic retellings retain their separate
+   source gate.
+   A core story may contain exactly one unit after the complete parent guide and
+   must still have at least 320 words and a reading time of at least three
+   minutes. Short (`kisa`), bedtime (`uyku`) and İslami stories are excluded.
+   Never insert an ad inside the prose or beside reader controls. Story
+   archives, games, gameplay, videos, search, account-like tools, legal/trust
+   pages and `/boyama/[slug]/boya/` stay entirely ad-free.
 7. Test the CMP as a new EEA visitor: accept, refuse, open settings, close as
    refusal, and reopen the message through “Gizlilik ve çerez ayarları”. Test
    Turkish and German, keyboard use, focus, mobile layout and zoom.
@@ -72,6 +87,7 @@ made in AdSense; they cannot configure or enforce the account-side controls.
    PUBLIC_GOOGLE_CMP_PUBLISHED=true \
    PUBLIC_ADSENSE_MANUAL_ONLY=true \
    PUBLIC_ADSENSE_ENABLED=false \
+   PUBLIC_QUALITY_CORE_REVIEWED=false \
    npm run build:optimized && npm run audit:publishing -- --built
    ```
 

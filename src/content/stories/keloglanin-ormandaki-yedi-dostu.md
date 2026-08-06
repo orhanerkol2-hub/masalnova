@@ -13,7 +13,15 @@ characters: ["Keloğlan","Sincap Fındık","Padişah"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "5-7 yaş için ekipteki farklı becerileri ayırt etmeye uygun olsa da çukur, bataklık, mağara ve ağır kaya sahneleri yetişkin açıklaması gerektirir. Fındık'ın çakılları toplaması, baykuşun yolu bilmesi, kirpinin geçidi bulması ve kaplumbağanın düşünmesi; yardımın yalnız fiziksel güç olmadığını gösterir. “Yedi dost” sayısını Keloğlan ile altı hayvanı birlikte sayarak başlıkla ilişkilendirebilirsiniz."
+parentEmotionalNotes: "Sincabın çukura düşmesi, pınarın kuruması ve kayanın birlikte itilmesi tehlikeli görünebilir. Gerçek hayatta çocukların çukura dal uzatmaması, mağara veya bataklığa girmemesi, ağır kayayı kaldırmaya çalışmaması; bir yetişkine haber vermesi gerektiğini açıkça söyleyin. “Fakir ama yüreği zengin” kalıbı da maddi durumla iyiliği karşılaştırmak için kullanılmamalıdır; herkes yardım etmeyi seçebilir ve yardım almayı hak eder. Çukur veya bataklık bölümü zor gelirse resmi kapatıp güvenli ekip haritasından devam etmek de uygundur."
+parentMessage: "Masalın değeri, iyiliğin mutlaka ödülle geri dönmesinden çok, bir topluluğun becerileri doğru yerde birleştirmesindedir. Keloğlan başarıyı kendine mal etmez; padişahın “tek başına” varsayımını düzeltir. Her zor görevin gönüllülük, güvenlik ve kapasite sınırı vardır. Küçük olmak daha az değerli değildir; Fındık'ın çakılları ayırması büyük kayanın çevresini hazırlayan gerçek bir katkıdır."
+parentEverydayUse: "Ailece yapılacak güvenli bir iş seçin ve “kim hızlı haber verir, kim plan yapar, kim malzemeyi sayar?” diye rolleri birlikte dağıtın. Çocuğun istemediği veya gücünü aşan rolü reddetmesine izin verin. Sonunda yalnız sonucu değil, görünmeyen küçük katkıları da isimleriyle takdir edin."
+discussionQuestions: ["Fındık, baykuş ve kaplumbağa pınara ulaşmak için birbirinden farklı hangi katkıları yaptı?","Padişah Keloğlan'ın işi tek başına yaptığını sanınca Keloğlan neden onu düzeltti?","Gerçek bir çukur ya da ağır kaya görseydin hayvanların planından farklı olarak hangi yetişkinden yardım isterdin?"]
+activity: "Yere tehlikesiz kâğıt “çalı”, “dere” ve “kaya” kartları koyup bir ekip haritası çizin. Her hayvan için yalnızca konuşma, yön gösterme veya küçük nesne sayma gibi güvenli bir görev seçin. Ağır eşya kaldırmadan, figürleri harita üzerinde ilerleterek çözümü canlandırın. Haritayı kurmak istemeyen çocuk yalnızca bir hayvanın güvenli görevini seçebilir ya da katılmayabilir."
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında yemyeşil bir orman varmış. Bu ormanın dibindeki küçük evde Keloğlan, annesiyle birlikte yaşarmış. Keloğlan fakirmiş ama yüreği herkesten zenginmiş; kimse ondan yardım isteyip de eli boş dönmezmiş.
 

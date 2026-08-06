@@ -1,10 +1,15 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { durationBucketForMinutes } from './taxonomy';
-import { isStoryContentSubstantial } from '../lib/story-quality.mjs';
+import {
+  isStoryContentSubstantial,
+  isStoryIndexingEligible,
+  storyWordCount,
+} from '../lib/story-quality.mjs';
 
 export type Story = CollectionEntry<'stories'>;
 
 export const ISLAMIC_STORY_SECTION = 'islami-hikayeler' as const;
+const QUALITY_CORE_RELEASED = import.meta.env.PUBLIC_QUALITY_CORE_REVIEWED === 'true';
 
 export function isIslamicStory(story: Story): boolean {
   return story.data.section === ISLAMIC_STORY_SECTION;
@@ -28,8 +33,16 @@ export async function getAllStories(): Promise<Story[]> {
  */
 export async function getStories(): Promise<Story[]> {
   const all = await getAllStories();
-  return all.filter((story) => story.data.editorialStatus === 'approved'
-    && isStoryContentSubstantial(story.body, story.data));
+  return all.filter((story) => {
+    const substantial = isStoryContentSubstantial(story.body, story.data);
+    return isStoryIndexingEligible({
+      status: story.data.editorialStatus,
+      substantial,
+      qualityCoreReleased: QUALITY_CORE_RELEASED,
+      words: storyWordCount(story.body),
+      ...story.data,
+    });
+  });
 }
 
 /** Approved stories that belong to the Masallar catalogue. */

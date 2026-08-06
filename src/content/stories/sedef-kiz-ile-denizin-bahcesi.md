@@ -16,7 +16,23 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: >-
+  7–9 yaş etiketi, Sedef'in suçlamadan ipucu toplamasını, Musa Reis'in utanç nedeniyle hatasını geciktirmesini ve inciyi geri verme planındaki görev paylaşımını tartışabilen çocuklara uygundur. Mercan bahçesinin solması ve köyün geçiminin tehlikeye girmesi soyut çevre sonuçları içerir. Dalış sahnesinde Sedef'in tek başına suya girmemesi, ekipmanın kontrol edilmesi, babasının teknede olması ve Musa Reis'in güvenlik ipi kullanması özellikle görünür kılınmalıdır; bu ayrıntılar macerayı gerçek bir çocuk dalış talimatına dönüştürmez.
+parentEmotionalNotes: >-
+  Solan deniz, kaybolan balıklar ve Musa Reis'in sakladığı hata bazı çocuklarda doğanın geri dönülmez biçimde zarar gördüğü kaygısını uyandırabilir. İnci yerine konduğunda bahçenin hızla iyileşmesi masalsı bir çözümdür; gerçek çevre sorunlarının çoğunun daha uzun, ortak bir emek istediğini söyleyin. Sedef yetişkinin davranışını düzeltmekle tek başına yükümlü değildir. Çocuk hikâyeyi ağır bulursa odağı inciden çok sahil temizliğine ve canlılara dokunmadan gözlem yapmaya kaydırabilirsiniz.
+parentMessage: >-
+  Sedef'in gücü herkesi sorgulamasından değil, kanıt görmeden suçlamaması ve bulduğu kişiyle açık konuşmasından gelir. Bununla birlikte sakin konuşmak her zaman karşı tarafın güvenli veya işbirliğine açık olacağını garanti etmez. Musa Reis'in “hatamı başkasına düzelttiremem” sözü sorumluluğu sahibine geri verir; Sedef sınır koyar ve yetişkin desteği ister. Masal, utancı saklanmanın gerekçesi yapmak yerine, zarar gören şeyi mümkün olduğunca onarmanın ve topluluk kurallarını iyileştirmenin önemini düşündürür.
+parentEverydayUse: >-
+  Bir park ya da sahil gezisinden önce “bak, dokunma, haber ver” kuralı belirleyin. Çocuğunuz ilginç veya değerli görünen doğal bir nesne bulursa onu almak yerine fotoğrafını çekebilir, konumunu bir yetişkine gösterebilir. Evde ise yanlışlıkla bozulan bir eşya için üç adımlı bir onarım konuşması deneyin: ne olduğunu söylemek, etkilenen kişiyi dinlemek, yetişkinle uygulanabilir bir çözüm seçmek. Çocuğu herkesin önünde itirafa zorlamayın; güvenli ve özel bir konuşma alanı sunun.
+discussionQuestions:
+  - "Sedef, Musa Reis'in fenerindeki inciyi görünce neden bağırmak yerine onunla konuşmayı seçti; bu seçimin sınırı ne olabilir?"
+  - "Musa Reis inciyi yerine koyarken Sedef ile İbrahim'in teknede kalıp güvenlik ipini tutması neden önemliydi?"
+  - "Mercan bahçesi bir anda renklenmeseydi köylüler denizi korumak için hangi uzun vadeli adımları atabilirdi?"
+activity: >-
+  Mavi bir kâğıda solmuş bir mercan bahçesi çizin. Ayrı küçük kartlara “çöpü toplamak”, “canlıya dokunmamak”, “fazla avlamamak” ve çocuğun bulduğu başka fikirleri yazın. Kartları bahçeye yerleştirerek hangi davranışın kimi koruduğunu konuşun. Dışarıda temizlik yapılacaksa keskin, tıbbi veya tanınmayan atıklara çocuk dokunmasın; bunları yetişkine göstersin.
 publishedAt: "2026-07-29"
+modifiedAt: "2026-08-06"
 ---
 Az gittim, uz gittim; dere tepe düz gittim. Altı ay bir güz gittim, bir de dönüp arkama baktım ki bir arpa boyu yol gitmişim.
 

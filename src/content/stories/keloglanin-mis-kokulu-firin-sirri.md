@@ -13,7 +13,15 @@ characters: ["Keloğlan","Fırıncı Nine Ayşe","Padişah"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: "Kokuyu izleme, aile tarifini dinleme, çatlak tandır için kaynak arama ve ekmeği saraya taşıma 5-7 yaşta basit bir problem çözme zinciri oluşturur. Nine Ayşe'nin “bir tutam sabır” sözü mecaz olarak açıklanabilir; tarifin asıl sahibi ve fırıncılık bilgisi Nine'dedir. Keloğlan bağlantı kurar ve destek toplar. Sıcak fırın, duman ve uzun saray yolu nedeniyle gerçek yaşam güvenliği ayrıca konuşulmalıdır."
+parentEmotionalNotes: "Fırının kapanma ihtimali ve Nine Ayşe'nin onarım için parasının olmaması, sevilen bir yerin kaybı veya maddi sıkıntı duygusu yaratabilir. Bunun yaşlı kişinin kişisel başarısızlığı olmadığını; bakım, usta ve topluluk desteği gerektiren yapısal bir sorun olduğunu belirtin. Çocuklar kokunun peşinden yalnız gitmemeli, tanımadığı binaya girmemeli, sıcak ekmek, tandır taşı veya dumanlı alana yaklaşmamalıdır. Fırının kapanma ihtimali üzücü gelirse durup Nine’nin sonunda destek alacağını söyleyebilir veya saray sahnesine geçebilirsiniz."
+parentMessage: "Merak ancak izin, dinleme ve takip eden emekle iyiliğe dönüşür. Keloğlan fırın sırrını kendine mal etmez; Nine Ayşe'yi ve onun tarifini padişaha ulaştırır. Yine de temel bir onarımın yalnız padişah ödülüne bağlı kalması ideal değildir; köyün un ve odun katkısı da görünür ortak dayanışmadır. Yardım, adına karar vermek değil Nine'nin kaygısını ve isteğini dinlemektir."
+parentEverydayUse: "Bir yiyeceğin kokusu, dokusu ve çağrıştırdığı anı hakkında konuşun. Çocuk isterse ailedeki bir tarifi kimin bildiğini sorup yetişkinin sözlerini resimle kaydetsin. Alerji, sıcak yüzey ve hijyen kurallarını gözetin; pişirme aşamasını çocuk etkinliği yapmayın ve yiyeceği tatmaya zorlamayın."
+discussionQuestions: ["Nine Ayşe'nin ekmeğinin bilgisini kimden aldığı ve fırının sırrını kimin yaşattığı neden önemliydi?","Keloğlan köylülerden un ve odun topladıktan sonra tandır taşı için hangi yeni yolu düşündü?","Padişah gelmeseydi köy, Nine Ayşe'nin fırını için nasıl daha sürdürülebilir bir plan kurabilirdi?"]
+activity: "Üç kapalı ve güvenli kaba tarçın çubuğu, kuru kekik ve boş bir bez koyun; uzaktan koklayıp kokuyu bir renk ya da şekille eşleştirin. Malzemeye dokunmak ve tatmak zorunlu değildir. Ardından Nine'nin fırını için “usta, malzeme, izin” kartlarıyla destek planı çizin. Koklama etkinliğine katılım da destek planı çizmek de çocuğun tercihidir."
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, köyün kenarında Keloğlan adında meraklı bir delikanlı yaşarmış. Kel başını hiç dert etmez, her sabah güneşle beraber uyanır, köyün sokaklarında dolaşıp yeni şeyler öğrenmenin peşine düşermiş.
 

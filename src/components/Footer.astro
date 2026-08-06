@@ -1,4 +1,7 @@
 ---
+import { getParentGuides } from '../data/guides';
+
+const guideHubReady = (await getParentGuides()).length >= 8;
 const cols = [
   {
     title: 'Masallar',
@@ -38,6 +41,7 @@ const cols = [
   {
     title: 'Bilgi',
     links: [
+      ...(guideHubReady ? [{ label: 'Ebeveyn Rehberi', href: '/ebeveyn-rehberi/' }] : []),
       { label: 'Hakkımızda', href: '/hakkimizda/' },
       { label: 'Yayın İlkeleri', href: '/yayin-ilkeleri/' },
       { label: 'İletişim', href: '/iletisim/' },

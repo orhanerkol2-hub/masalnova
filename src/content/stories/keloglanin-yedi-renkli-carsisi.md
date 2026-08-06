@@ -13,7 +13,15 @@ characters: ["Keloğlan","Padişah","Tüccar Ahmet"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: "5-7 yaş çocukları Ahmet'in gölge, Yorgo'nun rüzgâr istemesi üzerinden aynı görünen talebin altında farklı ihtiyaçlar bulunabileceğini anlayabilir. Çarşıdaki yüksek sesli tartışma, Keloğlan'ın iki tüccarı sırayla dinlemesi ve çınarın iki özelliğini fark etmesi açık bir uzlaşma dizisi sunar. “Farklı milletler” tek kıyafet, yemek veya davranışla temsil edilmemeli; masaldaki kişiler bütün kültürlerin özeti değildir."
+parentEmotionalNotes: "Bağırış ve kalabalığın toplanması çatışmadan çekinen çocukları zorlayabilir. Çocuğun gerçek bir yetişkin kavgasını çözmek için araya girmemesi, güvenli bir yetişkine haber vermesi gerektiğini belirtin. Ahmet ve Yorgo'nun biraz utanması üzerinden hata fark edildiğinde topluluk önünde küçük düşürmenin gerekmediğini söyleyin. Farklı dil konuşan birini anlamamak alay nedeni değildir. Çarşıdaki bağırış yorucu gelirse tartışmayı atlayıp Ahmet ile Yorgo’nun ihtiyaçlarını söyledikleri bölümden devam edin."
+parentMessage: "Keloğlan iki tarafın da “iyi” olduğunu varsayarak değil, somut ihtiyaçlarını sorarak çözüm bulur. Hoşgörü, bütün taleplerin otomatik kabulü değildir; alan, güvenlik ve diğer esnafların hakkı da dikkate alınmalıdır. Aynı türküyü farklı dillerde söylemeleri ortaklık yaratır ama dost olmak için benzerlik şart değildir. Padişahın “elçi” unvanı, çocuğun her çatışmanın sorumlusu olması demek değildir."
+parentEverydayUse: "Ailede aynı alanı kullanmak isteyen iki kişi olduğunda pozisyon yerine ihtiyaç cümlesi kurun: “Masayı istiyorum çünkü ışığa ihtiyacım var.” Sonra zaman paylaşımı, alanı bölme veya başka yer bulma seçeneklerini yazın. Çocuğun kendi alanı ve eşyası için “hayır” deme hakkını koruyun."
+discussionQuestions: ["Ahmet çınarın gölgesini, Yorgo rüzgârını neden istiyordu ve Keloğlan bunu nasıl öğrendi?","Halılarla baharatlar aynı köşede birbirine engel olsaydı tüccarlar başka hangi çözümü deneyebilirdi?","Aynı türkünün farklı dillerde söylenmesi Ahmet ile Yorgo'ya ne fark ettirdi?"]
+activity: "Bir kâğıda çınar köşesini çizin; gölge, rüzgâr ve geçiş yolu için üç renk kullanın. Kâğıt halı ve baharat çuvallarını yerleştirip herkesin ihtiyacını karşılayan iki farklı düzen deneyin. Maket parçaları büyük ve güvenli olsun. Çocuk isterse tek bir düzen kurabilir; çözüm üretmek veya gerekçesini söylemek zorunda değildir."
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan'ın köyünün yanı başında kocaman bir çarşı varmış. Bu çarşıya dünyanın dört bir yanından tüccarlar gelirmiş; kimi uzak dağlardan, kimi deniz aşırı diyarlardan. Herkesin dili başka, kıyafeti başka, yemeği başkaymış.
 

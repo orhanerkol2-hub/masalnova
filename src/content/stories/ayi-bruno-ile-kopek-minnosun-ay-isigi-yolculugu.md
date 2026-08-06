@@ -13,7 +13,23 @@ characters: ["Ayı Bruno","Köpek Minnoş"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: >-
+  5–7 yaş çocukları Minnoş'un hızla çarpması, Bruno'nun ayrıntıları fark etmesi ve tavuğu farklı becerilerle birlikte bulmaları üzerinden hız, dikkat ve işbirliğini karşılaştırabilir. İki karakterin de yöntemi belirli anda işe yarar. Gece ormanında kayıp hayvan aramak masal olayıdır; çocukların karanlık patikaya çıkmaması ve kayıp hayvanı bir yetişkine bildirmesi gerektiğini söyleyin.
+parentEmotionalNotes: >-
+  Çarpışma, birbirini eleştirme, ürkmüş tavuk ve gece araması bazı çocukları gerebilir. “Yavaşsın” ya da “çok hızlısın” sözlerini kişilik etiketi gibi tekrarlamayın; o andaki davranışı konuşun. Minnoş'un hızlı hareket ihtiyacı, Bruno'nun ağır düşünmesi kadar geçerlidir. Çocuk kaybolma temasına takılırsa tavuğun bulunduğu ve güvenle köye döndüğü bölümü erkenden hatırlatın.
+parentMessage: >-
+  Farklı hızlar kusur değil, bağlama göre avantaj veya engel olabilir. Minnoş izleri çabuk bulur, Bruno ise çalıları dikkatle tarar; dostluk biri ötekine benzemeye çalıştığı için değil, görevlerini uyarladıkları için gelişir. Hoşgörü yalnızca katlanmak değil, çarpışmadan sonra durmak, etkisini fark etmek ve ortak güvenliği planlamaktır.
+parentEverydayUse: >-
+  Aile yürüyüşünde ya da ev toplarken iki durak belirleyin: “hızlı taşıma” ve “ayrıntı kontrolü”. Herkes istediği görevle başlayıp sonra isterse değiştirsin. Birinin hızını diğerine ölçü yapmayın. Sonunda “Hangi görevde hız, hangisinde dikkat işimize yaradı?” diye konuşun; yarış süresi tutmayın.
+discussionQuestions:
+  - "Minnoş Bruno'ya çarpmadan önce patikada hangi ayrıntılara bakmıyordu?"
+  - "Tavuğu bulurken Minnoş'un koklayarak iz sürmesiyle Bruno'nun çalıları taraması birbirini nasıl tamamladı?"
+  - "Bruno ile Minnoş bir sonraki dolunay yürüyüşünde yeniden çarpışmamak için nasıl bir işaret veya kural seçebilirdi?"
+activity: >-
+  Zemine kaymayacak büyük kâğıtlarla kısa bir patika kurun. Bir turda oyuncak tavuğun resmini bulmak için hızlı bakın, ikinci turda çiçek ve iz ayrıntılarını saymadan inceleyin; koşmak gerekmez. Sonra iki yöntemin farkını konuşun. Gece, dış mekân, göz bağı, çalılık veya kaygan nesne kullanmayın.
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, ormanın kenarındaki köyde Bruno adında büyük, tombul bir ayı yaşarmış. Bruno yavaş yürür, yavaş konuşur, her şeyi ağır ağır düşünürmüş. Köyün girişinde ise Minnoş adında küçük, hareketli bir köpek yaşarmış. Minnoş her zaman koşar, zıplar, etrafı hızlı hızlı koklarmış.
 

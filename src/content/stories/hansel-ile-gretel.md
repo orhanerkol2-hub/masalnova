@@ -14,7 +14,23 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yuksek"
+parentAgeGuidance: >-
+  Bu uzun klasik uyarlama 7–9 yaş için uygundur; çünkü olayları izlemek, üvey annenin çocukları ormanda bırakma kararını yetişkinlerin ağır bir hatası olarak değerlendirmek ve Hansel'in çakıl taşı ile kemik planlarını anlamak daha gelişmiş bir neden-sonuç takibi ister. Şeker evin tuzağa dönüşmesi, Hansel'in kafese kapatılması, cadının onu yeme tehdidi ve Gretel'in cadıyı fırına itmesi küçük çocuklar için yoğun olabilir. İlk okumada yetişkinin metni önceden gözden geçirmesi ve gerekirse cadının yenildiği bölümü kısaltması önerilir.
+parentEmotionalNotes: >-
+  Açlık, ebeveyn tarafından terk edilme, üç gün kaybolma, zorla çalıştırılma ve ölüm tehdidi hikâyenin belirgin yükleridir. Bunları “söz dinlemeyen çocuğun başına gelir” diye açıklamayın; çocukların terk edilmelerinden sorumlu olmadığını açıkça söyleyin. Dinleyen çocuk gerilirse okumayı durdurabilir, sonucun güvenli olduğunu önceden haber verebilir veya kardeşlerin eve döndüğü bölüme geçebilirsiniz. Cadının fırına düşmesi konuşulursa Gretel'in tehlikeden kaçmaya çalıştığını, gerçek hayatta ise çocuğun tek başına mücadele etmek yerine güvenilir bir yetişkinden ve acil yardımdan destek istemesi gerektiğini ekleyin.
+parentMessage: >-
+  Masalın değeri “korkusuz ol” buyruğunda değil, iki kardeşin korkarken haberleşmesi, planlarını değiştirmesi ve birbirini gözetmesindedir. Hansel ilk çözümü bulurken son kaçışta Gretel belirleyici olur; böylece beceri tek bir kahramana bağlanmaz. Babanın pişmanlığı çocukların uğradığı zararı otomatik olarak silmez. Sohbette özür, sorumluluk alma ve güveni yeniden kurmanın zaman istemesi üzerinde durulabilir. Sonunda bulunan mücevherleri iyiliğin ödülü gibi değil, masalsı bir kapanış öğesi olarak ele almak daha dengelidir.
+parentEverydayUse: >-
+  Bu hikâyeyi gerçek bir güvenlik planına çevirmek isterseniz çocuğunuzla kaybolduğunda olduğu yerde kalma, üniformalı görevliye veya çocuklu bir aileye yaklaşma ve bakım verenin telefon numarasını söyleme gibi ailenize uygun adımları çalışın. “Şeker ev” üzerinden yabancıların görünüşünden değil, bir davranışın güvenli olup olmadığından konuşun: Bir yetişkinin çocuktan sır saklamasını, onunla yalnız gelmesini ya da ailesinden uzaklaşmasını istemesi kabul edilmemelidir. Çalışmayı gönüllü ve kısa tutun; amaç korkutmak değil, yardım isteme cümlesini tanıdık hâle getirmektir.
+discussionQuestions:
+  - "Hansel'in beyaz taş planı işe yararken ekmek kırıntıları neden işe yaramadı; sence başka hangi güvenli işaret düşünülebilirdi?"
+  - "Gretel fırının önünde cadının niyetini anlayınca hangi seçenekleri değerlendirmiş olabilir ve gerçek hayatta kimden yardım isteyebilirdi?"
+  - "Baba çocukları geri döndüğünde yalnızca sevinmek dışında güvenlerini yeniden kazanmak için neler yapmalıydı?"
+activity: >-
+  Bir kâğıda ev, orman ve yardım noktası çizip renkli taşlarla güvenli yol bulma oyunu kurun. Yetişkin “yol kapandı” veya “işaret kayboldu” dediğinde çocuk taşı durdurup güvenilir yardım kişisini seçsin. Cadı ya da fırın sahnesini canlandırmayın; oyunu kaybolunca durmak, seslenmek ve yardım istemekle sınırlandırın. Çocuk istemezse yalnızca haritayı boyamak da yeterlidir.
 publishedAt: "2026-07-20"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, büyük bir ormanın kenarında yoksul bir oduncu, karısı ve iki çocuğuyla yaşarmış. Erkek çocuğun adı Hansel, kız kardeşinin adı ise Gretel'miş. İki kardeş birbirlerini canları gibi severlermiş; her akşam el ele tutuşup uyur, birbirlerine masallar anlatırlarmış. Gündüzleri ormanda oynar, çam kozalağı toplar, birbirlerini kovalayıp gülüşürlermiş.
 
@@ -60,12 +76,12 @@ Ormanda yürürlerken önlerine geniş bir nehir çıkmış. Kıyıda köprü ar
 
 Nehri geçtikten sonra tanıdık ağaçları, tanıdık patikaları görmeye başlamışlar. Kalpleri sevinçle çarparak koşmuşlar, yorgunluklarını unutmuşlar. Sonunda kendi evlerinin bacasından tüten dumanı fark edip koşarak eve varmışlar, kapıyı avuçlarıyla vurarak, "Baba, biz döndük!" diye seslenmişler.
 
-Babaları kapıyı açtığında gözlerine inanamamış, çocuklarını görünce sevinç gözyaşlarıyla kucaklamış; çocuklarını ormana bıraktığı günden beri hiç huzur bulamamış, her gece pişmanlıkla ağlamış. "Sizi bir daha hiç göremeyeceğimi sandım," demiş titreyen sesiyle, ikisini birden kollarına almış. Üvey anne ise o sırada evden ayrılmış, bir daha geri dönmemiş; komşular onun uzak bir kasabaya gittiğini söylermiş.
+Babaları kapıyı açtığında gözlerine inanamamış, sevinç gözyaşlarıyla kollarını açmış; Hansel ile Gretel isterlerse ona yaklaşmışlar. "Sizi ormanda bırakmak benim ağır hatamdı. Özür dilemem yetmez; güvende olmanız ve bana yeniden güvenip güvenmeyeceğinize karar verebilmeniz için sorumluluk alacağım," demiş. Üvey anne ise o sırada evden ayrılmış, bir daha geri dönmemiş; komşular onun uzak bir kasabaya gittiğini söylermiş.
 
-Hansel ceplerini boşaltıp getirdikleri inci ve altınları masaya döktüğünde baba gözlerine inanamamış. "Artık hiçbir zaman aç kalmayacağız," demiş Hansel gururla. Bu mücevherler sayesinde ailenin bütün dertleri bir anda son bulmuş; baba köydeki en iyi ustaları çağırtıp evlerini baştan aşağı onarmış, bahçelerine sebzeler, meyve ağaçları ekmişler.
+Hansel ceplerini boşaltıp getirdikleri inci ve altınları masaya döktüğünde baba gözlerine inanamamış. Mücevherleri çocukların ailenin bütün sorunlarını çözmek zorunda olduğu bir ödül saymamışlar; köyün güvenilir yetişkinlerine haber verip ne yapılacağını birlikte değerlendirmişler. Baba yiyecek ve ev güvenliği için komşularla kalıcı bir destek planı kurmuş, çocukların taşıdığı yükü üstlenmiş.
 
-Yıllar geçmiş, Hansel ile Gretel büyümüşler ama o ormanda geçirdikleri günleri hiç unutmamışlar. Zor günlerde birbirlerine nasıl sahip çıktıklarını, korkunun içinde bile aklını kaybetmeden nasıl bir çıkış yolu bulduklarını komşu çocuklara anlatırlarmış. Baba ile çocuklar mutlu ve huzurlu bir hayat sürmüşler, evlerinin kapısı her zaman ihtiyacı olan yolculara açık kalmış; çünkü onlar da bir zamanlar aç ve çaresiz kalmanın ne demek olduğunu unutmamışlar. Hansel ile Gretel o günden sonra birbirlerine daha da sıkı sarılmış, kardeşliğin en büyük hazine olduğunu hiç unutmamışlar.
+Yıllar geçmiş, Hansel ile Gretel büyümüşler ama o ormanda geçirdikleri günleri hiç unutmamışlar. Zor günlerde birbirlerini nasıl gözetip planlarını değiştirdiklerini komşu çocuklara anlatırlarmış. Baba, güvenlerini yeniden kurmanın zaman aldığını kabul etmiş. Yardıma ihtiyacı olan bir yolcu geldiğinde kapıyı sorgusuz açmak yerine köy görevlisine haber vermiş, güvenli yardım yolunu yetişkinlerle birlikte bulmuşlar.
 
 Onlar ermiş muradına, biz çıkalım kerevetine.
 
-**Kıssadan hisse:** Zor zamanlarda akıllı davranmak, cesareti kaybetmemek ve birbirine sahip çıkmak, en karanlık ormanlardan bile çıkış yolunu bulmayı sağlar.
+**Kıssadan hisse:** Zor zamanlarda haberleşmek, planı değiştirmek ve güvenli yardım aramak bir çıkış yolu bulmaya yardımcı olabilir; yetişkinlerin hatalarının yükü çocuklara ait değildir.

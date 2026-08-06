@@ -16,7 +16,15 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "Kuraklık, izin, emek paylaşımı ve on sepetlik planı birlikte değerlendirdiği için 7-9 yaşa uygundur. Çocuklar Keloğlan'ın muhtarın gece meyve alma önerisini neden reddettiğini, Kösemen'in geçmişte kırılan dallar yüzünden neden temkinli olduğunu ve 4-4-1-1 dağılımının hangi ihtiyaçları karşıladığını izleyebilir. Terazi ve sepetler, “eşit” ile “adil ve önceden anlaşılmış” paylaşım arasındaki farkı somutlaştırır."
+parentEmotionalNotes: "Köyde hasadın az olması ve meyvelerin çürümesi yiyecek kaygısı uyandırabilir. Bunun yetişkinlerin ve topluluğun çözmesi gereken bir durum olduğunu, çocukların açlığı gidermek için gizlice bir şey almak zorunda olmadığını söyleyin. İri Kösemen'in çatık kaşları korkutursa onun öfkesinin geçmiş zararlarla ilişkili olduğunu ve Keloğlan'ın kapıyı çalıp izin isteyerek güvenli bir görüşme başlattığını hatırlatın. Açlık veya izinsiz alma fikri rahatsız ederse hasat anlaşmasına geçmeden ara verip sorusunu dinleyin."
+parentMessage: "Bereket yalnızca çok üründen değil; sahibinin rızası, çalışanların emeği, açık kayıt ve gelecek yılın ihtiyacı birlikte gözetildiğinde ortaya çıkar. Keloğlan köylülerin ihtiyacını Kösemen'in hakkını silerek çözmez; bir günlük deneme ve herkesin görebildiği tartı önerir. Çocukların gölgede ayıklama yapması da herkesin aynı işi değil, güvenli ve gücüne uygun işi üstlenebileceğini gösterir."
+parentEverydayUse: "Ortak bir yiyecek ya da oyun süresini paylaşmadan önce tarafların neye ihtiyaç duyduğunu konuşun. “Kim hazırladı, kim kullanacak, sonra için ne ayırmalıyız?” sorularıyla küçük bir plan yapın. Çocuğun kendi eşyasını paylaşmak istememesi hâlinde rızasına saygı gösterin; bu masalı zorunlu paylaşma baskısına dönüştürmeyin."
+discussionQuestions: ["Kösemen neden köylülere hemen güvenmedi ve Keloğlan'ın bir günlük deneme önerisi neyi değiştirdi?","On sepetin dördü Kösemen'e, dördü köye, biri masrafa, biri çekirdeğe ayrılınca hangi ihtiyaçlar korunmuş oldu?","Muhtarın gece gizlice alma planı yerine başka hangi izinli çözümler düşünülebilirdi?"]
+activity: "On düğme ya da kâğıt meyve hazırlayın. Masaldaki dört sepete 4-4-1-1 dağıtın; sonra “bir sepet ezik çıktı” veya “yeni fidan gerekli” gibi bir durum kartı çekin. Çocuk yeni bir dağılım önersin ve nedenini anlatsın; tek doğru cevap aramayın. Dağılımı yeniden kurmak yalnızca çocuğun katılmak istemesi hâlinde önerilsin."
 publishedAt: "2026-07-29"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış, bir yokmuş.
 

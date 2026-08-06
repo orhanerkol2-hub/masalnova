@@ -13,7 +13,15 @@ characters: ["Keloğlan","Kar Devi","Nine Havva"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "Kar fırtınası, yiyecek azalması, mağara ve dev karşılaşması nedeniyle 5-7 yaşta yetişkin eşliğiyle okunmalıdır. Çocuk Keloğlan'ın Nine Havva'nın ihtiyacını duymasını, devle doğrudan ama saygılı konuşmasını ve söylentinin gerçek çıkmamasını izleyebilir. Bununla birlikte kahramanın tek başına fırtınaya çıkması fantastik bir cesaret sahnesidir; gerçek bir çocuk için örnek güvenlik davranışı değildir."
+parentEmotionalNotes: "“Un tükendi”, kar altında kapanan evler ve insanları taşa çevirdiği söylenen dev güçlü kaygı yaratabilir; bu nedenle en yoğun sahne orta düzeydedir. Okumadan önce devin yardım edeceğini söylemek sürprizi azaltabilir. Gerçek yaşamda tipi sırasında dışarı çıkılmaması, mağaraya girilmemesi, tanımadığımız birinin sırtına binilmemesi ve yiyecek sıkıntısında güvenilir yetişkinlerin yardım ağına başvurulması gerektiğini belirtin. Fırtına ya da dev söylentisi ağır gelirse ara verin veya devin yardım ettiği bölümü önceden birlikte okuyun."
+parentMessage: "Korkulan biri hakkında söylenti ile doğrudan gözlem aynı şey değildir; fakat “her yabancı aslında iyidir” sonucu da çıkarılmamalıdır. Keloğlan devi dinlerken kendi ihtiyacını açıkça söyler, dev de yardım etmeyi kendisi seçer. Cesaret korkusuzluk veya tehlikeye tek başına girmek değil; riski fark edip güvenli destek aramak, önyargıyı kanıtla yeniden değerlendirmek ve toplulukça karşılık vermektir."
+parentEverydayUse: "Çocuğunuzla karlı gün için küçük bir aile planı yapın: kim hava durumuna bakar, kime telefon edilir, evde hangi temel malzeme kontrol edilir? Çocuğa yalnızca güvenli bir görev seçme hakkı verin. Masaldaki gibi yardım isteyen komşular için yetişkinlerin belediye, aile veya komşuluk ağından nasıl destek isteyebileceğini konuşun."
+discussionQuestions: ["Köylülerin Kar Devi hakkında anlattıklarıyla Keloğlan'ın mağarada gördükleri neden farklıydı?","Keloğlan'ın fırtınada tek başına yola çıkması yerine köy yetişkinleri nasıl bir güvenlik planı kurabilirdi?","Dev yolu açtıktan sonra köylülerin ona çorba ve ekmek götürmesi ilişkilerini nasıl değiştirdi?"]
+activity: "Kâğıda köy, mağara ve değirmeni çizin; tehlikeli fırtına yolunun üstüne kırmızı işaret koyun. Sonra yetişkin yardımı, haberleşme ve bekleme seçenekleriyle güvenli bir alternatif plan oluşturun. Canlandırma ev içinde ve yalnız kâğıt figürlerle yapılsın. Alternatif rota çizimi çocuğun isteğine bağlıdır; fırtına konusunu sürdürmek istemezse bırakın."
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağların eteğinde küçücük bir köy varmış. Bu köyde Keloğlan adında, güleç yüzlü, parlak kel kafalı bir delikanlı yaşarmış. Keloğlan yoksulmuş ama yüreği herkesten büyükmüş.
 

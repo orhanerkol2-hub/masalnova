@@ -1,4 +1,6 @@
 ---
+import { getParentGuides } from '../data/guides';
+
 interface Props { active?: string }
 
 const { active = '' } = Astro.props;
@@ -9,10 +11,12 @@ const activeKey = active === 'home'
     : active;
 
 const mobileNavKeys = ['today', 'discover', 'islami', 'videolar', 'oyunlar', 'boyama'];
+const guideHubReady = (await getParentGuides()).length >= 8;
 
 const links = [
   { href: '/', label: 'Bugün', key: 'today', icon: 'house' },
   { href: '/masallar/', label: 'Masallar', key: 'discover', icon: 'compass' },
+  ...(guideHubReady ? [{ href: '/ebeveyn-rehberi/', label: 'Ebeveyn Rehberi', key: 'guides', icon: 'users-three' }] : []),
   { href: '/islami-hikayeler/', label: 'İslami Hikâyeler', mobileLabel: 'İslami', key: 'islami', icon: 'mosque' },
   { href: '/videolar/', label: 'Videolar', key: 'videolar', icon: 'play-circle' },
   { href: '/oyunlar/', label: 'Oyunlar', key: 'oyunlar', icon: 'game-controller' },

@@ -17,6 +17,7 @@ interface Props {
   guideParagraphs: string[];
   faqs?: { question: string; answer: string }[];
   relatedTopics?: { href: string; label: string }[];
+  indexable?: boolean;
 }
 
 const {
@@ -32,6 +33,7 @@ const {
   guideParagraphs,
   faqs = [],
   relatedTopics = [],
+  indexable = true,
 } = Astro.props;
 const canonical = `https://masalnova.com${path}`;
 
@@ -68,7 +70,15 @@ const jsonLd = [
 ];
 ---
 
-<BaseLayout title={`${title} | MasalNova`} description={description} path={path} jsonLd={jsonLd} activeNav="masallar" allowAds={false}>
+<BaseLayout
+  title={`${title} | MasalNova`}
+  description={description}
+  path={path}
+  jsonLd={indexable ? jsonLd : undefined}
+  activeNav="masallar"
+  allowAds={false}
+  robots={indexable ? undefined : 'noindex, follow'}
+>
   <section class="section topic-page">
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb">

@@ -13,7 +13,15 @@ characters: ["Keloğlan","Değirmenci Dede","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "Bir avuç unun günler içinde birikmesi, su kanalının temizlenmesi ve değirmenin aşamalı onarılması 7-9 yaşta süreç düşüncesini destekler. Buna karşılık köyde un kalmaması, ülke çapında kıtlık ve padişahın yarışması daha ağır konulardır. Eski değirmen çarkı, ağır taş ve su kanalı yalnız yetişkinlerin ya da eğitimli kişilerin çalışacağı düzeneklerdir; Keloğlan'ın tek başına yaptığı işler gerçek yaşam görevi sayılmamalıdır."
+parentEmotionalNotes: "“Un yok, ekmek yok” ve “kimse açlık çekmesin” sözleri yiyecek güvencesi konusunda kaygı yaratabilir; en güçlü sahne bu nedenle orta yoğunluktadır. Çocuğa evde yeterli yiyecek sağlama sorumluluğunun yetişkinlerde olduğunu, destek gerektiğinde topluluk kurumlarına başvurulduğunu söyleyin. Köylülerin dedikodusu da emeği küçümsenmiş hisseden çocukları etkileyebilir; sonucu ne olursa olsun düzenli çabanın saygı gördüğünü ekleyin. Kıtlık ifadesi kaygı yaratırsa yarışı atlayıp ortak değirmenin onarılması bölümünü birlikte okuyabilirsiniz."
+parentMessage: "Sabır burada yalnız beklemek değildir: Keloğlan kanalı temizler, bakım yapar, küçük çıktıyı kaydeder ve sistemi iyileştirir. Yine de kıtlığı tek bir çalışkan kahramanın çözmesi gerçekçi değildir; ortak kaynak, yetişkin emeği ve adil dağıtım gerekir. Altın ödül emeğin değerini yaratmaz. Keloğlan'ın ödülü ortak değirmene yöneltmesi, kalıcı çözümü kişisel kazancın önüne koyar."
+parentEverydayUse: "Bir haftada tamamlanabilecek küçük bir ortak iş seçin: kitapları günde beşer ayırmak veya geri dönüşüm kâğıtlarını biriktirmek gibi. Her günkü küçük adımı işaretleyin, fakat kaçırılan gün için ceza vermeyin. Planı yeni enerjiye ve zamana göre birlikte değiştirmek de sürecin parçası olsun."
+discussionQuestions: ["Keloğlan'ın kanalı temizleme, taşı yağlama ve çatlakları onarma işlerinden hangisi sence en büyük farkı yarattı; bunu nereden çıkarıyorsun?","Padişahın 'en çok unu getirene ödül' planı kıtlık yaşayan bütün köylere karşı adil miydi?","Keloğlan altın kesesini ortak değirmene ayırınca kısa ve uzun vadede neler değişti?"]
+activity: "Yedi büyük kâğıt “un avucu” kesin ve her birine küçük, güvenli bir günlük adım yazın. Bir hafta boyunca yapılanları bir kâğıt çuvala yapıştırın. Değirmen canlandırması yapmayın; yalnız çizim üzerinden hangi bakımın uzman gerektirdiğini işaretleyin. Çocuk isterse günlük adımlardan yalnız birini seçip yapıştırabilir; haftayı tamamlamak hedef değildir."
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, dağın eteğindeki köyde Keloğlan adında bir çocuk yaşarmış. Kel kafası güneşte parıldar, ama yüreği herkesten sıcak olurmuş. Köylüler onu severmiş, çünkü Keloğlan hep yardıma koşar, kimseden bir şey esirgemezmiş.
 

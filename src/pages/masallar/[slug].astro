@@ -9,10 +9,14 @@ import AdSlot from '../../components/AdSlot.astro';
 import { getAllStories, getStories, isIslamicStory, storyPath } from '../../data/stories';
 import { videoById } from '../../data/videos';
 import { getStoryAuthor, storyReviewers } from '../../data/authors';
+import { getParentGuides } from '../../data/guides';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
 import { compactDescription, storySeoTitle } from '../../lib/seo';
 import {
+  hasIndividualParentGuide,
+  hasParentGuideContent,
   isStoryContentSubstantial,
+  isStoryIndexingEligible,
   isStoryMonetizationEligible,
   minimumStoryWordCount,
   storyWordCount,
@@ -26,20 +30,29 @@ export async function getStaticPaths() {
 }
 
 const { story } = Astro.props;
+const guideHubReady = (await getParentGuides()).length >= 8;
 const d = story.data;
 const author = getStoryAuthor(d.author);
 const isIslamic = isIslamicStory(story);
 const wordCount = storyWordCount(story.body);
 const minimumWordCount = minimumStoryWordCount(d);
-const isPubliclyEligible = d.editorialStatus === 'approved'
-  && isStoryContentSubstantial(story.body, d);
+const substantial = isStoryContentSubstantial(story.body, d);
+const isPubliclyEligible = isStoryIndexingEligible({
+  status: d.editorialStatus,
+  substantial,
+  qualityCoreReleased: import.meta.env.PUBLIC_QUALITY_CORE_REVIEWED === 'true',
+  words: wordCount,
+  ...d,
+});
+const hasParentGuide = hasParentGuideContent(d);
+const parentGuideReviewed = hasIndividualParentGuide(d);
 const storyAdsEligible = isStoryMonetizationEligible({
   status: d.editorialStatus,
-  substantial: isPubliclyEligible,
+  substantial,
+  indexable: isPubliclyEligible,
   section: isIslamic ? 'islami-hikayeler' : 'masallar',
-  categories: d.categories,
   words: wordCount,
-  readingTime: d.readingTime,
+  ...d,
 });
 const storyGuideAdSlot = import.meta.env.PUBLIC_ADSENSE_STORY_GUIDE_SLOT;
 const { Content } = await render(story);
@@ -79,9 +92,17 @@ const primaryTheme = d.themes[0] ?? 'hikâyenin ana fikri';
 const ageBounds = d.ageGroups.flatMap((group) => group.split('-').map(Number)).filter(Number.isFinite);
 const suggestedMinAge = ageBounds.length ? Math.min(...ageBounds) : undefined;
 const suggestedMaxAge = ageBounds.length ? Math.max(...ageBounds) : undefined;
-const emotionalIntensity = d.categories.includes('uyku') || d.themes.some((theme) => /sakin|huzur|şefkat|sevgi/iu.test(theme))
-  ? 'Sakin'
-  : d.themes.some((theme) => /korku|cesaret|macera|kayıp/iu.test(theme)) ? 'Orta' : 'Yumuşak';
+const emotionalIntensityLabels = {
+  sakin: 'Sakin',
+  yumusak: 'Yumuşak',
+  orta: 'Orta',
+  yuksek: 'Yüksek',
+} as const;
+const emotionalIntensity = d.emotionalIntensity
+  ? emotionalIntensityLabels[d.emotionalIntensity]
+  : d.categories.includes('uyku') || d.themes.some((theme) => /sakin|huzur|şefkat|sevgi/iu.test(theme))
+    ? 'Sakin'
+    : d.themes.some((theme) => /korku|cesaret|macera|kayıp/iu.test(theme)) ? 'Orta' : 'Yumuşak';
 const storyType = isIslamic ? 'Kaynaklı İslami çocuk hikâyesi' : primaryCategory ? storyCategoryLabel(primaryCategory) : 'Çocuk masalı';
 const sourceTypeLabel = d.sourceType === 'quran'
   ? "Kur'an-ı Kerim"
@@ -250,12 +271,33 @@ const jsonLd = [
         </article>
       </div>
 
-      <section class="story-guide" aria-labelledby="story-guide-title">
-        <p class="story-guide__kicker">Ebeveynler için</p>
+      <section
+        class="story-guide"
+        aria-labelledby="story-guide-title"
+        data-parent-guide={hasParentGuide ? 'individual' : 'standard'}
+        data-parent-guide-status={parentGuideReviewed ? 'reviewed' : hasParentGuide ? 'needs-review' : 'standard'}
+        data-emotional-intensity={d.emotionalIntensity}
+      >
+        <p class="story-guide__kicker">{hasParentGuide ? 'Hikâyeye özel ebeveyn rehberi' : 'Ebeveynler için'}</p>
         <h2 id="story-guide-title">{isIslamic ? 'Bu hikâye ne anlatıyor?' : 'Bu masal ne anlatıyor?'}</h2>
-        <p>
-          Bu resimli {isIslamic ? 'hikâye' : 'masal'} MasalNova’da <strong>{ageRange || 'çocuklar'}</strong> için etiketlenmiştir ve birlikte okunduğunda yaklaşık <strong>{d.readingTime} dakika</strong> sürer. Hikâyede {d.themes.length ? d.themes.join(', ') : 'dostluk ve hayal gücü'} temaları öne çıkar.
-        </p>
+        {hasParentGuide
+          ? <>
+              <p><strong>Yaşa uygunluk:</strong> {d.parentAgeGuidance}</p>
+              <p><strong>Duygusal içerik:</strong> {d.parentEmotionalNotes}</p>
+              <p><strong>Hikâyenin mesajı:</strong> {d.parentMessage}</p>
+              <p><strong>Günlük hayata taşıma:</strong> {d.parentEverydayUse}</p>
+              <p class="story-guide__choice-note">
+                Yaş aralığı bir yönlendirmedir. Çocuğunuz istemezse okumayı durdurabilir, sorulardan birini atlayabilir veya etkinliği başka bir güne bırakabilirsiniz.
+              </p>
+              {!parentGuideReviewed && (
+                <p class="story-guide__review-note" data-nosnippet>
+                  Bu hikâyeye özel ebeveyn notları hazırlanmıştır; son kalite kontrolü tamamlanana kadar sayfa reklama kapalıdır.
+                </p>
+              )}
+            </>
+          : <p>
+              Bu resimli {isIslamic ? 'hikâye' : 'masal'} MasalNova’da <strong>{ageRange || 'çocuklar'}</strong> için etiketlenmiştir ve birlikte okunduğunda yaklaşık <strong>{d.readingTime} dakika</strong> sürer. Hikâyede {d.themes.length ? d.themes.join(', ') : 'dostluk ve hayal gücü'} temaları öne çıkar.
+            </p>}
         <dl>
           <div><dt>Yaş</dt><dd>{ageRange || 'Her yaş'}</dd></div>
           <div><dt>Süre</dt><dd>{d.readingTime} dakika</dd></div>
@@ -265,7 +307,9 @@ const jsonLd = [
         </dl>
         <div class="story-prompts">
           <h3>Okuma sonrası birlikte konuşun</h3>
-          {isIslamic
+          {hasParentGuide
+            ? <ul>{d.discussionQuestions!.map((question) => <li>{question}</li>)}</ul>
+            : isIslamic
             ? <ul>
                 <li>Bu anlatıda Allah'ın hangi nimeti veya yardımı hatırlatılıyor?</li>
                 <li>{primaryTheme} bu hikâyede nasıl gösteriliyor?</li>
@@ -277,7 +321,14 @@ const jsonLd = [
                 <li>Hikâyenin en çok hangi bölümünü sevdin?</li>
               </ul>}
         </div>
+        {hasParentGuide && (
+          <div class="story-activity">
+            <h3>Birlikte deneyin</h3>
+            <p>{d.activity}</p>
+          </div>
+        )}
         <a class="editorial-link" href="/yayin-ilkeleri/">MasalNova’nın yayın ve içerik ilkeleri <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        {guideHubReady && <a class="editorial-link" href="/ebeveyn-rehberi/">Masal seçimi ve birlikte okuma rehberleri <i class="ph ph-arrow-right" aria-hidden="true"></i></a>}
       </section>
 
       <AdSlot
@@ -487,6 +538,8 @@ const jsonLd = [
   .story-guide__kicker { color: var(--reader-accent); font-size: .72rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
   .story-guide h2 { margin-top: 7px; color: var(--reader-text-color); font-size: 1.45rem; }
   .story-guide > p:not(.story-guide__kicker) { margin-top: 11px; color: var(--reader-text-soft); }
+  .story-guide .story-guide__choice-note { padding: 11px 13px; border-left: 3px solid var(--reader-accent); border-radius: 0 10px 10px 0; background: var(--reader-surface-raised); font-size: .82rem; }
+  .story-guide .story-guide__review-note { font-size: .74rem; font-weight: 750; }
   .story-guide dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 9px; margin-top: 18px; }
   .story-guide dl > div { padding: 12px 13px; border: 1px solid var(--reader-border); border-radius: 13px; background: var(--reader-surface-raised); }
   .story-guide dt { color: var(--reader-text-soft); font-size: .68rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }

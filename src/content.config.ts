@@ -35,9 +35,43 @@ const stories = defineCollection({
       z.literal('muhammet-karayigit'),
     ]),
     editorialStatus: z.enum(['draft', 'needs_review', 'approved']).default('draft'),
+    // Manual A/B/C inventory decision. Unclassified legacy stories pass only
+    // the stricter interim indexing gate and can never carry story ads.
+    qualityTier: z.enum(['core', 'review', 'retire']).optional(),
+    emotionalIntensity: z.enum(['sakin', 'yumusak', 'orta', 'yuksek']).optional(),
+    parentAgeGuidance: z.string().optional(),
+    parentEmotionalNotes: z.string().optional(),
+    parentMessage: z.string().optional(),
+    parentEverydayUse: z.string().optional(),
+    discussionQuestions: z.array(z.string()).optional(),
+    activity: z.string().optional(),
+    qualityReviewedAt: z.string().optional(),
     publishedAt: z.string(),
     modifiedAt: z.string().optional(),
   }),
 });
 
-export const collections = { stories };
+const guides = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
+  schema: z.object({
+    title: z.string(),
+    shortDescription: z.string(),
+    seoTitle: z.string().optional(),
+    author: z.enum(['aylin-karabektas', 'muhammet-karayigit', 'masalnova-redaksiyonu']),
+    reviewedBy: z.tuple([
+      z.literal('aylin-karabektas'),
+      z.literal('muhammet-karayigit'),
+    ]).optional(),
+    editorialStatus: z.enum(['draft', 'needs_review', 'approved']).default('draft'),
+    publishedAt: z.string(),
+    modifiedAt: z.string().optional(),
+    readingTime: z.number().min(1),
+    relatedStoryIds: z.array(z.string()).default([]),
+    sources: z.array(z.object({
+      title: z.string(),
+      url: z.string().url(),
+    })).min(1),
+  }),
+});
+
+export const collections = { stories, guides };

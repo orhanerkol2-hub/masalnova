@@ -16,7 +16,15 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "Gülnihal'in üç yıldır gülmemesinin ardındaki özlem, annenin uzakta oluşu ve fırtınada devrilen ceviz ağacı 7-9 yaşta duygu ile davranış arasındaki bağı konuşmaya elverişlidir. Keloğlan'ın gösteri yapmak yerine “En son neye güldünüz?” diye sorması, cevabı beklemesi ve hemen sonuç vermeyen bir fidan dikmesi dikkatli dinleme örneğidir. Son kahkaha, üzüntünün bittiği değil, özlemle sevincin aynı anda yaşanabildiği bir an olarak ele alınmalıdır."
+parentEmotionalNotes: "Annenin hastalık nedeniyle uzakta olması, ağacın kaybı ve Gülnihal'in gözyaşları ayrılık deneyimi yaşayan çocukları etkileyebilir. Önceden bu öğeleri söyleyin ve çocuk isterse okumayı erteleyin. “Üzgün birini güldürmek zorunda değiliz; yanında durabiliriz” güvencesini verin. Gülnihal'in duygusu bir yarışma konusu değildir; padişahın ödül ilanı üzerinden bir kişinin iyileşmesinin başkasının hünerine bağlanamayacağını konuşun."
+parentMessage: "Keloğlan Gülnihal'i değiştirmeye çalışmadığı için bağ kurar. Fidan annesinin veya eski ağacın yerini tutmaz; birlikte bakım verilecek yeni bir hatıra alanı açar. Birini dinlemek her sorunu çözmeyebilir, kahkaha da iyileşmenin kanıtı değildir. Mesaj; merakla sormak, cevabı zorlamamak ve kişinin kendi hızına saygı göstermektir."
+parentEverydayUse: "Çocuğunuz üzgün göründüğünde hemen neşelendirme önerisi vermek yerine iki seçenek sunun: “Konuşmak mı istersin, yanında sessizce oturmamı mı?” İsterse özlediği bir kişi, yer veya canlı için küçük bir çizim yapabilir. Konuşmak istemezse bunu kabul edin; etkinliği duygusal açıklama zorunluluğuna çevirmeyin."
+discussionQuestions: ["Keloğlan neden kuklacılar gibi Gülnihal Sultan'ı hemen güldürmeye çalışmadı?","Ceviz fidanını Gülnihal'in kendisinin sulamaya başlaması hikâyede neyi değiştirdi?","Padişah kırk kese altın yerine kızına destek olmak için daha önce neler yapabilirdi?"]
+activity: "Bir kâğıda devrilen eski ceviz ağacını, yanına da yeni fidanı çizin. Eski ağacın yanına “hatırladığım”, fidana “şimdi bakım verebildiğim” bir şeyi yazın veya resmedin. Çocuk kişisel anı paylaşmak istemezse Gülnihal adına kurgusal ayrıntılar üretsin. Çizim yapmak da anı anlatmak da bütünüyle çocuğun seçimine bırakılsın."
 publishedAt: "2026-07-29"
+modifiedAt: "2026-08-06"
 ---
 Evvel zaman içinde, develer tellal iken, pireler berber iken bir padişahın Gülnihal adında bir kızı varmış.
 

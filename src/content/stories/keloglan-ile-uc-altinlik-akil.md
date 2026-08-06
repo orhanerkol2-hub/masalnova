@@ -16,7 +16,15 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "Üç öğüdün farklı zamanlarda anlam kazanmasını, neden-sonuç zincirini ve aile bütçesi ikilemini izlemek 7-9 yaş için uygundur. Keloğlan'ın keçi parasını un almak yerine harcaması doğru bir karar modeli olarak sunulmamalıdır; çocuk, sel basan kestirme yol, öfkeli gecede susma ve saray kapısında temizlenme sahnelerini değerlendirirken “öğüt yararlı olsa da başlangıçtaki seçim riskliydi” ayrımını kurabilir."
+parentEmotionalNotes: "Ambarın boşalması, yiyecek alamadan eve dönme, annenin öfkesi ve sel haberi kaygı yaratabilir. Yiyecek yetersizliğinin çocukların çözmesi gereken bir sorun olmadığını; gerçek hayatta aile parasını harcamadan önce yetişkinle konuşulacağını belirtin. “Dilini tutmak” duyguyu bastırmak değil, tartışmayı güvenli zamana ertelemektir; çocuk korktuğunda veya haksızlık gördüğünde susmak zorunda değildir. Sel ya da boş ambar bölümü ağır gelirse sonucu önceden açıklayıp o kısmı birlikte kısaltabilirsiniz."
+parentMessage: "Masal, yaşlı birinin söylediği her sözü sorgusuz kabul etmeyi değil, bir tavsiyeyi durumla karşılaştırıp sonucunu gözlemlemeyi konuşmak için kullanılabilir. Keloğlan'ın üçüncü öğütten sonra işe alınması yalnız dış görünüşe bağlanmamalı; temizlendikten sonra nazırın onun bilgisini sorması ve Keloğlan'ın kırk gün düzenli çalışması sonucu belirler. Akıl, tek cümlelik kurallardan çok düşünme ve sorumlulukla gelişir."
+parentEverydayUse: "Aile içinde sık kullanılan bir öğüdü seçin: “Acele etme” veya “Öfkeliyken bekle” gibi. Çocuktan bu öğüdün işe yarayacağı bir durum ve yaramayacağı bir durum bulmasını isteyin. Ardından aile alışverişinde “ihtiyaç, istek, ortak karar” ayrımını oyuncak para ile gönüllü olarak deneyebilirsiniz."
+discussionQuestions: ["Keloğlan, Ak Sakallı İhtiyar'a üç altını verip un alamayınca hangi sorumluluğu yerine getirememiş oldu; başka ne yapabilirdi?","Ak Sakallı İhtiyar'ın kestirme yol öğüdü, her durumda aynı kararın doğru olacağını mı gösterir? Neden?","Keloğlan ile annesi öfkeli gecenin sabahında konuşmayı nasıl daha güvenli hâle getirdiler?"]
+activity: "Üç kâğıda masaldaki öğütleri yazın. Oyuncak bir yol ayrımı, tartışma anı ve iş başvurusu sahnesi kurun. Çocuk bir öğüdü sahneyle eşleştirsin, sonra her sahne için ikinci bir güvenli çözüm önersin. Altınları harcama bölümünde yetişkinden izin isteme seçeneğini de ekleyin. Çocuk canlandırmak istemezse yalnızca öğüt kartlarından birini seçmesi yeterlidir."
 publishedAt: "2026-07-29"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış, bir yokmuş. Allah'ın kulu çokmuş.
 

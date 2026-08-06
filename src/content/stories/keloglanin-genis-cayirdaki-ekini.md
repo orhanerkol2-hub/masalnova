@@ -13,7 +13,15 @@ characters: ["Keloğlan","Padişah","Nine Ayşe"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: "7-9 yaş çocukları toprağın nemi, güneş yönü, tohum seçimi ve düzenli bakım arasındaki neden-sonuç bağını izleyebilir. Köylülerin Keloğlan'ı çayırda yatıyor diye “tembel” sanması ile onun aslında gözlem yapması, görünmeyen emeği konuşmaya uygundur. Padişahın yarışması ve ödülü masalsı çerçevedir; tarım başarısının yalnız bir kişinin zekâsına değil bilgi, koşul ve ortak emeğe bağlı olabileceği eklenmelidir."
+parentEmotionalNotes: "Alay edilmek, işe yaramaz sanılmak ve yoksul ailelerden söz edilmesi hassasiyet yaratabilir. Keloğlan'ın değerini ödül kazanması kanıtlamaz; ekin başarısız olsaydı da düşünmesi ve emek vermesi anlamlı olurdu. Gün doğumundan geceye kadar çalışma gerçek bir çocuk için beklenen tempo değildir. Tarım aletleri, yoğun güneş ve uzun çalışma yetişkin sorumluluğundadır; etkinlikler küçük ve güvenli tutulmalıdır. Alay sözleri rahatsız ederse onları atlayıp Nine Ayşe’nin tohum bilgisiyle devam edebilirsiniz."
+parentMessage: "Hikâye “sessiz duran tembeldir” yargısını tersine çevirir: Keloğlan eyleme geçmeden önce çevreyi okur ve Nine Ayşe'nin bilgisini ister. Bu, tek başına parlak kahraman anlatısından daha değerlidir. Akıllı emek; uygun zamanı seçmek, bilgi sahibine danışmak, düzenli bakım yapmak ve sonuç üzerinde hava ile toprağın da payı olduğunu kabul etmektir."
+parentEverydayUse: "Evde bir saksının bulunduğu yeri bir hafta gözlemleyin. Çocuk isterse güneşli saat, toprağın kuru ya da nemli oluşu ve yapraktaki değişimi resimle kaydetsin. Sulama kararını birlikte verin; her gün su vermenin her zaman çalışkanlık olmadığını, bazen gözleyip beklemenin doğru bakım olduğunu gösterin."
+discussionQuestions: ["Keloğlan çayırda yatarken toprağı ve rüzgârı nasıl inceliyordu; köylüler bunu neden fark etmedi?","Nine Ayşe'nin dayanıklı tohumu vermesi Keloğlan'ın başarısındaki payı nasıl değiştiriyor?","Başaklar iyi büyümeseydi Keloğlan emeğini başka hangi ölçülerle değerlendirebilirdi?"]
+activity: "Üç küçük kaba kuru toprak, nemli toprak ve kâğıt parçaları koyun; yalnız dokunup bakarak özelliklerini karşılaştırın. “Güneşli”, “gölgeli” ve “bekle” kartlarıyla kurgusal bir ekim planı yapın. Gerçek ekim yapılacaksa tohum ve sulama yetişkinle seçilsin. Çocuk toprağa dokunmak istemezse yalnızca kartlarla plan kurabilir veya etkinliği pas geçebilir."
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, köyün kenarında upuzun, yemyeşil geniş bir çayır varmış. Bu çayırın hemen yanında da Keloğlan, annesiyle küçük bir evde otururmuş. Köylüler Keloğlan'a bakıp gülerlermiş: "Bu çocuk elini eline vurmaz, bütün gün çayırda yatar!" derlermiş.
 

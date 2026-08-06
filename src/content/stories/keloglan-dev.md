@@ -5,7 +5,7 @@ coverEmoji: "🫧"
 coverColor: "#21b6c9"
 coverImage: "/covers/stories/keloglan-dev.webp"
 altText: "Kapak görseli: Keloğlan ve Sevimli Dev"
-ageGroups: ["5-7"]
+ageGroups: ["7-9"]
 readingTime: 11
 categories: ["keloglan"]
 themes: ["cesaret", "dostluk", "önyargı"]
@@ -16,6 +16,14 @@ isPopular: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "orta"
+parentAgeGuidance: "On bir dakikalık bu masal; söylentiden gözleme, günlere yayılan güven kurmadan kuraklık ve ortak su yolu çözümüne uzanan çok aşamalı yapısı nedeniyle 7-9 yaşa daha uygundur. Keloğlan önce köydeki söylentiyi sorgular, sonra Göktaş’la güven kurar ve son bölümde köylülerle birlikte su yolunu açar. Bu üç aşama; bir karakter hakkındaki ilk düşünceyi yeni bilgilerle değiştirme, uzun neden-sonuç zincirini izleme ve farklı kişilerin katkısını karşılaştırma fırsatı verir. Tek oturuş uzun gelirse Göktaş’ın köye davet edildiği yerde ara verilebilir."
+parentEmotionalNotes: "Mağaradaki devin görünüşü, gür sesi, kaygan dağ yolu, susuz kalan köy ve yerinden oynatılan büyük kayalar orta düzeyde ve son bölüme kadar yeniden beliren gerilim oluşturabilir. Hikâyede saldırı ya da yaralanma yoktur; Keloğlan korkusunu inkâr etmez, nefes alıp gözlem yapar ve güveni yavaş kurar. Çocuğunuz devden çekinirse güven veren papatya ve küçük gözleme ayrıntılarını önceden gösterebilir, istediği yerde durabilir veya dağ yolunu atlayıp birlikte devam edebilirsiniz. Gerçek hayatta çocuk tek başına kaygan patikaya ya da tanımadığı birinin mağarasına gitmez."
+parentMessage: "Masalın özgün mesajı yalnızca ‘farklı görünene iyi davranmak’ değildir. Köylüler duydukları söylentileri bilgi sanırken Keloğlan doğrudan gözlem yapar; Göktaş da kabul edilmek için gücünü sergilemek yerine sınırlarını ve korkusunu açıkça söyler. Bu masalsı yaklaşma sahnesi, gerçek hayatta güvenlik sınırını kaldırmaz: tanımadığımız birini anlamak için tek başımıza yanına gitmek yerine güvenilir yetişkin desteği ve güvenli mesafe gerekir. Su yolunun açılması da devin gücüyle değil; Keloğlan’ın planı, marangozun kaldıracı, çobanın halatları ve köylülerin ortak emeğiyle mümkün olur."
+parentEverydayUse: "Yeni bir sınıf arkadaşı, komşu ya da alışılmadık davranan biri hakkında konuşurken ‘Bunu kendimiz mi gördük, birinden mi duyduk?’ sorusunu kullanabilirsiniz. Ardından aile içinde herkesin farklı bir beceriyle katkı verdiği bir işi seçin: sofrayı kurmak, bitkiyi saksı değiştirmek veya oyuncakları ayırmak gibi. Masaldaki su yolu örneğine dönerek çocuğun hangi işi tek başına yapabildiğini, hangi işte yardım istemesinin daha güvenli ve kolay olduğunu birlikte adlandırın."
+discussionQuestions: ["Göktaş üç gözlemeyi tek lokmada yiyebilecekken neden en küçük parçayı seçti?", "Koca kaya Göktaş tek başına iterken neden yerinden oynamadı; köylüler katılınca neler değişti?", "Köylülerin Göktaş hakkındaki düşüncesini değiştiren hangi üç ayrıntıyı seçerdin?"]
+activity: "Çocuk isterse bir kâğıdı ikiye bölüp bir tarafa ‘Köylülerin duydukları’, diğer tarafa ‘Keloğlan’ın gördükleri’ yazabilir. Söylenti, papatyalar, saklanan kayıp eşyalar, küçük gözleme lokması ve su yolu sahnelerini uygun tarafa çizip yeni bir bilgi geldiğinde fikrini değiştirmenin neden dürüst olabileceğini anlatabilir. Etkinlik kişisel bir korkuyu veya tanımadığı biriyle yaşadığı deneyimi paylaşmasını gerektirmez."
+modifiedAt: "2026-08-06"
 publishedAt: "2026-06-27"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde; develer tellal, pireler berber iken dağların arasında Yeşilpınar adında küçük bir köy varmış. Köyün evleri beyaz badanalı, bahçeleri erik ağaçlı, insanları da çalışkanmış. Yalnız köylülerin gönlünü gölgeleyen bir korku varmış: Köyün arkasındaki Sivritepe’de bir dev yaşarmış.

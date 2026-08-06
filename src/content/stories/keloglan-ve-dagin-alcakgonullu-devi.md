@@ -13,7 +13,15 @@ characters: ["Keloğlan","Dağ Devi","Padişah"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: "Sade kulübe, değerli hediye yarışması ve küçük taşın temsil ettiği fikir 5-7 yaş için anlaşılır bir karşılaştırma sunar. Keloğlan'ın “Bende ne var?” diye üzülmesi, devin eşyadan çok davranışı önemsemesi ve Keloğlan'ın padişaha kendi gözlemini anlatması konuşulabilir. Ancak bir çocuğun tek başına dağa çıkıp tanımadığı bir devin evine girmesi masal kurgusudur, gerçek yaşamda güvenli davranış değildir."
+parentEmotionalNotes: "Köyde “para pul namına hiçbir şey” olmaması ve diğerlerinin pahalı hediyeleri karşısında Keloğlan'ın yetersiz hissetmesi maddi karşılaştırmalara duyarlı çocukları etkileyebilir. Bir ailenin az eşyası olması onun değerini ya da iyiliğini belirlemez. Devin büyüklüğü ve kulübeye giriş sahnesi korkutursa sonucun güvenli olduğunu önceden söyleyin. Gerçekte yabancı birinin evine girilmez ve uzak yol yetişkinsiz yapılmaz. Devle karşılaşma ürkütürse kulübe sahnesini birlikte özetleyip taşın saraya götürüldüğü yerden sürdürebilirsiniz."
+parentMessage: "Alçakgönüllülük kendini küçültmek, hakkından vazgeçmek veya güçlü kişiye boyun eğmek değildir. Dev gücünü yardım için kullanır ama kendi sade yaşamını seçer; Keloğlan da gördüğünü kendi sözleriyle padişaha aktarır. Taşın değeri fiyatından değil, açtığı düşünceden gelir. Padişahın onu akıl hocası yapması masalsı ödüldür; gerçek bilgelik tek bir sınavla kanıtlanmaz."
+parentEverydayUse: "Evde maddi değeri düşük ama anlamı olan üç nesne seçin: bir çizim, taş veya eski bilet gibi. Her kişi isterse nesnenin neden önemli olduğunu anlatsın. “En değerli” kazananı seçmeyin; farklı anlamların yarışmadan yan yana durabileceğini gösterin. Çocuk özel bir hatırayı paylaşmak istemezse kurgusal bir nesne çizebilir."
+discussionQuestions: ["Dağ Devi'nin tek tas ve kaşıkla yaşamasıyla gücünü yardım için kullanması sana alçakgönüllülük hakkında hangi farklı fikirleri düşündürüyor?","Keloğlan sıradan taşı padişaha sunarken ona değer kazandıran şey neydi?","Padişah hediyeleri fiyatına göre değil başka hangi ölçütlerle değerlendirebilirdi?"]
+activity: "Düz bir taşı veya kâğıttan taş şeklini süsleyin ve ona satın alınamayan bir değer adı verin: “dinleme”, “yardım isteme” veya “paylaşılmış zaman” gibi. Herkes seçimini bir cümleyle açıklasın; gerçek taşlar küçük çocukların ağzına götürmeyeceği büyüklükte olsun. Taşı süslemek ve seçilen değeri açıklamak isteğe bağlıdır; kişi nesnesinin anlamını özel tutabilir."
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, evvel zaman içinde, kalbur saman içinde, Keloğlan adında akıllı ve şen bir çocuk varmış. Annesiyle küçük bir köyde yaşarmış, gel gelelim köylerinde para pul namına hiçbir şey bulunmazmış.
 

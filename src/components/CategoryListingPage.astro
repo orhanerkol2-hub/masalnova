@@ -16,6 +16,9 @@ interface Props {
 
 const { category, copy, stories, totalStories, page, pageCount } = Astro.props;
 const isIslamic = category.key === islamicStorySection.key;
+const isControlledCollection = category.key === 'kisa'
+  || category.key === 'uyku'
+  || stories.length === 0;
 const path = categoryPagePath(category.key, page);
 const canonical = `https://masalnova.com${path}`;
 const title = page === 1 ? copy.title : `${copy.heading} – Sayfa ${page} | MasalNova`;
@@ -46,10 +49,10 @@ const jsonLd = [
   title={title}
   description={description}
   path={path}
-  jsonLd={jsonLd}
+  jsonLd={isControlledCollection ? undefined : jsonLd}
   activeNav={isIslamic ? 'islami' : 'masallar'}
   allowAds={false}
-  robots={page > 1 || category.key === 'kisa' ? 'noindex, follow' : undefined}
+  robots={page > 1 || isControlledCollection ? 'noindex, follow' : undefined}
 >
   <section class:list={['section', 'category-page', { 'category-page--islami': isIslamic }]}>
     <div class="container">

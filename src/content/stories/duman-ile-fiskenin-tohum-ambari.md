@@ -13,7 +13,23 @@ characters: ["Duman (köpek)","Fiske (karınca)"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+emotionalIntensity: "yumusak"
+parentAgeGuidance: >-
+  5–7 yaş çocukları Duman'ın bulduğu yiyecekleri hemen tüketmesiyle sonbaharda yiyecek bulamaması arasındaki neden-sonuç bağını izleyebilir. Fiske'nin tohum ambarı, “şimdi”, “sonra” ve “paylaşmak için ayırmak” kavramlarını konuşmaya elverişlidir. Köpeğin kemik ve kurutulmuş et saklaması ise masalsı bir ayrıntıdır; gerçek hayatta yiyecek saklama kararlarını yetişkinlerin verdiğini belirtin.
+parentEmotionalNotes: >-
+  Duman'ın karnının guruldaması, aç kalmaktan korkması ve Fiske'den yardım isterken utanması bazı çocukları kaygılandırabilir. “Evin yiyeceğini sağlamak çocukların görevi değildir; ihtiyaç olduğunda güvendiğimiz bir yetişkine söyleriz” diyerek güven verin. Duman'ı savurgan diye ayıplamak yerine, daha önce bilmediği bir planlama yolunu arkadaşından öğrendiğini vurgulayın.
+parentMessage: >-
+  Hikâye, geleceği düşünmenin küçük ve düzenli seçimlerle öğrenilebileceğini anlatır; ancak anın tadını çıkarmayı yanlış ilan etmez. Asıl dönüşüm, Duman'ın hatasını gizlememesi ve Fiske'nin paylaşırken onu aşağılamamasıdır. Tutumluluk yalnızca biriktirmek değil, eldeki kaynağı güvenli kullanmak, gerektiğinde istemek ve başkasıyla paylaşabilmektir.
+parentEverydayUse: >-
+  Yaklaşan bir piknik veya okul günü için birlikte üç maddelik bir hazırlık listesi yapın. Çocuk yalnızca bir kalemi, peçeteyi ya da kitabı seçsin; gıda saklama ve para sorumluluğunu ona yüklemeyin. İsterse listeyi “bugün kullanacağım”, “sonra kullanacağım” ve “paylaşabilirim” başlıklarıyla resimleyebilir.
+discussionQuestions:
+  - "Duman, Fiske'nin taşıdığı tohumu önce hemen yemesini isterken hava serinleyince düşüncesini neden değiştirdi?"
+  - "Fiske ambarındaki yiyeceği Duman'la paylaşmaya karar verirken sence neleri düşündü?"
+  - "Duman ile Fiske mağarayı yeniden düzenleseydi yiyecek, dinlenme ve paylaşma için nasıl bir plan yapabilirlerdi?"
+activity: >-
+  Üç küçük kâğıda “şimdi”, “sonra” ve “paylaş” işaretleri çizin; düğme yerine kâğıttan yapılmış altı tohum kullanın. Çocuk tohumları istediği bölümlere dağıtsın ve seçimini anlatsın. Tek doğru dağılım yoktur; gerçek yiyecek, kemik veya küçük yutulabilir nesne kullanmayın, çocuk istemezse yalnızca kutuları boyayın.
 publishedAt: "2026-07-12"
+modifiedAt: "2026-08-06"
 ---
 Bir varmış bir yokmuş, sakin bir gölün kıyısında Duman adında kahverengi tüylü bir köpek yaşarmış. Duman, gölün etrafındaki söğüt ağaçlarının altında güneşlenmeyi çok severmiş. Ama en sevdiği şey, bulduğu her lezzetli kemiği hemen oracıkta yiyip bitirmekmiş.
 

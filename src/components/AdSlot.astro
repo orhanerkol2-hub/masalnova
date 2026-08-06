@@ -8,6 +8,7 @@ interface Props {
 
 const { slot, placement, eligible = false } = Astro.props;
 const adsenseEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED === 'true'
+  && import.meta.env.PUBLIC_QUALITY_CORE_REVIEWED === 'true'
   && import.meta.env.PUBLIC_ADSENSE_TAG_ENABLED === 'true'
   && import.meta.env.PUBLIC_GOOGLE_CMP_PUBLISHED === 'true'
   && import.meta.env.PUBLIC_ADSENSE_MANUAL_ONLY === 'true';

@@ -66,4 +66,5 @@ const path = `/masallar/sure/${duration.key}/`;
   totalStories={matchingStories.length}
   guideTitle={duration.guideTitle}
   guideParagraphs={[...duration.guideParagraphs]}
+  indexable={duration.key !== 'kisa' && matchingStories.length > 0}
 />

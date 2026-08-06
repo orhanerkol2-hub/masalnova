@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
 import StoryCard from '../components/StoryCard.astro';
 import { getIslamicStories, getMasalStories, popularStories } from '../data/stories';
+import { getParentGuides } from '../data/guides';
 import {
   ageLabel,
   storyCategoryLabel,
@@ -15,6 +16,7 @@ import {
 
 const stories = await getMasalStories();
 const islamicStories = await getIslamicStories();
+const guideHubReady = (await getParentGuides()).length >= 8;
 const buildNow = new Date();
 const audienceForStory = (story: (typeof stories)[number]) =>
   story.data.audienceLabel ?? (story.data.ageGroups[0] ? ageLabel(story.data.ageGroups[0]) : 'Her yaş');
@@ -652,6 +654,7 @@ const tonightMediumCover = tonightStory
           <p>
             MasalNova; özgün Türkçe uyku masallarını, eğitici çocuk hikâyelerini ve uzun masalları sakin bir okuma deneyiminde buluşturur. Kartlardaki yaş ve süre bilgileri, o akşam için uygun hikâyeyi hızlıca seçmenize yardımcı olur.
           </p>
+          {guideHubReady && <a class="guide-hub-link" href="/ebeveyn-rehberi/">Tüm ebeveyn rehberlerini keşfet <i class="ph ph-arrow-right" aria-hidden="true"></i></a>}
         </div>
 
         <div class="faq-list">
@@ -1986,6 +1989,17 @@ const tonightMediumCover = tonightStory
   }
 
   .faq-list { border-top: 1px solid #dcd7ca; }
+
+  .guide-hub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    color: #1749ae;
+    font-weight: 900;
+  }
+
+  .guide-hub-link:hover { text-decoration: underline; }
 
   .faq-list details {
     border-bottom: 1px solid #dcd7ca;
