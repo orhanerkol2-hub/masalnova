@@ -16,7 +16,6 @@ export interface StoryMetadata {
   themes: string[];
   characters: string[];
   seoKeywords: string[];
-  publishedAt: string;
   categoryLabel: string;
   hasAudio: boolean;
 }
@@ -199,12 +198,11 @@ export function scoreStorySearch(story: StoryMetadata, query: string): number {
 
 export function searchStories(stories: StoryMetadata[], query: string): StoryMetadata[] {
   return stories
-    .map((story) => ({ story, score: scoreStorySearch(story, query) }))
+    .map((story, index) => ({ story, score: scoreStorySearch(story, query), index }))
     .filter((result) => result.score > 0)
     .sort((a, b) => (
       b.score - a.score
-      || (b.story.publishedAt ?? '').localeCompare(a.story.publishedAt ?? '')
-      || a.story.title.localeCompare(b.story.title, 'tr-TR')
+      || a.index - b.index
     ))
     .map((result) => result.story);
 }

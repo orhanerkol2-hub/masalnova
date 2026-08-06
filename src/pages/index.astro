@@ -48,11 +48,6 @@ const carouselFeed = popularSelection.map((story) => ({
   category: story.data.categories[0] ? storyCategoryLabel(story.data.categories[0]) : 'Çocuk masalı',
   age: audienceForStory(story),
   readingTime: story.data.readingTime,
-  publishedAt: story.data.publishedAt,
-  publishedLabel: new Intl.DateTimeFormat('tr-TR', {
-    day: 'numeric',
-    month: 'short',
-  }).format(new Date(`${story.data.publishedAt}T12:00:00Z`)),
   isNew: Boolean(story.data.isNew),
 }));
 const carouselWindowSize = Math.min(24, carouselFeed.length);
@@ -504,7 +499,6 @@ const tonightMediumCover = tonightStory
                     <i class="ph ph-clock" aria-hidden="true"></i>
                     <span data-card-duration>{story.readingTime} dk</span>
                   </span>
-                  <time data-card-date datetime={story.publishedAt}>{story.publishedLabel}</time>
                 </div>
               </div>
             </article>
@@ -742,8 +736,6 @@ const tonightMediumCover = tonightStory
     category: string;
     age: string;
     readingTime: number;
-    publishedAt: string;
-    publishedLabel: string;
     isNew: boolean;
   };
 
@@ -892,12 +884,6 @@ const tonightMediumCover = tonightStory
 
     const duration = card.querySelector<HTMLElement>('[data-card-duration]');
     if (duration) duration.textContent = `${story.readingTime} dk`;
-
-    const date = card.querySelector<HTMLTimeElement>('[data-card-date]');
-    if (date) {
-      date.dateTime = story.publishedAt;
-      date.textContent = story.publishedLabel;
-    }
 
     const favoriteButton = card.querySelector<HTMLButtonElement>('[data-favorite-story]');
     if (favoriteButton) {

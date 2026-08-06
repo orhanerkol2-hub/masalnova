@@ -32,7 +32,6 @@ export const GET: APIRoute = async () => {
     themes: story.data.themes,
     characters: story.data.characters,
     seoKeywords: story.data.seoKeywords,
-    publishedAt: story.data.publishedAt,
     categoryLabel: story.data.categories[0]
       ? storyCategoryLabel(story.data.categories[0])
       : 'Çocuk Masalı',
