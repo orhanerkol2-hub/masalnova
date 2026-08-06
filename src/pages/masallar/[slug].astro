@@ -9,7 +9,7 @@ import { getAllStories, getStories, isIslamicStory, storyPath } from '../../data
 import { videoById } from '../../data/videos';
 import { getStoryAuthor, storyReviewers } from '../../data/authors';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
-import { compactDescription, formatTurkishDate, storySeoTitle } from '../../lib/seo';
+import { compactDescription, storySeoTitle } from '../../lib/seo';
 import { isStoryContentSubstantial, minimumStoryWordCount, storyWordCount } from '../../lib/story-quality.mjs';
 
 export async function getStaticPaths() {
@@ -55,9 +55,6 @@ const primaryCategoryLabel = isIslamic
 const storyPagePath = storyPath(story);
 const storyUrl = `https://masalnova.com${storyPagePath}`;
 const storyImage = d.coverImage ? `https://masalnova.com${d.coverImage}` : 'https://masalnova.com/logo.png';
-const publishedIso = `${d.publishedAt}T00:00:00+03:00`;
-const modifiedIso = `${d.modifiedAt ?? d.publishedAt}T00:00:00+03:00`;
-const publishedLabel = formatTurkishDate(d.publishedAt);
 const seoDescription = compactDescription(d.shortDescription);
 const ageRange = d.audienceLabel ?? d.ageGroups.map(ageLabel).join(' ve ');
 const seoTitle = d.seoTitle ?? (isIslamic
@@ -87,8 +84,6 @@ const jsonLd = [
     description: seoDescription,
     image: [storyImage],
     inLanguage: 'tr-TR',
-    datePublished: publishedIso,
-    dateModified: modifiedIso,
     isAccessibleForFree: true,
     articleSection: isIslamic ? ['İslami Hikâyeler'] : d.categories.map(storyCategoryLabel),
     genre: isIslamic ? ['İslami Hikâyeler'] : d.categories.map(storyCategoryLabel),
@@ -142,8 +137,6 @@ const jsonLd = [
   image={d.coverImage}
   imageAlt={d.altText ?? `${d.title} resimli ${isIslamic ? 'hikâye' : 'masal'} kapağı`}
   ogType="article"
-  publishedTime={publishedIso}
-  modifiedTime={modifiedIso}
   preloadImage={d.coverImage}
   jsonLd={isPubliclyEligible ? jsonLd : undefined}
   activeNav={isIslamic ? 'islami' : 'masallar'}
@@ -212,8 +205,6 @@ const jsonLd = [
                 : <span data-nosnippet>
                     Güncel metin yeniden editoryal inceleme bekliyor
                   </span>}
-              <span aria-hidden="true">·</span>
-              <time datetime={publishedIso}>{publishedLabel} tarihinde yayınlandı</time>
             </p>
             <figure class="reader__cover">
               <CoverThumb
