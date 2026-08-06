@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:optimized": "astro build && node scripts/generate-homepage-images.mjs && astro build",
     "preview": "astro preview",
     "boyama:import": "node scripts/import-coloring-sheets.mjs",
     "boyama:process": "node scripts/process-coloring-pages.mjs",
@@ -13,6 +14,7 @@
     "premium:covers": "npx -y node@20 scripts/generate-premium-cover-images.mjs",
     "premium:covers:all": "npx -y node@20 scripts/generate-premium-cover-images.mjs --all-stories --all --force --resume --continue-on-error --concurrency=1 --quality=medium --size=1024x1024 --final-width=1024 --webp-quality=84",
     "optimize:covers": "node scripts/optimize-cover-images.mjs",
+    "optimize:home-images": "node scripts/generate-homepage-images.mjs",
     "apply:covers": "node scripts/apply-cover-images.mjs",
     "render:legal": "node scripts/render-legal-images.mjs",
     "audit:publishing": "node scripts/audit-publishing-readiness.mjs"

@@ -30,7 +30,7 @@ const nonIndexableStoryPaths = new Set(
 export default defineConfig({
   site: 'https://masalnova.com',
   // GitHub Pages serves this folder (main branch /docs)
-  outDir: './docs',
+  outDir: process.env.MASALNOVA_OUT_DIR?.trim() || './docs',
   // clean URLs: /masallar/ -> masallar/index.html, /videolar/slug -> videolar/slug/index.html
   build: { format: 'directory' },
   image: { service: passthroughImageService() },

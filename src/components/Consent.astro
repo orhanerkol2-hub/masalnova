@@ -1,10 +1,9 @@
 ---
-// Google Consent Mode v2 + GA4 + analytics consent banner.
-// Advertising consent is handled separately by the Google-certified CMP that
-// must be configured in AdSense before PUBLIC_GOOGLE_CERTIFIED_CMP is enabled.
-// Ported 1:1 from the previous static site (Mess-ID G-YZYEN24W6J).
+// Google Consent Mode v2 is kept at a deny-by-default setting. GA4 is loaded
+// only after the visitor explicitly accepts the optional analytics category.
+// Advertising choices remain under the separately configured Google CMP.
 ---
-{/* Google Consent Mode v2 — default: everything denied until the user consents */}
+
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -15,16 +14,14 @@
     analytics_storage: 'denied',
     wait_for_update: 500
   });
+  gtag('set', 'ads_data_redaction', true);
+  window['ga-disable-G-YZYEN24W6J'] = true;
+
+  window.googlefc = window.googlefc || {};
+  window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
 </script>
 
-{/* Google tag (gtag.js) */}
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-YZYEN24W6J"></script>
-<script is:inline>
-  gtag('js', new Date());
-  gtag('config', 'G-YZYEN24W6J');
-</script>
-
-{/* Silktide Consent Manager — cookie banner in MasalNova colors */}
+{/* Silktide presents a separate, voluntary choice for GA4 analytics. */}
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 <link
   rel="stylesheet"
@@ -48,9 +45,7 @@
   #stcm-wrapper .stcm-button-primary { color: #102a66; }
   #stcm-wrapper .stcm-preferences-button { color: #ffffff; }
   @media (max-width: 720px) {
-    #stcm-wrapper #stcm-icon {
-      display: none !important;
-    }
+    #stcm-wrapper #stcm-icon { display: none !important; }
   }
 </style>
 <script
@@ -58,62 +53,162 @@
   src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js"
   integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq"
   crossorigin="anonymous"></script>
-<script is:inline>
-  window.silktideConsentManager.init({
-    backdrop: { show: true },
-    icon: { position: "bottomRight" },
-    prompt: { position: "bottomRight" },
-    consentTypes: [
-      {
-        id: "essential",
-        label: "Zorunlu",
-        description: "<p>Bu çerezler web sitesinin düzgün çalışması için gereklidir ve kapatılamaz.</p>",
-        required: true
-      },
-      {
-        id: "analytics",
-        label: "Analitik",
-        description: "<p>Bu çerezler, hangi sayfaların popüler olduğunu ve ziyaretçilerin sitede nasıl gezindiğini ölçerek siteyi geliştirmemize yardımcı olur.</p>",
-        gtag: "analytics_storage"
-      }
-    ],
-    text: {
-      prompt: {
-        description: "<p>Site kullanımını ölçmek ve MasalNova'yı geliştirmek için isteğe bağlı analitik çerezleri kullanıyoruz.</p>",
-        acceptAllButtonText: "Tümünü kabul et",
-        acceptAllButtonAccessibleLabel: "Tüm çerezleri kabul et",
-        rejectNonEssentialButtonText: "Zorunlu olmayanları reddet",
-        rejectNonEssentialButtonAccessibleLabel: "Zorunlu olmayan tüm çerezleri reddet",
-        preferencesButtonText: "Tercihler",
-        preferencesButtonAccessibleLabel: "Tercihleri aç veya kapat"
-      },
-      preferences: {
-        title: "Çerez tercihlerinizi özelleştirin",
-        description: "<p>Buradan MasalNova'nın site analitiği tercihini yönetebilirsiniz. Reklam tercihleri, reklam etkinleştirildiğinde Google'ın sertifikalı onay arayüzünde ayrıca yönetilir.</p>",
-        saveButtonText: "Kaydet ve kapat",
-        saveButtonAccessibleLabel: "Çerez tercihlerini kaydet",
-        creditLinkText: "",
-        creditLinkAccessibleLabel: ""
-      }
-    }
-  });
 
-  // Keep recurring cookie-interface copy out of Google result snippets.
-  const prepareConsentRoot = (root) => {
-    root.setAttribute('data-nosnippet', '');
-    root.querySelectorAll('h1').forEach((heading) => {
-      const replacement = document.createElement('h2');
-      [...heading.attributes].forEach((attribute) => replacement.setAttribute(attribute.name, attribute.value));
-      replacement.innerHTML = heading.innerHTML;
-      heading.replaceWith(replacement);
+<script is:inline>
+  (function () {
+    var MEASUREMENT_ID = 'G-YZYEN24W6J';
+    var analyticsStarted = false;
+
+    function removeAnalyticsCookies() {
+      try {
+        document.cookie.split(';').forEach(function (entry) {
+          var name = entry.split('=')[0].trim();
+          if (name !== '_ga' && name.indexOf('_ga_') !== 0) return;
+          document.cookie = name + '=; Max-Age=0; Path=/; SameSite=Lax';
+          document.cookie = name + '=; Max-Age=0; Path=/; Domain=.masalnova.com; SameSite=Lax';
+        });
+      } catch (error) {}
+    }
+
+    function startAnalytics() {
+      if (analyticsStarted) return;
+      analyticsStarted = true;
+      window['ga-disable-' + MEASUREMENT_ID] = false;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', MEASUREMENT_ID);
+    }
+
+    function stopAnalytics() {
+      window['ga-disable-' + MEASUREMENT_ID] = true;
+      gtag('consent', 'update', { analytics_storage: 'denied' });
+      removeAnalyticsCookies();
+    }
+
+    function isCmpSurface() {
+      return Boolean(document.querySelector('meta[name="masalnova-cmp-surface"]'));
+    }
+
+    function requestPrivacySettings() {
+      var completed = false;
+      var fallbackTimer = window.setTimeout(function () {
+        if (!completed) window.location.assign('/datenschutz/');
+      }, 2500);
+
+      function showWhenReady() {
+        if (typeof window.googlefc.showRevocationMessage !== 'function') return;
+        completed = true;
+        window.clearTimeout(fallbackTimer);
+        window.googlefc.showRevocationMessage();
+      }
+
+      if (typeof window.googlefc.showRevocationMessage === 'function') {
+        showWhenReady();
+        return;
+      }
+      window.googlefc.callbackQueue.push({ CONSENT_API_READY: showWhenReady });
+    }
+
+    function bindSettingsLinks() {
+      document.querySelectorAll('[data-open-cookie-settings]').forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          if (!isCmpSurface()) return;
+          event.preventDefault();
+          requestPrivacySettings();
+        });
+      });
+
+      document.querySelectorAll('[data-open-analytics-settings]').forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          event.preventDefault();
+          var icon = document.getElementById('stcm-icon');
+          if (icon) icon.click();
+        });
+      });
+
+      var parameters = new URLSearchParams(window.location.search);
+      if (parameters.get('privacy-settings') !== '1' || !isCmpSurface()) return;
+      parameters.delete('privacy-settings');
+      var cleanQuery = parameters.toString();
+      window.history.replaceState(null, '', window.location.pathname + (cleanQuery ? '?' + cleanQuery : '') + window.location.hash);
+      requestPrivacySettings();
+    }
+
+    window.silktideConsentManager.init({
+      backdrop: { show: true },
+      icon: { position: 'bottomRight' },
+      prompt: { position: 'bottomRight' },
+      consentTypes: [
+        {
+          id: 'essential',
+          label: 'Zorunlu',
+          description: '<p>Bu çerezler web sitesinin düzgün çalışması için gereklidir ve kapatılamaz.</p>',
+          required: true
+        },
+        {
+          id: 'analytics',
+          label: 'Analitik',
+          description: "<p>Bu isteğe bağlı çerezler, hangi sayfaların popüler olduğunu ve ziyaretçilerin sitede nasıl gezindiğini ölçerek MasalNova'yı geliştirmemize yardımcı olur.</p>",
+          gtag: 'analytics_storage',
+          onAccept: startAnalytics,
+          onReject: stopAnalytics
+        }
+      ],
+      text: {
+        prompt: {
+          description: "<p>MasalNova'yı geliştirmek için isteğe bağlı analitik çerezleri kullanmak ister misiniz?</p>",
+          acceptAllButtonText: 'Tümünü kabul et',
+          acceptAllButtonAccessibleLabel: 'Tüm çerezleri kabul et',
+          rejectNonEssentialButtonText: 'Zorunlu olmayanları reddet',
+          rejectNonEssentialButtonAccessibleLabel: 'Zorunlu olmayan tüm çerezleri reddet',
+          preferencesButtonText: 'Tercihler',
+          preferencesButtonAccessibleLabel: 'Tercihleri aç veya kapat'
+        },
+        preferences: {
+          title: 'Çerez tercihlerinizi özelleştirin',
+          description: "<p>Buradan MasalNova'nın site analitiği tercihini yönetebilirsiniz. Reklam tercihleri, reklam etkinleştirildiğinde Google'ın sertifikalı onay arayüzünde ayrıca yönetilir.</p>",
+          saveButtonText: 'Kaydet ve kapat',
+          saveButtonAccessibleLabel: 'Çerez tercihlerini kaydet',
+          creditLinkText: '',
+          creditLinkAccessibleLabel: ''
+        }
+      }
     });
-  };
-  const consentRoot = document.getElementById('stcm-wrapper');
-  if (consentRoot) prepareConsentRoot(consentRoot);
-  const consentObserver = new MutationObserver(() => {
-    const root = document.getElementById('stcm-wrapper');
-    if (!root) return;
-    prepareConsentRoot(root);
-  });
-  consentObserver.observe(consentRoot ?? document.documentElement, { childList: true, subtree: true });
+
+    window.setTimeout(function () {
+      var manager = window.silktideConsentManager.getInstance();
+      if (manager && manager.getConsentChoice('analytics') === true) startAnalytics();
+    }, 0);
+
+    function prepareConsentRoot(root) {
+      root.setAttribute('data-nosnippet', '');
+      root.querySelectorAll('h1').forEach(function (heading) {
+        var replacement = document.createElement('h2');
+        Array.prototype.forEach.call(heading.attributes, function (attribute) {
+          replacement.setAttribute(attribute.name, attribute.value);
+        });
+        replacement.innerHTML = heading.innerHTML;
+        heading.replaceWith(replacement);
+      });
+    }
+
+    var consentRoot = document.getElementById('stcm-wrapper');
+    if (consentRoot) prepareConsentRoot(consentRoot);
+    var consentObserver = new MutationObserver(function () {
+      var root = document.getElementById('stcm-wrapper');
+      if (root) prepareConsentRoot(root);
+    });
+    consentObserver.observe(consentRoot || document.documentElement, { childList: true, subtree: true });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bindSettingsLinks, { once: true });
+    } else {
+      bindSettingsLinks();
+    }
+  })();
 </script>

@@ -31,11 +31,30 @@ jobs:
         run: node scripts/build-videos.mjs || echo "Video-Refresh fehlgeschlagen — committete videos.json wird verwendet"
       - name: Build site
         env:
-          # Keep advertising disabled until a Google-certified CMP is actually
-          # configured for EEA, UK and Swiss traffic in the AdSense account.
+          # Google Privacy & messaging is published and Auto ads are disabled.
+          # Load the publisher tag for CMP/review, but keep all ad units off.
+          PUBLIC_ADSENSE_TAG_ENABLED: 'true'
+          PUBLIC_GOOGLE_CMP_PUBLISHED: 'true'
           PUBLIC_ADSENSE_ENABLED: 'false'
-          PUBLIC_GOOGLE_CERTIFIED_CMP: 'false'
-        run: npm run build
+          PUBLIC_ADSENSE_MANUAL_ONLY: 'true'
+        # The first pass discovers every cover used by the rotating homepage,
+        # then Sharp creates the responsive WebP variants and the second pass
+        # emits markup that points at those generated files.
+        run: npm run build:optimized && npm run audit:publishing -- --built
+      - name: Verify fail-closed manual ad rendering
+        env:
+          PUBLIC_ADSENSE_TAG_ENABLED: 'true'
+          PUBLIC_GOOGLE_CMP_PUBLISHED: 'true'
+          PUBLIC_ADSENSE_ENABLED: 'true'
+          PUBLIC_ADSENSE_MANUAL_ONLY: 'true'
+          PUBLIC_ADSENSE_HOME_FEED_SLOT: '1000000001'
+          PUBLIC_ADSENSE_HOME_CONTENT_SLOT: '1000000002'
+          PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT: '1000000003'
+          PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT: '1000000004'
+          PUBLIC_ADSENSE_STORY_GUIDE_SLOT: '1000000005'
+          MASALNOVA_OUT_DIR: './.ads-test'
+          MASALNOVA_AUDIT_OUTPUT_DIR: './.ads-test'
+        run: npm run build && npm run audit:publishing -- --built
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs

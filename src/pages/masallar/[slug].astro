@@ -5,12 +5,18 @@ import CoverThumb from '../../components/CoverThumb.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import StoryCard from '../../components/StoryCard.astro';
 import ReadingToolbar from '../../components/ReadingToolbar.astro';
+import AdSlot from '../../components/AdSlot.astro';
 import { getAllStories, getStories, isIslamicStory, storyPath } from '../../data/stories';
 import { videoById } from '../../data/videos';
 import { getStoryAuthor, storyReviewers } from '../../data/authors';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
 import { compactDescription, storySeoTitle } from '../../lib/seo';
-import { isStoryContentSubstantial, minimumStoryWordCount, storyWordCount } from '../../lib/story-quality.mjs';
+import {
+  isStoryContentSubstantial,
+  isStoryMonetizationEligible,
+  minimumStoryWordCount,
+  storyWordCount,
+} from '../../lib/story-quality.mjs';
 
 export async function getStaticPaths() {
   const stories = await getAllStories();
@@ -27,6 +33,15 @@ const wordCount = storyWordCount(story.body);
 const minimumWordCount = minimumStoryWordCount(d);
 const isPubliclyEligible = d.editorialStatus === 'approved'
   && isStoryContentSubstantial(story.body, d);
+const storyAdsEligible = isStoryMonetizationEligible({
+  status: d.editorialStatus,
+  substantial: isPubliclyEligible,
+  section: isIslamic ? 'islami-hikayeler' : 'masallar',
+  categories: d.categories,
+  words: wordCount,
+  readingTime: d.readingTime,
+});
+const storyGuideAdSlot = import.meta.env.PUBLIC_ADSENSE_STORY_GUIDE_SLOT;
 const { Content } = await render(story);
 
 const allStories = await getStories();
@@ -141,7 +156,7 @@ const jsonLd = [
   jsonLd={isPubliclyEligible ? jsonLd : undefined}
   activeNav={isIslamic ? 'islami' : 'masallar'}
   readerPage
-  allowAds={isPubliclyEligible}
+  allowAds={storyAdsEligible}
   robots={isPubliclyEligible ? undefined : 'noindex, follow'}
 >
   <ReadingToolbar
@@ -264,6 +279,12 @@ const jsonLd = [
         </div>
         <a class="editorial-link" href="/yayin-ilkeleri/">MasalNova’nın yayın ve içerik ilkeleri <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </section>
+
+      <AdSlot
+        slot={storyGuideAdSlot}
+        placement="story-after-parent-guide"
+        eligible={storyAdsEligible}
+      />
 
       {d.themes.length > 0 && (
         <div class="themes">
