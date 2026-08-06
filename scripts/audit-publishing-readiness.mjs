@@ -313,21 +313,14 @@ if (verifyBuiltOutput) {
     const hasChildAgeTreatment = html.includes('google_tag_for_age_treatment = 1');
     const hasNoindex = html.includes('content="noindex, follow"');
     const hasArticleData = html.includes('"@type":"Article"');
-    const hasExactPublishedData = html.includes(`"datePublished":"${story.publishedAt}"`)
-      && html.includes(`property="article:published_time" content="${story.publishedAt}"`)
-      && html.includes(`<time datetime="${story.publishedAt}"`);
-    const hasSyntheticPublishedTime = html.includes(`"datePublished":"${story.publishedAt}T`)
-      || html.includes(`property="article:published_time" content="${story.publishedAt}T`);
-    const hasModifiedData = html.includes('"dateModified"')
+    const hasPublicDate = html.includes('"datePublished"')
+      || html.includes('"dateModified"')
+      || html.includes('property="article:published_time"')
       || html.includes('property="article:modified_time"')
+      || html.includes('Yayınlandı:')
       || html.includes('Güncellendi:');
-    const hasExactModifiedData = story.modifiedAt
-      ? html.includes(`"dateModified":"${story.modifiedAt}"`)
-        && html.includes(`property="article:modified_time" content="${story.modifiedAt}"`)
-        && html.includes(`<time datetime="${story.modifiedAt}"`)
-      : !hasModifiedData;
 
-    if (shouldBePublic && (!isInSitemap || hasNoindex || !hasArticleData || !hasExactPublishedData || hasSyntheticPublishedTime || !hasExactModifiedData)) {
+    if (shouldBePublic && (!isInSitemap || hasNoindex || !hasArticleData || hasPublicDate)) {
       hardErrors.push(`${route}: öffentliche Story ist in HTML/Sitemap nicht konsistent.`);
     }
     if (shouldAllowAds !== hasAdSenseMetadata || shouldAllowAds !== hasChildAgeTreatment) {
