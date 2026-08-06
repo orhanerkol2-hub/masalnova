@@ -4,13 +4,17 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 const projectRoot = fileURLToPath(new URL('../', import.meta.url));
-const builtHomepage = join(projectRoot, 'docs/index.html');
+const builtHomepage = join(
+  projectRoot,
+  process.env.MASALNOVA_HOMEPAGE_SOURCE_DIR?.trim() || 'docs',
+  'index.html',
+);
 const storyCoverDirectory = join(projectRoot, 'public/covers/stories');
 const outputDirectory = join(projectRoot, 'public/covers/home');
 const navTileDirectory = join(projectRoot, 'public/nav-tiles');
 
 if (!existsSync(builtHomepage)) {
-  throw new Error('docs/index.html fehlt. Bitte zuerst `npm run build` ausführen.');
+  throw new Error('Die gebaute Startseite fehlt. Bitte zuerst `npm run build` ausführen.');
 }
 
 const homepageHtml = readFileSync(builtHomepage, 'utf8');
@@ -32,7 +36,7 @@ for (const match of homepageHtml.matchAll(/\/covers\/home\/([^"'<>\\\s]+?)-(?:36
 }
 
 if (!originalCoverPaths.size) {
-  throw new Error('Keine Startseiten-Cover in docs/index.html gefunden.');
+  throw new Error('Keine Startseiten-Cover in der gebauten Startseite gefunden.');
 }
 
 mkdirSync(outputDirectory, { recursive: true });
