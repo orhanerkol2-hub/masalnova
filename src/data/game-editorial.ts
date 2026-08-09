@@ -6,6 +6,12 @@ export type GameEditorial = {
 };
 
 export const gameEditorial: Record<string, GameEditorial> = {
+  'dino-buz-cicekleri': {
+    overview: 'Dino Ateşi: Üç Dünya, aynı hareketi tekrarlamak yerine üç farklı beceriyi sırayla kullanan kısa bir macera oyunudur. Güneş Vadisi nişan almayı öğretir, Kristal Orman beş konumluk bir ışık sırasını hatırlatır, Volkan Tapınağı ise hareketli göstergede doğru anı yakalamayı ister. Pofi’nin ateşi her dünyada zarar vermek yerine çiçekleri, kristalleri ve dinozor yumurtalarını uyandırır.',
+    play: 'Hedefe dokun ve beyaz yolu kontrol et. İlk dünyada ÜFLE düğmesi seçili çiçeği açar. İkinci dünyada kristallerin parladığı sırayı izle ve onları aynı sırayla YAK. Finalde beyaz çizgi yeşil alana ulaştığında ISIT düğmesine bas. Üç ateş enerjisi bitse bile tamamlanan hedefler silinmez; kısa bir dinlenmeden sonra haklar yenilenir.',
+    tips: ['Kristal sırasını tek tek değil, yukarı–aşağı veya sağ–sol gibi küçük bir rota olarak hatırla.', 'Volkan dünyasında düğmeye göstergenin yeşile gireceğini tahmin ederek dokun; tam ortayı beklemek zorunda değilsin.', 'Ok tuşları hedef değiştirir, Enter veya boşluk ateşi kullanır ve R dünyayı yeniler.'],
+    parent: 'Oyun yaklaşık 6–7 yaş için okunabilir kısa yönergeler, görsel tekrar ve affedici denemeler sunar. Yanlış hamle enerji azaltır ama kazanılmış ilerlemeyi geri almaz. Böylece hafıza ve zamanlama gerçekten devreye girerken başarısızlık duygusu büyümez; reklam, satın alma, sohbet veya kişisel veri toplama yoktur.',
+  },
   'ay-isigi-bahcesi': {
     overview: 'Ay Işığı Bahçesi, ipleri doğru zamanda kesmeye dayanan üç bölümlük sakin bir fizik bulmacasıdır. Amaç, ay damlasını Mimo’nun beklediği çiçeğe ulaştırırken bölümdeki üç yıldızı da toplamaktır. Her bölüm yeni bir düzen kurar; bu yüzden yalnızca hızlı davranmak değil, damlanın izleyeceği yolu önceden düşünmek gerekir.',
     play: 'Fareyi ya da parmağını ipin üzerinden geçirerek ipi kes. Damla salınırken yönünü, rüzgârı ve zıplama yüzeylerini izle. Yanlış bir hamlede bölüm hemen yeniden denenebilir. Önce yıldızların konumuna bakmak, ardından hangi ipin ilk kesileceğine karar vermek en güvenli yöntemdir.',

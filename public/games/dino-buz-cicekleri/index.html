@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="theme-color" content="#0d2556">
+  <meta name="color-scheme" content="only light">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'self'">
+  <title>Dino Ateşi: Üç Dünya | MasalNova</title>
+  <link rel="preload" as="image" href="./assets/dino-valley-bg.webp">
+  <link rel="preload" as="image" href="./assets/dino-adventurer-v2.webp">
+  <link rel="stylesheet" href="./assets/phosphor.css">
+  <link rel="stylesheet" href="./assets/phosphor-fill.css">
+  <style>
+    @font-face { font-family: "Nunito"; src: url('./assets/nunito-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Nunito"; src: url('./assets/nunito-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Nunito"; src: url('./assets/nunito-800.woff2') format('woff2'); font-weight: 800 1000; font-style: normal; font-display: swap; }
+    :root {
+      color-scheme: light;
+      font-family: "Nunito", "Avenir Next", system-ui, sans-serif;
+      --world-bg: url('./assets/dino-valley-bg.webp');
+      --panel: rgba(6, 27, 70, .92);
+      --panel-soft: rgba(14, 49, 112, .9);
+      --blue: #1852bd;
+      --blue-dark: #092b75;
+      --gold: #ffd04b;
+      --orange: #f56a25;
+      --cyan: #65e6ff;
+      --paper: #fffdf5;
+      --ink: #102c6d;
+      --good: #31b36d;
+      --danger: #ff725e;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #07152f; }
+    body { overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
+    button, a { font: inherit; }
+    button { border: 0; cursor: pointer; }
+    button:focus-visible, a:focus-visible { outline: 4px solid #fff; outline-offset: 3px; }
+    [hidden] { display: none !important; }
+
+    .game {
+      position: relative;
+      width: 100%;
+      height: 100dvh;
+      min-height: 100%;
+      overflow: clip;
+      isolation: isolate;
+      background: #07152f;
+      user-select: none;
+      touch-action: none;
+    }
+    .game::before, .game::after {
+      position: absolute;
+      inset: 0;
+      content: '';
+    }
+    .game::before { background: var(--world-bg) 50% 50% / cover no-repeat; filter: blur(24px) saturate(.85) brightness(.55); transform: scale(1.09); }
+    .game::after { background: rgba(3, 15, 38, .42); }
+    .stage {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 430px);
+      height: 100%;
+      min-height: 620px;
+      margin-inline: auto;
+      overflow: hidden;
+      background: var(--world-bg) 50% 50% / cover no-repeat;
+      box-shadow: 0 0 74px rgba(0, 0, 0, .5);
+    }
+    .stage::after { position: absolute; z-index: 1; inset: 0; background: rgba(4, 24, 63, .08); content: ''; pointer-events: none; }
+    .stage.world-2::after { background: rgba(2, 17, 55, .16); }
+    .stage.world-3::after { background: rgba(50, 15, 4, .08); }
+
+    .hud {
+      position: absolute;
+      z-index: 24;
+      top: max(10px, env(safe-area-inset-top));
+      right: max(10px, env(safe-area-inset-right));
+      left: max(10px, env(safe-area-inset-left));
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 7px;
+      pointer-events: none;
+    }
+    .hud > * { pointer-events: auto; }
+    .hud-button, .level-pill, .score-pill, .restart-button, .side-button {
+      border: 2px solid rgba(255, 255, 255, .9);
+      background: var(--panel-soft);
+      color: #fff;
+      box-shadow: 0 4px 0 rgba(3, 20, 62, .78), 0 9px 18px rgba(2, 17, 48, .28);
+    }
+    .hud-button {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      border-radius: 15px;
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+    .level-pill {
+      min-width: 0;
+      padding: 7px 11px 8px;
+      border-color: var(--gold);
+      border-radius: 15px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .level-pill small { display: block; color: #bcd5ff; font-size: .51rem; font-weight: 1000; letter-spacing: .11em; line-height: 1; }
+    .level-pill strong { display: block; margin-top: 3px; overflow: hidden; font-size: clamp(.84rem, 4.3vw, 1.08rem); font-weight: 1000; line-height: 1; text-overflow: ellipsis; }
+    .score-pill {
+      display: flex;
+      min-height: 46px;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 9px;
+      border-radius: 15px;
+      font-size: 1rem;
+      font-weight: 1000;
+    }
+    .score-pill i { color: var(--gold); font-size: 1.25rem; }
+
+    .mission-card {
+      position: absolute;
+      z-index: 23;
+      top: max(67px, calc(env(safe-area-inset-top) + 60px));
+      right: 13px;
+      left: 13px;
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr) auto;
+      min-height: 54px;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 10px;
+      border: 2px solid rgba(255,255,255,.82);
+      border-radius: 17px;
+      background: var(--panel);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(2, 16, 48, .26);
+    }
+    .mission-icon { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 12px; background: var(--blue); color: var(--gold); font-size: 1.25rem; }
+    .mission-copy { min-width: 0; }
+    .mission-copy small { display: block; color: #9ed6ff; font-size: .54rem; font-weight: 1000; letter-spacing: .1em; line-height: 1; }
+    .mission-copy strong { display: block; margin-top: 4px; overflow: hidden; font-size: .72rem; font-weight: 900; line-height: 1.15; text-overflow: ellipsis; white-space: nowrap; }
+    .energy { display: flex; gap: 2px; min-width: 62px; justify-content: flex-end; }
+    .energy i { color: rgba(255,255,255,.25); font-size: 1.03rem; }
+    .energy i.is-on { color: var(--orange); filter: drop-shadow(0 0 5px var(--gold)); }
+
+    .challenge-panel {
+      position: absolute;
+      z-index: 22;
+      top: 130px;
+      right: 18px;
+      left: 18px;
+      min-height: 40px;
+      border: 2px solid rgba(255,255,255,.72);
+      border-radius: 14px;
+      background: rgba(8, 28, 66, .88);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(1, 14, 45, .22);
+    }
+    .sequence-panel { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 12px; }
+    .sequence-panel span { display: grid; width: 23px; height: 23px; place-items: center; border: 2px solid rgba(255,255,255,.35); border-radius: 8px; color: rgba(255,255,255,.35); font-size: .8rem; }
+    .sequence-panel span.is-done { border-color: var(--gold); color: var(--gold); background: rgba(255,208,75,.12); }
+    .sequence-panel span.is-next { border-color: var(--cyan); color: var(--cyan); box-shadow: 0 0 10px rgba(101,230,255,.45); }
+    .timing-panel { padding: 7px 11px 9px; }
+    .timing-labels { display: flex; justify-content: space-between; color: #cde2ff; font-size: .55rem; font-weight: 1000; letter-spacing: .07em; }
+    .timing-track { position: relative; height: 13px; margin-top: 5px; overflow: hidden; border: 2px solid rgba(255,255,255,.7); border-radius: 999px; background: #223767; }
+    .timing-zone { position: absolute; top: 0; bottom: 0; left: 42%; width: 22%; background: var(--good); }
+    .timing-marker { position: absolute; top: -2px; bottom: -2px; left: 6%; width: 6px; border-radius: 999px; background: #fff; box-shadow: 0 0 8px var(--gold); transform: translateX(-50%); }
+
+    .targets { position: absolute; z-index: 6; inset: 173px 0 155px; }
+    .world-target {
+      position: absolute;
+      width: clamp(74px, 23vw, 104px);
+      aspect-ratio: 1;
+      padding: 0;
+      border-radius: 24px;
+      background: transparent;
+      filter: hue-rotate(var(--hue, 0deg)) drop-shadow(0 11px 13px rgba(3, 22, 62, .32));
+      transform: translate(-50%, -50%);
+      transition: filter .18s ease, transform .18s ease, opacity .2s ease;
+    }
+    .world-target img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+    .world-target.type-flower { aspect-ratio: 420 / 460; width: clamp(82px, 24vw, 108px); }
+    .world-target.type-crystal { width: clamp(73px, 21vw, 94px); filter: hue-rotate(var(--hue, 0deg)) saturate(.76) brightness(.62) drop-shadow(0 9px 14px rgba(0,0,40,.55)); }
+    .world-target.type-egg { width: clamp(70px, 20vw, 92px); }
+    .world-target:hover, .world-target.is-selected { transform: translate(-50%, -50%) scale(1.09); }
+    .world-target.is-selected { filter: hue-rotate(var(--hue, 0deg)) drop-shadow(0 0 17px #fff) drop-shadow(0 0 16px var(--gold)); }
+    .world-target.type-crystal.is-selected { filter: hue-rotate(var(--hue, 0deg)) saturate(.9) brightness(.78) drop-shadow(0 0 17px #fff) drop-shadow(0 0 16px var(--cyan)); }
+    .world-target.is-clue { filter: hue-rotate(var(--hue, 0deg)) saturate(1.28) brightness(1.3) drop-shadow(0 0 21px #fff) drop-shadow(0 0 27px var(--cyan)); transform: translate(-50%, -50%) scale(1.17); }
+    .world-target.is-working { animation: target-work .72s ease-in-out both; }
+    .world-target.is-miss { animation: target-miss .48s ease-in-out both; }
+    .world-target.is-awake { filter: hue-rotate(var(--hue, 0deg)) saturate(1.12) brightness(1.05) drop-shadow(0 0 16px var(--gold)); }
+    .world-target.type-egg.is-awake { width: clamp(90px, 26vw, 116px); }
+    @keyframes target-work { 0%, 100% { transform: translate(-50%, -50%) scale(1); } 45% { transform: translate(-50%, -50%) scale(1.14) rotate(3deg); } }
+    @keyframes target-miss { 0%, 100% { transform: translate(-50%, -50%); } 30% { transform: translate(calc(-50% - 8px), -50%); } 65% { transform: translate(calc(-50% + 8px), -50%); } }
+
+    .dino {
+      position: absolute;
+      z-index: 9;
+      bottom: clamp(90px, 13vh, 118px);
+      left: clamp(-27px, -4vw, -8px);
+      width: clamp(178px, 52vw, 226px);
+      height: auto;
+      filter: drop-shadow(0 17px 16px rgba(2, 18, 45, .38));
+      pointer-events: none;
+      transform-origin: 62% 80%;
+    }
+    .dino.is-breathing { animation: dino-breathe .72s ease-out; }
+    @keyframes dino-breathe { 0%, 100% { transform: rotate(0) scale(1); } 38% { transform: rotate(-2deg) scale(1.035); } 68% { transform: rotate(1deg) scale(.99); } }
+    .aim-arc, .fire-stream { position: absolute; z-index: 8; display: block; height: auto; pointer-events: none; transform-origin: 0 50%; }
+    .aim-arc { width: 240px; opacity: .76; filter: drop-shadow(0 3px 6px rgba(12, 47, 111, .2)); }
+    .fire-stream { width: 320px; opacity: 0; filter: drop-shadow(0 0 12px #ffd850); }
+    .fire-stream.is-firing { animation: fire-reach .72s ease-out both; }
+    @keyframes fire-reach { 0% { opacity: 0; transform: rotate(var(--angle)) scaleX(.04) scaleY(.66); } 20%, 60% { opacity: 1; } 58% { transform: rotate(var(--angle)) scaleX(var(--reach)) scaleY(1); } 100% { opacity: 0; transform: rotate(var(--angle)) scaleX(var(--reach)) scaleY(.72); } }
+
+    .control-row {
+      position: absolute;
+      z-index: 21;
+      right: max(15px, env(safe-area-inset-right));
+      bottom: max(14px, env(safe-area-inset-bottom));
+      left: max(15px, env(safe-area-inset-left));
+      display: grid;
+      grid-template-columns: 50px minmax(0, 1fr) 50px;
+      align-items: end;
+      gap: 9px;
+    }
+    .fire-button {
+      position: relative;
+      display: flex;
+      width: min(128px, 34vw);
+      aspect-ratio: 1;
+      margin-inline: auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 6px solid var(--blue-dark);
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      box-shadow: 0 0 0 5px var(--gold), 0 8px 0 #a93413, 0 16px 26px rgba(50, 20, 4, .36);
+      text-shadow: 0 2px 0 rgba(85, 20, 5, .35);
+    }
+    .fire-button i { color: var(--gold); font-size: clamp(1.7rem, 7.5vw, 2.45rem); }
+    .fire-button strong { margin-top: -2px; font-size: clamp(1.1rem, 5.8vw, 1.55rem); font-weight: 1000; letter-spacing: .03em; }
+    .fire-button:active, .fire-button.is-active { box-shadow: 0 0 0 5px var(--gold), 0 3px 0 #a93413, 0 10px 20px rgba(50, 20, 4, .3); transform: translateY(5px); }
+    .restart-button, .side-button { display: grid; width: 48px; height: 48px; place-items: center; margin-bottom: 3px; border-radius: 15px; font-size: 1.3rem; }
+
+    .status {
+      position: absolute;
+      z-index: 30;
+      top: 177px;
+      left: 50%;
+      max-width: calc(100% - 32px);
+      padding: 7px 13px;
+      border: 2px solid rgba(255,255,255,.86);
+      border-radius: 999px;
+      background: rgba(10, 45, 111, .94);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(2, 18, 51, .25);
+      font-size: .7rem;
+      font-weight: 1000;
+      text-align: center;
+      transform: translateX(-50%);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .status.is-good { background: rgba(34, 137, 82, .96); }
+    .status.is-warn { background: rgba(172, 57, 39, .96); }
+    .star-burst { position: absolute; z-index: 18; display: grid; width: 68px; height: 68px; place-items: center; color: var(--gold); font-size: 3.8rem; opacity: 0; filter: drop-shadow(0 0 12px #fff); pointer-events: none; }
+    .star-burst.is-visible { animation: star-rise 1s ease-out both; }
+    @keyframes star-rise { 0% { opacity: 0; transform: translate(-50%, -30%) scale(.25); } 35% { opacity: 1; transform: translate(-50%, -75%) scale(1.1) rotate(8deg); } 100% { opacity: 0; transform: translate(-50%, -150%) scale(.8) rotate(18deg); } }
+
+    .overlay { position: absolute; z-index: 50; inset: 0; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left)); background: rgba(3, 17, 50, .7); backdrop-filter: blur(7px); }
+    .menu { width: min(388px, 95vw); max-height: calc(100dvh - 28px); overflow: auto; padding: 20px 17px 18px; border: 3px solid var(--gold); border-radius: 25px; background: rgba(255, 253, 245, .98); color: var(--ink); box-shadow: 0 26px 72px rgba(1, 12, 40, .56); text-align: center; }
+    .menu-mark { display: grid; width: 50px; height: 50px; margin: 0 auto 8px; place-items: center; border: 4px solid var(--gold); border-radius: 16px; background: var(--orange); color: #fff; font-size: 1.55rem; transform: rotate(-3deg); }
+    .menu-kicker { color: var(--blue); font-size: .62rem; font-weight: 1000; letter-spacing: .12em; text-transform: uppercase; }
+    .menu h1 { margin: 5px 0 0; color: var(--blue-dark); font-size: clamp(1.55rem, 7.4vw, 2.18rem); line-height: .96; }
+    .menu h1 span { display: block; margin-top: 5px; color: var(--orange); }
+    .menu p { margin: 10px auto 0; max-width: 34ch; color: #53627e; font-size: .78rem; font-weight: 700; line-height: 1.35; }
+    .world-map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 13px; }
+    .world-card { position: relative; min-width: 0; height: 104px; overflow: hidden; padding: 0; border: 3px solid #d7e1f1; border-radius: 15px; background: #17376f; color: #fff; text-align: left; box-shadow: 0 5px 12px rgba(12, 40, 91, .15); }
+    .world-card::before, .world-card::after { position: absolute; inset: 0; content: ''; }
+    .world-card::before { background: var(--thumb) 50% 50% / cover no-repeat; }
+    .world-card::after { top: 39%; background: rgba(2, 18, 48, .76); }
+    .world-card.is-selected { border-color: var(--gold); box-shadow: 0 0 0 2px var(--blue), 0 7px 15px rgba(12,40,91,.2); transform: translateY(-2px); }
+    .world-card.is-locked { filter: grayscale(.86) brightness(.68); }
+    .world-card span { position: absolute; z-index: 2; right: 7px; bottom: 7px; left: 7px; }
+    .world-card small { display: block; color: #c9daf8; font-size: .48rem; font-weight: 1000; letter-spacing: .07em; }
+    .world-card strong { display: block; margin-top: 2px; font-size: .68rem; font-weight: 1000; line-height: 1.05; }
+    .world-card i { position: absolute; z-index: 3; top: 7px; right: 7px; display: grid; width: 24px; height: 24px; place-items: center; border-radius: 8px; background: rgba(5,26,68,.82); color: var(--gold); }
+    .primary-button, .secondary-button { width: 100%; min-height: 50px; margin-top: 14px; border-radius: 16px; font-weight: 1000; }
+    .primary-button { border: 3px solid var(--blue-dark); background: var(--gold); color: #503000; box-shadow: 0 5px 0 #d38a00; }
+    .secondary-button { min-height: 43px; margin-top: 8px; border: 2px solid #d4dded; background: #fff; color: var(--blue-dark); }
+
+    @media (min-width: 700px) and (max-height: 720px) {
+      .stage { width: 360px; }
+      .dino { width: 174px; bottom: 83px; }
+      .targets { bottom: 132px; }
+      .fire-button { width: 105px; }
+      .menu { transform: scale(.88); }
+    }
+    @media (max-width: 360px), (max-height: 680px) {
+      .hud { grid-template-columns: 42px minmax(0, 1fr) auto; }
+      .hud-button { width: 40px; height: 40px; font-size: 1.2rem; }
+      .level-pill { padding: 6px 8px; }
+      .score-pill { min-height: 40px; padding: 6px 8px; font-size: .88rem; }
+      .mission-card { top: 58px; min-height: 48px; grid-template-columns: 32px minmax(0,1fr) auto; }
+      .mission-icon { width: 30px; height: 30px; }
+      .challenge-panel { top: 113px; }
+      .targets { inset: 153px 0 130px; }
+      .status { top: 154px; }
+      .dino { width: 157px; bottom: 78px; }
+      .fire-button { width: 98px; border-width: 5px; }
+      .control-row { bottom: 10px; }
+      .menu { padding-top: 15px; }
+      .world-card { height: 90px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+      .fire-stream.is-firing { animation: none !important; opacity: 1; transform: rotate(var(--angle)) scaleX(var(--reach)) scaleY(1); }
+      .star-burst.is-visible { animation: none !important; opacity: 1; transform: translate(-50%, -80%); }
+    }
+  </style>
+</head>
+<body>
+  <main class="game" data-game>
+    <section class="stage world-1" data-stage aria-label="Dino Ateşi oyun alanı">
+      <header class="hud" data-hud hidden>
+        <a class="hud-button" href="/oyunlar/" aria-label="Oyunlara dön"><i class="ph ph-arrow-left" aria-hidden="true"></i></a>
+        <div class="level-pill"><small data-world-step>MACERA 1/3</small><strong data-level>Güneş Vadisi</strong></div>
+        <div class="score-pill" aria-label="Tamamlanan hedefler"><i class="ph-fill ph-star" aria-hidden="true"></i><span data-score>0/4</span></div>
+      </header>
+
+      <section class="mission-card" data-mission-card hidden aria-live="polite">
+        <span class="mission-icon"><i class="ph-fill ph-compass" data-mission-icon aria-hidden="true"></i></span>
+        <span class="mission-copy"><small data-mode>ISINMA TURU</small><strong data-task>Dört buz çiçeğini uyandır.</strong></span>
+        <span class="energy" data-energy hidden aria-label="Ateş enerjisi"></span>
+      </section>
+
+      <section class="challenge-panel sequence-panel" data-sequence hidden aria-label="Hatırlanan kristal sırası"></section>
+      <section class="challenge-panel timing-panel" data-timing hidden aria-label="Ateş zamanlama göstergesi">
+        <div class="timing-labels"><span>ERKEN</span><span>ŞİMDİ!</span><span>GEÇ</span></div>
+        <div class="timing-track"><span class="timing-zone"></span><span class="timing-marker" data-timing-marker></span></div>
+      </section>
+
+      <p class="status" data-status hidden aria-live="polite"></p>
+      <div class="targets" data-targets></div>
+      <img class="aim-arc" data-aim src="./assets/aim-arc.png" alt="" hidden>
+      <img class="fire-stream" data-fire src="./assets/fire-breath.png" alt="" hidden>
+      <img class="dino" data-dino src="./assets/dino-adventurer-v2.webp" alt="Mavi fularlı dinozor kâşif Pofi">
+      <div class="star-burst" data-star-burst aria-hidden="true"><i class="ph-fill ph-star"></i></div>
+
+      <div class="control-row" data-controls hidden>
+        <button class="side-button" type="button" data-previous aria-label="Önceki hedef"><i class="ph ph-caret-left" aria-hidden="true"></i></button>
+        <button class="fire-button" type="button" data-breathe aria-label="Seçili hedefe ateş üfle">
+          <i class="ph-fill ph-fire" aria-hidden="true"></i><strong data-fire-label>ÜFLE</strong>
+        </button>
+        <button class="restart-button" type="button" data-restart aria-label="Bölümü yeniden başlat"><i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i></button>
+      </div>
+
+      <section class="overlay" data-overlay>
+        <div class="menu" role="dialog" aria-modal="true" aria-labelledby="menu-title">
+          <span class="menu-mark" aria-hidden="true"><i class="ph-fill ph-fire"></i></span>
+          <span class="menu-kicker" data-kicker>MasalNova Macerası</span>
+          <h1 id="menu-title" data-title>DİNO ATEŞİ<span>ÜÇ DÜNYA</span></h1>
+          <p data-message>Çiçekleri uyandır, yıldız kristallerini doğru sırayla yak ve volkan yumurtalarını tam zamanında ısıt.</p>
+          <div class="world-map" data-world-map aria-label="Macera dünyaları"></div>
+          <button class="primary-button" type="button" data-primary>MACERAYA BAŞLA</button>
+          <button class="secondary-button" type="button" data-secondary hidden>ANA MENÜ</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const stage = document.querySelector('[data-stage]');
+      const game = document.querySelector('[data-game]');
+      const targetsRoot = document.querySelector('[data-targets]');
+      const hud = document.querySelector('[data-hud]');
+      const controls = document.querySelector('[data-controls]');
+      const missionCard = document.querySelector('[data-mission-card]');
+      const overlay = document.querySelector('[data-overlay]');
+      const worldStep = document.querySelector('[data-world-step]');
+      const levelLabel = document.querySelector('[data-level]');
+      const scoreLabel = document.querySelector('[data-score]');
+      const modeLabel = document.querySelector('[data-mode]');
+      const taskLabel = document.querySelector('[data-task]');
+      const missionIcon = document.querySelector('[data-mission-icon]');
+      const energyRoot = document.querySelector('[data-energy]');
+      const sequencePanel = document.querySelector('[data-sequence]');
+      const timingPanel = document.querySelector('[data-timing]');
+      const timingMarker = document.querySelector('[data-timing-marker]');
+      const status = document.querySelector('[data-status]');
+      const dino = document.querySelector('[data-dino]');
+      const aimArc = document.querySelector('[data-aim]');
+      const fireStream = document.querySelector('[data-fire]');
+      const fireButton = document.querySelector('[data-breathe]');
+      const fireLabel = document.querySelector('[data-fire-label]');
+      const previousButton = document.querySelector('[data-previous]');
+      const restartButton = document.querySelector('[data-restart]');
+      const starBurst = document.querySelector('[data-star-burst]');
+      const kicker = document.querySelector('[data-kicker]');
+      const title = document.querySelector('[data-title]');
+      const message = document.querySelector('[data-message]');
+      const worldMap = document.querySelector('[data-world-map]');
+      const primary = document.querySelector('[data-primary]');
+      const secondary = document.querySelector('[data-secondary]');
+
+      const STORAGE_KEY = 'masalnova.dino-uc-dunya.progress.v2';
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const levels = [
+        {
+          name: 'Güneş Vadisi',
+          shortName: 'GÜNEŞ VADİSİ',
+          mode: 'free',
+          modeLabel: 'ISINMA TURU',
+          task: 'Dört buz çiçeğini uyandır.',
+          hint: 'Hedefi seç, sonra ateş üfle.',
+          background: './assets/dino-valley-bg.webp',
+          target: './assets/frozen-flower.png',
+          success: './assets/blooming-flower.png',
+          type: 'flower',
+          noun: 'buz çiçeği',
+          fireLabel: 'ÜFLE',
+          icon: 'ph-flower',
+          positions: [
+            { x: 75, y: 15, hue: 0 }, { x: 88, y: 38, hue: 52 },
+            { x: 66, y: 56, hue: 96 }, { x: 84, y: 76, hue: -28 }
+          ]
+        },
+        {
+          name: 'Kristal Orman',
+          shortName: 'KRİSTAL ORMAN',
+          mode: 'sequence',
+          modeLabel: 'HAFIZA GÖREVİ',
+          task: 'Beş kristali gösterilen sırayla yak.',
+          hint: 'Işıkları izle ve sırayı aklında tut.',
+          background: './assets/crystal-forest-bg-v2.webp',
+          target: './assets/star-crystal-v2.webp',
+          success: './assets/star-crystal-v2.webp',
+          type: 'crystal',
+          noun: 'yıldız kristali',
+          fireLabel: 'YAK',
+          icon: 'ph-sparkle',
+          sequence: [2, 0, 4, 1, 3],
+          positions: [
+            { x: 62, y: 15, hue: 38 }, { x: 86, y: 25, hue: -28 },
+            { x: 72, y: 43, hue: 72 }, { x: 90, y: 59, hue: 8 },
+            { x: 70, y: 76, hue: -52 }
+          ]
+        },
+        {
+          name: 'Volkan Tapınağı',
+          shortName: 'VOLKAN TAPINAĞI',
+          mode: 'timing',
+          modeLabel: 'ZAMANLAMA GÖREVİ',
+          task: 'Altı yumurtayı yeşil anda ısıt.',
+          hint: 'Beyaz çizgi yeşile gelince ISIT.',
+          background: './assets/volcano-temple-bg-v2.webp',
+          target: './assets/stone-egg-v2.webp',
+          success: './assets/fire-hatchling-v2.webp',
+          type: 'egg',
+          noun: 'taş yumurta',
+          fireLabel: 'ISIT',
+          icon: 'ph-timer',
+          positions: [
+            { x: 61, y: 13, hue: 0 }, { x: 84, y: 18, hue: 16 },
+            { x: 71, y: 36, hue: -12 }, { x: 91, y: 45, hue: 24 },
+            { x: 65, y: 60, hue: -20 }, { x: 84, y: 74, hue: 8 }
+          ]
+        }
+      ];
+
+      let state = 'menu';
+      let level = 0;
+      let selectedWorld = 0;
+      let solved = new Set();
+      let selected = 0;
+      let busy = false;
+      let energy = 3;
+      let sequenceProgress = 0;
+      let unlocked = 1;
+      let audioContext = null;
+      let statusTimer = 0;
+      let runToken = 0;
+      let timingStarted = performance.now();
+      let timingPosition = .5;
+      let timingFrame = 0;
+
+      try { unlocked = Math.max(1, Math.min(3, Number(localStorage.getItem(STORAGE_KEY) || 1))); } catch {}
+
+      function tone(kind = 'tap') {
+        try {
+          audioContext ||= new (window.AudioContext || window.webkitAudioContext)();
+          const now = audioContext.currentTime;
+          const oscillator = audioContext.createOscillator();
+          const gain = audioContext.createGain();
+          const notes = kind === 'success' ? [420, 820, .38, .07] : kind === 'complete' ? [520, 1120, .58, .085] : kind === 'warn' ? [250, 185, .18, .045] : [350, 470, .1, .03];
+          oscillator.type = kind === 'warn' ? 'triangle' : 'sine';
+          oscillator.frequency.setValueAtTime(notes[0], now);
+          oscillator.frequency.exponentialRampToValueAtTime(notes[1], now + notes[2]);
+          gain.gain.setValueAtTime(notes[3], now);
+          gain.gain.exponentialRampToValueAtTime(.001, now + notes[2]);
+          oscillator.connect(gain).connect(audioContext.destination);
+          oscillator.start(now);
+          oscillator.stop(now + notes[2]);
+        } catch {}
+      }
+
+      function wait(ms) { return new Promise((resolve) => window.setTimeout(resolve, ms)); }
+
+      function showStatus(copy, kind = 'normal', duration = 1700) {
+        status.textContent = copy;
+        status.classList.toggle('is-good', kind === 'good');
+        status.classList.toggle('is-warn', kind === 'warn');
+        status.hidden = false;
+        window.clearTimeout(statusTimer);
+        statusTimer = window.setTimeout(() => { status.hidden = true; }, duration);
+      }
+
+      function setWorldVisual(index) {
+        const background = `url('${levels[index].background}')`;
+        game.style.setProperty('--world-bg', background);
+        stage.style.setProperty('--world-bg', background);
+        stage.classList.remove('world-1', 'world-2', 'world-3');
+        stage.classList.add(`world-${index + 1}`);
+      }
+
+      function setPlayUi(visible) {
+        hud.hidden = !visible;
+        controls.hidden = !visible;
+        missionCard.hidden = !visible;
+        if (!visible) {
+          aimArc.hidden = true;
+          fireStream.hidden = true;
+          sequencePanel.hidden = true;
+          timingPanel.hidden = true;
+        }
+      }
+
+      function renderEnergy() {
+        const challenge = levels[level].mode !== 'free';
+        energyRoot.hidden = !challenge;
+        energyRoot.innerHTML = challenge ? [0, 1, 2].map((index) => `<i class="ph-fill ph-fire${index < energy ? ' is-on' : ''}" aria-hidden="true"></i>`).join('') : '';
+        if (challenge) energyRoot.setAttribute('aria-label', `${energy} ateş enerjisi kaldı`);
+      }
+
+      function renderChallenge() {
+        const config = levels[level];
+        sequencePanel.hidden = config.mode !== 'sequence';
+        timingPanel.hidden = config.mode !== 'timing';
+        if (config.mode === 'sequence') {
+          sequencePanel.innerHTML = config.sequence.map((_, index) => `<span class="${index < sequenceProgress ? 'is-done' : index === sequenceProgress ? 'is-next' : ''}"><i class="ph-fill ph-star" aria-hidden="true"></i></span>`).join('');
+        }
+        renderEnergy();
+      }
+
+      function targetImage(config, index) {
+        return solved.has(index) ? config.success : config.target;
+      }
+
+      function renderTargets() {
+        const config = levels[level];
+        targetsRoot.innerHTML = config.positions.map((target, index) => `
+          <button class="world-target type-${config.type}${solved.has(index) ? ' is-awake' : ''}${selected === index && !solved.has(index) ? ' is-selected' : ''}"
+            type="button" data-target="${index}" style="left:${target.x}%;top:${target.y}%;--hue:${target.hue}deg"
+            aria-label="${index + 1}. ${config.noun} seç" aria-pressed="${selected === index}">
+            <img src="${targetImage(config, index)}" alt="">
+          </button>
+        `).join('');
+        targetsRoot.querySelectorAll('[data-target]').forEach((button) => button.addEventListener('click', () => selectTarget(Number(button.dataset.target))));
+        scoreLabel.textContent = `${solved.size}/${config.positions.length}`;
+        renderChallenge();
+        positionAim();
+      }
+
+      function selectTarget(index) {
+        if (state !== 'playing' || busy || solved.has(index)) return;
+        selected = index;
+        tone('tap');
+        renderTargets();
+      }
+
+      function selectRelative(direction) {
+        if (state !== 'playing' || busy || solved.size === levels[level].positions.length) return;
+        let next = selected;
+        do { next = (next + direction + levels[level].positions.length) % levels[level].positions.length; } while (solved.has(next));
+        selectTarget(next);
+      }
+
+      function nextUnsolvedTarget() {
+        const next = levels[level].positions.findIndex((_, index) => !solved.has(index));
+        if (next >= 0) selected = next;
+      }
+
+      function getMouthPoint() {
+        const stageBox = stage.getBoundingClientRect();
+        const dinoBox = dino.getBoundingClientRect();
+        return { x: dinoBox.left - stageBox.left + dinoBox.width * .79, y: dinoBox.top - stageBox.top + dinoBox.height * .24 };
+      }
+
+      function getTargetPoint(index) {
+        const stageBox = stage.getBoundingClientRect();
+        const target = targetsRoot.querySelector(`[data-target="${index}"]`);
+        if (!target) return { x: stageBox.width * .72, y: stageBox.height * .44 };
+        const box = target.getBoundingClientRect();
+        return { x: box.left - stageBox.left + box.width * .5, y: box.top - stageBox.top + box.height * .52 };
+      }
+
+      function positionAsset(asset, index, extraScale = 1) {
+        const start = getMouthPoint();
+        const end = getTargetPoint(index);
+        const dx = end.x - start.x;
+        const dy = end.y - start.y;
+        const distance = Math.max(45, Math.hypot(dx, dy));
+        const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+        const width = Math.max(135, distance * extraScale);
+        const ratio = asset.naturalWidth ? asset.naturalHeight / asset.naturalWidth : .34;
+        asset.style.left = `${start.x}px`;
+        asset.style.top = `${start.y - width * ratio * .5}px`;
+        asset.style.width = `${width}px`;
+        asset.style.setProperty('--angle', `${angle}deg`);
+        asset.style.transform = `rotate(${angle}deg)`;
+        return { end };
+      }
+
+      function positionAim() {
+        if (state !== 'playing' || solved.has(selected) || busy) return;
+        window.requestAnimationFrame(() => {
+          positionAsset(aimArc, selected, 1.04);
+          aimArc.hidden = false;
+        });
+      }
+
+      function updateTiming() {
+        if (levels[level]?.mode === 'timing' && state === 'playing') {
+          if (reducedMotion) timingPosition = .53;
+          else {
+            const phase = ((performance.now() - timingStarted) % 2100) / 2100;
+            timingPosition = phase <= .5 ? phase * 2 : (1 - phase) * 2;
+          }
+          timingMarker.style.left = `${6 + timingPosition * 88}%`;
+        }
+        timingFrame = window.requestAnimationFrame(updateTiming);
+      }
+
+      async function previewSequence(short = false) {
+        const token = runToken;
+        const config = levels[level];
+        if (config.mode !== 'sequence' || state !== 'playing') return;
+        busy = true;
+        aimArc.hidden = true;
+        showStatus(short ? 'Kalan sırayı tekrar izle.' : 'Kristallerin sırasını izle!', 'normal', 3600);
+        await wait(short ? 350 : 650);
+        for (let step = sequenceProgress; step < config.sequence.length; step += 1) {
+          if (token !== runToken || state !== 'playing') return;
+          const button = targetsRoot.querySelector(`[data-target="${config.sequence[step]}"]`);
+          button?.classList.add('is-clue');
+          tone('tap');
+          await wait(short ? 430 : 600);
+          button?.classList.remove('is-clue');
+          await wait(150);
+        }
+        if (token !== runToken || state !== 'playing') return;
+        busy = false;
+        showStatus('Şimdi aynı sırayla kristalleri yak.', 'normal', 2000);
+        positionAim();
+      }
+
+      function loseEnergy(copy) {
+        energy = Math.max(0, energy - 1);
+        renderEnergy();
+        tone('warn');
+        showStatus(copy, 'warn', 1700);
+        if (energy === 0) {
+          const token = runToken;
+          window.setTimeout(() => {
+            if (token !== runToken || state !== 'playing') return;
+            energy = 3;
+            renderEnergy();
+            showStatus('Pofi dinlendi: üç ateş hakkın yenilendi.', 'good', 1900);
+            if (levels[level].mode === 'sequence') window.setTimeout(() => previewSequence(true), 450);
+          }, 900);
+        }
+      }
+
+      function fireAnimation(success, onImpact) {
+        const target = targetsRoot.querySelector(`[data-target="${selected}"]`);
+        if (!target) return;
+        busy = true;
+        fireButton.classList.add('is-active');
+        dino.classList.add('is-breathing');
+        aimArc.hidden = true;
+        const geometry = positionAsset(fireStream, selected, 1.12);
+        fireStream.style.setProperty('--reach', '1');
+        fireStream.hidden = false;
+        fireStream.classList.remove('is-firing');
+        void fireStream.offsetWidth;
+        fireStream.classList.add('is-firing');
+        target.classList.add(success ? 'is-working' : 'is-miss');
+        window.setTimeout(() => onImpact?.(geometry), 420);
+        window.setTimeout(() => {
+          fireButton.classList.remove('is-active');
+          dino.classList.remove('is-breathing');
+          fireStream.classList.remove('is-firing');
+          fireStream.hidden = true;
+          busy = false;
+          if (state === 'playing') positionAim();
+        }, 820);
+      }
+
+      function completeTarget() {
+        const current = selected;
+        fireAnimation(true, (geometry) => {
+          solved.add(current);
+          if (levels[level].mode === 'sequence') sequenceProgress += 1;
+          starBurst.style.left = `${geometry.end.x}px`;
+          starBurst.style.top = `${geometry.end.y}px`;
+          starBurst.classList.remove('is-visible');
+          void starBurst.offsetWidth;
+          starBurst.classList.add('is-visible');
+          window.setTimeout(() => starBurst.classList.remove('is-visible'), 1000);
+          tone('success');
+          renderTargets();
+          const config = levels[level];
+          const copies = config.mode === 'free' ? 'Çiçek uyandı!' : config.mode === 'sequence' ? 'Doğru kristal!' : 'Yumurta çatladı!';
+          showStatus(copies, 'good', 1400);
+          if (solved.size === config.positions.length) window.setTimeout(finishLevel, 540);
+          else {
+            nextUnsolvedTarget();
+            window.setTimeout(renderTargets, 80);
+          }
+        });
+      }
+
+      function attemptFire() {
+        if (state !== 'playing' || busy || solved.has(selected)) return;
+        const config = levels[level];
+        if (config.mode === 'sequence' && selected !== config.sequence[sequenceProgress]) {
+          fireAnimation(false, () => loseEnergy('Sıra karıştı! Konumları yeniden düşün.'));
+          return;
+        }
+        if (config.mode === 'timing' && (timingPosition < .42 || timingPosition > .64)) {
+          const copy = timingPosition < .42 ? 'Biraz erken! Yeşil alanı bekle.' : 'Biraz geç! Ritmi tekrar yakala.';
+          fireAnimation(false, () => loseEnergy(copy));
+          return;
+        }
+        completeTarget();
+      }
+
+      function renderWorldMap() {
+        worldMap.innerHTML = levels.map((config, index) => {
+          const locked = index >= unlocked;
+          const selectedClass = selectedWorld === index && !locked ? ' is-selected' : '';
+          return `<button type="button" class="world-card${selectedClass}${locked ? ' is-locked' : ''}" data-world="${index}" style="--thumb:url('${config.background}')" aria-pressed="${selectedWorld === index}" ${locked ? 'aria-disabled="true"' : ''}>
+            <i class="ph-fill ${locked ? 'ph-lock' : index < unlocked - 1 ? 'ph-check' : 'ph-compass'}" aria-hidden="true"></i>
+            <span><small>DÜNYA ${index + 1}</small><strong>${config.shortName}</strong></span>
+          </button>`;
+        }).join('');
+        worldMap.querySelectorAll('[data-world]').forEach((button) => button.addEventListener('click', () => {
+          const index = Number(button.dataset.world);
+          if (index >= unlocked) { tone('warn'); return; }
+          selectedWorld = index;
+          setWorldVisual(index);
+          tone('tap');
+          renderWorldMap();
+          primary.textContent = `${levels[index].shortName}’NA GİR`;
+        }));
+      }
+
+      function startLevel(index = selectedWorld) {
+        runToken += 1;
+        level = Math.max(0, Math.min(levels.length - 1, index));
+        selectedWorld = level;
+        solved = new Set();
+        selected = 0;
+        busy = false;
+        energy = 3;
+        sequenceProgress = 0;
+        state = 'playing';
+        overlay.hidden = true;
+        game.scrollTop = 0;
+        const config = levels[level];
+        setWorldVisual(level);
+        worldStep.textContent = `MACERA ${level + 1}/3`;
+        levelLabel.textContent = config.name;
+        modeLabel.textContent = config.modeLabel;
+        taskLabel.textContent = config.task;
+        missionIcon.className = `ph-fill ${config.icon}`;
+        fireLabel.textContent = config.fireLabel;
+        timingStarted = performance.now();
+        setPlayUi(true);
+        renderTargets();
+        showStatus(config.hint, 'normal', 2600);
+        if (config.mode === 'sequence') window.setTimeout(() => previewSequence(false), 700);
+      }
+
+      function resetLevel() {
+        if (state !== 'playing') return;
+        tone('tap');
+        startLevel(level);
+      }
+
+      function finishLevel() {
+        if (state !== 'playing') return;
+        state = 'complete';
+        runToken += 1;
+        setPlayUi(false);
+        tone('complete');
+        const finalLevel = level === levels.length - 1;
+        unlocked = Math.max(unlocked, Math.min(3, level + 2));
+        try { localStorage.setItem(STORAGE_KEY, String(unlocked)); } catch {}
+        selectedWorld = finalLevel ? 0 : level + 1;
+        if (!finalLevel) setWorldVisual(selectedWorld);
+        const resultCopy = [
+          ['VADİ CANLANDI!', 'KRİSTAL ORMAN AÇILDI', 'Şimdi ışık sırasını aklında tutman gerekecek.'],
+          ['YILDIZ KAPISI AÇILDI!', 'VOLKAN TAPINAĞI AÇILDI', 'Finalde ateşi tam doğru anda kullanmalısın.'],
+          ['MACERA USTASI!', 'ÜÇ DÜNYA KURTULDU', 'Çiçekler açtı, kristaller yandı ve altı minik dinozor yumurtadan çıktı.']
+        ][level];
+        kicker.textContent = resultCopy[0];
+        title.innerHTML = `${resultCopy[1]}<span>${finalLevel ? '15 HEDEF TAMAMLANDI' : levels[selectedWorld].shortName}</span>`;
+        message.textContent = resultCopy[2];
+        primary.textContent = finalLevel ? 'MACERAYI YENİDEN OYNA' : 'SONRAKİ DÜNYAYA GİR';
+        secondary.hidden = false;
+        renderWorldMap();
+        overlay.hidden = false;
+      }
+
+      function showMainMenu() {
+        runToken += 1;
+        state = 'menu';
+        selectedWorld = Math.max(0, unlocked - 1);
+        setPlayUi(false);
+        setWorldVisual(selectedWorld);
+        kicker.textContent = 'MasalNova Macerası';
+        title.innerHTML = 'DİNO ATEŞİ<span>ÜÇ DÜNYA</span>';
+        message.textContent = 'Üç farklı dünyada nişan al, ışık sırasını hatırla ve ateşi tam zamanında kullan.';
+        primary.textContent = 'MACERAYA DEVAM ET';
+        secondary.hidden = true;
+        renderWorldMap();
+        overlay.hidden = false;
+      }
+
+      primary.addEventListener('click', () => startLevel(state === 'complete' && level === levels.length - 1 ? 0 : selectedWorld));
+      secondary.addEventListener('click', showMainMenu);
+      fireButton.addEventListener('click', attemptFire);
+      previousButton.addEventListener('click', () => selectRelative(-1));
+      restartButton.addEventListener('click', resetLevel);
+      window.addEventListener('resize', positionAim);
+      window.addEventListener('keydown', (event) => {
+        if (event.repeat || state !== 'playing') return;
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') { event.preventDefault(); selectRelative(1); }
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') { event.preventDefault(); selectRelative(-1); }
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); attemptFire(); }
+        if (event.key.toLowerCase() === 'r') resetLevel();
+      });
+      document.addEventListener('visibilitychange', () => { if (document.hidden && busy) busy = false; });
+
+      renderWorldMap();
+      updateTiming();
+    })();
+  </script>
+</body>
+</html>
