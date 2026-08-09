@@ -48,6 +48,7 @@ const playableGameSlugs = [
   'dino-kristal-kosusu',
   'dino-buz-cicekleri',
   'horozumu-kacirdilar',
+  'keloglan-ay-cekici',
   'keloglan-masal-hafizasi',
   'keloglan-masal-yolu',
   'keloglan-on-kapili-saray',
