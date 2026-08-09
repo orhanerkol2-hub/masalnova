@@ -1,13 +1,28 @@
 ---
 import { gameEditorial } from '../data/game-editorial';
 
-interface Props { slug: string; title: string; }
-const { slug, title } = Astro.props;
+interface Props { slug: string; title: string; minimumWords?: number; }
+const { slug, title, minimumWords = 0 } = Astro.props;
 const content = gameEditorial[slug];
 if (!content) throw new Error(`Game editorial content missing for ${slug}`);
+const editorialWordCount = [content.overview, content.play, ...content.tips, content.parent]
+  .join(' ')
+  .trim()
+  .split(/\s+/u)
+  .filter(Boolean)
+  .length;
+if (minimumWords > 0 && editorialWordCount < minimumWords) {
+  throw new Error(`Game editorial content for ${slug} has ${editorialWordCount}/${minimumWords} words`);
+}
 ---
 
-<section class="game-editorial" aria-labelledby={`${slug}-guide`} data-game-editorial={slug}>
+<section
+  class="game-editorial"
+  aria-labelledby={`${slug}-guide`}
+  data-game-editorial={slug}
+  data-editorial-word-count={editorialWordCount}
+  data-editorial-minimum={minimumWords || undefined}
+>
   <header>
     <span class="eyebrow">Oyun rehberi</span>
     <h2 id={`${slug}-guide`}>{title} nasıl bir oyun?</h2>

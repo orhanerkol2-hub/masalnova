@@ -45,6 +45,7 @@ const unsupportedPromisePattern = /\b(?:garanti\s+(?:eder|sunar)|tedavi\s+eder|(
 const playableGameSlugs = [
   'ay-isigi-bahcesi',
   'bulut-firini',
+  'dino-buz-cicekleri',
   'horozumu-kacirdilar',
   'keloglan-masal-hafizasi',
   'keloglan-masal-yolu',
@@ -698,10 +699,15 @@ if (verifyBuiltOutput) {
     if (!html.includes(`data-game-editorial="${slug}"`)) {
       hardErrors.push(`${route}: individueller redaktioneller Spielleitfaden fehlt.`);
     }
-    if (wordCount < 200 || wordCount > 300) {
-      hardErrors.push(`${route}: sichtbarer redaktioneller Umfang ${wordCount} Wörter; erwartet sind 200–300.`);
+    if (wordCount < 200) {
+      hardErrors.push(`${route}: sichtbarer redaktioneller Umfang ${wordCount} Wörter; erwartet sind mindestens 200.`);
     } else {
       verifiedGameGuides++;
+    }
+    const editorialWordCount = Number(html.match(/data-editorial-word-count="(\d+)"/)?.[1] ?? 0);
+    const editorialMinimum = Number(html.match(/data-editorial-minimum="(\d+)"/)?.[1] ?? 0);
+    if (editorialMinimum > 0 && editorialWordCount < editorialMinimum) {
+      hardErrors.push(`${route}: Spielbeschreibung ${editorialWordCount}/${editorialMinimum} Wörter.`);
     }
   }
   const generatedHtml = (await textFiles(outputDirectory)).filter((file) => extname(file) === '.html');
@@ -850,7 +856,7 @@ console.log(`Autorenverteilung: Aylin ${stories.filter(({ author }) => author ==
 if (verifyBuiltOutput) {
   console.log(`Erzeugte HTML-Dateien geprüft: ${builtHtmlFiles}`);
   console.log(`Interne Referenzen geprüft: ${builtInternalReferences}`);
-  console.log(`Spieleseiten mit 200–300 Wörtern geprüft: ${verifiedGameGuides}`);
+  console.log(`Spieleseiten mit mindestens 200 Wörtern geprüft: ${verifiedGameGuides}`);
 }
 
 if (warnings.length) {

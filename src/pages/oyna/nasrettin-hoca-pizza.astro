@@ -84,6 +84,13 @@ const jsonLd = [
           loading="eager"
           data-game-frame
         ></iframe>
+        <a class="inline-game-launch" href="/games/nasrettin-hoca-pizza/index.html" data-fullscreen-trigger>
+          <i class="ph ph-arrows-out" aria-hidden="true"></i>
+          <span>
+            <strong>Tam ekranda oyna</strong>
+            <small>Bu önizlemenin üzerinde de sayfayı kaydırabilirsin.</small>
+          </span>
+        </a>
       </section>
 
       <p class="local-note">
@@ -114,7 +121,7 @@ const jsonLd = [
           </div>
         </article>
       </div>
-      <GameEditorial slug="nasrettin-hoca-pizza" title="Nasrettin Hoca Pizza" />
+      <GameEditorial slug="nasrettin-hoca-pizza" title="Nasrettin Hoca Pizza" minimumWords={200} />
     </div>
   </section>
 </BaseLayout>
@@ -157,9 +164,16 @@ const jsonLd = [
   .fullscreen-link:hover, .back-link:hover { transform: translateY(-2px); }
   .player-shell { position: relative; overflow: hidden; border: 1px solid rgba(255,218,113,.44); border-radius: 26px; background: #0b3035; box-shadow: 0 34px 90px rgba(2,19,21,.52), 0 0 0 7px rgba(255,255,255,.025); }
   .player-shell::before { position: absolute; z-index: 3; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255,255,255,.1); content: ''; pointer-events: none; }
-  .player-shell iframe { display: block; width: 100%; height: min(780px, calc(100dvh - 108px)); min-height: 640px; border: 0; background: #0b3035; }
+  .player-shell iframe { display: block; width: 100%; height: min(780px, calc(100dvh - 108px)); min-height: 640px; border: 0; background: #0b3035; pointer-events: none; }
+  .inline-game-launch { position: absolute; z-index: 5; right: 18px; bottom: 18px; display: flex; max-width: min(360px, calc(100% - 36px)); align-items: center; gap: 11px; padding: 11px 15px; border: 2px solid #fff1b5; border-radius: 17px; background: rgba(7,58,63,.94); color: #fff; box-shadow: 0 14px 34px rgba(2,22,24,.42); touch-action: pan-y; }
+  .inline-game-launch i { flex: 0 0 auto; color: #ffd45b; font-size: 1.45rem; }
+  .inline-game-launch span { display: grid; gap: 2px; }
+  .inline-game-launch strong { font-size: .88rem; }
+  .inline-game-launch small { color: rgba(255,255,255,.76); font-size: .68rem; line-height: 1.3; }
+  .inline-game-launch:hover { transform: translateY(-2px); }
   .player-shell:fullscreen { width: 100vw; height: 100dvh; border: 0; border-radius: 0; box-shadow: none; }
-  .player-shell:fullscreen iframe { width: 100%; height: 100%; min-height: 100%; }
+  .player-shell:fullscreen iframe { width: 100%; height: 100%; min-height: 100%; pointer-events: auto; }
+  .player-shell:fullscreen .inline-game-launch { display: none; }
   :global(html.game-fullscreen-active), :global(body.game-fullscreen-active) { height: 100%; overflow: hidden !important; overscroll-behavior: none; }
   .local-note { display: flex; align-items: flex-start; gap: 9px; margin: 15px 4px 0; color: rgba(255,255,255,.72); font-size: .78rem; }
   .local-note i { flex: 0 0 auto; margin-top: 2px; color: #75e2a4; font-size: 1rem; }
@@ -181,6 +195,7 @@ const jsonLd = [
     .game-heading { gap: 18px; margin-top: 18px; }
     .player-shell { margin-inline: -12px; border-radius: 20px; }
     .player-shell iframe { min-height: 590px; }
+    .inline-game-launch { right: 12px; bottom: 12px; left: 12px; max-width: none; justify-content: center; }
   }
 </style>
 
