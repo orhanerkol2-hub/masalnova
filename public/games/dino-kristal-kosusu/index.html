@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123b78">
+  <meta name="color-scheme" content="only light">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'self'">
+  <title>Pofi’nin Kristal Koşusu | MasalNova</title>
+  <link rel="preload" as="image" href="../dino-buz-cicekleri/assets/dino-adventurer-v2.webp">
+  <link rel="preload" as="image" href="../dino-buz-cicekleri/assets/dino-valley-bg.webp">
+  <style>
+    @font-face { font-family: Nunito; src: url('../dino-buz-cicekleri/assets/nunito-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: Nunito; src: url('../dino-buz-cicekleri/assets/nunito-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+    @font-face { font-family: Nunito; src: url('../dino-buz-cicekleri/assets/nunito-800.woff2') format('woff2'); font-weight: 800 1000; font-display: swap; }
+    :root { color-scheme: light; font-family: Nunito, system-ui, sans-serif; --ink:#12315f; --cream:#fffaf0; --gold:#ffd34f; --orange:#f17c2c; --blue:#174da7; }
+    * { box-sizing: border-box; }
+    html, body { width:100%; height:100%; margin:0; overflow:hidden; background:#123b78; }
+    body { overscroll-behavior:none; -webkit-tap-highlight-color:transparent; }
+    button { border:0; font:inherit; cursor:pointer; }
+    button:focus-visible { outline:4px solid #fff; outline-offset:3px; }
+    [hidden] { display:none !important; }
+    .stage { position:relative; width:100%; height:100dvh; min-height:100%; overflow:hidden; isolation:isolate; touch-action:none; user-select:none; background:#2d7cc5; }
+    canvas { display:block; width:100%; height:100%; }
+    .hud { position:absolute; z-index:5; inset:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) auto max(10px,env(safe-area-inset-left)); display:flex; justify-content:space-between; gap:10px; pointer-events:none; }
+    .hud-card { display:grid; grid-template-columns:repeat(4,minmax(62px,1fr)); width:min(690px,calc(100vw - 145px)); overflow:hidden; border:2px solid rgba(255,255,255,.78); border-radius:18px; background:rgba(255,250,240,.93); color:var(--ink); box-shadow:0 10px 26px rgba(9,35,76,.22); backdrop-filter:blur(10px); }
+    .stat { display:grid; gap:1px; padding:7px 10px; text-align:center; }
+    .stat + .stat { border-left:1px solid rgba(18,49,95,.14); }
+    .stat span { font-size:clamp(.52rem,1.2vw,.67rem); font-weight:1000; letter-spacing:.07em; }
+    .stat strong { font-size:clamp(.9rem,2.2vw,1.12rem); line-height:1.05; white-space:nowrap; }
+    .hud-actions { display:flex; gap:7px; pointer-events:auto; }
+    .icon-btn { min-width:54px; min-height:48px; padding:7px 10px; border:2px solid rgba(255,255,255,.82); border-radius:16px; background:rgba(18,49,95,.92); color:#fff; box-shadow:0 7px 0 rgba(5,25,61,.64); font-size:.63rem; font-weight:1000; letter-spacing:.04em; }
+    .icon-btn:active { box-shadow:0 2px 0 rgba(5,25,61,.64); transform:translateY(5px); }
+    .controls { position:absolute; z-index:6; inset:auto max(14px,env(safe-area-inset-right)) max(14px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left)); display:flex; justify-content:space-between; align-items:flex-end; pointer-events:none; }
+    .control-btn { pointer-events:auto; width:clamp(104px,19vw,150px); height:clamp(62px,11vw,82px); border:3px solid rgba(255,255,255,.9); border-radius:24px; background:rgba(23,77,167,.94); color:#fff; box-shadow:0 9px 0 rgba(7,39,102,.75),0 16px 25px rgba(7,27,67,.22); font-size:clamp(.78rem,2vw,1rem); font-weight:1000; letter-spacing:.04em; touch-action:manipulation; }
+    .control-btn.fire { background:linear-gradient(180deg,#ff9a38,#e85a25); box-shadow:0 9px 0 #a63b1e,0 16px 25px rgba(83,26,15,.24); }
+    .control-btn:active { box-shadow:0 3px 0 rgba(7,39,102,.75); transform:translateY(6px); }
+    .control-btn.fire:active { box-shadow:0 3px 0 #a63b1e; }
+    .toast { position:absolute; z-index:7; left:50%; top:22%; transform:translateX(-50%); padding:9px 15px; border:2px solid #fff; border-radius:999px; background:#174da7; color:#fff; box-shadow:0 9px 22px rgba(8,30,70,.24); font-size:clamp(.75rem,2vw,.95rem); font-weight:1000; animation:pop .2s ease-out; pointer-events:none; }
+    .world-banner { position:absolute; z-index:7; inset:0; display:grid; place-items:center; padding:20px; background:rgba(7,29,69,.44); color:#fff; text-align:center; backdrop-filter:blur(4px); }
+    .world-banner div { padding:18px 26px; border:2px solid rgba(255,255,255,.8); border-radius:24px; background:rgba(18,49,95,.92); box-shadow:0 22px 60px rgba(3,17,50,.38); }
+    .world-banner span { color:#ffd95d; font-size:.7rem; font-weight:1000; letter-spacing:.09em; }
+    .world-banner strong { display:block; margin-top:4px; font-size:clamp(1.5rem,5vw,2.8rem); }
+    .overlay { position:absolute; z-index:9; inset:0; display:grid; place-items:center; padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left)); background:linear-gradient(90deg,rgba(5,30,72,.62),rgba(5,30,72,.12) 54%,rgba(5,30,72,.5)); }
+    .menu { position:relative; width:min(590px,94vw); padding:clamp(19px,3.4vw,31px); border:3px solid #f5c84e; border-radius:30px; background:rgba(255,250,240,.96); color:var(--ink); box-shadow:0 28px 80px rgba(4,22,62,.44); text-align:center; backdrop-filter:blur(14px); }
+    .brand { width:min(220px,52%); height:auto; margin:0 auto 7px; }
+    .menu-dino { position:absolute; right:-5%; bottom:-8%; width:min(210px,38vw); height:auto; filter:drop-shadow(0 14px 17px rgba(8,38,74,.28)); pointer-events:none; }
+    .eyebrow { display:inline-flex; padding:6px 11px; border-radius:999px; background:#dceaff; color:#174da7; font-size:.68rem; font-weight:1000; letter-spacing:.08em; }
+    h1 { max-width:470px; margin:9px auto 0; color:#174da7; font-size:clamp(1.85rem,6vw,3.45rem); line-height:.9; letter-spacing:-.055em; }
+    h1 span { display:block; margin-top:8px; color:#e85a25; font-size:.62em; letter-spacing:-.025em; }
+    .story { max-width:430px; margin:13px auto 0; color:#59687f; font-size:clamp(.8rem,1.8vw,.98rem); font-weight:800; line-height:1.42; }
+    .worlds { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; max-width:430px; margin:14px auto 0; padding:0; list-style:none; }
+    .worlds li { min-height:64px; display:grid; align-content:end; padding:8px; overflow:hidden; border:2px solid rgba(255,255,255,.8); border-radius:14px; background-position:center; background-size:cover; color:#fff; box-shadow:inset 0 -40px 34px rgba(3,17,47,.72); text-shadow:0 1px 5px #000; }
+    .worlds strong { font-size:.61rem; line-height:1.1; }
+    .best { margin:12px 0 0; color:#785316; font-size:.7rem; font-weight:1000; letter-spacing:.07em; }
+    .primary { display:inline-flex; min-width:min(290px,84%); min-height:54px; align-items:center; justify-content:center; margin-top:13px; padding:13px 22px; border:2px solid #9c5500; border-radius:999px; background:linear-gradient(180deg,#ffe36e,#ffbd31); color:#5c3500; box-shadow:0 8px 0 #c86f14,0 15px 26px rgba(111,62,11,.22); font-weight:1000; letter-spacing:.04em; transform:translateY(-2px); }
+    .primary:active { box-shadow:0 3px 0 #c86f14; transform:translateY(3px); }
+    @keyframes pop { from { opacity:0; transform:translateX(-50%) scale(.75); } to { opacity:1; transform:translateX(-50%) scale(1); } }
+    @media (max-width:720px) {
+      .hud-card { width:auto; flex:1; grid-template-columns:repeat(4,minmax(0,1fr)); }
+      .stat { padding:7px 3px; }
+      .hud-actions { flex-direction:column; }
+      .icon-btn { min-width:48px; min-height:42px; padding:5px 7px; }
+      .controls { bottom:max(11px,env(safe-area-inset-bottom)); }
+      .menu-dino { display:none; }
+    }
+    @media (max-height:560px) and (min-width:680px) {
+      .menu { display:grid; grid-template-columns:135px 1fr; align-items:center; gap:2px 17px; width:min(760px,95vw); padding:14px 22px; text-align:left; }
+      .brand { grid-row:1 / 8; width:130px; margin:0; }
+      .eyebrow,h1,.story,.worlds,.best,.primary { grid-column:2; }
+      .eyebrow { justify-self:start; }
+      h1 { margin:4px 0 0; font-size:clamp(1.65rem,7vh,2.5rem); }
+      .story { margin:5px 0 0; font-size:.72rem; }
+      .worlds { width:100%; margin:6px 0 0; }
+      .worlds li { min-height:46px; }
+      .best { margin-top:5px; }
+      .primary { min-height:42px; margin-top:6px; box-shadow:0 5px 0 #c86f14; }
+      .menu-dino { display:none; }
+    }
+    @media (prefers-reduced-motion:reduce) { .toast { animation:none; } }
+  </style>
+</head>
+<body>
+  <main class="stage" data-stage aria-label="Pofi’nin Kristal Koşusu oyun alanı">
+    <canvas data-canvas aria-hidden="true"></canvas>
+    <section class="hud" data-hud hidden aria-live="polite">
+      <div class="hud-card">
+        <div class="stat"><span>PUAN</span><strong data-score>0</strong></div>
+        <div class="stat"><span>KRİSTAL</span><strong data-crystals>0 / 15</strong></div>
+        <div class="stat"><span>DÜNYA</span><strong data-world>1 / 3</strong></div>
+        <div class="stat"><span>CAN</span><strong data-lives>3</strong></div>
+      </div>
+      <div class="hud-actions">
+        <button class="icon-btn" type="button" data-sound aria-pressed="false">SES AÇIK</button>
+        <button class="icon-btn" type="button" data-pause>DUR</button>
+      </div>
+    </section>
+    <div class="controls" data-controls hidden>
+      <button class="control-btn" type="button" data-jump>ZIPLA</button>
+      <button class="control-btn fire" type="button" data-fire>ATEŞ</button>
+    </div>
+    <div class="toast" data-toast hidden>HARİKA!</div>
+    <div class="world-banner" data-world-banner hidden><div><span data-world-kicker>DÜNYA 2</span><strong data-world-name>Kristal Orman</strong></div></div>
+    <section class="overlay" data-overlay>
+      <div class="menu">
+        <img class="brand" src="../keloglan-yildiz-pesinde/assets/masalnova-logo.webp" alt="MasalNova" width="600" height="147">
+        <img class="menu-dino" src="../dino-buz-cicekleri/assets/dino-adventurer-v2.webp" alt="" width="720" height="720">
+        <span class="eyebrow">3 DÜNYALI YENİ MACERA</span>
+        <h1 data-title>POFİ’NİN<span>KRİSTAL KOŞUSU</span></h1>
+        <p class="story" data-message>Koş, zıpla ve sihirli ateşinle yolu aç. Her dünyada beş yıldız kristali bul!</p>
+        <ul class="worlds" aria-label="Oyundaki üç dünya">
+          <li style="background-image:url('../dino-buz-cicekleri/assets/dino-valley-bg.webp')"><strong>GÜNEŞ VADİSİ</strong></li>
+          <li style="background-image:url('../dino-buz-cicekleri/assets/crystal-forest-bg-v2.webp')"><strong>KRİSTAL ORMAN</strong></li>
+          <li style="background-image:url('../dino-buz-cicekleri/assets/volcano-temple-bg-v2.webp')"><strong>VOLKAN TAPINAĞI</strong></li>
+        </ul>
+        <p class="best" data-best>EN İYİ PUAN · 0</p>
+        <button class="primary" type="button" data-start>MACERAYA BAŞLA</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const stage = document.querySelector('[data-stage]');
+      const canvas = document.querySelector('[data-canvas]');
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const overlay = document.querySelector('[data-overlay]');
+      const hud = document.querySelector('[data-hud]');
+      const controls = document.querySelector('[data-controls]');
+      const startButton = document.querySelector('[data-start]');
+      const pauseButton = document.querySelector('[data-pause]');
+      const soundButton = document.querySelector('[data-sound]');
+      const jumpButton = document.querySelector('[data-jump]');
+      const fireButton = document.querySelector('[data-fire]');
+      const title = document.querySelector('[data-title]');
+      const message = document.querySelector('[data-message]');
+      const bestLabel = document.querySelector('[data-best]');
+      const scoreLabel = document.querySelector('[data-score]');
+      const crystalsLabel = document.querySelector('[data-crystals]');
+      const worldLabel = document.querySelector('[data-world]');
+      const livesLabel = document.querySelector('[data-lives]');
+      const toast = document.querySelector('[data-toast]');
+      const worldBanner = document.querySelector('[data-world-banner]');
+      const worldKicker = document.querySelector('[data-world-kicker]');
+      const worldName = document.querySelector('[data-world-name]');
+
+      const root = '../dino-buz-cicekleri/assets/';
+      const worlds = [
+        { name:'Güneş Vadisi', background:root+'dino-valley-bg.webp', speed:250, obstacle:'egg', tint:'rgba(255,210,76,.05)' },
+        { name:'Kristal Orman', background:root+'crystal-forest-bg-v2.webp', speed:285, obstacle:'flower', tint:'rgba(55,110,255,.1)' },
+        { name:'Volkan Tapınağı', background:root+'volcano-temple-bg-v2.webp', speed:320, obstacle:'mixed', tint:'rgba(255,92,28,.08)' }
+      ];
+      const files = {
+        dino:root+'dino-adventurer-v2.webp', crystal:root+'star-crystal-v2.webp', egg:root+'stone-egg-v2.webp',
+        flower:root+'frozen-flower.png', fire:root+'fire-breath.png', helper:root+'fire-hatchling-v2.webp'
+      };
+      worlds.forEach((world,index) => { files['background'+index] = world.background; });
+      const images = {};
+      Object.entries(files).forEach(([key,src]) => { const image = new Image(); image.src = src; images[key] = image; });
+
+      const STORAGE_KEY = 'masalnova.pofi-kristal-kosusu.best.v1';
+      const TARGET_PER_WORLD = 5;
+      let best = Number(localStorage.getItem(STORAGE_KEY) || 0);
+      let width=0, height=0, dpr=1, floorY=0, lastTime=0, elapsed=0, spawnTimer=.8, fireCooldown=0;
+      let state='menu', paused=false, muted=false, worldIndex=0, score=0, totalCrystals=0, worldCrystals=0, lives=3;
+      let objects=[], flames=[], particles=[], audioContext=null, toastTimer=0;
+      const player = { x:0, lift:0, velocity:0, jumps:0, invincible:0 };
+
+      function clamp(value,min,max) { return Math.max(min,Math.min(max,value)); }
+      function fit() {
+        const rect=stage.getBoundingClientRect(); dpr=Math.min(window.devicePixelRatio||1,2);
+        width=Math.max(320,rect.width); height=Math.max(320,rect.height);
+        canvas.width=Math.round(width*dpr); canvas.height=Math.round(height*dpr); canvas.style.width=width+'px'; canvas.style.height=height+'px';
+        ctx.setTransform(dpr,0,0,dpr,0,0); floorY=height*(width<height?.81:.86); player.x=clamp(width*.26,108,330);
+      }
+      function sizes() { const unit=clamp(Math.min(width,height),340,900); return { dino:clamp(unit*.28,112,215), crystal:clamp(unit*.075,36,62), obstacle:clamp(unit*.12,55,105), flame:clamp(unit*.13,64,116) }; }
+      function drawCover(image,focus=.56) {
+        if(!image?.complete||!image.naturalWidth){ctx.fillStyle='#2c7eca';ctx.fillRect(0,0,width,height);return;}
+        const scale=Math.max(width/image.naturalWidth,height/image.naturalHeight), drawW=image.naturalWidth*scale, drawH=image.naturalHeight*scale;
+        const x=(width-drawW)/2, y=(height-drawH)*focus; ctx.drawImage(image,x,y,drawW,drawH);
+      }
+      function drawSprite(image,x,yBottom,drawW,rotation=0,alpha=1,flip=false) {
+        if(!image?.complete||!image.naturalWidth) return null;
+        const drawH=drawW*image.naturalHeight/image.naturalWidth; ctx.save(); ctx.globalAlpha=alpha; ctx.translate(x,yBottom-drawH/2); ctx.rotate(rotation); ctx.scale(flip?-1:1,1);
+        ctx.shadowColor='rgba(8,28,50,.28)'; ctx.shadowBlur=13; ctx.shadowOffsetY=7; ctx.drawImage(image,-drawW/2,-drawH/2,drawW,drawH); ctx.restore(); return {width:drawW,height:drawH};
+      }
+      function draw(time) {
+        drawCover(images['background'+worldIndex],worldIndex===0?.57:worldIndex===1?.58:.54);
+        const shade=ctx.createLinearGradient(0,0,0,height); shade.addColorStop(0,'rgba(7,28,72,.08)'); shade.addColorStop(.62,'rgba(7,28,72,0)'); shade.addColorStop(1,'rgba(8,25,54,.32)'); ctx.fillStyle=shade; ctx.fillRect(0,0,width,height);
+        ctx.fillStyle=worlds[worldIndex].tint; ctx.fillRect(0,0,width,height);
+        const s=sizes();
+        objects.forEach(item=>{ if(item.taken)return; const bob=item.kind==='crystal'?Math.sin(time*.006+item.phase)*7:0; const image=item.kind==='crystal'?images.crystal:images[item.variant]; drawSprite(image,item.x,item.y+bob,item.w,item.kind==='crystal'?Math.sin(time*.004+item.phase)*.08:0,item.alpha??1); });
+        flames.forEach(flame=>drawSprite(images.fire,flame.x,flame.y,flame.w,0,flame.life));
+        particles.forEach(p=>{ctx.save();ctx.globalAlpha=p.life;ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();ctx.restore();});
+        const runBob=state==='running'&&!paused?Math.sin(elapsed*14)*5:0; const alpha=player.invincible>0&&Math.floor(player.invincible*10)%2===0?.36:1;
+        drawSprite(images.dino,player.x,floorY-player.lift+runBob,s.dino,clamp(-player.velocity/3000,-.09,.12),alpha);
+      }
+      function playerRect() { const s=sizes(); return {x:player.x-s.dino*.28,y:floorY-player.lift-s.dino*.72,w:s.dino*.53,h:s.dino*.64}; }
+      function itemRect(item) { const image=item.kind==='crystal'?images.crystal:images[item.variant]; const h=item.w*(image?.naturalHeight||1)/Math.max(1,image?.naturalWidth||1); return item.kind==='crystal'?{x:item.x-item.w*.3,y:item.y-h*.7,w:item.w*.6,h:h*.65}:{x:item.x-item.w*.3,y:item.y-h*.64,w:item.w*.6,h:h*.58}; }
+      function overlap(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;}
+      function burst(x,y,color,count=9){for(let i=0;i<count;i++)particles.push({x,y,vx:(Math.random()-.5)*180,vy:-50-Math.random()*170,size:3+Math.random()*5,color,life:1});}
+      function showToast(text,color='#174da7'){toast.textContent=text;toast.style.background=color;toast.hidden=false;toastTimer=1.1;}
+      function tone(freq=520,duration=.08,type='sine'){if(muted)return;try{audioContext=audioContext||new(window.AudioContext||window.webkitAudioContext)();const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.type=type;osc.frequency.value=freq;gain.gain.setValueAtTime(.05,audioContext.currentTime);gain.gain.exponentialRampToValueAtTime(.001,audioContext.currentTime+duration);osc.connect(gain).connect(audioContext.destination);osc.start();osc.stop(audioContext.currentTime+duration);}catch{}}
+      function chooseObstacle(){const setting=worlds[worldIndex].obstacle;return setting==='mixed'?(Math.random()>.5?'egg':'flower'):setting;}
+      function spawn() {
+        const s=sizes(), x=width+s.obstacle*1.2;
+        if(Math.random()<.58){const high=Math.random()>.58;objects.push({kind:'crystal',x,y:floorY-(high?s.dino*1.02:s.dino*.5),w:s.crystal,phase:Math.random()*6,taken:false});}
+        else {const variant=chooseObstacle();objects.push({kind:'obstacle',variant,x,y:floorY+7,w:variant==='flower'?s.obstacle*.88:s.obstacle,phase:0,taken:false});}
+        spawnTimer=.72+Math.random()*.55;
+      }
+      function jump(){if(state!=='running'||paused||player.jumps>=2)return;player.velocity=player.jumps===0?670:570;player.jumps+=1;tone(430,.08,'triangle');if(player.jumps===2)showToast('ÇİFT ZIPLAMA!','#7656c8');}
+      function fire(){if(state!=='running'||paused||fireCooldown>0)return;const s=sizes();flames.push({x:player.x+s.dino*.36,y:floorY-player.lift-s.dino*.38,w:s.flame,life:1});fireCooldown=.62;tone(220,.11,'sawtooth');}
+      function collect(item){item.taken=true;totalCrystals+=1;worldCrystals+=1;score+=25;burst(item.x,item.y-sizes().crystal*.5,'#ffd95a',12);tone(760,.09,'sine');showToast('KRİSTAL +25','#168e8b');if(worldCrystals>=TARGET_PER_WORLD)nextWorld();}
+      function clearObstacle(item,flame){item.taken=true;flame.life=0;score+=15;burst(item.x,item.y-sizes().obstacle*.5,worldIndex===1?'#9fe8ff':'#ff9d38',11);tone(600,.1,'triangle');showToast(worldIndex===1?'BUZ ERİDİ!':'YOL AÇILDI!','#e86627');}
+      function hitObstacle(item){if(player.invincible>0)return;item.taken=true;lives-=1;player.invincible=2;burst(player.x,floorY-player.lift-sizes().dino*.35,'#fff0a6',13);tone(145,.18,'square');showToast('UFACIK BİR ÇARPIŞMA','#c54c3c');if(lives<=0)finish(false);}
+      function nextWorld(){state='transition';objects=[];flames=[];score+=100;worldIndex+=1;if(worldIndex>=worlds.length){finish(true);return;}worldCrystals=0;worldKicker.textContent='DÜNYA '+(worldIndex+1);worldName.textContent=worlds[worldIndex].name;worldBanner.hidden=false;tone(880,.15,'sine');setTimeout(()=>{worldBanner.hidden=true;state='running';spawnTimer=.75;updateHud();},1400);}
+      function updateHud(){scoreLabel.textContent=String(score);crystalsLabel.textContent=totalCrystals+' / '+(TARGET_PER_WORLD*worlds.length);worldLabel.textContent=(worldIndex+1)+' / '+worlds.length;livesLabel.textContent=String(lives);}
+      function update(dt){if(state!=='running'||paused)return;elapsed+=dt;spawnTimer-=dt;fireCooldown=Math.max(0,fireCooldown-dt);player.invincible=Math.max(0,player.invincible-dt);if(spawnTimer<=0)spawn();
+        player.lift+=player.velocity*dt;player.velocity-=1550*dt;if(player.lift<=0){player.lift=0;player.velocity=0;player.jumps=0;}
+        const speed=worlds[worldIndex].speed+Math.min(65,elapsed*1.6),pr=playerRect();
+        objects.forEach(item=>{item.x-=speed*dt;if(item.taken)return;const ir=itemRect(item);if(item.kind==='crystal'&&overlap(pr,ir))collect(item);else if(item.kind==='obstacle'&&overlap(pr,ir))hitObstacle(item);});
+        flames.forEach(flame=>{flame.x+=700*dt;flame.life-=dt*.3;const fr={x:flame.x-flame.w*.42,y:flame.y-flame.w*.22,w:flame.w*.82,h:flame.w*.42};objects.forEach(item=>{if(!item.taken&&item.kind==='obstacle'&&overlap(fr,itemRect(item)))clearObstacle(item,flame);});});
+        particles.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=400*dt;p.life-=dt*1.4;});objects=objects.filter(item=>!item.taken&&item.x>-180);flames=flames.filter(flame=>flame.life>0&&flame.x<width+180);particles=particles.filter(p=>p.life>0);
+        if(toastTimer>0){toastTimer-=dt;if(toastTimer<=0)toast.hidden=true;}updateHud();
+      }
+      function startGame(){worldIndex=0;score=0;totalCrystals=0;worldCrystals=0;lives=3;elapsed=0;spawnTimer=.7;fireCooldown=0;objects=[];flames=[];particles=[];player.lift=0;player.velocity=0;player.jumps=0;player.invincible=0;state='running';paused=false;overlay.hidden=true;hud.hidden=false;controls.hidden=false;pauseButton.textContent='DUR';toast.hidden=true;updateHud();tone(660,.12,'triangle');}
+      function finish(won){state='gameover';hud.hidden=true;controls.hidden=true;overlay.hidden=false;best=Math.max(best,score);localStorage.setItem(STORAGE_KEY,String(best));title.innerHTML=won?'ÜÇ DÜNYA<span>TAMAMLANDI!</span>':'POFİ DİNLENİYOR<span>YENİDEN DENE</span>';message.textContent=won?'Pofi bütün yıldız kristallerini buldu. Ateşin ve zıplamaların harikaydı!':'Bu tur '+totalCrystals+' kristal topladın. Kalplerin yenilendi; tekrar koşmaya hazırsın.';bestLabel.textContent='PUAN · '+score+'  ·  EN İYİ · '+best;startButton.textContent=won?'YENİDEN KOŞ':'TEKRAR DENE';tone(won?880:260,.24,won?'sine':'triangle');}
+      function togglePause(){if(state!=='running')return;paused=!paused;pauseButton.textContent=paused?'DEVAM':'DUR';showToast(paused?'OYUN DURDU':'DEVAM!','#174da7');}
+      function toggleSound(){muted=!muted;soundButton.textContent=muted?'SES KAPALI':'SES AÇIK';soundButton.setAttribute('aria-pressed',String(muted));if(!muted)tone(620,.08,'sine');}
+      function loop(time){const dt=Math.min(.035,Math.max(0,(time-lastTime)/1000||0));lastTime=time;update(dt);draw(time);requestAnimationFrame(loop);}
+
+      startButton.addEventListener('click',startGame);jumpButton.addEventListener('pointerdown',event=>{event.preventDefault();jump();});fireButton.addEventListener('pointerdown',event=>{event.preventDefault();fire();});pauseButton.addEventListener('click',togglePause);soundButton.addEventListener('click',toggleSound);
+      canvas.addEventListener('pointerdown',jump);
+      window.addEventListener('keydown',event=>{if(['Space','ArrowUp','KeyW'].includes(event.code)){event.preventDefault();jump();}else if(['KeyF','ArrowRight','Enter'].includes(event.code)){event.preventDefault();fire();}else if(event.code==='KeyP'||event.code==='Escape')togglePause();});
+      window.addEventListener('resize',fit);document.addEventListener('visibilitychange',()=>{if(document.hidden&&state==='running'&&!paused)togglePause();});
+      if(window.self!==window.top){let touchY=null;window.addEventListener('wheel',event=>window.parent.postMessage({type:'masalnova:embedded-game-scroll',deltaY:event.deltaY},window.location.origin),{passive:true});window.addEventListener('touchstart',event=>{touchY=event.touches[0]?.clientY??null;},{passive:true});window.addEventListener('touchmove',event=>{const next=event.touches[0]?.clientY;if(touchY!==null&&typeof next==='number')window.parent.postMessage({type:'masalnova:embedded-game-scroll',deltaY:touchY-next},window.location.origin);touchY=typeof next==='number'?next:touchY;},{passive:true});}
+      bestLabel.textContent='EN İYİ PUAN · '+best;fit();requestAnimationFrame(loop);
+    })();
+  </script>
+</body>
+</html>

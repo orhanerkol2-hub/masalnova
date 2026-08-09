@@ -45,6 +45,7 @@ const unsupportedPromisePattern = /\b(?:garanti\s+(?:eder|sunar)|tedavi\s+eder|(
 const playableGameSlugs = [
   'ay-isigi-bahcesi',
   'bulut-firini',
+  'dino-kristal-kosusu',
   'dino-buz-cicekleri',
   'horozumu-kacirdilar',
   'keloglan-masal-hafizasi',
