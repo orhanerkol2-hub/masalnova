@@ -13,6 +13,8 @@ characters: ["Berrin","Balıkçı Tahsin","Deniz Kızı Pırıl"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   7–9 yaş etiketi, Berrin'in taşı saklama isteği ile aile yadigârını geri verme kararı arasındaki iç çatışmayı ve “kimse görmese de” düşüncesini tartışmak için uygundur. Taşın sahibini bulma, hatıranın maddi değerden farklı oluşu ve deniz kızının ödülü bu yaşta daha nüanslı ele alınabilir. Kumsalda bulunan parlak nesnelerin güvenli olduğu varsayılmamalıdır; çocuk gerçek hayatta tanımadığı, keskin veya canlı olabilecek bir şeye dokunmadan yetişkine göstermelidir.

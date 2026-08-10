@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "Yankının çalışma biçimi ile kırıcı sözlerin ilişkisel etkisini ayırabilecek 7-9 yaş için uygundur. Keloğlan'ın üç gün bağırmadan dinlemesi, kuyunun hıçkırığını fark etmesi ve Hasan ile Osman'ın sırayla konuşması masalın temel basamaklarıdır. Konuşan kuyu hayal ürünüdür; sesin gerçek yankısını isterseniz ayrıca açıklayın. Metindeki taş korkuluk ve yetişkin eşliği, kuyu güvenliğini görünür kılan önemli ayrıntılardır."
 parentEmotionalNotes: "Kavgadan sonra kuyunun “ağzım acıdı” demesi, daha önce sert sözlere maruz kalan bir çocuğu üzebilir. Kırıcı bir söz duyduğunda onu aynen geri söylemek zorunda olmadığını; uzaklaşma, sınır koyma veya güvenilir yetişkinden yardım isteme seçeneklerini belirtin. Gerçek kuyulara yaklaşılmaz, içine eğilinmez ve kova indirme işi çocuk etkinliği olarak yapılmaz. Kuyunun hıçkırığı rahatsız ederse okumayı durdurup çocuk hazır olduğunda Hasan ile Osman’ın sakin konuşmasına geçebilirsiniz."

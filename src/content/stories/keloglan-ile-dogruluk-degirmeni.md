@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "Konuşan değirmen, gizli hata, mahremiyet ve onarma adımlarını aynı anda ele aldığı için 7-9 yaş okuruna uygundur. Tombul Hasan'ın komşu buğdayını geri vermesi ile Ayşe Nine'nin izinsiz aldığı nanenin yerine fidan dikmesi, farklı ölçekte zararların aynı olmadığını ama ikisinde de sahibine dönüp konuşmanın gerektiğini gösterir. Değirmenin fısıltıyı yalnız ilgili kişiye söylemesi özellikle tartışılabilir."
 parentEmotionalNotes: "Taşın durması, yüz kızarması ve köyün merakı çocukta “hatalarım ortaya çıkarsa herkes öğrenir” kaygısı yaratabilir. Değirmenin kişiyi kalabalık önünde utandırmadığını ve Keloğlan'ın kimseyi sorgulamadığını belirtin. Bununla birlikte çocuğa zarar veren, onu korkutan veya güvensiz hissettiren bir sırrın saklanması gerekmediğini; güvenilir bir yetişkine anlatabileceğini açıkça söyleyin. Çalışan değirmen çevresinde gerçek hayatta yetişkin gözetimi gerekir. Değirmen taşı durduğunda çocuk gerilirse fısıltı bölümünü atlamak veya onarım sahnesinden sürdürmek mümkündür."

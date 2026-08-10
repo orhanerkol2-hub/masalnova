@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "Dört dakikalık olmasına rağmen bu anlatı 7–9 yaş grubuna daha uygundur; karanlık kuyu, Kaf Dağı, üç yavrunun korunması, tohumların geri getirilmesi ve yedi yıllık hazırlık birbirine bağlanan çok sayıda olay içerir. Çocuk, Yusuf’un anlık cesareti ile köylülerin uzun vadeli hazırlığını karşılaştırabilir. Zümrüdüanka gibi kültürel bir motifin sihirli yardımını gerçek yaşamda tohum saklama, ortak çalışma ve afetlere önceden hazırlanma fikirlerinden ayırmak için birlikte okumak yararlıdır."
 parentEmotionalNotes: "Yuvaya yaklaşan yılan, karanlık kuyu, kuraklık, çekirge sürüsü ve sel sözcükleri hassas çocuklarda gerilim yaratabilir. Yusuf yılanla dövüşmez; ses çıkarıp onu uzaklaştırır ve yuvanın çevresine koruyucu halka kurar. Kuraklık başlamadan önce tohumlar dağıtılır, sel sırasında yardım çağrılır ve kimse zarar görmez. Çocuğunuz bu sahnelerden etkilenirse önce sonucun güvenli olduğunu söyleyip hikâyeyi gündüz okumayı veya kuyu sahnesinde ara vermeyi seçebilirsiniz."

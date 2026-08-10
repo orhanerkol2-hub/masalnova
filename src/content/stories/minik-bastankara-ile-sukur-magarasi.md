@@ -13,6 +13,8 @@ characters: ["Fındık (baştankara kuşu)","Dede Baykuş","Sincap Turna"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları Fındık'ın başkasındaki tohumu kıskanması, fırtınada savrulması ve mağarada kendi becerilerini yeniden fark etmesi arasındaki duygusal geçişleri anlayabilir. Yıldız böcekleri ve konuşan hayvanlar masalın hayal öğeleridir. Mağara keşfinin gerçek yaşam davranışı olmadığını; fırtınada güvenli bir kapalı alanda bilinen bir yetişkinle kalmak gerektiğini açıkça belirtin.

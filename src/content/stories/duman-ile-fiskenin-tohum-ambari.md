@@ -13,6 +13,8 @@ characters: ["Duman (köpek)","Fiske (karınca)"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   5–7 yaş çocukları Duman'ın bulduğu yiyecekleri hemen tüketmesiyle sonbaharda yiyecek bulamaması arasındaki neden-sonuç bağını izleyebilir. Fiske'nin tohum ambarı, “şimdi”, “sonra” ve “paylaşmak için ayırmak” kavramlarını konuşmaya elverişlidir. Köpeğin kemik ve kurutulmuş et saklaması ise masalsı bir ayrıntıdır; gerçek hayatta yiyecek saklama kararlarını yetişkinlerin verdiğini belirtin.

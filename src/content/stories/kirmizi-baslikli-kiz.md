@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   Kurt kimseyi yutmadığı ve büyükanne yardım çağırabildiği için uyarlama 3–5 yaşta yetişkin eşliğinde okunabilir. Yine de kurdun kişisel bilgi toplaması, kızı eşlik eden yetişkinden ayırıp yoldan saptırmaya çalışması, büyükanne kılığına girmesi ve evde beklemesi belirgin bir tehdit oluşturur. Üç yaşa yakın veya yabancılar konusunda kaygılı çocuklarda sonucu baştan söyleyin: büyükanne dolaba saklanır, oduncu gelir ve herkes güvende kalır. “Kötü görünüşlü yabancı” öğretisi yerine güvenli ve güvensiz davranış ayrımını kullanın.

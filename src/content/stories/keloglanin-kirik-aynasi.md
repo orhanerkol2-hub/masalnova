@@ -13,6 +13,8 @@ characters: ["Keloğlan","Padişah","Saray Bahçıvanı"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "5-7 yaş çocukları kazara zarar verme, saklamayı düşünme, gerçeği söyleme ve ustayla onarma sırasını izleyebilir. Aynanın padişahın dedesinden kalması, maddi değer ile anı değerini ayırmaya yardım eder. Ancak saray otoritesi, kovulma ve ceza beklentisi güçlüdür; dürüstlük “ne ceza verilirse kabul et” şeklinde değil, güvenli bir yetişkine olayı anlatıp sorumluluk alma şeklinde açıklanmalıdır."
 parentEmotionalNotes: "Aynanın kırılma sesi, Keloğlan'ın titremesi ve padişahın kaşlarını çatması cezadan korkan çocukta yoğun kaygı yaratabilir. Gerçek kırık cam veya ayna parçalarına dokunulmaması, alanın boşaltılıp yetişkine haber verilmesi gerektiğini söyleyin. Bir çocuk hatasını anlattığında bağırmak ya da korkutmak dürüstlüğü desteklemez. Zarar gören kişinin üzülmesi normaldir ve hemen affetmek zorunda değildir. Kırılma ve padişahın tepkisi ağır gelirse sahneyi atlayıp ustayla güvenli onarım bölümünden devam edebilirsiniz."

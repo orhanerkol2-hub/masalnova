@@ -13,6 +13,8 @@ characters: ["Nisan","Bahçıvan Ayşe Teyze","Küçük kirpi Tomur"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   7–9 yaş etiketi, Nisan'ın bilinmeyen kapıya hem merak hem korkuyla yaklaşmasını, anahtarın nereden geldiğini sorgulamayı ve unutulmuş bahçenin Ayşe Teyze için taşıdığı aile anlamını konuşmaya uygundur. Kapalı ve kilitli bir kapı gerçek yaşamda izin, mülkiyet ve fiziksel güvenlik sınırıdır. Güncellenen anlatıda Nisan anahtarı tek başına kullanmaz; Ayşe Teyze'ye haber verir, yetişkin kapının çevresini kontrol eder ve kapıyı birlikte açarlar.

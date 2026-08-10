@@ -13,6 +13,8 @@ characters: ["Pamuk (kedi)","Minik (kuzu)","Orman Rehberi Ece"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları Minik'in ilk takılmasından, büyük kayada yan yolu bulmalarına ve rehber eşliğinde seyir noktasına ulaşmalarına kadar sorun çözme sırasını takip edebilir. Öykü “küçük adım”, mola ve rota değiştirme kavramlarını somutlaştırır. Güncellenen anlatıda Orman Rehberi Ece rotayı kontrol eder; doğada yalnızca yetişkinin seçtiği işaretli, güvenli yollarda yürünmesi gerektiğini açıklayın.

@@ -13,6 +13,8 @@ characters: ["Minnak (kedi)","Tosbik (kaplumbağa)"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   7–9 yaş çocukları Minnak'ın mağaradan korktuğunu söylemesi, Tosbik'in eşlik önermesi ve ikisinin içeri girmek yerine güvenli dış patikayı seçmesi üzerinden korku, bilgi ve destek ilişkisini tartışabilir. Bu yaşta “cesaret” ile “tehlikeyi görmezden gelme” arasındaki fark açıkça ele alınmalıdır. Bilinmeyen mağaraya girmek ve yabani meyve yemek gerçek hayatta güvenli değildir; güncellenen anlatıda karakterler bu sınırı korur.

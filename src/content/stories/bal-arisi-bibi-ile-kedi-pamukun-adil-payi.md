@@ -13,6 +13,8 @@ characters: ["Bibi (arı)","Pamuk (kedi)","Martı Deniz"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   5–7 yaş çocukları Pamuk'un küpü bulması, Bibi'nin arı işaretini fark etmesi ve Martı Deniz'in iki tarafı dinlemesi gibi birbirine bağlı adımları izleyebilir. “Bulmak”, “sahibi olmak”, “emek vermek” ve “teşekkür etmek” aynı şey değildir; bu yaşta aralarındaki fark konuşulabilir. Bal yiyen kedi ve sahilde bırakılmış küp masalsıdır; bulunan yiyecekler gerçek hayatta yenmemeli, yetişkine gösterilmelidir.

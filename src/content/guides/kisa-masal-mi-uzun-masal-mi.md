@@ -3,9 +3,10 @@ title: "Kısa Masal mı, Uzun Masal mı? Çocuğunuz İçin Doğru Okuma Süresi
 shortDescription: "Masalın uzunluğunu yaş etiketinden çok çocuğun ilgisine, günün saatine ve okuma amacına göre seçmek için pratik bir ebeveyn rehberi."
 seoTitle: "Kısa Masal mı Uzun Masal mı? Ebeveyn Rehberi | MasalNova"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 7
 relatedStoryIds: ["ayi-sofraya-cagiran-tilki", "kucuk-denizin-uykulu-bahcesi", "keloglanin-merakli-yagmur-gecesi"]
 sources:

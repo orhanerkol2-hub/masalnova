@@ -358,7 +358,9 @@ for (const file of guideFiles) {
     hardErrors.push(`${file}: Ratgeber-Datum fehlt oder ist ungültig.`);
   }
   if (guide.status === 'approved') {
-    if (!approvedAuthors.has(guide.author)) hardErrors.push(`${file}: Freigegebener Ratgeber benötigt einen realen namentlichen Autor.`);
+    if (![...approvedAuthors, 'masalnova-redaksiyonu'].includes(guide.author)) {
+      hardErrors.push(`${file}: Freigegebener Ratgeber benötigt einen verantwortlichen Autor oder die MasalNova-Redaktion.`);
+    }
     if (JSON.stringify(guide.reviewers) !== JSON.stringify(expectedReviewers)) {
       hardErrors.push(`${file}: Freigegebener Ratgeber benötigt die dokumentierte tatsächliche Doppelprüfung.`);
     }

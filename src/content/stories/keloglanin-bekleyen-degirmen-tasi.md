@@ -13,6 +13,8 @@ characters: ["Keloğlan","Değirmenci Dede","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "Bir avuç unun günler içinde birikmesi, su kanalının temizlenmesi ve değirmenin aşamalı onarılması 7-9 yaşta süreç düşüncesini destekler. Buna karşılık köyde un kalmaması, ülke çapında kıtlık ve padişahın yarışması daha ağır konulardır. Eski değirmen çarkı, ağır taş ve su kanalı yalnız yetişkinlerin ya da eğitimli kişilerin çalışacağı düzeneklerdir; Keloğlan'ın tek başına yaptığı işler gerçek yaşam görevi sayılmamalıdır."
 parentEmotionalNotes: "“Un yok, ekmek yok” ve “kimse açlık çekmesin” sözleri yiyecek güvencesi konusunda kaygı yaratabilir; en güçlü sahne bu nedenle orta yoğunluktadır. Çocuğa evde yeterli yiyecek sağlama sorumluluğunun yetişkinlerde olduğunu, destek gerektiğinde topluluk kurumlarına başvurulduğunu söyleyin. Köylülerin dedikodusu da emeği küçümsenmiş hisseden çocukları etkileyebilir; sonucu ne olursa olsun düzenli çabanın saygı gördüğünü ekleyin. Kıtlık ifadesi kaygı yaratırsa yarışı atlayıp ortak değirmenin onarılması bölümünü birlikte okuyabilirsiniz."

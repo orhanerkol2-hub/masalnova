@@ -21,16 +21,16 @@
     "audit:publishing": "node scripts/audit-publishing-readiness.mjs"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/sitemap": "^3.7.3",
     "@fontsource/nunito": "^5.3.0",
     "@phosphor-icons/web": "^2.1.2",
-    "astro": "^5.6.1",
+    "astro": "^7.2.0",
     "three": "^0.185.1"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.70.0",
     "@types/three": "^0.185.3",
-    "js-yaml": "^4.1.1",
+    "js-yaml": "^4.3.1",
     "sharp": "^0.35.3"
   },
   "optionalDependencies": {

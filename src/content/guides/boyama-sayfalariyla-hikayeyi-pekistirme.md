@@ -3,9 +3,10 @@ title: "Boyama Sayfalarıyla Hikâyeyi Pekiştirme"
 shortDescription: "Masal sonrası boyamayı ezbere bir uğraş olmaktan çıkarıp anlatma, sıralama ve duygu konuşmasına dönüştüren yaşa uygun aile rehberi."
 seoTitle: "Boyama Sayfalarıyla Hikâyeyi Pekiştirme | Ebeveyn Rehberi"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 7
 relatedStoryIds: ["ayi-sofraya-cagiran-tilki", "kardan-adamin-esarbi", "keloglanin-sabirli-bahcesi"]
 sources:

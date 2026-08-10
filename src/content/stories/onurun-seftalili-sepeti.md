@@ -13,6 +13,8 @@ characters: ["Onur","Şeftalici Rıfat Amca","Deniz"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   7–9 yaş etiketi, Onur'un kazadan sonra kaçma isteğiyle sorumluluk alma kararı arasındaki gerilimi, Rıfat Amca'nın emeğini ve özür ile maddi telafinin aynı şey olmadığını tartışmak için uygundur. Tezgâh sahibinin sesini yükseltmesi ve çocuğun gözlerinin dolması kısa ama belirgin bir utanç anı yaratır. Bu yaş grubunda yetişkinin öfkesini yönetme ve zararın parasal kısmını bakım verenle çözme sorumluluğu konuşulabilir; çocuk borç çalışması yapmakla yükümlü değildir.

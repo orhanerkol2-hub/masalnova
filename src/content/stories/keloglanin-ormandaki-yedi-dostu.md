@@ -13,6 +13,8 @@ characters: ["Keloğlan","Sincap Fındık","Padişah"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "5-7 yaş için ekipteki farklı becerileri ayırt etmeye uygun olsa da çukur, bataklık, mağara ve ağır kaya sahneleri yetişkin açıklaması gerektirir. Fındık'ın çakılları toplaması, baykuşun yolu bilmesi, kirpinin geçidi bulması ve kaplumbağanın düşünmesi; yardımın yalnız fiziksel güç olmadığını gösterir. “Yedi dost” sayısını Keloğlan ile altı hayvanı birlikte sayarak başlıkla ilişkilendirebilirsiniz."
 parentEmotionalNotes: "Sincabın çukura düşmesi, pınarın kuruması ve kayanın birlikte itilmesi tehlikeli görünebilir. Gerçek hayatta çocukların çukura dal uzatmaması, mağara veya bataklığa girmemesi, ağır kayayı kaldırmaya çalışmaması; bir yetişkine haber vermesi gerektiğini açıkça söyleyin. “Fakir ama yüreği zengin” kalıbı da maddi durumla iyiliği karşılaştırmak için kullanılmamalıdır; herkes yardım etmeyi seçebilir ve yardım almayı hak eder. Çukur veya bataklık bölümü zor gelirse resmi kapatıp güvenli ekip haritasından devam etmek de uygundur."

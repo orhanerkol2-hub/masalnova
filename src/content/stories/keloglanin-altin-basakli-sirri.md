@@ -13,6 +13,8 @@ characters: ["Keloğlan","Nine Ayşe","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "Kaza, saklama dürtüsü, gece süren huzursuzluk, özür ve somut onarım zinciri 5-7 yaş için anlaşılırdır. Keloğlan'ın taş dolu çuvalla tarlanın kenarından geçmesi ve birkaç başağı kırması, dikkatsizlik ile kasıt arasındaki farkı gösterir. Padişahın onu hemen genç muhtar seçmesi masalsı bir ödüldür; gerçek hayatta liderlik için tek bir doğru davranıştan daha uzun süreli güven ve yeterlik gerekir."
 parentEmotionalNotes: "“Kimse görmedi” düşüncesi, gece uyuyamama ve bir yetişkine hatayı söyleme sahnesi cezalandırılmaktan korkan çocukları etkileyebilir. Çocuğa kazayı anlatmasının güvenli olması gerektiğini ve yetişkinin önce kesik, yaralanma veya devam eden tehlikeyi kontrol edeceğini söyleyin. Nine Ayşe'nin bağışlaması kendi seçimidir; zarar gören kişinin hemen affetmek veya kızgınlığını bırakmak zorunda olmadığı açıkça belirtilmelidir. Hatasını söyleme anı zor gelirse Nine Ayşe’nin güvenli yanıtını önceden okuyun veya kısa bir ara verin."

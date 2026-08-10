@@ -13,6 +13,8 @@ characters: ["Keloğlan","Padişah","Tüccar Ahmet"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "5-7 yaş çocukları Ahmet'in gölge, Yorgo'nun rüzgâr istemesi üzerinden aynı görünen talebin altında farklı ihtiyaçlar bulunabileceğini anlayabilir. Çarşıdaki yüksek sesli tartışma, Keloğlan'ın iki tüccarı sırayla dinlemesi ve çınarın iki özelliğini fark etmesi açık bir uzlaşma dizisi sunar. “Farklı milletler” tek kıyafet, yemek veya davranışla temsil edilmemeli; masaldaki kişiler bütün kültürlerin özeti değildir."
 parentEmotionalNotes: "Bağırış ve kalabalığın toplanması çatışmadan çekinen çocukları zorlayabilir. Çocuğun gerçek bir yetişkin kavgasını çözmek için araya girmemesi, güvenli bir yetişkine haber vermesi gerektiğini belirtin. Ahmet ve Yorgo'nun biraz utanması üzerinden hata fark edildiğinde topluluk önünde küçük düşürmenin gerekmediğini söyleyin. Farklı dil konuşan birini anlamamak alay nedeni değildir. Çarşıdaki bağırış yorucu gelirse tartışmayı atlayıp Ahmet ile Yorgo’nun ihtiyaçlarını söyledikleri bölümden devam edin."

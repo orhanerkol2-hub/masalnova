@@ -13,6 +13,8 @@ characters: ["Terazi Dede","Kara","Deniz"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   7–9 yaş etiketi, Kara ile Deniz'in aynı balık üzerinde hak iddia etmesini, Terazi Dede'nin iki tarafı ayrı ayrı dinlemesini ve eşit paylaşımın bu özel durumda neden seçildiğini tartışmaya uygundur. Hikâye kısa olsa da “adalet” ile “herkesi mutlu etmek” arasındaki fark soyuttur. Balığın iki ağa sıkışması canlıya zarar verme sorusunu da doğurabilir; aile balıkçılık yapıyorsa yerel kurallar, uygun ekipman ve yetişkin sorumluluğu ayrıca konuşulmalıdır.

@@ -16,6 +16,8 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "Üç öğüdün farklı zamanlarda anlam kazanmasını, neden-sonuç zincirini ve aile bütçesi ikilemini izlemek 7-9 yaş için uygundur. Keloğlan'ın keçi parasını un almak yerine harcaması doğru bir karar modeli olarak sunulmamalıdır; çocuk, sel basan kestirme yol, öfkeli gecede susma ve saray kapısında temizlenme sahnelerini değerlendirirken “öğüt yararlı olsa da başlangıçtaki seçim riskliydi” ayrımını kurabilir."
 parentEmotionalNotes: "Ambarın boşalması, yiyecek alamadan eve dönme, annenin öfkesi ve sel haberi kaygı yaratabilir. Yiyecek yetersizliğinin çocukların çözmesi gereken bir sorun olmadığını; gerçek hayatta aile parasını harcamadan önce yetişkinle konuşulacağını belirtin. “Dilini tutmak” duyguyu bastırmak değil, tartışmayı güvenli zamana ertelemektir; çocuk korktuğunda veya haksızlık gördüğünde susmak zorunda değildir. Sel ya da boş ambar bölümü ağır gelirse sonucu önceden açıklayıp o kısmı birlikte kısaltabilirsiniz."

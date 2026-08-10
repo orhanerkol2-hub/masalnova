@@ -14,6 +14,8 @@ isPopular: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları yaz hazırlığı, arpa tanesini birlikte taşıma ve kışın kapıyı çalma sahneleri üzerinden planlama ile yardımlaşmayı izleyebilir. Ağustosböceğinin şarkısı sonunda ortak işe katkı sağlar; sanat ile hazırlık birbirinin karşıtı değildir. Böceklerin çorba pişirmesi ve kiler kurması masalsıdır. Gerçek yiyecek güvencesinin çocukların değil yetişkinlerin sorumluluğu olduğunu belirtin.

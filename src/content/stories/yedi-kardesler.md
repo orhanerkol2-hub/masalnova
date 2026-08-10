@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   7–9 yaş grubu, kuraklık ile pınar arasındaki bağı, yedi kardeşin yol boyunca farklı görevler üstlenmesini ve yıldızların yön göstermesini masalsı bir öğe olarak ayırt edebilir. Babanın hastalığı, annenin uzakta oluşu ve su kıtlığı daha küçük dinleyicilerde bakım verenleri kaybetme endişesi yaratabilir. Güncellenen anlatıda Meryem Nine yolculuğa yetişkin refakatçi olarak katılır, Hasan Dede babanın yanında kalır; özellikle dört yaşındaki Aliş kardeşlerinin sorumluluğuna bırakılmaz.

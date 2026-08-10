@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "Bu masal 7–9 yaş grubuna, iyiliğin sonucu ile yapılma niyeti arasındaki farkı konuşabilecekleri için önerilir. Kırk kilidin yıllar içinde açılması, Derya’nın büyümesi ve son kilidin annesine bakım verdiği sırada açılması zaman geçişlerini takip etmeyi gerektirir. ‘Gizli iyilik’, ‘gösteriş’ ve ‘karşılık beklemek’ gibi soyut kavramlar küçük çocuklar için kolayca siyah-beyaz bir kurala dönüşebilir; bu nedenle metni bir yetişkinle okuyup örnekleri birlikte ayırmak daha yararlıdır."
 parentEmotionalNotes: "Soğukta kalan köpek yavrusu, kimsesiz komşu ve hastalanan anne kısa süreli kaygı uyandırabilir; olayların hiçbirinde şiddet yoktur ve yardım güvenli biçimde ulaşır. Annenin hastalığı konuşulurken bakım sorumluluğunun çocuklara ait olduğu izlenimi verilmemelidir. Derya’nın yaptığı çorba ve serin bez, hikâyedeki sevgi göstergeleridir; gerçek yaşamda hasta bir yetişkin için başka bir yetişkinden yardım istemenin doğru olduğu ayrıca söylenebilir."

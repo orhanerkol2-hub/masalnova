@@ -16,6 +16,8 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yuksek"
 parentAgeGuidance: >-
   Masal 5–7 yaşa alınmıştır. Annesini kaybeden Külkedisi'nin ev içinde küçümsenmesi, adının kül üzerinden değiştirilmesi, bütün işlerin ona zorla yaptırılması ve balodan dışlanması süreğen duygusal baskı içerir. Bu yük 3–4 yaş için “nazik ve akıcı” sayılmamalıdır. Büyü ve cam ayakkabı daha küçükleri çekse de hikâyeyi anlayabilmek için haksızlığın Külkedisi'nin sabırla katlanması gereken normal bir aile düzeni olmadığını ayırt etmek gerekir.

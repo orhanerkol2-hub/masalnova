@@ -50,16 +50,16 @@ above. These are MasalNova controls, not Google word-count rules.
 ## Ebeveyn Rehberi release gate
 
 New parent guides start with an organisational draft author and stay outside
-the sitemap while their actual authorship and review are unresolved:
+the sitemap while editorial responsibility and review are unresolved:
 
 ```yaml
 author: "masalnova-redaksiyonu"
 editorialStatus: "needs_review"
 ```
 
-After a real named author has taken responsibility for the text, checked every
-source and both listed editors have actually reviewed it, replace the draft
-author, add the real `reviewedBy` tuple and set `editorialStatus: approved`.
+After the author or MasalNova editorial team has taken responsibility for the
+text, checked every source and both listed editors have actually reviewed it,
+add the real `reviewedBy` tuple and set `editorialStatus: approved`.
 The guide hub becomes indexable only when at least eight guides have completed
 that process. Drafts are always `noindex`, absent from the sitemap and ad-free.
 
@@ -87,6 +87,13 @@ become `noindex` and leave the sitemap. The stricter internal discovery floor
 continues to keep useful, approved bedtime stories findable without making them
 indexable or monetisable. Properly sourced Islamic retellings keep their
 separate source-based eligibility gate.
+
+Human review release `2026-08-10`: all 572 stories retain their documented
+double editorial approval. The 60 stories with complete story-specific parent
+guidance are additionally released as `qualityTier: core`, and all nine sourced
+parent guides are approved by the named double-review team. Production ad
+rendering remains disabled; the CI-only ad build exercises the fail-closed
+placement rules with `PUBLIC_QUALITY_CORE_REVIEWED=true`.
 
 ## Search placeholder removal
 

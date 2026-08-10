@@ -3,9 +3,10 @@ title: "Çocuk Videolarından Sonra Ekransız Etkinlikler"
 shortDescription: "Bir çocuk videosunun ardından ekranı çatışmadan kapatıp hikâyeyi harekete, oyuna, resme ve aile sohbetine taşıyan pratik öneriler."
 seoTitle: "Çocuk Videolarından Sonra 10 Ekransız Etkinlik | MasalNova"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 7
 relatedStoryIds: ["keloglan-dev", "keloglan-tohum", "ayi-sofraya-cagiran-tilki"]
 sources:

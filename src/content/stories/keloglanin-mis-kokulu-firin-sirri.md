@@ -13,6 +13,8 @@ characters: ["Keloğlan","Fırıncı Nine Ayşe","Padişah"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "Kokuyu izleme, aile tarifini dinleme, çatlak tandır için kaynak arama ve ekmeği saraya taşıma 5-7 yaşta basit bir problem çözme zinciri oluşturur. Nine Ayşe'nin “bir tutam sabır” sözü mecaz olarak açıklanabilir; tarifin asıl sahibi ve fırıncılık bilgisi Nine'dedir. Keloğlan bağlantı kurar ve destek toplar. Sıcak fırın, duman ve uzun saray yolu nedeniyle gerçek yaşam güvenliği ayrıca konuşulmalıdır."
 parentEmotionalNotes: "Fırının kapanma ihtimali ve Nine Ayşe'nin onarım için parasının olmaması, sevilen bir yerin kaybı veya maddi sıkıntı duygusu yaratabilir. Bunun yaşlı kişinin kişisel başarısızlığı olmadığını; bakım, usta ve topluluk desteği gerektiren yapısal bir sorun olduğunu belirtin. Çocuklar kokunun peşinden yalnız gitmemeli, tanımadığı binaya girmemeli, sıcak ekmek, tandır taşı veya dumanlı alana yaklaşmamalıdır. Fırının kapanma ihtimali üzücü gelirse durup Nine’nin sonunda destek alacağını söyleyebilir veya saray sahnesine geçebilirsiniz."

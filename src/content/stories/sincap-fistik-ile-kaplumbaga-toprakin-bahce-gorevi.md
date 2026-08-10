@@ -13,6 +13,8 @@ characters: ["Fıstık (sincap)","Toprak (kaplumbağa)"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   5–7 yaş çocukları Fıstık'ın cevize yönelince sulama görevinden uzaklaşması, Toprak'ın eksik işi üstlenmesi ve ikisinin yaprak zili planı kurması arasındaki görünür süreci değerlendirebilir. Bu yaşta sorumluluk kadar iş bölümü ve hatırlatma aracı da konuşulabilir. Bitkilerin sararmasının birçok nedeni olabileceğini, masalda olayın görevi hatırlatma üzerine sadeleştirildiğini belirtin.

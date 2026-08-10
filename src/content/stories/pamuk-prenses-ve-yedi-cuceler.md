@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yuksek"
 parentAgeGuidance: >-
   Masal 5–7 yaşa alınmıştır. Kraliçenin güzellik kıyaslaması, avcıdan Pamuk Prenses'i ormana götürmesini istemesi, kılık değiştiren bir yetişkinin zehirli elma vermesi ve uzun büyülü uyku 3–4 yaş için ağır ve karmaşıktır. Beş yaş üzerindeki çocuklar görünüş kıyaslamasının kraliçenin seçimi olduğunu, Pamuk Prenses'in değeriyle ilgili olmadığını daha rahat tartışabilir. İlk okumada kraliçenin planını kısaltabilir, elma sahnesinden önce sonucun güvenli olduğunu söyleyebilirsiniz.

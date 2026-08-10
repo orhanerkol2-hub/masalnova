@@ -3,9 +3,10 @@ title: "Uyku Öncesi Masal Rutini Nasıl Kurulur?"
 shortDescription: "Masalı akşamın sakin ve öngörülebilir bir parçasına dönüştürmek için esnek, ekransız ve uygulanabilir bir uyku öncesi okuma planı."
 seoTitle: "Uyku Öncesi Masal Rutini Nasıl Kurulur? | MasalNova"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 6
 relatedStoryIds:
   - "uykucu-ay"

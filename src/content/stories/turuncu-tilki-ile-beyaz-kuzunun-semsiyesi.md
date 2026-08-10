@@ -13,6 +13,8 @@ characters: ["Turuncu tilki Fındık","Beyaz kuzu Pamuk"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   3–5 yaş çocukları yağmurun başlaması, Fındık'ın şemsiyeye davet etmesi ve taşan dere yerine yüksek yolu seçmeleri gibi belirgin olayları izleyebilir. Şemsiye paylaşımı, izin sorma ve yan yana yürüme kavramlarını somutlaştırır. Gök gürültüsü, akşam yolculuğu ve taşkın su gerçek güvenlik konularıdır; çocuklar suya yaklaşmamalı ve bilinen yetişkinle güvenli yere gitmelidir.

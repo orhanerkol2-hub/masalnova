@@ -13,6 +13,8 @@ characters: ["Tombul (kaplumbağa)","Zerre (arı)"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   3–5 yaş çocukları Zerre'nin parlak süsü, Tombul'un sade çemberi ve iki parçanın birleşmesi gibi görünür ayrıntılar üzerinden yarışma ile işbirliğini ayırt edebilir. Balmumu süsün kayması kısa bir gerilim yaratır, ardından hemen güvenli biçimde tutulur. Pınar kenarı ve balmumu masal sahnesidir; gerçek su yanında yakın yetişkin gözetimi gerekir, sıcak balmumu kullanılmamalıdır.

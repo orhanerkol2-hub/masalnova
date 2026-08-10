@@ -13,6 +13,8 @@ characters: ["Zeyno (tilki)","Kral Aslan Baran"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   5–7 yaş çocukları Baran'ın tohumları hazırlıksız saçmasıyla Zeyno'nun düzenli bakım vermesi arasındaki görünür neden-sonuç bağını takip edebilir. Alay, gurur, hayal kırıklığı ve yeniden deneme gibi iki karakterin duyguları bu yaşta yetişkin desteğiyle konuşulabilir. Tarımın yalnızca emekle değil hava, toprak ve bilgiyle de şekillendiğini ekleyerek masaldaki basitleştirmeyi dengeleyin.

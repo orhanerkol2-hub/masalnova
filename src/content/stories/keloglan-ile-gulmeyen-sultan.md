@@ -16,6 +16,8 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "Gülnihal'in üç yıldır gülmemesinin ardındaki özlem, annenin uzakta oluşu ve fırtınada devrilen ceviz ağacı 7-9 yaşta duygu ile davranış arasındaki bağı konuşmaya elverişlidir. Keloğlan'ın gösteri yapmak yerine “En son neye güldünüz?” diye sorması, cevabı beklemesi ve hemen sonuç vermeyen bir fidan dikmesi dikkatli dinleme örneğidir. Son kahkaha, üzüntünün bittiği değil, özlemle sevincin aynı anda yaşanabildiği bir an olarak ele alınmalıdır."
 parentEmotionalNotes: "Annenin hastalık nedeniyle uzakta olması, ağacın kaybı ve Gülnihal'in gözyaşları ayrılık deneyimi yaşayan çocukları etkileyebilir. Önceden bu öğeleri söyleyin ve çocuk isterse okumayı erteleyin. “Üzgün birini güldürmek zorunda değiliz; yanında durabiliriz” güvencesini verin. Gülnihal'in duygusu bir yarışma konusu değildir; padişahın ödül ilanı üzerinden bir kişinin iyileşmesinin başkasının hünerine bağlanamayacağını konuşun."

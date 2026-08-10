@@ -13,6 +13,8 @@ characters: ["Fırfır (kelebek)","Fısfıs (fare)","Baykuş Devrim"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları Fısfıs'ın değirmeni yalnızca kendine ait sayması, Fırfır'ı yağmur öncesinde geri çevirmesi ve ardından gelen onarım sahnesi üzerinden dışlama, ortak alan ve telafi kavramlarını tartışabilir. Kelebeğin yaprak taşımasıyla örümceğin ağ kurması, küçük katkıların farklı olabileceğini somutlaştırır; gerçek hayvan davranışı değil, masal dili olarak ele alınmalıdır.

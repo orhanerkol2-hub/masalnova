@@ -3,9 +3,10 @@ title: "Masal Sonrası Çocuklara Sorulabilecek Sorular"
 shortDescription: "Masal sohbetini sınava çevirmeden karakter, duygu, neden-sonuç ve hayal gücü üzerine çocukla karşılıklı konuşmak için somut soru örnekleri."
 seoTitle: "Masal Sonrası Çocuklara Sorulabilecek Sorular | Rehber"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 7
 relatedStoryIds:
   - "ayi-sofraya-cagiran-tilki"

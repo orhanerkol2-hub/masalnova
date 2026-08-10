@@ -15,6 +15,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   7–9 yaş etiketi, bilmecelerin mecazlı dilini, Alice'in iki kez yanıldıktan sonra yeniden düşünmesini ve bahçeyi bir öğrenme simgesi olarak yorumlamayı destekler. Tavşanın peşinden düşünmeden gizli bir kapıdan geçmesi ile sallanan köprü sahnesi gerçek yaşam davranışı olarak örnek alınmamalıdır. Okurken, harikalar bahçesinin düşsel bir alan olduğunu ve gerçek hayatta bilinmeyen bir yere giderken bakım verenine haber vermenin, kapı veya köprü güvenliğini bir yetişkinle kontrol etmenin gerekli olduğunu açıkça ayırın.

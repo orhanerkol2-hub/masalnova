@@ -13,6 +13,8 @@ characters: ["Keloğlan","Dağ Devi","Padişah"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "Sade kulübe, değerli hediye yarışması ve küçük taşın temsil ettiği fikir 5-7 yaş için anlaşılır bir karşılaştırma sunar. Keloğlan'ın “Bende ne var?” diye üzülmesi, devin eşyadan çok davranışı önemsemesi ve Keloğlan'ın padişaha kendi gözlemini anlatması konuşulabilir. Ancak bir çocuğun tek başına dağa çıkıp tanımadığı bir devin evine girmesi masal kurgusudur, gerçek yaşamda güvenli davranış değildir."
 parentEmotionalNotes: "Köyde “para pul namına hiçbir şey” olmaması ve diğerlerinin pahalı hediyeleri karşısında Keloğlan'ın yetersiz hissetmesi maddi karşılaştırmalara duyarlı çocukları etkileyebilir. Bir ailenin az eşyası olması onun değerini ya da iyiliğini belirlemez. Devin büyüklüğü ve kulübeye giriş sahnesi korkutursa sonucun güvenli olduğunu önceden söyleyin. Gerçekte yabancı birinin evine girilmez ve uzak yol yetişkinsiz yapılmaz. Devle karşılaşma ürkütürse kulübe sahnesini birlikte özetleyip taşın saraya götürüldüğü yerden sürdürebilirsiniz."

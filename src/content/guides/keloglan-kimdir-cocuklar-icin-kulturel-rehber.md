@@ -3,9 +3,10 @@ title: "Keloğlan Kimdir? Çocuklar İçin Kültürel Rehber"
 shortDescription: "Keloğlan’ın sözlü anlatı geleneğindeki yerini, değişen özelliklerini ve çocuklarla masal okurken konuşulabilecek kültürel ayrıntıları açıklar."
 seoTitle: "Keloğlan Kimdir? Çocuklar İçin Kültürel Rehber | MasalNova"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 8
 relatedStoryIds: ["keloglanin-sabirli-bahcesi", "keloglanin-golde-buldugu-ders", "keloglan-ile-bin-sorulu-cayir"]
 sources:
