@@ -13,6 +13,8 @@ characters: ["Filoş","Zıpzıp","Baykuş Dede"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları Filoş'un yüksek meyvelere, Zıpzıp'ın dar kovuklardaki böğürtlenlere ulaşması ve fırtınada farklı görevler üstlenmeleri üzerinden tamamlayıcı becerileri anlayabilir. “Büyük” ve “küçük” burada değer değil, belirli işe göre fiziksel farktır. Yabani meyve toplama, mağaraya sığınma ve fırtınada hareket etme gerçek yaşam yönergesi değildir.

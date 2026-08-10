@@ -13,6 +13,8 @@ characters: ["Dede Hikmet","Küçük Deniz","Yorgun Yolcu"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   7–9 yaş etiketi, Dede Hikmet'in geçmişte aldığı yardımı hatırlamasını, yolcunun ilk izlenimini değiştirmesini ve alçakgönüllülük ile kendini değersizleştirme arasındaki farkı tartışmak için uygundur. Şiddetli fırtına ve tanınmayan bir yetişkinin gece kapıyı çalması güvenlik soruları doğurur. Güncellenen sahnede Dede önce kapı kapalıyken kim olduğunu sorar, komşu bekçiye haber verir ve yetişkin olarak durumu değerlendirir; çocuk kapıyı açmakla görevlendirilmez.

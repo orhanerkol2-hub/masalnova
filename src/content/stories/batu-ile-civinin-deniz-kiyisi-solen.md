@@ -13,6 +13,8 @@ characters: ["Batu","Cıvı","Martı Deniz"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   7–9 yaş çocukları Batu'nun “daha fazlası” isteğiyle Cıvı'nın elindekini fark etmesi arasındaki gerilimi anlayabilir; sabırsızlık, kıyaslama ve paylaşma üzerine tek cevaplı olmayan bir sohbet yapılabilir. Yiyeceklerin yetişkinlerce kontrol edilip hazırlanması güvenlik bağlamı sağlar. Sahilden bulunan canlıları yememek, keskin kabuklara dokunmamak ve su kenarında yetişkinsiz bulunmamak gerektiğini açıkça söyleyin.

@@ -77,7 +77,7 @@ const jsonLd = [
         <h1>{d.title}</h1>
         <p class="dek">{d.shortDescription}</p>
         <div class="guide-meta">
-          <span>Hazırlayan: {author ? <a href={author.profilePath}>{author.name}</a> : 'MasalNova redaksiyon taslağı'}</span><span aria-hidden="true">·</span><span>{d.readingTime} dk okuma</span><span aria-hidden="true">·</span><time datetime={d.modifiedAt ?? d.publishedAt}>{isApproved ? 'İnceleme' : 'Taslak tarihi'}: {modifiedLabel ?? publishedLabel}</time>
+          <span>Hazırlayan: {author ? <a href={author.profilePath}>{author.name}</a> : isApproved ? 'MasalNova redaksiyonu' : 'MasalNova redaksiyon taslağı'}</span><span aria-hidden="true">·</span><span>{d.readingTime} dk okuma</span><span aria-hidden="true">·</span><time datetime={d.modifiedAt ?? d.publishedAt}>{isApproved ? 'İnceleme' : 'Taslak tarihi'}: {modifiedLabel ?? publishedLabel}</time>
         </div>
         {isApproved
           ? <p class="editorial-note">Editoryal inceleme: <a href="/yazarlar/aylin-karabektas/">Aylin Karabektaş</a> ve <a href="/yazarlar/muhammet-karayigit/">Muhammet Karayiğit</a></p>

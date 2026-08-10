@@ -13,6 +13,8 @@ characters: ["Minnoş (kedi)","Puf (kuzu)"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları Puf'un yolunu kaybetmesi, fırıncı dedenin annesini bulması ve cuma ziyaretlerinin tekrarlanması üzerinden güvenli yardım, zaman ve söz verme üzerine konuşabilir. Haftalık tekrar, takvim kavramını somutlaştırır. Masaldaki konuşan hayvanlar ve ikramlar kurmacadır; kaybolan bir çocuğun güvenilir görevliye ya da bilinen yetişkine yönelmesi gerektiğini ayrıca açıklayın.

@@ -13,6 +13,8 @@ characters: ["Elmas","Annesi","Kavanoz Kedi"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "sakin"
 parentAgeGuidance: >-
   5–7 yaş etiketi, küçük miktarların zaman içinde birikmesini, Elmas'ın “bir tanesiyle bir şey alınmaz” düşüncesini ve resim defteri için beklemeyi somutlaştırmak açısından uygundur. Sayma bölümü temel sayı kavramlarıyla ilişkilidir; ancak çocuğun hesap yapması veya kendi parasını biriktirmesi zorunlu değildir. Para konuşmaları ailenin ekonomik koşullarına göre hassas olabilir. Kavanozdaki paranın anneye ait olduğu ve kullanma kararının yetişkinle birlikte verildiği vurgulanmalıdır.

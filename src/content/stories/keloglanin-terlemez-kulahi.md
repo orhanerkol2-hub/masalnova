@@ -13,6 +13,8 @@ characters: ["Keloğlan","Padişah","Bahçıvan Hasan"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "5-7 yaş çocukları annesinin hazırladığı hava aralıklı külahı, bahçenin adım adım canlanmasını ve Keloğlan ile Hasan Amca'nın farklı katkılarını izleyebilir. Külahın güneşi azaltıp dinlenmenin yerini tutmaması somut bir neden-sonuç bağı kurar. Nöbetçilerin görünüşle alay etmesi, Hasan Amca'nın işini kaybetme korkusu ve padişahın karar gücü bir yetişkinle konuşulmalıdır."
 parentEmotionalNotes: "Görünüş üzerinden alay ve “işini yapamıyor” ifadesi, saç farklılığı veya bedensel kapasite konusunda hassas çocukları etkileyebilir. Keloğlan'ın değeri alaya hiç üzülmemesiyle ölçülmez; üzülseydi de saygıyı hak ederdi. Hasan Amca'nın yaşla değişen gücü tembellik değildir. Güneş altındaki bahçe işi gerçek yaşamda su, gölge, uygun giysi, mola ve yetişkin planlaması gerektirir; masaldaki külah tek başına koruma sağlamaz. Alay sahnesinde durmak isterse nöbetçilerin sözlerini atlayıp doğrudan bahçe planına geçebilirsiniz."

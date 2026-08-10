@@ -13,6 +13,8 @@ characters: ["Sırma (Arı)","Köstebek Bodo","Tavşan Filiz","Pınar sorumlusu 
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   5–7 yaş çocukları yetişkin pınar sorumlusu Ada'nın Bodo için erişilebilir oturma yeri hazırlaması, Filiz'in ihtiyacının aciliyetini sorması ve Sırma'nın iki durumda destek istemesi üzerinden nezaketi somut davranışlarla anlayabilir. Topallama ve susuzluk hakkında tanı koymadan konuşun. Gerçek hayatta yalnızca güvenli içme suyu ve yetişkinin uygun gördüğü oturma alanı kullanılır.

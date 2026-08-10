@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   Masal 5–7 yaşa alınmıştır. Pinokyo'nun okul yerine tiyatroya gitmesi ve ardından doğruyu söylemesi bu yaşta konuşulabilir; ancak tilkinin onu ailesinden uzaklaştırmaya çalışması, Geppetto'nun fırtınada kaybolması ve Pinokyo'nun sandalla aramaya çıkması 3–4 yaş için yoğun ve güvenlik açısından karmaşıktır. Uzayan burun gerçek bir yalan belirtisi değildir; bunu açıkça “masalın görünür simgesi” diye adlandırın. Deniz bölümünün gerçek hayatta yetişkinler ve kurtarma ekipleri olmadan taklit edilmemesi gerektiğini de belirtin.

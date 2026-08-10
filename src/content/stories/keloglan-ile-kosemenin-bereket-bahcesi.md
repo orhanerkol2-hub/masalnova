@@ -16,6 +16,8 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "Kuraklık, izin, emek paylaşımı ve on sepetlik planı birlikte değerlendirdiği için 7-9 yaşa uygundur. Çocuklar Keloğlan'ın muhtarın gece meyve alma önerisini neden reddettiğini, Kösemen'in geçmişte kırılan dallar yüzünden neden temkinli olduğunu ve 4-4-1-1 dağılımının hangi ihtiyaçları karşıladığını izleyebilir. Terazi ve sepetler, “eşit” ile “adil ve önceden anlaşılmış” paylaşım arasındaki farkı somutlaştırır."
 parentEmotionalNotes: "Köyde hasadın az olması ve meyvelerin çürümesi yiyecek kaygısı uyandırabilir. Bunun yetişkinlerin ve topluluğun çözmesi gereken bir durum olduğunu, çocukların açlığı gidermek için gizlice bir şey almak zorunda olmadığını söyleyin. İri Kösemen'in çatık kaşları korkutursa onun öfkesinin geçmiş zararlarla ilişkili olduğunu ve Keloğlan'ın kapıyı çalıp izin isteyerek güvenli bir görüşme başlattığını hatırlatın. Açlık veya izinsiz alma fikri rahatsız ederse hasat anlaşmasına geçmeden ara verip sorusunu dinleyin."

@@ -13,6 +13,8 @@ characters: ["Nine Ferahat","Deniz"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş etiketi, yazın hazırlanan yiyeceklerle kış fırtınası arasındaki zaman bağını, saklama ile paylaşmanın birlikte düşünülmesini ve bozuk oyuncağı onarma örneğini anlamaya uygundur. Günler süren kar ve dağ yolunda kalan gezgin küçük çocuklarda mahsur kalma duygusu yaratabilir. Nine'nin yiyecek hazırlığı bir yetişkin becerisidir; kaynatma, konserveleme, bıçak kullanma ve gıda saklama işlemleri çocukların tek başına yapacağı etkinlikler olarak sunulmamalıdır.

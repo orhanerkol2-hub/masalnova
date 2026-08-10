@@ -13,6 +13,8 @@ characters: ["Keloğlan","Değirmenci Dede","İki komşu köylü"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "İki kile ile bir kileyi üç paya dönüştürmek ve miktara dayalı hak ile ihtiyaca dayalı paylaşımı ayırmak 7-9 yaş için daha uygundur. Hasan ile Veli'nin bağırması, Değirmenci Dede'nin başlangıç miktarını hatırlaması ve Keloğlan'ın teraziyi temizlemesi açık bir problem zinciri kurar. “Kile”nin eski bir ölçü birimi, değirmenin ise çocukların tek başına yaklaşmaması gereken çalışan bir düzenek olduğu açıklanabilir."
 parentEmotionalNotes: "Hakkının azalması, yüksek sesli tartışma ve Veli'nin kalabalık önünde mahcup olması bazı çocukları rahatsız edebilir. Fazla istemenin kişiyi kötü yapmadığını; ihtiyaç, yanlış anlama veya kaygının da davranışı etkileyebileceğini söyleyin. “Hakkını yemek” deyiminin gerçek yemek olmadığını açıklayın. Anlaşmazlık büyürse çocuğun araya girmek yerine yetişkin desteği istemesi güvenli seçenektir. Bağırış bölümü huzursuz ederse sesi yükseltmeden özetleyin veya doğrudan terazinin kurulmasına geçin."

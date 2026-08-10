@@ -16,6 +16,8 @@ isPopular: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "On bir dakikalık bu masal; söylentiden gözleme, günlere yayılan güven kurmadan kuraklık ve ortak su yolu çözümüne uzanan çok aşamalı yapısı nedeniyle 7-9 yaşa daha uygundur. Keloğlan önce köydeki söylentiyi sorgular, sonra Göktaş’la güven kurar ve son bölümde köylülerle birlikte su yolunu açar. Bu üç aşama; bir karakter hakkındaki ilk düşünceyi yeni bilgilerle değiştirme, uzun neden-sonuç zincirini izleme ve farklı kişilerin katkısını karşılaştırma fırsatı verir. Tek oturuş uzun gelirse Göktaş’ın köye davet edildiği yerde ara verilebilir."
 parentEmotionalNotes: "Mağaradaki devin görünüşü, gür sesi, kaygan dağ yolu, susuz kalan köy ve yerinden oynatılan büyük kayalar orta düzeyde ve son bölüme kadar yeniden beliren gerilim oluşturabilir. Hikâyede saldırı ya da yaralanma yoktur; Keloğlan korkusunu inkâr etmez, nefes alıp gözlem yapar ve güveni yavaş kurar. Çocuğunuz devden çekinirse güven veren papatya ve küçük gözleme ayrıntılarını önceden gösterebilir, istediği yerde durabilir veya dağ yolunu atlayıp birlikte devam edebilirsiniz. Gerçek hayatta çocuk tek başına kaygan patikaya ya da tanımadığı birinin mağarasına gitmez."

@@ -3,9 +3,10 @@ title: "Yaşa Uygun Korku ve Gerilim Nasıl Değerlendirilir?"
 shortDescription: "Bir masaldaki karanlık, ayrılık, yabancı ve tehlike sahnelerini okumadan önce değerlendirmek ve okuma sırasında çocuğun sinyallerini izlemek için pratik rehber."
 seoTitle: "Çocuk Masallarında Yaşa Uygun Korku ve Gerilim | MasalNova"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 8
 relatedStoryIds: ["ayi-sofraya-cagiran-tilki", "kirmizi-baslikli-kiz-ve-ormanin-dostu-kurt", "firtinali-aksamda-kapi-calininca"]
 sources:

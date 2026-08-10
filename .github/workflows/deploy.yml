@@ -37,6 +37,7 @@ jobs:
           PUBLIC_GOOGLE_CMP_PUBLISHED: 'true'
           PUBLIC_ADSENSE_ENABLED: 'false'
           PUBLIC_ADSENSE_MANUAL_ONLY: 'true'
+          PUBLIC_QUALITY_CORE_REVIEWED: 'false'
         # The first pass discovers every cover used by the rotating homepage,
         # then Sharp creates the responsive WebP variants and the second pass
         # emits markup that points at those generated files.
@@ -47,6 +48,7 @@ jobs:
           PUBLIC_GOOGLE_CMP_PUBLISHED: 'true'
           PUBLIC_ADSENSE_ENABLED: 'true'
           PUBLIC_ADSENSE_MANUAL_ONLY: 'true'
+          PUBLIC_QUALITY_CORE_REVIEWED: 'true'
           PUBLIC_ADSENSE_HOME_FEED_SLOT: '1000000001'
           PUBLIC_ADSENSE_HOME_CONTENT_SLOT: '1000000002'
           PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT: '1000000003'

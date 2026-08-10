@@ -13,6 +13,8 @@ characters: ["Fıstık (sincap)","Dede Kerim","Orman sakinleri"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   7–9 yaş etiketi, Fıstık'ın bir görevi heyecanla kabul edip günlük yaşamında unutmasını, fidanın sararan yapraklarından ihtiyacı fark etmesini ve bakım planını yeniden düzenlemesini anlamaya uygundur. Canlı bir fidanın çocuğa “emanet” edilmesi daha küçük yaşlarda aşırı sorumluluk hissi yaratabilir. Yetişkin, bitkinin bakımından son kertede kendisinin sorumlu olduğunu ve çocuk unuttuğunda canlının zarar görmesine izin vermeden hatırlatma veya birlikte bakım sağlaması gerektiğini açıkça belirtmelidir.

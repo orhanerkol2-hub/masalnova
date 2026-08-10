@@ -13,6 +13,8 @@ characters: ["Keloğlan","Tilki Turan","Padişah"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "Havuçların sahipliği, iki tarafı dinleme ve yetersiz kanıtla karar verme sorunu 7-9 yaşta daha anlamlı bir adalet konuşması açar. Keloğlan tavşanın iddiasını ve Tilki Turan'ın açıklamasını ayrı ayrı dinler, sonra olay yerine gider. Ancak ayak izlerinin bahçenin ortasına uzanmaması tek başına kesin kanıt değildir; bu ayrıntı, “Bir karar vermeden başka hangi bilgi gerekir?” sorusuyla eleştirel düşünmeye çevrilmelidir."
 parentEmotionalNotes: "Havuçların izinsiz alınması, tavşanın ağlaması ve tilkinin kalabalık önünde yüzünün kızarması çocukta kayıp veya suçlanma duygusu uyandırabilir. Kimsenin tek bir iddia üzerine suçlu ilan edilmemesi, yanlış yapanın da aşağılanmaması gerektiğini söyleyin. Gerçek anlaşmazlıklarda çocukların hâkim rolü üstlenmesi beklenmez; güvenilir bir yetişkin tarafları dinlemeli ve güvenliği sağlamalıdır. Tavşanın ağladığı ya da Turan’ın utandığı yerde çocuk isterse durup taraflardan yalnız birinin bakışını konuşabilirsiniz."

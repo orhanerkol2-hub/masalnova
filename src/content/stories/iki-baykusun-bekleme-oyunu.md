@@ -13,6 +13,8 @@ characters: ["Huhu (yaşlı baykuş)","Tik (küçük baykuş)"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   5–7 yaş çocukları Tik'in hızlı dalışlarının balıkları ürkütmesiyle Huhu'nun su halkalarını gözlemesi arasındaki belirgin neden-sonuç ilişkisini takip edebilir. “Beklemek hiçbir şey yapmamak değildir” düşüncesi, dikkat ve doğru zaman kavramlarını konuşmaya uygundur. Baykuşların balık avlaması masalsı bir doğa sahnesidir; çocukların göle yaklaşması, tek ayakta kıyıda durması veya suya dalması için örnek değildir.

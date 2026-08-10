@@ -3,9 +3,10 @@ title: "3–5 Yaş İçin Masal Nasıl Seçilir?"
 shortDescription: "Okuma süresi, dil, duygu yoğunluğu ve çocuğun ilgisini birlikte değerlendirerek 3–5 yaşa uygun masal seçmek için pratik bir ebeveyn rehberi."
 seoTitle: "3–5 Yaş İçin Masal Nasıl Seçilir? | Ebeveyn Rehberi"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 6
 relatedStoryIds:
   - "ayi-sofraya-cagiran-tilki"

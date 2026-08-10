@@ -3,9 +3,10 @@ title: "Türkçe Kelime Gelişimi İçin Masal Okuma Önerileri"
 shortDescription: "Masal okurken kelimeleri sınava dönüştürmeden seçmek, açıklamak, canlandırmak ve günlük konuşmaya taşımak için uygulanabilir bir aile rutini."
 seoTitle: "Türkçe Kelime Gelişimi İçin Masal Okuma | MasalNova"
 author: "masalnova-redaksiyonu"
-editorialStatus: "needs_review"
+reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
+editorialStatus: "approved"
 publishedAt: "2026-08-06"
-modifiedAt: "2026-08-06"
+modifiedAt: "2026-08-10"
 readingTime: 8
 relatedStoryIds: ["ninenin-yagmur-sarkisi", "keloglanin-merakli-yagmur-gecesi", "ayi-bruno-ile-kopek-minnosun-ay-isigi-yolculugu"]
 sources:

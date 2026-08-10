@@ -13,6 +13,8 @@ characters: ["Horoz Kırmızıbey","Kedi Pamuk","Tavuk Sarıgül"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları beş mısırdan üçünün eksilmesi, yanlış bir ilk suçlama, ayak izleri ve yuvadaki taneler gibi birbirine bağlı ipuçlarını takip edebilir. Öykü, “gördüm”, “tahmin ettim” ve “kanıt buldum” arasındaki farkı konuşmak için uygundur. Gerçek bir kayıp durumda çocuğun tek başına iz sürmesi değil, güvenilir yetişkine haber vermesi gerektiğini belirtin.

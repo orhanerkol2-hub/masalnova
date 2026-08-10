@@ -16,6 +16,8 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yuksek"
 parentAgeGuidance: >-
   Bu klasik uyarlama 5–7 yaş için daha uygundur. Davet edilmeyen perinin ölüm çağrışımı taşıyan laneti, Aurora'nın parmağını iğneye batırması, yüz yıllık ayrılık ve bütün sarayın istemeden uyutulması 3–4 yaş için ağır olabilir. Metin iğneyi yalnızca hafif bir batma olarak anlatsa da kayıp zaman fikri güçlüdür. Beş yaş üzerindeki çocukla lanetin masalsı olduğunu, gerçek kesici araçların yetişkin gözetimi gerektirdiğini ve Aurora'nın merakının perinin verdiği zararın nedeni olmadığını konuşabilirsiniz.

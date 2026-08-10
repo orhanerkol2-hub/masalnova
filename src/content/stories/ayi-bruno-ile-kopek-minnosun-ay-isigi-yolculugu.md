@@ -13,6 +13,8 @@ characters: ["Ayı Bruno","Köpek Minnoş"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları Minnoş'un hızla çarpması, Bruno'nun ayrıntıları fark etmesi ve tavuğu farklı becerilerle birlikte bulmaları üzerinden hız, dikkat ve işbirliğini karşılaştırabilir. İki karakterin de yöntemi belirli anda işe yarar. Gece ormanında kayıp hayvan aramak masal olayıdır; çocukların karanlık patikaya çıkmaması ve kayıp hayvanı bir yetişkine bildirmesi gerektiğini söyleyin.

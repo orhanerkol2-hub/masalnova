@@ -88,7 +88,7 @@ const jsonLd = [
               <article class:list={['guide-card', { 'guide-card--featured': index === 0 }]}>
                 <p class="guide-card__number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</p>
                 <div>
-                  <p class="guide-card__meta">{guide.data.readingTime} dk okuma · {author?.name ?? 'MasalNova redaksiyon taslağı'}{guide.data.editorialStatus !== 'approved' ? ' · İncelemede' : ''}</p>
+                  <p class="guide-card__meta">{guide.data.readingTime} dk okuma · {author?.name ?? (guide.data.editorialStatus === 'approved' ? 'MasalNova redaksiyonu' : 'MasalNova redaksiyon taslağı')}{guide.data.editorialStatus !== 'approved' ? ' · İncelemede' : ''}</p>
                   <h2><a href={parentGuidePath(guide)}>{guide.data.title}</a></h2>
                   <p>{guide.data.shortDescription}</p>
                   <a class="guide-card__link" href={parentGuidePath(guide)}>Rehberi oku <i class="ph ph-arrow-right" aria-hidden="true"></i></a>

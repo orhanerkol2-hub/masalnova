@@ -13,6 +13,8 @@ characters: ["Keloğlan","Kar Devi","Nine Havva"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "Kar fırtınası, yiyecek azalması, mağara ve dev karşılaşması nedeniyle 5-7 yaşta yetişkin eşliğiyle okunmalıdır. Çocuk Keloğlan'ın Nine Havva'nın ihtiyacını duymasını, devle doğrudan ama saygılı konuşmasını ve söylentinin gerçek çıkmamasını izleyebilir. Bununla birlikte kahramanın tek başına fırtınaya çıkması fantastik bir cesaret sahnesidir; gerçek bir çocuk için örnek güvenlik davranışı değildir."
 parentEmotionalNotes: "“Un tükendi”, kar altında kapanan evler ve insanları taşa çevirdiği söylenen dev güçlü kaygı yaratabilir; bu nedenle en yoğun sahne orta düzeydedir. Okumadan önce devin yardım edeceğini söylemek sürprizi azaltabilir. Gerçek yaşamda tipi sırasında dışarı çıkılmaması, mağaraya girilmemesi, tanımadığımız birinin sırtına binilmemesi ve yiyecek sıkıntısında güvenilir yetişkinlerin yardım ağına başvurulması gerektiğini belirtin. Fırtına ya da dev söylentisi ağır gelirse ara verin veya devin yardım ettiği bölümü önceden birlikte okuyun."

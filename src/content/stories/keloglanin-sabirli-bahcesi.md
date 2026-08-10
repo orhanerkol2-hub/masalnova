@@ -13,6 +13,8 @@ characters: ["Keloğlan","Padişah","Yaşlı Kadın Fatma Nine"]
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "Tohumun haftalar ve aylar içinde değişmesi, fazla sulamanın zarar vermesi ve bakım çizelgesi 7-9 yaşta süreç takibine uygundur. Çocuklar Keloğlan'ın toprağı ve güneşi incelemesini, komşuların küçük fideyle alay etmesini ve padişahın köklere bakmasını karşılaştırabilir. Metin masalsı bir yarışmadır; her tohumun aynı hızda ve aynı koşulda büyümediği, sonuçların yalnız sabra bağlı olmadığı açıklanmalıdır."
 parentEmotionalNotes: "Keloğlan'ın kel kafası ve küçük fidesi üzerinden alay edilmesi, görünüşü ya da gelişim hızı karşılaştırılan çocuklara dokunabilir. “Hiç kırılmaz” ifadesi dayanıklılık ölçüsü değildir; üzülmek ve destek istemek de uygundur. Padişahın tek kazanan seçmesi rekabet baskısı yaratabilir. Başarısız filizlerin sahiplerini sabırsız veya kötü diye etiketlemeyin; bakım hataları bilgiyle düzeltilebilir. Yarışma veya alay bölümü çocuğu sıkarsa okumayı bırakmak ya da doğrudan sulama çizelgesine geçmek uygundur."

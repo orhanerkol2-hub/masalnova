@@ -13,6 +13,8 @@ characters: ["Turna adlı yavru fil","Midye Mira","Yengeç Kerem","Kıyı Ustala
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları Turna'nın hafif malzemelerle model kurması, Mira'nın dalga yönünü işaretlemesi, Kerem'in fikrini değiştirmesi ve kıyı ustalarının gerçek yapıyı güvenlik hesabıyla inşa etmesi arasındaki görev ayrımını izleyebilir. Liman ve dalgakıranı “kayıkları dalgadan koruyan, uzmanların planladığı yer” diye açıklayın. Çocukların sahilde yapı kurmaması, ağır taş taşımaması ve suya yaklaşmaması gerektiğini belirtin.

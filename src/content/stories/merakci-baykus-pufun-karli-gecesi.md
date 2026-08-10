@@ -13,6 +13,8 @@ characters: ["Puf (baykuş)","Anne Baykuş","Fısıltı (yetişkin orman rehberi
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   5–7 yaş çocukları Puf'un uzaktaki ışığı annesine bildirmesi, Ceviz'in çöken yuvasında durmaları ve ışığın yetişkin rehber Fısıltı'nın feneri çıkması sırasını takip edebilir. Merak ile öncelik değiştirme konuşulabilir. Karlı gecede bilinmeyen ışığı izlemek ve çöken bir yuvaya yaklaşmak çocuk işi değildir; öyküde güvenlik ve barınma sorumluluğunu yetişkinler üstlenir.

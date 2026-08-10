@@ -16,6 +16,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: >-
   7–9 yaş etiketi, Sedef'in suçlamadan ipucu toplamasını, Musa Reis'in utanç nedeniyle hatasını geciktirmesini ve inciyi geri verme planındaki görev paylaşımını tartışabilen çocuklara uygundur. Mercan bahçesinin solması ve köyün geçiminin tehlikeye girmesi soyut çevre sonuçları içerir. Dalış sahnesinde Sedef'in tek başına suya girmemesi, ekipmanın kontrol edilmesi, babasının teknede olması ve Musa Reis'in güvenlik ipi kullanması özellikle görünür kılınmalıdır; bu ayrıntılar macerayı gerçek bir çocuk dalış talimatına dönüştürmez.

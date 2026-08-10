@@ -14,6 +14,8 @@ isNew: true
 author: "muhammet-karayigit"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yuksek"
 parentAgeGuidance: >-
   Bu uzun klasik uyarlama 7–9 yaş için uygundur; çünkü olayları izlemek, üvey annenin çocukları ormanda bırakma kararını yetişkinlerin ağır bir hatası olarak değerlendirmek ve Hansel'in çakıl taşı ile kemik planlarını anlamak daha gelişmiş bir neden-sonuç takibi ister. Şeker evin tuzağa dönüşmesi, Hansel'in kafese kapatılması, cadının onu yeme tehdidi ve Gretel'in cadıyı fırına itmesi küçük çocuklar için yoğun olabilir. İlk okumada yetişkinin metni önceden gözden geçirmesi ve gerekirse cadının yenildiği bölümü kısaltması önerilir.

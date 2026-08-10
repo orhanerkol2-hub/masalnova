@@ -13,6 +13,8 @@ characters: ["Ceren (tavşan yavrusu)","Baykuş Sabri (yardımsever komşu)","K�
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: >-
   5–7 yaş etiketi, Ceren'in köprüye ilişkin “sallanırsa” ve “suya düşersem” düşüncelerini, Sabri Baykuş'un tahtaları birlikte kontrol etmesini ve adım adım ilerlemeyi değerlendirmeye uygundur. Köprü gerçek bir güvenlik riski taşıyabileceğinden “korkuya rağmen mutlaka geçmek” mesajı verilmemelidir. Hikâyede köprünün sağlam olduğu önceden incelenir ve destekçi yanında kalır. Gerçek bir köprüde korku varsa geçmemek, başka yol seçmek veya sorumlu bir yetişkinin değerlendirmesini beklemek de doğru karardır.

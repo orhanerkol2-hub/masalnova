@@ -16,6 +16,8 @@ isNew: true
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "orta"
 parentAgeGuidance: "Bu masal, söz vermek ile bir işi gerçekten yapabilecek olmak arasındaki farkı tartışabildiği için 7-9 yaşa uygundur. Keloğlan'ın Meryem Nine'nin odunlarını unutması, özür dilemesi, odunları yağmurdan koruyacak biçimde istiflemesi ve sonra örtüyü yeniden bağlaması; sorumluluğu tek bir “özür” cümlesinden daha somut gösterir. Konuşan gölge fantastik bir vicdan imgesidir; çocukla gölgenin gerçek olmadığı, Keloğlan'ın kendi rahatsızlığını temsil ettiği konuşulabilir."
 parentEmotionalNotes: "Gölgenin kaybolması ve annenin “gölgesiz insan yarım insan gibidir” sözü bazı çocuklarda bir hata yüzünden eksik ya da sevilmez olma kaygısı doğurabilir. Okurken “Keloğlan yanlış yaptı ama değeri azalmadı; neyi onarabileceğini düşündü” diye açıklayın. Meryem Nine'nin onu başkalarına “sözünde durmaz” diye anlatması da utandırıcı gelebilir; bir insanı tek davranışla etiketlememenin önemini vurgulayın. Çocuk gölgenin kaybolduğu bölümde durmak isterse önce gölgenin geri döneceğini söyleyebilir veya sahneyi atlayabilirsiniz."

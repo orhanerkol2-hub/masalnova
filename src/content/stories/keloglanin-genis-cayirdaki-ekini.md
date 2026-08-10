@@ -13,6 +13,8 @@ characters: ["Keloğlan","Padişah","Nine Ayşe"]
 author: "aylin-karabektas"
 reviewedBy: ["aylin-karabektas", "muhammet-karayigit"]
 editorialStatus: "approved"
+qualityTier: core
+qualityReviewedAt: "2026-08-10"
 emotionalIntensity: "yumusak"
 parentAgeGuidance: "7-9 yaş çocukları toprağın nemi, güneş yönü, tohum seçimi ve düzenli bakım arasındaki neden-sonuç bağını izleyebilir. Köylülerin Keloğlan'ı çayırda yatıyor diye “tembel” sanması ile onun aslında gözlem yapması, görünmeyen emeği konuşmaya uygundur. Padişahın yarışması ve ödülü masalsı çerçevedir; tarım başarısının yalnız bir kişinin zekâsına değil bilgi, koşul ve ortak emeğe bağlı olabileceği eklenmelidir."
 parentEmotionalNotes: "Alay edilmek, işe yaramaz sanılmak ve yoksul ailelerden söz edilmesi hassasiyet yaratabilir. Keloğlan'ın değerini ödül kazanması kanıtlamaz; ekin başarısız olsaydı da düşünmesi ve emek vermesi anlamlı olurdu. Gün doğumundan geceye kadar çalışma gerçek bir çocuk için beklenen tempo değildir. Tarım aletleri, yoğun güneş ve uzun çalışma yetişkin sorumluluğundadır; etkinlikler küçük ve güvenli tutulmalıdır. Alay sözleri rahatsız ederse onları atlayıp Nine Ayşe’nin tohum bilgisiyle devam edebilirsiniz."
