@@ -8,6 +8,7 @@
     "build": "astro build",
     "build:optimized": "MASALNOVA_OUT_DIR=./.homepage-discovery astro build && MASALNOVA_HOMEPAGE_SOURCE_DIR=./.homepage-discovery node scripts/generate-homepage-images.mjs && astro build",
     "preview": "astro preview",
+    "test:story-discovery": "node --test tests/story-discovery.test.mjs",
     "boyama:import": "node scripts/import-coloring-sheets.mjs",
     "boyama:process": "node scripts/process-coloring-pages.mjs",
     "gen:covers": "node scripts/generate-cover-briefs.mjs",

@@ -23,7 +23,7 @@ export interface StoryMetadata {
 let storyIndexPromise: Promise<StoryMetadata[]> | undefined;
 
 export function loadStoryIndex(): Promise<StoryMetadata[]> {
-  storyIndexPromise ??= fetch('/story-index.json?v=3', {
+  storyIndexPromise ??= fetch('/story-index.json?v=4', {
     headers: { Accept: 'application/json' },
   }).then(async (response) => {
     if (!response.ok) throw new Error(`Story index could not be loaded (${response.status})`);
@@ -221,17 +221,6 @@ function ageRangeIncludes(group: string, requestedAge: number): boolean {
     && requestedAge <= maximum;
 }
 
-function ageRangesOverlap(left: string, right: string): boolean {
-  const [leftMinimum, leftMaximum = leftMinimum] = left.split('-').map(Number);
-  const [rightMinimum, rightMaximum = rightMinimum] = right.split('-').map(Number);
-  return Number.isFinite(leftMinimum)
-    && Number.isFinite(leftMaximum)
-    && Number.isFinite(rightMinimum)
-    && Number.isFinite(rightMaximum)
-    && leftMinimum <= rightMaximum
-    && rightMinimum <= leftMaximum;
-}
-
 export function storyMatchesAge(story: StoryMetadata, value?: string | null): boolean {
   if (!value) return true;
 
@@ -240,7 +229,7 @@ export function storyMatchesAge(story: StoryMetadata, value?: string | null): bo
     return (story.ageGroups ?? []).some((group) => ageRangeIncludes(group, requestedAge));
   }
 
-  return (story.ageGroups ?? []).some((group) => ageRangesOverlap(group, value));
+  return (story.ageGroups ?? []).includes(value);
 }
 
 export function storyMatchesDuration(story: StoryMetadata, value?: string | null): boolean {

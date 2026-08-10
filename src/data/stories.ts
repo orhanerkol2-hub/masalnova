@@ -2,6 +2,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import { durationBucketForMinutes } from './taxonomy';
 import {
   isStoryContentSubstantial,
+  isStoryDiscoveryEligible,
   isStoryIndexingEligible,
   storyWordCount,
 } from '../lib/story-quality.mjs';
@@ -28,8 +29,8 @@ export async function getAllStories(): Promise<Story[]> {
 }
 
 /**
- * Only approved and sufficiently complete stories for public collections.
- * Short archive pages remain reachable, but stay out of discovery until revised.
+ * Only approved and sufficiently complete stories for search-engine-indexable
+ * collections. Internal discovery has a separate, deliberately broader feed.
  */
 export async function getStories(): Promise<Story[]> {
   const all = await getAllStories();
@@ -45,9 +46,32 @@ export async function getStories(): Promise<Story[]> {
   });
 }
 
+/**
+ * Approved stories that may be shown in MasalNova's internal discovery UI.
+ * This does not make a story SEO-indexable or eligible for advertising.
+ */
+export async function getDiscoverableStories(): Promise<Story[]> {
+  const all = await getAllStories();
+  return all.filter((story) => {
+    const substantial = isStoryContentSubstantial(story.body, story.data);
+    return isStoryDiscoveryEligible({
+      status: story.data.editorialStatus,
+      substantial,
+      words: storyWordCount(story.body),
+      ...story.data,
+    });
+  });
+}
+
 /** Approved stories that belong to the Masallar catalogue. */
 export async function getMasalStories(): Promise<Story[]> {
   const all = await getStories();
+  return all.filter((story) => !isIslamicStory(story));
+}
+
+/** Internally discoverable stories in the Masallar catalogue. */
+export async function getDiscoverableMasalStories(): Promise<Story[]> {
+  const all = await getDiscoverableStories();
   return all.filter((story) => !isIslamicStory(story));
 }
 

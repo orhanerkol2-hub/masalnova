@@ -464,9 +464,10 @@ const fallbackStory: StoryMetadata | undefined = fallbackEntry ? {
     const filters = currentFilters();
     const queryMatches = term ? searchStories(stories, query) : stories;
     const exactStoryMatches = catalogueLimited ? [] : filterStories(queryMatches, filters);
+    const hasExactCategoryFilter = Boolean(filters.topic?.startsWith('category_'));
     const alternative = catalogueLimited
       ? stories[0]
-      : exactStoryMatches.length === 0
+      : exactStoryMatches.length === 0 && !hasExactCategoryFilter
         ? findStoryAlternative(stories, query, filters)
         : undefined;
     const showingAlternative = Boolean(alternative) && exactStoryMatches.length === 0;
@@ -520,36 +521,23 @@ const fallbackStory: StoryMetadata | undefined = fallbackEntry ? {
   function applyParamsFromUrl() {
     const params = new URLSearchParams(location.search);
     q.value = params.get('q') ?? '';
-    const freeSearchMode = Boolean(q.value.trim());
 
     filterInputs.forEach((input) => {
-      const candidate = freeSearchMode ? '' : params.get(input.name) ?? '';
+      const candidate = params.get(input.name) ?? '';
       input.value = Array.from(input.options).some((option) => option.value === candidate)
         ? candidate
         : '';
     });
-
-    if (freeSearchMode) {
-      filterInputs.forEach((input) => params.delete(input.name));
-      const search = params.toString();
-      history.replaceState({}, '', `${location.pathname}${search ? `?${search}` : ''}${location.hash}`);
-    }
   }
 
   applyParamsFromUrl();
   q.addEventListener('input', () => {
-    if (q.value.trim()) {
-      filterInputs.forEach((input) => { input.value = ''; });
-    }
     cancelAnimationFrame(searchFrame);
     searchFrame = requestAnimationFrame(() => apply());
   });
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (q.value.trim()) {
-      filterInputs.forEach((input) => { input.value = ''; });
-    }
     apply();
     q.focus();
   });
@@ -562,7 +550,6 @@ const fallbackStory: StoryMetadata | undefined = fallbackEntry ? {
 
   filterInputs.forEach((input) => {
     input.addEventListener('change', () => {
-      q.value = '';
       apply();
     });
   });

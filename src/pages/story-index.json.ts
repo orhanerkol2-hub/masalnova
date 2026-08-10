@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getMasalStories, storyPath } from '../data/stories';
+import { getDiscoverableMasalStories, storyPath } from '../data/stories';
 import {
   ageLabel,
   durationBucketForMinutes,
@@ -13,7 +13,7 @@ export const prerender = true;
  * Deliberately exposes card metadata only—never the Markdown story bodies.
  */
 export const GET: APIRoute = async () => {
-  const stories = await getMasalStories();
+  const stories = await getDiscoverableMasalStories();
   const items = stories.map((story) => ({
     id: story.id,
     href: storyPath(story),

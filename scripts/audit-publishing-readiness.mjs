@@ -6,6 +6,7 @@ import {
   hasIndividualParentGuide,
   hasParentGuideContent,
   isStoryContentSubstantial,
+  isStoryDiscoveryEligible,
   isStoryIndexingEligible,
   isStoryMonetizationEligible,
   markdownBodyFromSource,
@@ -270,6 +271,7 @@ for (const file of files) {
     substantial: isStoryContentSubstantial(body, qualityContext),
   };
   story.indexable = isStoryIndexingEligible({ ...story, qualityCoreReleased });
+  story.discoverable = isStoryDiscoveryEligible(story);
   story.parentGuideDraft = hasParentGuideContent(story);
   story.individualParentGuide = hasIndividualParentGuide(story);
   story.parentGuideWords = parentGuideWordCount(story);
@@ -549,6 +551,9 @@ for (const [date, group] of publicationBatches) {
 
 const approved = stories.filter(({ status }) => status === 'approved');
 const publicStories = stories.filter(({ indexable }) => indexable);
+const discoverableStories = stories.filter(({ discoverable }) => discoverable);
+const discoverableUykuStories = discoverableStories.filter(({ categories, section }) =>
+  section === 'masallar' && categories.includes('uyku'));
 const qualityCoreStories = stories.filter(({ qualityTier }) => qualityTier === 'core');
 const parentGuideDraftStories = stories.filter(({ parentGuideDraft }) => parentGuideDraft);
 const completeCoreStories = qualityCoreStories.filter(({ individualParentGuide }) => individualParentGuide);
@@ -561,6 +566,15 @@ const completedQualityCandidates = qualityCoreCandidates.filter(({ parentGuideDr
   parentGuideDraft && emotionalIntensityValues.has(emotionalIntensity));
 const humanReviewedQualityCandidates = qualityCoreCandidates.filter(({ individualParentGuide, qualityTier }) =>
   individualParentGuide && qualityTier === 'core');
+
+if (discoverableUykuStories.length === 0) {
+  hardErrors.push('Sichtbare Uyku-Kategorie hat keine intern auffindbaren Geschichten.');
+} else if (discoverableUykuStories.length < 12) {
+  warnings.push(`Uyku-Kategorie hat nur ${discoverableUykuStories.length}/12 intern auffindbare Geschichten.`);
+}
+if (discoverableUykuStories.some((story) => isStoryMonetizationEligible(story))) {
+  hardErrors.push('Mindestens eine intern auffindbare Uyku-Geschichte ist fälschlich monetarisierbar.');
+}
 
 if (qualityCoreReleased && (qualityCoreStories.length < 60 || qualityCoreStories.length > 100)) {
   hardErrors.push(`Qualitätskern-Freigabe verlangt 60–100 manuell klassifizierte Core-Stories; gefunden: ${qualityCoreStories.length}.`);
@@ -846,6 +860,7 @@ if (verifyBuiltOutput) {
 console.log('MasalNova Publishing Audit');
 console.log(`Geschichten gesamt: ${stories.length}`);
 console.log(`Öffentlich indexierbar/empfohlen: ${publicStories.length}`);
+console.log(`Intern auffindbar: ${discoverableStories.length} (Uyku: ${discoverableUykuStories.length})`);
 console.log(`Manuell klassifizierter Qualitätskern: ${qualityCoreStories.length} (mit individuellem Elternbereich: ${completeCoreStories.length})`);
 console.log(`Story-spezifische Elternbereiche ausgearbeitet: ${parentGuideDraftStories.length}`);
 console.log(`Qualitätskern-Kandidaten inhaltlich ausgearbeitet: ${completedQualityCandidates.length}/${candidateCount} (menschlich final geprüft: ${humanReviewedQualityCandidates.length})`);

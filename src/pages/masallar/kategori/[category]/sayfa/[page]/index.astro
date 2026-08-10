@@ -1,13 +1,15 @@
 ---
 import CategoryListingPage from '../../../../../../components/CategoryListingPage.astro';
-import { getMasalStories } from '../../../../../../data/stories';
+import { getDiscoverableMasalStories, getMasalStories } from '../../../../../../data/stories';
 import { storyCategories } from '../../../../../../data/taxonomy';
 import { CATEGORY_PAGE_SIZE, categorySeoCopy } from '../../../../../../data/category-pages';
 
 export async function getStaticPaths() {
   const allStories = await getMasalStories();
+  const discoverableStories = await getDiscoverableMasalStories();
   return storyCategories.flatMap((category) => {
-    const matchingStories = allStories.filter((story) => story.data.categories.includes(category.key));
+    const categoryStories = category.key === 'uyku' ? discoverableStories : allStories;
+    const matchingStories = categoryStories.filter((story) => story.data.categories.includes(category.key));
     const pageCount = Math.ceil(matchingStories.length / CATEGORY_PAGE_SIZE);
     return Array.from({ length: Math.max(0, pageCount - 1) }, (_, index) => {
       const page = index + 2;
