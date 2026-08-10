@@ -37,11 +37,15 @@ discussionQuestions: ["Scene-specific question 1?", "Scene-specific question 2?"
 activity: "One story-specific follow-up activity."
 ```
 
-Until classification is complete, unclassified short, bedtime, sub-320-word
-and under-three-minute stories are excluded from discovery as an interim risk
-control. `review` and `retire` are always excluded. A story can request ads only
-after explicit `core` classification and completion of the individual parent
-fields above. These are MasalNova controls, not Google word-count rules.
+Until classification is complete, unclassified short, sub-320-word and
+under-three-minute stories are excluded from internal discovery as an interim
+risk control. Approved and substantial bedtime stories that clear the ordinary
+320-word/three-minute floor may appear in MasalNova's internal category and
+filter surfaces, but remain `noindex`, outside the sitemap and ad-free until an
+explicit `core` classification and real `qualityReviewedAt` are documented.
+`review` and `retire` are always excluded. A story can request ads only after
+explicit `core` classification and completion of the individual parent fields
+above. These are MasalNova controls, not Google word-count rules.
 
 ## Ebeveyn Rehberi release gate
 
@@ -77,10 +81,12 @@ real `qualityReviewedAt` date be added. Without both values, the story remains
 ad-free and an incomplete `core` classification remains `noindex`, regardless
 of its older editorial status.
 
-When `PUBLIC_QUALITY_CORE_REVIEWED=true`, the transitional indexing fallback
-also closes: regular stories without `qualityTier: core` become `noindex` and
-leave sitemap and discovery surfaces. Properly sourced Islamic retellings keep
-their separate source-based eligibility gate.
+When `PUBLIC_QUALITY_CORE_REVIEWED=true`, the transitional search-engine
+indexing fallback also closes: regular stories without `qualityTier: core`
+become `noindex` and leave the sitemap. The stricter internal discovery floor
+continues to keep useful, approved bedtime stories findable without making them
+indexable or monetisable. Properly sourced Islamic retellings keep their
+separate source-based eligibility gate.
 
 ## Search placeholder removal
 

@@ -14,8 +14,11 @@ export const STORY_MINIMUM_WORDS = Object.freeze({
 });
 
 export const MIN_INDEXABLE_STORY_WORDS = STORY_MINIMUM_WORDS.regularStory;
+export const STORY_DISCOVERY_MINIMUM_WORDS = 320;
+export const STORY_DISCOVERY_MINIMUM_READING_MINUTES = 3;
 export const STORY_AD_MINIMUM_WORDS = 320;
 export const STORY_AD_MINIMUM_READING_MINUTES = 3;
+export const STORY_DISCOVERY_EXCLUDED_CATEGORIES = Object.freeze(['kisa']);
 export const STORY_AD_EXCLUDED_CATEGORIES = Object.freeze(['kisa', 'uyku']);
 export const STORY_QUALITY_TIERS = Object.freeze(['core', 'review', 'retire']);
 export const MIN_INDIVIDUAL_PARENT_GUIDE_WORDS = 180;
@@ -81,11 +84,11 @@ export function hasIndividualParentGuide(context = {}) {
 }
 
 /**
- * Interim site-wide quality gate. Explicit review/retire decisions always
- * remove a story from discovery. Explicit core decisions restore discovery
- * after the ordinary editorial and format checks. Until every URL is manually
+ * Search-engine indexing quality gate. Explicit review/retire decisions always
+ * remove a story from indexing. Explicit core decisions restore indexing after
+ * the ordinary editorial and format checks. Until every URL is manually
  * classified, only substantial 3+ minute regular stories and sourced
- * retellings remain indexable; short and bedtime inventory is held back.
+ * retellings remain indexable; short and bedtime inventory stays noindex.
  */
 export function isStoryIndexingEligible({
   status,
@@ -110,6 +113,38 @@ export function isStoryIndexingEligible({
   return Number(words) >= STORY_AD_MINIMUM_WORDS
     && Number(readingTime) >= STORY_AD_MINIMUM_READING_MINUTES
     && !categories.some((category) => STORY_AD_EXCLUDED_CATEGORIES.includes(category));
+}
+
+/**
+ * Internal discovery is intentionally broader than search-engine indexing.
+ * Approved, substantial bedtime stories may appear in MasalNova's category
+ * and filter surfaces once they meet the ordinary 320-word/3-minute floor,
+ * while the separate indexing and monetisation gates keep them noindex and
+ * ad-free until a real quality-core review is documented.
+ */
+export function isStoryDiscoveryEligible({
+  status,
+  substantial = false,
+  qualityTier,
+  qualityReviewedAt,
+  section = 'masallar',
+  categories = [],
+  words = 0,
+  readingTime = 0,
+  sourceCitation,
+  sourceUrl,
+} = {}) {
+  if (status !== 'approved' || !substantial) return false;
+  if (qualityTier === 'review' || qualityTier === 'retire') return false;
+  if (isSourcedRetelling({ section, sourceCitation, sourceUrl })) return true;
+
+  if (qualityTier === 'core') {
+    return Boolean(String(qualityReviewedAt ?? '').trim());
+  }
+
+  return Number(words) >= STORY_DISCOVERY_MINIMUM_WORDS
+    && Number(readingTime) >= STORY_DISCOVERY_MINIMUM_READING_MINUTES
+    && !categories.some((category) => STORY_DISCOVERY_EXCLUDED_CATEGORIES.includes(category));
 }
 
 /**

@@ -3,7 +3,12 @@ import { existsSync } from 'node:fs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
 import StoryCard from '../components/StoryCard.astro';
-import { getIslamicStories, getMasalStories, popularStories } from '../data/stories';
+import {
+  getDiscoverableMasalStories,
+  getIslamicStories,
+  getMasalStories,
+  popularStories,
+} from '../data/stories';
 import { getParentGuides } from '../data/guides';
 import {
   ageLabel,
@@ -15,6 +20,7 @@ import {
 } from '../lib/daily-story';
 
 const stories = await getMasalStories();
+const discoverableStories = await getDiscoverableMasalStories();
 const islamicStories = await getIslamicStories();
 const guideHubReady = (await getParentGuides()).length >= 8;
 const buildNow = new Date();
@@ -109,7 +115,7 @@ const categoryLinks = [
     label: 'Uyku masalları',
     description: 'Sakin bir gece için',
     icon: 'moon-stars',
-    count: stories.filter((story) => story.data.categories.includes('uyku')).length,
+    count: discoverableStories.filter((story) => story.data.categories.includes('uyku')).length,
     itemLabel: 'masal',
   },
   {
@@ -1036,32 +1042,26 @@ const tonightMediumCover = tonightStory
     });
   }
 
-  function resultsUrl(mode: 'search' | 'filter') {
+  function resultsUrl() {
     const url = new URL('/ara/', location.origin);
-
-    if (mode === 'search') {
-      const query = storySearchInput?.value.trim();
-      if (query) url.searchParams.set('q', query);
-    } else {
-      preferenceInputs.forEach((input) => {
-        if (input.value) url.searchParams.set(input.name, input.value);
-      });
-    }
+    const query = storySearchInput?.value.trim();
+    if (query) url.searchParams.set('q', query);
+    preferenceInputs.forEach((input) => {
+      if (input.value) url.searchParams.set(input.name, input.value);
+    });
 
     return `${url.pathname}${url.search}`;
   }
 
   discoveryForm?.addEventListener('submit', (event) => {
     event.preventDefault();
-    const mode = storySearchInput?.value.trim() ? 'search' : 'filter';
-    location.assign(resultsUrl(mode));
+    location.assign(resultsUrl());
   });
 
   preferenceInputs.forEach((input) => {
     input.addEventListener('change', () => {
       saveCurrentPreferences();
-      if (storySearchInput) storySearchInput.value = '';
-      location.assign(resultsUrl('filter'));
+      location.assign(resultsUrl());
     });
   });
 
