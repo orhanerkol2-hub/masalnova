@@ -3,6 +3,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const exclusiveGames = [
   {
+    title: 'Keloğlan ve Altın Tavuk: 3D Köy Macerası',
+    url: 'https://masalnova.com/oyna/keloglan-altin-tavuk/',
+  },
+  {
     title: 'Keloğlan ve Ay Çekici',
     url: 'https://masalnova.com/oyna/keloglan-ay-cekici/',
   },
@@ -128,6 +132,26 @@ const jsonLd = [
       </div>
 
       <div class="originals-grid">
+        <a class="exclusive-game golden-chicken-game" href="/oyna/keloglan-altin-tavuk/" aria-label="Keloğlan ve Altın Tavuk 3D Köy Macerası oyununu oyna">
+          <div class="exclusive-visual" aria-hidden="true">
+            <img class="exclusive-background" src="/games/masalnova-covers/keloglan-altin-tavuk-arcade.webp" alt="" width="1672" height="941" />
+            <div class="exclusive-shade"></div>
+            <span class="exclusive-play-cue"><i class="ph ph-play-fill"></i> OYNA</span>
+            <span class="exclusive-ribbon">YENİ · SİNEMATİK 3D</span>
+          </div>
+          <div class="exclusive-copy">
+            <span class="exclusive-label"><i class="ph ph-crown-simple" aria-hidden="true"></i> MasalNova Originals <span class="exclusive-age">· 6–9 yaş</span></span>
+            <h3>Keloğlan ve Altın Tavuk</h3>
+            <p>Tahta arabayı yönlendir, yıldız paraları topla, testileri aş ve altın tavuğa köy meydanından önce yetiş.</p>
+            <ul aria-label="Oyun özellikleri">
+              <li><i class="ph ph-cube" aria-hidden="true"></i> Sinematik 3D</li>
+              <li><i class="ph ph-steering-wheel" aria-hidden="true"></i> 3 şerit</li>
+              <li><i class="ph ph-device-mobile" aria-hidden="true"></i> Mobil uyumlu</li>
+            </ul>
+            <span class="exclusive-cta">Tavuğun peşine düş <i class="ph ph-play-circle" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
         <a class="exclusive-game hammer-game" href="/oyna/keloglan-ay-cekici/" aria-label="Keloğlan ve Ay Çekici oyununu oyna">
           <div class="exclusive-visual" aria-hidden="true">
             <img class="exclusive-background" src="/games/keloglan-ay-cekici/assets/keloglan-ay-cekici-cover.webp" alt="" width="1448" height="1086" />
@@ -429,6 +453,8 @@ const jsonLd = [
   .exclusive-game:hover .exclusive-hero { transform: translateY(-5px) rotate(-1deg); }
   .road-game .exclusive-background { object-position: center; }
   .road-game .exclusive-shade { background: linear-gradient(0deg, rgba(3,17,50,.7), rgba(3,17,50,.05) 62%, transparent); }
+  .golden-chicken-game .exclusive-background { object-position: center 54%; }
+  .golden-chicken-game .exclusive-shade { background: linear-gradient(0deg, rgba(3,13,33,.86), rgba(3,13,33,.08) 68%, transparent); }
   .seed-game .exclusive-background { object-position: center; }
   .seed-game .exclusive-shade { background: linear-gradient(0deg, rgba(6,33,67,.22), transparent 45%); }
   .memory-game .exclusive-background { object-position: center; }

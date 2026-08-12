@@ -3,6 +3,8 @@ export type GameEditorial = {
   play: string;
   tips: string[];
   parent: string;
+  learning?: Array<{ title: string; body: string }>;
+  faq?: Array<{ question: string; answer: string }>;
 };
 
 export const gameEditorial: Record<string, GameEditorial> = {
@@ -59,6 +61,30 @@ export const gameEditorial: Record<string, GameEditorial> = {
     play: 'Bir kartı açmak için dokun veya tıkla, ardından eşini düşündüğün ikinci kartı seç. Görseller aynıysa çift açık kalır; farklıysa kısa süre sonra kapanır. Her bölümde bir kez kullanılabilen ipucu kartları yeniden gösterir. Amaç, mümkün olduğunca az denemeyle bütün çiftleri bulmaktır.',
     tips: ['Kartlar ilk gösterildiğinde tek tek değil, köşeler ve sıralar halinde hatırla.', 'Yeni açılan görselin eşini bilmiyorsan konumunu sesli olarak adlandır.', 'İpucunu hemen değil, birkaç bilinmeyen çift kaldığında kullan.'],
     parent: 'Okuma zorunluluğu olmayan oyun, görsel dikkat ve çalışma belleği için sakin bir alıştırmadır. Bir yetişkin kartların yerini söylemeden karakterleri adlandırabilir veya çocuğun kullandığı hatırlama yöntemini anlatmasını isteyebilir. Kişisel veri ya da çevrim içi skor tablosu kullanılmaz.',
+  },
+  'keloglan-altin-tavuk': {
+    overview: 'Keloğlan ve Altın Tavuk, akşam ışıklarıyla parlayan üç boyutlu bir Anadolu köyünde geçen kısa bir yol macerasıdır. Altın tavuk köy meydanına doğru kaçarken Keloğlan eski tahta arabasıyla peşine düşer. Oyuncu, kıvrımlı taş yolda üç şerit arasında geçiş yapar, testilerin üzerinden atlar ve yıldız paraları toplar. Amaç yalnızca yüksek puan kazanmak değil; kalan mesafeyi sıfıra indirip tavuğa güvenle yetişmektir. Yol boyunca fenerler, taş duvarlar, köy evleri, tekerlek hareketleri, toz parçacıkları ve değişen kamera tepkileri birlikte çalışarak oyuna derinlik verir. Üç farklı yolculuk hızı sayesinde ilk kez oynayanlar daha sakin başlayabilir, kontrolleri öğrendikten sonra daha hareketli bir yarış seçebilir.',
+    play: 'Bilgisayarda A ve D tuşları ya da sağ-sol yön tuşları arabayı komşu şeride geçirir. W, yukarı yön tuşu veya boşluk tuşu Keloğlan’ı testilerin üzerinden zıplatır; P ya da Escape oyunu duraklatır. Telefonda ekranın altındaki yön ve zıplama düğmeleri kullanılabilir, ayrıca sağa-sola kaydırmak şerit değiştirir ve yukarı kaydırmak zıplamayı başlatır. Her toplanan yıldız para puan ve kombo kazandırır. Beş başarılı toplama Ay Şimşeği göstergesini doldurur; güç kendiliğinden devreye girerek kısa süreli hız ve puan artışı sağlar. Bir testiye çarpmak bir cesaret kalbi eksiltir ve komboyu sıfırlar. Üç kalp biterse tur sona erer; köy meydanına kalan mesafe sıfırlandığında altın tavuk yakalanır ve kalan kalpler sonuç puanına eklenir.',
+    tips: [
+      'Bakışını arabanın hemen önüne değil, yolun orta ve uzak bölümüne çevir. Testinin bulunduğu şeridi erken görmek daha yumuşak bir manevra yapmanı sağlar.',
+      'Yıldız para başka şeritteyse son anda yön değiştirmek zorunda değilsin. Önce kalpleri koru; güvenli bir sonraki para ile yeni bir kombo başlatabilirsin.',
+      'Zıplamayı testiriye değmeden hemen önce değil, engel birkaç araba boyu uzaktayken başlat. Böylece iniş sırasında gelen yeni engeli de görürsün.',
+      'Masal Yolculuğu kontrolleri öğrenmek, Köy Yarışı dengeli bir tur oynamak, Ay Şimşeği ise daha hızlı karar vermeyi denemek için uygundur.',
+      'Uzun bir turdan sonra duraklatma düğmesini kullan. Rekor puan kalıcı bir zorunluluk değil; kısa ve rahat denemeler de oyunun tamamıdır.',
+    ],
+    parent: 'Oyun için yaklaşık 6 yaş ve üzeri bir başlangıç önerilir; bu yalnızca genel bir yönlendirmedir. Çocuğun hareketli görüntülere, hız değişimine ve klavye ya da dokunmatik kontrollere alışkanlığı daha önemlidir. İlk turda bir yetişkin yalnızca sağ-sol hareketi ile zıplamayı gösterebilir, ardından hangi yıldızın güvenli olduğuna çocuğun karar vermesine alan bırakabilir. “Şimdi hangi şerit daha açık?” veya “Bu parayı almak mı, kalbi korumak mı daha iyi?” gibi açık sorular planı konuşmaya yardımcı olur. Çarpışmalar çizgi film üslubundadır; karakterler zarar görmez ve tur hemen yeniden denenebilir. Ses ayrı düğmeyle kapatılabilir. Oyun reklam, sohbet, hesap açma, satın alma, ödüllü reklam veya dış bağlantı içermez. Yalnızca en iyi puan tarayıcının yerel hafızasında tutulur; ad, e-posta ya da konum bilgisi istenmez.',
+    learning: [
+      { title: 'İleriye bakma ve zamanlama', body: 'Şerit seçimi ile zıplama arasında kısa bir plan kurmak gerekir. Oyuncu yaklaşan nesnenin yerini, kendi hareket süresini ve iniş anını birlikte değerlendirir.' },
+      { title: 'Risk ve karar verme', body: 'Her yıldız para alınabilir görünse de en güvenli tercih her zaman puan toplamak değildir. Kalbi korumak ile komboyu büyütmek arasındaki seçim, basit bir risk karşılaştırması sunar.' },
+      { title: 'Kendi hızını seçme', body: 'Üç hız seçeneği aynı görevi farklı tempolarda denemeye izin verir. Çocuk daha zor seçeneğe geçmek zorunda kalmadan kendine uygun ritmi bulabilir.' },
+    ],
+    faq: [
+      { question: 'Keloğlan ve Altın Tavuk ücretsiz mi?', answer: 'Evet. Oyun MasalNova tarafından ücretsiz sunulur; oyun içinde satın alma, ücretli eşya, hesap veya ödüllü reklam bulunmaz.' },
+      { question: 'Oyun telefonda ve tablette çalışır mı?', answer: 'Evet. Güncel mobil tarayıcılarda dokunmatik yön düğmeleri, zıplama düğmesi ve kaydırma hareketleri kullanılabilir. Daha geniş bir görüş için tam ekran önerilir.' },
+      { question: 'Oyundaki amaç nedir?', answer: 'Tahta arabayı üç şerit arasında güvenle yönlendirip yıldız paraları toplamak, testilerden kaçmak ve mesafe sayacı sıfırlanmadan önce altın tavuğa ulaşmaktır.' },
+      { question: 'Puanım internete gönderiliyor mu?', answer: 'Hayır. En iyi puan yalnızca kullanılan tarayıcının yerel hafızasına kaydedilir. Çevrim içi skor tablosu veya kişisel profil yoktur.' },
+      { question: 'Çocuğum için hangi hız uygun?', answer: 'İlk tur için Masal Yolculuğu daha sakindir. Kontroller rahat gelirse Köy Yarışı denenebilir; Ay Şimşeği daha hızlı engel akışı isteyen oyuncular içindir.' },
+    ],
   },
   'keloglan-masal-yolu': {
     overview: 'Keloğlan Masal Yolu, Keloğlan ile Karakaçan’ın üç boyutlu bir Anadolu yolunda ilerlediği macera oyunudur. Oyuncu sağa sola geçerek engellerden kaçınır, zıplar ve yol üzerindeki masal öğelerini toplar. Değişen yol düzeni, ileriyi izlemeyi ve doğru şeridi zamanında seçmeyi gerektirir.',
