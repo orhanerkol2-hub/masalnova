@@ -16,12 +16,12 @@ const guideHubReady = (await getParentGuides()).length >= 8;
 const links = [
   { href: '/', label: 'Bugün', key: 'today', icon: 'house' },
   { href: '/masallar/', label: 'Masallar', key: 'discover', icon: 'compass' },
-  ...(guideHubReady ? [{ href: '/ebeveyn-rehberi/', label: 'Ebeveyn Rehberi', key: 'guides', icon: 'users-three' }] : []),
   { href: '/islami-hikayeler/', label: 'İslami Hikâyeler', mobileLabel: 'İslami', key: 'islami', icon: 'mosque' },
   { href: '/videolar/', label: 'Videolar', key: 'videolar', icon: 'play-circle' },
   { href: '/oyunlar/', label: 'Oyunlar', key: 'oyunlar', icon: 'game-controller' },
   { href: '/boyama/', label: 'Boyama', key: 'boyama', icon: 'paint-brush-broad' },
   { href: '/kitapligim/', label: 'Kitaplığım', key: 'library', icon: 'book-bookmark' },
+  ...(guideHubReady ? [{ href: '/ebeveyn-rehberi/', label: 'Ebeveyn Rehberi', key: 'guides', icon: 'users-three' }] : []),
   { href: '/#ayarlar', label: 'Ayarlar', key: 'settings', icon: 'gear' },
 ];
 
@@ -75,6 +75,7 @@ const railCategories = [
     </div>
 
     <div class="rail-legal">
+      <a href="/hakkimizda/">Hakkımızda</a>
       <a href="/impressum/">Legal Notice</a>
       <a href="/datenschutz/">Privacy</a>
     </div>
