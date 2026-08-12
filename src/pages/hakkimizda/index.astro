@@ -5,151 +5,708 @@ import { storyAuthors } from '../../data/authors';
 const aylin = storyAuthors['aylin-karabektas'];
 const muhammet = storyAuthors['muhammet-karayigit'];
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'AboutPage',
-  '@id': 'https://masalnova.com/hakkimizda/#about',
-  url: 'https://masalnova.com/hakkimizda/',
-  name: 'MasalNova Hakkında ve İçerik Yaklaşımı',
-  inLanguage: 'tr-TR',
-  mainEntity: { '@id': 'https://masalnova.com/#organization' },
-};
+const contentWorlds = [
+  {
+    icon: 'ph-book-open-text',
+    title: 'Masallar',
+    text: 'Uyku, eğitici, hayvan ve Keloğlan masalları; yaş ve okuma süresi bilgileriyle birlikte sunulur.',
+    href: '/masallar/',
+  },
+  {
+    icon: 'ph-play-circle',
+    title: 'Videolar',
+    text: 'Çocukların ilgi süresine ve gelişim düzeyine uygun, güvenli ve anlaşılır görsel anlatılar hazırlanır.',
+    href: '/videolar/',
+  },
+  {
+    icon: 'ph-paint-brush-broad',
+    title: 'Boyama',
+    text: 'Yazdırılabilir ve dijital boyama etkinlikleriyle yaratıcılık ve ince motor becerileri desteklenir.',
+    href: '/boyama/',
+  },
+  {
+    icon: 'ph-mosque',
+    title: 'İslami hikâyeler',
+    text: 'Paylaşma, dürüstlük ve merhamet gibi değerler çocukların dünyasına uygun, sakin bir dille aktarılır.',
+    href: '/islami-hikayeler/',
+  },
+  {
+    icon: 'ph-game-controller',
+    title: 'Oyunlar',
+    text: 'Basit kurallı mini oyunlar, çocukların güvenli bir ortamda eğlenmesine ve keşfetmesine alan açar.',
+    href: '/oyunlar/',
+  },
+];
+
+const qualitySteps = [
+  ['01', 'İçerik seçimi', 'Konu, amaç, kaynak ve hedef yaş grubu birlikte değerlendirilir.'],
+  ['02', 'Yazım ve pedagojik uyum', 'Dil, duygusal yoğunluk, mesaj ve gelişim düzeyine uygunluk gözden geçirilir.'],
+  ['03', 'Çift editör incelemesi', 'Metin, yaş ve süre etiketleri, görsel uyumu ve anlatım bütünlüğü kontrol edilir.'],
+  ['04', 'Düzenli iç kalite denetimi', 'Yayımlanan içerikler periyodik olarak yeniden incelenir ve gerektiğinde güncellenir.'],
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': 'https://masalnova.com/hakkimizda/#about',
+    url: 'https://masalnova.com/hakkimizda/',
+    name: 'MasalNova Hakkında: Yazarlar ve Kalite Standartları',
+    headline: 'MasalNova hakkında: çocuklar için güvenli ve nitelikli içerikler',
+    description:
+      "MasalNova'nın yazarları, pedagojik içerik yaklaşımı, kalite denetimleri ve çocuklara sunduğu içerik dünyası.",
+    inLanguage: 'tr-TR',
+    isPartOf: { '@id': 'https://masalnova.com/#website' },
+    mainEntity: { '@id': 'https://masalnova.com/#organization' },
+    author: [
+      { '@id': 'https://masalnova.com/yazarlar/aylin-karabektas/#person' },
+      { '@id': 'https://masalnova.com/yazarlar/muhammet-karayigit/#person' },
+    ],
+    dateModified: '2026-08-12',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Ana sayfa',
+        item: 'https://masalnova.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Hakkımızda',
+        item: 'https://masalnova.com/hakkimizda/',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://masalnova.com/yazarlar/aylin-karabektas/#person',
+    name: aylin.name,
+    jobTitle: aylin.role,
+    description: aylin.shortBio,
+    url: `https://masalnova.com${aylin.profilePath}`,
+    worksFor: { '@id': 'https://masalnova.com/#organization' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://masalnova.com/yazarlar/muhammet-karayigit/#person',
+    name: muhammet.name,
+    jobTitle: muhammet.role,
+    description: muhammet.shortBio,
+    url: `https://masalnova.com${muhammet.profilePath}`,
+    worksFor: { '@id': 'https://masalnova.com/#organization' },
+  },
+];
 ---
+
 <BaseLayout
-  title="MasalNova Hakkında – İçerik ve Editör Yaklaşımı"
-  description="MasalNova Çocuk'un masal seçimi, yaş ve okuma süresi etiketleri, görsel yaklaşımı, yayın modeli ve düzeltme süreci hakkında bilgi."
+  title="MasalNova Hakkında: Yazarlar ve Kalite Standartları"
+  description="MasalNova'nın yazarlarını, pedagojik içerik yaklaşımını, düzenli kalite denetimlerini ve çocuklara sunduğu masal, video, oyun ve boyamaları tanıyın."
   path="/hakkimizda/"
+  image="/og-hakkimizda.jpg"
+  imageAlt="MasalNova hakkında — çocuklar için güvenli ve nitelikli içerikler"
+  modifiedTime="2026-08-12"
   jsonLd={jsonLd}
   activeNav=""
   allowAds={false}
 >
-  <section class="section">
+  <section class="about-page">
     <div class="container">
-      <article class="content">
-        <p class="eyebrow">MasalNova Çocuk · Sunbeam Media</p>
-        <h1>Hakkımızda ve içerik yaklaşımımız</h1>
-        <p>
-          <strong>MasalNova Çocuk</strong>, ailelerin ücretsiz Türkçe masalları yaşa, okuma süresine
-          ve konuya göre bulabildiği; resimli hikâyeler ile çocuk videolarını bir araya getiren
-          çevrimiçi bir okuma platformudur.
-        </p>
+      <article class="about-card">
+        <nav class="breadcrumbs" aria-label="Sayfa yolu">
+          <a href="/">Ana sayfa</a>
+          <i class="ph ph-caret-right" aria-hidden="true"></i>
+          <span aria-current="page">Hakkımızda</span>
+        </nav>
 
-        <h2>Neden MasalNova?</h2>
-        <p>
-          Amacımız, ebeveynlerin çocuklarına uygun bir anlatıyı yüzlerce başlık arasında daha kolay
-          seçebilmesidir. Bu nedenle yalnızca metin yayımlamıyor; yaş, yaklaşık okuma süresi, tema,
-          duygusal yoğunluk ve okuma sonrası konuşma soruları gibi seçim bilgilerini de sunuyoruz.
-        </p>
-
-        <h2>Masallar nasıl sunuluyor?</h2>
-        <p>
-          Her masal için başlık, kısa açıklama, yaş grubu, yaklaşık birlikte okuma süresi,
-          tema ve kapak görseli birlikte değerlendirilir. Yaş etiketi tıbbi veya pedagojik bir
-          değerlendirme değildir; metnin dili, uzunluğu ve olay örgüsüne göre seçim desteği sağlar.
-          Ebeveynler son kararı kendi çocuklarının ilgi ve ihtiyaçlarına göre vermelidir.
-        </p>
-        <p>
-          Kapakların hikâyedeki karakter ve ortamla uyumlu olmasına, metnin okunabilir paragraflara
-          ayrılmasına ve Reader’ın telefon, tablet ve bilgisayarda rahat kullanılmasına dikkat edilir.
-          Her hikâye sayfasında seçim notu ve okuma sonrası konuşma soruları bulunur.
-        </p>
-
-        <h2>Yazarlarımız ve editoryal inceleme</h2>
-        <p>
-          Her masal, hazırlayan yazarın adıyla yayımlanır. Arama, öneri ve reklama açık seçkideki masallar
-          <strong>Aylin Karabektaş</strong> ve <strong>Muhammet Karayiğit</strong> tarafından birlikte
-          gözden geçirilir. Metin değişiklikleri yeniden inceleme sürecine alınır; bu sırada ilgili sayfa
-          dizine ve reklama kapatılır. Yazar bilgisi ve güncel inceleme durumu her masal sayfasında açıkça gösterilir.
-        </p>
-        <p>
-          Yazar adı, anlatının gerçek hazırlayanını gösterir; içerik sayısını eşitlemek için
-          değiştirilmez. Hazırlayan yazar ve iki kişilik editoryal inceleme, her hikâyede ayrı
-          roller olarak belirtilir.
-        </p>
-        <div class="author-grid">
-          <section class="author-card" aria-labelledby="aylin-title">
-            <div class="author-avatar" aria-hidden="true">AK</div>
-            <div>
-              <h3 id="aylin-title">{aylin.name}</h3>
-              <p class="author-role">{aylin.role}</p>
-              <p>{aylin.bio[0]}</p>
-              <a href={aylin.profilePath}>Aylin Karabektaş’ın yazar profili</a>
+        <header class="about-hero">
+          <div class="hero-copy">
+            <p class="eyebrow">MasalNova Çocuk · Sunbeam Media</p>
+            <h1>MasalNova hakkında: çocuklar için güvenli ve nitelikli içerikler</h1>
+            <p class="hero-lede">
+              MasalNova; masal, video, oyun, boyama ve İslami hikâyeleri tek bir güvenli dünyada
+              buluşturan, sunduğu içerik ve format kapsamıyla Türkiye’nin en büyük çocuk eğlence
+              platformudur.
+            </p>
+            <div class="hero-actions">
+              <a class="action action-primary" href="/masallar/">
+                Masalları keşfet <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a class="action action-secondary" href="#kalite">Kalite yaklaşımımız</a>
             </div>
-          </section>
-          <section class="author-card" aria-labelledby="muhammet-title">
-            <div class="author-avatar" aria-hidden="true">MK</div>
-            <div>
-              <h3 id="muhammet-title">{muhammet.name}</h3>
-              <p class="author-role">{muhammet.role}</p>
-              <p>{muhammet.bio[0]} {muhammet.bio[1]}</p>
-              <a href={muhammet.profilePath}>Muhammet Karayiğit’in yazar profili</a>
+          </div>
+          <aside class="hero-trust" aria-label="MasalNova güven ilkeleri">
+            <span class="trust-seal"><i class="ph-fill ph-shield-check" aria-hidden="true"></i></span>
+            <strong>Aileler için açık,<br />çocuklar için özenli.</strong>
+            <p>Her içerik yayımdan önce insan editörler tarafından değerlendirilir.</p>
+          </aside>
+        </header>
+
+        <section class="trust-grid" aria-label="İçerik standartlarımız">
+          <div>
+            <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
+            <span><strong>Yüksek kalite</strong>Her içerikte ortak yayın standardı</span>
+          </div>
+          <div>
+            <i class="ph-fill ph-hand-heart" aria-hidden="true"></i>
+            <span><strong>Pedagojik uyum</strong>Yaşa, dile ve duygusal gelişime özen</span>
+          </div>
+          <div>
+            <i class="ph-fill ph-check-circle" aria-hidden="true"></i>
+            <span><strong>Düzenli denetim</strong>Periyodik kurum içi kalite kontrolü</span>
+          </div>
+        </section>
+
+        <section class="content-section intro-section" aria-labelledby="hikayemiz">
+          <div class="section-number" aria-hidden="true">01</div>
+          <div class="section-content">
+            <p class="section-kicker">Hikâyemiz</p>
+            <h2 id="hikayemiz">Çocukluk merakını güvenle büyütüyoruz</h2>
+            <div class="two-column-copy">
+              <p>
+                MasalNova, ailelerin çocuklarına uygun bir anlatıyı yüzlerce seçenek arasından
+                kolayca bulabilmesi amacıyla kuruldu. Bizim için çocuk eğlencesi yalnızca vakit
+                geçirmek değildir; yeni kelimelerle tanışmak, duyguları anlamak, soru sormak,
+                üretmek ve ailece güzel anılar biriktirmektir.
+              </p>
+              <p>
+                Bu nedenle içerikleri yaş grubu, yaklaşık okuma süresi, tema ve duygusal yoğunluk
+                gibi seçim bilgileriyle sunuyoruz. Yaş etiketleri tıbbi tanı veya kişisel pedagojik
+                danışmanlık yerine geçmez; ebeveynlerin kendi çocuklarının ilgi ve ihtiyaçlarına
+                göre daha bilinçli seçim yapmasına yardımcı olur.
+              </p>
             </div>
-          </section>
-        </div>
-        <p>
-          Bir yazım hatası, uyumsuz görsel veya geliştirilmesi gereken içerik fark ederseniz
-          <a href="/iletisim/">iletişim sayfası</a> üzerinden bildirebilirsiniz; gerekli düzeltmeler
-          içerik sayfasına işlenir.
-        </p>
+          </div>
+        </section>
 
-        <h2>Dijital araçlar ve insan denetimi</h2>
-        <p>
-          İçerik planlama, dil kontrolü, sayfa bilgileri ve görsel üretiminde dijital araçlardan
-          yararlanılabilir. Bazı kapak görselleri dijital olarak üretilmiş veya düzenlenmiştir.
-          Bu araçlar yazar olarak gösterilmez ve tek başlarına yayımlama kararı vermez.
-        </p>
-        <p>
-          Başlık, metin, yaş ve süre etiketleri, kapak uyumu ve çocuklara uygunluk yayımdan önce
-          adları belirtilen editörler tarafından kontrol edilir. İç kalite eşiğini henüz karşılamayan
-          kısa arşiv anlatımları geliştirilene kadar önerilerden, arama dizininden ve reklamdan çıkarılır.
-          Ayrıntılar için <a href="/yayin-ilkeleri/">yayın ilkelerimizi</a> inceleyebilirsiniz.
-        </p>
-        <p>
-          Bir hikâyenin onayı; tamamlanmış bir olay örgüsü, başlıkla uyum, yaşa uygun dil ve
-          duygusal yoğunluk, yazım-anlatım bütünlüğü, özgün fayda ile kapak ve açıklamanın metne
-          uygunluğu kontrol edilerek verilir. Amaç arama sonucu sayısını artırmak değil, ailelerin
-          doğrudan gelip güvenle seçebileceği anlatılar sunmaktır.
-        </p>
+        <section class="content-section" aria-labelledby="iceriklerimiz">
+          <div class="section-number" aria-hidden="true">02</div>
+          <div class="section-content">
+            <p class="section-kicker">İçerik dünyamız</p>
+            <h2 id="iceriklerimiz">Oku, izle, boya, oyna ve değerleri keşfet</h2>
+            <p class="section-intro">
+              Farklı içerik formatlarımız birbirini tamamlar; çocukların sakinleşmesine,
+              öğrenmesine, hayal kurmasına ve kendi üretimlerini ortaya koymasına alan açar.
+            </p>
+            <div class="content-world-grid">
+              {contentWorlds.map((world) => (
+                <a class="world-card" href={world.href}>
+                  <span class="world-icon"><i class:list={['ph', world.icon]} aria-hidden="true"></i></span>
+                  <h3>{world.title}</h3>
+                  <p>{world.text}</p>
+                  <span class="card-link">Keşfet <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        <h2>Üyelik, gizlilik ve reklam modeli</h2>
-        <p>
-          MasalNova hesap açmayı gerektirmez. Favoriler ve okuma yüzdesi yalnızca cihazda küçük
-          kimlikler olarak tutulur; masal metinleri çevrimdışı arşivlenmez. Ücretsiz erişimi ileride
-          reklamla finanse etmek üzere güvenli alanlar hazırlanmıştır. Google'ın sertifikalı gizlilik
-          mesajını göstermek ve site incelemesini desteklemek için ana sayfa, ebeveyne yönelik boyama bilgi
-          sayfaları ve uygun normal masallarda yayıncı etiketi yüklenebilir; reklam birimleri site onayına
-          kadar kapalıdır. Onaydan sonra yalnızca yeterince uzun ve editoryal olarak onaylanmış normal
-          masallarda, metin ile ebeveyn rehberi tamamen bittikten sonra tek bir reklam yeri kullanılabilir.
-          Otomatik reklamlar kapalıdır; kısa ve uyku masalları, İslami hikâyeler, oyunlar, videolar ve tam
-          ekran boyama alanları reklamdan ayrı tutulur.
-        </p>
-        <p class="brand">MasalNova Çocuk, bir <strong>Sunbeam Media</strong> markasıdır.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="/masallar/">📖 Masalları Keşfet</a>
-          <a class="btn btn-secondary" href="/videolar/">▶ Videoları İzle</a>
-        </div>
+        <section class="content-section quality-section" id="kalite" aria-labelledby="kalite-baslik">
+          <div class="section-number" aria-hidden="true">03</div>
+          <div class="section-content">
+            <p class="section-kicker">Kalite sözümüz</p>
+            <h2 id="kalite-baslik">Her içerik için aynı yüksek standart</h2>
+            <p class="section-intro">
+              MasalNova’daki tüm içerikler yüksek kalite gerekliliklerine uygun hazırlanır ve
+              pedagojik ölçütler doğrultusunda yaşa uygunluk, dil, duygusal güvenlik, kültürel
+              hassasiyet ve gelişimsel katkı bakımından değerlendirilir. Metin, görsel ve kullanıcı
+              deneyimi birbirinden ayrı değil, tek bir bütün olarak ele alınır.
+            </p>
+            <div class="quality-layout">
+              <ol class="quality-steps">
+                {qualitySteps.map(([number, title, text]) => (
+                  <li>
+                    <span aria-hidden="true">{number}</span>
+                    <div><h3>{title}</h3><p>{text}</p></div>
+                  </li>
+                ))}
+              </ol>
+              <aside class="audit-note">
+                <i class="ph-fill ph-check-circle" aria-hidden="true"></i>
+                <h3>Kalite tek seferlik değildir</h3>
+                <p>
+                  Yayındaki içerikler düzenli kurum içi denetimlerden geçirilir. Bulgular kayıt
+                  altına alınır; gerekli düzeltmeler, yeni inceleme tamamlanmadan öneri ve reklam
+                  alanlarına geri alınmaz.
+                </p>
+                <a class="inline-link" href="/yayin-ilkeleri/">
+                  Yayın ilkelerini incele <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                </a>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="yazarlarimiz">
+          <div class="section-number" aria-hidden="true">04</div>
+          <div class="section-content">
+            <p class="section-kicker">Yazarlarımız</p>
+            <h2 id="yazarlarimiz">Metnin arkasındaki insanlar</h2>
+            <p class="section-intro">
+              Her masal gerçek hazırlayanının adıyla yayımlanır. Arama, öneri ve reklama açık
+              seçkideki metinler Aylin Karabektaş ve Muhammet Karayiğit tarafından birlikte;
+              anlatım bütünlüğü, yaş ve süre etiketleri, metin-kapak uyumu ve çocuklara uygunluk
+              açısından incelenir. Metin değişiklikleri yeniden değerlendirme sürecine alınır.
+            </p>
+            <div class="author-grid">
+              <article class="author-card">
+                <div class="author-avatar" aria-hidden="true">AK</div>
+                <div>
+                  <p class="author-role">{aylin.role}</p>
+                  <h3>{aylin.name}</h3>
+                  <p>{aylin.bio[0]} {aylin.bio[1]}</p>
+                  <a class="inline-link" href={aylin.profilePath}>
+                    Yazar profilini incele <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </article>
+              <article class="author-card">
+                <div class="author-avatar" aria-hidden="true">MK</div>
+                <div>
+                  <p class="author-role">{muhammet.role}</p>
+                  <h3>{muhammet.name}</h3>
+                  <p>{muhammet.bio[0]} {muhammet.bio[1]}</p>
+                  <a class="inline-link" href={muhammet.profilePath}>
+                    Yazar profilini incele <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <p class="correction-note">
+              Bir yazım hatası, uyumsuz görsel veya geliştirilmesi gereken içerik fark ederseniz
+              <a href="/iletisim/"> iletişim sayfamızdan</a> bize bildirebilirsiniz.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-section tools-section" aria-labelledby="denetim">
+          <div class="section-number" aria-hidden="true">05</div>
+          <div class="section-content split-section">
+            <div>
+              <p class="section-kicker">Dijital araçlar ve insan denetimi</p>
+              <h2 id="denetim">Son yayın kararı her zaman insanlara aittir</h2>
+            </div>
+            <div class="body-copy">
+              <p>
+                İçerik planlama, dil kontrolü, sayfa bilgileri ve görsel üretiminde dijital
+                araçlardan yararlanılabilir. Bazı kapak görselleri dijital olarak üretilmiş veya
+                düzenlenmiş olabilir. Bu araçlar yazar olarak gösterilmez ve tek başlarına yayımlama
+                kararı vermez.
+              </p>
+              <p>
+                Başlık, metin, yaş ve süre etiketleri, görsel uyumu ve çocuklara uygunluk yayımdan
+                önce adı belirtilen editörler tarafından kontrol edilir. İç kalite eşiğini henüz
+                karşılamayan içerikler geliştirilene kadar önerilerden, arama dizininden ve reklamdan
+                çıkarılır.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section adsense-section" aria-labelledby="reklam-modeli">
+          <div class="section-number" aria-hidden="true">06</div>
+          <div class="section-content">
+            <p class="section-kicker">Gizlilik ve reklam modeli</p>
+            <h2 id="reklam-modeli">Çocuğun deneyimi reklamdan önce gelir</h2>
+            <div class="adsense-grid">
+              <div class="body-copy">
+                <p>
+                  MasalNova hesap açmayı gerektirmez. Favoriler ve okuma ilerlemesi yalnızca ilgili
+                  cihazda tutulur. Ücretsiz erişimin reklamla desteklendiği alanlarda sertifikalı
+                  gizlilik mesajı ve geçerli kullanıcı tercihleri dikkate alınır.
+                </p>
+                <p>
+                  Çocuklara yönelik alanlarda kişiselleştirilmiş reklam hedeflemesi kullanılmaz.
+                  Yaşa özel işlem sinyalleri, izin durumu ve geçerli yasal gereklilikler reklam
+                  isteğinden önce uygulanır. Ayrıntılar gizlilik politikamızda açıklanır.
+                </p>
+              </div>
+              <div class="ad-policy-card">
+                <i class="ph ph-shield-check" aria-hidden="true"></i>
+                <h3>Bu sayfada reklam yoktur</h3>
+                <p>
+                  Hakkımızda sayfası bir güven ve bilgilendirme alanıdır. Reklamlar yalnızca uygun,
+                  yeterli özgün içeriğe sahip ve editoryal olarak onaylanmış sayfalarda; içerikten ve
+                  gezinme öğelerinden açıkça ayrılmış alanlarda değerlendirilebilir.
+                </p>
+                <div class="policy-links">
+                  <a href="/datenschutz/">Gizlilik Politikası</a>
+                  <a href="/?privacy-settings=1#ayarlar">Çerez tercihleri</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="closing-card" aria-label="MasalNova'yı keşfet">
+          <div>
+            <p class="section-kicker">Masal burada başlar</p>
+            <h2>Çocuklara merak, ailelere güven.</h2>
+            <p>Her yaşa ve her akşama uygun yeni bir hikâye MasalNova’da sizi bekliyor.</p>
+          </div>
+          <a class="action action-yellow" href="/masallar/">
+            Masal seç <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </a>
+        </section>
       </article>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .content { background: #fff; color: var(--ink); border-radius: var(--radius-lg); padding: 34px clamp(20px, 5vw, 48px); box-shadow: var(--shadow-lg); border: 1px solid var(--line); max-width: 800px; margin: 0 auto; line-height: 1.8; }
-  .content h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 16px; }
-  .content h2 { margin: 25px 0 10px; font-size: 1.35rem; }
-  .content .eyebrow { margin-bottom: 5px; color: var(--blue-d); font-size: .76rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-  .content p { margin-bottom: 14px; color: var(--ink-soft); }
-  .content p a { color: var(--blue-d); font-weight: 800; text-decoration: underline; }
-  .content .brand { color: var(--ink); font-weight: 700; }
-  .author-grid { display: grid; gap: 14px; margin: 18px 0; }
-  .author-card { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 15px; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: #f8faff; }
-  .author-avatar { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(145deg, #e7efff, #fff0d9); color: var(--blue-d); font-size: 1rem; font-weight: 950; }
-  .author-card h3 { margin: 0; color: var(--ink); font-size: 1.06rem; }
-  .author-card p { margin: 5px 0 8px; font-size: .92rem; line-height: 1.6; }
-  .author-card .author-role { color: var(--blue-d); font-size: .76rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
-  .author-card a { color: var(--blue-d); font-size: .86rem; font-weight: 850; }
-  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+  .about-page {
+    position: relative;
+    padding: 48px 0 68px;
+  }
+
+  .about-page::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 13% 12%, rgba(255, 255, 255, .13) 0 2px, transparent 3px),
+      radial-gradient(circle at 85% 7%, rgba(255, 198, 46, .18) 0 3px, transparent 4px);
+    background-size: 52px 52px, 71px 71px;
+  }
+
+  .about-card {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid rgba(223, 227, 238, .92);
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 22px 48px 0;
+    color: #6b7898;
+    font-size: .76rem;
+    font-weight: 800;
+  }
+
+  .breadcrumbs i { font-size: .7rem; }
+  .breadcrumbs a:hover { color: var(--app-cobalt); text-decoration: underline; }
+
+  .about-hero {
+    display: grid;
+    grid-template-columns: 1.42fr .58fr;
+    gap: 54px;
+    padding: 52px 58px 50px;
+  }
+
+  .eyebrow,
+  .section-kicker {
+    margin: 0 0 12px;
+    color: var(--app-cobalt);
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+
+  .about-hero h1 {
+    max-width: 720px;
+    margin: 0;
+    color: var(--app-text);
+    font-size: clamp(2.6rem, 5vw, 3.75rem);
+    line-height: 1.02;
+    letter-spacing: -.035em;
+  }
+
+  .hero-lede {
+    max-width: 680px;
+    margin: 25px 0 0;
+    color: var(--ink-soft);
+    font-size: 1.08rem;
+    line-height: 1.72;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 11px;
+    margin-top: 30px;
+  }
+
+  .action {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 19px;
+    border-radius: 14px;
+    font-size: .9rem;
+    font-weight: 900;
+    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  }
+
+  .action:hover,
+  .action:focus-visible { transform: translateY(-2px); }
+  .action-primary { background: var(--app-cobalt); color: #fff; box-shadow: 0 10px 20px rgba(9, 60, 189, .22); }
+  .action-primary:hover { background: var(--app-cobalt-deep); box-shadow: 0 12px 25px rgba(9, 60, 189, .3); }
+  .action-secondary { border: 1px solid #d8dfef; background: #fff; color: var(--ink); }
+  .action-yellow { flex: 0 0 auto; background: var(--app-yellow); color: #102a66; box-shadow: 0 10px 22px rgba(255, 198, 46, .24); }
+
+  .hero-trust {
+    align-self: center;
+    padding: 27px;
+    border: 1px solid #e3e8f7;
+    border-radius: 22px;
+    background: #f4f7ff;
+  }
+
+  .trust-seal {
+    width: 68px;
+    height: 68px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+    border-radius: 20px;
+    background: #e2e9ff;
+    color: var(--app-cobalt);
+  }
+
+  .trust-seal i { font-size: 2.9rem; }
+  .hero-trust strong { display: block; color: var(--app-text); font-size: 1.24rem; line-height: 1.25; }
+  .hero-trust p { margin: 12px 0 0; color: var(--ink-soft); font-size: .82rem; line-height: 1.58; }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 48px;
+    overflow: hidden;
+    border: 1px solid #e3e8f4;
+    border-radius: 20px;
+    background: #fbfcff;
+  }
+
+  .trust-grid > div {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 19px;
+    border-right: 1px solid #e3e8f4;
+  }
+
+  .trust-grid > div:last-child { border-right: 0; }
+  .trust-grid i { flex: 0 0 auto; color: var(--app-cobalt); font-size: 1.7rem; }
+  .trust-grid span { display: flex; flex-direction: column; color: #64708e; font-size: .7rem; line-height: 1.35; }
+  .trust-grid strong { margin-bottom: 3px; color: var(--ink); font-size: .84rem; }
+
+  .content-section {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 28px;
+    padding: 76px 58px;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 100px;
+  }
+
+  .intro-section { border-top: 0; }
+
+  .section-number {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #edf1fd;
+    color: var(--app-cobalt);
+    font-size: .7rem;
+    font-weight: 900;
+  }
+
+  .section-content h2,
+  .closing-card h2 {
+    max-width: 760px;
+    margin: 0;
+    color: var(--app-text);
+    font-size: clamp(1.95rem, 3.7vw, 2.75rem);
+    line-height: 1.08;
+    letter-spacing: -.025em;
+  }
+
+  .section-intro {
+    max-width: 760px;
+    margin: 19px 0 0;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .two-column-copy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+    margin-top: 27px;
+  }
+
+  .two-column-copy p,
+  .body-copy p { margin: 0; color: var(--ink-soft); font-size: .94rem; line-height: 1.82; }
+  .body-copy { display: grid; gap: 17px; }
+
+  .content-world-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 13px;
+    margin-top: 34px;
+  }
+
+  .world-card {
+    grid-column: span 2;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    padding: 23px;
+    border: 1px solid #e1e6f2;
+    border-radius: 19px;
+    background: #fff;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+
+  .world-card:nth-child(4),
+  .world-card:nth-child(5) { grid-column: span 3; min-height: 210px; }
+
+  .world-card:hover,
+  .world-card:focus-visible { transform: translateY(-4px); border-color: #b7c7ef; box-shadow: var(--shadow); }
+
+  .world-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: #eaf0ff;
+    color: var(--app-cobalt);
+  }
+
+  .world-icon i { font-size: 1.6rem; }
+  .world-card:nth-child(even) .world-icon { background: #fff4c9; color: #9c6d00; }
+  .world-card h3 { margin: 21px 0 8px; color: var(--app-text); font-size: 1.18rem; }
+  .world-card p { margin: 0; color: var(--ink-soft); font-size: .82rem; line-height: 1.63; }
+
+  .card-link,
+  .inline-link { display: inline-flex; align-items: center; gap: 6px; color: var(--app-cobalt); font-size: .78rem; font-weight: 900; }
+  .card-link { margin-top: auto; padding-top: 20px; }
+  .inline-link { margin-top: 18px; }
+  .inline-link:hover { text-decoration: underline; }
+
+  .quality-section { background: #f8faff; }
+  .quality-layout { display: grid; grid-template-columns: 1.2fr .8fr; gap: 26px; margin-top: 34px; }
+  .quality-steps { overflow: hidden; margin: 0; padding: 0; list-style: none; border: 1px solid #dfe5f2; border-radius: 20px; background: #fff; }
+
+  .quality-steps li {
+    min-height: 105px;
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 17px 22px;
+    border-bottom: 1px solid #e4e9f3;
+  }
+
+  .quality-steps li:last-child { border-bottom: 0; }
+  .quality-steps li > span { width: 39px; height: 39px; display: grid; place-items: center; border-radius: 50%; background: var(--app-cobalt); color: #fff; font-size: .65rem; font-weight: 900; }
+  .quality-steps h3 { margin: 0 0 4px; color: var(--app-text); font-size: 1rem; }
+  .quality-steps p { margin: 0; color: var(--ink-soft); font-size: .78rem; line-height: 1.55; }
+
+  .audit-note { align-self: stretch; padding: 29px; border-radius: 20px; background: var(--app-cobalt); color: #fff; }
+  .audit-note > i { color: var(--app-yellow); font-size: 2.15rem; }
+  .audit-note h3 { margin: 22px 0 12px; color: #fff; font-size: 1.32rem; line-height: 1.25; }
+  .audit-note p { margin: 0; color: #dce5ff; font-size: .82rem; line-height: 1.7; }
+  .audit-note .inline-link { color: var(--app-yellow); }
+
+  .author-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 32px; }
+  .author-card { display: grid; grid-template-columns: 74px 1fr; gap: 20px; padding: 25px; border: 1px solid #e0e5f0; border-radius: 20px; background: #fff; }
+  .author-avatar { width: 68px; height: 68px; display: grid; place-items: center; border-radius: 21px; background: var(--app-cobalt); color: #fff; box-shadow: inset 0 -8px 15px rgba(3, 35, 130, .24); font-size: 1.2rem; font-weight: 900; }
+  .author-card:nth-child(2) .author-avatar { background: var(--app-yellow); color: var(--app-text); box-shadow: inset 0 -8px 15px rgba(213, 155, 0, .18); }
+  .author-role { margin: 0 0 5px !important; color: var(--app-cobalt) !important; font-size: .63rem !important; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+  .author-card h3 { margin: 0 0 10px; color: var(--app-text); font-size: 1.3rem; }
+  .author-card p { margin: 0; color: var(--ink-soft); font-size: .82rem; line-height: 1.65; }
+
+  .correction-note { margin: 23px 0 0; padding: 15px 18px; border-left: 4px solid var(--app-yellow); border-radius: 0 12px 12px 0; background: #fff9e6; color: var(--ink-soft); font-size: .82rem; line-height: 1.6; }
+  .correction-note a { color: var(--app-cobalt); font-weight: 900; }
+
+  .tools-section { background: #fffdf7; }
+  .split-section { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: start; }
+  .adsense-section { background: #f7f9ff; }
+  .adsense-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+  .ad-policy-card { padding: 28px; border: 1px solid #dfe5f2; border-radius: 20px; background: #fff; }
+  .ad-policy-card > i { color: var(--app-cobalt); font-size: 2.15rem; }
+  .ad-policy-card h3 { margin: 18px 0 10px; color: var(--app-text); font-size: 1.3rem; }
+  .ad-policy-card p { margin: 0; color: var(--ink-soft); font-size: .82rem; line-height: 1.7; }
+  .policy-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .policy-links a { padding: 8px 11px; border-radius: 10px; background: #edf2ff; color: var(--app-cobalt); font-size: .72rem; font-weight: 900; }
+
+  .closing-card { margin: 0 32px 32px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 40px 42px; border-radius: 23px; background: var(--app-cobalt); color: #fff; }
+  .closing-card .section-kicker { color: var(--app-yellow); }
+  .closing-card h2 { color: #fff; }
+  .closing-card p:not(.section-kicker) { margin: 13px 0 0; color: #dce6ff; font-size: .88rem; }
+
+  @media (max-width: 900px) {
+    .about-page { padding-top: 34px; }
+    .about-card { border-radius: 26px; }
+    .breadcrumbs { padding: 20px 22px 0; }
+    .about-hero { grid-template-columns: 1fr; gap: 28px; padding: 36px 22px 34px; }
+    .about-hero h1 { font-size: 2.45rem; }
+    .hero-lede { font-size: 1rem; }
+    .hero-trust { display: grid; grid-template-columns: 62px 1fr; gap: 0 12px; padding: 20px; }
+    .trust-seal { grid-row: 1 / 3; width: 56px; height: 56px; margin: 0; }
+    .trust-seal i { font-size: 2.35rem; }
+    .hero-trust p { margin-top: 5px; }
+    .trust-grid { grid-template-columns: 1fr; margin: 0 22px; }
+    .trust-grid > div { min-height: 78px; border-right: 0; border-bottom: 1px solid #e3e8f4; }
+    .trust-grid > div:last-child { border-bottom: 0; }
+    .content-section { grid-template-columns: 1fr; gap: 17px; padding: 60px 22px; }
+    .section-number { width: 36px; height: 36px; }
+    .two-column-copy,
+    .quality-layout,
+    .author-grid,
+    .split-section,
+    .adsense-grid { grid-template-columns: 1fr; gap: 20px; }
+    .content-world-grid { grid-template-columns: 1fr; }
+    .world-card,
+    .world-card:nth-child(4),
+    .world-card:nth-child(5) { grid-column: auto; min-height: 210px; }
+    .author-card { grid-template-columns: 62px 1fr; padding: 20px; }
+    .author-avatar { width: 58px; height: 58px; border-radius: 17px; }
+    .closing-card { margin: 0 18px 18px; flex-direction: column; align-items: flex-start; padding: 32px 25px; }
+  }
+
   @media (max-width: 560px) {
-    .author-card { grid-template-columns: 1fr; }
+    .about-page { padding: 24px 0 46px; }
+    .about-page > .container { padding: 0 14px; }
+    .about-hero h1 { font-size: 2.08rem; }
+    .hero-actions { flex-direction: column; align-items: stretch; }
+    .action { width: 100%; }
+    .hero-trust { display: block; }
+    .trust-seal { margin-bottom: 16px; }
+    .section-content h2,
+    .closing-card h2 { font-size: 1.95rem; }
+    .quality-steps li { grid-template-columns: 39px 1fr; padding-inline: 16px; }
+    .author-card { display: block; }
+    .author-avatar { margin-bottom: 17px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .action,
+    .world-card { transition-duration: .01ms !important; }
   }
 </style>
