@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <title>Masal Kilimleri: Güneşli Atölye</title>
+  <link rel="stylesheet" href="/games/shared/phosphor/style.css" />
+  <style>
+    :root { color-scheme:dark; font-family:"Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif; }
+    * { box-sizing:border-box; }
+    html,body { width:100%; height:100%; margin:0; overflow:hidden; background:#3a2416; }
+    button { border:0; font:inherit; }
+    .game { position:relative; width:100%; height:100%; overflow:hidden; touch-action:none; user-select:none; }
+    canvas { display:block; width:100%; height:100%; object-fit:contain; }
+    .topbar { position:absolute; z-index:3; inset:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) auto max(12px,env(safe-area-inset-left)); display:flex; align-items:flex-start; justify-content:space-between; gap:12px; pointer-events:none; }
+    .cluster { display:flex; align-items:center; gap:8px; pointer-events:auto; }
+    .pill,.icon { min-height:52px; border:3px solid #ffe3a0; border-radius:18px; background:#fff8e8; color:#173f84; box-shadow:0 6px 0 #9d632a,0 10px 22px rgba(55,26,7,.24); font-weight:1000; }
+    .pill { display:flex; align-items:center; gap:9px; padding:0 18px; letter-spacing:.02em; }
+    .pill strong { font-size:clamp(.76rem,2.2vw,1.05rem); }
+    .icon { display:grid; width:54px; place-items:center; cursor:pointer; font-size:1.45rem; }
+    .icon:active { transform:translateY(4px); box-shadow:0 2px 0 #9d632a; }
+    .progress { min-width:190px; justify-content:center; background:#173f84; color:#fff; }
+    .progress span { color:#ffd453; }
+    .toast { position:absolute; z-index:4; top:17%; left:50%; translate:-50% 0; padding:10px 18px; border:2px solid #fff2bd; border-radius:999px; background:#173f84; color:#fff; box-shadow:0 10px 28px rgba(25,17,12,.34); font-weight:1000; opacity:0; transform:translateY(-12px); transition:.2s ease; pointer-events:none; }
+    .toast.show { opacity:1; transform:translateY(0); }
+    .modal { position:absolute; z-index:6; inset:0; display:grid; place-items:center; padding:20px; background:rgba(24,16,11,.62); backdrop-filter:blur(6px); }
+    .modal[hidden] { display:none; }
+    .card { width:min(520px,100%); padding:32px; border:4px solid #ffe29b; border-radius:30px; background:#fff8e8; color:#173f84; box-shadow:0 24px 70px rgba(24,13,6,.45); text-align:center; }
+    .card .eyebrow { color:#a25c22; font-weight:1000; letter-spacing:.08em; }
+    .card h1 { margin:8px 0 10px; font-size:clamp(2rem,7vw,3.5rem); line-height:1; }
+    .card p { margin:0 auto 22px; max-width:38ch; color:#655545; line-height:1.5; }
+    .primary { min-height:56px; padding:0 24px; border-radius:18px; background:#ffd04d; color:#173f84; box-shadow:0 7px 0 #b86d21; cursor:pointer; font-weight:1000; }
+    .primary:active { transform:translateY(4px); box-shadow:0 3px 0 #b86d21; }
+    .rotate { display:none; position:absolute; z-index:8; inset:0; place-items:center; padding:26px; background:#173f84; color:#fff; text-align:center; }
+    .rotate div { max-width:320px; }
+    .rotate i { display:block; margin-bottom:14px; color:#ffd453; font-size:3rem; }
+    .rotate strong { display:block; font-size:1.35rem; }
+    .rotate p { color:#dbe7ff; }
+    @media (orientation:portrait) and (max-width:760px) { .rotate { display:grid; } }
+    @media (max-width:820px) { .title-text { display:none; } .pill { min-height:46px; padding:0 12px; } .icon { width:48px; min-height:46px; } .topbar { gap:7px; } .cluster { gap:6px; } }
+  </style>
+</head>
+<body>
+  <main class="game" aria-label="Masal Kilimleri Güneşli Atölye oyunu">
+    <canvas id="gameCanvas" width="1600" height="900" aria-label="Renkli kumaş parçalarını dokuma tezgâhına yerleştir"></canvas>
+    <header class="topbar">
+      <div class="cluster">
+        <button class="icon" id="backButton" aria-label="Oyunlara dön"><i class="ph ph-arrow-left"></i></button>
+        <div class="pill title-text"><strong>MASAL KİLİMLERİ</strong></div>
+      </div>
+      <div class="pill progress"><strong>BÖLÜM <b id="levelLabel">1</b> · <span id="goalLabel">0 / 5</span></strong></div>
+      <div class="cluster">
+        <button class="icon" id="shuffleButton" aria-label="Parçaları karıştır"><i class="ph ph-shuffle"></i></button>
+        <button class="icon" id="undoButton" aria-label="Geri al"><i class="ph ph-arrow-counter-clockwise"></i></button>
+        <button class="icon" id="soundButton" aria-label="Sesi kapat"><i class="ph ph-speaker-high"></i></button>
+        <button class="icon" id="pauseButton" aria-label="Duraklat"><i class="ph ph-pause"></i></button>
+      </div>
+    </header>
+    <div class="toast" id="toast" role="status"></div>
+    <section class="modal" id="startModal">
+      <div class="card">
+        <div class="eyebrow">GÜNEŞLİ ATÖLYE</div>
+        <h1>Masal Kilimleri</h1>
+        <p>Bir kumaş grubunu seç, tezgâha yerleştir ve aynı renkten beş parçayı birleştirerek desenleri doku.</p>
+        <button class="primary" id="startButton">ATÖLYEYİ AÇ</button>
+      </div>
+    </section>
+    <section class="modal" id="pauseModal" hidden>
+      <div class="card"><div class="eyebrow">KISA BİR MOLA</div><h1>Oyun durdu</h1><p>Hazır olduğunda aynı desenden devam edebilirsin.</p><button class="primary" id="resumeButton">DEVAM ET</button></div>
+    </section>
+    <section class="modal" id="winModal" hidden>
+      <div class="card"><div class="eyebrow">DESEN TAMAMLANDI</div><h1>Harika dokudun!</h1><p id="winCopy">Yeni bölüm hazır.</p><button class="primary" id="nextButton">SONRAKİ BÖLÜM</button></div>
+    </section>
+    <div class="rotate"><div><i class="ph ph-device-rotate"></i><strong>Cihazını yatay çevir</strong><p>Dokuma tezgâhını daha rahat görmek için yatay ekranı kullan.</p></div></div>
+  </main>
+  <script>
+    (() => {
+      const W=1600,H=900, canvas=document.getElementById('gameCanvas'),ctx=canvas.getContext('2d');
+      const bg=new Image(),texture=new Image();
+      bg.src='./assets/workshop-background.webp'; texture.src='./assets/woven-felt-texture.webp';
+      const palette=['#e65f43','#19a3a5','#efb62e','#713174'];
+      const cellR=34, x0=650, y0=255, cols=9, rows=6;
+      const pieces=[[[0,0],[1,0],[0,1]],[[0,0],[0,1],[0,2]],[[0,0],[1,0],[1,1]],[[0,0],[1,0],[2,0]],[[0,0],[1,0],[0,1],[1,1]]];
+      let board=new Map(), tray=[], selected=-1, level=1, woven=0, running=false, paused=false, sound=true, undo=null, particles=[];
+      const $=id=>document.getElementById(id);
+      const key=(q,r)=>q+','+r;
+      const pos=(q,r)=>({x:x0+q*64,y:y0+r*62+(q%2)*31});
+      const hexPath=(x,y,r=cellR)=>{ctx.beginPath();for(let i=0;i<6;i++){const a=Math.PI/3*i;const px=x+r*Math.cos(a),py=y+r*Math.sin(a);i?ctx.lineTo(px,py):ctx.moveTo(px,py)}ctx.closePath()};
+      const rand=n=>Math.floor(Math.random()*n);
+      function seed(){board.clear();for(let i=0;i<10+level*2;i++){const q=rand(cols),r=rand(rows);board.set(key(q,r),rand(palette.length));} refill();}
+      function refill(){tray=Array.from({length:3},()=>({shape:pieces[rand(pieces.length)],color:rand(palette.length)}));selected=0;}
+      function drawTile(x,y,color,scale=1,glow=false){ctx.save(); if(glow){ctx.shadowColor='#fff0a6';ctx.shadowBlur=22;} hexPath(x,y,cellR*scale);ctx.fillStyle=palette[color];ctx.fill();ctx.lineWidth=5*scale;ctx.strokeStyle='#fff0c2';ctx.stroke();ctx.clip();if(texture.complete){ctx.globalAlpha=.18;ctx.drawImage(texture,x-cellR*1.2,y-cellR*1.2,cellR*2.4,cellR*2.4)}ctx.restore();}
+      function draw(){ctx.clearRect(0,0,W,H); if(bg.complete)ctx.drawImage(bg,0,0,W,H); else {ctx.fillStyle='#d69a56';ctx.fillRect(0,0,W,H)}
+        for(let q=0;q<cols;q++)for(let r=0;r<rows;r++){const p=pos(q,r),v=board.get(key(q,r));hexPath(p.x,p.y);ctx.fillStyle=v===undefined?'rgba(255,250,230,.23)':'rgba(255,255,255,.12)';ctx.fill();ctx.lineWidth=2;ctx.strokeStyle='rgba(117,73,31,.42)';ctx.stroke();if(v!==undefined)drawTile(p.x,p.y,v,.92);}
+        ctx.save();ctx.fillStyle='rgba(255,248,226,.94)';roundRect(410,705,850,155,32);ctx.fill();ctx.lineWidth=5;ctx.strokeStyle='#d59a4b';ctx.stroke();ctx.restore();
+        tray.forEach((piece,i)=>{const cx=570+i*260,cy=782;ctx.save();if(i===selected){ctx.fillStyle='#173f84';roundRect(cx-95,cy-60,190,120,25);ctx.fill();}piece.shape.forEach(([dq,dr])=>drawTile(cx+(dq-1)*48,cy+(dr-1)*42,piece.color,.63,i===selected));ctx.restore();});
+        particles.forEach(p=>{ctx.globalAlpha=p.life;ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();});ctx.globalAlpha=1;
+        requestAnimationFrame(draw);
+      }
+      function roundRect(x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r)}
+      function snapshot(){undo={board:new Map(board),tray:JSON.parse(JSON.stringify(tray)),woven};}
+      function cellsFor(piece,q,r){return piece.shape.map(([dq,dr])=>[q+dq,r+dr]);}
+      function canPlace(piece,q,r){return cellsFor(piece,q,r).every(([cq,cr])=>cq>=0&&cq<cols&&cr>=0&&cr<rows&&!board.has(key(cq,cr)));}
+      function hasMove(){return tray.some(piece=>{for(let q=0;q<cols;q++)for(let r=0;r<rows;r++)if(canPlace(piece,q,r))return true;return false;});}
+      function neighbours(q,r){const odd=q%2;return [[q-1,r],[q+1,r],[q,r-1],[q,r+1],[q-1,r+odd-1],[q+1,r+odd-1]];}
+      function clearGroups(){let cleared=0,visited=new Set();for(const [k,color] of [...board]){if(visited.has(k))continue;const [sq,sr]=k.split(',').map(Number),group=[],stack=[[sq,sr]];visited.add(k);while(stack.length){const [q,r]=stack.pop();group.push([q,r]);for(const [nq,nr] of neighbours(q,r)){const nk=key(nq,nr);if(!visited.has(nk)&&board.get(nk)===color){visited.add(nk);stack.push([nq,nr]);}}}if(group.length>=5){cleared++;group.forEach(([q,r])=>{board.delete(key(q,r));const p=pos(q,r);for(let i=0;i<8;i++)particles.push({x:p.x,y:p.y,color:palette[color],size:5+Math.random()*7,life:1,vx:(Math.random()-.5)*5,vy:-2-Math.random()*4});});}}
+        if(cleared){woven+=cleared;beep(660,.12);toast(cleared>1?'ZİNCİR DESEN!':'RENK DOKUNDU!');$('goalLabel').textContent=Math.min(woven,5)+' / 5';if(woven>=5)setTimeout(win,450);} }
+      function place(q,r){if(!running||paused||selected<0)return;const piece=tray[selected];if(!canPlace(piece,q,r)){beep(170,.08);toast('BURAYA SIĞMAZ');return;}snapshot();cellsFor(piece,q,r).forEach(([cq,cr])=>board.set(key(cq,cr),piece.color));tray.splice(selected,1);selected=Math.min(selected,tray.length-1);clearGroups();if(!tray.length)refill();if(!hasMove()){refill();toast('YENİ PARÇALAR GELDİ');}}
+      function canvasPoint(event){const rect=canvas.getBoundingClientRect(),s=Math.min(rect.width/W,rect.height/H),ox=(rect.width-W*s)/2,oy=(rect.height-H*s)/2;return{x:(event.clientX-rect.left-ox)/s,y:(event.clientY-rect.top-oy)/s};}
+      canvas.addEventListener('pointerdown',e=>{e.preventDefault();const p=canvasPoint(e);if(p.y>700){const i=Math.round((p.x-570)/260);if(i>=0&&i<tray.length){selected=i;beep(420,.04);}return;}let best=null,d=999;for(let q=0;q<cols;q++)for(let r=0;r<rows;r++){const c=pos(q,r),nd=Math.hypot(p.x-c.x,p.y-c.y);if(nd<d){d=nd;best=[q,r]}}if(best&&d<48)place(best[0],best[1]);});
+      function tick(){particles.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.14;p.life-=.025});particles=particles.filter(p=>p.life>0);requestAnimationFrame(tick)}
+      function toast(text){const el=$('toast');el.textContent=text;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),1100);}
+      function beep(freq,duration){if(!sound)return;const ac=beep.ac||(beep.ac=new (window.AudioContext||window.webkitAudioContext)()),o=ac.createOscillator(),g=ac.createGain();o.frequency.value=freq;o.type='sine';g.gain.setValueAtTime(.08,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+duration);o.connect(g).connect(ac.destination);o.start();o.stop(ac.currentTime+duration);}
+      function start(){level=Number(localStorage.getItem('masal-kilimleri-atolye-level')||1);woven=0;$('levelLabel').textContent=level;$('goalLabel').textContent='0 / 5';seed();running=true;$('startModal').hidden=true;beep(520,.12);}
+      function win(){running=false;localStorage.setItem('masal-kilimleri-atolye-level',String(Math.min(5,level+1)));$('winCopy').textContent=`${level}. bölümün kilimi hazır. ${woven} renk deseni dokudun.`;$('winModal').hidden=false;}
+      $('startButton').onclick=start;$('nextButton').onclick=()=>{level=level>=5?1:level+1;woven=0;$('levelLabel').textContent=level;$('goalLabel').textContent='0 / 5';seed();running=true;$('winModal').hidden=true;};
+      $('pauseButton').onclick=()=>{if(!running)return;paused=true;$('pauseModal').hidden=false;};$('resumeButton').onclick=()=>{paused=false;$('pauseModal').hidden=true;};
+      $('undoButton').onclick=()=>{if(!undo)return;board=new Map(undo.board);tray=undo.tray;woven=undo.woven;$('goalLabel').textContent=woven+' / 5';undo=null;toast('GERİ ALINDI');};
+      $('shuffleButton').onclick=()=>{if(!running)return;refill();toast('PARÇALAR KARIŞTI');beep(380,.08);};
+      $('soundButton').onclick=()=>{sound=!sound;$('soundButton').innerHTML=`<i class="ph ${sound?'ph-speaker-high':'ph-speaker-slash'}"></i>`;};
+      $('backButton').onclick=()=>location.href='/oyunlar/';
+      addEventListener('keydown',e=>{if(['1','2','3'].includes(e.key))selected=Math.min(Number(e.key)-1,tray.length-1);if(e.key==='Escape'&&running)$('pauseButton').click();});
+      draw();tick();
+    })();
+  </script>
+</body>
+</html>

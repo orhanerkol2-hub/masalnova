@@ -56,6 +56,8 @@ const playableGameSlugs = [
   'keloglan-ucan-tohumlar',
   'keloglan-yildiz-pesinde',
   'kristal-saray',
+  'masal-kilimleri-atolye',
+  'masal-kilimleri-ay-bahcesi',
   'nasrettin-hoca-pizza',
 ];
 const hardErrors = [];
@@ -215,6 +217,7 @@ async function textFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const files = [];
   for (const entry of entries) {
+    if (entry.name.startsWith('._')) continue;
     const path = join(directory, entry.name);
     if (entry.isDirectory()) files.push(...await textFiles(path));
     else if (['.astro', '.html', '.js', '.mjs', '.ts', '.tsx', '.md', '.json'].includes(extname(entry.name))) files.push(path);
@@ -222,7 +225,9 @@ async function textFiles(directory) {
   return files;
 }
 
-const files = (await readdir(storiesDirectory)).filter((name) => name.endsWith('.md')).sort();
+const files = (await readdir(storiesDirectory))
+  .filter((name) => name.endsWith('.md') && !name.startsWith('._'))
+  .sort();
 const stories = [];
 const guides = [];
 
@@ -320,7 +325,9 @@ for (const file of files) {
   }
 }
 
-const guideFiles = (await readdir(guidesDirectory)).filter((name) => name.endsWith('.md')).sort();
+const guideFiles = (await readdir(guidesDirectory))
+  .filter((name) => name.endsWith('.md') && !name.startsWith('._'))
+  .sort();
 for (const file of guideFiles) {
   const source = await readFile(join(guidesDirectory, file), 'utf8');
   const frontmatter = frontmatterFromSource(source);
