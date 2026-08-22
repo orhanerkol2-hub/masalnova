@@ -203,7 +203,7 @@
       var root = document.getElementById('stcm-wrapper');
       if (root) prepareConsentRoot(root);
     });
-    consentObserver.observe(consentRoot || document.documentElement, { childList: true, subtree: true });
+    consentObserver.observe(document, { childList: true, subtree: true });
 
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', bindSettingsLinks, { once: true });
