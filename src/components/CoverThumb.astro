@@ -1,4 +1,6 @@
 ---
+import { responsiveCoverFor } from '../lib/responsive-cover';
+
 interface Props {
   emoji?: string;
   color?: string;
@@ -22,7 +24,8 @@ const {
   sizes = '(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw',
 } = Astro.props;
 const [ratioWidth, ratioHeight] = ratio.split('/').map((part) => Number(part.trim()));
-const intrinsicWidth = 1200;
+const responsiveCover = image ? await responsiveCoverFor(image) : undefined;
+const intrinsicWidth = responsiveCover?.sourceWidth ?? 1200;
 const intrinsicHeight = Number.isFinite(ratioWidth) && Number.isFinite(ratioHeight) && ratioWidth > 0
   ? Math.round(intrinsicWidth * ratioHeight / ratioWidth)
   : 750;
@@ -31,6 +34,7 @@ const intrinsicHeight = Number.isFinite(ratioWidth) && Number.isFinite(ratioHeig
   <img
     class="cover"
     src={image}
+    srcset={responsiveCover?.srcset}
     alt={alt}
     width={intrinsicWidth}
     height={intrinsicHeight}

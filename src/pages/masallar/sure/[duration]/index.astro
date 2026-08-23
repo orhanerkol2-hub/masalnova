@@ -1,21 +1,25 @@
 ---
 import StoryTopicPage from '../../../../components/StoryTopicPage.astro';
-import { getMasalStories } from '../../../../data/stories';
+import { getAllStories, getMasalStories, isIslamicStory } from '../../../../data/stories';
 import { durationBucketForMinutes } from '../../../../data/taxonomy';
+import { isStoryContentSubstantial } from '../../../../lib/story-quality.mjs';
+
+const MIN_INDEXABLE_SHORT_COLLECTION = 12;
 
 export async function getStaticPaths() {
   const durationPages = [
     {
       key: 'kisa',
-      title: 'Kısa Masallar Oku – 1-2 Dakikalık Çocuk Hikâyeleri',
+      title: 'Kısa Masallar Oku – 1-2 Dakikalık Hikâyeler',
       heading: 'Kısa Masallar Oku',
-      description: '1-2 dakikada okunabilen kısa masallar: Çocuklar için ücretsiz, resimli, eğitici ve uyku öncesine uygun Türkçe hikâyeleri keşfet.',
-      kicker: '1-2 dakikalık hızlı masal seçkisi',
-      intro: 'Vaktiniz az olduğunda bile birlikte okuma keyfinden vazgeçmeyin. Bu kısa masallar bir iki dakikada tamamlanır; yatmadan önce, yolculukta veya gün içindeki küçük molalarda okumaya uygundur.',
+      description: '1-2 dakikada okunabilen kısa masallar: Çocuklar için editör kontrolünden geçmiş, ücretsiz ve resimli Türkçe hikâyeleri keşfedin.',
+      kicker: '1-2 dakikalık özenli masal seçkisi',
+      intro: 'Vaktiniz az olduğunda bile birlikte okuma keyfinden vazgeçmeyin. Bu seçkide yayıma onaylanmış, metin uzunluğu kontrol edilmiş ve sonradan redaksiyondan geçirilmiş kısa masallar bulunur. Yaklaşık okuma süresi, yatmadan önce, yolculukta veya gün içindeki küçük bir molada seçim yapmayı kolaylaştırır.',
       guideTitle: 'Kısa masal ne zaman iyi bir seçimdir?',
       guideParagraphs: [
         'Kısa masallar, çocuğun bir hikâyeyi baştan sona tek oturuşta takip etmesini kolaylaştırır. Sayfadaki süre etiketi, metnin yaklaşık birlikte okuma süresini gösterir.',
         'Uyku öncesinde daha sakin bir ton arıyorsanız süre seçimine ek olarak Uyku Masalları kategorisini; belirli bir yaş için seçim yapıyorsanız yaş bağlantılarını kullanabilirsiniz.',
+        'Kısa olması, masalı aceleyle okumak gerektiği anlamına gelmez. Çocuğun bir resimde durmasına, bir kelimeyi sormasına veya sevdiği bölümü yeniden dinlemesine zaman bırakabilirsiniz.',
       ],
     },
     {
@@ -50,9 +54,18 @@ export async function getStaticPaths() {
 }
 
 const { duration } = Astro.props;
-const allStories = await getMasalStories();
+const allStories = duration.key === 'kisa'
+  ? (await getAllStories()).filter((story) =>
+      !isIslamicStory(story)
+      && story.data.editorialStatus === 'approved'
+      && story.data.qualityTier !== 'review'
+      && story.data.qualityTier !== 'retire'
+      && Boolean(story.data.modifiedAt)
+      && isStoryContentSubstantial(story.body, story.data))
+  : await getMasalStories();
 const matchingStories = allStories.filter((story) => durationBucketForMinutes(story.data.readingTime) === duration.key);
 const path = `/masallar/sure/${duration.key}/`;
+const minimumStories = duration.key === 'kisa' ? MIN_INDEXABLE_SHORT_COLLECTION : 1;
 ---
 
 <StoryTopicPage
@@ -66,5 +79,11 @@ const path = `/masallar/sure/${duration.key}/`;
   totalStories={matchingStories.length}
   guideTitle={duration.guideTitle}
   guideParagraphs={[...duration.guideParagraphs]}
-  indexable={duration.key !== 'kisa' && matchingStories.length > 0}
+  relatedTopics={duration.key === 'kisa'
+    ? [
+        { href: '/masallar/kategori/uyku/', label: 'Sakin uyku masalları' },
+        { href: '/ebeveyn-rehberi/kisa-masal-mi-uzun-masal-mi/', label: 'Kısa mı, uzun masal mı?' },
+      ]
+    : []}
+  indexable={matchingStories.length >= minimumStories}
 />

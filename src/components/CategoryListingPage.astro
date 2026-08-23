@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoryCard from './StoryCard.astro';
 import { storyPath, type Story } from '../data/stories';
-import { CATEGORY_PAGE_SIZE, categoryPagePath, type CategorySeoCopy } from '../data/category-pages';
+import { CATEGORY_PAGE_SIZE, categoryPagePath, categoryPreferredPath, type CategorySeoCopy } from '../data/category-pages';
 import { islamicStorySection, storyCategories } from '../data/taxonomy';
 
 interface Props {
@@ -16,20 +16,24 @@ interface Props {
 
 const { category, copy, stories, totalStories, page, pageCount } = Astro.props;
 const isIslamic = category.key === islamicStorySection.key;
-const isControlledCollection = category.key === 'kisa'
-  || category.key === 'uyku'
-  || stories.length === 0;
+const isShortAlias = category.key === 'kisa';
 const path = categoryPagePath(category.key, page);
-const canonical = `https://masalnova.com${path}`;
+const canonicalPath = isShortAlias ? categoryPreferredPath(category.key) : path;
+const canonical = `https://masalnova.com${canonicalPath}`;
 const title = page === 1 ? copy.title : `${copy.heading} – Sayfa ${page} | MasalNova`;
 const description = page === 1 ? copy.description : `${copy.heading} arşivinin ${page}. sayfası. Yaşa ve okuma süresine uygun ücretsiz Türkçe çocuk hikâyelerini keşfedin.`;
+const minimumIndexableStories = copy.minimumIndexableStories ?? 1;
+const isIndexableCollection = page === 1
+  && !isShortAlias
+  && totalStories >= minimumIndexableStories;
 const startPosition = (page - 1) * CATEGORY_PAGE_SIZE;
 const visiblePages = Array.from({ length: pageCount }, (_, index) => index + 1)
   .filter((candidate) => candidate === 1 || candidate === pageCount || Math.abs(candidate - page) <= 2);
 const jsonLd = [
   {
-    '@context': 'https://schema.org', '@type': 'CollectionPage', name: title.replace(' | MasalNova', ''), description, url: canonical, inLanguage: 'tr-TR',
-    mainEntity: { '@type': 'ItemList', numberOfItems: stories.length, itemListElement: stories.map((story, index) => ({ '@type': 'ListItem', position: startPosition + index + 1, url: `https://masalnova.com${storyPath(story)}`, name: story.data.title })) },
+    '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': `${canonical}#collection`, name: title.replace(' | MasalNova', ''), description, url: canonical, inLanguage: 'tr-TR',
+    isPartOf: { '@id': 'https://masalnova.com/#website' },
+    mainEntity: { '@type': 'ItemList', '@id': `${canonical}#stories`, numberOfItems: totalStories, itemListElement: stories.map((story, index) => ({ '@type': 'ListItem', position: startPosition + index + 1, url: `https://masalnova.com${storyPath(story)}`, name: story.data.title })) },
   },
   {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: isIslamic
@@ -43,16 +47,28 @@ const jsonLd = [
           { '@type': 'ListItem', position: 3, name: page === 1 ? copy.heading : `${copy.heading} – Sayfa ${page}`, item: canonical },
         ],
   },
+  ...(copy.faqs?.length
+    ? [{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${canonical}#faq`,
+        mainEntity: copy.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      }]
+    : []),
 ];
 ---
 <BaseLayout
   title={title}
   description={description}
-  path={path}
-  jsonLd={isControlledCollection ? undefined : jsonLd}
+  path={canonicalPath}
+  jsonLd={isIndexableCollection ? jsonLd : undefined}
   activeNav={isIslamic ? 'islami' : 'masallar'}
   allowAds={false}
-  robots={page > 1 || isControlledCollection ? 'noindex, follow' : undefined}
+  robots={isIndexableCollection ? undefined : 'noindex, follow'}
 >
   <section class:list={['section', 'category-page', { 'category-page--islami': isIslamic }]}>
     <div class="container">
@@ -65,7 +81,7 @@ const jsonLd = [
         {isIslamic
           ? <span class="category-emoji category-emoji--icon" aria-hidden="true"><i class="ph ph-mosque"></i></span>
           : <span class="category-emoji" aria-hidden="true">{category.emoji}</span>}
-        <div><p class="kicker">{isIslamic ? 'Kaynaklı · yaşa uygun · özenle resimlenmiş' : 'Masal oku · ücretsiz çocuk hikâyeleri'}</p><h1>{page === 1 ? copy.heading : `${copy.heading} – Sayfa ${page}`}</h1><p>{page === 1 ? copy.intro : `${copy.heading} seçkisindeki diğer yaşa uygun hikâyeler.`}</p><strong>{totalStories} {isIslamic ? 'hikâye' : 'masal'} · Sayfa {page}/{pageCount}</strong></div>
+        <div><p class="kicker">{isIslamic ? 'Kaynaklı · yaşa uygun · özenle resimlenmiş' : 'Masal oku · ücretsiz çocuk hikâyeleri'}</p><h1>{page === 1 ? copy.heading : `${copy.heading} – Sayfa ${page}`}</h1><p>{page === 1 ? copy.intro : `${copy.heading} seçkisindeki diğer yaşa uygun hikâyeler.`}</p>{isShortAlias ? <strong>1–2 dakikalık ana seçki</strong> : <strong>{totalStories} {isIslamic ? 'hikâye' : 'masal'} · Sayfa {page}/{pageCount}</strong>}</div>
       </header>
       {isIslamic && page === 1 && (
         <aside class="source-standard" aria-label="İçerik ve görsel ilkeleri">
@@ -74,14 +90,52 @@ const jsonLd = [
           <div><i class="ph ph-image-square" aria-hidden="true"></i><span><strong>Saygılı görseller</strong><small>Allah, peygamberler, melekler ve kutsal kişiler tasvir edilmez</small></span></div>
         </aside>
       )}
-      {category.key === 'kisa' && <p class="duration-note">Okuma süresine göre ana sayfa: <a href="/masallar/sure/kisa/">1–2 Dakikalık Kısa Masallar</a></p>}
-      {!isIslamic && <nav class="category-links" aria-label="Diğer masal kategorileri">{storyCategories.filter((item) => item.key !== category.key).map((item) => <a href={`/masallar/kategori/${item.key}/`}>{item.emoji} {item.label}</a>)}</nav>}
-      <div class="grid grid-3 story-grid">{stories.map((story) => <StoryCard story={story} />)}</div>
-      {pageCount > 1 && <nav class="pagination" aria-label={`${copy.heading} sayfaları`}>
-        {page > 1 && <a href={categoryPagePath(category.key, page - 1)} rel="prev">← Önceki</a>}
-        {visiblePages.map((candidate) => <a href={categoryPagePath(category.key, candidate)} aria-current={candidate === page ? 'page' : undefined} class:list={{ current: candidate === page }}>{candidate}</a>)}
-        {page < pageCount && <a href={categoryPagePath(category.key, page + 1)} rel="next">Sonraki →</a>}
-      </nav>}
+      {isShortAlias ? (
+        <aside class="collection-alias" aria-labelledby="short-collection-title">
+          <div aria-hidden="true">⏱️</div>
+          <div>
+            <h2 id="short-collection-title">Kısa masallar artık süreye göre tek seçkide</h2>
+            <p>Kategori ve okuma süresi sayfalarını tekrarlamamak için 1–2 dakikalık kısa masalları tek adreste topladık. Yaş bilgisi, yaklaşık süre ve resimli hikâye kartlarıyla ana seçkiye buradan ulaşabilirsiniz.</p>
+            <a href="/masallar/sure/kisa/">Kısa Masallar seçkisini aç <span aria-hidden="true">→</span></a>
+          </div>
+        </aside>
+      ) : (
+        <>
+          {!isIslamic && <nav class="category-links" aria-label="Diğer masal kategorileri">{storyCategories.filter((item) => item.key !== category.key).map((item) => <a href={categoryPreferredPath(item.key)}>{item.emoji} {item.label}</a>)}</nav>}
+          <div class="grid grid-3 story-grid">{stories.map((story) => <StoryCard story={story} />)}</div>
+          {pageCount > 1 && <nav class="pagination" aria-label={`${copy.heading} sayfaları`}>
+            {page > 1 && <a href={categoryPagePath(category.key, page - 1)} rel="prev">← Önceki</a>}
+            {visiblePages.map((candidate) => <a href={categoryPagePath(category.key, candidate)} aria-current={candidate === page ? 'page' : undefined} class:list={{ current: candidate === page }}>{candidate}</a>)}
+            {page < pageCount && <a href={categoryPagePath(category.key, page + 1)} rel="next">Sonraki →</a>}
+          </nav>}
+          {page === 1 && copy.guide && (
+            <section class="category-guide" aria-labelledby="category-guide-title">
+              <p class="guide-kicker">Ebeveynler için seçim yardımı</p>
+              <h2 id="category-guide-title">{copy.guide.title}</h2>
+              {copy.guide.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              {copy.guide.checklist && copy.guide.checklist.length > 0 && (
+                <ul>{copy.guide.checklist.map((item) => <li>{item}</li>)}</ul>
+              )}
+              <div class="guide-actions">
+                <a href="/ebeveyn-rehberi/uyku-oncesi-masal-rutini/">Uyku öncesi rutin rehberi</a>
+                <a href="/masal-bul/">Masal Bul aracını kullan</a>
+              </div>
+            </section>
+          )}
+          {page === 1 && copy.faqs && copy.faqs.length > 0 && (
+            <section class="category-faq" aria-labelledby="category-faq-title">
+              <p class="guide-kicker">Sık sorulan sorular</p>
+              <h2 id="category-faq-title">Uyku masalları hakkında</h2>
+              {copy.faqs.map((faq, index) => (
+                <details open={index === 0}>
+                  <summary>{faq.question}</summary>
+                  <p>{faq.answer}</p>
+                </details>
+              ))}
+            </section>
+          )}
+        </>
+      )}
     </div>
   </section>
 </BaseLayout>
@@ -99,8 +153,11 @@ const jsonLd = [
   .category-links { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0; }
   .category-links a, .pagination a { padding:9px 14px; border:1px solid rgba(255,255,255,.25); border-radius:999px; background:rgba(255,255,255,.12); font-weight:800; }
   .category-links a { display:inline-flex; align-items:center; gap:7px; }
-  .duration-note { margin-top:20px; padding:14px 16px; border-radius:15px; background:rgba(255,255,255,.12); }
-  .duration-note a { font-weight:900; text-decoration:underline; }
+  .collection-alias { display:grid; grid-template-columns:auto minmax(0,1fr); gap:18px; align-items:start; margin-top:24px; padding:clamp(22px,5vw,34px); border:1px solid rgba(255,255,255,.24); border-radius:24px; background:rgba(255,255,255,.12); }
+  .collection-alias > div:first-child { font-size:2.2rem; }
+  .collection-alias h2 { margin-bottom:8px; }
+  .collection-alias p { max-width:70ch; color:rgba(255,255,255,.82); }
+  .collection-alias a, .guide-actions a { display:inline-flex; margin-top:16px; padding:10px 15px; border-radius:999px; background:#fff; color:#1749ae; font-weight:900; }
   .pagination { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:38px; }
   .pagination a.current { border-color:var(--app-yellow); background:var(--app-yellow); color:#17336d; }
   .source-standard { display:grid; gap:10px; margin:18px 0 4px; }
@@ -109,6 +166,15 @@ const jsonLd = [
   .source-standard span { display:grid; gap:2px; }
   .source-standard strong { font-size:.88rem; }
   .source-standard small { color:rgba(255,255,255,.76); font-size:.76rem; line-height:1.4; }
+  .category-guide, .category-faq { max-width:900px; margin-top:28px; padding:clamp(24px,5vw,42px); border:1px solid rgba(255,255,255,.18); border-radius:28px; background:#fff; color:var(--ink); box-shadow:0 25px 70px rgba(3,20,78,.2); }
+  .guide-kicker { color:#1752c5; font-size:.78rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
+  .category-guide h2, .category-faq h2 { margin:7px 0 13px; font-size:clamp(1.65rem,4vw,2.4rem); }
+  .category-guide > p:not(.guide-kicker), .category-faq details p { max-width:75ch; margin-top:11px; color:var(--ink-soft); }
+  .category-guide ul { display:grid; gap:8px; margin:20px 0 0; padding-left:20px; color:var(--ink-soft); }
+  .guide-actions { display:flex; flex-wrap:wrap; gap:10px; }
+  .guide-actions a { background:#edf3ff; }
+  .category-faq details { padding:14px 0; border-top:1px solid #e4e7ee; }
+  .category-faq summary { cursor:pointer; color:#15377e; font-weight:850; }
   .category-page--islami { min-height:calc(100dvh - var(--app-nav-height)); background:linear-gradient(rgba(7,45,111,.72),rgba(4,68,85,.78)),url('/islamic/islami-hikayeler-background.webp') center top / cover fixed no-repeat; }
   @media (min-width:721px) {
     .category-page { min-height:calc(100dvh - var(--app-nav-height)); padding:34px 0 68px; background:#fbf8f1; color:#102a66; }
@@ -121,15 +187,18 @@ const jsonLd = [
     .category-head strong { background:#edf3ff; color:#1749ae; }
     .category-links a, .pagination a { border-color:#ded9ce; background:#fff; color:#25457d; }
     .pagination a.current { background:var(--app-yellow); }
-    .duration-note { border:1px solid #e2ddd1; background:#fff; color:#667188; }
+    .collection-alias { border-color:#e2ddd1; background:#fff; color:#17376f; box-shadow:0 14px 38px rgba(23,43,92,.08); }
+    .collection-alias p { color:#667188; }
+    .collection-alias a { background:#edf3ff; }
     .story-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
     .source-standard { grid-template-columns:repeat(3,minmax(0,1fr)); margin:18px 0 8px; }
     .source-standard div { border-color:#e0d8c5; background:rgba(255,253,247,.88); color:#17376f; box-shadow:0 10px 26px rgba(15,50,94,.06); }
     .source-standard i { color:#16816f; }
     .source-standard small { color:#68758b; }
+    .category-guide, .category-faq { border-color:#e2ddd1; box-shadow:0 14px 38px rgba(23,43,92,.08); }
     .category-page.category-page--islami { background:linear-gradient(rgba(251,248,239,.82),rgba(246,249,242,.9)),url('/islamic/islami-hikayeler-background.webp') center top / cover fixed no-repeat; color:#102a66; }
     .category-page--islami .category-head { border-color:rgba(192,172,123,.48); background:rgba(255,253,247,.88); box-shadow:0 18px 48px rgba(17,55,92,.08); backdrop-filter:blur(14px); }
     .category-page--islami .category-emoji--icon { border-color:rgba(27,127,111,.2); background:linear-gradient(145deg,#e8f6f0,#fff8df); color:#167b6b; }
   }
-  @media (max-width:600px) { .category-head { grid-template-columns:1fr; } }
+  @media (max-width:600px) { .category-head, .collection-alias { grid-template-columns:1fr; } }
 </style>

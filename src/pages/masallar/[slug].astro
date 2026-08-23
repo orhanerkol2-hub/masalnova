@@ -11,6 +11,7 @@ import { videoById } from '../../data/videos';
 import { getStoryAuthor, storyReviewers } from '../../data/authors';
 import { getParentGuides } from '../../data/guides';
 import { ageLabel, storyCategoryLabel } from '../../data/taxonomy';
+import { categoryPreferredPath } from '../../data/category-pages';
 import { compactDescription, storySeoTitle } from '../../lib/seo';
 import {
   hasIndividualParentGuide,
@@ -80,14 +81,14 @@ const primaryCategory = d.categories[0];
 const primaryCategoryLabel = isIslamic
   ? 'İslami Hikâyeler'
   : primaryCategory ? storyCategoryLabel(primaryCategory) : 'Masallar';
+const primaryCategoryPath = primaryCategory ? categoryPreferredPath(primaryCategory) : undefined;
 const storyPagePath = storyPath(story);
 const storyUrl = `https://masalnova.com${storyPagePath}`;
 const storyImage = d.coverImage ? `https://masalnova.com${d.coverImage}` : 'https://masalnova.com/logo.png';
 const seoDescription = compactDescription(d.shortDescription);
 const ageRange = d.audienceLabel ?? d.ageGroups.map(ageLabel).join(' ve ');
-const seoTitle = d.seoTitle ?? (isIslamic
-  ? `${d.title}${ageRange ? ` (${ageRange})` : ''} – Çocuklar İçin İslami Hikâye | MasalNova`
-  : storySeoTitle(`${d.title}${ageRange ? ` (${ageRange})` : ''}`));
+const seoTitle = d.seoTitle ?? storySeoTitle(d.title, { ageRange, islamic: isIslamic });
+const modifiedAt = d.modifiedAt ?? d.publishedAt;
 const primaryTheme = d.themes[0] ?? 'hikâyenin ana fikri';
 const ageBounds = d.ageGroups.flatMap((group) => group.split('-').map(Number)).filter(Number.isFinite);
 const suggestedMinAge = ageBounds.length ? Math.min(...ageBounds) : undefined;
@@ -119,6 +120,8 @@ const jsonLd = [
     headline: d.title,
     description: seoDescription,
     image: [storyImage],
+    datePublished: d.publishedAt,
+    dateModified: modifiedAt,
     inLanguage: 'tr-TR',
     isAccessibleForFree: true,
     articleSection: isIslamic ? ['İslami Hikâyeler'] : d.categories.map(storyCategoryLabel),
@@ -160,7 +163,7 @@ const jsonLd = [
       : [
           { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://masalnova.com/' },
           { '@type': 'ListItem', position: 2, name: 'Masallar', item: 'https://masalnova.com/masallar/' },
-          ...(primaryCategory ? [{ '@type': 'ListItem', position: 3, name: primaryCategoryLabel, item: `https://masalnova.com/masallar/kategori/${primaryCategory}/` }] : []),
+          ...(primaryCategoryPath ? [{ '@type': 'ListItem', position: 3, name: primaryCategoryLabel, item: `https://masalnova.com${primaryCategoryPath}` }] : []),
           { '@type': 'ListItem', position: primaryCategory ? 4 : 3, name: d.title, item: storyUrl },
         ],
   },
@@ -173,6 +176,8 @@ const jsonLd = [
   image={d.coverImage}
   imageAlt={d.altText ?? `${d.title} resimli ${isIslamic ? 'hikâye' : 'masal'} kapağı`}
   ogType="article"
+  publishedTime={d.publishedAt}
+  modifiedTime={modifiedAt}
   preloadImage={d.coverImage}
   jsonLd={isPubliclyEligible ? jsonLd : undefined}
   activeNav={isIslamic ? 'islami' : 'masallar'}
@@ -193,7 +198,7 @@ const jsonLd = [
         <a href="/">Ana Sayfa</a> <span>›</span>
         {isIslamic
           ? <a href="/islami-hikayeler/">İslami Hikâyeler</a>
-          : <><a href="/masallar/">Masallar</a>{primaryCategory && <><span>›</span><a href={`/masallar/kategori/${primaryCategory}/`}>{primaryCategoryLabel}</a></>}</>}
+          : <><a href="/masallar/">Masallar</a>{primaryCategoryPath && <><span>›</span><a href={primaryCategoryPath}>{primaryCategoryLabel}</a></>}</>}
         <span>›</span> <span>{d.title}</span>
       </nav>
 
@@ -225,7 +230,7 @@ const jsonLd = [
                 : d.categories.map((c) => (
                     <>
                       <span aria-hidden="true">·</span>
-                      <a href={`/masallar/kategori/${c}/`}>{storyCategoryLabel(c)}</a>
+                      <a href={categoryPreferredPath(c)}>{storyCategoryLabel(c)}</a>
                     </>
                   ))}
             </div>

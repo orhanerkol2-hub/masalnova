@@ -1,5 +1,5 @@
 import { access, readdir, readFile } from 'node:fs/promises';
-import { dirname, extname, join } from 'node:path';
+import { dirname, extname, isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 import {
@@ -608,13 +608,49 @@ let builtHtmlFiles = 0;
 let builtInternalReferences = 0;
 let verifiedGameGuides = 0;
 if (verifyBuiltOutput) {
-  const outputDirectory = join(root, process.env.MASALNOVA_AUDIT_OUTPUT_DIR?.trim() || 'docs');
+  const configuredOutputDirectory = process.env.MASALNOVA_AUDIT_OUTPUT_DIR?.trim() || 'docs';
+  const outputDirectory = isAbsolute(configuredOutputDirectory)
+    ? configuredOutputDirectory
+    : join(root, configuredOutputDirectory);
   const sitemapPath = join(outputDirectory, 'sitemap-0.xml');
   let sitemap = '';
   try {
     sitemap = await readFile(sitemapPath, 'utf8');
   } catch {
     hardErrors.push('Build-Ausgabe oder docs/sitemap-0.xml fehlt. Zuerst npm run build ausführen.');
+  }
+
+  for (const { route, minimumCards } of [
+    { route: '/masallar/kategori/uyku/', minimumCards: 12 },
+    { route: '/masallar/sure/kisa/', minimumCards: 12 },
+  ]) {
+    try {
+      const html = await readFile(join(outputDirectory, route, 'index.html'), 'utf8');
+      const storyCardCount = (html.match(/class="story-card(?:\s|"|--)/g) ?? []).length;
+      if (html.includes('content="noindex')
+        || !html.includes('"@type":"CollectionPage"')
+        || !sitemap.includes(`https://masalnova.com${route}</loc>`)
+        || storyCardCount < minimumCards) {
+        hardErrors.push(`${route}: indexierbarer Suchintent-Hub ist in HTML/Sitemap nicht vollständig freigegeben (${storyCardCount}/${minimumCards} Karten).`);
+      }
+    } catch {
+      hardErrors.push(`${route}: indexierbarer Suchintent-Hub fehlt in der Build-Ausgabe.`);
+    }
+  }
+
+  try {
+    const shortAlias = await readFile(
+      join(outputDirectory, 'masallar', 'kategori', 'kisa', 'index.html'),
+      'utf8',
+    );
+    const preferredShortUrl = 'https://masalnova.com/masallar/sure/kisa/';
+    if (!shortAlias.includes('content="noindex, follow"')
+      || !shortAlias.includes(`rel="canonical" href="${preferredShortUrl}"`)
+      || sitemap.includes('https://masalnova.com/masallar/kategori/kisa/</loc>')) {
+      hardErrors.push('/masallar/kategori/kisa/: Alias ist nicht sauber auf den kanonischen Kısa-Hub konsolidiert.');
+    }
+  } catch {
+    hardErrors.push('/masallar/kategori/kisa/: kontrollierter Alias fehlt in der Build-Ausgabe.');
   }
 
   for (const story of stories) {
@@ -636,14 +672,19 @@ if (verifyBuiltOutput) {
     const hasChildAgeTreatment = html.includes('google_tag_for_age_treatment = 1');
     const hasNoindex = html.includes('content="noindex, follow"');
     const hasArticleData = html.includes('"@type":"Article"');
-    const hasPublicDate = html.includes('"datePublished"')
-      || html.includes('"dateModified"')
-      || html.includes('property="article:published_time"')
-      || html.includes('property="article:modified_time"')
-      || html.includes('Yayınlandı:')
-      || html.includes('Güncellendi:');
+    const hasPublishedStructuredDate = html.includes('"datePublished"')
+      && html.includes('property="article:published_time"');
+    const hasModifiedStructuredDate = !story.modifiedAt
+      || (html.includes('"dateModified"')
+        && html.includes('property="article:modified_time"'));
 
-    if (shouldBePublic && (!isInSitemap || hasNoindex || !hasArticleData || hasPublicDate)) {
+    if (shouldBePublic && (
+      !isInSitemap
+      || hasNoindex
+      || !hasArticleData
+      || !hasPublishedStructuredDate
+      || !hasModifiedStructuredDate
+    )) {
       hardErrors.push(`${route}: öffentliche Story ist in HTML/Sitemap nicht konsistent.`);
     }
     if (shouldAllowAds !== hasAdSenseMetadata || shouldAllowAds !== hasChildAgeTreatment) {
@@ -740,6 +781,15 @@ if (verifyBuiltOutput) {
   for (const file of generatedHtml) {
     const source = await readFile(file, 'utf8');
     const outputPath = file.slice(outputDirectory.length + 1);
+    const documentTitle = source.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? '';
+    const openingParentheses = (documentTitle.match(/\(/g) ?? []).length;
+    const closingParentheses = (documentTitle.match(/\)/g) ?? []).length;
+    if (openingParentheses !== closingParentheses) {
+      hardErrors.push(`${outputPath}: Seitentitel enthält eine abgeschnittene Klammer: ${documentTitle}`);
+    }
+    if (source.includes('href="/?privacy-settings=1')) {
+      hardErrors.push(`${outputPath}: interner Link erzeugt weiterhin die crawlbare privacy-settings-Query.`);
+    }
     const storyForOutput = storyByOutputPath.get(outputPath);
     const isMonetizableStory = Boolean(storyForOutput
       && isStoryMonetizationEligible(storyForOutput));

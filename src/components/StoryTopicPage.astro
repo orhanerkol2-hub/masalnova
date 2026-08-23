@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoryCard from './StoryCard.astro';
 import type { Story } from '../data/stories';
+import { categoryPreferredPath } from '../data/category-pages';
 import { ageGroups, durationBuckets, storyCategories } from '../data/taxonomy';
 
 interface Props {
@@ -97,7 +98,7 @@ const jsonLd = [
 
       <nav class="topic-links" aria-label="Diğer masal seçimleri">
         <a href="/masallar/resimli/">Resimli masallar</a>
-        {storyCategories.map((category) => <a href={`/masallar/kategori/${category.key}/`}>{category.label}</a>)}
+        {storyCategories.map((category) => <a href={categoryPreferredPath(category.key)}>{category.label}</a>)}
         {[3, 4, 5, 6, 7].map((age) => <a href={`/masallar/yas/${age}-yas/`}>{age} yaş masalları</a>)}
         {ageGroups.map((age) => <a href={`/masallar/yas/${age.key}/`}>{age.label}</a>)}
         {durationBuckets.map((duration) => <a href={`/masallar/sure/${duration.key}/`}>{duration.label}</a>)}

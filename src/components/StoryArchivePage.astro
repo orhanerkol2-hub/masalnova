@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StoryCard from './StoryCard.astro';
 import { storyPath, type Story } from '../data/stories';
+import { categoryPreferredPath } from '../data/category-pages';
 import { ageGroups, durationBuckets, storyCategories } from '../data/taxonomy';
 import { STORY_ARCHIVE_PAGE_SIZE, storyArchivePath } from '../data/pagination';
 
@@ -100,7 +101,7 @@ const visiblePages = Array.from({ length: pageCount }, (_, index) => index + 1)
       <nav class="topic-links" aria-label="Masal türleri, yaş ve süre seçenekleri">
         <a class="featured" href="/masallar/resimli/"><i class="ph ph-image" aria-hidden="true"></i> Resimli masallar</a>
         {storyCategories.map((category) => (
-          <a href={`/masallar/kategori/${category.key}/`}>{category.emoji} {category.label}</a>
+          <a href={categoryPreferredPath(category.key)}>{category.emoji} {category.label}</a>
         ))}
         {ageGroups.map((age) => <a href={`/masallar/yas/${age.key}/`}>{age.label} masalları</a>)}
         {durationBuckets.map((duration) => (
