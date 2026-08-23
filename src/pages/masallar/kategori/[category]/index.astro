@@ -11,7 +11,9 @@ export async function getStaticPaths() {
 const { category } = Astro.props;
 const allStories = category.key === 'uyku'
   ? await getDiscoverableMasalStories()
-  : await getMasalStories();
+  : category.key === 'kisa'
+    ? []
+    : await getMasalStories();
 const matchingStories = allStories.filter((story) => story.data.categories.includes(category.key));
 const pageCount = Math.max(1, Math.ceil(matchingStories.length / CATEGORY_PAGE_SIZE));
 ---

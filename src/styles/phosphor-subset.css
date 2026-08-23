@@ -1,0 +1,135 @@
+/* Generated from the ph-* usages in src/ by scripts/generate-phosphor-subset.mjs. */
+@font-face {
+  font-family: "MasalNova Phosphor";
+  src: url('/fonts/phosphor-regular-subset.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "MasalNova Phosphor Fill";
+  src: url('/fonts/phosphor-fill-subset.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.ph,
+.ph-fill {
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ph { font-family: "MasalNova Phosphor" !important; }
+.ph-fill { font-family: "MasalNova Phosphor Fill" !important; }
+
+.ph.ph-arrow-counter-clockwise::before { content: "\e038"; }
+.ph.ph-arrow-left::before { content: "\e058"; }
+.ph.ph-arrow-right::before { content: "\e06c"; }
+.ph.ph-arrow-square-out::before { content: "\e5de"; }
+.ph.ph-arrows-out::before { content: "\e0a2"; }
+.ph.ph-arrows-out-line-vertical::before { content: "\e536"; }
+.ph.ph-book-bookmark::before { content: "\e0e4"; }
+.ph.ph-book-open-text::before { content: "\e8f2"; }
+.ph.ph-bookmark-simple::before { content: "\e0ea"; }
+.ph.ph-brain::before { content: "\e74e"; }
+.ph.ph-broom::before { content: "\ec54"; }
+.ph.ph-cards::before { content: "\e0f8"; }
+.ph.ph-caret-down::before { content: "\e136"; }
+.ph.ph-caret-right::before { content: "\e13a"; }
+.ph.ph-check-circle::before { content: "\e184"; }
+.ph.ph-child::before { content: "\ecfe"; }
+.ph.ph-clock::before { content: "\e19a"; }
+.ph.ph-cloud-sun::before { content: "\e540"; }
+.ph.ph-compass::before { content: "\e1c8"; }
+.ph.ph-crown-simple::before { content: "\e616"; }
+.ph.ph-cube::before { content: "\e1da"; }
+.ph.ph-device-mobile::before { content: "\e1e0"; }
+.ph.ph-device-rotate::before { content: "\edf2"; }
+.ph.ph-diamond::before { content: "\e1ec"; }
+.ph.ph-download-simple::before { content: "\e20c"; }
+.ph.ph-eraser::before { content: "\e21e"; }
+.ph.ph-export::before { content: "\eaf0"; }
+.ph.ph-fire::before { content: "\e242"; }
+.ph.ph-flower::before { content: "\e75e"; }
+.ph.ph-flower-lotus::before { content: "\e6cc"; }
+.ph.ph-game-controller::before { content: "\e26e"; }
+.ph.ph-gear::before { content: "\e270"; }
+.ph.ph-globe-hemisphere-west::before { content: "\e28c"; }
+.ph.ph-grid-four::before { content: "\e296"; }
+.ph.ph-hammer::before { content: "\e80e"; }
+.ph.ph-hand-heart::before { content: "\e810"; }
+.ph.ph-hand-swipe-left::before { content: "\ec94"; }
+.ph.ph-hand-tap::before { content: "\ec90"; }
+.ph.ph-heart::before { content: "\e2a8"; }
+.ph.ph-hexagon::before { content: "\e2ae"; }
+.ph.ph-house::before { content: "\e2c2"; }
+.ph.ph-image::before { content: "\e2ca"; }
+.ph.ph-image-square::before { content: "\e2cc"; }
+.ph.ph-images::before { content: "\e836"; }
+.ph.ph-keyboard::before { content: "\e2d8"; }
+.ph.ph-leaf::before { content: "\e2da"; }
+.ph.ph-lightbulb::before { content: "\e2dc"; }
+.ph.ph-lightbulb-filament::before { content: "\e63c"; }
+.ph.ph-lightning::before { content: "\e2de"; }
+.ph.ph-lock-simple::before { content: "\e308"; }
+.ph.ph-magnifying-glass::before { content: "\e30c"; }
+.ph.ph-moon-stars::before { content: "\e58e"; }
+.ph.ph-mosque::before { content: "\ecee"; }
+.ph.ph-mountains::before { content: "\e7ae"; }
+.ph.ph-paint-brush::before { content: "\e6f0"; }
+.ph.ph-paint-brush-broad::before { content: "\e590"; }
+.ph.ph-paint-bucket::before { content: "\e392"; }
+.ph.ph-palette::before { content: "\e6c8"; }
+.ph.ph-pause::before { content: "\e39e"; }
+.ph.ph-paw-print::before { content: "\e648"; }
+.ph.ph-person-simple-run::before { content: "\e730"; }
+.ph.ph-pizza::before { content: "\e796"; }
+.ph.ph-play::before { content: "\e3d0"; }
+.ph.ph-play-circle::before { content: "\e3d2"; }
+.ph.ph-plus::before { content: "\e3d4"; }
+.ph.ph-plus-square::before { content: "\ed4a"; }
+.ph.ph-printer::before { content: "\e3dc"; }
+.ph.ph-puzzle-piece::before { content: "\e596"; }
+.ph.ph-quotes::before { content: "\e660"; }
+.ph.ph-scissors::before { content: "\eae0"; }
+.ph.ph-scroll::before { content: "\eb7a"; }
+.ph.ph-seal-check::before { content: "\e606"; }
+.ph.ph-shield-check::before { content: "\e40c"; }
+.ph.ph-smiley::before { content: "\e436"; }
+.ph.ph-sneaker-move::before { content: "\ed60"; }
+.ph.ph-sparkle::before { content: "\e6a2"; }
+.ph.ph-speaker-high::before { content: "\e44a"; }
+.ph.ph-speaker-slash::before { content: "\e45a"; }
+.ph.ph-squares-four::before { content: "\e464"; }
+.ph.ph-star::before { content: "\e46a"; }
+.ph.ph-steering-wheel::before { content: "\e9ac"; }
+.ph.ph-student::before { content: "\e73e"; }
+.ph.ph-tag::before { content: "\e478"; }
+.ph.ph-timer::before { content: "\e492"; }
+.ph.ph-trash::before { content: "\e4a6"; }
+.ph.ph-trend-up::before { content: "\e4ae"; }
+.ph.ph-trophy::before { content: "\e67e"; }
+.ph.ph-users-three::before { content: "\e68e"; }
+.ph.ph-x::before { content: "\e4f6"; }
+
+/* Legacy class names used by existing templates. */
+.ph.ph-play-fill { font-family: "MasalNova Phosphor Fill" !important; }
+.ph.ph-play-fill::before { content: "\e3d0"; }
+
+.ph-fill.ph-check-circle::before { content: "\e184"; }
+.ph-fill.ph-hand-heart::before { content: "\e810"; }
+.ph-fill.ph-heart::before { content: "\e2a8"; }
+.ph-fill.ph-moon-stars::before { content: "\e58e"; }
+.ph-fill.ph-play-circle::before { content: "\e3d2"; }
+.ph-fill.ph-seal-check::before { content: "\e606"; }
+.ph-fill.ph-shield-check::before { content: "\e40c"; }
+.ph-fill.ph-star::before { content: "\e46a"; }

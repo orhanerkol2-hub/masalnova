@@ -47,6 +47,24 @@ explicit `core` classification and real `qualityReviewedAt` are documented.
 explicit `core` classification and completion of the individual parent fields
 above. These are MasalNova controls, not Google word-count rules.
 
+The collection hubs have their own release controls and do not change those
+per-story decisions:
+
+- `/masallar/kategori/uyku/` is indexable only while at least 12 approved,
+  substantial and internally discoverable bedtime stories are available. Its
+  pagination remains `noindex, follow`.
+- `/masallar/sure/kisa/` is the canonical short-story collection and is
+  indexable only while at least 12 approved, substantial and explicitly
+  modified short stories are available.
+- `/masallar/kategori/kisa/` is a backward-compatible `noindex, follow` alias
+  with a canonical pointing to `/masallar/sure/kisa/`. Internal links must use
+  the duration URL. A real HTTP 301 still requires an edge or hosting rule.
+
+The sitemap uses only explicit `publishedAt` and `modifiedAt` values for
+`lastmod`. Never substitute a deployment timestamp. Update `modifiedAt` only
+after a significant change to the primary content, structured data or internal
+links.
+
 ## Ebeveyn Rehberi release gate
 
 New parent guides start with an organisational draft author and stay outside
@@ -133,8 +151,17 @@ a substitute for a merge or redirect.
 ## Search Console checks after deployment
 
 - Submit `https://masalnova.com/sitemap-index.xml`.
-- Inspect `/`, `/masallar/`, one category page, one pagination page, one exact-age page, one topic
+- Inspect `/`, `/masallar/`, `/masallar/kategori/uyku/`,
+  `/masallar/sure/kisa/`, one pagination page, one exact-age page, one topic
   page and one story page.
+- Confirm that `/masallar/kategori/kisa/` is excluded and Google selects
+  `/masallar/sure/kisa/` as canonical. Add a real HTTP 301 at the edge when
+  deployment control is available.
 - Confirm the old placeholder URL leaves the index.
 - Compare Core Web Vitals separately for home, category and story templates.
 - Use 90-day query and click data before removing older stories solely for low traffic.
+
+For Cloudflare, set a browser-cache rule for fingerprinted `/_astro/*` assets
+to `public, max-age=31536000, immutable` and purge it on deployment. This cannot
+be expressed by the current GitHub Pages build itself; verify the live response
+headers after changing the edge rule.

@@ -8,6 +8,7 @@ export async function getStaticPaths() {
   const allStories = await getMasalStories();
   const discoverableStories = await getDiscoverableMasalStories();
   return storyCategories.flatMap((category) => {
+    if (category.key === 'kisa') return [];
     const categoryStories = category.key === 'uyku' ? discoverableStories : allStories;
     const matchingStories = categoryStories.filter((story) => story.data.categories.includes(category.key));
     const pageCount = Math.ceil(matchingStories.length / CATEGORY_PAGE_SIZE);

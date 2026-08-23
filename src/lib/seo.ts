@@ -1,5 +1,12 @@
 const DEFAULT_TITLE_LIMIT = 68;
 const DEFAULT_DESCRIPTION_LIMIT = 155;
+const STORY_TITLE_LIMIT = 60;
+const SITE_TITLE_SUFFIX = ' | MasalNova';
+
+interface StorySeoTitleOptions {
+  ageRange?: string;
+  islamic?: boolean;
+}
 
 function truncateAtWord(value: string, limit: number): string {
   const clean = value.replace(/\s+/g, ' ').trim();
@@ -15,12 +22,58 @@ export function compactDescription(value: string, limit = DEFAULT_DESCRIPTION_LI
   return compact.length < value.replace(/\s+/g, ' ').trim().length ? `${compact}…` : compact;
 }
 
-export function storySeoTitle(title: string): string {
-  const suffix = ' | MasalNova';
-  const hasStoryIntent = /\b(masal|masalı|masali|hikâye|hikaye)\b/iu.test(title);
-  const candidate = `${title}${hasStoryIntent ? ' Oku' : ' Masalı Oku'}${suffix}`;
-  if (candidate.length <= DEFAULT_TITLE_LIMIT) return candidate;
-  return `${truncateAtWord(title, DEFAULT_TITLE_LIMIT - suffix.length)}${suffix}`;
+function truncateTitleAtTokenBoundary(value: string, limit: number): string {
+  const clean = value.replace(/\s+/g, ' ').trim();
+  if (clean.length <= limit) return clean;
+
+  let result = '';
+  for (const token of clean.split(' ')) {
+    const candidate = result ? `${result} ${token}` : token;
+    if (candidate.length > limit) break;
+    result = candidate;
+  }
+
+  // If truncation lands inside a parenthetical, drop the whole incomplete
+  // group instead of exposing a title such as "(5-7 | MasalNova".
+  const openingParentheses: number[] = [];
+  for (let index = 0; index < result.length; index += 1) {
+    if (result[index] === '(') openingParentheses.push(index);
+    if (result[index] === ')') openingParentheses.pop();
+  }
+  if (openingParentheses.length) result = result.slice(0, openingParentheses[0]);
+
+  return result.replace(/[\s,;:–—-]+$/u, '').trim() || clean;
+}
+
+export function storySeoTitle(title: string, options: StorySeoTitleOptions = {}): string {
+  const cleanTitle = title.replace(/\s+/g, ' ').trim();
+  const cleanAgeRange = options.ageRange
+    ?.replace(/^\((.*)\)$/u, '$1')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/(?<!\p{L})yaş(?!\p{L})/giu, 'Yaş');
+  const ageToken = cleanAgeRange ? ` (${cleanAgeRange})` : '';
+  const hasStoryIntent = /(?<![\p{L}\p{N}])(?:masal(?:ı|i)?|hikâye|hikaye)(?![\p{L}\p{N}])/iu.test(cleanTitle);
+  const intentTitle = options.islamic
+    ? `${cleanTitle} – İslami Hikâye`
+    : hasStoryIntent ? cleanTitle : `${cleanTitle} Masalı`;
+  const candidates = options.islamic
+    ? [`${intentTitle}${SITE_TITLE_SUFFIX}`, `${cleanTitle}${SITE_TITLE_SUFFIX}`]
+    : [
+        `${intentTitle}${ageToken}${SITE_TITLE_SUFFIX}`,
+        `${intentTitle}${SITE_TITLE_SUFFIX}`,
+        `${cleanTitle}${ageToken}${SITE_TITLE_SUFFIX}`,
+        `${cleanTitle}${SITE_TITLE_SUFFIX}`,
+      ];
+
+  const completeCandidate = candidates.find((candidate) => candidate.length <= STORY_TITLE_LIMIT);
+  if (completeCandidate) return completeCandidate;
+
+  const compactTitle = truncateTitleAtTokenBoundary(
+    cleanTitle,
+    STORY_TITLE_LIMIT - SITE_TITLE_SUFFIX.length,
+  );
+  return `${compactTitle}${SITE_TITLE_SUFFIX}`;
 }
 
 export function videoSeoTitle(title: string): string {
