@@ -3,6 +3,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const exclusiveGames = [
   {
+    title: 'Yıldız Dartı',
+    url: 'https://masalnova.com/oyna/yildiz-darti/',
+  },
+  {
     title: 'Masal Kilimleri: Güneşli Atölye',
     url: 'https://masalnova.com/oyna/masal-kilimleri-atolye/',
   },
@@ -140,6 +144,26 @@ const jsonLd = [
       </div>
 
       <div class="originals-grid">
+        <a class="exclusive-game" href="/oyna/yildiz-darti/" aria-label="Yıldız Dartı oyununu oyna">
+          <div class="exclusive-visual" aria-hidden="true">
+            <img class="exclusive-background" src="/games/masalnova-covers/yildiz-darti-arcade.webp" alt="" width="1200" height="900" />
+            <div class="exclusive-shade"></div>
+            <span class="exclusive-play-cue"><i class="ph ph-play-fill"></i> OYNA</span>
+            <span class="exclusive-ribbon">YENİ · 3 DİYAR</span>
+          </div>
+          <div class="exclusive-copy">
+            <span class="exclusive-label"><i class="ph ph-crown-simple" aria-hidden="true"></i> MasalNova Originals <span class="exclusive-age">· 5+ yaş</span></span>
+            <h3>Yıldız Dartı</h3>
+            <p>Sihirli hedeflere nişan al, yıldızını doğru güçte bırak ve üç masal diyarını yeniden ışıkla doldur.</p>
+            <ul aria-label="Oyun özellikleri">
+              <li><i class="ph ph-star" aria-hidden="true"></i> Nişan becerisi</li>
+              <li><i class="ph ph-star" aria-hidden="true"></i> 3 masal diyarı</li>
+              <li><i class="ph ph-device-mobile" aria-hidden="true"></i> Mobil uyumlu</li>
+            </ul>
+            <span class="exclusive-cta">Yıldızını fırlat <i class="ph ph-play-circle" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
         <a class="exclusive-game kilim-workshop-game" href="/oyna/masal-kilimleri-atolye/" aria-label="Masal Kilimleri Güneşli Atölye oyununu oyna">
           <div class="exclusive-visual" aria-hidden="true">
             <img class="exclusive-background" src="/games/masalnova-covers/masal-kilimleri-atolye.webp" alt="" width="1440" height="810" />

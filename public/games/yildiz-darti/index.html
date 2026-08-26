@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#071a40">
+  <meta name="description" content="MasalNova Yıldız Dartı – çocuklar için reklamsız, masalsı bir HTML5 beceri oyunu.">
+  <title>MasalNova | Yıldız Dartı</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="gameShell" data-state="menu" aria-label="MasalNova Yıldız Dartı">
+    <canvas id="gameCanvas" aria-label="Sihirli hedeflerin bulunduğu oyun alanı"></canvas>
+
+    <header id="topHud" class="hud hidden" aria-label="Oyun durumu">
+      <div class="hud__chapter" aria-label="Bölüm">
+        <span class="brand-mini" aria-hidden="true">M</span>
+        <span class="hud__chapter-copy">
+          <small>BÖLÜM</small>
+          <strong id="hudLevel">1 / 3</strong>
+        </span>
+      </div>
+
+      <div class="hud__score" aria-label="Puan ve hedef">
+        <div class="hud__score-line">
+          <span>PUAN</span>
+          <strong id="hudScore">0</strong>
+          <span class="hud__goal">/ <span id="hudGoal">100</span></span>
+        </div>
+        <span class="hud__progress" aria-hidden="true"><i id="hudProgress"></i></span>
+      </div>
+
+      <div class="hud__right">
+        <div class="hud__throws" aria-label="Kalan yıldızlar">
+          <span aria-hidden="true">✦</span>
+          <strong id="hudDarts">5</strong>
+        </div>
+        <button id="pauseButton" class="hud-control" type="button" aria-label="Oyunu duraklat">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7V5zm6 0h4v14h-4V5z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <section id="menuScreen" class="screen screen--visible" aria-labelledby="gameTitle">
+      <div class="storybook-card storybook-card--hero masalnova-card">
+        <div class="brand-lockup" aria-label="MasalNova">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span class="brand-name">MasalNova</span>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <span class="hero-target"><i></i><b>✦</b></span>
+          <span class="hero-spark hero-spark--one">✦</span>
+          <span class="hero-spark hero-spark--two">✦</span>
+          <span class="hero-spark hero-spark--three">•</span>
+        </div>
+
+        <div class="game-tags" aria-label="Oyun bilgileri">
+          <span>5+ yaş</span>
+          <span>Reklamsız</span>
+          <span>Mobil uyumlu</span>
+        </div>
+
+        <p class="eyebrow">MASALNOVA OYUN DÜNYASI</p>
+        <h1 id="gameTitle">Yıldız Dartı</h1>
+        <p class="hero-copy">Sihirli hedefleri vur, üç masal diyarını yeniden ışıkla doldur.</p>
+
+        <div class="menu-actions menu-actions--single">
+          <button id="startButton" class="magic-button magic-button--primary magic-button--play" type="button">
+            <span class="magic-button__icon" aria-hidden="true">▶</span>
+            <span>OYNA</span>
+          </button>
+          <button id="howToButton" class="text-button" type="button">
+            <span aria-hidden="true">?</span>
+            Nasıl oynanır?
+          </button>
+        </div>
+
+        <div class="best-score">
+          <span aria-hidden="true">★</span>
+          <span>En iyi puanın</span>
+          <strong id="menuBest">0</strong>
+        </div>
+        <p class="privacy-note">Puanın yalnızca bu cihazda saklanır.</p>
+      </div>
+    </section>
+
+    <section id="howToScreen" class="screen" aria-labelledby="howToTitle">
+      <div class="storybook-card storybook-card--compact masalnova-card">
+        <button class="card-close" id="closeHowTo" type="button" aria-label="Nasıl oynanır penceresini kapat">×</button>
+        <p class="eyebrow">ÜÇ KOLAY ADIM</p>
+        <h2 id="howToTitle">Nasıl oynanır?</h2>
+        <p class="screen-lead">Parmağınla hedefi seç. Kısa süre basılı tut ve bırak.</p>
+
+        <div class="instruction-grid">
+          <article class="instruction-step">
+            <span class="instruction-step__number">1</span>
+            <div class="instruction-step__art instruction-step__art--aim" aria-hidden="true"><i></i></div>
+            <h3>Hedefe dokun</h3>
+            <p>Nişangâhı istediğin noktaya getir.</p>
+          </article>
+          <article class="instruction-step">
+            <span class="instruction-step__number">2</span>
+            <div class="instruction-step__art instruction-step__art--hold" aria-hidden="true"><i></i></div>
+            <h3>Basılı tut</h3>
+            <p>Yıldız ışığı dolana kadar bekle.</p>
+          </article>
+          <article class="instruction-step">
+            <span class="instruction-step__number">3</span>
+            <div class="instruction-step__art instruction-step__art--release" aria-hidden="true"><i></i></div>
+            <h3>Bırak</h3>
+            <p>Merkeze yaklaştıkça daha çok puan kazan.</p>
+          </article>
+        </div>
+
+        <p class="keyboard-note">Bilgisayarda fareyi veya ok tuşlarıyla boşluk tuşunu kullanabilirsin.</p>
+        <button id="howToPlayButton" class="magic-button magic-button--primary" type="button">Anladım, oynayalım</button>
+      </div>
+    </section>
+
+    <section id="chapterScreen" class="screen" aria-labelledby="chapterTitle">
+      <div class="storybook-card storybook-card--chapter masalnova-card">
+        <div id="chapterBadge" class="chapter-badge" aria-hidden="true">1</div>
+        <p id="chapterEyebrow" class="eyebrow">BÖLÜM 1 / 3</p>
+        <h2 id="chapterTitle">Sihirli Orman</h2>
+        <p id="chapterStory" class="chapter-story">İlk yıldız ışığı ormanda saklanıyor. Hedefi vur ve ateş böceklerini uyandır.</p>
+        <div class="chapter-goal">
+          <span aria-hidden="true">✦</span>
+          <span>Hedef: <strong id="chapterGoal">100</strong> puan</span>
+        </div>
+        <button id="chapterStartButton" class="magic-button magic-button--primary" type="button">
+          Bölümü başlat
+        </button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen" aria-labelledby="resultTitle">
+      <div class="storybook-card storybook-card--result masalnova-card">
+        <div id="resultStars" class="result-stars" aria-label="Yıldız değerlendirmesi">
+          <span>★</span><span>★</span><span>★</span>
+        </div>
+        <p id="resultEyebrow" class="eyebrow">BÖLÜM TAMAMLANDI</p>
+        <h2 id="resultTitle">Harika oynadın!</h2>
+        <p id="resultCopy" class="result-copy">Orman yeniden ışıldıyor.</p>
+        <div class="result-scoreboard">
+          <div><span>Bu bölüm</span><strong id="resultRoundScore">0</strong></div>
+          <div><span>Toplam</span><strong id="resultTotalScore">0</strong></div>
+          <div><span>En iyi seri</span><strong id="resultCombo">0×</strong></div>
+        </div>
+        <div class="result-actions">
+          <button id="nextButton" class="magic-button magic-button--primary" type="button">Sonraki bölüm</button>
+          <button id="retryButton" class="text-button text-button--wide" type="button">Bu bölümü tekrar oyna</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="finalScreen" class="screen" aria-labelledby="finalTitle">
+      <div class="storybook-card storybook-card--hero storybook-card--final masalnova-card">
+        <div class="final-crown" aria-hidden="true">★</div>
+        <p class="eyebrow">ÜÇ DİYAR DA IŞILDIYOR</p>
+        <h2 id="finalTitle">Yıldız kahramanı sensin!</h2>
+        <p class="hero-copy">Sihirli hedefleri tamamladın ve MasalNova dünyasına ışığı geri getirdin.</p>
+        <div class="final-score">
+          <span>Toplam puanın</span>
+          <strong id="finalScore">0</strong>
+          <small id="newBestLabel" class="hidden">Yeni rekor!</small>
+        </div>
+        <div id="finalStars" class="result-stars result-stars--large" aria-label="Toplam yıldız değerlendirmesi">
+          <span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="menu-actions">
+          <button id="playAgainButton" class="magic-button magic-button--primary" type="button">Yeniden oyna</button>
+          <button id="backToMenuButton" class="text-button text-button--wide" type="button">Ana ekrana dön</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="pauseScreen" class="screen" aria-labelledby="pauseTitle">
+      <div class="storybook-card storybook-card--pause masalnova-card">
+        <span class="pause-icon" aria-hidden="true">Ⅱ</span>
+        <p class="eyebrow">OYUN DURAKLATILDI</p>
+        <h2 id="pauseTitle">Kısa bir mola</h2>
+        <p class="screen-lead">Hazır olduğunda kaldığın yerden devam edebilirsin.</p>
+        <div class="pause-actions">
+          <button id="resumeButton" class="magic-button magic-button--primary" type="button">Devam et</button>
+          <button id="restartButton" class="magic-button magic-button--secondary" type="button">Bölümü baştan başlat</button>
+          <button id="quitButton" class="text-button text-button--wide" type="button">Ana ekrana dön</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="coachOverlay" class="coach-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="coachTitle">
+      <div class="coach-card">
+        <div class="coach-gesture" aria-hidden="true">
+          <span class="coach-target">✦</span>
+          <span class="coach-finger">☝</span>
+        </div>
+        <p class="eyebrow">İLK ATIŞIN</p>
+        <h2 id="coachTitle">Hedefe dokun ve basılı tut</h2>
+        <p>Nişangâhı görerek hareket ettir, sonra parmağını bırak.</p>
+        <button id="coachButton" class="magic-button magic-button--primary" type="button">Hadi başlayalım</button>
+      </div>
+    </div>
+
+    <div id="aimHint" class="aim-hint hidden" aria-hidden="true">
+      <span>Dokun</span><i></i><span>Basılı tut</span><i></i><span>Bırak</span>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="liveStatus" class="sr-only" aria-live="assertive"></div>
+
+    <nav class="corner-controls" aria-label="Oyun seçenekleri">
+      <button id="soundButton" class="round-control" type="button" aria-label="Sesi kapat" aria-pressed="true">
+        <svg class="icon-sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.1-3.8v7.6a4.5 4.5 0 0 0 2.1-3.8zm0-8.1v2.2a7 7 0 0 1 0 11.8v2.2a9 9 0 0 0 0-16.2z"/></svg>
+        <svg class="icon-sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.6 3 2.2-2.2-1.4-1.4-2.2 2.2L13 8.4 11.6 9.8l2.2 2.2-2.2 2.2 1.4 1.4 2.2-2.2 2.2 2.2 1.4-1.4-2.2-2.2z"/></svg>
+      </button>
+      <button id="fullscreenButton" class="round-control" type="button" aria-label="Tam ekran aç">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+      </button>
+    </nav>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
