@@ -1,6 +1,6 @@
 # MasalNova AdSense and Google CMP checklist
 
-## Current safe deployment state (6 August 2026)
+## Current quality-release deployment state (2 September 2026)
 
 Google Privacy & messaging is the selected Google-certified CMP. The account
 message is published for `masalnova.com` with Turkish as the default language
@@ -28,16 +28,20 @@ PUBLIC_ADSENSE_TAG_ENABLED=true
 PUBLIC_GOOGLE_CMP_PUBLISHED=true
 PUBLIC_ADSENSE_MANUAL_ONLY=true
 PUBLIC_ADSENSE_ENABLED=false
-PUBLIC_QUALITY_CORE_REVIEWED=false
+PUBLIC_QUALITY_CORE_REVIEWED=true
 ```
 
 The first three values allow the publisher tag to display the CMP and support
 site review on the homepage and parent-facing colouring information pages.
-Story pages remain outside the publisher-tag allowlist until the separate
-quality-core review is complete. `PUBLIC_ADSENSE_ENABLED=false`,
-together with empty slot IDs, prevents every manual `<ins class="adsbygoogle">`
-unit from rendering. These environment values merely assert settings already
-made in AdSense; they cannot configure or enforce the account-side controls.
+The quality-core release limits search-engine indexing and the sitemap to the
+60 individually reviewed core stories plus sourced Islamic retellings with at
+least 300 words and a reading time of at least three minutes. Shorter sourced
+retellings remain `noindex`, undiscoverable and ad-free. The broader discovery
+catalogue stays usable inside MasalNova but remains `noindex` and ad-free.
+`PUBLIC_ADSENSE_ENABLED=false`, together with
+empty slot IDs, prevents every manual `<ins class="adsbygoogle">` unit from
+rendering. These environment values merely assert settings already made in
+AdSense; they cannot configure or enforce the account-side controls.
 
 ## Before enabling manual ads
 
@@ -56,19 +60,16 @@ made in AdSense; they cannot configure or enforce the account-side controls.
    `PUBLIC_ADSENSE_HOME_FEED_SLOT`, `PUBLIC_ADSENSE_HOME_CONTENT_SLOT`,
    `PUBLIC_ADSENSE_BOYAMA_INDEX_SLOT` and
    `PUBLIC_ADSENSE_BOYAMA_DETAIL_SLOT` and `PUBLIC_ADSENSE_STORY_GUIDE_SLOT`.
-6. Complete the manual A/B/C inventory first. Only 60–100 stories explicitly
-   marked `qualityTier: core`, each with a page-specific parent guide, three
-   questions and an activity, form the monetisation core. Set
-   `PUBLIC_QUALITY_CORE_REVIEWED=true` only after the audit confirms this. A
-   balanced 60-story candidate set is already recorded in
-   `src/data/quality-core-candidates.mjs` and has complete draft guidance;
-   candidate status is not final human approval. The reviewer must still read
-   every full story against `PEDAGOGICAL-QUALITY-STANDARD.md`, confirm its
-   manually set emotional intensity and add a real `qualityReviewedAt` date.
-   Enabling `PUBLIC_QUALITY_CORE_REVIEWED=true` also ends the temporary indexing
-   fallback: unclassified regular stories become `noindex` and leave sitemap
-   and discovery surfaces; sourced Islamic retellings retain their separate
-   source gate.
+6. Keep the completed manual A/B/C inventory intact. Only 60–100 stories
+   explicitly marked `qualityTier: core`, each with a page-specific parent
+   guide, three questions and an activity, form the monetisation core. The
+   balanced 60-story set in `src/data/quality-core-candidates.mjs` completed
+   human review on 10 August 2026. Do not remove its real `qualityReviewedAt`
+   dates or switch `PUBLIC_QUALITY_CORE_REVIEWED` back to `false`. The release
+   closes the temporary indexing fallback: unclassified regular stories become
+   `noindex` and leave the sitemap; sourced Islamic retellings retain their
+   separate source gate and additionally need at least 300 words and three
+   minutes to be indexed or internally discovered.
    A core story may contain exactly one unit after the complete parent guide and
    must still have at least 320 words and a reading time of at least three
    minutes. Short (`kisa`), bedtime (`uyku`) and İslami stories are excluded.
@@ -87,7 +88,7 @@ made in AdSense; they cannot configure or enforce the account-side controls.
    PUBLIC_GOOGLE_CMP_PUBLISHED=true \
    PUBLIC_ADSENSE_MANUAL_ONLY=true \
    PUBLIC_ADSENSE_ENABLED=false \
-   PUBLIC_QUALITY_CORE_REVIEWED=false \
+   PUBLIC_QUALITY_CORE_REVIEWED=true \
    npm run build:optimized && npm run audit:publishing -- --built
    ```
 
