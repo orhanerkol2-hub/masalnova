@@ -13,6 +13,8 @@ import {
   MIN_INDIVIDUAL_PARENT_GUIDE_WORDS,
   minimumStoryWordCount,
   parentGuideWordCount,
+  SOURCED_RETELLING_INDEX_MINIMUM_READING_MINUTES,
+  SOURCED_RETELLING_INDEX_MINIMUM_WORDS,
   storyWordCount,
 } from '../src/lib/story-quality.mjs';
 import {
@@ -570,11 +572,26 @@ const monetizableStories = stories.filter((story) => isStoryMonetizationEligible
 const controlledShortStories = approved.filter(({ indexable }) => !indexable);
 const controlledEditorialStories = stories.filter(({ status }) => status !== 'approved');
 const islamic = stories.filter(({ section }) => section === 'islami-hikayeler');
+const indexableIslamic = islamic.filter(({ indexable }) => indexable);
 const approvedGuides = guides.filter(({ status }) => status === 'approved');
 const completedQualityCandidates = qualityCoreCandidates.filter(({ parentGuideDraft, emotionalIntensity }) =>
   parentGuideDraft && emotionalIntensityValues.has(emotionalIntensity));
 const humanReviewedQualityCandidates = qualityCoreCandidates.filter(({ individualParentGuide, qualityTier }) =>
   individualParentGuide && qualityTier === 'core');
+
+if (verifyBuiltOutput
+  && publisherTagExpected
+  && !qualityCoreReleased
+  && humanReviewedQualityCandidates.length === candidateCount) {
+  hardErrors.push('Produktions-Build veröffentlicht trotz vollständig geprüftem Qualitätskern weiterhin den breiten Übergangsindex. PUBLIC_QUALITY_CORE_REVIEWED muss true sein.');
+}
+
+for (const story of indexableIslamic) {
+  if (story.words < SOURCED_RETELLING_INDEX_MINIMUM_WORDS
+    || story.readingTime < SOURCED_RETELLING_INDEX_MINIMUM_READING_MINUTES) {
+    hardErrors.push(`${story.file}: kurze İslami-Nacherzählung ist trotz 300-Wörter-/3-Minuten-Gate indexierbar.`);
+  }
+}
 
 if (discoverableUykuStories.length === 0) {
   hardErrors.push('Sichtbare Uyku-Kategorie hat keine intern auffindbaren Geschichten.');
@@ -927,6 +944,7 @@ console.log(`Kontrolliert monetarisierbare Stories: ${monetizableStories.length}
 console.log(`Kontrolliert noindex + werbefrei (Qualitäts-/Formatgate): ${controlledShortStories.length}`);
 console.log(`Kontrolliert noindex + werbefrei (Redaktionsprüfung offen): ${controlledEditorialStories.length}`);
 console.log(`İslami Hikâyeler mit Quellenprüfung: ${islamic.length}`);
+console.log(`Davon substantiell indexierbar: ${indexableIslamic.length}`);
 console.log(`Ebeveyn-Rehberi-Entwürfe: ${guides.length} (freigegeben: ${approvedGuides.length})`);
 console.log(`Autorenverteilung: Aylin ${stories.filter(({ author }) => author === 'aylin-karabektas').length}, Muhammet ${stories.filter(({ author }) => author === 'muhammet-karayigit').length}`);
 if (verifyBuiltOutput) {
