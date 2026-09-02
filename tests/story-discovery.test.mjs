@@ -53,3 +53,36 @@ test('even reviewed core bedtime stories remain ad-free', () => {
   assert.equal(isStoryIndexingEligible(reviewedBedtimeStory), true);
   assert.equal(isStoryMonetizationEligible(reviewedBedtimeStory), false);
 });
+
+const sourcedIslamicRetelling = {
+  status: 'approved',
+  substantial: true,
+  section: 'islami-hikayeler',
+  categories: ['islami'],
+  sourceCitation: 'Kur’an-ı Kerim, örnek kaynak',
+  sourceUrl: 'https://example.com/source',
+};
+
+test('short sourced Islamic retellings stay noindex, undiscoverable and ad-free', () => {
+  const shortRetelling = {
+    ...sourcedIslamicRetelling,
+    words: 299,
+    readingTime: 2,
+  };
+
+  assert.equal(isStoryIndexingEligible(shortRetelling), false);
+  assert.equal(isStoryDiscoveryEligible(shortRetelling), false);
+  assert.equal(isStoryMonetizationEligible({ ...shortRetelling, indexable: false }), false);
+});
+
+test('substantial sourced Islamic retellings may be indexed and discovered but stay ad-free', () => {
+  const substantialRetelling = {
+    ...sourcedIslamicRetelling,
+    words: 300,
+    readingTime: 3,
+  };
+
+  assert.equal(isStoryIndexingEligible(substantialRetelling), true);
+  assert.equal(isStoryDiscoveryEligible(substantialRetelling), true);
+  assert.equal(isStoryMonetizationEligible({ ...substantialRetelling, indexable: true }), false);
+});

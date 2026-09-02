@@ -104,7 +104,9 @@ indexing fallback also closes: regular stories without `qualityTier: core`
 become `noindex` and leave the sitemap. The stricter internal discovery floor
 continues to keep useful, approved bedtime stories findable without making them
 indexable or monetisable. Properly sourced Islamic retellings keep their
-separate source-based eligibility gate.
+separate eligibility gate: indexing and internal discovery additionally require
+at least 300 words and a reading time of three minutes. Shorter sourced
+retellings stay `noindex`, undiscoverable and ad-free.
 
 Human review release `2026-08-10`: all 572 stories retain their documented
 double editorial approval. The 60 stories with complete story-specific parent
