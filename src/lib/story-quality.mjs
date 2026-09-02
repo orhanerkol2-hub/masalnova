@@ -14,6 +14,8 @@ export const STORY_MINIMUM_WORDS = Object.freeze({
 });
 
 export const MIN_INDEXABLE_STORY_WORDS = STORY_MINIMUM_WORDS.regularStory;
+export const SOURCED_RETELLING_INDEX_MINIMUM_WORDS = 300;
+export const SOURCED_RETELLING_INDEX_MINIMUM_READING_MINUTES = 3;
 export const STORY_DISCOVERY_MINIMUM_WORDS = 320;
 export const STORY_DISCOVERY_MINIMUM_READING_MINUTES = 3;
 export const STORY_AD_MINIMUM_WORDS = 320;
@@ -40,6 +42,12 @@ export function isSourcedRetelling(context = {}) {
   return context.section === 'islami-hikayeler'
     && Boolean(context.sourceCitation)
     && Boolean(context.sourceUrl);
+}
+
+export function isSourcedRetellingIndexable(context = {}) {
+  return isSourcedRetelling(context)
+    && Number(context.words) >= SOURCED_RETELLING_INDEX_MINIMUM_WORDS
+    && Number(context.readingTime) >= SOURCED_RETELLING_INDEX_MINIMUM_READING_MINUTES;
 }
 
 export function parentGuideWordCount(context = {}) {
@@ -105,7 +113,15 @@ export function isStoryIndexingEligible({
 } = {}) {
   if (status !== 'approved' || !substantial) return false;
   if (qualityTier === 'review' || qualityTier === 'retire') return false;
-  if (isSourcedRetelling({ section, sourceCitation, sourceUrl })) return true;
+  if (isSourcedRetelling({ section, sourceCitation, sourceUrl })) {
+    return isSourcedRetellingIndexable({
+      section,
+      sourceCitation,
+      sourceUrl,
+      words,
+      readingTime,
+    });
+  }
   const isReviewedCore = qualityTier === 'core'
     && Boolean(String(qualityReviewedAt ?? '').trim());
   if (qualityCoreReleased) return isReviewedCore;
@@ -136,7 +152,15 @@ export function isStoryDiscoveryEligible({
 } = {}) {
   if (status !== 'approved' || !substantial) return false;
   if (qualityTier === 'review' || qualityTier === 'retire') return false;
-  if (isSourcedRetelling({ section, sourceCitation, sourceUrl })) return true;
+  if (isSourcedRetelling({ section, sourceCitation, sourceUrl })) {
+    return isSourcedRetellingIndexable({
+      section,
+      sourceCitation,
+      sourceUrl,
+      words,
+      readingTime,
+    });
+  }
 
   if (qualityTier === 'core') {
     return Boolean(String(qualityReviewedAt ?? '').trim());
